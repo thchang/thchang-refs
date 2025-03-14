@@ -43,8 +43,8 @@ adams2022dakota,:
   - - Justin G.
     - Winokur
   chapter: null
-  descrip: Dakota optimization framework, with AI/ML surrogates, multifidelity modeling,
-    UQ, and parallelism
+  descrip: Dakota optimization framework (from Sandia), with AI/ML surrogates, multifidelity
+    modeling, UQ, and parallelism -- written primarily in C++
   doi: null
   edition: null
   editors: []
@@ -57,7 +57,13 @@ adams2022dakota,:
   pages: null
   publisher: Sandia National Laboratory
   series: null
-  tags: []
+  tags:
+  - open-source software
+  - OSS
+  - scientific software
+  - numerical software
+  - optimization software
+  - C++
   title: 'Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization,
     Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version
     6.16 User''s Manual.'
@@ -121,7 +127,8 @@ aharonov2008adiabatic:
   - - Oded
     - Regev
   chapter: null
-  descrip: Equivalence of AQC and gate model
+  descrip: This paper shows the equivalence of adiabatic quantum computing and the
+    gate model
   doi: null
   edition: null
   editors: []
@@ -153,7 +160,8 @@ akhtar2016multi:
   - - Christine A.
     - Shoemaker
   chapter: null
-  descrip: RBF surrogates for MOO
+  descrip: Using RBF surrogates for finding global solutions to MOOPs with multiple
+    local minima
   doi: 10.1007/s10898-015-0270-y
   edition: null
   editors: []
@@ -168,7 +176,14 @@ akhtar2016multi:
   - '32'
   publisher: Springer
   series: null
-  tags: []
+  tags:
+  - multiobjective optimization
+  - blackbox optimization
+  - DFO
+  - MOO
+  - simulation optimization
+  - MOSO
+  - RBF surrogate
   title: Multi objective optimization of computationally expensive multi-modal functions
     with {RBF} surrogates and multi-rule selection
   type: article
@@ -186,7 +201,7 @@ albash2018adiabatic:
   - - Daniel A
     - Lidar
   chapter: null
-  descrip: url={https://www.nature.com/articles/nphys2900} Review article on AQC
+  descrip: Review article on adiabatic quantum computing
   doi: null
   edition: null
   editors: []
@@ -203,7 +218,7 @@ albash2018adiabatic:
   tags: []
   title: Adiabatic quantum computation
   type: article
-  url: null
+  url: https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.90.015002
   venue: Reviews of Modern Physics
   volume: '90'
   web: null
@@ -286,9 +301,9 @@ alghassi2019graver:
   - - Sridhar
     - Tayur
   chapter: null
-  descrip: "url={https://www.nature.com/articles/s41598-018-36058-z} Quantum addition,\
-    \ suspected to be done with the less efficient classical addition circuit, they\
-    \ don\u2019t say otherwise. [3]"
+  descrip: "Quantum annealing algorithm for addition, which I suspected to be done\
+    \ with the less efficient classical addition circuit, they don\u2019t say otherwise.\
+    \ [3]"
   doi: null
   edition: null
   editors: []
@@ -305,7 +320,7 @@ alghassi2019graver:
   title: Graver Bases via Quantum Annealing with Application to Non-Linear Integer
     Programs
   type: article
-  url: null
+  url: https://arxiv.org/pdf/1902.04215.pdf
   venue: arXiv preprint arXiv:1902.04215
   volume: null
   web: null
@@ -393,8 +408,8 @@ andersen2000mosek:
   - - Knud D
     - Andersen
   chapter: null
-  descrip: url={https://www.nature.com/articles/srep43048} The linear programming
-    algorithm
+  descrip: The MOSEK linear programming interior-point solver used in an old version
+    of scipy.optimize
   doi: null
   edition: null
   editors: []
@@ -413,7 +428,7 @@ andersen2000mosek:
   title: 'The MOSEK interior point optimizer for linear programming: an implementation
     of the homogeneous algorithm'
   type: inproceedings
-  url: null
+  url: https://link.springer.com/chapter/10.1007/978-1-4757-3216-0_8
   venue: High performance optimization
   volume: null
   web: null
@@ -520,8 +535,7 @@ andriyash2016boosting:
   - - Aidan
     - Roy
   chapter: null
-  descrip: url={https://www.dwavesys.com/sites/default/files/14-1026A-C_Next-Generation-Topology-of-DW-Quantum-Processors.pdf}
-    DWAVE article describing the multiplication circuit. [1]
+  descrip: D-Wave article describing the multiplication circuit
   doi: null
   edition: null
   editors: []
@@ -532,13 +546,13 @@ andriyash2016boosting:
   note: null
   number: null
   pages: null
-  publisher: null
+  publisher: D-Wave
   series: null
   tags: []
   title: Boosting integer factoring performance via quantum annealing offsets
-  type: article
-  url: null
-  venue: D-Wave White Papers
+  type: techreport
+  url: https://www.dwavesys.com/sites/default/files/14-1002A_B_tr_Boosting_integer_factorization_via_quantum_annealing_offsets.pdf
+  venue: null
   volume: null
   web: null
   year: 2016
@@ -1244,8 +1258,7 @@ barahona1982computational:
   - - Francisco
     - Barahona
   chapter: null
-  descrip: url={https://iopscience.iop.org/article/10.1088/0034-4885/61/2/002} Ising
-    is NP-hard
+  descrip: Proof that solving the Ising model is classically NP-hard
   doi: null
   edition: null
   editors: []
@@ -1262,7 +1275,7 @@ barahona1982computational:
   tags: []
   title: On the computational complexity of Ising spin glass models
   type: article
-  url: null
+  url: https://iopscience.iop.org/article/10.1088/0305-4470/15/10/028
   venue: 'Journal of Physics A: Mathematical and General'
   volume: '15'
   web: null
@@ -1701,8 +1714,7 @@ biamonte2017quantum:
   - - Seth
     - Lloyd
   chapter: null
-  descrip: url={https://link.springer.com/article/10.1007/s11128-019-2213-x} Quantum
-    machine learning
+  descrip: A paper summarizing the early advances in quantum machine learning
   doi: null
   edition: null
   editors: []
@@ -1719,7 +1731,7 @@ biamonte2017quantum:
   tags: []
   title: Quantum machine learning
   type: article
-  url: null
+  url: https://www.nature.com/articles/nature23474
   venue: Nature
   volume: '549'
   web: null
@@ -2021,9 +2033,9 @@ boixo2014evidence:
   - - Matthias
     - Troyer
   chapter: null
-  descrip: url={https://science.sciencemag.org/content/295/5564/2427?casa_token=oOyVfFb2YFkAAAAA:uuUmeZPbfJVVjm9XlBllasY6OA1n_kOEJA4E5DSOD6neFa2PuVI6pEElaMvRkbomX4sJiq9gxn_YPpY}
-    Evidence that QA will be better than SA
-  doi: null
+  descrip: Evidence in support that quantum annealing will eventually be better than
+    using simulated annealing
+  doi: 10.1038/nphys2900
   edition: null
   editors: []
   git: null
@@ -2039,7 +2051,7 @@ boixo2014evidence:
   tags: []
   title: Evidence for quantum annealing with more than one hundred qubits
   type: article
-  url: null
+  url: https://www.nature.com/articles/nphys2900
   venue: Nature Physics
   volume: '10'
   web: null
@@ -2098,8 +2110,7 @@ boothby2018nextgeneration:
   - - Aidan
     - Roy
   chapter: null
-  descrip: url={https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.90.015002}
-    The Pegasus topology
+  descrip: Whitepaper on the D-Wave Pegasus topology
   doi: null
   edition: null
   editors: []
@@ -2108,17 +2119,17 @@ boothby2018nextgeneration:
   issn: null
   month: null
   note: null
-  number: null
+  number: '22'
   pages:
   - 28
-  publisher: null
+  publisher: D-Wave
   series: null
   tags: []
   title: Next-generation topology of D-Wave quantum processors
-  type: article
-  url: null
-  venue: D-Wave White Papers
-  volume: '22'
+  type: techreport
+  url: https://www.dwavesys.com/sites/default/files/14-1026A-C_Next-Generation-Topology-of-DW-Quantum-Processors.pdf
+  venue: null
+  volume: null
   web: null
   year: 2018
 borle2019analyzing:
@@ -2130,7 +2141,7 @@ borle2019analyzing:
   - - Samuel J
     - Lomonaco
   chapter: null
-  descrip: Quantum Annealing for Linear Least Squares.
+  descrip: Quantum Annealing algorithm for solving Linear Least Squares equations
   doi: null
   edition: null
   editors: []
@@ -2481,8 +2492,9 @@ cai2014practical:
   - - Aidan
     - Roy
   chapter: null
-  descrip: url={https://link.springer.com/chapter/10.1007/978-1-4757-3216-0_8} Finding
-    physical embeddings (minorminer.find_embedding)
+  descrip: Finding minor graphs (a minor of G is a subgraph H that can be obtained
+    by deleting edges). This algorithm is (was) used to find physical embeddings on
+    D-Wave systems via the minorminer.find_embedding tool
   doi: null
   edition: null
   editors: []
@@ -2498,7 +2510,7 @@ cai2014practical:
   tags: []
   title: A practical heuristic for finding graph minors
   type: article
-  url: null
+  url: https://arxiv.org/abs/1406.2741
   venue: arXiv preprint arXiv:1406.2741
   volume: null
   web: null
@@ -3008,8 +3020,8 @@ chang2019experimental:
   - - Guilu
     - Long
   chapter: null
-  descrip: Quantum Annealing for polynomial systems of equations.
-  doi: null
+  descrip: Quantum Annealing algorithm for solving polynomial systems of equations
+  doi: 10.1103/PhysRevA.99.012320
   edition: null
   editors: []
   git: null
@@ -3026,7 +3038,7 @@ chang2019experimental:
   title: Experimental realization of quantum algorithms for a linear system inspired
     by adiabatic quantum computing
   type: article
-  url: null
+  url: https://link.aps.org/doi/10.1103/PhysRevA.99.012320
   venue: Phys. Rev. A
   volume: '99'
   web: null
@@ -4238,8 +4250,7 @@ das2005quantum:
   - - Bikas K
     - Chakrabarti
   chapter: null
-  descrip: url={https://iopscience.iop.org/article/10.1088/0305-4470/15/10/028} Textbook
-    on QA
+  descrip: Textbook on quantum annealing
   doi: null
   edition: null
   editors: []
@@ -4299,8 +4310,8 @@ dattani2019quadratization:
   - - Nike
     - Dattani
   chapter: null
-  descrip: Article showing the AND gate (reduction by substitution, section 5, page
-    44)
+  descrip: Article applying quantum AND gate to perform reduction by substitution,
+    section 5, page 44
   doi: null
   edition: null
   editors: []
@@ -5104,8 +5115,7 @@ dridi2017prime:
   - - Hedayat
     - Alghassi
   chapter: null
-  descrip: url={https://iopscience.iop.org/article/10.1088/2058-9565/aada1f/meta}
-    Another quantum prime factorization article
+  descrip: Another quantum annealing-based prime factorization article
   doi: null
   edition: null
   editors: []
@@ -5122,7 +5132,7 @@ dridi2017prime:
   tags: []
   title: Prime factorization using quantum annealing and computational algebraic geometry
   type: article
-  url: null
+  url: https://www.nature.com/articles/srep43048
   venue: Scientific reports
   volume: '7'
   web: null
@@ -5443,8 +5453,8 @@ elgart2012note:
   - - George A
     - Hagedorn
   chapter: null
-  descrip: url={https://epubs.siam.org/doi/abs/10.1137/S0036144598347011?casa_token=a1HjL4NT4JcAAAAA:76FzW89tOwMuu471TSx0PCrJFUTa0tbvOyNfM4isoCzj3NwY6pvUAlJJpAlvq_emxY4fuksR_WRh}
-    T required for shrinking spectral gap
+  descrip: Article analyzing the annealing time requirements to guarantee convergence
+    of adiabatic quantum computing with a shrinking spectral gap
   doi: null
   edition: null
   editors: []
@@ -5461,7 +5471,7 @@ elgart2012note:
   tags: []
   title: A note on the switching adiabatic theorem
   type: article
-  url: null
+  url: https://aip.scitation.org/doi/abs/10.1063/1.4748968
   venue: Journal of Mathematical Physics
   volume: '53'
   web: null
@@ -6221,17 +6231,18 @@ golub2013matrix:
   address: null
   articleno: null
   authors:
-  - - Gene H.
+  - - Gene H
     - Golub
-  - - Charles F.
+  - - Charles F
     - Van Loan
   chapter: null
-  descrip: Matrix computations bible
+  descrip: Golub and van Loan's classic textbook on computational linear algebra,
+    matrix decompositions, pivoting, sensitivity analysis, iterative solvers, etc
   doi: null
-  edition: 4th
+  edition: '4'
   editors: []
   git: null
-  isbn: 978-1421407944
+  isbn: null
   issn: null
   month: null
   note: null
@@ -6239,8 +6250,7 @@ golub2013matrix:
   pages: null
   publisher: Johns Hopkins University Press
   series: null
-  tags:
-  - ''
+  tags: []
   title: Matrix computations
   type: book
   url: null
@@ -7341,8 +7351,7 @@ jiang2018quantum:
   - - Sabre
     - Kais
   chapter: null
-  descrip: url={https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.101.220405}
-    Quantum annealing prime factorization
+  descrip: Quantum annealing algorithm for performing prime factorization
   doi: null
   edition: null
   editors: []
@@ -7360,7 +7369,7 @@ jiang2018quantum:
   tags: []
   title: Quantum annealing for prime factorization
   type: article
-  url: null
+  url: https://www.nature.com/articles/s41598-018-36058-z
   venue: Scientific Reports (Nature Publisher Group)
   volume: '8'
   web: null
@@ -7542,13 +7551,11 @@ kadowaki1998quantum:
   - - Hidetoshi
     - Nishimori
   chapter: null
-  descrip: Gate model algorithm for solving Ax=b doi = {10.1103/PhysRevLett.103.150502},
-    url = {https://link.aps.org/doi/10.1103/PhysRevLett.103.150502} AQC algorithm
-    for solving Ax=b doi = {10.1103/PhysRevLett.122.060504}, url = {https://link.aps.org/doi/10.1103/PhysRevLett.122.060504}
-    Implementation of above with chemistry. doi = {10.1103/PhysRevA.99.012320}, url
-    = {https://link.aps.org/doi/10.1103/PhysRevA.99.012320} Original QA paper. Also
-    shows that the likelihood of achieving the ground state decreases quadratically
-    with linearly shrinking energy gap.
+  descrip: A quantum gate model algorithm for solving Ax=b An adiabatic quantum computing
+    algorithm for solving Ax=b A physical implementation of a quantum annealing algorithm
+    for solving linear systems This is the original paper where quantum annealing
+    is proposed, which shows that the likelihood of achieving the ground state decreases
+    quadratically with linearly shrinking energy gap.
   doi: null
   edition: null
   editors: []
@@ -7624,8 +7631,8 @@ karimi2019practical:
   - - Pooya
     - Ronagh
   chapter: null
-  descrip: url={https://arxiv.org/pdf/1902.04215.pdf} Paper describing practical properties
-    of AQC on D-Wave
+  descrip: Paper describing the practical concerns, optimizations, and limitations
+    of performing adiabatic quantum computing on real-world systems (i.e., D-Wave)
   doi: null
   edition: null
   editors: []
@@ -7642,7 +7649,7 @@ karimi2019practical:
   tags: []
   title: Practical integer-to-binary mapping for quantum annealers
   type: article
-  url: null
+  url: https://link.springer.com/article/10.1007/s11128-019-2213-x
   venue: Quantum Information Processing
   volume: '18'
   web: null
@@ -7890,8 +7897,7 @@ khoshaman2018quantum:
   - - Mohammad H
     - Amin
   chapter: null
-  descrip: url={https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/article/performing-fully-parallel-constraint-logic-programming-on-a-quantum-annealer/AB4CCF2D913D0325F770B3DA02AA262D}
-    Quantum variational autoencoder
+  descrip: Algorithm for implementing a quantum variational autoencoder
   doi: null
   edition: null
   editors: []
@@ -7908,7 +7914,7 @@ khoshaman2018quantum:
   tags: []
   title: Quantum variational autoencoder
   type: article
-  url: null
+  url: https://iopscience.iop.org/article/10.1088/2058-9565/aada1f/meta
   venue: Quantum Science and Technology
   volume: '4'
   web: null
@@ -8395,7 +8401,8 @@ lasserre2001global:
   - - Jean B
     - Lasserre
   chapter: null
-  descrip: Classical solutions to SOS
+  descrip: A summary of classical solutions and challenges to solving sum-of-squares
+    minimization of polynomials
   doi: null
   edition: null
   editors: []
@@ -10239,8 +10246,7 @@ pakin2018performing:
   - - Scott
     - Pakin
   chapter: null
-  descrip: url={https://www.nature.com/articles/nature23474} Los Almos article, converting
-    Prolog to D-WAVE
+  descrip: Los Almos article on converting Prolog code into D-WAVE circuits
   doi: null
   edition: null
   editors: []
@@ -10258,7 +10264,7 @@ pakin2018performing:
   tags: []
   title: Performing fully parallel constraint logic programming on a quantum annealer
   type: article
-  url: null
+  url: https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/article/performing-fully-parallel-constraint-logic-programming-on-a-quantum-annealer/AB4CCF2D913D0325F770B3DA02AA262D
   venue: Theory and Practice of Logic Programming
   volume: '18'
   web: null
@@ -10601,8 +10607,7 @@ peng2008quantum:
   - - Jiangfeng
     - Du
   chapter: null
-  descrip: url={https://www.dwavesys.com/sites/default/files/14-1002A_B_tr_Boosting_integer_factorization_via_quantum_annealing_offsets.pdf}
-    QA for factorization
+  descrip: Quantum annealing for integer factorization
   doi: null
   edition: null
   editors: []
@@ -10619,7 +10624,7 @@ peng2008quantum:
   tags: []
   title: Quantum adiabatic algorithm for factorization and its experimental implementation
   type: article
-  url: null
+  url: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.101.220405
   venue: Physical review letters
   volume: '101'
   web: null
@@ -11116,7 +11121,8 @@ ray1989sherringtonkirkpatrick:
   - - Arunava
     - Chakrabarti
   chapter: null
-  descrip: Article laying the foundation for Quantum Annealing via quantum tunneling.
+  descrip: This article lays the theoretical foundation for Quantum Annealing via
+    quantum tunneling.
   doi: null
   edition: null
   editors: []
@@ -11240,8 +11246,7 @@ rosenberg1975reduction:
   - - Ivo G
     - Rosenberg
   chapter: null
-  descrip: Original paper describing "Reduction by Substitution" or what we refer
-    to as the AND gate.
+  descrip: Original paper describing "Reduction by Substitution" in the QUBO model
   doi: null
   edition: null
   editors: []
@@ -11441,7 +11446,8 @@ santoro2002theory:
   - - Roberto
     - Car
   chapter: null
-  descrip: QA theoretically faster than SA
+  descrip: Analysis that using quantum annealing is theoretically faster than using
+    simulated annealing to solve an Ising/QUBO model
   doi: null
   edition: null
   editors: []
@@ -11459,7 +11465,7 @@ santoro2002theory:
   tags: []
   title: Theory of quantum annealing of an Ising spin glass
   type: article
-  url: null
+  url: https://science.sciencemag.org/content/295/5564/2427?casa_token=oOyVfFb2YFkAAAAA:uuUmeZPbfJVVjm9XlBllasY6OA1n_kOEJA4E5DSOD6neFa2PuVI6pEElaMvRkbomX4sJiq9gxn_YPpY
   venue: Science
   volume: '295'
   web: null
@@ -11938,7 +11944,7 @@ shor1999polynomialtime:
   - - Peter W
     - Shor
   chapter: null
-  descrip: Shor's algorithm
+  descrip: Shor's algorithm for prime factorization
   doi: null
   edition: null
   editors: []
@@ -11957,7 +11963,7 @@ shor1999polynomialtime:
   title: Polynomial-time algorithms for prime factorization and discrete logarithms
     on a quantum computer
   type: article
-  url: null
+  url: https://epubs.siam.org/doi/abs/10.1137/S0036144598347011?casa_token=a1HjL4NT4JcAAAAA:76FzW89tOwMuu471TSx0PCrJFUTa0tbvOyNfM4isoCzj3NwY6pvUAlJJpAlvq_emxY4fuksR_WRh
   venue: SIAM review
   volume: '41'
   web: null
@@ -12239,7 +12245,7 @@ steane1998quantum:
   - - Andrew
     - Steane
   chapter: null
-  descrip: Quantum gate model
+  descrip: A concise summary of the quantum gate model
   doi: null
   edition: null
   editors: []
@@ -12256,7 +12262,7 @@ steane1998quantum:
   tags: []
   title: Quantum computing
   type: article
-  url: null
+  url: https://iopscience.iop.org/article/10.1088/0034-4885/61/2/002
   venue: Reports on Progress in Physics
   volume: '61'
   web: null
@@ -13268,7 +13274,8 @@ watson1997algorithm:
   - - Homer F
     - Walker
   chapter: null
-  descrip: Homotopy methods
+  descrip: A software package of homotopy methods for solving polynomial systems of
+    equations
   doi: null
   edition: null
   editors: []
