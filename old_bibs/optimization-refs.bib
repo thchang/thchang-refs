@@ -103,7 +103,9 @@
 % per iteration as it performs a fully Latin hypercube sampling of the trust
 % region in each iteration, and does not explicitly re-use previous iterates to
 % reduce iteration costs, like some of the more advanced model based methods.
-% Still, it is extremely robust and a good choice in stochastic situations
+% Still, it is extremely robust and a good choice in stochastic situations.
+% Also includes a good Fortran implementation of Latin hypercube sampling and
+% efficient sorting algorithms
 @article{amosetal2020,
 author={Amos, Brandon D. and Easterling, David R. and Watson, Layne T. and
 Thacker, William I. and Castle, Brent S. and Trosset, Michael W.},
@@ -662,7 +664,10 @@ publisher={SIAM}
 
 % Key findings from the VarSys project on modeling HPC performance variability
 % with surrogates and RSM, and using these models to inform decision making
-% through visualizations, optimization, and otherwise
+% through visualizations, optimization, and otherwise -- a good real-world
+% example of how modeling, interpolation, optimization, and data science can
+% come together to produce actionable results (in the field of HPC performance
+% tuning)
 @article{cameron2019,
 author={Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo
 Ananth, Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas
@@ -825,11 +830,10 @@ pages={1843--1856}
   author  = {Chang, Tyler H. and Elias, Jakob R. and Wild, Stefan M. and Chaudhuri, Santanu and Libera, Joseph A.},
   title   = {A framework for fully autonomous design of materials via multiobjective optimization and active learning: challenges and next steps},
   year    = {2023},
-  booktitle    = {11th Intl. Conf. on Learning Representation (ICLR 2023), Workshop on Machine Learning for Materials (ML4Materials)},
+  booktitle    = {11th International Conference on Learning Representations (ICLR 2023), Workshop on Machine Learning for Materials (ML4Materials)},
   location = {Kigali, Rwanda},
   url       = {https://openreview.net/forum?id=8KJS7RPjMqG},
-  pages     = {1--10},
-  note     = {to appear}
+  numpages     = {10},
 }
 
 % This is the OJOC ParMOO repository DOI -- this is an archive of the software
@@ -1312,7 +1316,7 @@ pages={211--223}
 @inproceedings{dong2020nas,
   title     = {{NAS-Bench-201}: Extending the Scope of Reproducible Neural Architecture Search},
   author    = {Xuanyi Dong and Yi Yang},
-  booktitle = {International Conference on Learning Representations (ICLR 2020)},
+  booktitle = {8th International Conference on Learning Representations (ICLR 2020)},
   year      = {2020},
   url       = {https://openreview.net/forum?id=HJxyZkBKDr}
 }
@@ -1344,6 +1348,30 @@ pages={211--223}
   number={5},
   pages={46-54},
   doi={10.1109/MCSE.2021.3098231}
+}
+
+% The original paper for AdaGrad (adaptive subgradient method) which replaced
+% the subgradient method with an adaptive estimate for the gradient, where each
+% component of the gradient is rescaled by an adaptive estimate for the
+% standard deviation in that direction based on previous iterates.  This
+% adaptive estimate for standard deviation in each axis-aligned direction
+% serves as a diagonal approximation to the Hessian matrix, giving second-order
+% like properties to the method and greatly improving the practical
+% convergence.  AdaGrad was very popular and considered the state-of-the-art
+% optimization algorithm for training neural networks upon its initial release,
+% but was quickly replaced by Adam, which added a Nesterov momentum esque
+% smoothing to this adaptive gradient estimation in order to further improve
+% convergence rates on nonsmooth, highly stochastic, and ill-conditioned
+% problems
+@article{duchi2011,
+  author  = {John Duchi and Elad Hazan and Yoram Singer},
+  title   = {Adaptive Subgradient Methods for Online Learning and Stochastic Optimization},
+  journal = {Journal of Machine Learning Research},
+  year    = {2011},
+  volume  = {12},
+  number  = {61},
+  pages   = {2121--2159},
+  url     = {http://jmlr.org/papers/v12/duchi11a.html}
 }
 
 % The JuMP modeling language in Julia -- a modeling language for modeling and
@@ -1662,6 +1690,23 @@ url = {https://doi.org/10.1137/23M1605661},
   year={2021},
   publisher={SAGE Publications Sage UK: London, England},
   doi = {10.1177/10943420211059380}
+}
+
+% Online paper with interactive visualizations explaining what Nesterov's
+% momentum is and how it works intuitively by smoothing out optimization sample
+% paths and preventing oscillations in the optimizer that occur do to poor
+% problem conditioning.  Then, they show how the problem conditioning appears
+% as an often ignored constant in the convergence rate of gradient descent.
+% All this is to show intuitively and mathematically that gradient descent with
+% Nesterov's momentum will convergence faster in practice for ill-conditioned
+% problems
+@article{goh2017why,
+  author = {Goh, Gabriel},
+  title = {Why Momentum Really Works},
+  journal = {Distill},
+  year = {2017},
+  url = {http://distill.pub/2017/momentum},
+  doi = {10.23915/distill.00006}
 }
 
 % Google's OSS Vizier service is a (now open source) blackbox / derivative-free
@@ -2189,6 +2234,24 @@ author = {M.E. Johnson and L.M. Moore and D. Ylvisaker}
   journal = {{SIAM} Journal on Optimization},
 }
 
+% The original paper on Adam: an adaptive gradient and moment estimator that
+% uses second order moments to approximate curvature (i.e., Hessian
+% information) in order to accelerate the convergence of AdaGrad.  In
+% particular, this means applying Nesterov's momentum to both the gradient and
+% curvature estimations.  From 2015-2024 this was the state-of-the-art
+% algorithm for optimization of neural network weights during training, and was
+% what was typically meant when people talked about stochastic gradient
+% descent.
+@inproceedings{kingma2015,
+    author = {Kingma, Diedrik and Ba, Jimmy},
+    title = {Adam: A method for stochastic optimization},
+    year = {2015},
+    booktitle = {3rd International Conference on Learning Representations (ICLR 2015)},
+  location = {San Diego, CA, USA},
+  url      = {https://arxiv.org/abs/1412.6980},
+  numpages = {11},
+}
+
 % The SPEA2+ algorithm for solving multiobjective optimization problems with
 % evolutionary algorithms.  Apparently this is widely-used numerical software,
 % but I can't find the download
@@ -2690,6 +2753,24 @@ pages={63--65}
   publisher={John Wiley \& Sons, Inc.},
   address={Hoboken, NJ, USA},
   isbn={9781118916032}
+}
+
+% Original publication on Nesterov's momentum.  I haven't read it (it is hard
+% to find a copy and likely in Russian) but this is the preferred citation.
+% The equation for Nesterov momentum in gradient descent is instead of using
+% the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and
+% v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths
+% out poor conditioning in the problem by encouraging the algorithm to continue
+% in the direction it was headed instead of oscillating.  Nexterov proves that
+% this term also leads to better convergence rates.  For best results, b is
+% usually chosen to be a large value such as 0.9 or 0.99
+@inproceedings{nesterov1983method,
+  title={A method for solving the convex programming problem with convergence rate O (1/k2)},
+  author={Nesterov, Yurii},
+  booktitle={Dokl akad nauk Sssr},
+  volume={269},
+  pages={543},
+  year={1983}
 }
 
 % An application of VTMOP for the multiobjective optimization (tuning) of the
@@ -3333,6 +3414,25 @@ pages = {16–21}
 	number = {4},
 	pages = {514--549},
 	publisher = {ACM},
+}
+
+% How optimization is used to autotune the configuration of the BLAS
+% subroutines and kernels for the ATLAS project -- since most numerical
+% software relies on BLAS, it is often prudent to spend time optimizing BLAS
+% configurations (such as matrix block sizes, etc.) to match machine specific
+% values (such as cache sizes, etc.) when installing on a HPC that will have a
+% high numerical (compute bound) workload.  This can be done automatically via
+% numerical optimization, so that users can just run the ATLAS setup scripts to
+% configure BLAS automatically if they want an optimized installation
+@article{whaley2001,
+author={Whaley, R. Clint and Petitet, Antoine and Dongarra, Jack J.},
+title={Automated empirical optimizations of software and the {ATLAS} project},
+journal={Parallel Computing},
+volume={27},
+number={1--2},
+pages={3--35},
+year={2001},
+  keywords={},
 }
 
 % The original publication of the reference point method for scalarizing
