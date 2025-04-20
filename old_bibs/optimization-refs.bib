@@ -1084,6 +1084,25 @@ pages={1843--1856}
   doi={10.1080/10556788.2015.1048861}
 }
 
+% A study of various surrogate models for optimizing with WBCSim design tool
+% which simulates and analyzes the behavior of wood-based composites:  in
+% summary, Shepard's method (locally linear) performed best in this analysis,
+% and therefore was chosen as the main surrogate model in Deshpande's 2016
+% algorithm (above).  It is hypothesized that Shepard's method's ability to
+% extrapolate (typically an undesirable feature in interpolation) makes it good
+% for surrogate modeling for optimization, which requires extrapolation based
+% on local trends
+@article{deshpandeetal2011,
+author={Deshpande, Shubhangi and Watson, Layne T. and Shu, Jiang and Ramakrishnan, Naren},
+year={2011},
+title={Data driven surrogate-based optimization in the problem solving
+environment {WBCSim}},
+journal={Engineering with Computers},
+volume={27},
+number={3},
+pages={211--223}
+}
+
 % Achieving performance portability of parallel codes in the exascale computing
 % project (ECP) across various GPU-based architectures, which is challenging
 % since different GPU vendors use different GPU programming libraries (e.g.,
@@ -1464,6 +1483,21 @@ pages={1843--1856}
   pages={1--59},
   year={2022},
   doi={10.1007/s10458-022-09552-y}
+}
+
+% Studying the parallel performance of VTDIRECT95 at a massive scale: in
+% summary VTDIRECT95 scales very well after the initial "warmup" period since
+% there are not many boxes in the first couple iterations
+@article{heetal2009a,
+title={Performance modeling and analysis of a massively parallel {DIRECT}
+       -- part 1},
+author={He, Jian and Verstak, Alex and Watson, Layne T. and Sosonkina, Masha},
+journal={The International Journal of High Performance Computing Applications},
+volume={23},
+number={1},
+pages={14--28},
+year={2009},
+  keywords={},
 }
 
 % VTDIRECT95 reference: a high-performance parallel Fortran implementation of
@@ -2681,6 +2715,18 @@ url = {https://doi.org/10.1080/10556788.2022.2121832},
   doi = {10.1016/j.asoc.2019.106050},
 }
 
+% The exascale computing project press release
+@misc{usdoe2019,
+year={2019},
+  keywords={},
+month={March},
+title={Press Release: {U.S.\ Department of Energy and Intel} to deliver first
+exascale supercomputer},
+institution={{U.S.\ Department of Energy, Argonne National Laboratory}},
+url={https://www.anl.gov/article/us-department-of-energy-and-intel-to-deliver-first-exascale-supercomputer},
+note={accessed April 28, 2020}
+}
+
 % A tutorial on how to compute Latin hypercube samples (LHS) and some basic
 % properties and ongoing research related to design-of-experiments
 @article{viana2016,
@@ -2875,6 +2921,19 @@ url = {https://doi.org/10.1080/10556788.2022.2121832},
   booktitle = {Proc. Genetic and Evolutionary Computation Conference (GECCO19)},
   publisher = {ACM},
   doi       = {10.1145/3321707.3321784}
+}
+
+% An application of multiobjective optimization for an industrial styrene
+% reactor optimization using BiMADS
+@article{yeeetal2003,
+author={Yee, Amy K. Y. and Ray, Ajay K. and Rangaiah, G. P.},
+year={2003},
+  keywords={},
+title={Multiobjective optimization of an industrial styrene reactor},
+journal={Computers \& Chemical Engineering},
+volume={27},
+number={1},
+pages={111--130}
 }
 
 % Solving DFT model calibrations for chemical design via active learning
