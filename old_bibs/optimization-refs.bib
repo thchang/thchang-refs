@@ -40,6 +40,18 @@
   doi={10.1007/s10898-015-0270-y}
 }
 
+% Optuna open source software for fully distributed hyperparameter
+% optimization.  Maintained by a private startup in Japan (named Optuna).  This
+% software provides high-quality distributed wrappers for many neural
+% architecture search and generic optimization algorithms.
+@inproceedings{akiba2019optuna,
+  title     = {Optuna: A next-generation hyperparameter optimization framework},
+  author    = {Akiba, Takuya and Sano, Shotaro and Yanase, Toshihiko and Ohta, Takeru and Koyama, Masanori},
+  booktitle = {Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery \& data mining},
+  pages     = {2623--2631},
+  year      = {2019},
+}
+
 % A numerical software package written in MATLAB -- provides a surrogate
 % modeling toolbox for multiobjective optimization problems
 @inproceedings{aldujali2016a,
@@ -327,6 +339,20 @@ keywords = {Multiobjective optimization, Quality indicators, Performance indicat
  url = {https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf},
 }
 
+% Prasanna and Stefan's original DeepHyper publication -- DeepHyper is an open
+% source extreme-scale distributed optimization package, designed to scale to
+% Argonne's exascale HPCs.  Able to train ensembles of neural networks with
+% diverse architectures at scale, with both single and multiobjective
+% hyperparameter tuning support
+@inproceedings{balaprakash2018deephyper,
+  title        = {DeepHyper: Asynchronous hyperparameter search for deep neural networks},
+  author       = {Balaprakash, Prasanna and Salim, Michael and Uram, Thomas D. and Vishwanath, Venkat and Wild, Stefan M.},
+  booktitle    = {IEEE 25th international conference on high performance computing (HiPC)},
+  pages        = {42--51},
+  year         = {2018},
+  organization = {IEEE}
+}
+
 % The PETSc user's guide.  I haven't used it but PETSc is a widely-used C++
 % numerical software library and linear algebra / iterative algorithms
 % framework developed at Argonne and used for implementing many well-known
@@ -546,6 +572,21 @@ publisher={SIAM}
   doi = {10.1088/1361-6471/abd009}
 }
 
+% JAHS-Bench-201:  The latest test suite of benchmark problems for neural
+% architecture search.  The baseline is random search, but you can solve the
+% problems in their parameterized search space with any optimization algorithm,
+% record the number of true function / simulation evaluations (i.e., networks
+% trained) and submit this to the JAHS-Bench leaderboards on GitHub.  This is a
+% good representative test problem for NAS.  Both single and multiobjective
+% benchmarks are provided, also most problems can be run in both single or
+% multifidelity evaluation modes
+@inproceedings{bansal2022jahsbench,
+  title     = {JAHS-Bench-201: A Foundation For Research On Joint Architecture And Hyperparameter Search},
+  author    = {A. Bansal et al.},
+  booktitle = {Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year      = {2022}
+}
+
 % The open source numerical software package (in Python) pySMT.  This is a
 % surrogate modeling and Bayesian optimization toolbox for solving
 % multidisciplinary engineering design optimization (MDO) problems, while
@@ -559,6 +600,19 @@ publisher={SIAM}
   volume = {135},
   pages = {102--662},
   doi = {10.1016/j.advengsoft.2019.03.005},
+}
+
+% The recommended citation for the jax software project -- one of my personal
+% favorite open source numerical software in Python.  Performs autograd (or
+% algorithmic differentiation) in either forward or reverse mode, is strongly
+% typed, can act as a drop-in replacement for numpy, and can be just-in-time
+% (jit) compiled for massive speedups
+@misc{bradbury2018jax,
+  author  = {J. Bradbury et al.},
+  title   = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
+  url     = {http://github.com/google/jax},
+  version = {0.3.13},
+  year    = {2018}
 }
 
 % A Multiobjective Bayesian optimization algorithm, very similar to ParEGO --
@@ -1251,6 +1305,18 @@ pages={211--223}
   doi={10.23919/ECC.2013.6669541}
 }
 
+% NAS-Bench-201 introduces the cell-based neural architecture search space
+% representation (i.e., problem embedding) that was used by most (all) neural
+% architecture search software circa ~2022.  This includes the benchmark
+% problems in JAHS-Bench-201
+@inproceedings{dong2020nas,
+  title     = {{NAS-Bench-201}: Extending the Scope of Reproducible Neural Architecture Search},
+  author    = {Xuanyi Dong and Yi Yang},
+  booktitle = {International Conference on Learning Representations (ICLR 2020)},
+  year      = {2020},
+  url       = {https://openreview.net/forum?id=HJxyZkBKDr}
+}
+
 % SCS is an open source numerical software for solving second-order cone
 % problems from Steph Boyd's lab
 @article{donoghue2016,
@@ -1375,6 +1441,20 @@ url = {https://doi.org/10.1137/23M1605661},
   doi={10.1109/WF-IoT48130.2020.9221078}
 }
 
+% A nice survey paper on neural architecture search covering common search
+% (i.e., architecture) space representations, search (i.e., optimization)
+% strategies, and how to evaluate the performance of NAS methods
+@article{elsken2019neural,
+  title     = {Neural architecture search: A survey},
+  author    = {Elsken, Thomas and Metzen, Jan Hendrik and Hutter, Frank},
+  journal   = {The Journal of Machine Learning Research},
+  volume    = {20},
+  number    = {1},
+  pages     = {1997--2017},
+  year      = {2019},
+  publisher = {JMLR.org}
+}
+
 % A chapter from an optimization textbook on performing multiobjective Bayesian
 % optimization using the expected hypervolume improvement (EHVI) scalarization
 % / acquisition
@@ -1387,6 +1467,17 @@ url = {https://doi.org/10.1137/23M1605661},
   publisher = {Springer},
   booktitle = {Advances in Stochastic and Deterministic Global Optimization},
   doi       = {10.1007/978-3-319-29975-4}
+}
+
+% Performing accuracy and latency aware neural architecture search via
+% multiobjective optimization using BoTorch.  While not part of the
+% publication, the software is available open source on the BoTorch website
+@inproceedings{eriksson2021latencyaware,
+  title     = {Latency-Aware Neural Architecture Search with Multi-Objective Bayesian Optimization},
+  author    = {David Eriksson and Pierce I-Jen Chuang and Samuel Daulton and Peng Xia and Akshat Shrivastava and Arun Babu and Shicong Zhao and Ahmed A Aly and Ganesh Venkatesh and Maximilian Balandat},
+  booktitle = {8th ICML Workshop on Automated Machine Learning (AutoML)},
+  year      = {2021},
+  url       = {https://openreview.net/forum?id=0ciyfd4SvbI}
 }
 
 % TURBO -- This is an open source numerical software for solving
@@ -1532,6 +1623,16 @@ url = {https://doi.org/10.1137/23M1605661},
   volume = {96},
   pages = {103--114},
   doi = {10.1016/j.compchemeng.2016.10.006},
+}
+
+% Commonly cited lecture notes on using the Levenberg-Marquardt algorithm to
+% solve least-squares curve-fitting (optimization) problems via a Gauss-Newton
+% esque method
+@techreport{gavin2019levenberg,
+  title   = {The Levenberg-Marquardt algorithm for nonlinear least squares curve-fitting problems},
+  author  = {HP. Gavin},
+  year    = {2019},
+  institution = {Duke University, Department of Civil and Environmental Engineering},
 }
 
 % A review of data analysis and machine learning methods for earth system
@@ -1984,6 +2085,28 @@ author = {M.E. Johnson and L.M. Moore and D. Ylvisaker}
   pages={157--181},
   year={1993},
   publisher={Springer}
+}
+
+% D.R. Jones' original paper on "efficient global optimization" (EGO).  This is
+% often credited as the original implementation of multivariate Bayesian
+% optimization.  Jones proposes using Gaussian processes to produce a Gaussian
+% posterior, whose expected improvement function can be efficiently optimized
+% to select the next candidate.  This is also one of the early works in
+% sequential optimization via a generic (i.e., non polynomial) surrogate model.
+% However, earlier work on design-of-experiments and response surface modeling
+% did exist in the engineering design optimization space.  Earlier papers had
+% explored the idea of optimizing Gaussian processes to select experiments
+% (especially in one and two-dimensions).  However, this paper is a landmark in
+% that it gave rise to the field of multivariate Bayesian optimization.  EGO is
+% still often used as the benchmark Bayesian optimization algorithm.
+@article{jones1998efficient,
+  title     = {Efficient global optimization of expensive black-box functions},
+  author    = {Jones, Donald R and Schonlau, Matthias and Welch, William J},
+  journal   = {Journal of Global optimization},
+  volume    = {13},
+  pages     = {455--492},
+  year      = {1998},
+  publisher = {Springer}
 }
 
 % Introducing Dragonfly: an open source numerical software package for solving
