@@ -1,4 +1,6 @@
-% Book on evolutionary MOO
+% The textbook on evolutionary multiobjective optimization (MOO), including
+% common algorithms, evaluation methodologies, fundamental techniques, and test
+% problems
 @book{abraham2005,
     editor={Abraham, Ajith and Jain, Lakhmi and Goldberg, Robert},
     title={Evolutionary Multiobjective Optimization: Theoretical Advances and
@@ -10,7 +12,10 @@
     doi={10.1007/1-84628-137-7}
 }
 
-% Dakota optimization framework, with AI/ML surrogates, multifidelity modeling, UQ, and parallelism
+% The Dakota blackbox and derivative-free simulation optimization framework, a
+% numerical software package (in C++) maintained by Sandia that offers support
+% for AI/ML surrogate modeling, multifidelity modeling, uncertainty
+% quantification (UQ), and distributed and parallel computing
 @techreport{adams2022,
   title = {Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.16 User's Manual},
   author = {Adams, Brian M. and Bohnhoff, William J. and Dalbey, Keith R. and Ebeida, Mohamed S. and Eddy, John P. and Eldred, Michael S. and Hooper, Russell W. and Hough, Patricia D. and Hu, Kenneth T. and Jakeman, John D. and Khalil, Mohammad and Maupin, Kathryn A. and Monschke, Jason A. and Ridgeway, Elliott M. and Rushdi, Ahmad A. and Seidl, D. Thomas and Stephens, J. Adam and Swiler, Laura P. and Tran, Anh and Winokur, Justin G.},
@@ -21,7 +26,8 @@
   url = {https://dakota.sandia.gov/sites/default/files/docs/6.16.0/Users-6.16.0.pdf}
 }
 
-% RBF surrogates for MOO
+% Using RBF surrogates to solve blackbox / derivative-free multiobjective
+% optimization problems
 @article{akhtar2016,
   author={Akhtar, Taimoor and Shoemaker, Christine A.},
   title={Multi objective optimization of computationally expensive multi-modal functions with {RBF} surrogates and multi-rule selection},
@@ -34,7 +40,8 @@
   doi={10.1007/s10898-015-0270-y}
 }
 
-% MATLAB multiobjective surrogate toolbox
+% A numerical software package written in MATLAB -- provides a surrogate
+% modeling toolbox for multiobjective optimization problems
 @inproceedings{aldujali2016a,
   author={Al-Dujaili, Abdullah and Suresh, Sundaram},
   title={A {MATLAB} toolbox for surrogate-assisted multi-objective optimization: A preliminary study},
@@ -46,7 +53,12 @@
   doi={10.1145/2908961.2931703}
 }
 
-% Multiobjective DIRECT
+% Introducing an algorithm for solving multiobjective optimization (MOO)
+% problems via the global optimization algorithm DIRECT.  Some theory and
+% preliminary results, but no software.  Likely not scalable for real-world
+% computationally expensive problems, due to the number of boxes that would
+% need to be divided per iteration using this method.  More of a theoretical
+% foundation for a later practical algorithm
 @inproceedings{aldujali2016b,
   author={Al-Dujaili, Abdullah and Suresh, Sundaram},
   title={Dividing rectangles attack multi-objective optimization},
@@ -58,7 +70,8 @@
   doi={10.1109/CEC.2016.7744246}
 }
 
-% Review of surrogate modeling/RSM techniques
+% A survey and review of surrogate modeling and response-surface modeling (RSM)
+% techniques used in engineering
 @article{alizadeh2020,
   title={Managing computational complexity using surrogate models: a critical review},
   author={Alizadeh, Reza and Allen, Janet K. and Mistree, Farrokh},
@@ -72,7 +85,12 @@
 }
 
 
-% Are derivatives bad for MOO?
+% Is derivative / gradient information counterproductive for solving MOOs?  In
+% this paper, it appears to make direct-search type methods perform worse by
+% the metrics used.  It could be that the metrics favor diversity over
+% convergence, in which case one can get better diversity by taking bad
+% evaluations.  But I need to read more carefully to decide whether that is
+% what's going on here
 @article{andreani2022,
   author = {Andreani, R. and Cust{\'o}dio, Ana Lu{\'i}sa and Raydan, M.},
   title = {Using first-order information in direct multisearch for multiobjective optimization},
@@ -85,6 +103,10 @@
   doi = {10.1080/10556788.2022.2060971}
 }
 
+% Applying grey-box bayesian optimization tutorial: using Bayesian optimization
+% on structured problems, where a blackbox function is composed with an
+% algebraic function, just like with ParMOO and Jeff's GOOMBAH paper.  Tutorial
+% performed using BoTorch
 @inproceedings{astudillo2021,
     author = {Astudillo, Raul and Frazier, Peter I.},
     title = {Thinking inside the box: a tutorial on grey-box bayesian optimization},
@@ -97,20 +119,37 @@
     doi={10.1109/WSC52266.2021.9715343}
 }
 
-% Survey of performance indicators in multiobjective optimization
-@article{audet2020,
-  author={Audet, Charles and Bigeon, Jean and Cartier, Dominique and Le Digabel, S{\'e}bastien and Salomon, Ludovic},
-  year={2021},
-  title={Performance indicators in multiobjective optimization},
-  journal={European Journal of Operational Research},
-  volume={292},
-  issue={2},
-  pages={397--422},
-  preprint={http://www.optimization-online.org/DB_FILE/2018/10/6887.pdf},
-  doi={10.1016/j.ejor.2020.11.016}
+% A thorough survey of over 50 commonly used performance indicators in
+% multiobjective optimization -- key takeaways:  performance metrics can
+% measure different properties of an algorithm, such as whether it is
+% converging to the true Pareto front, the coverage of the true Pareto front,
+% and the average diversity of solutions.  One of the only metrics that is
+% monotonic (i.e., cannot become worse when a solution contains a previous
+% solution) is the hypervolume indicator, which is the standard in evolutionary
+% algorithms
+@article{audet2021,
+author = {Charles Audet and Jean Bigeon and Dominique Cartier and Sébastien {Le Digabel} and Ludovic Salomon},
+title = {Performance indicators in multiobjective optimization},
+year = {2021},
+journal = {European Journal of Operational Research},
+volume = {292},
+number = {2},
+pages = {397-422},
+issn = {0377-2217},
+doi = {10.1016/j.ejor.2020.11.016},
+url = {https://www.sciencedirect.com/science/article/pii/S0377221720309620},
+keywords = {Multiobjective optimization, Quality indicators, Performance indicators},
 }
 
-% Handling categorical/integer/mixed variables in blackbox optimization
+% Handling categorical/integer/mixed variables in blackbox optimization:  This
+% is the method used to perform hyperparameter tuning of neural-networks and
+% other AI models via MADS.  In general, they decompose variables into meta
+% variables (which determine whether other variables are active or not, such as
+% the number of layers in the network which can deactivate variables associated
+% with inactive layers), categorical variables (which either need to be embedded
+% somehow or can be explored in an unordered manner via direct search /
+% generalized pattern search), and finally standard variables which includes
+% both continuous and relaxed integer variables
 @inproceedings{audet2023,
   title={A general mathematical framework for constrained mixed-variable blackbox optimization problems with meta and categorical variables},
   author={Audet, Charles and Hall{\'e}-Hannan, Edward and Le Digabel, S{\'e}bastien},
@@ -123,7 +162,13 @@
   doi={10.1007/s43069-022-00180-6}
 }
 
-% Book on BB optimization
+% Book on fundamental methods, terminology, and theory in blackbox and
+% derivative-free optimization (DFO) -- covers topics such as definitions of
+% blackbox functions, heuristics, classical methods, positive bases and minimum
+% spanning sets, generalized pattern search, and direct search, fully linear
+% and quadratic models, model-drive descent and trust-region methods and
+% ensuring model quality, general surrogate modeling, constraints, and
+% multiobjective basics.
 @book{audet2017,
   author={Audet, Charles and Hare, Warren},
   title={Derivative-free and blackbox optimization},
@@ -134,7 +179,10 @@
   doi={10.1007/978-3-319-68913-5}
 }
 
-% BiMADS (biobjective direct search)
+% BiMADS -- a biobjective direct search / generalized pattern search via the
+% MADS algorithm with an adaptive weighting scheme to trace the Pareto front
+% from one end to the other.  The numerical software implementation is part of
+% the NOMAD software package (written in C++)
 @article{audet2008,
   author       = {Audet, Charles and Savard, Gilles and Zghal, Walid},
   title        = {Multiobjective optimization through a series of single-objective formulations},
@@ -146,7 +194,9 @@
   doi          = {10.1137/060677513},
 }
 
-% Progressive barrier penalizaty for nonlinear optimization methods
+% The progressive barrier penalty for nonlinear blackbox optimization methods.
+% Basically adds a progressive penalty for violating constraints based on the
+% distance to feasibility
 @article{audet2009,
   author = {Audet, Charles and Dennis, John E.},
   title = {A Progressive Barrier for Derivative-Free Nonlinear Programming},
@@ -158,7 +208,9 @@
   doi = {10.1137/070692662},
 }
 
-% Multi-MADS (multiobjective direct search, using NBI)
+% Multi-MADS -- a multiobjective direct search / generalized pattern search via
+% MADS algorithm, using normal boundary intersection (NBI) for adaptive
+% weighting
 @article{audet2010,
   author       = {Audet, Charles and Savard, Gilles and Zghal, Walid},
   title        = {A mesh adaptive direct search algorithm for multiobjective optimization},
@@ -170,7 +222,14 @@
   doi          = {10.1016/j.ejor.2009.11.010},
 }
 
-% NOMAD v4
+% NOMAD v4 -- open source numerical software package (in C++) for blackbox and
+% derivative-free optimization via the MADS algorithms. After publication, they
+% have added support for multiobjective optimization, mixed variables,
+% nonlinear constraints, etc.  Great example of high-impact open source
+% numerical and optimization software.  Improvements over NOMAD v3 include
+% improvements to fundamental algorithms, coding practices, release process,
+% and general project structure to support continuous research and development
+% into the future
 @article{audet2022,
   author = {Audet, Charles and Le Digabel, S\'{e}bastien and Rochon Montplaisir, Viviane and Tribes, Christophe},
   title = {{Algorithm 1027}: {NOMAD} Version 4: Nonlinear Optimization with the {MADS} Algorithm},
@@ -184,7 +243,12 @@
   doi = {10.1145/3544489},
 }
 
-% BoTorch: Modular BO framework built on top of pytorch
+% BoTorch: Modular bayesian optimization framework and numerical software
+% package.  Uses Ax for deploying A/B testing applications.  Uses pytorch for
+% autograd, and uses monte carlo sampling and kernel reparameterization tricks
+% in order to efficiently evaluate composite objective and acquisition
+% functions and non gaussian kernels.  Great example of high-impact open source
+% numerical software and optimization software
 @inproceedings{balandat2020,
  author = {Balandat, Maximilian and Karrer, Brian and Jiang, Daniel and Daulton, Samuel and Letham, Ben and Wilson, Andrew G and Bakshy, Eytan},
  title = {{BoTorch}: A Framework for Efficient {M}onte-{C}arlo {B}ayesian Optimization},
@@ -197,7 +261,13 @@
  url = {https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf},
 }
 
-% PETSc user's guide
+% The PETSc user's guide.  I haven't used it but PETSc is a widely-used C++
+% numerical software library and linear algebra / iterative algorithms
+% framework developed at Argonne and used for implementing many well-known
+% iterative solvers, especially in the area of CFD.  This is a great example of
+% high-impact open source numerical software and best practices in open source
+% scientific software.  Now ships together with TAO, a similar simulation
+% optimization software package
 @techreport{balay2022,
   author = {Balay, Satish and Abhyankar, Shrirang and Adams, Mark F. and Benson, Steven and Brown, Jed and Brune, Peter and Buschelman, Kris and Constantinescu, Emil and Dalcin, Lisandro and Dener, Alp and Eijkhout, Victor and Gropp, William D. and Hapla, V\'{a}clav and Isaac, Tobin and Jolivet, Pierre and Karpeev, Dmitry and Kaushik, Dinesh and Knepley, Matthew G. and Kong, Fande and Kruger, Scott and May, Dave A. and McInnes, Lois Curfman and Mills, Richard Tran and Mitchell, Lawrence and Munson, Todd and Roman, Jose E. and Rupp, Karl and Sanan, Patrick and Sarich, Jason and Smith, Barry F. and Zampini, Stefano and Zhang, Hong and Zhang, Hong and Zhang, Junchao},
   title       = {{PETSc/TAO} Users Manual},
@@ -208,7 +278,10 @@
   url         = {https://petsc.org/release/docs/manual/manual.pdf}
 }
 
-% AMOSA multiobjective simulated annealing
+% AMOSA algorithm -- apparently this is a widely-known standard in
+% multiobjective simulated annealing because reviewers regularly ask me to cite
+% this.  But I've never met anyone who uses this and I can't find the software
+% anywhere.  The algorithm seems very reasonable though
 @article{bandyopadhyay2008,
   author={Bandyopadhyay, Sanghamitra and Saha, Sriparna and Maulik, Ujjwal and Deb, Kalyanmoy},
   title={A Simulated Annealing-Based Multiobjective Optimization Algorithm:
@@ -221,6 +294,10 @@
   doi={10.1109/TEVC.2007.900837}
 }
 
+% An open source numerical software library for solving multiobjective
+% optimization problems in java in real-time via heuristics.  The authors
+% combine jMetal with data streaming via Apache Spark to solve distributed
+% multiobjective optimization problems with streaming data in real-time
 @article{barbagonzalez2018,
     author = {Barba-González, Cristóbal and García-Nieto, José and Nebro, Antonio J. and Cordero, José A. and Durillo, Juan J. and Navas-Delgado, Ismael and Aldana-Montes, José F.},
     title = {{jMetalSP}: A framework for dynamic multi-objective big data optimization},
@@ -231,7 +308,12 @@
     doi = {https://doi.org/10.1016/j.asoc.2017.05.004},
 }
 
-% The FAIR principles for scientific software
+% The FAIR principles for open source scientific software, data, source code,
+% and experiments should by findable (via DOIs or other), accessible (clear
+% purpose and metadata), interoperable (should use standard interfaces, data
+% formats, and schemas), and reusable (well documented, understandable, and not
+% overly specialized to an unnecessarilly niche use-case).  These are good
+% principles for any open source software development practices
 @article{barker2022,
   author={Barker, Michelle and Chue Hong, Neil P. and Katz, Daniel S. and Lamprecht, Anna-Lena and Martinez-Ortiz, Carlos and Psomopoulos, Fotis and Harrow, Jennifer and Castro, Leyla Jael and Gruenpeter, Morane and Martinez, Paula Andrea and Honeyman, Tom},
   title={Introducing the {FAIR} Principles for research software},
@@ -244,7 +326,10 @@
   doi={10.1038/s41597-022-01710-x}
 }
 
-% jMetalPy -- a Python framework for solving MOOs with EAs
+% jMetalPy -- a Python framework for solving MOOs with EAs -- this open source
+% numerical software is a Python implementation of jMetal, with some
+% improvements to code quality and new features for better open source software
+% development and parallelism
 @article{benitezhidalgo2019,
   title = {{jMetalPy}: A {P}ython framework for multi-objective optimization with metaheuristics},
   author = {Antonio Ben{\'i}tez-Hidalgo and Antonio J. Nebro and Jos{\'e} Garc{\'i}a-Nieto and Izaskun Oregi and Javier {Del Ser}},
@@ -255,7 +340,8 @@
   doi = {10.1016/j.swevo.2019.100598},
 }
 
-% Multiobjective descent, using RBF surrogates + trust regions
+% A numerical algorithm for multiobjective descent, using RBF surrogates +
+% trust regions.  Builds heavily off of Stefan's PhD thesis (ORBIT)
 @article{berkemeier2021,
   author={Berkemeier, Manuel and Peitz, Sebastian},
   title={Derivative-Free Multiobjective Trust Region Descent Method Using Radial Basis Function Surrogate Models},
@@ -268,7 +354,10 @@
   doi={10.3390/mca26020031}
 }
 
-% Complexity of calculating hypervolume indicator with o objectives is the same as complexity of calculating simplices in o-dimensional Delaunay triangulation (exponential)
+% Proof that the complexity of calculating the hypervolume indicator with o
+% objectives is exponential.  Roughly the same reasons that calculating
+% simplices in an o-dimensional Delaunay triangulation or computing the facets
+% of an o-dimensional convex hull are exponential
 @article{beume2009,
   author={Beume, Nicola and Fonseca, Carlos M. and Lopez-Ibanez, Manuel and Paquete, Luis and Vahrenhold, Jan},
   title={On the complexity of computing the hypervolume indicator},
@@ -281,7 +370,13 @@
   doi={10.1109/TEVC.2009.2015575}
 }
 
-% NASA FUN3D CFD solver, a priori multiobjective optimization in sec. 9.9
+% NASA's FUN3D CFD solver.  This is one of the oldest and standard numerical
+% softwares for solving CFD problems.  Written in mostly Fortran 90.  Uses a
+% form of the problem that yields the adjoints, which can be used to optimize
+% structures in fewer steps and perform sensitivity analyses.  The kernel uses
+% an iterative solver to solve a massive block-sparse linear system (I think
+% derived from the weak form).  Some a priori multiobjective optimization
+% solvers are described in Section 9.9
 @techreport{biedron2019,
   author={Biedron, Robert T. and Carlson, Jan Renee and Derlaga, Joseph M. and Gnoffo, Peter A. and Hammond, Dana P. and Jones, William T. and Kleb, Bill and Lee-Rausch, Elizabeth M. and Nielson, Eric J. and Park, Michael A. and Rumsey, Christopher L. and Thomas, James L. and Thompson, Kyle B. and Wood, William A.},
   title={{FUN3D Manual}: 13.6},
@@ -292,7 +387,9 @@
   url={https://fun3d.larc.nasa.gov/papers/FUN3D_Manual-13.6.pdf}
 }
 
-% DMulti-MADS: Improved Multi-MADS (direct search)
+% DMulti-MADS: Improved Multi-MADS using direct search / generalized pattern
+% search plus some improvements to the Multi-MADS algorithm -- I need to
+% re-read this to remember what the improvements were
 @article{bigeon2020,
   author={Bigeon, Jean and Le Digabel, S{\'e}bastien and Salomon, Ludovic},
   title={{DM}ulti-{MADS}: {M}esh adaptive direct multisearch for blackbox multiobjective optimization},
@@ -304,7 +401,9 @@
   doi={10.1007/s10589-021-00272-9}
 }
 
-% pagmo/pygmo - Parallel frameworks for MOO in Java and Python
+% pagmo/pygmo - Parallel frameworks for solving multiobjective optimization
+% problems (MOO) in Java and Python.  Great example of open source numerical
+% software, published in JOSS
 @article{biscani2020,
   author = {Francesco Biscani and Dario Izzo},
   title = {A parallel global multiobjective framework for optimization: pagmo},
@@ -317,7 +416,12 @@
   doi = {10.21105/joss.02338},
 }
 
-% pymoo reference -- NSGA-II software
+% pymoo is an open source software package implementing NSGA-II, NSGA-III, and
+% many other multiobjective evolutionary algorithms (MOEAs), plus extensions
+% for handling things such as categorical variables.  This is a well-maintained
+% and well-documented open-source numerical software package.  It is maintained
+% by the lab of the original NSGA-II author, and therefore could be considered
+% the official NSGA-II implementation.  all source code in Python
 @article{blank2020,
   author   = {Blank, Julian and Deb, Kalyanmoy},
   title    = {{pymoo}: Multi-Objective Optimization in {Python}},
@@ -329,7 +433,13 @@
   doi = {10.1109/ACCESS.2020.2990567}
 }
 
-% Multiobjective inverse problem: fitting Fayans EDF
+% Methodolgies for calibrating the Fayans EDF model to experimental data.  Data
+% is expensive and limited and the model itself is computationally expensive,
+% so this is a classical inverse problem.  The problem is actually
+% multiobective because the data themselves come from various categories
+% representing different types of observations, and the standard deviations for
+% each of these observables is not known.  Could be configured as a 3 or
+% 9-objective problem
 @article{bollapragada2020,
   author={Bollapragada, Raghu and Menickelly, Matt and Nazarewicz, Witold and O'Neal, Jared and Reinhard, Paul-Gerhard and Wild, Stefan M.},
   title={Optimization and supervised machine learning methods for fitting numerical physics models without derivatives},
@@ -342,7 +452,11 @@
   doi = {10.1088/1361-6471/abd009}
 }
 
-% pySMT python surrogate modeling toolbox for MDO problems + derivatives and analysis of numerical stability of methods
+% The open source numerical software package (in Python) pySMT.  This is a
+% surrogate modeling and Bayesian optimization toolbox for solving
+% multidisciplinary engineering design optimization (MDO) problems, while
+% utilizing derivatives and providing numerical stability analysis for each
+% surrogate model class.
 @article{bouhlel2019,
   author = {Mohamed Amine Bouhlel and John T. Hwang and Nathalie Bartoli and Rémi Lafage and Joseph Morlier and Joaquim R.R.A. Martins},
   title = {A {P}ython surrogate modeling framework with derivatives},
@@ -353,7 +467,11 @@
   doi = {10.1016/j.advengsoft.2019.03.005},
 }
 
-% Multiobjective Bayesian optimization
+% A Multiobjective Bayesian optimization algorithm, very similar to ParEGO --
+% this algorithm uses the Gaussian process surrogates with NSGA-II to solve the
+% problem.  However, spectral sampling and thompson sampling are then employed
+% to subselect a diverse set of candidates for batch evaluation.  The resulting
+% algorithm is called TSEMO
 @article{bradford2018,
   author={Bradford, Eric and Schweidtmann, Artur M. and Lapkin, Alexei},
   title={Efficient multiobjective optimization employing {Gaussian} processes, spectral sampling and a genetic algorithm},
@@ -366,7 +484,8 @@
   doi={10.1007/s10898-018-0609-2}
 }
 
-% Polynomial surrogates + multiobjective direct search
+% A study on utilizing polynomial surrogate models during multiobjective direct
+% search and generalized pattern search techniques
 @article{bras2020,
   title={On the use of polynomial models in multiobjective directional direct search},
   author={Br{\'a}s, Carmo P. and Cust{\'o}dio, Ana Lu{\'\i}sa},
@@ -379,7 +498,9 @@
   doi={10.1007/s10589-020-00233-8}
 }
 
-% Analysis of hypervolume indicator as proxy for solution set quality -- results for 2-objectives only, show yes but with some caveates
+% Analysis of hypervolume indicator as proxy for solution set quality --
+% results for 2-objectives only, this paper shows that the hypervolume
+% indicator is the best single indicator we have, but with some caveates
 @article{bringmann2013,
   author = {Bringmann, Karl and Friedrich, Tobias},
   title = {Approximation quality of the hypervolume indicator},
@@ -391,7 +512,9 @@
   doi = {10.1016/j.artint.2012.09.005}
 }
 
-% VarSys project: modeling HPC perf variance via RSM
+% Key findings from the VarSys project on modeling HPC performance variability
+% with surrogates and RSM, and using these models to inform decision making
+% through visualizations, optimization, and otherwise
 @article{cameron2019,
 author={Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo
 Ananth, Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas
@@ -405,7 +528,11 @@ number={8},
 pages={1843--1856}
 }
 
-% Multiobjective DIRECT software
+% The open source numerical software MODIR is proposed here. 
+% MODIR can be used to solve multiobjective blackbox optimization problems via
+% a multiobjective variant of the DIRECT blackbox algorithm (direct search
+% method).  The motivating application is a multidisciplinary shiphull
+% engineering design problem
 @article{campana2018,
   author={Campana, Emilio Fortunato and Diez, Matteo and Liuzzi, Giampaolo and Lucidi, Stefano and Pellegrini, Riccardo and Piccialli, Veronica and Rinaldi, Francesco and Serani, Andrea},
   title={A multi-objective {DIRECT} algorithm for ship hull optimization},
@@ -417,7 +544,11 @@ pages={1843--1856}
   doi={10.1007/s10589-017-9955-0}
 }
 
-% PhD thesis, including MOO technique, algorithm, and software review; description of VTMOP, running parallel simulations, integrating with libE
+% My PhD thesis, including multiobjective optimization techniques, algorithm,
+% performance analysis, and software review; description of VTMOP, running
+% parallel simulations, integrating with libE.  Also scientific machine
+% learning via Delaunay interpolation and algorithms and proofs for doing so.
+% Several applications related to HPC performance modeling and autotuning.
 @phdthesis{chang2020a,
   author={Chang, Tyler H.},
   title={Mathematical Software for Multiobjective Optimization Problems},
@@ -426,7 +557,8 @@ pages={1843--1856}
   url={https://vtechworks.lib.vt.edu/handle/10919/98915}
 }
 
-% Integrating VTMOP into libE
+% Paper on the challenges of integrating VTMOP into the libEnsemble parallel
+% computing Python software library at Argonne
 @inproceedings{chang2020b,
   author={Chang, Tyler H. and Larson, Jeffrey and Watson, Layne T. and Lux, Thomas C. H.},
   title={Managing computationally expensive blackbox multiobjective optimization problems using {libEnsemble}},
@@ -438,7 +570,13 @@ pages={1843--1856}
   doi={10.22360/SpringSim.2020.HPC.001}
 }
 
-% Multiobjective optimization of LINPACK configs on Bebop
+% A study on the multiobjective optimization of the LINPACK benchmark's config
+% files on the leadership class HPC Bebop at Argonne National Laboratory.  We
+% used VTMOP but some modifications were required to ensure that mixed
+% variables were properly handled.  Some of the techniques that we used here
+% inspired me to provide automatic support in ParMOO.  Ultimately, we achieve
+% 3x reduction in performance variability without sacrificing max/mean
+% throughput.
 @inproceedings{chang2020c,
   author={Chang, Tyler H. and Larson, Jeffrey and Watson, Layne T.},
   title={Multiobjective optimization of the variability of the high-performance {LINPACK} solver},
@@ -450,7 +588,11 @@ pages={1843--1856}
   doi={10.1109/WSC48552.2020.9383875}
 }
 
-% VTMOP -- RSM + adaptive weighting + trust region software
+% Publication of my second open source numerical software package: VTMOP a
+% Fortran software for solving blackbox multiobjective optimization problems.
+% Uses surrogate modeling (RSM), with an adaptive weighting scheme, within a
+% trust region framework.  The motivating application is a particle accelerator
+% tuning problem at SLAC
 @article{chang2022a,
   author   = {Chang, Tyler H. and Watson, Layne T. and Larson, Jeffrey and Neveu, Nicole and Thacker, William I. and Deshpande, Shubhangi and Lux, Thomas C. H.},
   title    = {{Algorithm 1028}: {VTMOP}: Solver for Blackbox Multiobjective
@@ -464,18 +606,34 @@ pages={1843--1856}
   doi={10.1145/3529258}
 }
 
-% ParMOO docs
-@techreport{chang2023a,
+% The ParMOO docs -- ParMOO is my open source numerical software package and
+% library ParMOO, written in Python, which can be used for implementing custom
+% solvers for multiobjective simulation optimization problems, while supporting
+% mixed variables, non linear constraints, and diverse and custom surrogte
+% models, and composite structures where some components of the problem are
+% blackbox, but the rest are algebraic.  In later releases, ParMOO also
+% supports interactive visualization of results via Plotly + Dash, parallel and
+% distributed function evaluations via libEnsemble, and automatic gradient
+% calculations and just-in-time compilation via jax
+@techreport{chang2024a,
     author      = {Chang, Tyler H. and Wild, Stefan M. and Dickinson, Hyrum},
     title       = {{ParMOO}: {P}ython library for parallel multiobjective simulation optimization},
-    year        = {2023},
+    year        = {2024},
     institution = {Argonne National Laboratory},
-    number      = {Version 0.3.1},
+    number      = {Version 0.4.1},
     address     = {Lemont, IL, USA},
     url         = {https://parmoo.readthedocs.io/en/latest}
 }
 
-% ParMOO JOSS article
+% The ParMOO JOSS article -- ParMOO is my open source numerical software
+% package and library ParMOO, written in Python, which can be used for
+% implementing custom solvers for multiobjective simulation optimization
+% problems, while supporting mixed variables, non linear constraints, and
+% diverse and custom surrogte models, and composite structures where some
+% components of the problem are blackbox, but the rest are algebraic.  In later
+% releases, ParMOO also supports interactive visualization of results via
+% Plotly + Dash, parallel and distributed function evaluations via libEnsemble,
+% and automatic gradient calculations and just-in-time compilation via jax
 @article{chang2023b,
   author      = {Chang, Tyler H. and Wild, Stefan M.},
   title       = {{ParMOO}: A {P}ython library for parallel multiobjective simulation optimization},
@@ -488,7 +646,15 @@ pages={1843--1856}
   doi         = {10.21105/joss.04468}
 }
 
-% ParMOO + MDML chemical manufacturing application and data
+% Using ParMOO software with the MDML software (wrapper on Apache Kafka with
+% automatic data logging and analysis dashboard) in order to optimize chemical
+% manufacturing processes in a wet-lab environment.  The kafka querries are
+% sent directly to a continuous flow reactor (CFR) through a smart-lab setup in
+% the MERF at Argonne.  Through this setup, ParMOO is able to automatically
+% steer the solvents, bases, temperatures, flow rates, and mixing ratios of a
+% complex chemical manufacturing process in order to produce optimized yields
+% and purities -- achieving multi-hundred-fold improvement over the previous
+% manual process
 @inproceedings{chang2023c,
   author  = {Chang, Tyler H. and Elias, Jakob R. and Wild, Stefan M. and Chaudhuri, Santanu and Libera, Joseph A.},
   title   = {A framework for fully autonomous design of materials via multiobjective optimization and active learning: challenges and next steps},
@@ -500,8 +666,10 @@ pages={1843--1856}
   note     = {to appear}
 }
 
-% IJOC ParMOO Repo DOI
-@misc{chang2024,
+% This is the OJOC ParMOO repository DOI -- this is an archive of the software
+% experiments for obtaining our test problems and reproducing our experimental
+% results on those test problems with customized ParMOO solvers.
+@misc{chang2025,
   author =        {Chang, Tyler H. and Wild, Stefan M.},
   publisher =     {INFORMS Journal on Computing},
   title =         {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
@@ -510,7 +678,32 @@ pages={1843--1856}
   note =          {Available for download at https://github.com/INFORMSJoC/2023.0250},
 }
 
-% funcX/Globus publication on FaaS architecture
+% The ParMOO IJOC article describing the design of the ParMOO software,
+% motivation, and providing examples of how ParMOO can be used to solve common
+% scientific problems more efficiently with low effort -- ParMOO is my open
+% source numerical software package and library ParMOO, written in Python,
+% which can be used for implementing custom solvers for multiobjective
+% simulation optimization problems, while supporting mixed variables, non
+% linear constraints, and diverse and custom surrogte models, and composite
+% structures where some components of the problem are blackbox, but the rest
+% are algebraic.  In later releases, ParMOO also supports interactive
+% visualization of results via Plotly + Dash, parallel and distributed function
+% evaluations via libEnsemble, and automatic gradient calculations and
+% just-in-time compilation via jax
+@article{chang2025,
+  author =        {Chang, Tyler H. and Wild, Stefan M.},
+  title =         {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
+  year =          {2025},
+  journal =     {INFORMS Journal on Computing},
+  doi =           {10.1287/ijoc.2023.0250},
+}
+
+% The funcX and updated Globus publication on the techniques and benefits of
+% using a function-as-a-service (FaaS) framework to perform scientific
+% experimentation at Argonne and other labs.  funcX and Globus are scientific
+% software products for performing distributed function evaluations and
+% parallel computing that started at Argonne, and spun off into independent
+% companies
 @inproceedings{chard2020,
   title={{funcX}: A federated function serving fabric for science},
   author={Chard, Ryan and Babuji, Yadu and Li, Zhuozhao and Skluzacek, Tyler and Woodard, Anna and Blaiszik, Ben and Foster, Ian and Chard, Kyle},
@@ -522,7 +715,9 @@ pages={1843--1856}
   doi={10.1145/3369583.3392683}
 }
 
-% Another particle accelerator design application with ParMOO
+% A particle accelerator tuning application with ParMOO -- we achieved very
+% good results on a several hundred evaluation budget for the Argonne wakefield
+% accelerator project
 @inproceedings{chen2023,
   author  = {Chen, Gongxiaohui and Chang, Tyler H. and Power, John and Jing, Chungunag},
   title   = {An Integrated Multi-Physics Optimization Framework for Particle Accelerator Design},
@@ -533,7 +728,17 @@ pages={1843--1856}
   doi     = {10.48550/arXiv.2311.09415}
 }
 
-% The classic by Cheney and Light on approximation theory
+% The classic textbook by Cheney and Light on the fundamentals of approximation
+% theory for multivariate functions -- topics include: basics of interpolation,
+% approximation theory, and linear operators; multivariate polynomials, their
+% interpolation nodes, and error kernels; selecting good polynomial
+% interpolants via Newton and Lagrange type methods; positive-definite
+% functions, kernel interpretations, and good kernels for interpolation; basis
+% functions, orthonormal bases, common bases for interpolation and convergence
+% rates; Chebyshev nodes; B-splines, Box splines, and thin-plate splines; and
+% basics of artificial neural networks.  Other topics include wavelets,
+% orthogonal projection algorithms, Hilbert spaces, and reproducing kernel
+% Hilbert spaces (RKHS).
 @book{cheney2009,
   author={Cheney, Elliott W. and Light, William A.},
   year={2009},
@@ -543,7 +748,10 @@ pages={1843--1856}
   address={Providence, RI, USA}
 }
 
-% Keras docs
+% The Keras docs -- great and highly impactful open source Python software,
+% needs no introduction.  A simplified interface for quickly building neural
+% networks and other deep learning models with various backends frameworks such
+% as Tensorflow, jax, and Pytorch.
 @misc{chollet2015,
   title={Keras},
   author={Chollet, Fran\c{c}ois and others},
@@ -551,7 +759,9 @@ pages={1843--1856}
   howpublished={\url{https://keras.io}},
 }
 
-% Multiobjective implicit filtering (MOIF)
+% An algorithm for multiobjective implicit filtering (MOIF).  Not mentioned
+% here, but the open source numerical software for MOIF on the author's GitHub
+% is often cited via this paper
 @article{cocchi2018,
   author       = {Cocchi, Guido and Liuzzi, Giampaolo and Papini, Alessandra and Sciandrone, Marco},
   title        = {An implicit filtering algorithm for derivative-free multiobjective optimization with box constraints},
@@ -563,7 +773,11 @@ pages={1843--1856}
   doi          = {10.1007/s10589-017-9953-2}
 }
 
-% Building a multiobjective augmented Lagrangian
+% Building a multiobjective augmented Lagrangian -- basically, use a standard
+% augmented Lagrangian penalty but apply it to all components of the objective.
+% There is a proof that this will work.  I don't use this method, but I use the
+% same trick with the progressive barrier of Audet all the time and usually
+% cite both papers
 @article{cocchi2020,
   author={Cocchi, Guido and Lapucci, Matteo},
   year={2020},
@@ -576,7 +790,13 @@ pages={1843--1856}
   doi={10.1007/s10589-020-00204-z}
 }
 
-% Conn paper on interpolation dataset geometry
+% Andrew Conn's landmark paper on interpolation dataset geometry -- leads to
+% the definition of sets being "well-poised" for interpolation, meaning that
+% when the interpolation set's geometry meats some local geometric conditions
+% (basically bounded away from singularity), then the resulting interpolant's
+% error (and gradient / hessian errors) can be bounded and the resulting models
+% can be used to perform gradient descent or SQP within a trust-region
+% framework with guaranteed convergence
 @article{conn2008,
   title={Geometry of interpolation sets in derivative free optimization},
   author={Conn, Andrew R and Scheinberg, Katya and Vicente, Lu{\'\i}s N},
@@ -588,7 +808,11 @@ pages={1843--1856}
   doi={10.1007/s10107-006-0073-5}
 }
 
-% Conn and Scheinberg book on DFO
+% Conn and Scheinberg book on DFO -- describes the geometry of good
+% interpolation sets, linear and quadratic interpolants and how to use them for
+% derivative-free gradient descent and SQP frameworks, bounds on interpolation
+% and gradient errors of various models, and how to efficiently restore good
+% geometry when the optimization algorithm samples points in a subspace
 @book{conn2009,
   author={Conn, Andrew R. and Scheinberg, Katya and Vicente, Luis N.},
   title={Introduction to derivative-free optimization},
@@ -599,7 +823,9 @@ pages={1843--1856}
   doi={10.1137/1.9780898718768}
 }
 
-% PyMOSO (direct search for integer/discrete problems)
+% PyMOSO: an open source Python numerical software library for solving
+% multiobjective simulation optimization problems with integer and discrete
+% variables via direct search / pattern search like techniques
 @article{cooper2020,
   author={Cooper, Kyle and Hunter, Susan R.},
   year={2020},
@@ -612,7 +838,7 @@ pages={1843--1856}
   doi={10.1287/ijoc.2019.0902}
 }
 
-% RBFOpt single-objective blackbox optimization
+% RBFOpt an open source library for solving single-objective blackbox optimization
 @article{costa2018,
   title={{RBFOpt}: an open-source library for black-box optimization with costly function evaluations},
   author={Costa, Alberto and Nannicini, Giacomo},
@@ -625,7 +851,12 @@ pages={1843--1856}
   doi={10.1007/s12532-018-0144-7}
 }
 
-% ParEGO latest code
+% ParEGO latest code and update introducing algorithmic updates, improved
+% software quality, and (I think) some parallel computing -- ParEGO is the
+% first open source numerical multiobjective bayesian optimization software
+% package and written in C++.  It is basically EGO (the original Bayesian
+% optimization software using expected improvment acquisition) plus augmented
+% Lagrangian scalarization
 @inproceedings{cristescu2015,
   title={Surrogate-based multiobjective optimization: {ParEGO} update and test},
   author={Cristescu, Cristina and Knowles, Joshua},
@@ -636,7 +867,14 @@ pages={1843--1856}
   url={https://www.cs.bham.ac.uk/~jdk/UKCI-2015.pdf}
 }
 
-% MultiGLODS (multiobjective direct search)
+% The MultiGLODS numerical software package is written in MATLAB and used for
+% solving multiobjective optimization problems via direct search / pattern
+% search with a clever restart algorithm for selecting directions to explore in
+% order obtain good coverage of the Pareto front.  I believe this version also
+% can use polynomial surrogates to pre-select good search directions and filter
+% out unneeded blackbox function / simulation evaluations.  It is now part of
+% the BoostDFO MATLAB numerical software toolkit, obtainable from contacting
+% Custodio
 @article{custodio2017,
   author       = {Cust{\'{o}}dio, Ana Lu\'isa and Madeira, Jose F. A.},
   title        = {{MultiGLODS}: global and local multiobjective optimization using direct search},
@@ -648,7 +886,10 @@ pages={1843--1856}
   doi          = {10.1007/s10898-018-0618-1}
 }
 
-% DMS (multiobjective direct search)
+% Direct multisearch (DMS) is one of Custodio's earlier multiobjective direct
+% search algorithms, which I think is a precursor to MutiGLODS.  The numerical
+% MATLAB software can be obtained by contacting her lab, but I'm not sure if
+% they still distribute it as part of BoostDFO
 @article{custodio2011,
   author       = {Cust\'odio, Ana Lu\'isa and Madeira, Jose F. A. and Vaz, A. Ismael F. and Vicente, Lu\'is N.},
   title        = {Direct Multisearch for Multiobjective Optimization},
@@ -660,7 +901,8 @@ pages={1843--1856}
   doi          = {10.1137/10079731x}
 }
 
-% Quadratic scalarization scheme
+% Description and proof of coverage for a quadratic scalarization scheme for
+% scalarizing multiobjective optimization problems
 @article{dandurand2016,
   author = {Dandurand, Brian and Wiecek, Margaret M.},
   title = {Quadratic scalarization for decomposed multiobjective optimization},
@@ -672,7 +914,11 @@ pages={1843--1856}
   doi = {10.1007/s00291-016-0453-z}
 }
 
-% NBI method for adaptive scalarization
+% The normal boundary intersection (NBI) method was one of the first adaptive
+% scalarization schemes for multiobjective optimization problems.  It uses
+% linear scalarization but does so adaptively using the angle of the
+% intersecting vector at a target point to set the weights in order to
+% adaptively fill in gaps on the Pareto front
 @article{das1998,
   author={Das, Indraneel and Dennis, John E.},
   year={1998},
@@ -684,7 +930,10 @@ pages={1843--1856}
   doi={10.1137/S1052623496307510}
 }
 
-% Surrogates + multiobjective evolutionary algorithm
+% An early paper on using surrogate models to reduce the cost (in terms of true
+% simulation / blackbox function evaluations) when using multiobjective
+% evolutionary algorithm to solve computationally expensive blackbox and
+% simulation optimization problems
 @article{datta2016,
   author       = {Datta, Rituparna and Regis, Rommel G.},
   title        = {A surrogate-assisted evolution strategy for constrained multi-objective optimization},
@@ -695,7 +944,9 @@ pages={1843--1856}
   doi          = {10.1016/j.eswa.2016.03.044}
 }
 
-% Differentiable HV improvement for BO
+% A technique for differentiating expected hypervolume improvement EHVI (and
+% its monte carlo variant qEHVI), which can be used as the acquisition function
+% for solving multiobjective blackbox optimization problems with BoTorch
 @inproceedings{daulton2020,
  author = {Daulton, Samuel and Balandat, Maximilian and Bakshy, Eytan},
  title = {Differentiable Expected Hypervolume Improvement for Parallel Multi-Objective {B}ayesian Optimization},
@@ -708,7 +959,8 @@ pages={1843--1856}
  url = {https://proceedings.neurips.cc/paper/2020/file/6fec24eac8f18ed793f5eaad3dd7977c-Paper.pdf},
 }
 
-% Parallel BO using hypervolume improvement
+% The first paper on performing parallel Bayesian optimization using the
+% expected hypervolume improvement acquisition function in BoTorch
 @inproceedings{daulton2021,
  author = {Daulton, Samuel and Balandat, Maximilian and Bakshy, Eytan},
  title = {Parallel {B}ayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement},
@@ -721,7 +973,10 @@ pages={1843--1856}
  url = {https://proceedings.neurips.cc/paper/2021/file/11704817e347269b7254e744b5e22dac-Paper.pdf},
 }
 
-% NSGA-III: (multiobjective evolutionary algorithm + ref pt + many-objectives)
+% The orgiinal NSGA-III paper part 1: a multiobjective evolutionary algorithm
+% similar to NSGA-II, solving the drawback of NSGA-II performing poorly with
+% many objectives by having the user provide a collection of well-spaced
+% reference points and optimizing toward those
 @article{deb2013,
   title={An evolutionary many-objective optimization algorithm using reference-point-based nondominated sorting approach, part {I}: solving problems with box constraints},
   author={Deb, Kalyanmoy and Jain, Himanshu},
@@ -734,7 +989,18 @@ pages={1843--1856}
   doi={10.1109/TEVC.2013.2281535}
 }
 
-% NSGA-II: (multiobjective evolutionary algorithm)
+% The original NSGA-II paper: a multiobjective evolutionary algorithm (MOEA)
+% that scales well and performs extremely well in practice.  The main
+% contribution is a fast method for performing nondominated sorting so that the
+% authors can ensure all efficient points persist in every generation.  This
+% method is generally considered to be the baseline in multiobjective
+% optimization.  While the algorithm is a simple heuristic that is extremely
+% wasteful in terms of the number of true blackbox function / simulation
+% evaluations, it performs extremely well in practice by the hypervolume
+% indicator.  I have found that it is very difficult to obtain better
+% performance than NSGA-II on both benchmark and real-world problems in the
+% limit, unless you have some "secret sauce" to exploit for your particular
+% problem
 @article{deb2002a,
   author={Deb, Kalyanmoy and Pratap, Amrit and Agarwel, Sameer
   and Meyarivan, T.},
@@ -747,7 +1013,17 @@ pages={1843--1856}
   doi={10.1109/4235.996017}
 }
 
-% DTLZ test problems
+% The DTLZ test problems are the standard test problems used in all
+% multiobjective evolutionary optimization papers.  They are algebraic test
+% problems that can scale to as many objectives and variables as one desires.
+% Each problem also has a pathological property that makes it extremely
+% difficult or degenerate for multiobjective optimization algorithms.  This
+% maeks the suite as a whole extremely convenient for testing, scaling, and
+% evaluating results.  However, several of the problems are so difficult that
+% no solvers can reliably solve them.  Additionally, all the problems have the
+% property that the last "n" variables are essentially unused, with their
+% optimum being 0.5 and not changing as we move across the Pareto front, which
+% could be unrealistic for certain problems
 @inproceedings{deb2002b,
   author={Deb, Kalyanmoy and Thiele, Lothar and Laumanns, Marco
   and Zitzler, Eckart},
@@ -761,7 +1037,11 @@ pages={1843--1856}
   doi={10.1109/CEC.2002.1007032}
 }
 
-% Trust region + surrogates + multiobjective direct search
+% An algorithm for solving blackbox multiobjective optimization problems via
+% trust region descent, using locally linear (shepard's method) surrogate
+% models, and a multiobjective variant of DIRECT.  Also, the authors propose a
+% novel adaptive weighting scheme within the trust regions.  The motivating
+% application is an aircraft design optimization problem.
 @article{deshpande2016,
   author={Deshpande, Shubhangi and Watson, Layne T. and Canfield, Robert A.},
   year={2016},
@@ -773,7 +1053,10 @@ pages={1843--1856}
   doi={10.1080/10556788.2015.1048861}
 }
 
-% ECP using different GPU-based architectures, performance portability an issue
+% Achieving performance portability of parallel codes in the exascale computing
+% project (ECP) across various GPU-based architectures, which is challenging
+% since different GPU vendors use different GPU programming libraries (e.g.,
+% CUDA for NVIDIA vs HIPP for AMD)
 @article{dubey2021,
   author={Dubey, Anshu and McInnes, Lois Curfman and Thakur, Rajeev and Draeger, Erik W. and Evans, Thomas and Germann, Timothy C. and Hart, William E.},
   journal={Computing in Science \& Engineering},
@@ -785,7 +1068,9 @@ pages={1843--1856}
   doi={10.1109/MCSE.2021.3098231}
 }
 
-% JuMP modeling language in Julia
+% The JuMP modeling language in Julia -- a modeling language for modeling and
+% solving linear and nonlinear programming (optimization) problems in Julia.
+% The implementation is an open source numerical software
 @article{dunning2017,
   author = {Dunning, Iain and Huchette, Joey and Lubin, Miles},
   title = {{JuMP}: A Modeling Language for Mathematical Optimization},
@@ -797,7 +1082,10 @@ pages={1843--1856}
   doi = {10.1137/15M1020575},
 }
 
-% jMetal framework for solving MOOs using EA in Java
+% jMetal is an open source numerical software library implementing
+% multiobjective optimization solvers in Java.  Last I checked, most of the
+% solvers were heuristic methods such as evolutionary algorithms and/or
+% simulated annealing.  This is widely used in some fields of engineering
 @article{durillo2011,
   title = {{jMetal}: A {J}ava framework for multi-objective optimization},
   author = {Juan J. Durillo and Antonio J. Nebro},
@@ -809,7 +1097,12 @@ pages={1843--1856}
   doi = {10.1016/j.advengsoft.2011.05.014},
 }
 
-% Book on MOO fundamentals (including basic defns, theory, scalarization)
+% A classical textbook on the fundamentals of multiobjective optimization
+% theory.  Topics include: basic definitions in multiobjective optimization,
+% partial orderings and cones and basic theories, linear scalarization and its
+% theory and drawbacks, other scalarization methods and their theory and
+% drawbacks, standard algorithms for common types of multiobjective
+% optimization problems, and sample applications
 @book{ehrgott2005,
   author={Ehrgott, Matthias},
   year={2005},
@@ -821,7 +1114,10 @@ pages={1843--1856}
   doi={10.1007/3-540-27659-9}
 }
 
-% Pascoletti Serafini scalarization, and its variations
+% The Pascoletti-Serafini scalarization and its variations, this method
+% involves drawing a line through the target to reach various points on the
+% Pareto front.  It is effective with nonconvex Pareto fronts, but it is not
+% adaptive and not commonly used in modern algorithms
 @article{eichfelder2009,
   title={Scalarizations for adaptively solving multi-objective optimization problems},
   author={Eichfelder, Gabriele},
@@ -834,7 +1130,13 @@ pages={1843--1856}
   doi={10.1007/s10589-007-9155-4}
 }
 
-% MDML reference/scientific experimentation
+% The MDML open source software is a wrapper around Apache Kafka with protocols
+% for fast data streaming and logging and dashboard generation.  This framework
+% was developed for usage at the material engineering research facility (MERF)
+% at Argonne in order to facilitate the creation of a "smart lab" where MDML is
+% the protocol for sending experiment requests to various equipment in the lab
+% and logging results -- in an old (out-of-date branch) of ParMOO, this was a
+% valid backend for launching simulation / experiment requests
 @article{elias2020,
   title={The Manufacturing Data and Machine Learning Platform: Enabling Real-time Monitoring and Control of Scientific Experiments via {IoT}},
   author={Elias, Jakob R. and Chard, Ryan and Libera, Joseph A. and Foster, Ian T. and Chaudhuri, Santanu},
@@ -845,8 +1147,10 @@ pages={1843--1856}
   doi={10.1109/WF-IoT48130.2020.9221078}
 }
 
-% Multiobjective Bayesian opt
-@incollection{emmerich2016,
+% A chapter from an optimization textbook on performing multiobjective Bayesian
+% optimization using the expected hypervolume improvement (EHVI) scalarization
+% / acquisition
+@inbook{emmerich2016,
   author    = {Emmerich, Michael and Yang, Kaifeng and Deutz, Andr{\'e} and Wang, Hao and Fonseca, Carlos M.},
   title     = {A Multicriteria Generalization of {Bayesian} Global Optimization},
   editor    = {Pardalos, Panos M. and Zhigljavsky, Anatoly and {\v{Z}}ilinskas, Julius},
@@ -857,7 +1161,14 @@ pages={1843--1856}
   doi       = {10.1007/978-3-319-29975-4}
 }
 
-% TURBO - trust-region Bayesian optimization in high-dimesional spaces
+% TURBO -- This is an open source numerical software for solving
+% high-dimensional optimization problems via Bayesian optimization using
+% BoTorch.  Since Bayesian optimization performs poorly in high dimensions,
+% they have resorted to applying a rudimentary trust region framework on top of
+% their Bayesian optimization algorithm.  By squeesing the trust region inward
+% (standard practice in derivative-free optimization) they are able to force
+% the Bayesian optimization algorithm to converge in a reasonable number of
+% true blackbox function evaluations
 @article{eriksson2019,
   title={Scalable global optimization via local bayesian optimization},
   author={Eriksson, David and Pearce, Michael and Gardner, Jacob and Turner, Ryan D and Poloczek, Matthias},
@@ -869,7 +1180,12 @@ pages={1843--1856}
   url = {https://proceedings.neurips.cc/paper/2019/file/6c990b7aca7bc7058f5e98ea909e924b-Paper.pdf}
 }
 
-% Pathmind, industry RL-based solver using a priori scalarization
+% Publication and whitepaper on Pathmind, an RL-based solver for simulation
+% optimization problems.  They also offer multiobjective support but only by
+% using a priori scalarization provided by the user (so not real multiobjective
+% support).  This tool is not open source, it is a service provided by a
+% YC startup of the same name.  Therefore, it could be considered industry
+% software
 @inproceedings{farhan2020,
   title={Reinforcement Learning in {AnyLogic} Simulation Models: A Guiding Example using {Pathmind}},
   author={Farhan, Mohammed and G{\"o}hre, Brett},
@@ -881,7 +1197,7 @@ pages={1843--1856}
   doi={10.1109/WSC48552.2020.9383916}
 }
 
-% A biobjective ranking and selection algorithm
+% A biobjective ranking and selection algorithm from Hunter's NSF Career award
 @article{feldman2018,
   author = {Feldman, Guy and Hunter, Susan R.},
   title = {{SCORE} Allocations for Bi-objective Ranking and Selection},
@@ -894,7 +1210,11 @@ pages={1843--1856}
   doi = {10.1145/3158666},
 }
 
-% Multiobjective Bayesian opt
+% A Bayesian optimization algorithm for solving constrained optimization
+% problems that are both single and multiobjective -- the authors propose
+% expected hypervolume improvement (EHVI) which merges expected improvement
+% acquisition from Bayesian optimization with the hypervolume indicator for
+% multiobjective optimization
 @article{feliot2016,
   author = {Feliot, Paul and Bect, Julien and Vazquez, Emmanuel},
   title = {A {B}ayesian approach to constrained single- and multi-objective optimization},
@@ -906,7 +1226,11 @@ pages={1843--1856}
   doi = {10.1007/s10898-016-0427-3}
 }
 
-% The DEAP framework for parallel and distributed evolutionary algorithms
+% The DEAP framework is a Python framework for easily implementing and
+% deploying parallel and distributed evolutionary algorithms.  Fairly high
+% quality open source software.  This is widely used by optimization
+% practitioners, e.g., engineers and scientists that read an evolutionary
+% algorithm paper and want to try it out on their problem
 @article{fortain2012,
     author    = {Fortin, F\'elix-Antoine and {De Rainville}, Fran\c{c}ois-Michel and Gardner, Marc-Andr\'e and Parizeau, Marc and Gagn\'e ", Christian},
     title     = {{DEAP}: Evolutionary Algorithms Made Easy},
@@ -918,7 +1242,8 @@ pages={1843--1856}
     url = {https://www.jmlr.org/papers/v13/fortin12a.html}
 }
 
-% Gang of Four design patters
+% Landmark textbook on standard design patterns, such as builders, factories,
+% observers, etc.  Nicknamed the "Gang of Four" book on design patters
 @book{gamma1995,
   title={Design patterns: elements of reusable object-oriented software},
   author={Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John},
@@ -928,7 +1253,10 @@ pages={1843--1856}
   isbn={0-201-63361-2}
 }
 
-% Open source Bayesian optimization textbook
+% A community reviewed textbook on Bayesian optimization theory and
+% implementation.  Very thorough description of Gaussian process and Bayesian
+% optimization fundamentals and theory, common techniques and acquisition
+% functions, and implementation details, drawbacks, and real-world challenges
 @book{garnett2023,
   author    = {Garnett, Roman},
   title     = {Bayesian Optimization},
@@ -938,7 +1266,8 @@ pages={1843--1856}
   url = {https://bayesoptbook.com}
 }
 
-% A survey of static DOE sampling strategies for surrogate modeling, as well as a novel model-based strategy
+% A survey of static DOE sampling strategies for surrogate modeling, as well as
+% a novel model-based strategy proposed by the authors
 @article{garud2017,
   author = {Garud, Sushant Suhas and Karimi, Iftekhar A. and Kraft, Markus},
   title = {Smart Sampling Algorithm for Surrogate Model Development},
@@ -949,7 +1278,8 @@ pages={1843--1856}
   doi = {10.1016/j.compchemeng.2016.10.006},
 }
 
-% Review of DA methods and ML methods for earth system modeling
+% A review of data analysis and machine learning methods for earth system
+% modeling
 @article{geer2021,
   title={Learning earth system models from observations: machine learning or data assimilation?},
   author={Geer, Alan J.},
@@ -962,7 +1292,8 @@ pages={1843--1856}
   doi={10.1098/rsta.2020.0089}
 }
 
-% Co-design of algorithms and software for ECP
+% An article on the benefits of co design of algorithms and software and
+% hardware in the context of the DOE's exascale computing project (ECP)
 @article{germann2021,
   title={Co-design in the {Exascale Computing Project}},
   author={Germann, Timothy C.},
@@ -975,7 +1306,10 @@ pages={1843--1856}
   doi = {10.1177/10943420211059380}
 }
 
-% Google's OSS Vizier service
+% Google's OSS Vizier service is a (now open source) blackbox / derivative-free
+% optimization numerical software package and service.  As far as I can tell,
+% the package is primarily used for solving system optimization and A/B testing
+% type problems
 @inproceedings{golovin2017,
   author = {Golovin, Daniel and Solnik, Benjamin and Moitra, Subhodeep and Kochanski, Greg and Karro, John and Sculley, D.},
   title = {{Google Vizier}: A Service for Black-Box Optimization},
@@ -987,7 +1321,10 @@ pages={1843--1856}
   doi = {10.1145/3097983.3098043}
 }
 
-% Convex hull of N pts in D dimensions has volume ~0 for D sufficiently large (concentration of msre)
+% Theorems on the curse of dimensionality when it comes to drawing data points
+% in high-dimensional spaces.  The main theorem implies that the convex hull of
+% N points in D dimensions has volume ~0 for D sufficiently large -- this
+% occurs because of a concentration of measure type result
 @article{gorban2017,
   title={Stochastic separation theorems},
   author={Gorban, Alexander N and Tyukin, Ivan Yu},
@@ -999,7 +1336,12 @@ pages={1843--1856}
   doi={10.1016/j.neunet.2017.07.014}
 }
 
-% OpenMDAO open source MDO library
+% The OpenMDAO open source numerical software library for modeling and solving
+% multidisciplinary engineering design optimization problems.  Combines
+% surrogate modeling, gradient based optimization, parallel computing
+% frameworks, and derivative-free optimization techniques in one package so
+% in order to solve large mixed-variable blackbox optimization problems.
+% Developed by NASA Glenn
 @article{gray2019,
   title={{OpenMDAO}: An open-source framework for multidisciplinary design, analysis, and optimization},
   author={Gray, Justin S. and Hwang, John T. and Martins, Joaquim R.R.A. and Moore, Kenneth T. and Naylor, Bret A.},
@@ -1012,7 +1354,8 @@ pages={1843--1856}
   doi={10.1007/s00158-019-02211-z}
 }
 
-% Platypus - Multiobjective Optimization framework in Python
+% Platypus: an open source numerical software package for performing
+% multiobjective optimization in Python and comparing results
 @techreport{hadka2015,
   title={Platypus -- multiobjective optimization in {P}ython},
   author={Hadka, David},
@@ -1022,7 +1365,11 @@ pages={1843--1856}
   url={https://platypus.readthedocs.io/en/latest}
 }
 
-% Chimera: self-driving labs MOO
+% Chimera: a scientific software package for steering self-driving labs via
+% multiobjective optimization -- the software is similar to what we did with
+% ParMOO + MDML in the MERF at Argonne.  They focus on applications in robot
+% calibration and molecular system design.  The multiobjective component helps
+% them to explore the solution space with experimentation
 @article{hase2018,
   title={Chimera: enabling hierarchy based multi-objective optimization for self-driving laboratories},
   author={H{\"a}se, Florian and Roch, Lo{\"\i}c M and Aspuru-Guzik, Al{\'a}n},
@@ -1035,7 +1382,9 @@ pages={1843--1856}
   doi = {10.1039/C8SC02239A}
 }
 
-% numpy
+% The official publication of the open source numerical software numpy:  the
+% standard for basic multivariable computations, vector operations, and simple
+% linear algebra in Python
 @article{harris2020,
  author = {Charles R. Harris and K. Jarrod Millman and St{\'{e}}fan J.
           van der Walt and Ralf Gommers and Pauli Virtanen and David
@@ -1057,7 +1406,10 @@ pages={1843--1856}
  doi = {10.1038/s41586-020-2649-2}
 }
 
-% Pyomo -- modeling language
+% The official textbook on the Pyomo modeling language: an open source
+% optimization modeling language and scientific software developed at Sandia by
+% Bill Hart et al.  Pyomo is a standard for solving large-scale mathematical
+% programming (linear and nonlinear optimization) problems in Python
 @book{hart2017,
   title={Pyomo -- optimization modeling in {P}ython},
   author={Hart, William E. and Laird, Carl D. and Watson, Jean-Paul and Woodruff, David L. and Hackebeil, Gabriel A. and Nicholson, Bethany L. and Siirola, John D.},
@@ -1069,7 +1421,9 @@ pages={1843--1856}
   doi={10.1007/978-3-319-58821-6}
 }
 
-% Multiobjective RL survey
+% A survey paper on multiobjective reinforcement learning -- RL is basically
+% optimization with the addition of a dynamically changing state variable, so
+% this is sort of relevant to multiobjecte optimization research
 @article{hayes2022,
   title={A practical guide to multi-objective reinforcement learning and planning},
   author={Hayes, Conor F and R{\u{a}}dulescu, Roxana and Bargiacchi, Eugenio and K{\"a}llstr{\"o}m, Johan and Macfarlane, Matthew and Reymond, Mathieu and Verstraeten, Timothy and Zintgraf, Luisa M and Dazeley, Richard and Heintz, Fredrik and others},
@@ -1081,7 +1435,10 @@ pages={1843--1856}
   doi={10.1007/s10458-022-09552-y}
 }
 
-% VTDIRECT95 reference -- parallel single-objective BB optimization
+% VTDIRECT95 reference: a high-performance parallel Fortran implementation of
+% the famous single-objective blackbox (direct search) optimization algorithm
+% DIRECT.  The numerical software is now open source (maintained by me) on Dr.
+% Watson's GitHub page.
 @article{he2009,
     author = {He, Jian and Watson, Layne T. and Sosonkina, Masha},
     title = {Algorithm 897: {VTDIRECT95}: Serial and Parallel Codes for the Global Optimization Algorithm {DIRECT}},
@@ -1093,7 +1450,8 @@ pages={1843--1856}
     doi = {10.1145/1527286.1527291}
 }
 
-% BSSW tech report
+% The better scientific software tech report, with recommendations and rules of
+% thumb for improving the quality of scientific software within the DOE
 @techreport{heroux2020,
   author = {Heroux, Michael A. and McInnes, Lois and Bernholdt, David E. and Dubey, Anshu and Gonsiorowski, Elsa and Marques, Osni and Moulton, J. David and Norris, Boyana and Raybourn, Elaine and Balay, Satish and Bartlett, Roscoe A. and Childers, Lisa and Gamblin, Todd and Grubel, Patricia and Gupta, Rinku and Hartman-Baker, Rebecca and Hill, Judith C. and Hudson, Stephen and Junghans, Christoph and Klinvex, Alicia and Milewicz, Reed and Miller, Mark and Ah Nam, Hai and O'Neal, Jared and Riley, Katherine and Sims, Ben and Schuler, Jean and Smith, Barry F. and Vernon, Louis and Watson, Gregory R. and Willenbring, James and Wolfenbarger, Paul},
   title = {Advancing Scientific Productivity through Better Scientific Software: Developer Productivity and Software Sustainability Report},
@@ -1104,7 +1462,8 @@ pages={1843--1856}
   doi = {10.2172/1606662},
 }
 
-% Google GlassBox research
+% An article on Google GlassBox research: Google's research division dedicated
+% to interpretable machine learning
 @article{hof2015,
   author = {Hof, Robert D.},
   title = {Google Tries to Make Machine Learning a Little More Human},
@@ -1115,6 +1474,8 @@ pages={1843--1856}
   note = {Last accessed: June 20, 2022}
 }
 
+% Techniques for optimizing molecule properties via a latent-space embedding
+% that comes from a molecule autoencoder, from IBM Research
 @article{hoffman2022,
     author = {Hoffman, Samuel C. and Chenthamarakshan, Vijil and Wadhawan, Kahini and Chen, Pin-Yu and Das, Payel},
     title = {Optimizing molecules using efficient queries from property evaluations},
@@ -1126,7 +1487,9 @@ pages={1843--1856}
     doi = {10.1038/s42256-021-00422-y}
 }
 
-% libEnsemble JOSS
+% The official JOSS paper for libEnsemble: an open source software library for
+% performing parallel and distributed computations involving ensembles of
+% computationally expensive function evaluations in Python
 @techreport{hudson2022a,
   doi = {10.21105/joss.06031}, 
   year = {2023},
@@ -1138,7 +1501,9 @@ pages={1843--1856}
   journal = {Journal of Open Source Software}
 }
 
-% libEnsemble implementation publication
+% The original libEnsemble publication focusing on its techniques for
+% distributing and evaluating ensembles of functions in parallel.  Although not
+% discussed, libEnsemble was already open source at the time
 @article{hudson2022b,
   title   = {{libEnsemble}: A Library to Coordinate the Concurrent
              Evaluation of Dynamic Ensembles of Calculations},
@@ -1151,7 +1516,11 @@ pages={1843--1856}
   doi     = {10.1109/tpds.2021.3082815}
 }
 
-% Survey of MOSO
+% A thorough survey on techniques and algorithms for solving multiobjective
+% simulation optimization problems, including algorithms and techniques for
+% handling small finite design spaces, discrete integer design spaces, and
+% continuous design spaces.  Covers theory, algorithms, and popular heuristics
+% for all.
 @article{hunter2019,
   author={Hunter, Susan R. and Applegate, Eric A. and Arora, Viplove and Chong, Bryan},
   title={An introduction to multiobjective simulation optimization},
@@ -1163,7 +1532,11 @@ pages={1843--1856}
   doi={10.1145/3299872}
 }
 
-% Survey of MOSO
+% The orgiinal NSGA-III paper part 2: a multiobjective evolutionary algorithm
+% similar to NSGA-II, solving the drawback of NSGA-II performing poorly with
+% many objectives by having the user provide a collection of well-spaced
+% reference points and optimizing toward those -- this paper focuses on how to
+% handle constraints
 @article{jain2013,
   title={An evolutionary many-objective optimization algorithm using reference-point based nondominated sorting approach, part {II}: Handling constraints and extending to an adaptive approach},
   author={Jain, Himanshu and Deb, Kalyanmoy},
@@ -1176,7 +1549,12 @@ pages={1843--1856}
   doi={10.1109/TEVC.2013.2281534}
 }
 
-% Multiobjective bayseian optimization software -- applied to NAS problem
+% Introducing Dragonfly: an open source numerical software package for solving
+% neural architecture search problems via Bayesian optimization and solving an
+% optimal transport problem to evaluate the distance between two networks.
+% Considered a bit of a landmark paper for neural network architecture search
+% problems.  The open source Python software is widely used for a variety of
+% applications outside NAS, including molecular discovery
 @article{kandasamy2020,
   author   = {Kandasamy, Kirthevasan and Vysyaraju, Karun Raju and Neiswanger, Willie and Paria, Biswajit and Collins, Christopher R. and Schneider, Jeff and Poczos, Barnabus and Xing, Eric P.},
   title    = {Tuning Hyperparameters without Grad Students: Scalable and Robust
@@ -1190,8 +1568,9 @@ pages={1843--1856}
   url     = {http://jmlr.org/papers/v21/18-223.html}
 }
 
-% Survey of MOO for hyperparameter tuning
-@techreport{karl2022,
+% A survey of multiobjective optimization algorithms for hyperparameter tuning
+% in the context of automatic machine learning (autoML)
+@article{karl2022,
   title = {Multi-Objective Hyperparameter Optimization in Machine Learning -- An Overview},
   volume = {3},
   DOI = {10.1145/3610536},
@@ -1203,7 +1582,8 @@ pages={1843--1856}
 }
 
 
-% Review of physics-informed machine learning models
+% A review of physics-informed machine learning techniques and models by
+% Karniadakis himself, who is credited with starting the field of SciML
 @article{karniadakis2021,
   author = {Karniadakis, George Em and Kevrekidis, Ioannis G. and Lu, Lu and Perdikaris, Paris and Wang, Sifan and Yang, Liu},
   title = {Physics-informed machine learning},
@@ -1215,7 +1595,9 @@ pages={1843--1856}
   doi = {10.1038/s42254-021-00314-5}
 }
 
-% Introductory paper to theory-guided data science
+% An introductory-level paper to theory-guided data science.  I haven't read
+% but I assume it covers the same topics he taught in his class at Virginia
+% Tech
 @article{karpatne2017,
   author={Karpatne, Anuj and Atluri, Gowtham and Faghmous, James H. and Steinbach, Michael and Banerjee, Arindam and Ganguly, Auroop and Shekhar, Shashi and Samatova, Nagiza and Kumar, Vipin},
   journal={IEEE Transactions on Knowledge and Data Engineering},
@@ -1227,8 +1609,14 @@ pages={1843--1856}
   doi={10.1109/TKDE.2017.2720168}
 }
 
-% Manifold sampling for piecewise linear functions composed with smooth
-% functions
+% Proposes a new technique called manifold sampling to solve blackbox
+% optimization problems where a smooth blackbox function is composed with a
+% piecewise linear (non blackbox) function.  Normally, this would create a
+% nonsmooth blackbox function, but by modeling the blackbox function separately
+% and sampling the different manifolds produced by the changes in active
+% components of the piecewise function, we can still model the blackbox
+% function with smooth techniques and solve the optimization problem
+% efficiently
 @article{khan2018,
   author       = {Kamil A. Khan and Jeffrey Larson and Stefan M. Wild},
   title        = {Manifold Sampling for Optimization of Nonconvex Functions that are Piecewise Linear Compositions of Smooth Components},
@@ -1240,7 +1628,9 @@ pages={1843--1856}
   journal = {{SIAM} Journal on Optimization},
 }
 
-% SPEA2+: evolutionary MOO
+% The SPEA2+ algorithm for solving multiobjective optimization problems with
+% evolutionary algorithms.  Apparently this is widely-used numerical software,
+% but I can't find the download
 @inproceedings{kim2004,
   author={Kim, Mifa and Hiroyasu, Tomoyuki and Miki, Mitsunori and Watanabe, Shinya},
   title={{SPEA2+}: Improving the performance of the {S}trength {P}areto {E}volutionary {A}lgorithm 2},
@@ -1252,7 +1642,10 @@ pages={1843--1856}
   doi={978-3-540-30217-9_75}
 }
 
-% NSGA-II + RBF surrogates (EGO algorithm extended to multiobjective)
+% The original ParEGO algorithm paper: in each iteration of the algorithm, the
+% authors use NSGA-II to optimize the expected improvement of the Gaussian
+% process surrogates of each objective.  Then, results are scalarized using
+% augmented chebyshev and the best results are evaluated for the next iteration
 @article{knowles2006,
   author       = {Knowles, Joshua},
   title        = {{ParEGO:} A hybrid algorithm with on-line landscape approximation for expensive multiobjective optimization problems},
@@ -1264,7 +1657,10 @@ pages={1843--1856}
   doi          = {10.1109/tevc.2005.851274}
 }
 
-% SORCER framework
+% The SORCER software is a service oriented computing environment used by the
+% US Airforce research lab (AFRL) to distribute expensive computations (such as
+% design optimizations) across their large distributed network of computing
+% resources
 @inproceedings{kolonay2011,
   author={Kolonay, Raymond M. and Sobolewski, Michael},
   title={Service oriented computing environment ({SORCER}) for large scale, distributed, dynamic fidelity aeroelastic analysis},
@@ -1276,7 +1672,8 @@ pages={1843--1856}
   url={http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.656.7539}
 }
 
-% APOSMM multistart framework
+% The APOSMM Python software is a framework for implementing multistart
+% derivative-free optimization algorithms and running them in asynchronously
 @article{larson2018,
   title={Asynchronously parallel optimization solver for finding multiple minima},
   author={Larson, Jeffrey and Wild, Stefan M},
@@ -1288,7 +1685,8 @@ pages={1843--1856}
   doi={10.1007/s12532-017-0131-4}
 }
 
-% Survey of single-objective DFO (with one section on multiobjective)
+% A thorough survey of techniques and algorithms in derivative-free
+% optimization
 @article{larson2019,
   title={Derivative-free optimization methods},
   author={Larson, Jeffrey and Menickelly, Matt and Wild, Stefan M.},
@@ -1300,7 +1698,12 @@ pages={1843--1856}
   doi = {10.1017/S0962492919000060}
 }
 
-% Composite-aware optimization (GOOMBAH) paper
+% Jeff's GOOMBAH paper on exploiting composite structures in derivative-free
+% optimization, meaning that a blackbox function is composed with an algebraic
+% function and we want to optimize the result, while exploiting the fact that
+% we know the equation of the algebraic function.  Similar technique is used in
+% ParMOO to exploit this same structure and others that are specific to the
+% multiobjective case
 @article{larson2023,
   doi = {10.1007/s12532-023-00245-5},
   volume = {16},
@@ -1311,7 +1714,8 @@ pages={1843--1856}
   journal = {Mathematical Programming Computation},
 }
 
-% Adaptive epsilon-constraint scalarization
+% An adaptive scheme for selecting epsilon-constraint scalarizations when
+% solving multiobjective optimization problems.
 @article{laumanns2006,
   author={Laumanns, Marco and Thiele, Lothar and Zitzler, Eckart},
   title={An efficient, adaptive parameter variation scheme for metaheuristics based on the epsilon-constraint method},
@@ -1324,7 +1728,8 @@ pages={1843--1856}
   doi={10.1016/j.ejor.2004.08.029}
 }
 
-% Cereberus whitepaper
+% A whitepaper describing Cereberus's wafer scale neuromorphic computing
+% architectures, as used in the AI incubator at Argonne
 @techreport{lavely2022,
   author={Lavely, Adam},
   title={Powering Extreme-Scale {HPC} with {C}erebras Wafer-Scale Accelerators},
@@ -1334,7 +1739,16 @@ pages={1843--1856}
   url={https://8968533.fs1.hubspotusercontent-na1.net/hubfs/8968533/Powering-Extreme-Scale-HPC-with-Cerebras.pdf}
 }
 
-% NOMAD v3 (including BiMADS)
+% NOMAD v3 is a widely-used open source numerical software package (in C++) for
+% blackbox and derivative-free optimization via the MADS algorithms. Includes
+% the official implementations of algorithms such as Ortho-MADS, PSD-MADS, and
+% BiMADS.  Support for parallel computing and surrogate modeling, and fairly
+% extensible.  Can be linked as a C++ library, or usage from command line
+% interface.  Used by a variety of industries and officially supported by Exxon
+% Mobile.  Has recently been replaced by the major refactor/rewrite in NOMAD
+% v4.  Still an example of widely-used open source numerical software, but the
+% NOMAD v4 paper gives a look at how open source software practices have
+% changed (improved) in the last 10 years
 @article{ledigabel2011,
   author       = {{Le Digabel}, S{\'e}bastien},
   title        = {Algorithm 909: {NOMAD}: Nonlinear Optimization with the {MADS} Algorithm},
@@ -1346,20 +1760,25 @@ pages={1843--1856}
   doi          = {10.1145/1916461.1916468},
 }
 
-% A taxonomy of constraint types
-@techreport{ledigabel2015,
+% A taxonomy of constraint types encountered when solving blackbox / simulation
+% optimization: quantifiable vs nonquantifiable, relaxable vs unrelaxable, a
+% priori vs simulation-based, and known vs hidden.
+@techreport{ledigabel2024,
   author      = {S\'ebastien {Le Digabel} and Stefan M. Wild},
   title       = {A Taxonomy of Constraints in Black-Box Simulation-Based Optimization},
+  year        = {2024},
   journal = {Optimization and Engineering},
   number      = {1505.07881},
   Volume      = {25},
   Number      = {2},
   Pages       = {1125--1143},
-  year        = {2024},
   doi        = {10.1007/s11081-023-09839-3},
 }
 
-% pyDOE
+% pyDOE a popular software repository for the common design-of-experiments in
+% Python.  This has been widely replaced by the new release of scipy which
+% includes scipy.stats.qmc, which includes most of these techniques (used for
+% monte carlo sampling, but still the same techniques)
 @misc{lee2015,
   title={py{DOE}: The experimental design package for python},
   author={Lee, Abraham D. et al.},
@@ -1370,6 +1789,9 @@ pages={1843--1856}
   url={https://github.com/tisimst/pyDOE}
 }
 
+% An algorithm that combines direct search / pattern search with an augmented
+% Lagrangian penalty term in order to solve a constrained blackbox optimization
+% problem
 @article{lewis2002,
    author = {Lewis, Robert Michael and Torczon, Virginia},
    title = {A Globally Convergent Augmented {L}agrangian Pattern Search Algorithm for Optimization with General Constraints and Simple Bounds},
@@ -1382,7 +1804,10 @@ pages={1843--1856}
 }
 
 
-% MOEA + surrogates
+% An early paper proposing the usage of surrogate models within
+% multiobjective evolutionary algorithms in order to improve their performance
+% on computationally expensive blackbox / simulation optimization problems,
+% where the function evaluation budget may be limited
 @inproceedings{liu2016,
   author    = {Liu, Bo and Sun, Nan and Zhang, Qingfu and Grout, Vic and Gielen, Georges},
   title     = {A surrogate model assisted evolutionary algorithm for computationally expensive design optimization problems with discrete variables},
@@ -1394,7 +1819,10 @@ pages={1843--1856}
   doi       = {10.1109/cec.2016.7743986},
 }
 
-% Adaptive Kriging model-based sampling
+% Adaptive Kriging model-based sampling basically means using an interpolating
+% Gaussian process's uncertainty information to select where to sample the next
+% point during an adaptive sampling algorithm (for generating
+% design-of-experiments or design space exploration).
 @article{liu2017,
   author = {Haitao Liu and Jianfei Cai and Yew-Soon Ong},
   title = {An adaptive sampling approach for Kriging metamodeling by maximizing expected prediction error},
@@ -1405,7 +1833,11 @@ pages={1843--1856}
   doi = {10.1016/j.compchemeng.2017.05.025},
 }
 
-% DFMO (multiobjective line search)
+% The DFMO algorithm is a multiobjective line search, which the authors
+% recommend combining with MODIR to improve its convergence to the Pareto front
+% after identifying the global Pareto front.  The open source numerical
+% software is implemented in Fortran and is currently bundled inside the MODIR
+% software package on the authors' GitHub account
 @article{liuzzi2016,
   author={Liuzzi, Giampaolo and Lucidi, Stefano and Rinaldi, Francesco},
   title={A derivative-free approach to constrained multiobjective nonsmooth optimization},
@@ -1417,7 +1849,14 @@ pages={1843--1856}
   doi={10.1137/15M1037810}
 }
 
-% DFO-lib by Liuzzi
+% The official GitHub account for the DFO-lib -- open source numerical software
+% in Fortran for solving blackbox optimization and multiobjective optimization
+% problems.  The library used to be obtained via download from Liuzzi's
+% personal website, where it was referred to as the DFO lib.  In 2024 it
+% appears to have been migrated to a GitHub account, with each individual piece
+% of software in its own separate repository.  Therefore, any reference to the
+% DFO-lib must now be directed to the account as a whole, not an individual
+% repository.
 @misc{liuzzi2024,
   title={DFO-lib},
   author={Liuzzi, Giampaolo et al.},
@@ -1428,7 +1867,9 @@ pages={1843--1856}
   url={https://github.com/DerivativeFreeLibrary}
 }
 
-% Graphcore IPUs
+% Publication describing Graphcore's IPU architecture (intelligence processing
+% unit), which is a neuromorphic parallel processor optimized for
+% high-throughput vector operations
 @inproceedings{louw2021,
   title={Using the {Graphcore IPU} for traditional {HPC} applications},
   author={Louw, Thorben and McIntosh-Smith, Simon},
@@ -1439,7 +1880,9 @@ pages={1843--1856}
   url={https://easychair.org/publications/preprint/ztfj}
 }
 
-% Multiobjective DIRECT extensions (direct search)
+% Multiobjective extension of the DIRECT algorithm for derivative-free blackbox
+% optimization.  This algorithm may suffer from some scalability issues, but is
+% a good first step
 @article{lovison2020,
   author={Lovison, Alberto and Miettinen, Kaisa},
   title={On the Extension of the {DIRECT} Algorithm to Multiple Objectives},
@@ -1451,7 +1894,9 @@ pages={1843--1856}
   doi={10.1007/s10898-020-00942-8}
 }
 
-% Summit description, GPU-based architecture
+% Summary of discussions from Oak Ridge National Laboratory Summit discussing
+% GPU-based architectures and other developments from the exascale computing
+% project
 @article{luo2020,
   author={Luo, L. and P. Straatsma, T. and Suarez, L. E. Aguilar and Broer, R. and Bykov, D. and F. D'Azevedo, E. and S. Faraji, S. and C. Gottiparthi, K. and De Graaf, C. and A. Harris, J. and A. Havenith, R. W. and Jensen, H. J. Aa. and Joubert, W. and K. Kathir, R. and Larkin, J. and W. Li, Y. and I. Lyakh, D. and B. Messer, O. E. and R. Norman, M. and C. Oefelein, J. and Sankaran, R. and F. Tillack, A. and L. Barnes, A. and Visscher, L. and C. Wells, J. and Wibowo, M.},
   title={Pre-exascale accelerated application development: The {ORNL Summit} experience},
@@ -1463,7 +1908,7 @@ pages={1843--1856}
   doi={10.1147/JRD.2020.2965881}
 }
 
-% Online learning and MOO
+% Discussion of online learning in the context of multiobjective optimization
 @inproceedings{mannor2014,
   author = 	 {Mannor, Shie and Perchet, Vianney and Stoltz, Gilles},
   title = 	 {Approachability in unknown games: {O}nline learning meets multi-objective optimization},
@@ -1479,7 +1924,8 @@ pages={1843--1856}
 }
 
 
-% Survey of multiobjective optimization methods for engineering
+% Survey of common multiobjective optimization algorithms and scalarization
+% techniques in the context of engineering design optimization
 @article{marler2004,
   author={Marler, Timothy R. and Arora, Jasbir S.},
   title={Survey of multi-objective optimization methods for engineering},
@@ -1491,7 +1937,8 @@ pages={1843--1856}
   doi={10.1007/s00158-003-0368-6}
 }
 
-% pyMDO: single-objective framework for MDO in Python
+% pyMDO: an open source numerical Python framework for modeling and solving
+% multidisciplinary engineering design optimization problems
 @article{martins2009,
   author = {Martins, Joaquim R. R. A. and Marriage, Christopher and Tedford, Nathan},
   title = {{pyMDO}: An Object-Oriented Framework for Multidisciplinary Design Optimization},
@@ -1504,7 +1951,8 @@ pages={1843--1856}
   doi = {10.1145/1555386.1555389}
 }
 
-% Porting PETSc to GPUs for ECP
+% Report on challenges and experiences gained in porting PETSc to GPUs for the
+% exascale computing project
 @article{mills2021,
   author = {Richard Tran Mills and Mark F. Adams and Satish Balay and Jed Brown and Alp Dener and Matthew Knepley and Scott E. Kruger and Hannah Morgan and Todd Munson and Karl Rupp and Barry F. Smith and Stefano Zampini and Hong Zhang and Junchao Zhang},
   title = {Toward performance-portable {PETSc} for {GPU}-based exascale systems},
@@ -1515,7 +1963,8 @@ pages={1843--1856}
   doi = {10.1016/j.parco.2021.102831}
 }
 
-% DESDEO interactive MOO framework
+% DESDEO an open source Python framework for implementing interactive
+% multiobjective optimization solvers
 @article{misitano2021,
   author={Misitano, Giovanni and Saini, Bhupinder S. and Afsar, Bekir and Shavazipour, Babooshka and Miettinen, Kaisa},
   journal={IEEE Access},
@@ -1526,7 +1975,10 @@ pages={1843--1856}
   doi={10.1109/ACCESS.2021.3123825}
 }
 
-% MORDRED: (3D) chemical descriptor calculator
+% MORDRED: A 3D molecular descriptor calculator, which is widely used for
+% embedding molecules into a continuous latent space (parameterized by their
+% descriptors) which can be used to solve chemical property optimization
+% problems.  The MORDRED software is available open source in Python.
 @article{moriwaki2018,
   author={Moriwaki, Hirotomo and Tia, Yu-Shi and Kawashita, Norihito and Takagi, Tatsuya},
   year={2018},
@@ -1538,7 +1990,11 @@ pages={1843--1856}
   doi={10.1186/s13321-018-0258-y}
 }
 
-% SOCEMO: RSM based method
+% SOCEMO: A response surface modeling (RSM) based algorithm for solving
+% multiobjective optimization problems.  Uses a Latin hypercube
+% design-of-experiments, RBF surrogate modeling, multiple scalarizations, and
+% solves the scalarized subproblem via evolutionary algorithms to produce a
+% batch of evaluations in each iteration of the algorithm
 @article{muller2017,
   author={M{\"u}ller, Juliane},
   year={2017},
@@ -1551,7 +2007,9 @@ pages={1843--1856}
   doi={10.1287/ijoc.2017.0749}
 }
 
-% Last TAO reference when merged with PETSc
+% This is the last TAO (toolkit for advanced optimization) reference before
+% this open source numerical simulation optimization software when merged with
+% PETSc, into a single PETSc + TAO release
 @techreport{munson2015,
   title={{TAO} 3.5 Users Manual},
   author={Munson, Todd and Sarich, Jason and Wild, Stefan and Benson, Steven and McInnes, Lois Curfman},
@@ -1562,7 +2020,12 @@ pages={1843--1856}
   url         = {https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf}
 }
 
-% Book on RSM: Ch 7 contains multiobjective RSM, Chs 8-9 on DOE
+% The classical textbook on response surface methodology and modeling
+% practices.  Contains useful information on the basic framework and
+% applications of RSM.  Also a useful reference for many of the options for
+% specific techniques: Chapter 7 is a good reference for basic techniques in
+% multiobjective RSM and Chapters 8-9 surveys the basic methods in
+% design-of-experiments
 @book{myers2016,
   author={Myers, Raymond H. and Montgomery, Douglas C. and Anderson-Cook, Christine M.},
   year={2016},
@@ -1574,7 +2037,10 @@ pages={1843--1856}
   isbn={9781118916032}
 }
 
-% Multiobjective optimization of LCLS-II photoinjector (linear accelerator at SLAC)
+% An application of VTMOP for the multiobjective optimization (tuning) of the
+% LCLS-II photoinjector (linear accelerator at SLAC).  Had to use some hacks to
+% get VTMOP to work, such as penalizing bad regions of the Pareto front, but
+% ultimately performed better than NSGA-II
 @article{neveu2023,
     author={Neveu, Nicole and Chang, Tyler H. and Franz, Paris and Hudson, Stephen and Larson, Jeffrey},
     title={Comparison of multiobjective optimization methods for the {LCLS-II} photoinjector},
@@ -1586,7 +2052,8 @@ pages={1843--1856}
     doi = {10.1016/j.cpc.2022.108566}
 }
 
-% The classic
+% The classic textbook by Nocedal on fundamental techniques in nonlinear
+% programming, such as local modeling and trust-region methods
 @book{nocedal2006,
   author={Nocedal, Jorge and Wright, Stephen J.},
   year={2006},
@@ -1598,7 +2065,11 @@ pages={1843--1856}
   doi={10.1007/978-0-387-40065-5}
 }
 
-% PABO - Multiobjective Bayesian optimization, specialized for NAS
+% PABO - a multiobjective Bayesian optimization software package that is
+% specialized for NAS -- basically an inner network is used as a surrogate and
+% an outer network is used to predict which designs to evaluate next -- I have
+% serious reservations about this kind of approach, and it doesn't seem to work
+% that well
 @inproceedings{parsa2019,
   author={Parsa, Maryam and Ankit, Aayush and Ziabari, Amirkoushyar and Roy, Kaushik},
   title={{PABO}: Pseudo Agent-Based Multi-Objective {B}ayesian Hyperparameter Optimization for Efficient Neural Accelerator Design},
@@ -1610,7 +2081,8 @@ pages={1843--1856}
   doi={10.1109/ICCAD45719.2019.8942046}
 }
 
-% H-PABO Multiobjective Bayesian optimization framework, specialized for NAS
+% H-PABO multiobjective Bayesian optimization framework, specialized for NAS,
+% and improvement on PABO
 @article{parsa2020,
   author={Parsa, Maryam and Mitchell, John P. and Schuman, Catherine D. and Patton, Robert M. and Potok, Thomas E. and Roy, Kaushik},
   title={Bayesian Multi-objective Hyperparameter Optimization for Accurate, Fast, and Efficient Neural Network Accelerator Design},
@@ -1621,7 +2093,11 @@ pages={1843--1856}
   doi={10.3389/fnins.2020.00667}
 }
 
-% Pytorch
+% The official publicatino for pytorch a gold standard in open source software,
+% providing automatic differentiation and numerical linear algebra in Python,
+% targeted at implementing deep learning algorithms.  Pytorch is pretty much a
+% standard in not just open source software, but also machine learning
+% software, and also numerical software
 @inproceedings{paszke2019,
  author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
  title = {{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
@@ -1634,7 +2110,11 @@ pages={1843--1856}
  pages={1--12}
 }
 
-% Scikit-learn
+% The official publicatino for scikit-learn a gold standard in open source
+% software, providing a clean interface to several standard implementations of
+% numerical approximation, optimization, machine learning, and deep learning
+% algorithms.  Scikit-learn is pretty much a standard in not just open source
+% software, but also machine learning software, and also numerical software
 @article{pedregosa2011,
   author={Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others},
   title={Scikit-learn: Machine learning in {P}ython},
@@ -1645,7 +2125,8 @@ pages={1843--1856}
   url={https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf}
 }
 
-% Extreme even discovery in active learning with a modified acquisition function
+% An active learning method for extreme event modeling.  Specifically, the
+% authors provide a novel acquisition function which targets extreme events
 @article{pickering2022,
   title={Discovering and forecasting extreme events via active learning in neural operators},
   author={Pickering, Ethan and Guth, Stephen and Karniadakis, George Em and Sapsis, Themistoklis P},
@@ -1657,7 +2138,9 @@ pages={1843--1856}
   publisher={Nature Publishing Group US New York}
 }
 
-% Integrating (single-objective) BB optimization algorithms into parallel architectures
+% Experiences, challenges, and techniques for integrating the blackbox
+% optimization solvers VTDIRECT95 and QNSTOP into the parallel service
+% architecture SORCER
 @inproceedings{raghunath2017,
   author={Raghunath, Chaitra and Chang, Tyler H. and Watson, Layne T. and Jrad, Mohamad and Kapania, Rakesh K. and Kolonay, Raymond M.},
   title={Global deterministic and stochastic optimization in a service oriented architecture},
@@ -1669,7 +2152,9 @@ pages={1843--1856}
   doi = {10.22360/springsim.2017.hpc.023}
 }
 
-% PDFO: Powell's DFO software
+% PDFO: An open source modern Python implementation of Powell's derivative-free
+% numerical optimization software suite, which is considered to be the standard
+% (baseline) in derivative-free optimization solvers
 @misc{ragonneau2021,
   title={{PDFO}: Cross-Platform Interfaces for {P}owell’s Derivative-Free Optimization Solvers},
   author={Ragonneau, Tom M. and Zhang, Zaikun},
@@ -1680,7 +2165,9 @@ pages={1843--1856}
   url={https://github.com/pdfo/pdfo}
 }
 
-% Multiobjective surrogate (RBF) optimization
+% Using RBF surrogates in the context of multiobjective optimization.  I
+% believe he ultimately solved the surrogate problems with NSGA-II or some
+% other heuristic
 @article{regis2016,
   author       = {Regis, Rommel G.},
   title        = {Multi-objective constrained black-box optimization using radial basis function surrogates},
@@ -1691,6 +2178,12 @@ pages={1843--1856}
   doi          = {10.1016/j.jocs.2016.05.013},
 }
 
+# Official publication of the scipy.stats.qmc module, which is the newly
+# released module for performing quasi-monte carlo sampling and
+# design-of-experiments in scipy.  Scipy is an open source numerical software
+# package which is the standard for advanced numerical methods and scientific
+# software packages in Python.  Most of scipy are wrappers for much older
+# Fortran or C++ code, that has been highly optimized.
 @article{roy2023,
   author = {Pamphile T. Roy and Art B. Owen and Maximilian Balandat and Matt Haberland},
   title = {Quasi-Monte Carlo Methods in Python},
@@ -1703,7 +2196,11 @@ pages={1843--1856}
   doi = {10.21105/joss.05309},
 }
 
-% Adaptive weighted sum for biobjective
+% The original publication of PAWS: An adaptive weighted sum and trust-regions
+% method for solving biobjective (multiobjective) optimization problems.  The
+% key here is that the trust-regions help the weighted sum scalarization reach
+% into nonconvex regions of the Pareto front, even though that would not
+% normally be possible
 @inproceedings{ryu2009,
   author={Ryu, Jong-hyun and Kim, Sujin and Wan, Hong},
   title={Pareto front approximation with adaptive weighted sum method in multiobjective simulation optimization},
@@ -1715,7 +2212,11 @@ pages={1843--1856}
   doi={10.1109/WSC.2009.5429562}
 }
 
-% Latest version of PAWS
+% The latest version of PAWS: An adaptive weighted sum and trust-regions method
+% for solving biobjective (multiobjective) optimization problems.  The key here
+% is that the trust-regions help the weighted sum scalarization reach into
+% nonconvex regions of the Pareto front, even though that would not normally be
+% possible
 @article{ryu2014,
   title={A derivative-free trust-region method for biobjective optimization},
   author={Ryu, Jong-Hyun and Kim, Sujin},
@@ -1728,7 +2229,8 @@ pages={1843--1856}
   doi={10.1137/120864738}
 }
 
-% Optimal sampling criteria
+% Techniques and optimal sampling criteria for performing adaptive sampling to
+% enable downstream Gaussian process regression modeling
 @article{sapsis2022,
   title={Optimal criteria and their asymptotic form for data selection in data-driven reduced-order modelling with {Gaussian} process regression},
   author={Sapsis, Themistoklis P. and Blanchard, Antoine},
@@ -1741,16 +2243,28 @@ pages={1843--1856}
   doi={10.1098/rsta.2021.0197}
 }
 
-% SMT 2.0 paper, major improvements
-@techreport{saves2023,
-      title={{SMT 2.0}: A Surrogate Modeling Toolbox with a focus on Hierarchical and Mixed Variables {G}aussian Processes},
-      author={Paul Saves and Remi Lafage and Nathalie Bartoli and Youssef Diouane and Jasper Bussemaker and Thierry Lefebvre and John T. Hwang and Joseph Morlier and Joaquim R. R. A. Martins},
-      year={2023},
-      institution={arXiv preprint},
-      doi={10.48550/arXiv.2305.13998}
+% The SMT 2.0 paper, major improvements to the open source numerical software
+% package (in Python) pySMT for solving multidisciplinary engineering design
+% optimization (MDO) problems, while utilizing derivatives and providing
+% numerical stability analysis for each surrogate model class.  In SMT 2.0,
+% support is added for hierarchical and mixed variables, and major improvements
+% have been made to the structure, completeness, and features of the SMT
+% library.
+@article{saves2024,
+title = {SMT 2.0: A Surrogate Modeling Toolbox with a focus on hierarchical and mixed variables Gaussian processes},
+journal = {Advances in Engineering Software},
+volume = {188},
+pages = {103571},
+year = {2024},
+issn = {0965-9978},
+doi = {10.1016/j.advengsoft.2023.103571},
+url = {https://www.sciencedirect.com/science/article/pii/S096599782300162X},
+author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane and Jasper Bussemaker and Thierry Lefebvre and John T. Hwang and Joseph Morlier and Joaquim R.R.A. Martins},
 }
 
-% Multiobjective CFR optimization with TS-EMO
+% Multiobjective molecule property optimization by optimizing processes in a
+% continuous flow reactor (CFR) using the multiobjective evolutionary algorithm
+% TS-EMO (thompson sampling evolutionary multiobjective optimization?)
 @article{schweidtmann2018,
   author={Schweidtmann, Artur M. and Clayton, Adam D. and Holmes, Nicholas and Bradford, Eric and Bourne, Richard A. and Lapkin, Alexei A.},
   title={Machine learning meets continuous flow chemistry: Automated optimization towards the {Pareto} front of multiple objectives},
@@ -1762,7 +2276,9 @@ pages={1843--1856}
   doi={10.1016/j.cej.2018.07.031}
 }
 
-% Hypervolume indicator usage in multiobjective evolutionary algorithms
+% A survey of hypervolume indicator usage in multiobjective evolutionary
+% optimization, mainly in terms of algorithms that use hypervolume improvement
+% and also as a performance indicator
 @article{shang2020,
   author={Shang, Ke and Ishibuchi, Hisao and He, Linjun and Pang, Lie Meng},
   title={A survey on the hypervolume indicator in evolutionary multiobjective optimization},
@@ -1775,7 +2291,10 @@ pages={1843--1856}
   doi={10.1109/TEVC.2020.3013290}
 }
 
-% EDBO software -- multiobjective bayesian opt, used for chemical synthesis
+% The EDBO software: open source Python software for performing multiobjective
+% bayesian optimization for chemical synthesis and molecular discovery.  Links
+% a multiobjective optimization solver with the MORDRED software for getting
+% molecular descriptors and optimizes for the desired properties
 @article{shields2021,
   author   = {Shields, Benjamin J. and Stevens, Jason and Li, Jun and Parasram, Marvin and Damani, Farhan and Alvarado, Jesus I. M. and Janey, Jacob M. and Adams, Rryan P. and Doyle, Abigail G.},
   title    = {Bayesian reaction optimization as a tool for chemical synthesis},
@@ -1788,7 +2307,10 @@ pages={1843--1856}
   doi = {10.1038/s41586-021-03213-y}
 }
 
-% MDO textbook, including motivation for MOO in MDO
+% One of the most popular textbooks in the field of multidisciplinary
+% engineering design optimization.  The introduction provides plenty of
+% motivation for solving computational expensive multiobjective simulation /
+% blackbox optimization problems
 @book{ss2015,
   author={Sobieszczanski-Sobieski, Jaroslaw and Morris, Alan and Van Tooren, Michel},
   title={Multidisciplinary Design Optimization Supported by Knowledge Based Engineering},
@@ -1798,7 +2320,8 @@ pages={1843--1856}
   isbn={978-1-118-49212-3}
 }
 
-% The FAIR principles of data management
+% The FAIR principles of data management:  Scientific data should be findable,
+% accessible, interpretable, and reproducible
 @article{stall2019,
   author={Stall, Shelley and Yarmey, Lynn and Cutcher-Gershenfeld, Joel and Hanson, Brooks and Lehnert, Kerstin and Nosek, Brian and Parsons, Mark and Robinson, Erin and Wyborn, Lesley},
   title={Make scientific data {FAIR}},
@@ -1810,7 +2333,8 @@ pages={1843--1856}
   doi={10.1038/d41586-019-01720-7}
 }
 
-% Weighted Chebyshev
+% The original publication of the weighted Chebyshev scalarization scheme for
+% multiobjective optimization
 @article{steuer1983,
   title={An interactive weighted Tchebycheff procedure for multiple objective programming},
   author={Steuer, Ralph E and Choo, Eng-Ung},
@@ -1822,8 +2346,9 @@ pages={1843--1856}
   doi={10.1007/BF02591870}
 }
 
-% BoostDMS (parallel library of direct search software, including MultiGLODS
-% and DMS)
+% BoostDMS is numerical software library providing access to Custodio's direct
+% search and pattern search software, including MultiGLODS and DMS, in Matlab
+% with full parallel computing support
 @article{tavares2021,
   author      = {S. Tavares and C. P. Br\'as and A. L. Cust\'odio and V. Duarte and P. Medeiros},
   title       = {Parallel Strategies for Direct Multisearch},
@@ -1835,7 +2360,12 @@ pages={1843--1856}
   journal = {Numerical Algorithms} 
 }
 
-% Surrogate-based heterogeneous MOO
+% A trust-region + RBF surrogate-based multiobjective optimization algorithm
+% for solving heterogeneous multiobjective optimization problems (where one or
+% more objectives is a computationally expensive blackbox, and one or more is
+% not).  The key is to just use the derivative of all the non blackbox
+% objectives and use the model derivative for the blackbox terms.  The
+% algorithm itself follows something like Orbit
 @article{thomann2019,
   author       = {Thomann, Jana and Eichfelder, Gabriele},
   title        = {A Trust-Region Algorithm for Heterogeneous Multiobjective Optimization},
@@ -1847,7 +2377,9 @@ pages={1843--1856}
   doi          = {10.1137/18m1173277},
 }
 
-% MATLAB platform for MOEA
+% An open source MATLAB platform for implementing and running wide-scale
+% comparisons against other multiobjective evolutionary algorithms on standard
+% multiobjective test problems
 @article{tian2017,
   author={Tian, Ye and Cheng, Ran and Zhang, Xingyi and Jin, Yaochu},
   title={{PlatEMO}: A {MATLAB} Platform for Evolutionary Multi-Objective Optimization [Educational Forum]},
@@ -1859,7 +2391,8 @@ pages={1843--1856}
   doi={10.1109/MCI.2017.2742868}
 }
 
-% Survey of Pareto front viz techniques
+% A survey of Pareto front visualization techniques in multiobjective
+% optimization
 @article{tusar2015,
   author={Tu{\v s}ar, Tea and Filipi{\v c}, Bogdan},
   title={Visualization of {P}areto Front Approximations in Evolutionary Multiobjective Optimization: A Critical Review and the Prosection Method},
@@ -1871,7 +2404,9 @@ pages={1843--1856}
   doi={10.1109/TEVC.2014.2313407}
 }
 
-% Robust RBF surrogate-based models, with adaptive scaling and custom LHS sampling
+% A robust RBF surrogate-based model, with adaptive scaling of the basis
+% function radii to maintain numerical stability and a custom LHS sampling
+% technique
 @article{urquhart2020,
   author = {Magnus Urquhart and Emil Ljungskog and Simone Sebben},
   title = {Surrogate-based optimisation using adaptively scaled radial basis functions},
@@ -1882,7 +2417,10 @@ pages={1843--1856}
   doi = {10.1016/j.asoc.2019.106050},
 }
 
-% SciPy
+% SciPy official publication:  Scipy is an open source numerical software
+% package which is the standard for advanced numerical methods and scientific
+% software packages in Python.  Most of scipy are wrappers for much older
+% Fortran or C++ code, that has been highly optimized.
 @article{virtanen2020,
   author = {{Virtanen}, Pauli and {Gommers}, Ralf and {Oliphant},
      Travis E. and {Haberland}, Matt and {Reddy}, Tyler and
@@ -1907,7 +2445,9 @@ pages={1843--1856}
   doi={10.1038/s41592-019-0686-2}
 }
 
-% Reference pt method
+% The original publication of the reference point method for scalarizing
+% multiobjective optimization problems (minimize the distance to a reference
+% point)
 @incollection{wierzbicki1999,
   author={Wierzbicki, Andrzej P.},
   editor={Gal, Tomas and Stewart, Theodor J. and Hanne, Thomas},
@@ -1920,7 +2460,15 @@ pages={1843--1856}
   doi={10.1007/978-1-4615-5025-9_9}
 }
 
-% POUNDERS single-objective software exploiting structure in derivative-free least squares problems
+% The POUNDERS composite blackbox / simulation optimization algorithm, which is
+% an open source numerical software package for exploiting the sum-of-squares
+% structure in derivative-free least squares problems.  Specifically, POUNDERS
+% models the blackbox function / simulation's outputs using a fully linear
+% model then uses the sum-of-squares structure to get a free Hessian
+% approximation, and achieve second-order convergence for the price of
+% first-order convergence.  Although not included, open source numerical
+% software implementations are now available in Python and Matlab through the
+% PyOptUs GitHub group
 @incollection{wild2017,
   author    = {Stefan M. Wild},
   title     = {Solving Derivative-Free Nonlinear Least Squares Problems with {POUNDERS}},
@@ -1934,7 +2482,10 @@ pages={1843--1856}
   doi       = {10.1137/1.9781611974683.ch40},
 }
 
-% ORBIT: optimization by RBF interpolation in trust-regions (single objective, surrogate-based + trust-regions)
+% ORBIT: the original algorithm for solving optimization problems via
+% sequentially minimizing RBF interpolants with a linear tail inside a sequence
+% of trust-regions.  I can't remember if it's open source, but Stefan has a
+% high quality numerical software in MATLAB
 @article{wild2007,
   author       = {Wild, Stefan M. and Regis, Rommel G. and Shoemaker, Christine A.},
   title        = {{ORBIT:} {O}ptimization by Radial Basis Function Interpolation in Trust-Regions},
@@ -1946,7 +2497,9 @@ pages={1843--1856}
   doi          = {10.1137/070691814},
 }
 
-% Convergence rate of RBF-based surrogates for single-objective optimization
+% Analysis of the convergence rate of RBF-based surrogates with linear tail
+% (fully linear model) inside a sequence of trust regions.  This is the
+% theory used in ORBIT
 @article{wild2011,
   author       = {Wild, Stefan M. and Shoemaker, Christine A.},
   title        = {Global Convergence of Radial Basis Function Trust Region Derivative-Free Algorithms},
@@ -1958,7 +2511,8 @@ pages={1843--1856}
   doi          = {10.1137/09074927X}
 }
 
-% Hypervolume-based multiobjective DIRECT
+% A hypervolume-based approach to a multiobjective DIRECT algorithm for
+% multiobjective blackbox / simulation optimization
 @inproceedings{wong2016,
   author = {Wong, Cheryl Sze Yin and Al-Dujaili, Abdullah and Sundaram, Suresh},
   title = {Hypervolume-Based {DIRECT} for Multi-Objective Optimisation},
@@ -1970,7 +2524,8 @@ pages={1843--1856}
   doi = {10.1145/2908961.2931702}
 }
 
-% Interactive multiobjective optimization techniques, surveys, limitations
+% A survey of interactive techniques and software in multiobjective
+% optimization including the known challenges limitations
 @article{xin2018,
   author={Xin, Bin and Chen, Lu and Chen, Jie and Ishibuchi, Hisao and Hirota, Kaoru and Liu, Bo},
   journal={IEEE Access},
@@ -1981,7 +2536,8 @@ pages={1843--1856}
   doi={10.1109/ACCESS.2018.2856832}
 }
 
-% Multiobjective Bayesian opt, hypervolume improvement-based
+% Multiobjective Bayesian optimization with hypervolume improvement-based
+% acquisition
 @article{yang2019a,
   author       = {Yang, Kaifeng and Emmerich, Michael and Deutz, Andr{\'{e}} and B\"{a}ck, Thomas},
   title        = {Multi-Objective {Bayesian} Global Optimization Using Expected Hypervolume Improvement Gradient},
@@ -1992,7 +2548,8 @@ pages={1843--1856}
   doi          = {10.1016/j.swevo.2018.10.007}
 }
 
-% Multiobjective Bayesian opt, hypervolume improvement-based
+% Multiobjective Bayesian optimization with hypervolume improvement-based
+% acquisition
 @inproceedings{yang2019b,
   author    = {Yang, Kaifeng and Palar, Pramudita Satria and Emmerich, Michael and Shimoyama, Koji and B\"{a}ck, Thomas},
   title     = {A multi-point mechanism of expected hypervolume improvement for parallel multi-objective {Bayesian} global optimization},
@@ -2002,7 +2559,7 @@ pages={1843--1856}
   doi       = {10.1145/3321707.3321784}
 }
 
-% Active learning using DFT model for chemical design
+% Solving DFT model calibrations for chemical design via active learning
 @article{yuan2023,
   title={Active learning to overcome exponential-wall problem for effective structure prediction of chemical-disordered materials},
   author={Yuan, Xiaoze and Zhou, Yuwei and Peng, Qing and Yang, Yong and Li, Yongwang and Wen, Xiaodong},
@@ -2014,7 +2571,8 @@ pages={1843--1856}
   publisher={Nature Publishing Group UK London}
 }
 
-% PhD thesis including survey of Pareto front extraction algorithms
+% PhD thesis on extracting high-dimensional (many objective) Pareto fronts
+% including a thorough survey of such algorithms
 @phdthesis{yukish2004,
   author={Yukish, Michael},
   title={Algorithms to identify {P}areto points in multi-dimensional data sets},
@@ -2023,7 +2581,11 @@ pages={1843--1856}
   url={https://etda.libraries.psu.edu/catalog/6336}
 }
 
-% Single-objective DFO least-squares convergence analysis
+% Convergence analysis when solving composite sum-of-squares blackbox /
+% simulation optimization problems by modeling the blackbox function /
+% simulation's outputs using a fully linear model then using the sum-of-squares
+% structure to get a free Hessian approximation.  Basically, one can achieve
+% second-order convergence for the price of first-order convergence
 @article{zhang2012,
   author       = {Zhang, Hongchao and Conn, Andrew R.},
   title        = {On the Local Convergence of a Derivative-Free Algorithm for Least-Squares Minimization},
@@ -2035,7 +2597,10 @@ pages={1843--1856}
   doi          = {10.1007/s10589-010-9367-x},
 }
 
-% Single-objective DFO least-squares algorithm
+% An algorithm for solving composite sum-of-squares blackbox / simulation
+% optimization problems by modeling the blackbox function / simulation's
+% outputs using a fully linear model then using the sum-of-squares structure to
+% get a free Hessian approximation
 @article{zhang2010,
   author       = {Hongchao Zhang and Andrew R. Conn and Katya Scheinberg},
   title        = {A Derivative-Free Algorithm for Least-Squares Minimization},
@@ -2048,7 +2613,10 @@ pages={1843--1856}
 }
 
 
-% Multiobjective optimization of aircraft wing design for lift/drag vs. controllability metric using multiobjective particle swarm
+% An application for multiobjective optimization in the context of aircraft
+% wing design.  We are optimizing one objective that is the lift/drag ratio,
+% and another that describes the controllability.  Problem is solved using
+% multiobjective particle swarm
 @inproceedings{zhao2018,
   author = {Zhao, Wei and Kapania, Rakesh K.},
   title = {Multiobjective Optimization of Composite Flying-wings with {SpaRibs} and Multiple Control Surfaces},
@@ -2060,7 +2628,12 @@ pages={1843--1856}
   doi = {10.2514/6.2018-3424}
 }
 
-% L-BFGS-B software
+% The original publication for L-BFGS-B software, which solves
+% bound-constrained optimization problems using a limited-memory BFGS.
+% This is the standard implementation that is used in all L-BFGS-B codes to
+% date, such as scipy, all machine learning codes, and most engineering codes
+% and nonlinear systems solvers.  The code is open source high-quality
+% numerical software, written in old-style Fortran
 @article{zhu1997,
   author = {Zhu, Ciyou and Byrd, Richard H. and Lu, Peihuang and Nocedal, Jorge},
   title = {Algorithm 778: {L-BFGS-B}: {F}ortran Subroutines for Large-Scale Bound-Constrained Optimization},
@@ -2073,7 +2646,9 @@ pages={1843--1856}
   doi = {10.1145/279232.279236}
 }
 
-% SPEA2 (strength Pareto evolutionary algorithm)
+% SPEA2 strength Pareto evolutionary algorithm -- an old evolutionary algorithm
+% that was once a competitor to NSGA-II (and with significant overlap in
+% co-authorship), but is now largely obsolete.
 @article{zitzler2001,
   title={{SPEA2}: Improving the strength {Pareto} evolutionary algorithm},
   author={Zitzler, Eckart and Laumanns, Marco and Thiele, Lothar},
@@ -2083,24 +2658,4 @@ pages={1843--1856}
   publisher={Eidgen{\"o}ssische Technische Hochschule Z{\"u}rich (ETH Zurich), Institut f{\"u}r Technische},
   code={https://github.com/manuparra/spea2},
   doi={10.3929/ethz-a-004284029}
-}
-
-% SpringSim 2020
-@proceedings{springsim2020,
-  title = {SpringSim '20: Proc. 2020 Spring Simulation Conference},
-  year = {2020},
-  isbn = {9781713812883},
-  publisher = {SCS},
-  location = {Fairfax, Virginia},
-  doi = {10.5555/3408207}
-}
-
-% WSC 2020
-@proceedings{wsc2020,
-  title = {WSC '20: Proc. Winter Simulation Conference},
-  year = {2020},
-  isbn = {9781728194998},
-  publisher = {IEEE},
-  location = {Orlando, Florida},
-  doi = {10.5555/3466184}
 }
