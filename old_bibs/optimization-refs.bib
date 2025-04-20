@@ -827,10 +827,10 @@ pages={1843--1856}
   doi={10.1145/3369583.3392683}
 }
 
-% A particle accelerator tuning application with ParMOO -- we achieved very
-% good results on a several hundred evaluation budget for the Argonne wakefield
-% accelerator project
-@inproceedings{chen2023,
+% Publication of our work on multiobjective shape optimization of the RF-gun
+% cavity for the Argonne wakefield accelerator using ParMOO with the
+% POISSON/SUPERFISH simulation software
+@inproceedings{chen2023integrated,
   author  = {Chen, Gongxiaohui and Chang, Tyler H. and Power, John and Jing, Chungunag},
   title   = {An Integrated Multi-Physics Optimization Framework for Particle Accelerator Design},
   year    = {2023},
@@ -869,6 +869,17 @@ pages={1843--1856}
   author={Chollet, Fran\c{c}ois and others},
   year={2015},
   howpublished={\url{https://keras.io}},
+}
+
+% Python wrapper around the open source numerical simulation software superfish
+% We used this when performing particle accelerator RF gun cavity optimization
+% at Argonne in order to provide a bridge between POISSON/SUPERFISH (Fortran
+% codes) and the ParMOO optimizer (a Python code)
+@misc{christopher2023,
+  author = {Mayes, Christopher},
+  title = {PySuperfish},
+  year = {2023},
+  url = {https://github.com/ChristopherMayes/PySuperfish},
 }
 
 % An algorithm for multiobjective implicit filtering (MOIF).  Not mentioned
@@ -1297,6 +1308,22 @@ pages={211--223}
   pages = {760-771},
   doi = {10.1016/j.advengsoft.2011.05.014},
 }
+
+% A careful analysis of Johnson-Lindenstrauss transforms, and how we can sample
+% dimensions from hashing matrices to ensure that the resulting random subspace
+% method converges into the true optimum in the limit
+@article{dzahini2025,
+author = {Dzahini, K. J. and Wild, S. M.},
+title = {A Class of Sparse {Johnson–Lindenstrauss} Transforms and Analysis of their Extreme Singular Values},
+journal = {SIAM Journal on Matrix Analysis and Applications},
+volume = {46},
+number = {1},
+pages = {416-438},
+year = {2025},
+doi = {10.1137/23M1605661},
+url = {https://doi.org/10.1137/23M1605661},
+}
+
 
 % A classical textbook on the fundamentals of multiobjective optimization
 % theory.  Topics include: basic definitions in multiobjective optimization,
@@ -1828,6 +1855,17 @@ year={2009},
   pages   = {977--988},
   year    = {2022},
   doi     = {10.1109/tpds.2021.3082815}
+}
+
+% The docker image for the SUPERFISH/POISSON container + wrapper -- we used
+% this at Argonne to obtain a portable copy of POISSON/SUPERFISH when
+% performing particle accelerator RF gun cavity optimization and distributing
+% work on remote systems
+@misc{hugo2020,
+  author = {Slepicka, Hugo},
+  title = {Poisson Superfish via Docker},
+  year = {2020},
+  url = {https://github.com/hhslepicka/docker-poisson-superfish-nobin},
 }
 
 % A thorough survey on techniques and algorithms for solving multiobjective
@@ -2428,6 +2466,20 @@ journal={ORSA Journal on Computing},
 volume={3},
 number={1},
 pages={63--65}
+}
+
+% The POISSON/SUPERFISH open source numerical software (in Fortran) for
+% calculating static, magnetic, and electric fields and rf electromagnetic
+% fields.  Used to design particle accelerators, developed and maintained by
+% Los Alamos
+@techreport{menzel1987users,
+  title={Users guide for the {POISSON/SUPERFISH} group of codes},
+  author={Menzel, M. T. and Stokes, H. K.},
+  year={1987},
+  institution={Los Alamos National Laboratory},
+  address = {Los Alamos, NM, USA},
+  number = {LA-UR-87-115},
+  url = {https://www.osti.gov/servlets/purl/10140823}
 }
 
 % Report on challenges and experiences gained in porting PETSc to GPUs for the
