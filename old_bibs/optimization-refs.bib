@@ -84,6 +84,53 @@
   doi={10.1007/s00163-020-00336-7}
 }
 
+% A Fortran 90 implementation of quasi-Newton stochastic optimization
+% algorithms.  This open source numerical software solves both determinisitc
+% and stochastic blackbox optimization problems via a quasi-Newton trust-region
+% method.  It is a bit wasteful in terms of the number of function evaluations
+% per iteration as it performs a fully Latin hypercube sampling of the trust
+% region in each iteration, and does not explicitly re-use previous iterates to
+% reduce iteration costs, like some of the more advanced model based methods.
+% Still, it is extremely robust and a good choice in stochastic situations
+@article{amosetal2020,
+author={Amos, Brandon D. and Easterling, David R. and Watson, Layne T. and
+Thacker, William I. and Castle, Brent S. and Trosset, Michael W.},
+year={2020},
+  keywords={},
+title={Algorithm 1007: {QNSTOP}: {Q}uasi-{N}ewton algorithm for stochastic
+optimization},
+journal={ACM Transactions on Mathematical Software},
+volume={46},
+number={2},
+pages={17}
+}
+
+% The user guide for the reference implementation of LAPACK:  the original open
+% source numerical software for all common dense linear algebra operations.
+@book{andersonetal1999,
+author={Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and
+Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A.
+and Hammarling, S. and McKenney, A. and Sorensen, D.},
+year={1999},
+  keywords={},
+title={{LAPACK} Users' Guide},
+edition={3},
+publisher={SIAM},
+address={Philidelphia, PA, USA}
+}
+
+% The MOSEK solver is an open source numerical optimization software solver
+% that is used in older versions of scipy.optimize to solve linear programming
+% problems via the interior point method
+@inproceedings{andersen2000mosek,
+	author = {Andersen, Erling D and Andersen, Knud D},
+	title = {The {MOSEK} interior point optimizer for linear programming: an implementation of the homogeneous algorithm},
+	year = {2000},
+	booktitle = {High performance optimization},
+	pages = {197--232},
+	organization = {Springer},
+	url = {https://link.springer.com/chapter/10.1007/978-1-4757-3216-0_8},
+}
 
 % Is derivative / gradient information counterproductive for solving MOOs?  In
 % this paper, it appears to make direct-search type methods perform worse by
@@ -345,6 +392,19 @@ keywords = {Multiobjective optimization, Quality indicators, Performance indicat
   doi={10.1038/s41597-022-01710-x}
 }
 
+% OSQP is an open source numerical software for solving quadratic programming
+% problems from Stephen Boyd's lab
+@article{bartolomeo2020,
+  author  = {Stellato, Bartolomeo and Banjac, Goran and Goulart, Paul and Bemporad, Alberto and Boyd, Stephen},
+  title   = {{OSQP}: an operator splitting solver for quadratic programs},
+  journal = {Mathematical Programming Computation},
+  year    = {2020},
+  volume  = {12},
+  number  = {4},
+  pages   = {637--672},
+  doi     = {10.1007/s12532-020-00179-2}
+}
+
 % jMetalPy -- a Python framework for solving MOOs with EAs -- this open source
 % numerical software is a Python implementation of jMetal, with some
 % improvements to code quality and new features for better open source software
@@ -418,6 +478,21 @@ keywords = {Multiobjective optimization, Quality indicators, Performance indicat
   number={2},
   pages={301--338},
   doi={10.1007/s10589-021-00272-9}
+}
+
+% The ScaLAPACK user's guide:  A highly parallel and scalable open source
+% implementation of the LAPACK software, for solving massive scale numerical
+% linear algebra systems on distributed systems
+@book{blackford1997,
+author={Blackford, L. Susan and Choi, Jaeyoung and Cleary, Andy
+and D'Azevedo, Eduardo and Demmel, James and Dhillon, Inderjit
+and Dongarra, Jack and Hammarling, Sven and Henry, Greg
+and Petitet, Antoine and Stanley, K. and Walker, D. and Whaley, R. C.},
+title={ScaLAPACK Users' Guide},
+volume={4},
+year={1997},
+  keywords={},
+publisher={SIAM}
 }
 
 % pagmo/pygmo - Parallel frameworks for solving multiobjective optimization
@@ -605,6 +680,24 @@ pages={1843--1856}
   location={Orlando, FL, USA},
   pages={3081--3092},
   doi={10.1109/WSC48552.2020.9383875}
+}
+
+% The DelaunaySparse software, demonstrates how to calculate simplices from a
+% Delauay triangulation in very high dimensions scalably (and in parallel)
+% using a highly customized simplex method like solver.  The resulting Fortran
+% numerical software is fully open source with a C and Python interface
+@article{chang2020d,
+    author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+    title = {Algorithm 1012: {DELAUNAYSPARSE}: Interpolation via a Sparse Subset of the {D}elaunay Triangulation in Medium to High Dimensions},
+    year = {2020},
+    journal = {ACM Trans. Math. Softw.},
+    volume = {46},
+    number = {4},
+    articleno = {38},
+    numpages = {20},
+    publisher = {ACM},
+    address = {New York, NY, USA},
+    doi = {10.1145/3422818},
 }
 
 % Publication of my second open source numerical software package: VTMOP a
@@ -945,6 +1038,21 @@ pages={1843--1856}
   doi = {10.1007/s00291-016-0453-z}
 }
 
+% Dantzig's original (landmark) textbook on solving linear programming problems
+% via the simplex method.  This was obviously a landmark achievement in how to
+% solve linear programming problems and more generally in the field of
+% numerical optimization
+@book{dantzig1998,
+  author={Dantzig, George B.},
+  title={Linear Programming and Extensions},
+  edition={11},
+  series={Princeton Landmarks in Mathematics and Physics},
+  year={1998},
+  keywords={},
+  publisher={Princeton University Press},
+  address={Princeton, NJ, USA}
+}
+
 % The normal boundary intersection (NBI) method was one of the first adaptive
 % scalarization schemes for multiobjective optimization problems.  It uses
 % linear scalarization but does so adaptively using the angle of the
@@ -1101,6 +1209,49 @@ journal={Engineering with Computers},
 volume={27},
 number={3},
 pages={211--223}
+}
+
+% CVXPY is an open source Python optimization and modeling language for solving
+% convex optimization problems in a disciplined way (meaning that we ensure
+% convexity through hard rules on the problem definition). From the lab of
+% Stephen Boyd
+@article{diamond2016,
+  author  = {Steven Diamond and Stephen Boyd},
+  title   = {{CVXPY}: {A} {P}ython-embedded modeling language for convex optimization},
+  journal = {Journal of Machine Learning Research},
+  year    = {2016},
+  volume  = {17},
+  number  = {83},
+  pages   = {1--5},
+  url     = {http://jmlr.org/papers/v17/15-408.html}
+}
+
+% ECOS is an open source numerical software for solving second-order cone
+% optimization problems, from the lab of Stephen Boyd.  In my experience, this
+% software is the best tool from Boyd's lab and the most robust to degeneracy
+@inproceedings{domahidi2013,
+  author={Domahidi, Alexander and Chu, Eric and Boyd, Stephen},
+  title={{ECOS}: {A}n {SOCP} solver for embedded systems},
+  year={2013},
+  booktitle={European Control Conference (ECC)},
+  pages={3071-3076},
+  location={Z{\"u}rich, Switzerland},
+  publisher={IEEE},
+  doi={10.23919/ECC.2013.6669541}
+}
+
+% SCS is an open source numerical software for solving second-order cone
+% problems from Steph Boyd's lab
+@article{donoghue2016,
+    author       = {Brendan O'Donoghue and Eric Chu and Neal Parikh and Stephen Boyd},
+    title        = {Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding},
+    journal      = {Journal of Optimization Theory and Applications},
+    month        = {June},
+    year         = {2016},
+    volume       = {169},
+    number       = {3},
+    pages        = {1042-1068},
+    doi          = {10.1007/s10957-016-0892-3}
 }
 
 % Achieving performance portability of parallel codes in the exascale computing
@@ -1276,6 +1427,34 @@ pages={211--223}
   doi = {10.1007/s10898-016-0427-3}
 }
 
+% Fletcher's paper on how to handle degeneracy in active set methods for
+% solving quadratic programming problems.  This technique would become the
+% basis for the BQPD software package, which is a recently open source (post
+% mortem) numerical software for solving (degenerate) quadratic programs via
+% active set methods
+@article{fletcher1993,
+  title={Resolving degeneracy in quadratic programming},
+  author={Fletcher, Roger},
+  journal={Annals of Operations Research},
+  volume={46},
+  pages={307--334},
+  year={1993},
+  publisher={Springer},
+  doi={10.1007/BF02023102}
+}
+
+% Fletcher's paper on an efficient Hessian update method which can be used in
+% an active set method for solving quadratic programming optimization problems
+@article{fletcher2000stable,
+  title={Stable reduced Hessian updates for indefinite quadratic programming},
+  author={Fletcher, Roger},
+  journal={Mathematical programming},
+  volume={87},
+  pages={251--264},
+  year={2000},
+  publisher={Springer}
+}
+
 % The DEAP framework is a Python framework for easily implementing and
 % deploying parallel and distributed evolutionary algorithms.  Fairly high
 % quality open source software.  This is widely used by optimization
@@ -1371,6 +1550,21 @@ pages={211--223}
   doi = {10.1145/3097983.3098043}
 }
 
+% Classical textbook that serves as the "bible" of matrix computations and
+% computational linear algebra -- contains all the standard factorizations,
+% the common algorithms for computing them, and their sensitiviy analyses,
+% pivoting, some basic approximation theory, and the basics of iterative
+% methods
+@book{golubandvanloan2013,
+  title={Matrix computations},
+  author={Golub, Gene H. and Van Loan, Charles F.},
+  year={2013},
+  keywords={},
+  publisher={Johns Hopkins University Press},
+  edition={4th},
+  isbn={978-1421407944}
+}
+
 % Theorems on the curse of dimensionality when it comes to drawing data points
 % in high-dimensional spaces.  The main theorem implies that the convex hull of
 % N points in D dimensions has volume ~0 for D sufficiently large -- this
@@ -1413,6 +1607,23 @@ pages={211--223}
   institution={GitHub},
   number={Version 1.0.4},
   url={https://platypus.readthedocs.io/en/latest}
+}
+
+% Hanson's Fortran numerical software for solving equality constrained
+% nonnegative least-squares (NNLS) problems via an iterative weighted least
+% squares (WNNLS) solver.  This is the default constrained least-squares
+% optimization problem solver in the Fortran library SLATEC from Sandia
+@article{hanson1982,
+    author = {Hanson, Richard J. and Haskell, Karen H.},
+    title = {Algorithm 587: Two Algorithms for the Linearly Constrained Least Squares Problem},
+    year = {1982},
+    journal = {ACM Trans. Math. Softw.},
+    volume = {8},
+    number = {3},
+    pages = {323–333},
+    publisher = {ACM},
+    address = {New York, NY, USA},
+    doi = {10.1145/356004.356010},
 }
 
 % Chimera: a scientific software package for steering self-driving labs via
@@ -1570,6 +1781,26 @@ year={2009},
     doi = {10.1038/s42256-021-00422-y}
 }
 
+% The official publication for HiGHS numerical optimization open source
+% software package and solver for linear programming problems.  The first
+% successful effort to parallelize a simplex method based solver, specifically,
+% they have successfully parallelized the dual revised simplex approach.  HiGHS
+% is now the default solver in most scipy.optimize.  HiGHS is written in C++
+% with Fortran, C, and Python interfaces -- support CPU and GPU parallelism,
+% the authors don't get perfect scaling by any means but this is the first
+% successful effort to parallelize linear programming and still an achievement
+@article{huangfu2018parallelizing,
+  title={Parallelizing the dual revised simplex method},
+  author={Huangfu, Qi and Hall, JA Julian},
+  journal={Mathematical Programming Computation},
+  volume={10},
+  number={1},
+  pages={119--142},
+  year={2018},
+  publisher={Springer},
+  doi={10.1007/s12532-017-0130-5},
+}
+
 % The official JOSS paper for libEnsemble: an open source software library for
 % performing parallel and distributed computations involving ensembles of
 % computationally expensive function evaluations in Python
@@ -1613,6 +1844,30 @@ year={2009},
   number={1},
   pages={1--36},
   doi={10.1145/3299872}
+}
+
+% ISO Fortran 2003 software standard -- definition of the Fortran 2003 standard
+@techreport{iso2003,
+year = {2004},
+  keywords={},
+month = {November},
+title = {{Information technology -- Programming languages -- Fortran
+ -- Part 1: Base Language}},
+address = {Geneva, Switzerland},
+number = {ISO/IEC 1539-1:2004(E)},
+institution = {International Organization for Standardization}
+}
+
+% ISO Fortran 2008 software standard -- definition of the Fortran 2008 standard
+@techreport{iso2008,
+year = {2010},
+  keywords={},
+month = {October},
+title = {{Information technology -- Programming languages -- Fortran
+ -- Part 1: Base Language}},
+number = {ISO/IEC 1539-1:2010(E)},
+address = {Geneva, Switzerland},
+institution = {International Organization for Standardization}
 }
 
 % The orgiinal NSGA-III paper part 2: a multiobjective evolutionary algorithm
@@ -1786,6 +2041,21 @@ author = {M.E. Johnson and L.M. Moore and D. Ylvisaker}
   isbn={978-3-540-30217-9_75}
 }
 
+% The Klee Minty cube:  A famous counterexample showing that for every pivoting
+% strategy for the simplex method, we can construct a pathological problem
+% where that strategy will visit every vertex of the cube before the solution.
+% This proves that the simplex method cannot be used to solve linear
+% programming problems in strongly polynomial time
+@article{kleeandminty1972,
+  author={Klee, Victor and Minty, George J.},
+  year={1972},
+  keywords={},
+  title={How good is the simplex algorithm?},
+  journal={Inequalities},
+  volume={III},
+  pages={159--175}
+}
+
 % The original ParEGO algorithm paper: in each iteration of the algorithm, the
 % authors use NSGA-II to optimize the expected improvement of the Gaussian
 % process surrogates of each objective.  Then, results are scalarized using
@@ -1867,6 +2137,19 @@ author = {M.E. Johnson and L.M. Moore and D. Ylvisaker}
   year={2019},
   publisher={Cambridge University Press},
   doi = {10.1017/S0962492919000060}
+}
+
+% A summary of classical solutions and challenges to solving sum-of-squares
+% minimization of polynomials
+@article{lasserre2001global,
+	author = {Lasserre, Jean B},
+	title = {Global optimization with polynomials and the problem of moments},
+	year = {2001},
+	journal = {SIAM Journal on optimization},
+	volume = {11},
+	number = {3},
+	pages = {796--817},
+	publisher = {SIAM},
 }
 
 % Jeff's GOOMBAH paper on exploiting composite structures in derivative-free
@@ -2134,6 +2417,19 @@ author = {M.E. Johnson and L.M. Moore and D. Ylvisaker}
   doi = {10.1145/1555386.1555389}
 }
 
+% Algorithms and theorems on the difficulty of finding basic solutions for
+% linear programming problems
+@article{megiddo1991,
+author={Megiddo, Nimrod},
+year={1991},
+  keywords={},
+title={On finding primal- and dual-optimal bases},
+journal={ORSA Journal on Computing},
+volume={3},
+number={1},
+pages={63--65}
+}
+
 % Report on challenges and experiences gained in porting PETSc to GPUs for the
 % exascale computing project
 @article{mills2021,
@@ -2261,6 +2557,16 @@ author = {M.E. Johnson and L.M. Moore and D. Ylvisaker}
   publisher={Springer Verlag},
   address={New York, NY, USA},
   doi={10.1007/978-0-387-40065-5}
+}
+
+% OpenMP 4.5 standard:  Official definition of OpenMP 4.5 software standard
+@techreport{openmparb2015,
+institution={OpenMP Architecture Review Board (ARB)},
+year={2015},
+  keywords={},
+month={November},
+title={{OpenMP Application Programming Interface} version 4.5}
+number={OpenMP 4.5},
 }
 
 % PABO - a multiobjective Bayesian optimization software package that is
@@ -2427,6 +2733,20 @@ numpages = {13},
   url={https://github.com/pdfo/pdfo}
 }
 
+% The calculus of simplex gradients:  a detailed analysis of simplex gradients
+% and their properties for approximating true gradients when solving
+% derivative-free and blackbox optimization problems
+@article{regis2015,
+author={Regis, Rommel G.},
+year={2015},
+  keywords={},
+title={The calculus of simplex gradients},
+journal={Optimization Letters},
+volume={9},
+number={5},
+pages={845--865}
+}
+
 % Using RBF surrogates in the context of multiobjective optimization.  I
 % believe he ultimately solved the surrogate problems with NSGA-II or some
 % other heuristic
@@ -2590,6 +2910,20 @@ url = {https://doi.org/10.1080/10556788.2022.2121832},
   doi = {10.1038/s41586-021-03213-y}
 }
 
+% Steve Smale's list of unsolved open problems in mathematics, and mostly
+% algorithms, one of which is reliably finding basic solutions to linear
+% programming problems
+@article{smale1998,
+  author={Smale, Steve},
+  year={1998},
+  keywords={},
+  title={Mathematical problems for the next century},
+  journal={The Mathematical Intelligencer},
+  volume={20},
+  number={2},
+  pages={7--15}
+}
+
 % One of the most popular textbooks in the field of multidisciplinary
 % engineering design optimization.  The introduction provides plenty of
 % motivation for solving computational expensive multiobjective simulation /
@@ -2727,6 +3061,22 @@ url={https://www.anl.gov/article/us-department-of-energy-and-intel-to-deliver-fi
 note={accessed April 28, 2020}
 }
 
+% The (recently open source) numerical software library SLATEC from Sandia is
+% something of a precursor to a modern library like scipy.  SLATEC provides
+% highly optimized, numerically stable, Fortran implementations for nearly
+% every basic numerical algorithm that one would encounter in scientific
+% computing
+@article{vandenvenderandhaskell1982,
+author = {Vandevender, Walter H. and Haskell, Karen H.},
+title = {The {SLATEC} Mathematical Subroutine Library},
+year = {1982},
+  keywords={},
+journal = {SIGNUM Newsletter},
+volume = {17},
+number = {3},
+pages = {16–21}
+}
+
 % A tutorial on how to compute Latin hypercube samples (LHS) and some basic
 % properties and ongoing research related to design-of-experiments
 @article{viana2016,
@@ -2794,6 +3144,20 @@ note={accessed April 28, 2020}
   pages = {88--103},
   publisher = {Taylor \& Francis},
   doi = {10.1080/00224065.2022.2035285}
+}
+
+% The latest release of HOMPACK: An open source numerical software package
+% written in Fortran 90 for solving nonlinear and polynomial systems of
+% equations via homotopy methods.
+@article{watson1997algorithm,
+	author = {Watson, Layne T and Sosonkina, Maria and Melville, Robert C and Morgan, Alexander P and Walker, Homer F},
+	title = {Algorithm 777: HOMPACK90: A suite of Fortran 90 codes for globally convergent homotopy algorithms},
+	year = {1997},
+	journal = {ACM Transactions on Mathematical Software (TOMS)},
+	volume = {23},
+	number = {4},
+	pages = {514--549},
+	publisher = {ACM},
 }
 
 % The original publication of the reference point method for scalarizing
