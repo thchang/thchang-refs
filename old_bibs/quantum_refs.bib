@@ -1,3 +1,5 @@
+% This paper shows the equivalence of adiabatic quantum computing and the gate
+% model
 @article{aharonov2008adiabatic,
 	author = {Aharonov, Dorit and Van Dam, Wim and Kempe, Julia and Landau, Zeph and Lloyd, Seth and Regev, Oded},
 	title = {Adiabatic quantum computation is equivalent to standard quantum computation},
@@ -7,9 +9,9 @@
 	number = {4},
 	pages = {755--787},
 	publisher = {SIAM},
-	descrip = {This paper shows the equivalence of adiabatic quantum computing and the gate model},
 }
 
+% Review article on adiabatic quantum computing
 @article{albash2018adiabatic,
 	author = {Albash, Tameem and Lidar, Daniel A},
 	title = {Adiabatic quantum computation},
@@ -20,18 +22,20 @@
 	numpages = {15002},
 	publisher = {APS},
 	url = {https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.90.015002},
-	descrip = {Review article on adiabatic quantum computing},
 }
 
+% Quantum annealing algorithm for addition, which I suspected to be done with
+% the less efficient classical addition circuit, they don't say otherwise
 @article{alghassi2019graver,
 	author = {Alghassi, Hedayat and Dridi, Raouf and Tayur, Sridhar},
 	title = {Graver Bases via Quantum Annealing with Application to Non-Linear Integer Programs},
 	year = {2019},
 	journal = {arXiv preprint arXiv:1902.04215},
 	url = {https://arxiv.org/pdf/1902.04215.pdf},
-	descrip = {Quantum annealing algorithm for addition, which I suspected to be done with the less efficient classical addition circuit, they don’t say otherwise. [3]},
 }
 
+% The MOSEK linear programming interior-point solver used in an old version of
+% scipy.optimize
 @inproceedings{andersen2000mosek,
 	author = {Andersen, Erling D and Andersen, Knud D},
 	title = {The MOSEK interior point optimizer for linear programming: an implementation of the homogeneous algorithm},
@@ -40,18 +44,18 @@
 	pages = {197--232},
 	organization = {Springer},
 	url = {https://link.springer.com/chapter/10.1007/978-1-4757-3216-0_8},
-	descrip = {The MOSEK linear programming interior-point solver used in an old version of scipy.optimize},
 }
 
+% D-Wave article describing the multiplication circuit
 @techreport{andriyash2016boosting,
 	author = {Andriyash, Evgeny and Bian, Zhengbing and Chudak, Fabian and Drew-Brook, Marshall and King, Andrew D and Macready, William G and Roy, Aidan},
 	title = {Boosting integer factoring performance via quantum annealing offsets},
 	year = {2016},
 	institution = {D-Wave},
 	url = {https://www.dwavesys.com/sites/default/files/14-1002A_B_tr_Boosting_integer_factorization_via_quantum_annealing_offsets.pdf},
-	descrip = {D-Wave article describing the multiplication circuit},
 }
 
+% Proof that solving the Ising model is classically NP-hard
 @article{barahona1982computational,
 	author = {Barahona, Francisco},
 	title = {On the computational complexity of Ising spin glass models},
@@ -62,9 +66,9 @@
 	numpages = {3241},
 	publisher = {IOP Publishing},
 	url = {https://iopscience.iop.org/article/10.1088/0305-4470/15/10/028},
-	descrip = {Proof that solving the Ising model is classically NP-hard},
 }
 
+% A paper summarizing the early advances in quantum machine learning
 @article{biamonte2017quantum,
 	author = {Biamonte, Jacob and Wittek, Peter and Pancotti, Nicola and Rebentrost, Patrick and Wiebe, Nathan and Lloyd, Seth},
 	title = {Quantum machine learning},
@@ -75,9 +79,10 @@
 	numpages = {195},
 	publisher = {Nature Publishing Group},
 	url = {https://www.nature.com/articles/nature23474},
-	descrip = {A paper summarizing the early advances in quantum machine learning},
 }
 
+% Evidence in support that quantum annealing will eventually be better than
+% using simulated annealing
 @article{boixo2014evidence,
 	author = {Boixo, Sergio and R{\o}nnow, Troels F and Isakov, Sergei V and Wang, Zhihui and Wecker, David and Lidar, Daniel A and Martinis, John M and Troyer, Matthias},
 	title = {Evidence for quantum annealing with more than one hundred qubits},
@@ -89,9 +94,9 @@
 	publisher = {Nature Publishing Group},
 	doi = {10.1038/nphys2900},
 	url = {https://www.nature.com/articles/nphys2900},
-	descrip = {Evidence in support that quantum annealing will eventually be better than using simulated annealing},
 }
 
+% Whitepaper on the D-Wave Pegasus topology
 @techreport{boothby2018nextgeneration,
 	author = {Boothby, Kelly and Bunyk, Paul and Raymond, Jack and Roy, Aidan},
 	title = {Next-generation topology of D-Wave quantum processors},
@@ -100,9 +105,9 @@
 	numpages = {28},
 	institution = {D-Wave},
 	url = {https://www.dwavesys.com/sites/default/files/14-1026A-C_Next-Generation-Topology-of-DW-Quantum-Processors.pdf},
-	descrip = {Whitepaper on the D-Wave Pegasus topology},
 }
 
+% Quantum Annealing algorithm for solving Linear Least Squares equations
 @inproceedings{borle2019analyzing,
 	author = {Borle, Ajinkya and Lomonaco, Samuel J},
 	title = {Analyzing the quantum annealing approach for solving linear least squares problems},
@@ -110,18 +115,20 @@
 	booktitle = {International Workshop on Algorithms and Computation},
 	pages = {289--301},
 	organization = {Springer},
-	descrip = {Quantum Annealing algorithm for solving Linear Least Squares equations},
 }
 
+% Finding minor graphs (a minor of G is a subgraph H that can be obtained by
+% deleting edges). This algorithm is (was) used to find physical embeddings on
+% D-Wave systems via the minorminer.find_embedding tool
 @article{cai2014practical,
 	author = {Cai, Jun and Macready, William G and Roy, Aidan},
 	title = {A practical heuristic for finding graph minors},
 	year = {2014},
 	journal = {arXiv preprint arXiv:1406.2741},
 	url = {https://arxiv.org/abs/1406.2741},
-	descrip = {Finding minor graphs (a minor of G is a subgraph H that can be obtained by deleting edges). This algorithm is (was) used to find physical embeddings on D-Wave systems via the minorminer.find_embedding tool},
 }
 
+% Quantum Annealing algorithm for solving polynomial systems of equations
 @article{chang2019experimental,
 	author = {Chang, Chia Cheng and Gambhir, Arjun and Humble, Travis S and Sota, Shigetoshi and Harrow, Aram W. and Hassidim, Avinatan and Lloyd, Seth and Suba\ifmmode \mbox{\c{s}}\else \c{s}\fi{}\ifmmode \imath \else \i \fi{}, Yi\ifmmode \breve{g}\else \u{g}\fi{}it and Somma, Rolando D. and Orsucci, Davide and Wen, Jingwei and Kong, Xiangyu and Wei, Shijie and Wang, Bixue and Xin, Tao and Long, Guilu},
 	title = {Experimental realization of quantum algorithms for a linear system inspired by adiabatic quantum computing},
@@ -134,26 +141,27 @@
 	publisher = {Nature Publishing Group},
 	doi = {10.1103/PhysRevA.99.012320},
 	url = {https://link.aps.org/doi/10.1103/PhysRevA.99.012320},
-	descrip = {Quantum Annealing algorithm for solving polynomial systems of equations},
 }
 
+% Textbook on quantum annealing
 @book{das2005quantum,
 	author = {Das, Arnab and Chakrabarti, Bikas K},
 	title = {Quantum annealing and related optimization methods},
 	year = {2005},
 	volume = {679},
 	publisher = {Springer Science \& Business Media},
-	descrip = {Textbook on quantum annealing},
 }
 
+% Article applying quantum AND gate to perform reduction by substitution,
+% section 5, page 44
 @article{dattani2019quadratization,
 	author = {Dattani, Nike},
 	title = {Quadratization in discrete optimization and quantum mechanics},
 	year = {2019},
 	journal = {arXiv preprint arXiv:1901.04405},
-	descrip = {Article applying quantum AND gate to perform reduction by substitution, section 5, page 44},
 }
 
+% Another quantum annealing-based prime factorization article
 @article{dridi2017prime,
 	author = {Dridi, Raouf and Alghassi, Hedayat},
 	title = {Prime factorization using quantum annealing and computational algebraic geometry},
@@ -163,9 +171,10 @@
 	numpages = {43048},
 	publisher = {Nature Publishing Group},
 	url = {https://www.nature.com/articles/srep43048},
-	descrip = {Another quantum annealing-based prime factorization article},
 }
 
+% Article analyzing the annealing time requirements to guarantee convergence of
+% adiabatic quantum computing with a shrinking spectral gap
 @article{elgart2012note,
 	author = {Elgart, Alexander and Hagedorn, George A},
 	title = {A note on the switching adiabatic theorem},
@@ -176,18 +185,19 @@
 	numpages = {102202},
 	publisher = {AIP},
 	url = {https://aip.scitation.org/doi/abs/10.1063/1.4748968},
-	descrip = {Article analyzing the annealing time requirements to guarantee convergence of adiabatic quantum computing with a shrinking spectral gap},
 }
 
+% Golub and van Loan's classic textbook on computational linear algebra, matrix
+% decompositions, pivoting, sensitivity analysis, iterative solvers, etc
 @book{golub2013matrix,
 	author = {Golub, Gene H and Van Loan, Charles F},
 	title = {Matrix computations},
 	year = {2013},
 	edition = {4},
 	publisher = {Johns Hopkins University Press},
-	descrip = {Golub and van Loan's classic textbook on computational linear algebra, matrix decompositions, pivoting, sensitivity analysis, iterative solvers, etc},
 }
 
+% Quantum annealing algorithm for performing prime factorization
 @article{jiang2018quantum,
 	author = {Jiang, Shuxian and Britt, Keith A and McCaskey, Alexander J and Humble, Travis S and Kais, Sabre},
 	title = {Quantum annealing for prime factorization},
@@ -197,9 +207,14 @@
 	pages = {1--9},
 	publisher = {Nature Publishing Group},
 	url = {https://www.nature.com/articles/s41598-018-36058-z},
-	descrip = {Quantum annealing algorithm for performing prime factorization},
 }
 
+% A quantum gate model algorithm for solving Ax=b An adiabatic quantum
+% computing algorithm for solving Ax=b A physical implementation of a quantum
+% annealing algorithm for solving linear systems This is the original paper
+% where quantum annealing is proposed, which shows that the likelihood of
+% achieving the ground state decreases quadratically with linearly shrinking
+% energy gap.
 @article{kadowaki1998quantum,
 	author = {Kadowaki, Tadashi and Nishimori, Hidetoshi},
 	title = {Quantum annealing in the transverse Ising model},
@@ -209,9 +224,10 @@
 	number = {5},
 	numpages = {5355},
 	publisher = {APS},
-	descrip = {A quantum gate model algorithm for solving Ax=b An adiabatic quantum computing algorithm for solving Ax=b A physical implementation of a quantum annealing algorithm for solving linear systems This is the original paper where quantum annealing is proposed, which shows that the likelihood of achieving the ground state decreases quadratically with linearly shrinking energy gap.},
 }
 
+% Paper describing the practical concerns, optimizations, and limitations of
+% performing adiabatic quantum computing on real-world systems (i.e., D-Wave)
 @article{karimi2019practical,
 	author = {Karimi, Sahar and Ronagh, Pooya},
 	title = {Practical integer-to-binary mapping for quantum annealers},
@@ -222,9 +238,9 @@
 	numpages = {94},
 	publisher = {Springer},
 	url = {https://link.springer.com/article/10.1007/s11128-019-2213-x},
-	descrip = {Paper describing the practical concerns, optimizations, and limitations of performing adiabatic quantum computing on real-world systems (i.e., D-Wave)},
 }
 
+% Algorithm for implementing a quantum variational autoencoder
 @article{khoshaman2018quantum,
 	author = {Khoshaman, Amir and Vinci, Walter and Denis, Brandon and Andriyash, Evgeny and Amin, Mohammad H},
 	title = {Quantum variational autoencoder},
@@ -235,9 +251,10 @@
 	numpages = {14001},
 	publisher = {IOP Publishing},
 	url = {https://iopscience.iop.org/article/10.1088/2058-9565/aada1f/meta},
-	descrip = {Algorithm for implementing a quantum variational autoencoder},
 }
 
+% A summary of classical solutions and challenges to solving sum-of-squares
+% minimization of polynomials
 @article{lasserre2001global,
 	author = {Lasserre, Jean B},
 	title = {Global optimization with polynomials and the problem of moments},
@@ -247,9 +264,9 @@
 	number = {3},
 	pages = {796--817},
 	publisher = {SIAM},
-	descrip = {A summary of classical solutions and challenges to solving sum-of-squares minimization of polynomials},
 }
 
+% Los Almos article on converting Prolog code into D-WAVE circuits
 @article{pakin2018performing,
 	author = {Pakin, Scott},
 	title = {Performing fully parallel constraint logic programming on a quantum annealer},
@@ -260,9 +277,9 @@
 	pages = {928--949},
 	publisher = {Cambridge University Press},
 	url = {https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/article/performing-fully-parallel-constraint-logic-programming-on-a-quantum-annealer/AB4CCF2D913D0325F770B3DA02AA262D},
-	descrip = {Los Almos article on converting Prolog code into D-WAVE circuits},
 }
 
+% Quantum annealing for integer factorization
 @article{peng2008quantum,
 	author = {Peng, Xinhua and Liao, Zeyang and Xu, Nanyang and Qin, Gan and Zhou, Xianyi and Suter, Dieter and Du, Jiangfeng},
 	title = {Quantum adiabatic algorithm for factorization and its experimental implementation},
@@ -273,9 +290,10 @@
 	numpages = {220405},
 	publisher = {APS},
 	url = {https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.101.220405},
-	descrip = {Quantum annealing for integer factorization},
 }
 
+% This article lays the theoretical foundation for Quantum Annealing via
+% quantum tunneling.
 @article{ray1989sherringtonkirkpatrick,
 	author = {Ray, Pulak and Chakrabarti, Bikas K and Chakrabarti, Arunava},
 	title = {Sherrington-Kirkpatrick model in a transverse field: Absence of replica symmetry breaking due to quantum fluctuations},
@@ -285,9 +303,9 @@
 	number = {16},
 	numpages = {11828},
 	publisher = {APS},
-	descrip = {This article lays the theoretical foundation for Quantum Annealing via quantum tunneling.},
 }
 
+% Original paper describing "Reduction by Substitution" in the QUBO model
 @article{rosenberg1975reduction,
 	author = {Rosenberg, Ivo G},
 	title = {Reduction of bivalent maximization to the quadratic case},
@@ -295,9 +313,10 @@
 	journal = {Cahiers du Centre d’etudes de Recherche Operationnelle},
 	volume = {17},
 	pages = {71--74},
-	descrip = {Original paper describing "Reduction by Substitution" in the QUBO model},
 }
 
+% Analysis that using quantum annealing is theoretically faster than using
+% simulated annealing to solve an Ising/QUBO model
 @article{santoro2002theory,
 	author = {Santoro, Giuseppe E and Marto{\v{n}}{\'a}k, Roman and Tosatti, Erio and Car, Roberto},
 	title = {Theory of quantum annealing of an Ising spin glass},
@@ -308,9 +327,9 @@
 	pages = {2427--2430},
 	publisher = {American Association for the Advancement of Science},
 	url = {https://science.sciencemag.org/content/295/5564/2427?casa_token=oOyVfFb2YFkAAAAA:uuUmeZPbfJVVjm9XlBllasY6OA1n_kOEJA4E5DSOD6neFa2PuVI6pEElaMvRkbomX4sJiq9gxn_YPpY},
-	descrip = {Analysis that using quantum annealing is theoretically faster than using simulated annealing to solve an Ising/QUBO model},
 }
 
+% Shor's algorithm for prime factorization
 @article{shor1999polynomialtime,
 	author = {Shor, Peter W},
 	title = {Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer},
@@ -321,9 +340,9 @@
 	pages = {303--332},
 	publisher = {SIAM},
 	url = {https://epubs.siam.org/doi/abs/10.1137/S0036144598347011?casa_token=a1HjL4NT4JcAAAAA:76FzW89tOwMuu471TSx0PCrJFUTa0tbvOyNfM4isoCzj3NwY6pvUAlJJpAlvq_emxY4fuksR_WRh},
-	descrip = {Shor's algorithm for prime factorization},
 }
 
+% A concise summary of the quantum gate model
 @article{steane1998quantum,
 	author = {Steane, Andrew},
 	title = {Quantum computing},
@@ -334,9 +353,10 @@
 	numpages = {117},
 	publisher = {IOP Publishing},
 	url = {https://iopscience.iop.org/article/10.1088/0034-4885/61/2/002},
-	descrip = {A concise summary of the quantum gate model},
 }
 
+% A software package of homotopy methods for solving polynomial systems of
+% equations and other nonlinear systems
 @article{watson1997algorithm,
 	author = {Watson, Layne T and Sosonkina, Maria and Melville, Robert C and Morgan, Alexander P and Walker, Homer F},
 	title = {Algorithm 777: HOMPACK90: A suite of Fortran 90 codes for globally convergent homotopy algorithms},
@@ -346,6 +366,4 @@
 	number = {4},
 	pages = {514--549},
 	publisher = {ACM},
-	descrip = {A software package of homotopy methods for solving polynomial systems of equations},
 }
-
