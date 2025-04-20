@@ -1,16 +1,44 @@
-% SUPRFISH/POISSON container + wrapper
+% Publication of our work on multiobjective shape optimization of the RF-gun
+% cavity for the Argonne wakefield accelerator using ParMOO with the
+% POISSON/SUPERFISH simulation software
+@inproceedings{chen2023integrated,
+  author  = {Chen, Gongxiaohui and Chang, Tyler H. and Power, John and Jing, Chungunag},
+  title   = {An Integrated Multi-Physics Optimization Framework for Particle Accelerator Design},
+  year    = {2023},
+  booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023), Industrial Applications Track},
+  location = {Orlando, FL, USA},
+  numpages = {2},
+  doi     = {10.48550/arXiv.2311.09415}
+}
+
+% The POISSON/SUPERFISH open source numerical software (in Fortran) for
+% calculating static, magnetic, and electric fields and rf electromagnetic
+% fields.  Used for design particle accelerators, developed and maintained by
+% Los Alamos
+@techreport{menzel1987users,
+  title={Users guide for the {POISSON/SUPERFISH} group of codes},
+  author={Menzel, M. T. and Stokes, H. K.},
+  year={1987},
+  institution={Los Alamos National Laboratory},
+  address = {Los Alamos, NM, USA},
+  number = {LA-UR-87-115},
+  url = {https://www.osti.gov/servlets/purl/10140823}
+}
+
+% The docker containers for the SUPERFISH/POISSON container + wrapper
 @misc{docker-poisson-superfish-nobin,
   author = {Slepicka, Hugo},
   title = {Poisson Superfish via Docker},
   year = {2020},
-  note = {Available at: \url{https://github.com/hhslepicka/docker-poisson-superfish-nobin}}
+  url = {https://github.com/hhslepicka/docker-poisson-superfish-nobin},
 }
 
+% Python wrapper around the open source numerical simulation software superfish
 @misc{PySuperfish,
   author = {Mayes, Christopher},
   title = {PySuperfish},
   year = {2023},
-  note = {Available at: \url{https://github.com/ChristopherMayes/PySuperfish}}
+  url = {https://github.com/ChristopherMayes/PySuperfish},
 }
 
 % ParMOO paper
@@ -38,18 +66,7 @@
   doi     = {10.1109/tpds.2021.3082815}
 }
 
-
-%%% Refs count toward page limit so probably don't use these, but putting them here in case %%%
-
-% Almost exact same ParMOO solver settings used by Chen are also used in Section 5 of this paper to calibrate a Fayans EDF model
-@techreport{parmoo-solver,
-    title   = {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
-    author  = {Chang, Tyler H. and Wild, Stefan M.},
-    year    = {2023},
-    note    = {Preprint: \url{https://arxiv.org/abs/2304.06881}}
-}
-
-% Similar methods (not the same) as used here did pretty well on particle accelerator tuning problem at SLAC
+% another experiment using VTMOP to calibrate the LCLS-II photinjector
 @article{lclsii,
   title={Comparison of multiobjective optimization methods for the LCLS-II photoinjector},
   author={Neveu, Nicole and Chang, Tyler H and Franz, Paris and Hudson, Stephen and Larson, Jeffrey},
@@ -59,4 +76,3 @@
   year={2023},
   publisher={Elsevier}
 }
-

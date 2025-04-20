@@ -119,6 +119,25 @@
     doi={10.1109/WSC52266.2021.9715343}
 }
 
+% pyOED an open source Python numerical software library for performing optimal
+% experimental design, e.g, for sensor placement at Argonne
+@techreport{chowhary2024,
+author = {Chowdhary, Abhijit and Ahmed, Shady E. and Attia, Ahmed},
+title = {{PyOED}: An Extensible Suite for Data Assimilation and Model-Constrained Optimal Design of Experiments},
+year = {2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {50},
+number = {2},
+issn = {0098-3500},
+url = {https://doi.org/10.1145/3653071},
+doi = {10.1145/3653071},
+journal = {ACM Transactions on Mathematical Software},
+month = {6},
+articleno = {11},
+numpages = {22},
+}
+
 % A thorough survey of over 50 commonly used performance indicators in
 % multiobjective optimization -- key takeaways:  performance metrics can
 % measure different properties of an algorithm, such as whether it is
@@ -901,6 +920,18 @@ pages={1843--1856}
   doi          = {10.1137/10079731x}
 }
 
+% Applications of low-discrepancy sequences in Monte carlo simulation
+@inproceedings{dalal2008,
+  author={Dalal, Ishaan L. and Stefan, Deian and Harwayne-Gidansky, Jared},
+  booktitle={2008 International Conference on Application-Specific Systems, Architectures and Processors}, 
+  title={Low discrepancy sequences for {M}onte {C}arlo simulations on reconfigurable platforms}, 
+  year={2008},
+  volume={},
+  number={},
+  pages={108-113},
+  doi={10.1109/ASAP.2008.4580163}
+}
+
 % Description and proof of coverage for a quadratic scalarization scheme for
 % scalarizing multiobjective optimization problems
 @article{dandurand2016,
@@ -1462,6 +1493,24 @@ pages={1843--1856}
   doi = {10.2172/1606662},
 }
 
+% A numerical-quadrature based approximation to discrepancy.  For
+% high-dimensional ill-spaced points, the quadrature error can be huge, and
+% although discrepancies should always be between 0 and 1, the approximation
+% can approach (13/12)^d - 1, where d is the dimension of the problem.  When
+% points are randomly or quasi-randomly sampled, such large values of the
+% approximation could be indicative of measure collapse.  This is the technique
+% used in scipy.stats.qmc.discrepancy(...)
+@article{hickernell1998,
+  title={A generalized discrepancy and quadrature error bound},
+  author={Hickernell, Fred J.},
+  journal={Mathematics of computation},
+  volume={67},
+  number={221},
+  pages={299--322},
+  year={1998},
+  doi={10.1090/S0025-5718-98-00894-1}
+}
+
 % An article on Google GlassBox research: Google's research division dedicated
 % to interpretable machine learning
 @article{hof2015,
@@ -1547,6 +1596,67 @@ pages={1843--1856}
   year={2013},
   publisher={IEEE},
   doi={10.1109/TEVC.2013.2281534}
+}
+
+% A modification to the original Sobol sequence generator code
+@article{joe2003,
+author = {Joe, Stephen and Kuo, Frances Y.},
+title = {Remark on Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator},
+year = {2003},
+publisher = {Association for Computing Machinery},
+volume = {29},
+number = {1},
+doi = {10.1145/641876.641879},
+journal = {ACM Transactions on Mathematical Software},
+pages = {49–57},
+numpages = {9},
+}
+
+% The numerical software algorithm used in scipy algorithm for generating Sobol
+% sequences (low discrepancy sequences)
+@article{joe2008,
+  title={Constructing Sobol sequences with better two-dimensional projections},
+  author={Joe, Stephen and Kuo, Frances Y.},
+  journal={SIAM Journal on Scientific Computing},
+  volume={30},
+  number={5},
+  pages={2635--2654},
+  year={2008},
+  publisher={SIAM},
+  doi={10.1137/070709359}
+}
+
+% Original publication on maximin and minimax designs for
+% design-of-experiments.  I.e., minimize the maximum distance from any point in
+% the bounding box to the nearest point in the design, and maximize the minimum
+% distance between any pair of points in the design.
+@article{johnson1990,
+title = {Minimax and maximin distance designs},
+journal = {Journal of Statistical Planning and Inference},
+volume = {26},
+number = {2},
+pages = {131-148},
+year = {1990},
+doi = {https://doi.org/10.1016/0378-3758(90)90122-B},
+author = {M.E. Johnson and L.M. Moore and D. Ylvisaker}
+}
+
+% D.R. Jones' original paper on the landmark DIRECT (DIviding RECTangles)
+% algorithm for direct search global blackbox optimization.  The idea is that
+% you can perform branch-and-bound style Lipschitzian optimization without
+% knoweldge of the Lipschitz constant by dividing a rectangular design space
+% into rectangular regions (rectangles) and subdividing those rectangles that
+% could be potentially optimal given any Lipschitz constant by choosing those
+% boxes on the lower left convex hull of the objective value at the center vs
+% box diameter scatter plot
+@article{jones1993,
+  title={Lipschitzian optimization without the Lipschitz constant},
+  author={Jones, Donald R. and Perttunen, Cary D. and Stuckman, Bruce E.},
+  journal={Journal of optimization Theory and Applications},
+  volume={79},
+  pages={157--181},
+  year={1993},
+  publisher={Springer}
 }
 
 % Introducing Dragonfly: an open source numerical software package for solving
@@ -1672,6 +1782,33 @@ pages={1843--1856}
   url={http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.656.7539}
 }
 
+% The textbook on discrepancy that Manisha used to learn about low discrepancy
+% sequences and their motivation
+@book{kuipers1974,
+    author = {Kuipers, L. and Niederreiter, H.},
+     title = {Uniform distribution of sequences},
+    series = {Pure and Applied Mathematics},
+ publisher = {Wiley-Interscience [John Wiley \& Sons], New
+              York-London-Sydney},
+      year = {1974},
+     pages = {xiv--390},
+}
+
+% Stochastic approximation algorithm (i.e., stochastic gradient descent) and
+% how to analyze its radius of convergence for a fixed step-size -- you can
+% decay its step size at a square-summable but not summable rate to guarantee
+% convergence in the limit
+@article{lai2003,
+  title={Stochastic approximation},
+  author={Lai, Tze Leung},
+  journal={The annals of Statistics},
+  volume={31},
+  number={2},
+  pages={391--406},
+  year={2003},
+  publisher={Institute of Mathematical Statistics}
+}
+
 % The APOSMM Python software is a framework for implementing multistart
 % derivative-free optimization algorithms and running them in asynchronously
 @article{larson2018,
@@ -1737,6 +1874,18 @@ pages={1843--1856}
   institution={Cereberas Systems, Inc.},
   address={Sunnyvale, CA, USA},
   url={https://8968533.fs1.hubspotusercontent-na1.net/hubfs/8968533/Powering-Extreme-Scale-HPC-with-Cerebras.pdf}
+}
+
+% Peter Lax's classic textbook on functional analysis and all the core theorems
+% Banach spaces, Hilbert spaces, and approximation theory
+@book{lax2002,
+    author = {Lax, Peter D.},
+     title = {Functional analysis},
+    series = {Pure and Applied Mathematics (New York)},
+ publisher = {Wiley-Interscience [John Wiley \& Sons], New York},
+      year = {2002},
+     pages = {xx--580},
+      isbn = {0-471-55604-1},
 }
 
 % NOMAD v3 is a widely-used open source numerical software package (in C++) for
@@ -2052,6 +2201,21 @@ pages={1843--1856}
     doi = {10.1016/j.cpc.2022.108566}
 }
 
+% The original publication where Sobol's sequences are generalized to the class
+% now known as low-discrepancy sequenes
+@article{niederreiter1988,
+    author = {Niederreiter, Harald},
+     title = {Low-discrepancy and low-dispersion sequences},
+   journal = {Journal of Number Theory},
+    volume = {30},
+      year = {1988},
+    number = {1},
+     pages = {51--70},
+      issn = {0022-314X},
+       doi = {10.1016/0022-314X(88)90025-X},
+       url = {https://doi.org/10.1016/0022-314X(88)90025-X}
+}
+
 % The classic textbook by Nocedal on fundamental techniques in nonlinear
 % programming, such as local modeling and trust-region methods
 @book{nocedal2006,
@@ -2110,6 +2274,27 @@ pages={1843--1856}
  pages={1--12}
 }
 
+
+% The original TOMS open source numerical software code implementing Sobol
+% sequence (low discrepancy sequence) generation in Fortran 90. Apparently
+% there is a bug or limitation to this code, fixed by Joe et al. 2003 in their
+% TOMS Remark on 659, and subsequent publication of a new generator used in
+% Scipy
+@article{paul1988,
+author = {Bratley, Paul and Fox, Bennett L.},
+title = {Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator},
+year = {1988},
+publisher = {Association for Computing Machinery},
+volume = {14},
+number = {1},
+issn = {0098-3500},
+url = {https://doi.org/10.1145/42288.214372},
+doi = {10.1145/42288.214372},
+journal = {ACM Transactions on Mathematical Software},
+pages = {88–100},
+numpages = {13},
+}
+
 % The official publicatino for scikit-learn a gold standard in open source
 % software, providing a clean interface to several standard implementations of
 % numerical approximation, optimization, machine learning, and deep learning
@@ -2123,6 +2308,49 @@ pages={1843--1856}
   volume={12},
   pages={2825--2830},
   url={https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf}
+}
+
+% The COBYLA paper on Powell's constrainted optimization by linear
+% approximation algorithm.  COBYLA basically performs gradient descent on a
+% constrainted blackbox optimization problem by fitting a linear model to the
+% underlying function and following its gradient within a shrinking trust
+% region.  COBYLA is typically able to do this taking typically only one
+% or two function evaluation per iteration since typically only one point is
+% exiting the trust-region per iteration.  (Occasionally, additional model
+% improvement points must be sampled to maintain the interpolation set
+% geometry).  This makes COBYLA barely more expensive then true gradient
+% descent.  COBYQA has supplanted COBYLA since then (the Q standing for
+% quadratic), but I personally prefer COBYLA still as a find the locally linear
+% models to be more robust against noisy and nonsmooth data, still efficiently
+% finding local minima even though COBYLA was not design for such problems.
+% The original open source software was in impossibly complex old-style
+% Fortran.  A modern Fortran version has been provided in Pima by Zaikun Zhang,
+% and a modern Python implementation is provided in PDFO by Ragonneau and
+% Zhang.
+@inproceedings{powell1994,
+  title={A direct search optimization method that models the objective and constraint functions by linear interpolation},
+  author={Powell, Michael J. D.},
+  year={1994},
+  booktitle={Gomez, S. and Hennart, J. P. (eds) Advances in Optimization and Numerical Analysis, vol 275},
+  organization={Springer},
+  pages={51--67},
+  doi={10.1007/978-94-015-8330-5_4}
+}
+
+% Review of minimax and maximin techniques and computational methods.  Minimax
+% is what we want, but it is hard to compute in high dimensions (would require
+% optimizing a Delaunay triangulation, which is exponential complexity to
+% compute).  Maximin is easier to compute (and often used in many algorithms
+% because of this).  However, minimax gives better dispersion
+@article{pronzato2017,
+  title={Minimax and maximin space-filling designs: some properties and methods for construction},
+  author={Pronzato, Luc},
+  journal={Journal de la Soci{\'e}t{\'e} Fran{\c{c}}aise de Statistique},
+  volume={158},
+  number={1},
+  pages={7--36},
+  year={2017},
+  url={http://www.numdam.org/item/JSFS_2017__158_1_7_0}
 }
 
 % An active learning method for extreme event modeling.  Specifically, the
@@ -2291,6 +2519,27 @@ author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane a
   doi={10.1109/TEVC.2020.3013290}
 }
 
+% A recent paper on the numerical performance of finite-difference-based
+% methods for DFO.  Personally, I don't think this is a viable approach given
+% the performance of model-based methods.  However, one of their experiments
+% corroborates my experience that you can just run COBYLA on noisy and
+% nonsmooth blackbox optimization problems, and even though it was not designed
+% for those problems, it still does extremely well and regularly finds local
+% minima (at least up to the noise level) -- from Nocedal's lab
+@article{shi2023,
+author = {Hao-Jun Michael Shi and Melody Qiming Xuan and Figen Oztoprak and Jorge Nocedal and},
+title = {On the numerical performance of finite-difference-based methods for derivative-free optimization},
+journal = {Optimization Methods and Software},
+volume = {38},
+number = {2},
+pages = {289--311},
+year = {2023},
+publisher = {Taylor \& Francis},
+doi = {10.1080/10556788.2022.2121832},
+url = {https://doi.org/10.1080/10556788.2022.2121832},
+}
+
+
 % The EDBO software: open source Python software for performing multiobjective
 % bayesian optimization for chemical synthesis and molecular discovery.  Links
 % a multiobjective optimization solver with the MORDRED software for getting
@@ -2318,6 +2567,21 @@ author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane a
   publisher={John Wiley \& Sons, Ltd.},
   address={Chichester, UK},
   isbn={978-1-118-49212-3}
+}
+
+% The original publication of the Sobol sequence algorithm for generating
+% well-distributed points for in the context of good nodes for numerical
+% integration.  This is now referred to as a low-discrepancy sequence and is
+% also used for design-of-experiments and quasi-random number generation
+@article{sobol1967,
+    author = {Sobol, I. M.},
+     title = {Distribution of points in a cube and approximate evaluation of
+              integrals},
+   journal = {\v{Z}urnal Vy\v{c}islitel\cprime no\u{\i} Matematiki i Matemati\v{c}esko\u{\i} Fiziki},
+    volume = {7},
+      year = {1967},
+     pages = {784--802},
+      issn = {0044-4669},
 }
 
 % The FAIR principles of data management:  Scientific data should be findable,
@@ -2417,6 +2681,19 @@ author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane a
   doi = {10.1016/j.asoc.2019.106050},
 }
 
+% A tutorial on how to compute Latin hypercube samples (LHS) and some basic
+% properties and ongoing research related to design-of-experiments
+@article{viana2016,
+  title={A tutorial on Latin hypercube design of experiments},
+  author={Viana, Felipe AC},
+  journal={Quality and reliability engineering international},
+  volume={32},
+  number={5},
+  pages={1975--1985},
+  year={2016},
+  publisher={Wiley Online Library}
+}
+
 % SciPy official publication:  Scipy is an open source numerical software
 % package which is the standard for advanced numerical methods and scientific
 % software packages in Python.  Most of scipy are wrappers for much older
@@ -2443,6 +2720,34 @@ author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane a
   number={3},
   pages={261--272},
   doi={10.1038/s41592-019-0686-2}
+}
+
+% Open source numerical Python software pyomo.DOE, implementing model-driven
+% design-of-experiments generation in Pyomo
+@article{wang2022,
+    author = {Wang, Jialu and Dowling, Alexander W.},
+    title = {Pyomo.DOE: An open-source package for model-based design of experiments in Python},
+    year = {2022},
+    journal = {AIChE Journal},
+    volume = {68},
+    number = {12},
+    articleno = {e17813},
+    doi = {https://doi.org/10.1002/aic.17813}
+}
+
+% Survey of design-of-experiments techniques and modifications for HPC system
+% analysis, specifically related to linearly constrained and integer lattice
+% design spaces
+@article{wang2023,
+  author = {Wang, Yueyao and Xu, Li and Hong, Yili and Pan, Rong and Chang, Tyler H. and Lux, Thomas C. H. and Bernard, Jon and Watson, Layne T. and Cameron, Kirk W.},
+  title = {Design strategies and approximation methods for high-performance computing variability management},
+  year = {2023},
+  journal = {Journal of Quality Technology},
+  volume = {55},
+  number = {1},
+  pages = {88--103},
+  publisher = {Taylor \& Francis},
+  doi = {10.1080/00224065.2022.2035285}
 }
 
 % The original publication of the reference point method for scalarizing
@@ -2522,6 +2827,19 @@ author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane a
   location = {Denver, CO, USA},
   pages = {1201–1208},
   doi = {10.1145/2908961.2931702}
+}
+
+% Hammersley's and Halton sequences -- other low-discrepancy sequences that are
+% commonly used in design-of-experiments
+@article{wong1997,
+  title={Sampling with {H}ammersley and {H}alton points},
+  author={Wong, Tien-Tsin and Luk, Wai-Shing and Heng, Pheng-Ann},
+  journal={Journal of graphics tools},
+  volume={2},
+  number={2},
+  pages={9--24},
+  year={1997},
+  publisher={Taylor \& Francis}
 }
 
 % A survey of interactive techniques and software in multiobjective
@@ -2612,6 +2930,18 @@ author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane a
   doi          = {10.1137/09075531X},
 }
 
+% Prima: open source reference implementation of all of Powell's numerical
+% optimization solvers for blackbox / simulation optimization problems in
+% modern Fortran.  IMO, these should be considered the state-of-the-art and
+% reference implementations for all blackbox optimization research
+@misc{Zhang_2023,
+    title        = {{PRIMA: Reference Implementation for Powell's Methods with Modernization and Amelioration}},
+    author       = {Zhang, Zaikun},
+    year         = {2023},
+    howpublished = {github repository},
+    url={http://www.libprima.net},
+    doi={10.5281/zenodo.8052654},
+}
 
 % An application for multiobjective optimization in the context of aircraft
 % wing design.  We are optimizing one objective that is the lift/drag ratio,
