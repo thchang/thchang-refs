@@ -1,2079 +1,2034 @@
-%%%%% NN error refs
-
-@article{christianson2022traditional,
-  title={Traditional kriging versus modern Gaussian processes for large-scale mining data},
-  author={Christianson, Ryan B and Pollyea, Ryan M and Gramacy, Robert B},
-  journal={Statistical Analysis and Data Mining: The ASA Data Science Journal},
-  year={2022},
-  keywords={},
-  publisher={Wiley Online Library}
-}
-
-@article{schulz2018tutorial,
-  title={A tutorial on Gaussian process regression: Modelling, exploring, and exploiting functions},
-  author={Schulz, Eric and Speekenbrink, Maarten and Krause, Andreas},
-  journal={Journal of Mathematical Psychology},
-  volume={85},
-  pages={1--16},
-  year={2018},
-  keywords={},
-  publisher={Elsevier}
-}
-
-@article{park1991universal,
-  title={Universal approximation using radial-basis-function networks},
-  author={Park, Jooyoung and Sandberg, Irwin W},
-  journal={Neural computation},
-  volume={3},
-  number={2},
-  pages={246--257},
-  year={1991},
-  keywords={},
-  publisher={MIT Press}
-}
-
-
-@article{powell1994uniform,
-  title={The uniform convergence of thin plate spline interpolation in two dimensions},
-  author={Powell, Michael JD},
-  journal={Numerische Mathematik},
-  volume={68},
-  number={1},
-  pages={107--128},
-  year={1994},
-  keywords={},
-  publisher={Springer}
-}
-
-
-@article{buhmann_2000, 
-    title={Radial basis functions}, 
-    author={Buhmann, M. D.}, 
-    volume={9}, 
-    DOI={10.1017/S0962492900000015}, 
-    journal={Acta Numerica}, 
-    publisher={Cambridge University Press}, 
-    year={2000}, 
-    pages={1–38}
-}
-
-
-@article{manton2015primer,
-  title={A primer on reproducing kernel hilbert spaces},
-  author={Manton, Jonathan H and Amblard, Pierre-Olivier and others},
-  journal={Foundations and Trends{\textregistered} in Signal Processing},
-  volume={8},
-  number={1--2},
-  pages={1--126},
-  year={2015},
-  keywords={},
-  publisher={Now Publishers, Inc.}
-}
-
-@article{guhring2020error,
-  title={Error bounds for approximations with deep ReLU neural networks in W s, p norms},
-  author={G{\"u}hring, Ingo and Kutyniok, Gitta and Petersen, Philipp},
-  journal={Analysis and Applications},
-  volume={18},
-  number={05},
-  pages={803--859},
-  year={2020},
-  keywords={},
-  publisher={World Scientific}
-}
-
-@article{de2022generic,
-  title={Generic bounds on the approximation error for physics-informed (and) operator learning},
-  author={De Ryck, Tim and Mishra, Siddhartha},
-  journal={Advances in Neural Information Processing Systems},
-  volume={35},
-  pages={10945--10958},
-  year={2022},
-  keywords={},
-}
-
-@article{shin2020error,
-  title={Error estimates of residual minimization using neural networks for linear PDEs},
-  author={Shin, Yeonjong and Zhang, Zhongqiang and Karniadakis, George Em},
-  journal={arXiv preprint arXiv:2010.08019},
-  year={2020},
-  keywords={},
-}
-
-@incollection{vershynin2015estimation,
-  title={Estimation in high dimensions: a geometric perspective},
-  author={Vershynin, Roman},
-  booktitle={Sampling Theory, a Renaissance: Compressive Sensing and Other Developments},
-  pages={3--66},
-  year={2015},
-  keywords={},
-  publisher={Springer}
-}
-
-% The original paper for AdaGrad (adaptive subgradient method) which replaced
-% the subgradient method with an adaptive estimate for the gradient, where each
-% component of the gradient is rescaled by an adaptive estimate for the
-% standard deviation in that direction based on previous iterates.  This
-% adaptive estimate for standard deviation in each axis-aligned direction
-% serves as a diagonal approximation to the Hessian matrix, giving second-order
-% like properties to the method and greatly improving the practical
-% convergence.  AdaGrad was very popular and considered the state-of-the-art
-% optimization algorithm for training neural networks upon its initial release,
-% but was quickly replaced by Adam, which added a Nesterov momentum esque
-% smoothing to this adaptive gradient estimation in order to further improve
-% convergence rates on nonsmooth, highly stochastic, and ill-conditioned
-% problems
-@article{duchi2011,
-  author  = {John Duchi and Elad Hazan and Yoram Singer},
-  title   = {Adaptive Subgradient Methods for Online Learning and Stochastic Optimization},
-  journal = {Journal of Machine Learning Research},
-  year    = {2011},
-  volume  = {12},
-  number  = {61},
-  pages   = {2121--2159},
-  url     = {http://jmlr.org/papers/v12/duchi11a.html}
-}
-
-% Online paper with interactive visualizations explaining what Nesterov's
-% momentum is and how it works intuitively by smoothing out optimization sample
-% paths and preventing oscillations in the optimizer that occur do to poor
-% problem conditioning.  Then, they show how the problem conditioning appears
-% as an often ignored constant in the convergence rate of gradient descent.
-% All this is to show intuitively and mathematically that gradient descent with
-% Nesterov's momentum will convergence faster in practice for ill-conditioned
-% problems
-@article{goh2017why,
-  author = {Goh, Gabriel},
-  title = {Why Momentum Really Works},
-  journal = {Distill},
-  year = {2017},
-  url = {http://distill.pub/2017/momentum},
-  doi = {10.23915/distill.00006}
-}
-
-% The original paper on Adam: an adaptive gradient and moment estimator that
-% uses second order moments to approximate curvature (i.e., Hessian
-% information) in order to accelerate the convergence of AdaGrad.  In
-% particular, this means applying Nesterov's momentum to both the gradient and
-% curvature estimations.  From 2015-2024 this was the state-of-the-art
-% algorithm for optimization of neural network weights during training, and was
-% what was typically meant when people talked about stochastic gradient
-% descent.
-@inproceedings{kingma2015,
-    author = {Kingma, Diedrik and Ba, Jimmy},
-    title = {Adam: A method for stochastic optimization},
-    year = {2015},
-    booktitle = {3rd International Conference on Learning Representations (ICLR 2015)},
-  location = {San Diego, CA, USA},
-  url      = {https://arxiv.org/abs/1412.6980},
-  numpages = {11},
-}
-
-% Interesting paper on why it is generally OK to use local optimizers when
-% solving non convex optimization problems in high-dimensional spaces.  In
-% general, in high-dimensional spaces, almost every critical point will be a
-% saddle point with high probability.  Therefore, first-order methods tend to
-% perform very well on these problems as they converge quickly but are not
-% attracted to saddle points and therefore tend to find the global optimum in
-% the limit.  The analysis of the probability that a critical point will be a
-% saddle point is based on a spectral analysis of the hessian at each critical
-% point other than the global minimum/maximum -- all of the eigenvalues must be
-% positive or negative for the critical point to be a local minima / maxima,
-% and the probability of this occurring decays as the number of eigenvalues
-% grows with the dimension of the Hessian.  The authors also experimentally
-% validate these claims by extracting critical points from the loss landscapes
-% of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
-@inproceedings{dauphin2014identifying,
- author = {Dauphin, Yann N. and Pascanu, Razvan and Gulcehre, Caglar and Cho, Kyunghyun and Ganguli, Surya and Bengio, Yoshua},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {Z. Ghahramani and M. Welling and C. Cortes and N. Lawrence and K.Q. Weinberger},
- publisher = {Curran Associates, Inc.},
- title = {Identifying and attacking the saddle point problem in high-dimensional non-convex optimization},
- url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf},
- volume = {27},
- year = {2014}
-}
-
-% Original publication on Nesterov's momentum.  I haven't read it (it is hard
-% to find a copy and likely in Russian) but this is the preferred citation.
-% The equation for Nesterov momentum in gradient descent is instead of using
-% the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and
-% v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths
-% out poor conditioning in the problem by encouraging the algorithm to continue
-% in the direction it was headed instead of oscillating.  Nexterov proves that
-% this term also leads to better convergence rates.  For best results, b is
-% usually chosen to be a large value such as 0.9 or 0.99
-@inproceedings{nesterov1983method,
-  title={A method for solving the convex programming problem with convergence rate O (1/k2)},
-  author={Nesterov, Yurii},
-  booktitle={Dokl akad nauk Sssr},
-  volume={269},
-  pages={543},
-  year={1983}
-}
-
-% Original reference for barycentric weight based interpolation -- I have not
-% read this, it's in German, but this is the proper way to cite barycentric
-% interpolation
-@book{mobius1827,
-  title={Der barycentrische Calcul},
-  author={M\"obius, August Ferdinand},
-  year={1827},
-  keywords={},
-  publisher={Verlag von Johann Ambrosius Barth},
-  pages={1--388},
-}
-
-% Original reference for Delaunay triangulations -- I have not read this, it's
-% in French, but this is the proper way to cite the original idea for Delaunay
-% triangulations
-@article{delaunay1934sphere,
-  title={Sur la sph\'ere vide},
-  author={Delaunay, B.},
-  journal={Bull. Acad. Science USSR VII: Class. Sci. Math.,},
-  year={1934},
-  keywords={},
-}
-
-% Extremely thorough analysis of using linear models inside a simplex for
-% interpolation: covering basic algorithm, conditioning, approximation error,
-% quality metrics, etc.
-@inproceedings{shewchuk2002proceedings,
-  title={What is a good linear finite element? {I}nterpolation, conditioning, anisotropy, and quality measures},
-  booktitle={Proceedings of the 11th International Meshing Roundtable},
-  author={Shewchuk, Jonathan},
-  pages={115–126},
-  year={2002},
-  keywords={},
-}
-
-% A Fortran 90 implementation of quasi-Newton stochastic optimization
-% algorithms.  This open source numerical software solves both determinisitc
-% and stochastic blackbox optimization problems via a quasi-Newton trust-region
-% method.  It is a bit wasteful in terms of the number of function evaluations
-% per iteration as it performs a fully Latin hypercube sampling of the trust
-% region in each iteration, and does not explicitly re-use previous iterates to
-% reduce iteration costs, like some of the more advanced model based methods.
-% Still, it is extremely robust and a good choice in stochastic situations.
-% Also includes a good Fortran implementation of Latin hypercube sampling and
-% efficient sorting algorithms
-@article{amosetal2020,
-author={Amos, Brandon D. and Easterling, David R. and Watson, Layne T. and
-Thacker, William I. and Castle, Brent S. and Trosset, Michael W.},
-year={2020},
-  keywords={},
-title={Algorithm 1007: {QNSTOP}: {Q}uasi-{N}ewton algorithm for stochastic
-optimization},
-journal={ACM Transactions on Mathematical Software},
-volume={46},
-number={2},
-pages={17}
-}
-
-% A very thorough textbook on properties and algorithms for computing Voronoi
-% tesselations and Delaunay triangulations, and the duality relationship
-% between them.  Covers basic and advanced properties of each and their
-% duality, basic algorithms for computing each in two and three dimensions and
-% their time and space complexities, all basic algorithms for computing each in
-% high dimensions, and finally some algorithms and definitions for working in
-% generalized metric spaces.  Finally, some common applications of each are
-% mentioned
-@book{aurenhammeretal2013,
-author={Aurenhammer, Franz and Klein, Rolf and Lee, Der-Tsai},
-year={2013},
-  keywords={},
-title={Voronoi diagrams and {D}elaunay triangulations},
-publisher={World Scientific Publishing Co.},
-address={Hackensack, NJ, USA}
-}
-
-% The Quickhull algorithm and corresponding numerical software package is one
-% of the best algorithms for computing convex hulls in high dimensions.  Since
-% Delaunay triangulations can be obtained by lifting to d+1 dimensional
-% parabola and computing its lower convex hull, Quickhull can also be used to
-% obtain Delaunay triangulations and convex hulls.  This is the standard and
-% baseline for high-dimensional Delaunay triangulation, although it seldom
-% scales past 6-7 dimensions before a memory failure occurs, unless the data
-% set is extremely small (exponential time and space complexity in dimension).
-% However, for problems that Quickhull can solve, it's often the fastest and
-% most robust solution.  This is also the official reference for the authors'
-% corresponding open source C++ software, which is the default method for
-% Delaunay triangulation and piecewise linear interpolation in scipy.spatial
-% and scipy.interpolate, respectively
-@article{barberetal1996,
-author={Barber, C. Bradford and Dobkin, David P. and Huhdanpaa, Hannu},
-year={1996},
-  keywords={},
-title={The {Q}uickhull algorithm for convex hulls},
-journal={ACM Transactions on Mathematical Software},
-volume={22},
-number={4},
-pages={469--483}
-}
-
-% Publication showing that (a) interpolating classification and regression data
-% in order to make predictions is often a reasonable thing to do especially in
-% high dimensions (b) Delaunay interpolation is the correct way to do so and
-% (c) using Delaunay interpolation on high dimensional noisy classification
-% data yields predictions whose misclassification risk can be bounded by twice
-% the Bayes risk (theoretical lowest possible risk for the data given) in the
-% limit as the dimension increases
-@inproceedings{belkinetal2018,
-author={Belkin, Mikhail and Hsu, Daniel and Mitra, Partha P.},
-year={2018},
-  keywords={},
-title={Overfitting or perfect fitting? {R}isk bounds for classification and
-regression rules that interpolate},
-booktitle={Proceedings of the 32nd International Conference on Neural
-Information Processing Systems (NIPS'18)},
-organization={Curran Associates Inc.},
-address={Montr{\'e}al, Canada},
-pages={2306--2317}
-}
-
-% A massive review article on the magic of just interpolating noisy machine
-% learning and deep learning data in high dimensions, and some theorems on why
-% this is acceptable and even desirable as the dimension increases.  Delaunay
-% interpolation is spotlighted as one of the interpolation methods to use
-@article{belkinetal2021,
-    title={Fit without fear: remarkable mathematical phenomena of deep learning through the prism of interpolation},
-    volume={30},
-    DOI={10.1017/S0962492921000039},
-    journal={Acta Numerica},
-    publisher={Cambridge University Press},
-    author={Belkin, Mikhail},
-    year={2021},
-  keywords={},
-    pages={203–248}
-}
-
-% A method for constructing Delaunay triangulations incrementally in medium to
-% high dimensions.  The key is to only store the Delaunay graph instead of the
-% entire triangulation in order to get around storage issues.  Then, simplices
-% are either retrieved from a cache or reconstructed upon request.  This dodges
-% the curse of dimensionality in the spatial sense, but the time complexity of
-% constructing the graph is still exponential since they do so by computing
-% every simplex in the triangulation and storing the edges.  This is the method
-% used in CGAL, a standard numerical software package for using computational
-% geometry data structures and algorithms in perfect precision (via symbolic
-% arithmetic).  CGAL is a header-only open source C++ library
-@inproceedings{boissonnatetal2009,
-author={Boissonnat, Jean-Daniel and Devillers, Olivier and Hornus, Samuel},
-year={2009},
-  keywords={},
-title={Incremental construction of the {D}elaunay triangulation and the
-{D}elaunay graph in medium dimension},
-booktitle={Proceedings of the Twenty-fifth Annual Symposium on Computational
-Geometry (SCG '09)},
-organization={ACM},
-address={Aarhus, Denmark},
-pages={208--216}
-}
-
-% The Bowyer-Watson algorithm is one of the first algorithms for computing
-% Delaunay triangulations in arbitrary dimensions.  It is not particularly
-% scalable, but a first step toward thinking about Delaunay triangulation in
-% more than 3D.  Was published by both Bowyer and Watson in the same issue of
-% the same journal, with a footnote from the publisher that they both submitted
-% at the same time and after investigation, it was determined that this was
-% purely coincidental and no plagiarism was involved.  Therefore, both papers
-% were published together and both authors are credited equally for discovery
-@article{bowyer1981,
-author={Bowyer, Adrian},
-year={1981},
-  keywords={},
-title={Computing {D}irichlet tessellations},
-journal={The Computer Journal},
-volume={24},
-number={2},
-pages={162--166}
-}
-
-% Key findings from the VarSys project on modeling HPC performance variability
-% with surrogates and RSM, and using these models to inform decision making
-% through visualizations, optimization, and otherwise -- a good real-world
-% example of how modeling, interpolation, optimization, and data science can
-% come together to produce actionable results (in the field of HPC performance
-% tuning)
-@article{cameronetal2019,
-author={Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo
-Ananth, Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas
-and Hong, Yili and Watson, Layne T. and Butt, Ali R.},
-year={2019},
-  keywords={},
-title={{MOANA}: {M}odeling and analyzing {I/O} variability
-in parallel system experimental design},
-journal={IEEE Transactions on Parallel and Distributed Systems},
-volume={30},
-number={8},
-pages={1843--1856}
-}
-
-% Interpolation errors and runtimes and an early version of the DelaunaySparse
-% algorithm is applied to a HPC performance modeling application
-@inproceedings{changetal2018a,
-author={Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H.
-and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R.
-and Cameron, Kirk W. and Hong, Yili},
-year={2018},
-  keywords={},
-title={Predicting system performance by interpolation using a high-dimensional
-{D}elaunay triangulation},
-booktitle={Proceedings of the 2018 Spring Simulation Conference
-(SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
-organization={SCS},
-address={Baltimore, MD, USA},
-articleno={2}
-}
-
-% The official publication for the DelaunaySparse algorithm -- but not the
-% software.  This is where the most thorough algorithm analysis and proof of
-% correctness is published -- implementation details and handilng numerical
-% degeneracy are briefly touched on but not detailed (and not yet finalized)
-% until the submission of the TOMS paper
-@inproceedings{changetal2018b,
-author={Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and
-Li, Bo and Xu, Li and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-year={2018},
-  keywords={},
-title={A polynomial time algorithm for multivariate interpolation in arbitrary
-dimension via the {D}elaunay triangulation},
-booktitle={Proceedings of the 2018 ACM Southeast Conference (ACMSE '18)},
-organization={ACM},
-address={Richmond, KY, USA},
-articleno={12}
-}
-
-% The classic textbook by Cheney and Light on the fundamentals of approximation
-% theory for multivariate functions -- topics include: basics of interpolation,
-% approximation theory, and linear operators; multivariate polynomials, their
-% interpolation nodes, and error kernels; selecting good polynomial
-% interpolants via Newton and Lagrange type methods; positive-definite
-% functions, kernel interpretations, and good kernels for interpolation; basis
-% functions, orthonormal bases, common bases for interpolation and convergence
-% rates; Chebyshev nodes; B-splines, Box splines, and thin-plate splines; and
-% basics of artificial neural networks.  Other topics include wavelets,
-% orthogonal projection algorithms, Hilbert spaces, and reproducing kernel
-% Hilbert spaces (RKHS).
-@book{cheneyandlight2009,
-author={Cheney, Elliott W. and Light, William A.},
-year={2009},
-  keywords={},
-title={A Course in Approximation Theory},
-series={Graduate Studies in Mathematics},
-publisher={AMS}, 
-address={Providence, RI, USA}
-}
-
-% Another textbook on Delaunay triangulations in the context of mesh
-% generation.  This book is less thorough than the book by Aurenhammer in terms
-% of theory, but a bit more complete in its coverage and analysis of modern
-% algorithms, including the often forgotten gift-wrapping algorithm, which
-% forms the basis for several operations in DelaunaySparse.  This book also has
-% some interesting algorithms and analysis that are specific to mesh
-% generation.
-@book{chengetal2012,
-author={Cheng, Siu-Wing and Dey, Tamal K. and Shewchuk, Jonathan R.},
-year={2012},
-  keywords={},
-title={Delaunay Mesh Generation},
-series={Computer and Information Science Series},
-publisher={CRC Press},
-address={Boca Raton, FL, USA}
-}
-
-% The DeWall algorithm is a divide-and-conquer algorithm for computing Delaunay
-% triangulations in arbitrary dimensions.  The idea is to build a wall of
-% Delaunay simplices bisecting the space using a variation of the gift-wrapping
-% algorithm.  Then, each half can be triangulated separately (and possibly in
-% parallel) an attempt to reproduce these results and parallelize the algorithm
-% was what originally spawned the idea for DelaunaySparse
-@article{cignonietal1998,
-author={Cignoni, Paolo and Montani, Claudio and Scopigno, Roberto},
-year={1998},
-  keywords={},
-title={{DeWall}: A fast divide and conquer {D}elaunay triangulation
-algorithm in {$\mathbb{E}^d$}},
-journal={Computer-Aided Design},
-volume={30},
-number={5},
-pages={333--341}
-}
-
-% Dantzig's original (landmark) textbook on solving linear programming problems
-% via the simplex method.  This was obviously a landmark achievement in how to
-% solve linear programming problems and more generally in the field of
-% numerical optimization
-@book{dantzig1998,
-  author={Dantzig, George B.},
-  title={Linear Programming and Extensions},
-  edition={11},
-  series={Princeton Landmarks in Mathematics and Physics},
-  year={1998},
-  keywords={},
-  publisher={Princeton University Press},
-  address={Princeton, NJ, USA}
-}
-
-% A common (standard) textbook on computational geometry covering all basic
-% definitions, data structures, algorithms, proofs of correctness, time and
-% space complexity analyses, and applications.  This is the textbook that I
-% used in grad school when learning computational geometry
-@book{debergetal2008,
-author={de Berg, Mark and Cheong, Otfried and van Kreveld, Marc
-and Overmars, Mark},
-year={2008},
-  keywords={},
-title={Computational Geometry: Algorithms and Applications},
-edition={3},
-publisher={Springer-Verlag, TELOS},
-address={Santa Clara, CA, USA}
-}
-
-% One of (if not the) early publication on how to perform various simplex walks
-% (such as a visibility walk) within a triangulation in order to locate target
-% simplices, after the triangulation has already been computed and stored in a
-% standard data structure (such as a simplex list)
-@inproceedings{devillersetal2001,
-author={Devillers, Olivier and Pion, Sylvain and Teillaud, Monique},
-year={2001},
-  keywords={},
-title={Walking in a triangulation},
-booktitle={Proceedings of the Seventeenth Annual Symposium on Computational
-Geometry (SCG '01)},
-organization={ACM},
-address={Medford, MA, USA},
-pages={106--114}
-}
-
-% In a general triangulation, most simplex walks including a visibility walk
-% are not guaranteed to converge.  I.e., due to poor geometry one could get
-% stuck in an infinite cycle walking in circles.  This is related to how
-% Dantzig's simplex method can also get caught in infinite cycles.
-% Edelsbrunner proves that in the special case of Delaunay triangulations, this
-% actually can't happen and so the convergence of the visibility walk is
-% guaranteed
-@inproceedings{edelsbrunner1989,
-author={Edelsbrunner, Herbert},
-year={1989},
-  keywords={},
-title={An acyclicity theorem for cell complexes in d dimensions},
-booktitle={Proceedings of the Fifth Annual Symposium on Computational
-Geometry (SCG '89)}, 
-organization={ACM},
-address={Saarbruchen, West Germany},
-pages={145--151}
-}
-
-% A famous blog post by K. Fukuda on how to efficiently calculate Delaunay
-% simplices (or equivalently, Voronoi cell neighbors) efficiently in high
-% dimensions via geometric programming.  This method was never published
-% anywhere but appears to be an often forgotten technique.  This only works for
-% points in general position (i.e., non degenerate data sets) in perfect
-% precision, but it is somewhat similar to DelaunaySparse in that both could be
-% considered simplex methods for solving either the primal or dual form of
-% Fukuda's problem -- I have personally implemented the dual form in addition
-% to DelaunaySparse and it is publicly available on GitHub:
-% https://github.com/thchang/DualSimplex
-% However, I could not make this form robust to degeneracy
-@inproceedings{fukuda2004,
-  author={Fukuda, Komei},
-  title = {Is it possible to compute only the adjacencies of {V}oronoi cells in the {V}oronoi diagram efficiently?},
-  year = {2004},
-  keywords={},
-  month = {August},
-  booktitle = {Polyhedral computation {FAQ} (blog)},
-  url = {http://www.cs.mcgill.ca/~fukuda/soft/polyfaq/polyfaq.html},
-  note = {Retrieved [November 16, 2022]},
-}  
-
-% A community reviewed textbook on Bayesian optimization theory and
-% implementation.  Very thorough description of Gaussian process and Bayesian
-% optimization fundamentals and theory, common techniques and acquisition
-% functions, and implementation details, drawbacks, and real-world challenges
-@book{garnett2023,
-  author    = {Garnett, Roman},
-  title     = {Bayesian Optimization},
-  year      = {2023},
-  keywords={},
-  publisher = {Cambridge University Press},
-  isbn      = {978-1108425780},
-    url = {https://bayesoptbook.com}
-}
-
-% Classical textbook that serves as the "bible" of matrix computations and
-% computational linear algebra -- contains all the standard factorizations,
-% the common algorithms for computing them, and their sensitiviy analyses,
-% pivoting, some basic approximation theory, and the basics of iterative
-% methods
-@book{golubandvanloan2013,
-  title={Matrix computations},
-  author={Golub, Gene H. and Van Loan, Charles F.},
-  year={2013},
-  keywords={},
-  publisher={Johns Hopkins University Press},
-  edition={4th},
-  isbn={978-1421407944}
-}
-
-@article{hansonandhaskell1982,
-author={Hanson, Richard J. and Haskell, Karen H.},
-year={1982},
-  keywords={},
-title={Algorithm 587: {T}wo algorithms for the linearly constrained least
-squares problem},
-journal={ACM Transactions on Mathematical Software},
-volume={8},
-number={3},
-pages={323--333}
-}
-
-@incollection{hertandseel2020,
-  author = {Susan Hert and Michael Seel},
-  title = {{dD} Convex Hulls and {D}elaunay Triangulations},
-  publisher = {{CGAL Editorial Board}},
-  edition = {{5.0.2}},
-  booktitle = {{CGAL} User and Reference Manual},
-  url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
-  year = {2020},
-  keywords={},
-}
-
-@article{klee1980,
-author={Klee, Victor},
-year={1980},
-  keywords={},
-title={On the complexity of d-dimensional {V}oronoi diagrams},
-journal={Archiv der Mathematik},
-volume={34},
-number={1},
-pages={75--80}
-}
-
-@article{kleeandminty1972,
-  author={Klee, Victor and Minty, George J.},
-  year={1972},
-  keywords={},
-  title={How good is the simplex algorithm?},
-  journal={Inequalities},
-  volume={III},
-  pages={159--175}
-}
-
-@inproceedings{liuandyin2019,
-author={Liu, Yehong and Yin, Guosheng},
-year={2019},
-  keywords={},
-title={Nonparametric functional approximation with {D}elaunay triangulation
-learner},
-booktitle={Proceedings of the 2019 IEEE International Conference on Big
-Knowledge (ICBK)},
-organization={IEEE},
-address={Beijing, China},
-pages={167--174}
-}
-
-@inproceedings{luxetal2018,
-author={Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H.
-and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R.
-and Cameron, Kirk W. and Hong, Yili},
-year={2018},
-  keywords={},
-title={Predictive modeling of {I/O} characteristics in high performance
-computing systems},
-booktitle={Proceedings of the 2018 Spring Simulation Conference
-(SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
-organization={SCS},
-address={Baltimore, MD, USA},
-articleno={8}
-}
-
-@article{luxetal2021,
-  author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-  title = {Interpolation of sparse high-dimensional data},
-  year = {2021},
-  keywords={},
-  journal = {Numerical Algorithms},
-  volume = {88},
-  number = {1},
-  pages = {281--313},
-  publisher = {Springer},
-  doi = {10.1007/s11075-020-01040-2}
-}
-
-@article{muckeetal1999,
-author={M{\"u}cke, Ernst P. and Saias, Isaac and Zhu, Binhai},
-year={1999},
-  keywords={},
-title={Fast randomized point location without preprocessing in two- and 
-three-dimensional {D}elaunay triangulations},
-journal={Computational Geometry},
-volume={12},
-number={1},
-pages={63--83}
-}
-
-@article{megiddo1991,
-author={Megiddo, Nimrod},
-year={1991},
-  keywords={},
-title={On finding primal- and dual-optimal bases},
-journal={ORSA Journal on Computing},
-volume={3},
-number={1},
-pages={63--65}
-}
-
-@article{omohundro1990,
-author={Omohundro, Stephen M.},
-year={1990},
-  keywords={},
-title={Geometric learning algorithms},
-journal={Physica D: Nonlinear Phenomena},
-volume={42},
-number={1},
-pages={307--321}
-}
-
-
-@techreport{papazafeiropoulos2020,
-author={George Papazafeiropoulos},
-year={2014},
-  keywords={},
-month={November},
-title={{MATLAB} Computational Geometry Toolbox version 1.2},
-institution={MathWorks},
-url={https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox},
-note={accessed April 27, 2020}
-}
-
-@article{rajan1994,
-author={Rajan, V. T.},
-year={1994},
-  keywords={},
-title={Optimality of the {D}elaunay triangulation in {$\R^d$}},
-journal={Discrete \& Computational Geometry},
-volume={12},
-number={2},
-pages={189--202}
-}
-
-@article{regis2015,
-author={Regis, Rommel G.},
-year={2015},
-  keywords={},
-title={The calculus of simplex gradients},
-journal={Optimization Letters},
-volume={9},
-number={5},
-pages={845--865}
-}
-
-@article{shroffandbischof1992,
-author={Shroff, Gautam M. and Bischof, Christian H.},
-year={1992},
-  keywords={},
-title={Adaptive condition estimation for rank-one updates of QR factorizations},
-journal={SIAM Journal on Matrix Analysis and Applications},
-volume={13},
-number={4},
-pages={1264--1278}
-}
-
-@inproceedings{sheehyetal2008,
-author={Miller, G. and Phillips, T. and Sheehy, D.},
-year={2008},
-  keywords={},
-title={Linear-size meshes},
-booktitle={Proceedings of the 20th Canadian Conference on
-Computational Geometry (CCCG 2008)},
-address={Montr{\'e}al, Qu{\'e}bec},
-pages={175--178}
-}
-
-@article{smale1998,
-  author={Smale, Steve},
-  year={1998},
-  keywords={},
-  title={Mathematical problems for the next century},
-  journal={The Mathematical Intelligencer},
-  volume={20},
-  number={2},
-  pages={7--15}
-}
-
-@article{suanddrysdale1997,
-author={Su, Peter and Drysdale, Robert L. S.},
-year={1997},
-  keywords={},
-title={A comparison of sequential {D}elaunay triangulation algorithms},
-journal={Computational Geometry},
-volume={7},
-number={5},
-pages={361--385}
-}
-
-% The Bowyer-Watson algorithm is one of the first algorithms for computing
-% Delaunay triangulations in arbitrary dimensions.  It is not particularly
-% scalable, but a first step toward thinking about Delaunay triangulation in
-% more than 3D.  Was published by both Bowyer and Watson in the same issue of
-% the same journal, with a footnote from the publisher that they both submitted
-% at the same time and after investigation, it was determined that this was
-% purely coincidental and no plagiarism was involved.  Therefore, both papers
-% were published together and both authors are credited equally for discovery
-@article{watson1981,
-author={Watson, David F.},
-year={1981},
-  keywords={},
-title={Computing the n-dimensional {D}elaunay tessellation with application
-to {V}oronoi polytopes},
-journal={The Computer Journal},
-volume={24},
-number={2},
-pages={167--172}
-}
-
-@article{changetal2020c,
-author={Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H.
-and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-year={2020},
-  keywords={},
-title={Algorithm 1012: {DELAUNAYSPARSE}: {I}nterpolation via a sparse subset
-of the {D}elaunay triangulation in medium to high dimensions},
-journal={ACM Transactions on Mathematical Software},
-volume={46},
-number={4},
-pages={1--20},
-doi={10.1145/3422818}
-}
-
-@inproceedings{changetal2018c,
-author={Chang, Tyler H. and Watson, Layne T. and Lux, Tyler C. H.
-and Raghvendra, Sharath and Li, Bo and Xu, Li and Butt, Ali R.
-and Cameron, Kirk W. and Hong, Yili},
-year={2018},
-  keywords={},
-title={Computing the umbrella neighbourhood of a vertex in the
-{D}elaunay triangulation and a single {V}oronoi cell in arbitrary dimension},
-booktitle={Proceedings of IEEE SoutheastCon 2018},
-organization={IEEE},
-address={St. Petersburg, FL, USA},
-numpages={8}
-}
-
-
-@book{myersetal2016,
-author={Myers, Raymond H. and Montgomery, Douglas C.
-and Anderson-Cook, Christine M.},
-year={2016},
-  keywords={},
-title={Response Surface Methodology: Process and Design Optimization Using
-Designed Experiments},
-edition={4},
-publisher={John Wiley \& Sons, Inc.},
-address={Hoboken, NJ, USA}
-}
-
-@article{thackeretal2010,
-author={Thacker, William I. and Zhang, Jingwei and Watson, Layne T. and
-Birch, Jeffrey B. and Iyer, Manjula A. and Berry, Michael W.},
-year={2010},
-  keywords={},
-title={Algorithm 905: {SHEPPACK}: {M}odified {S}hepard algorithm for
-interpolation of scattered multivariate data},
-journal={ACM Transactions on Mathematical Software},
-volume={37},
-number={3},
-pages={34}
-}
-
-%%%%% VarSys references
-
-@misc{iozone,
-author = {Capps, Don and Capps, Carol and Sawyer, Darren and Lohr, Jerry
-and Dowding, George and Little, Gary and Capps, Terry and Miller, Robin
-and Faibish, Sorin and Wang, Raymond and Waghmare, Tanmay and Zhang, Yansheng 
-and Miller, Vernon and Principe, Nick and Jones, Zach and Bapat, Udayan 
-and Norcott, William and Crawford, Isom and Collins, Kirby and Slater, Al 
-and Rhine, Scott and Wisner, Mike and Goss, Ken and Landherr, Steve
-and Smith, Brad and Kelly, Mark and CYR, Alain and Dunlap, Randy
-and Montague, Mark and Million, Dan and Brebner, Gavin and Zucconi, Jean-Marc
-and Blomberg, Jeff and Halevy, Benny and Boone, Dave and Habbinga, Erik
-and Strecker, Kris and Wong, Walter and Root, Joshua and Bacchella, Fabrice
-and Xue, Zhenghua and Li, Qin and Sawyer, Darren and Bojaxhi, Vangel
-and England, Ben and Lapa, Vikentsi and Skidanov, Alexey},
-year={2016},
-  keywords={},
-month={January},
-title={{IOzone} Filesystem Benchmark},
-url={www.iozone.org},
-note={accessed 2016}
-}
-
-@article{beckman2008,
-author={Beckman, Pete and Iskra, Kamil and Yoshii, Kazutomo and Coghlan, Susan
-and Nataraj, Aroon}, 
-title={Benchmarking the effects of operating system interference on extreme-scale parallel machines},
-journal={Cluster Computing},
-volume={11},
-number={1}, 
-pages={3--16},
-year={2008},
-  keywords={},
-}
-
-@inproceedings{cao2017,
-author={Cao, Zhen and Tarasov, Vasily and Raman, Hari Prasath
-and Hildebrand, Dean and Zadok, Erez}, 
-title={On the performance variation in modern storage stacks},
-booktitle={Proceedings of the 15th USENIX Conference on File and Storage Technologies (FAST '17)},
-year={2017},
-  keywords={},
-pages={329--344},
-organization={USENIX Association},
-address={Vancouver, Canada}
-}
-
-@inproceedings{de2008,
-author={De, Pradipta and Kothari, Ravi and Mann, Vijay}, 
-title={A trace-driven emulation framework to predict scalability of large clusters in presence of {OS} jitter},
-booktitle={Proceedings of the 2008 IEEE International Conference on Cluster Computing},
-year={2008},
-  keywords={},
-pages={232--241},
-organization={IEEE},
-address={Tsukuba, Japan}
-}
-
-@article{dean2013,
-author={Dean, Jeffrey and Barroso, Luiz Andr{\'e}}, 
-title={The tail at scale},
-journal={Communications of the ACM},
-volume={56},
-number={2}, 
-pages={74--80},
-year={2013},
-  keywords={},
-}
-
-@article{dongarra2003,
-author={Dongarra, Jack J. and Luszczek, Piotr and Petitet, Antoine},
-title={The {LINPACK} benchmark: past, present, and future},
-journal={Concurrency and Computation: Practice and Experience},
-volume={15},
-number={9},
-pages={803--820},
-year={2003},
-  keywords={},
-}
-
-@inproceedings{dunlop2008,
-author={Dunlop, Dominic and Varrette, Sebastien and Bouvry, Pascal},
-title={On the use of a genetic algorithm in high performance computing benchmark tuning},
-booktitle={Proceedings of the 2008 International Symposium on Performance Evaluation of Computer and Telecommunication Systems},
-year={2008},
-  keywords={},
-pages={105--113},
-organization={IEEE},
-address={Edinburgh, UK}
-}
-
-@article{hammouda2015,
-author={Hammouda, Adam and Siegel, Andrew R. and Siegel, Stephen F.},
-title={Noise-tolerant explicit stencil computations for nonuniform process execution rates},
-year={2015},
-  keywords={},
-journal={ACM Transactions on Parallel Computing},
-volume={2},
-number={1},
-articleno={7},
-numpages={33},
-}
-
-@inproceedings{patki2019,
-  author={Patki, Tapasya and Thiagarajan, Jayaraman J. and Ayala, Alexis and Islam, Tanzima Z.},
-  title={Performance optimality or reproducibility: that is the question},
-  booktitle={Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
-  pages={1--30},
-  year={2019},
-  keywords={},
-  organization={ACM},
-  address={Dallas, TX, USA}
-}
-
-@book{petitet2018,
-author={Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack
-and Cleary, Andy},
-title={{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for
-Distributed-Memory Computers}},
-organization={Innovation Computing Laboratory, University of Tennessee},
-year={2018},
-  keywords={},
-publisher={Version 2.3. \url{https://www.netlib.org/benchmark/hpl}, accessed April 5, 2020}
-}
-
-@inproceedings{petrini2003,
-author={Petrini, Fabrizio and Kerbyson, Darren J. and Pakin, Scott},
-title={The case of the missing supercomputer performance: Achieving optimal performance on the 8,192 processors of {ASCI Q}},
-booktitle={Proceedings of the 2003 ACM/IEEE Conference on Supercomputing (SC '03)},
-year={2003},
-  keywords={},
-pages={55--55},
-organization={ACM},
-address={Phoenix, AZ, USA}
-}
-
-@inproceedings{kramer2003,
-author={Kramer, William T. and Ryan, Clint},
-title={Performance variability of highly parallel architectures},
-booktitle={Proceedings of the International Conference on Computational Science},
-year={2003},
-  keywords={},
-pages={560--569},
-organization={Springer},
-address={Melbourne, Australia}
-}
-
-@inproceedings{lux2018,
-author={Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H.
-and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar
-and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-title={Nonparametric distribution models for predicting and managing computational performance variability},
-booktitle={Proceedings of IEEE SoutheastCon 2018},
-year={2018},
-  keywords={},
-pages={1--7},
-organization={IEEE},
-address={St. Petersburg, FL, USA}
-}
-
-@inproceedings{maricq2018,
-author={Maricq, Aleksander and Duplyakin, Dmitry and Jimenez, Ivo
-and Maltzahn, Carlos and Stutsman, Ryan and Ricci, Robert}, 
-title={Taming performance variability},
-booktitle={Proceedings of the 13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18)}, 
-year={2018},
-  keywords={},
-pages={409--425},
-organization={USENIX Association},
-address={Carlsbad, CA, USA}
-}
-
-@book{strohmaier2019,
-author={Strohmaier, Eric and Dongarra, Jack and Simon, Horst and Meuer, Martin},
-title={The Top 500 List},
-year={2019},
-  keywords={},
-month={November},
-publisher={\url{https://www.top500.org}, accessed April 18, 2020}
-}
-
-@inproceedings{tan2009,
-author={Tan, Tua Zea and Goh, Rick Sow Mong and March, Verdi and See, Simon},
-title={Data mining analysis to validate performance tuning practices for HPL},
-booktitle={Proceedings of the 2009 IEEE International Conference on Cluster Computing and Workshops},
-year={2009},
-  keywords={},
-pages={1--8},
-organization={IEEE},
-address={New Orlean, LA, USA}
-}
-
-@inproceedings{uta2020,
-author={Uta, Alexandru and Custura, Alexandru and Duplyakin, Dmitry
-and Jimenez, Ivo and Rellermeyer, Jan and Maltzahn, Carlos and Ricci, Robert
-and Iosup, Alexandru}, 
-title={Is big data performance reproducible in modern cloud networks?},
-booktitle={Proc. 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI '20)}, 
-year={2020},
-  keywords={},
-pages={513--527},
-organization={USENIX Association},
-address={Santa Clara, CA, USA}
-}
-
-% How optimization is used to autotune the configuration of the BLAS
-% subroutines and kernels for the ATLAS project -- since most numerical
-% software relies on BLAS, it is often prudent to spend time optimizing BLAS
-% configurations (such as matrix block sizes, etc.) to match machine specific
-% values (such as cache sizes, etc.) when installing on a HPC that will have a
-% high numerical (compute bound) workload.  This can be done automatically via
-% numerical optimization, so that users can just run the ATLAS setup scripts to
-% configure BLAS automatically if they want an optimized installation
-@article{whaley2001,
-author={Whaley, R. Clint and Petitet, Antoine and Dongarra, Jack J.},
-title={Automated empirical optimizations of software and the {ATLAS} project},
-journal={Parallel Computing},
-volume={27},
-number={1--2},
-pages={3--35},
-year={2001},
-  keywords={},
-}
-
-@article{xu2020,
-author={Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler
-and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne}, 
-title={Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
-journal={Journal of Parallel and Distributed Computing},
-volume={139},
-pages={87--89},
-year={2020},
-  keywords={},
-}
-
-@inproceedings{jradetal2019,
-author = {Jrad, Mohamed and Kapania, Rakesh K. and Schetz, Joseph A.
-and Watson, Layne T.},
-year={2019},
-  keywords={},
-title = {Self-Learning, Adaptive Software for Aerospace Engineering Applications: Example of Oblique Shocks in Supersonic Flow},
-booktitle = {AIAA Scitech 2019 Forum},
-organization={AIAA},
-address={San Diego, CA, USA}
-}
-
-@article{chenandxu2004,
-  title={Optimal {D}elaunay triangulations},
-  author={Chen, Long and Xu, Jin-chao},
-  journal={Journal of Computational Mathematics},
-  pages={299--308},
-  year={2004},
-  keywords={},
-  volume={22},
-  number={2},
-}
-
-@article{fortune1987,
-  title={A sweepline algorithm for {V}oronoi diagrams},
-  author={Fortune, Steven},
-  journal={Algorithmica},
-  volume={2},
-  number={1},
-  pages={153--174},
-  year={1987},
-  keywords={},
-}
-
-@article{choudharyetal2019,
-  title={Polynomial-sized topological approximations using the permutahedron},
-  author={Choudhary, Aruni and Kerber, Michael and Raghvendra, Sharath},
-  journal={Discrete \& Computational Geometry},
-  volume={61},
-  number={1},
-  pages={42--80},
-  year={2019},
-  keywords={},
-}
-
-%%% Misc Delaunay refs
-
-@article{gorbanandtyukin2017,
-  title={Stochastic separation theorems},
-  author={Gorban, Alexander N and Tyukin, Ivan Yu},
-  journal={Neural Networks},
-  volume={94},
-  pages={255--259},
-  year={2017},
-  keywords={},
-  publisher={Elsevier}
-}
-
-@article{strang2020,
-  title={Solutions to the Minimum Variance Problem Using Delaunay Triangulation},
-  author={Strang, Alexander},
-  journal={SIAM Journal on Discrete Mathematics},
-  volume={34},
-  number={4},
-  pages={2510--2531},
-  year={2020},
-  keywords={},
-  publisher={SIAM}
-}
-
-@inproceedings{polianskiiandpokorny2020,
-  title={Voronoi Graph Traversal in High Dimensions with Applications to Topological Data Analysis and Piecewise Linear Interpolation},
-  author={Polianskii, Vladislav and Pokorny, Florian T},
-  booktitle={Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
-  pages={2154--2164},
-  year={2020},
-  keywords={},
-}
-
-%%% Misc ML refs
-
-@inproceedings{ilyasetal2019,
- author = {Ilyas, Andrew and Santurkar, Shibani and Tsipras, Dimitris and Engstrom, Logan and Tran, Brandon and Madry, Aleksander},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
- pages = {125--136},
- publisher = {Curran Associates, Inc.},
- title = {Adversarial Examples Are Not Bugs, They Are Features},
- url = {https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf},
- volume = {32},
- year = {2019},
-  keywords={},
-}
-
-@phdthesis{Chang2020,
-  title={Mathematical Software for Multiobjective Optimization Problems},
-  author={Chang, Tyler H.},
-  year={2020},
-  keywords={},
-  school={Virginia Tech}
-}
-
-@inproceedings{bagherietal2017,
-author = {Bagheri, Samineh and Konen, Wolfgang and Bäck, Thomas},
-year = {2017},
-  keywords={},
-month = {10},
-title = {Comparing Kriging and Radial Basis Function Surrogates}
-}
-
-@article{schaback2008,
-title = {Limit problems for interpolation by analytic radial basis functions},
-journal = {Journal of Computational and Applied Mathematics},
-volume = {212},
-number = {2},
-pages = {127-149},
-year = {2008},
-  keywords={},
-doi = {https://doi.org/10.1016/j.cam.2006.11.023},
-author = {Robert Schaback}
-}
-
-@article{narcowichandward1991,
-  title={Norms of inverses and condition numbers for matrices associated with scattered data},
-  author={Narcowich, Francis J and Ward, Joseph D},
-  journal={Journal of Approximation Theory},
-  volume={64},
-  number={1},
-  pages={69--94},
-  year={1991},
-  keywords={},
-  publisher={Elsevier}
-}
-
-@article{wathenandzhu2015,
-  title={On spectral distribution of kernel matrices related to radial basis functions},
-  author={Wathen, Andrew J and Zhu, Shengxin},
-  journal={Numerical Algorithms},
-  volume={70},
-  number={4},
-  pages={709--726},
-  year={2015},
-  keywords={},
-  publisher={Springer}
-}
-
-@article{wangetal2018,
-  title={On the numerical rank of radial basis function kernels in high dimensions},
-  author={Wang, Ruoxi and Li, Yingzhou and Darve, Eric},
-  journal={SIAM Journal on Matrix Analysis and Applications},
-  volume={39},
-  number={4},
-  pages={1810--1835},
-  year={2018},
-  keywords={},
-  publisher={SIAM}
-}
-
-@article{schaback1995,
-  title={Error estimates and condition numbers for radial basis function interpolation},
-  author={Schaback, Robert},
-  journal={Advances in Computational Mathematics},
-  volume={3},
-  number={3},
-  pages={251--264},
-  year={1995},
-  keywords={},
-  publisher={Springer},
-  doi={10.1007/BF02432002}
-}
-
-@article{balletal1992,
-  title={On the sensitivity of radial basis interpolation to minimal data separation distance},
-  author={Ball, Keith and Sivakumar, Natarajan and Ward, Joseph D},
-  journal={Constructive Approximation},
-  volume={8},
-  number={4},
-  pages={401--426},
-  year={1992},
-  keywords={},
-  publisher={Springer}
-}
-
-@article{fornberg2011stable,
-  title={Stable computations with Gaussian radial basis functions},
-  author={Fornberg, Bengt and Larsson, Elisabeth and Flyer, Natasha},
-  journal={SIAM Journal on Scientific Computing},
-  volume={33},
-  number={2},
-  pages={869--892},
-  year={2011},
-  keywords={},
-  publisher={SIAM}
-}
-
-@article{fornberg2008stable,
-  title={A stable algorithm for flat radial basis functions on a sphere},
-  author={Fornberg, Bengt and Piret, C{\'e}cile},
-  journal={SIAM Journal on Scientific Computing},
-  volume={30},
-  number={1},
-  pages={60--80},
-  year={2008},
-  keywords={},
-  publisher={SIAM}
-}
-
-@article{fasshauer2012stable,
-  title={Stable evaluation of Gaussian radial basis function interpolants},
-  author={Fasshauer, Gregory E and McCourt, Michael J},
-  journal={SIAM Journal on Scientific Computing},
-  volume={34},
-  number={2},
-  pages={A737--A762},
-  year={2012},
-  keywords={},
-  publisher={SIAM}
-}
-
-@article{gramacyandlee2012,
-  title={Cases for the nugget in modeling computer experiments},
-  author={Gramacy, Robert B. and Lee, Herbert K. H.},
-  journal={Statistics and Computing},
-  volume={22},
-  number={3},
-  pages={713--722},
-  year={2012},
-  keywords={},
-  publisher={Springer},
-  doi={10.1007/s11222-010-9224-x}
-}
-
-@article{ranjanetal2011,
-  title={A computationally stable approach to Gaussian process interpolation of deterministic computer simulation data},
-  author={Ranjan, Pritam and Haynes, Ronald and Karsten, Richard},
-  journal={Technometrics},
-  volume={53},
-  number={4},
-  pages={366--378},
-  year={2011},
-  keywords={},
-  publisher={Taylor \& Francis}
-}
-
-@inproceedings{chenandguestrin2016,
-author = {Chen, Tianqi and Guestrin, Carlos},
-title = {{XGBoost}: A Scalable Tree Boosting System},
-year = {2016},
-  keywords={},
-organization = {ACM},
-doi = {10.1145/2939672.2939785},
-booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)},
-pages = {785–794},
-location = {San Francisco, California, USA}
-}
-
-@inproceedings{vaswanietal2017,
-  title={Attention is all you need},
-  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
-  booktitle={Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
-  year={2017},
-  keywords={},
-  organization={Curran Associates, Inc.},
-  location={Long Beach, California, USA},
-  numpages={11},
-  pages={1-11}
-}
-
-@article{zhangetal2021,
-author = {Zhang, Chiyuan and Bengio, Samy and Hardt, Moritz and Recht, Benjamin and Vinyals, Oriol},
-title = {Understanding Deep Learning (Still) Requires Rethinking Generalization},
-year = {2021},
-  keywords={},
-publisher = {Association for Computing Machinery},
-volume = {64},
-number = {3},
-doi = {10.1145/3446776},
-journal = {Communications of the ACM},
-pages = {107–115}
-}
-
-@article{conn2008,
-  title={Geometry of interpolation sets in derivative free optimization},
-  author={Conn, Andrew R and Scheinberg, Katya and Vicente, Lu{\'\i}s N},
-  journal={Mathematical programming},
-  volume={111},
-  pages={141--172},
-  year={2008},
-  keywords={},
-  publisher={Springer},
-  doi={10.1007/s10107-006-0073-5}
-}
-
-@article{weinan2020,
-  title={Machine learning and computational mathematics},
-  author={Weinan, E},
-  journal={Communications in Computational Physics},
-  volume={28},
-  number={5},
-  pages={1639--1670},
-  year={2020},
-  keywords={},
-  publisher={Global Science Press},
-  doi={10.4208/cicp.OA-2020-0185}
-}
-
-@article{shwartz2022,
-  title={Tabular data: Deep learning is not all you need},
-  author={Shwartz-Ziv, Ravid and Armon, Amitai},
-  journal={Information Fusion},
-  volume={81},
-  pages={84--90},
-  year={2022},
-  keywords={},
-  publisher={Elsevier},
-  doi={10.1016/j.inffus.2021.11.011}
-}
-
-@book{rasmussen2006,
-  title={Gaussian processes for machine learning},
-  author={Rasmussen, Carl Edward and Williams, Christopher KI and others},
-  volume={1},
-  year={2006},
-  keywords={},
-  publisher={The MIT Press}
-}
-
-@article{scikit-learn,
- title={Scikit-learn: Machine Learning in {P}ython},
- author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
-         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
-         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
-         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
- journal={Journal of Machine Learning Research},
- volume={12},
- pages={2825--2830},
- year={2011},
-  keywords={},
-}
-
-@article{moodyanddarken1989,
-author = {Moody, John and Darken, Christian J.},
-title = {Fast Learning in Networks of Locally-Tuned Processing Units},
-year = {1989},
-  keywords={},
-publisher = {MIT Press},
-volume = {1},
-number = {2},
-journal = {Neural Computation},
-pages = {281–294},
-doi = {10.1162/neco.1989.1.2.281}
-}
-
-@article{kovachkietal2021,
-   author    = {Nikola B. Kovachki and
-                  Zongyi Li and
-                  Burigede Liu and
-                  Kamyar Azizzadenesheli and
-                  Kaushik Bhattacharya and
-                  Andrew M. Stuart and
-                  Anima Anandkumar},
-   title     = {Neural Operator: Learning Maps Between Function Spaces},
-   journal   = {CoRR},
-   volume    = {abs/2108.08481},
-   year      = {2021},
-  keywords={},
-}
-
-@article{raissietal2019,
-title = {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations},
-journal = {Journal of Computational Physics},
-volume = {378},
-pages = {686-707},
-year = {2019},
-  keywords={},
-doi = {https://doi.org/10.1016/j.jcp.2018.10.045},
-author = {M. Raissi and P. Perdikaris and G.E. Karniadakis},
+% Optuna open source software for fully distributed hyperparameter optimization. Maintained by a private startup in Japan (named Optuna). This software provides high-quality distributed wrappers for many neural architecture search and generic optimization algorithms.
+@inproceedings{akiba2019optuna,
+	author = {Akiba, Takuya and Sano, Shotaro and Yanase, Toshihiko and Ohta, Takeru and Koyama, Masanori},
+	title = {Optuna: A next-generation hyperparameter optimization framework},
+	year = {2019},
+	month = {7},
+	booktitle = {Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery \& data mining},
+	pages = {2623--2631},
+	organization = {ACM},
+	location = {Anchorage AK USA},
+	doi = {10.1145/3292500.3330701},
+	url = {https://dl.acm.org/doi/10.1145/3292500.3330701},
+}
+
+% A Fortran 90 implementation of quasi-Newton stochastic optimization algorithms. This open source numerical software solves both determinisitc and stochastic blackbox optimization problems via a quasi-Newton trust-region method. It is a bit wasteful in terms of the number of function evaluations per iteration as it performs a fully Latin hypercube sampling of the trust region in each iteration, and does not explicitly re-use previous iterates to reduce iteration costs, like some of the more advanced model based methods. Still, it is extremely robust and a good choice in stochastic situations. Also includes a good Fortran implementation of Latin hypercube sampling and efficient sorting algorithms
+@article{amos2020algorithm,
+	author = {Amos, Brandon D. and Easterling, David R. and Watson, Layne T. and Thacker, William I. and Castle, Brent S. and Trosset, Michael W.},
+	title = {Algorithm 1007: {QNSTOP}: {Q}uasi-{N}ewton algorithm for stochastic optimization},
+	year = {2020},
+	month = {6},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {46},
+	number = {2},
+	numpages = {17},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/3374219},
+	url = {https://dl.acm.org/doi/10.1145/3374219},
+	issn = {0098-3500},
+	keywords = {},
+}
+
+% The user guide for the reference implementation of LAPACK: the original open source numerical software for all common dense linear algebra operations.
+@book{anderson1999lapack,
+	author = {Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A. and Hammarling, S. and McKenney, A. and Sorensen, D.},
+	title = {{LAPACK} Users' Guide},
+	year = {1999},
+	edition = {3},
+	publisher = {SIAM},
+	address = {Philidelphia, PA, USA},
+	keywords = {},
+}
+
+% A very thorough textbook on properties and algorithms for computing Voronoi tesselations and Delaunay triangulations, and the duality relationship between them. Covers basic and advanced properties of each and their duality, basic algorithms for computing each in two and three dimensions and their time and space complexities, all basic algorithms for computing each in high dimensions, and finally some algorithms and definitions for working in generalized metric spaces. Finally, some common applications of each are mentioned
+@book{aurenhammer2013voronoi,
+	author = {Aurenhammer, Franz and Klein, Rolf and Lee, Der-Tsai},
+	title = {Voronoi diagrams and {D}elaunay triangulations},
+	year = {2013},
+	publisher = {World Scientific Publishing Co.},
+	address = {Hackensack, NJ, USA},
+	keywords = {},
+}
+
+@inproceedings{bagheri2017comparing,
+	author = {Bagheri, Samineh and Konen, Wolfgang and Bäck, Thomas},
+	title = {Comparing Kriging and Radial Basis Function Surrogates},
+	year = {2017},
+	month = {10},
+	keywords = {},
+}
+
+% BoTorch: Modular bayesian optimization framework and numerical software package. Uses Ax for deploying A/B testing applications. Uses pytorch for autograd, and uses monte carlo sampling and kernel reparameterization tricks in order to efficiently evaluate composite objective and acquisition functions and non gaussian kernels. Great example of high-impact open source numerical software and optimization software
+@inproceedings{balandat2020botorch,
+	author = {Balandat, Maximilian and Karrer, Brian and Jiang, Daniel and Daulton, Samuel and Letham, Ben and Wilson, Andrew G and Bakshy, Eytan},
+	editor = {Larochelle, H. and Ranzato, M. and Hadsell, R. and Balcan, M.F. and Lin, H.},
+	title = {{BoTorch}: A Framework for Efficient {M}onte-{C}arlo {B}ayesian Optimization},
+	year = {2020},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {33},
+	pages = {21524--21538},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf},
+}
+
+@article{ball1992sensitivity,
+	author = {Ball, Keith and Sivakumar, Natarajan and Ward, Joseph D},
+	title = {On the sensitivity of radial basis interpolation to minimal data separation distance},
+	year = {1992},
+	month = {12},
+	journal = {Constructive Approximation},
+	volume = {8},
+	number = {4},
+	pages = {401--426},
+	publisher = {Springer},
+	doi = {10.1007/bf01203461},
+	url = {http://link.springer.com/10.1007/BF01203461},
+	issn = {0176-4276},
+	keywords = {},
+}
+
+% The Quickhull algorithm and corresponding numerical software package is one of the best algorithms for computing convex hulls in high dimensions. Since Delaunay triangulations can be obtained by lifting to d+1 dimensional parabola and computing its lower convex hull, Quickhull can also be used to obtain Delaunay triangulations and convex hulls. This is the standard and baseline for high-dimensional Delaunay triangulation, although it seldom scales past 6-7 dimensions before a memory failure occurs, unless the data set is extremely small (exponential time and space complexity in dimension). However, for problems that Quickhull can solve, it's often the fastest and most robust solution. This is also the official reference for the authors' corresponding open source C++ software, which is the default method for Delaunay triangulation and piecewise linear interpolation in scipy.spatial and scipy.interpolate, respectively
+@article{barber1996quickhull,
+	author = {Barber, C. Bradford and Dobkin, David P. and Huhdanpaa, Hannu},
+	title = {The {Q}uickhull algorithm for convex hulls},
+	year = {1996},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {22},
+	number = {4},
+	pages = {469--483},
+	keywords = {},
+}
+
+% The FAIR principles for open source scientific software, data, source code, and experiments should by findable (via DOIs or other), accessible (clear purpose and metadata), interoperable (should use standard interfaces, data formats, and schemas), and reusable (well documented, understandable, and not overly specialized to an unnecessarilly niche use-case). These are good principles for any open source software development practices
+@article{barker2022introducing,
+	author = {Barker, Michelle and Chue Hong, Neil P. and Katz, Daniel S. and Lamprecht, Anna-Lena and Martinez-Ortiz, Carlos and Psomopoulos, Fotis and Harrow, Jennifer and Castro, Leyla Jael and Gruenpeter, Morane and Martinez, Paula Andrea and Honeyman, Tom},
+	title = {Introducing the {FAIR} Principles for research software},
+	year = {2022},
+	month = {10},
+	journal = {Scientific Data},
+	volume = {9},
+	number = {1},
+	numpages = {622},
+	publisher = {Nature Publishing Group},
+	doi = {10.1038/s41597-022-01710-x},
+	url = {https://www.nature.com/articles/s41597-022-01710-x},
+	issn = {2052-4463},
+}
+
+@article{beckman2008benchmarking,
+	author = {Beckman, Pete and Iskra, Kamil and Yoshii, Kazutomo and Coghlan, Susan and Nataraj, Aroon},
+	title = {Benchmarking the effects of operating system interference on extreme-scale parallel machines},
+	year = {2008},
+	month = {3},
+	journal = {Cluster Computing},
+	volume = {11},
+	number = {1},
+	pages = {3--16},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/s10586-007-0047-2},
+	url = {http://link.springer.com/10.1007/s10586-007-0047-2},
+	issn = {1386-7857},
+	keywords = {},
+}
+
+% Publication showing that (a) interpolating classification and regression data in order to make predictions is often a reasonable thing to do especially in high dimensions (b) Delaunay interpolation is the correct way to do so and (c) using Delaunay interpolation on high dimensional noisy classification data yields predictions whose misclassification risk can be bounded by twice the Bayes risk (theoretical lowest possible risk for the data given) in the limit as the dimension increases
+@inproceedings{belkin2018overfitting,
+	author = {Belkin, Mikhail and Hsu, Daniel and Mitra, Partha P.},
+	title = {Overfitting or perfect fitting? {R}isk bounds for classification and regression rules that interpolate},
+	year = {2018},
+	booktitle = {Proceedings of the 32nd International Conference on Neural Information Processing Systems (NIPS'18)},
+	pages = {2306--2317},
+	organization = {Curran Associates Inc.},
+	location = {Montr{\'e}al, Canada},
+	keywords = {},
+}
+
+% A massive review article on the magic of just interpolating noisy machine learning and deep learning data in high dimensions, and some theorems on why this is acceptable and even desirable as the dimension increases. Delaunay interpolation is spotlighted as one of the interpolation methods to use
+@article{belkin2021fit,
+	author = {Belkin, Mikhail},
+	title = {Fit without fear: remarkable mathematical phenomena of deep learning through the prism of interpolation},
+	year = {2021},
+	month = {5},
+	journal = {Acta Numerica},
+	volume = {30},
+	pages = {203--248},
+	publisher = {Cambridge University Press},
+	doi = {10.1017/S0962492921000039},
+	url = {https://www.cambridge.org/core/product/identifier/S0962492921000039/type/journal_article},
+	issn = {0962-4929},
+	keywords = {},
+}
+
+% The ScaLAPACK user's guide: A highly parallel and scalable open source implementation of the LAPACK software, for solving massive scale numerical linear algebra systems on distributed systems
+@book{blackford1997scalapack,
+	author = {Blackford, L. Susan and Choi, Jaeyoung and Cleary, Andy and D'Azevedo, Eduardo and Demmel, James and Dhillon, Inderjit and Dongarra, Jack and Hammarling, Sven and Henry, Greg and Petitet, Antoine and Stanley, K. and Walker, D. and Whaley, R. C.},
+	title = {ScaLAPACK Users' Guide},
+	year = {1997},
+	volume = {4},
+	publisher = {SIAM},
+	keywords = {},
+}
+
+% A method for constructing Delaunay triangulations incrementally in medium to high dimensions. The key is to only store the Delaunay graph instead of the entire triangulation in order to get around storage issues. Then, simplices are either retrieved from a cache or reconstructed upon request. This dodges the curse of dimensionality in the spatial sense, but the time complexity of constructing the graph is still exponential since they do so by computing every simplex in the triangulation and storing the edges. This is the method used in CGAL, a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
+@inproceedings{boissonnat2009incremental,
+	author = {Boissonnat, Jean-Daniel and Devillers, Olivier and Hornus, Samuel},
+	title = {Incremental construction of the {D}elaunay triangulation and the {D}elaunay graph in medium dimension},
+	year = {2009},
+	month = {6},
+	booktitle = {Proceedings of the Twenty-fifth Annual Symposium on Computational Geometry (SCG '09)},
+	pages = {208--216},
+	organization = {ACM},
+	location = {Aarhus, Denmark},
+	doi = {10.1145/1542362.1542403},
+	url = {https://dl.acm.org/doi/10.1145/1542362.1542403},
+	keywords = {},
+}
+
+% The open source numerical software package (in Python) pySMT. This is a surrogate modeling and Bayesian optimization toolbox for solving multidisciplinary engineering design optimization (MDO) problems, while utilizing derivatives and providing numerical stability analysis for each surrogate model class.
+@article{bouhlel2019python,
+	author = {Bouhlel, Mohamed Amine and Hwang, John T. and Bartoli, Nathalie and Lafage, Rémi and Morlier, Joseph and Martins, Joaquim R.R.A.},
+	title = {A {P}ython surrogate modeling framework with derivatives},
+	year = {2019},
+	month = {9},
+	journal = {Advances in Engineering Software},
+	volume = {135},
+	pages = {102--662},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.advengsoft.2019.03.005},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0965997818309360},
+	issn = {0965-9978},
+}
+
+% The Bowyer-Watson algorithm is one of the first algorithms for computing Delaunay triangulations in arbitrary dimensions. It is not particularly scalable, but a first step toward thinking about Delaunay triangulation in more than 3D. Was published by both Bowyer and Watson in the same issue of the same journal, with a footnote from the publisher that they both submitted at the same time and after investigation, it was determined that this was purely coincidental and no plagiarism was involved. Therefore, both papers were published together and both authors are credited equally for discovery
+@article{bowyer1981computing,
+	author = {Bowyer, Adrian},
+	title = {Computing {D}irichlet tessellations},
+	year = {1981},
+	month = {2},
+	journal = {The Computer Journal},
+	volume = {24},
+	number = {2},
+	pages = {162--166},
+	publisher = {Oxford University Press (OUP)},
+	doi = {10.1093/comjnl/24.2.162},
+	url = {https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/24.2.162},
+	issn = {0010-4620},
+	keywords = {},
+}
+
+% The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
+@misc{bradbury2018jax,
+	author = {Bradbury, J. and others, },
+	title = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
+	year = {2018},
+	number = {0.3.13},
+	url = {http://github.com/google/jax},
 }
 
 @misc{bronstein2021geometric,
-      title={Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges}, 
-      author={Michael M. Bronstein and Joan Bruna and Taco Cohen and Petar Veličković},
-      year={2021},
-  keywords={},
-      journal={arXiv cs.LG},
-      doi={10.48550/arXiv.2104.13478}
+	author = {Bronstein, Michael M. and Bruna, Joan and Cohen, Taco and Veličković, Petar},
+	title = {Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges},
+	year = {2021},
+	booktitle = {arXiv cs.LG},
+	doi = {10.48550/arXiv.2104.13478},
+	keywords = {},
 }
 
-@misc{gillette2023,
-      title={Data-driven geometric scale detection via Delaunay interpolation}, 
-      author={Andrew Gillette and Eugene Kur},
-      year={2022},
-  keywords={},
-      journal={arXiv math.NA},
+@article{buhmann2000radial,
+	author = {Buhmann, M. D.},
+	title = {Radial basis functions},
+	year = {2000},
+	month = {1},
+	journal = {Acta Numerica},
+	volume = {9},
+	pages = {1--38},
+	publisher = {Cambridge University Press},
+	doi = {10.1017/S0962492900000015},
+	url = {https://www.cambridge.org/core/product/identifier/S0962492900000015/type/journal_article},
+	issn = {0962-4929},
 }
 
-@article{roy2023,
-    doi = {10.21105/joss.05309},
-    url = {https://doi.org/10.21105/joss.05309},
-    year = {2023},
-  keywords={},
-    publisher = {The Open Journal},
-    volume = {8},
-    number = {84},
-    pages = {5309},
-    author = {Pamphile T. Roy and Art B. Owen and Maximilian Balandat and Matt Haberland},
-    title = {Quasi-Monte Carlo Methods in Python},
-    journal = {Journal of Open Source Software}
+% Key findings from the VarSys project on modeling HPC performance variability with surrogates and RSM, and using these models to inform decision making through visualizations, optimization, and otherwise -- a good real-world example of how modeling, interpolation, optimization, and data science can come together to produce actionable results (in the field of HPC performance tuning)
+@article{cameron2019moana,
+	author = {Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo Ananth  Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas and Hong, Yili and Watson, Layne T. and Butt, Ali R.},
+	title = {{MOANA}: {M}odeling and analyzing {I/O} variability in parallel system experimental design},
+	year = {2019},
+	month = {8},
+	journal = {IEEE Transactions on Parallel and Distributed Systems},
+	volume = {30},
+	number = {8},
+	pages = {1843--1856},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/tpds.2019.2892129},
+	url = {https://ieeexplore.ieee.org/document/8631172/},
+	issn = {1045-9219},
 }
 
-% The user guide for the reference implementation of LAPACK:  the original open
-% source numerical software for all common dense linear algebra operations.
-@book{andersonetal1999,
-author={Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and
-Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A.
-and Hammarling, S. and McKenney, A. and Sorensen, D.},
-year={1999},
-  keywords={},
-title={{LAPACK} Users' Guide},
-edition={3},
-publisher={SIAM},
-address={Philidelphia, PA, USA}
+@inproceedings{cao2017performance,
+	author = {Cao, Zhen and Tarasov, Vasily and Raman, Hari Prasath and Hildebrand, Dean and Zadok, Erez},
+	title = {On the performance variation in modern storage stacks},
+	year = {2017},
+	booktitle = {Proceedings of the 15th USENIX Conference on File and Storage Technologies (FAST '17)},
+	pages = {329--344},
+	organization = {USENIX Association},
+	location = {Vancouver, Canada},
+	keywords = {},
 }
 
-% A benchmark data science problem from the field of computer security:
-% robustly classifying suspicious network traffic based on metadata about the
-% requests
-@inproceedings{kddcup99,
-  author={Tavallaee, Mahbod and Bagheri, Ebrahim and Lu, Wei and Ghorbani, Ali A.},
-  title={A detailed analysis of the {KDD} {CUP} 99 data set},
-  year={2009},
-  booktitle={2009 IEEE Symposium on Computational Intelligence for Security and Defense Applications}, 
-  pages={1--6},
-  organization={IEEE},
-  address={Ottawa, ON, Canada},
-  doi={10.1109/CISDA.2009.5356528},
+% %%%% VarSys references
+@misc{capps2016iozone,
+	author = {Capps, Don and Capps, Carol and Sawyer, Darren and Lohr, Jerry and Dowding, George and Little, Gary and Capps, Terry and Miller, Robin and Faibish, Sorin and Wang, Raymond and Waghmare, Tanmay and Zhang, Yansheng and Miller, Vernon and Principe, Nick and Jones, Zach and Bapat, Udayan and Norcott, William and Crawford, Isom and Collins, Kirby and Slater, Al and Rhine, Scott and Wisner, Mike and Goss, Ken and Landherr, Steve and Smith, Brad and Kelly, Mark and CYR, Alain and Dunlap, Randy and Montague, Mark and Million, Dan and Brebner, Gavin and Zucconi, Jean-Marc and Blomberg, Jeff and Halevy, Benny and Boone, Dave and Habbinga, Erik and Strecker, Kris and Wong, Walter and Root, Joshua and Bacchella, Fabrice and Xue, Zhenghua and Li, Qin and Sawyer, Darren and Bojaxhi, Vangel and England, Ben and Lapa, Vikentsi and Skidanov, Alexey},
+	title = {{IOzone} Filesystem Benchmark},
+	year = {2016},
+	month = {January},
+	url = {www.iozone.org},
+	note = {accessed 2016},
+	keywords = {},
 }
 
-% BoTorch: Modular bayesian optimization framework and numerical software
-% package.  Uses Ax for deploying A/B testing applications.  Uses pytorch for
-% autograd, and uses monte carlo sampling and kernel reparameterization tricks
-% in order to efficiently evaluate composite objective and acquisition
-% functions and non gaussian kernels.  Great example of high-impact open source
-% numerical software and optimization software
-@inproceedings{balandat2020,
- author = {Balandat, Maximilian and Karrer, Brian and Jiang, Daniel and Daulton, Samuel and Letham, Ben and Wilson, Andrew G and Bakshy, Eytan},
- title = {{BoTorch}: A Framework for Efficient {M}onte-{C}arlo {B}ayesian Optimization},
- year = {2020},
- booktitle = {Advances in Neural Information Processing Systems},
- volume = {33},
- editor = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
- pages = {21524--21538},
- publisher = {Curran Associates, Inc.},
- url = {https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf},
+@inproceedings{chang2018computing,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Tyler C. H. and Raghvendra, Sharath and Li, Bo and Xu, Li and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Computing the umbrella neighbourhood of a vertex in the {D}elaunay triangulation and a single {V}oronoi cell in arbitrary dimension},
+	year = {2018},
+	month = {4},
+	booktitle = {Proceedings of IEEE SoutheastCon 2018},
+	numpages = {8},
+	organization = {IEEE},
+	location = {St. Petersburg, FL, USA},
+	doi = {10.1109/secon.2018.8479003},
+	url = {https://ieeexplore.ieee.org/document/8479003/},
+	keywords = {},
 }
 
-% The official publication for HiGHS numerical optimization open source
-% software package and solver for linear programming problems.  The first
-% successful effort to parallelize a simplex method based solver, specifically,
-% they have successfully parallelized the dual revised simplex approach.  HiGHS
-% is now the default solver in most scipy.optimize.  HiGHS is written in C++
-% with Fortran, C, and Python interfaces -- support CPU and GPU parallelism,
-% the authors don't get perfect scaling by any means but this is the first
-% successful effort to parallelize linear programming and still an achievement
+% The official publication for the DelaunaySparse algorithm -- but not the software. This is where the most thorough algorithm analysis and proof of correctness is published -- implementation details and handilng numerical degeneracy are briefly touched on but not detailed (and not yet finalized) until the submission of the TOMS paper
+@inproceedings{chang2018polynomial,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Li, Bo and Xu, Li and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {A polynomial time algorithm for multivariate interpolation in arbitrary dimension via the {D}elaunay triangulation},
+	year = {2018},
+	month = {3},
+	booktitle = {Proceedings of the 2018 ACM Southeast Conference (ACMSE '18)},
+	articleno = {12},
+	organization = {ACM},
+	location = {Richmond, KY, USA},
+	doi = {10.1145/3190645.3190680},
+	url = {https://dl.acm.org/doi/10.1145/3190645.3190680},
+	keywords = {},
+}
+
+% Interpolation errors and runtimes and an early version of the DelaunaySparse algorithm is applied to a HPC performance modeling application
+@inproceedings{chang2018predicting,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Predicting system performance by interpolation using a high-dimensional {D}elaunay triangulation},
+	year = {2018},
+	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
+	articleno = {2},
+	organization = {SCS},
+	location = {Baltimore, MD, USA},
+	keywords = {},
+}
+
+% The DelaunaySparse software, demonstrates how to calculate simplices from a Delauay triangulation in very high dimensions scalably (and in parallel) using a highly customized simplex method like solver. The resulting Fortran numerical software is fully open source with a C and Python interface
+@article{chang2020algorithm,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Algorithm 1012: {DELAUNAYSPARSE}: Interpolation via a Sparse Subset of the {D}elaunay Triangulation in Medium to High Dimensions},
+	year = {2020},
+	month = {12},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {46},
+	number = {4},
+	articleno = {38},
+	numpages = {20},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	doi = {10.1145/3422818},
+	url = {https://dl.acm.org/doi/10.1145/3422818},
+	issn = {0098-3500},
+}
+
+% My PhD thesis, including multiobjective optimization techniques, algorithm, performance analysis, and software review; description of VTMOP, running parallel simulations, integrating with libE. Also scientific machine learning via Delaunay interpolation and algorithms and proofs for doing so. Several applications related to HPC performance modeling and autotuning.
+@phdthesis{chang2020mathematical,
+	author = {Chang, Tyler H.},
+	title = {Mathematical Software for Multiobjective Optimization Problems},
+	year = {2020},
+	school = {Virginia Tech, Dept. of Computer Science},
+	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
+}
+
+@article{chen2004optimal,
+	author = {Chen, Long and Xu, Jin-chao},
+	title = {Optimal {D}elaunay triangulations},
+	year = {2004},
+	journal = {Journal of Computational Mathematics},
+	volume = {22},
+	number = {2},
+	pages = {299--308},
+	keywords = {},
+}
+
+@inproceedings{chen2016xgboost,
+	author = {Chen, Tianqi and Guestrin, Carlos},
+	title = {{XGBoost}: A Scalable Tree Boosting System},
+	year = {2016},
+	month = {8},
+	booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)},
+	pages = {785--794},
+	organization = {ACM},
+	location = {San Francisco, California, USA},
+	doi = {10.1145/2939672.2939785},
+	url = {https://dl.acm.org/doi/10.1145/2939672.2939785},
+	keywords = {},
+}
+
+% The classic textbook by Cheney and Light on the fundamentals of approximation theory for multivariate functions -- topics include: basics of interpolation, approximation theory, and linear operators; multivariate polynomials, their interpolation nodes, and error kernels; selecting good polynomial interpolants via Newton and Lagrange type methods; positive-definite functions, kernel interpretations, and good kernels for interpolation; basis functions, orthonormal bases, common bases for interpolation and convergence rates; Chebyshev nodes; B-splines, Box splines, and thin-plate splines; and basics of artificial neural networks. Other topics include wavelets, orthogonal projection algorithms, Hilbert spaces, and reproducing kernel Hilbert spaces (RKHS).
+@book{cheney2009course,
+	author = {Cheney, Elliott W. and Light, William A.},
+	title = {A Course in Approximation Theory},
+	year = {2009},
+	month = {1},
+	booktitle = {Graduate Studies in Mathematics},
+	series = {Graduate Studies in Mathematics},
+	publisher = {AMS},
+	address = {Providence, RI, USA},
+	doi = {10.1090/gsm/101},
+	url = {http://www.ams.org/gsm/101},
+	isbn = {9780821847985},
+	issn = {1065-7339},
+}
+
+% Another textbook on Delaunay triangulations in the context of mesh generation. This book is less thorough than the book by Aurenhammer in terms of theory, but a bit more complete in its coverage and analysis of modern algorithms, including the often forgotten gift-wrapping algorithm, which forms the basis for several operations in DelaunaySparse. This book also has some interesting algorithms and analysis that are specific to mesh generation.
+@book{cheng2012delaunay,
+	author = {Cheng, Siu-Wing and Dey, Tamal K. and Shewchuk, Jonathan R.},
+	title = {Delaunay Mesh Generation},
+	year = {2012},
+	series = {Computer and Information Science Series},
+	publisher = {CRC Press},
+	address = {Boca Raton, FL, USA},
+	keywords = {},
+}
+
+% The Keras docs -- great and highly impactful open source Python software, needs no introduction. A simplified interface for quickly building neural networks and other deep learning models with various backends frameworks such as Tensorflow, jax, and Pytorch.
+@misc{chollet2015keras,
+	author = {Chollet, Fran\c{c}ois and others, },
+	title = {Keras},
+	year = {2015},
+	howpublished = {\url{https://keras.io}},
+}
+
+@article{choudhary2019polynomialsized,
+	author = {Choudhary, Aruni and Kerber, Michael and Raghvendra, Sharath},
+	title = {Polynomial-sized topological approximations using the permutahedron},
+	year = {2019},
+	month = {1},
+	journal = {Discrete \& Computational Geometry},
+	volume = {61},
+	number = {1},
+	pages = {42--80},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/s00454-017-9951-2},
+	url = {http://link.springer.com/10.1007/s00454-017-9951-2},
+	issn = {0179-5376},
+	keywords = {},
+}
+
+% %%%% NN error refs
+@article{christianson2022traditional,
+	author = {Christianson, Ryan B and Pollyea, Ryan M and Gramacy, Robert B},
+	title = {Traditional kriging versus modern Gaussian processes for large-scale mining data},
+	year = {2022},
+	journal = {Statistical Analysis and Data Mining: The ASA Data Science Journal},
+	publisher = {Wiley Online Library},
+	keywords = {},
+}
+
+% The DeWall algorithm is a divide-and-conquer algorithm for computing Delaunay triangulations in arbitrary dimensions. The idea is to build a wall of Delaunay simplices bisecting the space using a variation of the gift-wrapping algorithm. Then, each half can be triangulated separately (and possibly in parallel) an attempt to reproduce these results and parallelize the algorithm was what originally spawned the idea for DelaunaySparse
+@article{cignoni1998dewall,
+	author = {Cignoni, Paolo and Montani, Claudio and Scopigno, Roberto},
+	title = {{DeWall}: A fast divide and conquer {D}elaunay triangulation algorithm in {$\mathbb{E}^d$}},
+	year = {1998},
+	month = {4},
+	journal = {Computer-Aided Design},
+	volume = {30},
+	number = {5},
+	pages = {333--341},
+	publisher = {Elsevier BV},
+	doi = {10.1016/s0010-4485(97)00082-1},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0010448597000821},
+	issn = {0010-4485},
+	keywords = {},
+}
+
+% Andrew Conn's landmark paper on interpolation dataset geometry -- leads to the definition of sets being "well-poised" for interpolation, meaning that when the interpolation set's geometry meats some local geometric conditions (basically bounded away from singularity), then the resulting interpolant's error (and gradient / hessian errors) can be bounded and the resulting models can be used to perform gradient descent or SQP within a trust-region framework with guaranteed convergence
+@article{conn2008geometry,
+	author = {Conn, Andrew R and Scheinberg, Katya and Vicente, Lu{\'\i}s N},
+	title = {Geometry of interpolation sets in derivative free optimization},
+	year = {2008},
+	month = {6},
+	journal = {Mathematical programming},
+	volume = {111},
+	number = {1-2},
+	pages = {141--172},
+	publisher = {Springer},
+	doi = {10.1007/s10107-006-0073-5},
+	url = {http://link.springer.com/10.1007/s10107-006-0073-5},
+	issn = {0025-5610},
+}
+
+% Dantzig's original (landmark) textbook on solving linear programming problems via the simplex method. This was obviously a landmark achievement in how to solve linear programming problems and more generally in the field of numerical optimization
+@book{dantzig1998linear,
+	author = {Dantzig, George B.},
+	title = {Linear Programming and Extensions},
+	year = {1998},
+	series = {Princeton Landmarks in Mathematics and Physics},
+	edition = {11},
+	publisher = {Princeton University Press},
+	address = {Princeton, NJ, USA},
+	keywords = {},
+}
+
+% Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
+@inproceedings{dauphin2014identifying,
+	author = {Dauphin, Yann N. and Pascanu, Razvan and Gulcehre, Caglar and Cho, Kyunghyun and Ganguli, Surya and Bengio, Yoshua},
+	editor = {Ghahramani, Z. and Welling, M. and Cortes, C. and Lawrence, N. and Weinberger, K.Q.},
+	title = {Identifying and attacking the saddle point problem in high-dimensional non-convex optimization},
+	year = {2014},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {27},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf},
+}
+
+% A common (standard) textbook on computational geometry covering all basic definitions, data structures, algorithms, proofs of correctness, time and space complexity analyses, and applications. This is the textbook that I used in grad school when learning computational geometry
+@book{de berg2008computational,
+	author = {de Berg, Mark and Cheong, Otfried and van Kreveld, Marc and Overmars, Mark},
+	title = {Computational Geometry: Algorithms and Applications},
+	year = {2008},
+	edition = {3},
+	publisher = {Springer-Verlag, TELOS},
+	address = {Santa Clara, CA, USA},
+	keywords = {},
+}
+
+@article{de ryck2022generic,
+	author = {De Ryck, Tim and Mishra, Siddhartha},
+	title = {Generic bounds on the approximation error for physics-informed (and) operator learning},
+	year = {2022},
+	journal = {Advances in Neural Information Processing Systems},
+	volume = {35},
+	pages = {10945--10958},
+	keywords = {},
+}
+
+@inproceedings{de2008tracedriven,
+	author = {De, Pradipta and Kothari, Ravi and Mann, Vijay},
+	title = {A trace-driven emulation framework to predict scalability of large clusters in presence of {OS} jitter},
+	year = {2008},
+	month = {9},
+	booktitle = {Proceedings of the 2008 IEEE International Conference on Cluster Computing},
+	pages = {232--241},
+	organization = {IEEE},
+	location = {Tsukuba, Japan},
+	doi = {10.1109/clustr.2008.4663776},
+	url = {http://ieeexplore.ieee.org/document/4663776/},
+	keywords = {},
+}
+
+@article{dean2013tail,
+	author = {Dean, Jeffrey and Barroso, Luiz Andr{\'e}},
+	title = {The tail at scale},
+	year = {2013},
+	journal = {Communications of the ACM},
+	volume = {56},
+	number = {2},
+	pages = {74--80},
+	keywords = {},
+}
+
+% Original reference for Delaunay triangulations -- I have not read this, it's in French, but this is the proper way to cite the original idea for Delaunay triangulations
+@article{delaunay1934sur,
+	author = {Delaunay, B.},
+	title = {Sur la sph\'ere vide},
+	year = {1934},
+	journal = {Bull. Acad. Science USSR VII: Class. Sci. Math.,},
+	keywords = {},
+}
+
+% One of (if not the) early publication on how to perform various simplex walks (such as a visibility walk) within a triangulation in order to locate target simplices, after the triangulation has already been computed and stored in a standard data structure (such as a simplex list)
+@inproceedings{devillers2001walking,
+	author = {Devillers, Olivier and Pion, Sylvain and Teillaud, Monique},
+	title = {Walking in a triangulation},
+	year = {2001},
+	month = {6},
+	booktitle = {Proceedings of the Seventeenth Annual Symposium on Computational Geometry (SCG '01)},
+	pages = {106--114},
+	organization = {ACM},
+	location = {Medford, MA, USA},
+	doi = {10.1145/378583.378643},
+	url = {https://dl.acm.org/doi/10.1145/378583.378643},
+	keywords = {},
+}
+
+% CVXPY is an open source Python optimization and modeling language for solving convex optimization problems in a disciplined way (meaning that we ensure convexity through hard rules on the problem definition). From the lab of Stephen Boyd
+@article{diamond2016cvxpy,
+	author = {Diamond, Steven and Boyd, Stephen},
+	title = {{CVXPY}: {A} {P}ython-embedded modeling language for convex optimization},
+	year = {2016},
+	journal = {Journal of Machine Learning Research},
+	volume = {17},
+	number = {83},
+	pages = {1--5},
+	url = {http://jmlr.org/papers/v17/15-408.html},
+}
+
+% ECOS is an open source numerical software for solving second-order cone optimization problems, from the lab of Stephen Boyd. In my experience, this software is the best tool from Boyd's lab and the most robust to degeneracy
+@inproceedings{domahidi2013ecos,
+	author = {Domahidi, Alexander and Chu, Eric and Boyd, Stephen},
+	title = {{ECOS}: {A}n {SOCP} solver for embedded systems},
+	year = {2013},
+	month = {7},
+	booktitle = {European Control Conference (ECC)},
+	pages = {3071--3076},
+	organization = {IEEE},
+	location = {Z{\"u}rich, Switzerland},
+	doi = {10.23919/ECC.2013.6669541},
+	url = {https://ieeexplore.ieee.org/document/6669541/},
+}
+
+% NAS-Bench-201 introduces the cell-based neural architecture search space representation (i.e., problem embedding) that was used by most (all) neural architecture search software circa ~2022. This includes the benchmark problems in JAHS-Bench-201
+@inproceedings{dong2020nasbench201,
+	author = {Dong, Xuanyi and Yang, Yi},
+	title = {{NAS-Bench-201}: Extending the Scope of Reproducible Neural Architecture Search},
+	year = {2020},
+	booktitle = {8th International Conference on Learning Representations (ICLR 2020)},
+	url = {https://openreview.net/forum?id=HJxyZkBKDr},
+}
+
+@article{dongarra2003linpack,
+	author = {Dongarra, Jack J. and Luszczek, Piotr and Petitet, Antoine},
+	title = {The {LINPACK} benchmark: past, present, and future},
+	year = {2003},
+	month = {8},
+	journal = {Concurrency and Computation: Practice and Experience},
+	volume = {15},
+	number = {9},
+	pages = {803--820},
+	publisher = {Wiley},
+	doi = {10.1002/cpe.728},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/cpe.728},
+	issn = {1532-0626},
+	keywords = {},
+}
+
+% The original paper for AdaGrad (adaptive subgradient method) which replaced the subgradient method with an adaptive estimate for the gradient, where each component of the gradient is rescaled by an adaptive estimate for the standard deviation in that direction based on previous iterates. This adaptive estimate for standard deviation in each axis-aligned direction serves as a diagonal approximation to the Hessian matrix, giving second-order like properties to the method and greatly improving the practical convergence. AdaGrad was very popular and considered the state-of-the-art optimization algorithm for training neural networks upon its initial release, but was quickly replaced by Adam, which added a Nesterov momentum esque smoothing to this adaptive gradient estimation in order to further improve convergence rates on nonsmooth, highly stochastic, and ill-conditioned problems
+@article{duchi2011adaptive,
+	author = {Duchi, John and Hazan, Elad and Singer, Yoram},
+	title = {Adaptive Subgradient Methods for Online Learning and Stochastic Optimization},
+	year = {2011},
+	journal = {Journal of Machine Learning Research},
+	volume = {12},
+	number = {61},
+	pages = {2121--2159},
+	url = {http://jmlr.org/papers/v12/duchi11a.html},
+}
+
+@inproceedings{dunlop2008use,
+	author = {Dunlop, Dominic and Varrette, Sebastien and Bouvry, Pascal},
+	title = {On the use of a genetic algorithm in high performance computing benchmark tuning},
+	year = {2008},
+	booktitle = {Proceedings of the 2008 International Symposium on Performance Evaluation of Computer and Telecommunication Systems},
+	pages = {105--113},
+	organization = {IEEE},
+	location = {Edinburgh, UK},
+	keywords = {},
+}
+
+% In a general triangulation, most simplex walks including a visibility walk are not guaranteed to converge. I.e., due to poor geometry one could get stuck in an infinite cycle walking in circles. This is related to how Dantzig's simplex method can also get caught in infinite cycles. Edelsbrunner proves that in the special case of Delaunay triangulations, this actually can't happen and so the convergence of the visibility walk is guaranteed
+@inproceedings{edelsbrunner1989acyclicity,
+	author = {Edelsbrunner, Herbert},
+	title = {An acyclicity theorem for cell complexes in d dimensions},
+	year = {1989},
+	booktitle = {Proceedings of the Fifth Annual Symposium on Computational Geometry (SCG '89)},
+	pages = {145--151},
+	organization = {ACM},
+	location = {Saarbruchen, West Germany},
+	doi = {10.1145/73833.73850},
+	url = {http://portal.acm.org/citation.cfm?doid=73833.73850},
+	keywords = {},
+}
+
+@article{fasshauer2012stable,
+	author = {Fasshauer, Gregory E and McCourt, Michael J},
+	title = {Stable evaluation of Gaussian radial basis function interpolants},
+	year = {2012},
+	month = {1},
+	journal = {SIAM Journal on Scientific Computing},
+	volume = {34},
+	number = {2},
+	pages = {A737--A762},
+	publisher = {SIAM},
+	doi = {10.1137/110824784},
+	url = {http://epubs.siam.org/doi/10.1137/110824784},
+	issn = {1064-8275},
+	keywords = {},
+}
+
+@article{fornberg2008stable,
+	author = {Fornberg, Bengt and Piret, C{\'e}cile},
+	title = {A stable algorithm for flat radial basis functions on a sphere},
+	year = {2008},
+	month = {1},
+	journal = {SIAM Journal on Scientific Computing},
+	volume = {30},
+	number = {1},
+	pages = {60--80},
+	publisher = {SIAM},
+	doi = {10.1137/060671991},
+	url = {http://epubs.siam.org/doi/10.1137/060671991},
+	issn = {1064-8275},
+	keywords = {},
+}
+
+@article{fornberg2011stable,
+	author = {Fornberg, Bengt and Larsson, Elisabeth and Flyer, Natasha},
+	title = {Stable computations with Gaussian radial basis functions},
+	year = {2011},
+	month = {1},
+	journal = {SIAM Journal on Scientific Computing},
+	volume = {33},
+	number = {2},
+	pages = {869--892},
+	publisher = {SIAM},
+	doi = {10.1137/09076756x},
+	url = {http://epubs.siam.org/doi/10.1137/09076756X},
+	issn = {1064-8275},
+	keywords = {},
+}
+
+@article{fortune1987sweepline,
+	author = {Fortune, Steven},
+	title = {A sweepline algorithm for {V}oronoi diagrams},
+	year = {1987},
+	month = {11},
+	journal = {Algorithmica},
+	volume = {2},
+	number = {1},
+	pages = {153--174},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/bf01840357},
+	url = {http://link.springer.com/10.1007/BF01840357},
+	issn = {0178-4617},
+	keywords = {},
+}
+
+% A famous blog post by K. Fukuda on how to efficiently calculate Delaunay simplices (or equivalently, Voronoi cell neighbors) efficiently in high dimensions via geometric programming. This method was never published anywhere but appears to be an often forgotten technique. This only works for points in general position (i.e., non degenerate data sets) in perfect precision, but it is somewhat similar to DelaunaySparse in that both could be considered simplex methods for solving either the primal or dual form of Fukuda's problem -- I have personally implemented the dual form in addition to DelaunaySparse and it is publicly available on GitHub: https://github.com/thchang/DualSimplex However, I could not make this form robust to degeneracy
+@inproceedings{fukuda2004possible,
+	author = {Fukuda, Komei},
+	title = {Is it possible to compute only the adjacencies of {V}oronoi cells in the {V}oronoi diagram efficiently?},
+	year = {2004},
+	month = {August},
+	booktitle = {Polyhedral computation {FAQ} (blog)},
+	url = {http://www.cs.mcgill.ca/~fukuda/soft/polyfaq/polyfaq.html},
+	note = {Retrieved [November 16, 2022]},
+	keywords = {},
+}
+
+% A community reviewed textbook on Bayesian optimization theory and implementation. Very thorough description of Gaussian process and Bayesian optimization fundamentals and theory, common techniques and acquisition functions, and implementation details, drawbacks, and real-world challenges
+@book{garnett2023bayesian,
+	author = {Garnett, Roman},
+	title = {Bayesian Optimization},
+	year = {2023},
+	publisher = {Cambridge University Press},
+	url = {https://bayesoptbook.com},
+	isbn = {978-1108425780},
+}
+
+@misc{gillette2022datadriven,
+	author = {Gillette, Andrew and Kur, Eugene},
+	title = {Data-driven geometric scale detection via Delaunay interpolation},
+	year = {2022},
+	booktitle = {arXiv math.NA},
+	keywords = {},
+}
+
+% Online paper with interactive visualizations explaining what Nesterov's momentum is and how it works intuitively by smoothing out optimization sample paths and preventing oscillations in the optimizer that occur do to poor problem conditioning. Then, they show how the problem conditioning appears as an often ignored constant in the convergence rate of gradient descent. All this is to show intuitively and mathematically that gradient descent with Nesterov's momentum will convergence faster in practice for ill-conditioned problems
+@article{goh2017why,
+	author = {Goh, Gabriel},
+	title = {Why Momentum Really Works},
+	year = {2017},
+	month = {4},
+	journal = {Distill},
+	volume = {2},
+	number = {4},
+	publisher = {Distill Working Group},
+	doi = {10.23915/distill.00006},
+	url = {http://distill.pub/2017/momentum},
+	issn = {2476-0757},
+}
+
+% Classical textbook that serves as the "bible" of matrix computations and computational linear algebra -- contains all the standard factorizations, the common algorithms for computing them, and their sensitiviy analyses, pivoting, some basic approximation theory, and the basics of iterative methods
+@book{golub2013matrix,
+	author = {Golub, Gene H. and Van Loan, Charles F.},
+	title = {Matrix computations},
+	year = {2013},
+	edition = {4th},
+	publisher = {Johns Hopkins University Press},
+	doi = {10.56021/9781421407944},
+	url = {https://www.press.jhu.edu/books/title/10678/matrix-computations},
+	isbn = {978-1421407944},
+	keywords = {},
+}
+
+% Theorems on the curse of dimensionality when it comes to drawing data points in high-dimensional spaces. The main theorem implies that the convex hull of N points in D dimensions has volume ~0 for D sufficiently large -- this occurs because of a concentration of measure type result
+@article{gorban2017stochastic,
+	author = {Gorban, Alexander N and Tyukin, Ivan Yu},
+	title = {Stochastic separation theorems},
+	year = {2017},
+	month = {10},
+	journal = {Neural Networks},
+	volume = {94},
+	pages = {255--259},
+	publisher = {Elsevier},
+	doi = {10.1016/j.neunet.2017.07.014},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0893608017301776},
+	issn = {0893-6080},
+}
+
+@article{gramacy2012cases,
+	author = {Gramacy, Robert B. and Lee, Herbert K. H.},
+	title = {Cases for the nugget in modeling computer experiments},
+	year = {2012},
+	month = {5},
+	journal = {Statistics and Computing},
+	volume = {22},
+	number = {3},
+	pages = {713--722},
+	publisher = {Springer},
+	doi = {10.1007/s11222-010-9224-x},
+	url = {http://link.springer.com/10.1007/s11222-010-9224-x},
+	issn = {0960-3174},
+	keywords = {},
+}
+
+@article{guhring2020error,
+	author = {G{\"u}hring, Ingo and Kutyniok, Gitta and Petersen, Philipp},
+	title = {Error bounds for approximations with deep ReLU neural networks in W s, p norms},
+	year = {2020},
+	journal = {Analysis and Applications},
+	volume = {18},
+	number = {05},
+	pages = {803--859},
+	publisher = {World Scientific},
+	keywords = {},
+}
+
+@article{hammouda2015noisetolerant,
+	author = {Hammouda, Adam and Siegel, Andrew R. and Siegel, Stephen F.},
+	title = {Noise-tolerant explicit stencil computations for nonuniform process execution rates},
+	year = {2015},
+	month = {5},
+	journal = {ACM Transactions on Parallel Computing},
+	volume = {2},
+	number = {1},
+	articleno = {7},
+	numpages = {33},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/2742351},
+	url = {https://dl.acm.org/doi/10.1145/2742351},
+	issn = {2329-4949},
+	keywords = {},
+}
+
+% Hanson's Fortran numerical software for solving equality constrained nonnegative least-squares (NNLS) problems via an iterative weighted least squares (WNNLS) solver. This is the default constrained least-squares optimization problem solver in the Fortran library SLATEC from Sandia
+@article{hanson1982algorithm,
+	author = {Hanson, Richard J. and Haskell, Karen H.},
+	title = {Algorithm 587: Two Algorithms for the Linearly Constrained Least Squares Problem},
+	year = {1982},
+	month = {9},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {8},
+	number = {3},
+	pages = {323--333},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	doi = {10.1145/356004.356010},
+	url = {https://dl.acm.org/doi/10.1145/356004.356010},
+	issn = {0098-3500},
+}
+
+% The official publication of the open source numerical software numpy: the standard for basic multivariable computations, vector operations, and simple linear algebra in Python
+@article{harris2020array,
+	author = {Harris, Charles R. and Millman, K. Jarrod and Walt, St{\'{e}}fan J. van der and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and Kerkwijk, Marten H. van and Brett, Matthew and Haldane, Allan and R{\'{i}}o, Jaime Fern{\'{a}}ndez del and Wiebe, Mark and Peterson, Pearu and G{\'{e}}rard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.},
+	title = {Array programming with {NumPy}},
+	year = {2020},
+	month = {9},
+	journal = {Nature},
+	volume = {585},
+	number = {7825},
+	pages = {357--362},
+	publisher = {Springer Science and Business Media {LLC}},
+	doi = {10.1038/s41586-020-2649-2},
+	url = {https://www.nature.com/articles/s41586-020-2649-2},
+	issn = {0028-0836},
+}
+
+@incollection{hert2020convex,
+	author = {Hert, Susan and Seel, Michael},
+	title = {{dD} Convex Hulls and {D}elaunay Triangulations},
+	year = {2020},
+	booktitle = {{CGAL} User and Reference Manual},
+	edition = {{5.0.2}},
+	publisher = {{CGAL Editorial Board}},
+	url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
+	keywords = {},
+}
+
+% The official publication for HiGHS numerical optimization open source software package and solver for linear programming problems. The first successful effort to parallelize a simplex method based solver, specifically, they have successfully parallelized the dual revised simplex approach. HiGHS is now the default solver in most scipy.optimize. HiGHS is written in C++ with Fortran, C, and Python interfaces -- support CPU and GPU parallelism, the authors don't get perfect scaling by any means but this is the first successful effort to parallelize linear programming and still an achievement
 @article{huangfu2018parallelizing,
-  title={Parallelizing the dual revised simplex method},
-  author={Huangfu, Qi and Hall, JA Julian},
-  journal={Mathematical Programming Computation},
-  volume={10},
-  number={1},
-  pages={119--142},
-  year={2018},
-  publisher={Springer},
-  doi={10.1007/s12532-017-0130-5},
+	author = {Huangfu, Qi and Hall, JA Julian},
+	title = {Parallelizing the dual revised simplex method},
+	year = {2018},
+	month = {3},
+	journal = {Mathematical Programming Computation},
+	volume = {10},
+	number = {1},
+	pages = {119--142},
+	publisher = {Springer},
+	doi = {10.1007/s12532-017-0130-5},
+	url = {http://link.springer.com/10.1007/s12532-017-0130-5},
+	issn = {1867-2949},
 }
 
-% The (recently open source) numerical software library SLATEC from Sandia is
-% something of a precursor to a modern library like scipy.  SLATEC provides
-% highly optimized, numerically stable, Fortran implementations for nearly
-% every basic numerical algorithm that one would encounter in scientific
-% computing
-@article{vandenvenderandhaskell1982,
-author = {Vandevender, Walter H. and Haskell, Karen H.},
-title = {The {SLATEC} Mathematical Subroutine Library},
-year = {1982},
-  keywords={},
-journal = {SIGNUM Newsletter},
-volume = {17},
-number = {3},
-pages = {16–21}
-}
-
-% A tutorial on how to compute Latin hypercube samples (LHS) and some basic
-% properties and ongoing research related to design-of-experiments
-@article{viana2016,
-  title={A tutorial on Latin hypercube design of experiments},
-  author={Viana, Felipe AC},
-  journal={Quality and reliability engineering international},
-  volume={32},
-  number={5},
-  pages={1975--1985},
-  year={2016},
-  publisher={Wiley Online Library}
-}
-
-% SciPy official publication:  Scipy is an open source numerical software
-% package which is the standard for advanced numerical methods and scientific
-% software packages in Python.  Most of scipy are wrappers for much older
-% Fortran or C++ code, that has been highly optimized.
-@article{virtanen2020,
-  author = {{Virtanen}, Pauli and {Gommers}, Ralf and {Oliphant},
-     Travis E. and {Haberland}, Matt and {Reddy}, Tyler and
-     {Cournapeau}, David and {Burovski}, Evgeni and {Peterson}, Pearu
-     and {Weckesser}, Warren and {Bright}, Jonathan and {van der Walt},
-     St{\'e}fan J.  and {Brett}, Matthew and {Wilson}, Joshua and
-     {Jarrod Millman}, K.  and {Mayorov}, Nikolay and {Nelson}, Andrew
-     R.~J. and {Jones}, Eric and {Kern}, Robert and {Larson}, Eric and
-     {Carey}, CJ and {Polat}, {\.I}lhan and {Feng}, Yu and {Moore},
-     Eric W. and {VanderPlas}, Jake and {Laxalde}, Denis and
-     {Perktold}, Josef and {Cimrman}, Robert and {Henriksen}, Ian and
-     {Quintero}, E.~A. and {Harris}, Charles R and {Archibald}, Anne M.
-     and {Ribeiro}, Ant{\^o}nio H. and {Pedregosa}, Fabian and
-     {van Mulbregt}, Paul and {Contributors}, {SciPy 1.0}},
-  title = {{SciPy} 1.0: {F}undamental Algorithms for Scientific
-     Computing in {P}ython},
-  year = {2020},
-  journal = {Nature Methods},
-  volume={17},
-  number={3},
-  pages={261--272},
-  doi={10.1038/s41592-019-0686-2}
-}
-
-% Optuna open source software for fully distributed hyperparameter
-% optimization.  Maintained by a private startup in Japan (named Optuna).  This
-% software provides high-quality distributed wrappers for many neural
-% architecture search and generic optimization algorithms.
-@inproceedings{akiba2019optuna,
-  title     = {Optuna: A next-generation hyperparameter optimization framework},
-  author    = {Akiba, Takuya and Sano, Shotaro and Yanase, Toshihiko and Ohta, Takeru and Koyama, Masanori},
-  booktitle = {Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery \& data mining},
-  pages     = {2623--2631},
-  year      = {2019},
-}
-
-% The FAIR principles for open source scientific software, data, source code,
-% and experiments should by findable (via DOIs or other), accessible (clear
-% purpose and metadata), interoperable (should use standard interfaces, data
-% formats, and schemas), and reusable (well documented, understandable, and not
-% overly specialized to an unnecessarilly niche use-case).  These are good
-% principles for any open source software development practices
-@article{barker2022,
-  author={Barker, Michelle and Chue Hong, Neil P. and Katz, Daniel S. and Lamprecht, Anna-Lena and Martinez-Ortiz, Carlos and Psomopoulos, Fotis and Harrow, Jennifer and Castro, Leyla Jael and Gruenpeter, Morane and Martinez, Paula Andrea and Honeyman, Tom},
-  title={Introducing the {FAIR} Principles for research software},
-  year={2022},
-  publisher={Nature Publishing Group},
-  journal={Scientific Data},
-  volume={9},
-  number={1},
-  pages={622},
-  doi={10.1038/s41597-022-01710-x}
-}
-
-% OSQP is an open source numerical software for solving quadratic programming
-% problems from Stephen Boyd's lab
-@article{bartolomeo2020,
-  author  = {Stellato, Bartolomeo and Banjac, Goran and Goulart, Paul and Bemporad, Alberto and Boyd, Stephen},
-  title   = {{OSQP}: an operator splitting solver for quadratic programs},
-  journal = {Mathematical Programming Computation},
-  year    = {2020},
-  volume  = {12},
-  number  = {4},
-  pages   = {637--672},
-  doi     = {10.1007/s12532-020-00179-2}
-}
-
-% The ScaLAPACK user's guide:  A highly parallel and scalable open source
-% implementation of the LAPACK software, for solving massive scale numerical
-% linear algebra systems on distributed systems
-@book{blackford1997,
-author={Blackford, L. Susan and Choi, Jaeyoung and Cleary, Andy
-and D'Azevedo, Eduardo and Demmel, James and Dhillon, Inderjit
-and Dongarra, Jack and Hammarling, Sven and Henry, Greg
-and Petitet, Antoine and Stanley, K. and Walker, D. and Whaley, R. C.},
-title={ScaLAPACK Users' Guide},
-volume={4},
-year={1997},
-  keywords={},
-publisher={SIAM}
-}
-
-% The open source numerical software package (in Python) pySMT.  This is a
-% surrogate modeling and Bayesian optimization toolbox for solving
-% multidisciplinary engineering design optimization (MDO) problems, while
-% utilizing derivatives and providing numerical stability analysis for each
-% surrogate model class.
-@article{bouhlel2019,
-  author = {Mohamed Amine Bouhlel and John T. Hwang and Nathalie Bartoli and Rémi Lafage and Joseph Morlier and Joaquim R.R.A. Martins},
-  title = {A {P}ython surrogate modeling framework with derivatives},
-  year = {2019},
-  journal = {Advances in Engineering Software},
-  volume = {135},
-  pages = {102--662},
-  doi = {10.1016/j.advengsoft.2019.03.005},
-}
-
-% The recommended citation for the jax software project -- one of my personal
-% favorite open source numerical software in Python.  Performs autograd (or
-% algorithmic differentiation) in either forward or reverse mode, is strongly
-% typed, can act as a drop-in replacement for numpy, and can be just-in-time
-% (jit) compiled for massive speedups
-@misc{bradbury2018jax,
-  author  = {J. Bradbury and others},
-  title   = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
-  url     = {http://github.com/google/jax},
-  version = {0.3.13},
-  year    = {2018}
-}
-
-% The Keras docs -- great and highly impactful open source Python software,
-% needs no introduction.  A simplified interface for quickly building neural
-% networks and other deep learning models with various backends frameworks such
-% as Tensorflow, jax, and Pytorch.
-@misc{chollet2015,
-  title={Keras},
-  author={Chollet, Fran\c{c}ois and others},
-  year={2015},
-  howpublished={\url{https://keras.io}},
-}
-
-% CVXPY is an open source Python optimization and modeling language for solving
-% convex optimization problems in a disciplined way (meaning that we ensure
-% convexity through hard rules on the problem definition). From the lab of
-% Stephen Boyd
-@article{diamond2016,
-  author  = {Steven Diamond and Stephen Boyd},
-  title   = {{CVXPY}: {A} {P}ython-embedded modeling language for convex optimization},
-  journal = {Journal of Machine Learning Research},
-  year    = {2016},
-  volume  = {17},
-  number  = {83},
-  pages   = {1--5},
-  url     = {http://jmlr.org/papers/v17/15-408.html}
-}
-
-% ECOS is an open source numerical software for solving second-order cone
-% optimization problems, from the lab of Stephen Boyd.  In my experience, this
-% software is the best tool from Boyd's lab and the most robust to degeneracy
-@inproceedings{domahidi2013,
-  author={Domahidi, Alexander and Chu, Eric and Boyd, Stephen},
-  title={{ECOS}: {A}n {SOCP} solver for embedded systems},
-  year={2013},
-  booktitle={European Control Conference (ECC)},
-  pages={3071-3076},
-  location={Z{\"u}rich, Switzerland},
-  publisher={IEEE},
-  doi={10.23919/ECC.2013.6669541}
-}
-
-% NAS-Bench-201 introduces the cell-based neural architecture search space
-% representation (i.e., problem embedding) that was used by most (all) neural
-% architecture search software circa ~2022.  This includes the benchmark
-% problems in JAHS-Bench-201
-@inproceedings{dong2020nas,
-  title     = {{NAS-Bench-201}: Extending the Scope of Reproducible Neural Architecture Search},
-  author    = {Xuanyi Dong and Yi Yang},
-  booktitle = {International Conference on Learning Representations (ICLR 2020)},
-  year      = {2020},
-  url       = {https://openreview.net/forum?id=HJxyZkBKDr}
-}
-
-% SCS is an open source numerical software for solving second-order cone
-% problems from Steph Boyd's lab
-@article{donoghue2016,
-    author       = {Brendan O'Donoghue and Eric Chu and Neal Parikh and Stephen Boyd},
-    title        = {Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding},
-    journal      = {Journal of Optimization Theory and Applications},
-    month        = {June},
-    year         = {2016},
-    volume       = {169},
-    number       = {3},
-    pages        = {1042-1068},
-    doi          = {10.1007/s10957-016-0892-3}
-}
-
-% The official publication of the open source numerical software numpy:  the
-% standard for basic multivariable computations, vector operations, and simple
-% linear algebra in Python
-@article{harris2020,
- author = {Charles R. Harris and K. Jarrod Millman and St{\'{e}}fan J.
-          van der Walt and Ralf Gommers and Pauli Virtanen and David
-          Cournapeau and Eric Wieser and Julian Taylor and Sebastian
-          Berg and Nathaniel J. Smith and Robert Kern and Matti Picus
-          and Stephan Hoyer and Marten H. van Kerkwijk and Matthew
-          Brett and Allan Haldane and Jaime Fern{\'{a}}ndez del
-          R{\'{i}}o and Mark Wiebe and Pearu Peterson and Pierre
-          G{\'{e}}rard-Marchant and Kevin Sheppard and Tyler Reddy and
-          Warren Weckesser and Hameer Abbasi and Christoph Gohlke and
-          Travis E. Oliphant},
- title = {Array programming with {NumPy}},
- year = {2020},
- journal = {Nature},
- volume = {585},
- number = {7825},
- pages = {357--362},
- publisher = {Springer Science and Business Media {LLC}},
- doi = {10.1038/s41586-020-2649-2}
+% %% Misc ML refs
+@inproceedings{ilyas2019adversarial,
+	author = {Ilyas, Andrew and Santurkar, Shibani and Tsipras, Dimitris and Engstrom, Logan and Tran, Brandon and Madry, Aleksander},
+	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
+	title = {Adversarial Examples Are Not Bugs, They Are Features},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	pages = {125--136},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf},
+	keywords = {},
 }
 
 % ISO Fortran 2003 software standard -- definition of the Fortran 2003 standard
-@techreport{iso2003,
-year = {2004},
-  keywords={},
-month = {November},
-title = {{Information technology -- Programming languages -- Fortran
- -- Part 1: Base Language}},
-address = {Geneva, Switzerland},
-number = {ISO/IEC 1539-1:2004(E)},
-institution = {International Organization for Standardization}
+@techreport{ios2004information,
+	title = {{Information technology -- Programming languages -- Fortran -- Part 1: Base Language}},
+	year = {2004},
+	month = {November},
+	number = {ISO/IEC 1539-1:2004(E)},
+	institution = {International Organization for Standardization},
+	address = {Geneva, Switzerland},
+	keywords = {},
 }
 
 % ISO Fortran 2008 software standard -- definition of the Fortran 2008 standard
-@techreport{iso2008,
-year = {2010},
-  keywords={},
-month = {October},
-title = {{Information technology -- Programming languages -- Fortran
- -- Part 1: Base Language}},
-number = {ISO/IEC 1539-1:2010(E)},
-address = {Geneva, Switzerland},
-institution = {International Organization for Standardization}
+@techreport{ios2010information,
+	title = {{Information technology -- Programming languages -- Fortran -- Part 1: Base Language}},
+	year = {2010},
+	month = {October},
+	number = {ISO/IEC 1539-1:2010(E)},
+	institution = {International Organization for Standardization},
+	address = {Geneva, Switzerland},
+	keywords = {},
 }
 
-% The numerical software algorithm used in scipy algorithm for generating Sobol
-% sequences (low discrepancy sequences)
-@article{joe2008,
-  title={Constructing Sobol sequences with better two-dimensional projections},
-  author={Joe, Stephen and Kuo, Frances Y.},
-  journal={SIAM Journal on Scientific Computing},
-  volume={30},
-  number={5},
-  pages={2635--2654},
-  year={2008},
-  publisher={SIAM},
-  doi={10.1137/070709359}
+% The numerical software algorithm used in scipy algorithm for generating Sobol sequences (low discrepancy sequences)
+@article{joe2008constructing,
+	author = {Joe, Stephen and Kuo, Frances Y.},
+	title = {Constructing Sobol sequences with better two-dimensional projections},
+	year = {2008},
+	month = {1},
+	journal = {SIAM Journal on Scientific Computing},
+	volume = {30},
+	number = {5},
+	pages = {2635--2654},
+	publisher = {SIAM},
+	doi = {10.1137/070709359},
+	url = {http://epubs.siam.org/doi/10.1137/070709359},
+	issn = {1064-8275},
 }
 
-% D.R. Jones' original paper on "efficient global optimization" (EGO).  This is
-% often credited as the original implementation of multivariate Bayesian
-% optimization.  Jones proposes using Gaussian processes to produce a Gaussian
-% posterior, whose expected improvement function can be efficiently optimized
-% to select the next candidate.  This is also one of the early works in
-% sequential optimization via a generic (i.e., non polynomial) surrogate model.
-% However, earlier work on design-of-experiments and response surface modeling
-% did exist in the engineering design optimization space.  Earlier papers had
-% explored the idea of optimizing Gaussian processes to select experiments
-% (especially in one and two-dimensions).  However, this paper is a landmark in
-% that it gave rise to the field of multivariate Bayesian optimization.  EGO is
-% still often used as the benchmark Bayesian optimization algorithm.
+% D.R. Jones' original paper on "efficient global optimization" (EGO). This is often credited as the original implementation of multivariate Bayesian optimization. Jones proposes using Gaussian processes to produce a Gaussian posterior, whose expected improvement function can be efficiently optimized to select the next candidate. This is also one of the early works in sequential optimization via a generic (i.e., non polynomial) surrogate model. However, earlier work on design-of-experiments and response surface modeling did exist in the engineering design optimization space. Earlier papers had explored the idea of optimizing Gaussian processes to select experiments (especially in one and two-dimensions). However, this paper is a landmark in that it gave rise to the field of multivariate Bayesian optimization. EGO is still often used as the benchmark Bayesian optimization algorithm.
 @article{jones1998efficient,
-  title     = {Efficient global optimization of expensive black-box functions},
-  author    = {Jones, Donald R and Schonlau, Matthias and Welch, William J},
-  journal   = {Journal of Global optimization},
-  volume    = {13},
-  pages     = {455--492},
-  year      = {1998},
-  publisher = {Springer}
+	author = {Jones, Donald R and Schonlau, Matthias and Welch, William J},
+	title = {Efficient global optimization of expensive black-box functions},
+	year = {1998},
+	journal = {Journal of Global optimization},
+	volume = {13},
+	pages = {455--492},
+	publisher = {Springer},
 }
 
-% Introducing Dragonfly: an open source numerical software package for solving
-% neural architecture search problems via Bayesian optimization and solving an
-% optimal transport problem to evaluate the distance between two networks.
-% Considered a bit of a landmark paper for neural network architecture search
-% problems.  The open source Python software is widely used for a variety of
-% applications outside NAS, including molecular discovery
-@article{kandasamy2020,
-  author   = {Kandasamy, Kirthevasan and Vysyaraju, Karun Raju and Neiswanger, Willie and Paria, Biswajit and Collins, Christopher R. and Schneider, Jeff and Poczos, Barnabus and Xing, Eric P.},
-  title    = {Tuning Hyperparameters without Grad Students: Scalable and Robust
-              {Bayesian} Optimisation with {Dragonfly}},
-  year     = {2020},
-  journal  = {Journal of Machine Learning Research},
-  volume   = {21},
-  number   = {81},
-  pages    = {1--27},
-  software = {http://github.com/dragonfly/dragonfly},
-  url     = {http://jmlr.org/papers/v21/18-223.html}
+@inproceedings{jrad2019selflearning,,
+	author = {Jrad, Mohamed and Kapania, Rakesh K. and Schetz, Joseph A. and Watson, Layne T.},
+	title = {Self-Learning, Adaptive Software for Aerospace Engineering Applications: Example of Oblique Shocks in Supersonic Flow},
+	year = {2019},
+	month = {1},
+	booktitle = {AIAA Scitech 2019 Forum},
+	organization = {AIAA},
+	location = {San Diego, CA, USA},
+	doi = {10.2514/6.2019-1704},
+	url = {https://arc.aiaa.org/doi/10.2514/6.2019-1704},
+	keywords = {},
 }
 
-% Peter Lax's classic textbook on functional analysis and all the core theorems
-% Banach spaces, Hilbert spaces, and approximation theory
-@book{lax2002,
-    author = {Lax, Peter D.},
-     title = {Functional analysis},
-    series = {Pure and Applied Mathematics (New York)},
- publisher = {Wiley-Interscience [John Wiley \& Sons], New York},
-      year = {2002},
-     pages = {xx--580},
-      isbn = {0-471-55604-1},
+% Introducing Dragonfly: an open source numerical software package for solving neural architecture search problems via Bayesian optimization and solving an optimal transport problem to evaluate the distance between two networks. Considered a bit of a landmark paper for neural network architecture search problems. The open source Python software is widely used for a variety of applications outside NAS, including molecular discovery
+@article{kandasamy2020tuning,
+	author = {Kandasamy, Kirthevasan and Vysyaraju, Karun Raju and Neiswanger, Willie and Paria, Biswajit and Collins, Christopher R. and Schneider, Jeff and Poczos, Barnabus and Xing, Eric P.},
+	title = {Tuning Hyperparameters without Grad Students: Scalable and Robust {Bayesian} Optimisation with {Dragonfly}},
+	year = {2020},
+	journal = {Journal of Machine Learning Research},
+	volume = {21},
+	number = {81},
+	pages = {1--27},
+	url = {http://jmlr.org/papers/v21/18-223.html},
+	git = {http://github.com/dragonfly/dragonfly},
 }
 
-% Publication describing Graphcore's IPU architecture (intelligence processing
-% unit), which is a neuromorphic parallel processor optimized for
-% high-throughput vector operations
-@inproceedings{louw2021,
-  title={Using the {Graphcore IPU} for traditional {HPC} applications},
-  author={Louw, Thorben and McIntosh-Smith, Simon},
-  booktitle={Proc. 3rd Workshop on Accelerated Machine Learning (AccML)},
-  year={2021},
-  location={virtual event},
-  pages={1--9},
-  url={https://easychair.org/publications/preprint/ztfj}
+% The original paper on Adam: an adaptive gradient and moment estimator that uses second order moments to approximate curvature (i.e., Hessian information) in order to accelerate the convergence of AdaGrad. In particular, this means applying Nesterov's momentum to both the gradient and curvature estimations. From 2015-2024 this was the state-of-the-art algorithm for optimization of neural network weights during training, and was what was typically meant when people talked about stochastic gradient descent.
+@inproceedings{kingma2015adam,
+	author = {Kingma, Diedrik and Ba, Jimmy},
+	title = {Adam: A method for stochastic optimization},
+	year = {2015},
+	booktitle = {3rd International Conference on Learning Representations (ICLR 2015)},
+	numpages = {11},
+	location = {San Diego, CA, USA},
+	url = {https://arxiv.org/abs/1412.6980},
 }
 
-% MORDRED: A 3D molecular descriptor calculator, which is widely used for
-% embedding molecules into a continuous latent space (parameterized by their
-% descriptors) which can be used to solve chemical property optimization
-% problems.  The MORDRED software is available open source in Python.
-@article{moriwaki2018,
-  author={Moriwaki, Hirotomo and Tia, Yu-Shi and Kawashita, Norihito and Takagi, Tatsuya},
-  year={2018},
-  title={Mordred: a molecular descriptor calculator},
-  journal={Journal of Cheminformatics},
-  volume={10},
-  articleno={4},
-  numpages={14},
-  doi={10.1186/s13321-018-0258-y}
+% The Klee Minty cube: A famous counterexample showing that for every pivoting strategy for the simplex method, we can construct a pathological problem where that strategy will visit every vertex of the cube before the solution. This proves that the simplex method cannot be used to solve linear programming problems in strongly polynomial time
+@article{klee1972how,
+	author = {Klee, Victor and Minty, George J.},
+	title = {How good is the simplex algorithm?},
+	year = {1972},
+	journal = {Inequalities},
+	volume = {III},
+	pages = {159--175},
+	keywords = {},
 }
 
-% OpenMP 4.5 standard:  Official definition of OpenMP 4.5 software standard
-@techreport{openmparb2015,
-institution={OpenMP Architecture Review Board (ARB)},
-year={2015},
-  keywords={},
-month={November},
-title={{OpenMP Application Programming Interface} version 4.5}
-number={OpenMP 4.5},
+@article{klee1980complexity,
+	author = {Klee, Victor},
+	title = {On the complexity of d-dimensional {V}oronoi diagrams},
+	year = {1980},
+	month = {12},
+	journal = {Archiv der Mathematik},
+	volume = {34},
+	number = {1},
+	pages = {75--80},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/bf01224932},
+	url = {http://link.springer.com/10.1007/BF01224932},
+	issn = {0003-889X},
+	keywords = {},
 }
 
-% Techniques and optimal sampling criteria for performing adaptive sampling to
-% enable downstream Gaussian process regression modeling
-@article{sapsis2022,
-  title={Optimal criteria and their asymptotic form for data selection in data-driven reduced-order modelling with {Gaussian} process regression},
-  author={Sapsis, Themistoklis P. and Blanchard, Antoine},
-  journal={Philosophical Transactions of the Royal Society A},
-  volume={380},
-  number={2229},
-  pages={20210197},
-  year={2022},
-  publisher={The Royal Society},
-  doi={10.1098/rsta.2021.0197}
+@article{kovachki2021neural,
+	author = {Kovachki, Nikola B. and Li, Zongyi and Liu, Burigede and Azizzadenesheli, Kamyar and Bhattacharya, Kaushik and Stuart, Andrew M. and Anandkumar, Anima},
+	title = {Neural Operator: Learning Maps Between Function Spaces},
+	year = {2021},
+	journal = {CoRR},
+	volume = {abs/2108.08481},
+	keywords = {},
 }
 
-% The SMT 2.0 paper, major improvements to the open source numerical software
-% package (in Python) pySMT for solving multidisciplinary engineering design
-% optimization (MDO) problems, while utilizing derivatives and providing
-% numerical stability analysis for each surrogate model class.  In SMT 2.0,
-% support is added for hierarchical and mixed variables, and major improvements
-% have been made to the structure, completeness, and features of the SMT
-% library.
-@article{saves2024,
-title = {SMT 2.0: A Surrogate Modeling Toolbox with a focus on hierarchical and mixed variables Gaussian processes},
-journal = {Advances in Engineering Software},
-volume = {188},
-pages = {103571},
-year = {2024},
-issn = {0965-9978},
-doi = {10.1016/j.advengsoft.2023.103571},
-url = {https://www.sciencedirect.com/science/article/pii/S096599782300162X},
-author = {Paul Saves and Rémi Lafage and Nathalie Bartoli and Youssef Diouane and Jasper Bussemaker and Thierry Lefebvre and John T. Hwang and Joseph Morlier and Joaquim R.R.A. Martins},
+@inproceedings{kramer2003performance,
+	author = {Kramer, William T. and Ryan, Clint},
+	title = {Performance variability of highly parallel architectures},
+	year = {2003},
+	booktitle = {Proceedings of the International Conference on Computational Science},
+	pages = {560--569},
+	organization = {Springer},
+	location = {Melbourne, Australia},
+	keywords = {},
 }
 
-% The EDBO software: open source Python software for performing multiobjective
-% bayesian optimization for chemical synthesis and molecular discovery.  Links
-% a multiobjective optimization solver with the MORDRED software for getting
-% molecular descriptors and optimizes for the desired properties
-@article{shields2021,
-  author   = {Shields, Benjamin J. and Stevens, Jason and Li, Jun and Parasram, Marvin and Damani, Farhan and Alvarado, Jesus I. M. and Janey, Jacob M. and Adams, Rryan P. and Doyle, Abigail G.},
-  title    = {Bayesian reaction optimization as a tool for chemical synthesis},
-  year     = {2021},
-  journal  = {Nature},
-  volume   = {590},
-  number   = {7844},
-  pages    = {89--96},
-  software = {http://github.com/b-shields/edbo},
-  doi = {10.1038/s41586-021-03213-y}
+% Peter Lax's classic textbook on functional analysis and all the core theorems Banach spaces, Hilbert spaces, and approximation theory
+@book{lax2002functional,
+	author = {Lax, Peter D.},
+	title = {Functional analysis},
+	year = {2002},
+	series = {Pure and Applied Mathematics (New York)},
+	pages = {xx--580},
+	publisher = {Wiley-Interscience [John Wiley \& Sons], New York},
+	isbn = {0-471-55604-1},
 }
 
-% The original publication of the Sobol sequence algorithm for generating
-% well-distributed points for in the context of good nodes for numerical
-% integration.  This is now referred to as a low-discrepancy sequence and is
-% also used for design-of-experiments and quasi-random number generation
-@article{sobol1967,
-    author = {Sobol, I. M.},
-     title = {Distribution of points in a cube and approximate evaluation of
-              integrals},
-   journal = {\v{Z}urnal Vy\v{c}islitel\cprime no\u{\i} Matematiki i Matemati\v{c}esko\u{\i} Fiziki},
-    volume = {7},
-      year = {1967},
-     pages = {784--802},
-      issn = {0044-4669},
+@inproceedings{liu2019nonparametric,
+	author = {Liu, Yehong and Yin, Guosheng},
+	title = {Nonparametric functional approximation with {D}elaunay triangulation learner},
+	year = {2019},
+	month = {11},
+	booktitle = {Proceedings of the 2019 IEEE International Conference on Big Knowledge (ICBK)},
+	pages = {167--174},
+	organization = {IEEE},
+	location = {Beijing, China},
+	doi = {10.1109/icbk.2019.00030},
+	url = {https://ieeexplore.ieee.org/document/8944414/},
+	keywords = {},
 }
 
-% The FAIR principles of data management:  Scientific data should be findable,
-% accessible, interpretable, and reproducible
-@article{stall2019,
-  author={Stall, Shelley and Yarmey, Lynn and Cutcher-Gershenfeld, Joel and Hanson, Brooks and Lehnert, Kerstin and Nosek, Brian and Parsons, Mark and Robinson, Erin and Wyborn, Lesley},
-  title={Make scientific data {FAIR}},
-  year={2019},
-  publisher={Nature Publishing Group},
-  journal={Nature},
-  volume={570},
-  pages={27--29},
-  doi={10.1038/d41586-019-01720-7}
+% Publication describing Graphcore's IPU architecture (intelligence processing unit), which is a neuromorphic parallel processor optimized for high-throughput vector operations
+@inproceedings{louw2021using,
+	author = {Louw, Thorben and McIntosh-Smith, Simon},
+	title = {Using the {Graphcore IPU} for traditional {HPC} applications},
+	year = {2021},
+	booktitle = {Proc. 3rd Workshop on Accelerated Machine Learning (AccML)},
+	pages = {1--9},
+	location = {virtual event},
+	url = {https://easychair.org/publications/preprint/ztfj},
 }
 
-% Open source numerical Python software pyomo.DOE, implementing model-driven
-% design-of-experiments generation in Pyomo
-@article{wang2022,
-    author = {Wang, Jialu and Dowling, Alexander W.},
-    title = {Pyomo.DOE: An open-source package for model-based design of experiments in Python},
-    year = {2022},
-    journal = {AIChE Journal},
-    volume = {68},
-    number = {12},
-    articleno = {e17813},
-    doi = {https://doi.org/10.1002/aic.17813}
+@inproceedings{lux2018nonparametric,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Nonparametric distribution models for predicting and managing computational performance variability},
+	year = {2018},
+	month = {4},
+	booktitle = {Proceedings of IEEE SoutheastCon 2018},
+	pages = {1--7},
+	organization = {IEEE},
+	location = {St. Petersburg, FL, USA},
+	doi = {10.1109/secon.2018.8478814},
+	url = {https://ieeexplore.ieee.org/document/8478814/},
+	keywords = {},
 }
 
-% Survey of design-of-experiments techniques and modifications for HPC system
-% analysis, specifically related to linearly constrained and integer lattice
-% design spaces
-@article{wang2023,
-  author = {Wang, Yueyao and Xu, Li and Hong, Yili and Pan, Rong and Chang, Tyler H. and Lux, Thomas C. H. and Bernard, Jon and Watson, Layne T. and Cameron, Kirk W.},
-  title = {Design strategies and approximation methods for high-performance computing variability management},
-  year = {2023},
-  journal = {Journal of Quality Technology},
-  volume = {55},
-  number = {1},
-  pages = {88--103},
-  publisher = {Taylor \& Francis},
-  doi = {10.1080/00224065.2022.2035285}
+@inproceedings{lux2018predictive,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Predictive modeling of {I/O} characteristics in high performance computing systems},
+	year = {2018},
+	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
+	articleno = {8},
+	organization = {SCS},
+	location = {Baltimore, MD, USA},
+	keywords = {},
 }
 
-% The latest release of HOMPACK: An open source numerical software package
-% written in Fortran 90 for solving nonlinear and polynomial systems of
-% equations via homotopy methods.
+@article{lux2021interpolation,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Interpolation of sparse high-dimensional data},
+	year = {2021},
+	month = {9},
+	journal = {Numerical Algorithms},
+	volume = {88},
+	number = {1},
+	pages = {281--313},
+	publisher = {Springer},
+	doi = {10.1007/s11075-020-01040-2},
+	url = {https://link.springer.com/10.1007/s11075-020-01040-2},
+	issn = {1017-1398},
+	keywords = {},
+}
+
+@article{manton2015primer,
+	author = {Manton, Jonathan H and Amblard, Pierre-Olivier and others, },
+	title = {A primer on reproducing kernel hilbert spaces},
+	year = {2015},
+	journal = {Foundations and Trends{\textregistered} in Signal Processing},
+	volume = {8},
+	number = {1--2},
+	pages = {1--126},
+	publisher = {Now Publishers, Inc.},
+	keywords = {},
+}
+
+@inproceedings{maricq2018taming,
+	author = {Maricq, Aleksander and Duplyakin, Dmitry and Jimenez, Ivo and Maltzahn, Carlos and Stutsman, Ryan and Ricci, Robert},
+	title = {Taming performance variability},
+	year = {2018},
+	booktitle = {Proceedings of the 13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18)},
+	pages = {409--425},
+	organization = {USENIX Association},
+	location = {Carlsbad, CA, USA},
+	keywords = {},
+}
+
+% Algorithms and theorems on the difficulty of finding basic solutions for linear programming problems
+@article{megiddo1991finding,
+	author = {Megiddo, Nimrod},
+	title = {On finding primal- and dual-optimal bases},
+	year = {1991},
+	month = {2},
+	journal = {ORSA Journal on Computing},
+	volume = {3},
+	number = {1},
+	pages = {63--65},
+	publisher = {Institute for Operations Research and the Management Sciences (INFORMS)},
+	doi = {10.1287/ijoc.3.1.63},
+	url = {https://pubsonline.informs.org/doi/10.1287/ijoc.3.1.63},
+	issn = {0899-1499},
+	keywords = {},
+}
+
+@inproceedings{miller2008linearsize,
+	author = {Miller, G. and Phillips, T. and Sheehy, D.},
+	title = {Linear-size meshes},
+	year = {2008},
+	booktitle = {Proceedings of the 20th Canadian Conference on Computational Geometry (CCCG 2008)},
+	pages = {175--178},
+	location = {Montr{\'e}al, Qu{\'e}bec},
+	keywords = {},
+}
+
+% Original reference for barycentric weight based interpolation -- I have not read this, it's in German, but this is the proper way to cite barycentric interpolation
+@book{mobius1827der,
+	author = {M\"obius, August Ferdinand},
+	title = {Der barycentrische Calcul},
+	year = {1827},
+	pages = {1--388},
+	publisher = {Verlag von Johann Ambrosius Barth},
+	keywords = {},
+}
+
+@article{moody1989fast,
+	author = {Moody, John and Darken, Christian J.},
+	title = {Fast Learning in Networks of Locally-Tuned Processing Units},
+	year = {1989},
+	month = {6},
+	journal = {Neural Computation},
+	volume = {1},
+	number = {2},
+	pages = {281--294},
+	publisher = {MIT Press},
+	doi = {10.1162/neco.1989.1.2.281},
+	url = {https://direct.mit.edu/neco/article/1/2/281-294/5488},
+	issn = {0899-7667},
+	keywords = {},
+}
+
+% MORDRED: A 3D molecular descriptor calculator, which is widely used for embedding molecules into a continuous latent space (parameterized by their descriptors) which can be used to solve chemical property optimization problems. The MORDRED software is available open source in Python.
+@article{moriwaki2018mordred,
+	author = {Moriwaki, Hirotomo and Tia, Yu-Shi and Kawashita, Norihito and Takagi, Tatsuya},
+	title = {Mordred: a molecular descriptor calculator},
+	year = {2018},
+	month = {12},
+	journal = {Journal of Cheminformatics},
+	volume = {10},
+	number = {1},
+	articleno = {4},
+	numpages = {14},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1186/s13321-018-0258-y},
+	url = {https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0258-y},
+	issn = {1758-2946},
+}
+
+@article{mucke1999fast,
+	author = {M{\"u}cke, Ernst P. and Saias, Isaac and Zhu, Binhai},
+	title = {Fast randomized point location without preprocessing in two- and three-dimensional {D}elaunay triangulations},
+	year = {1999},
+	journal = {Computational Geometry},
+	volume = {12},
+	number = {1},
+	pages = {63--83},
+	keywords = {},
+}
+
+% The classical textbook on response surface methodology and modeling practices. Contains useful information on the basic framework and applications of RSM. Also a useful reference for many of the options for specific techniques: Chapter 7 is a good reference for basic techniques in multiobjective RSM and Chapters 8-9 surveys the basic methods in design-of-experiments
+@book{myers2016response,
+	author = {Myers, Raymond H. and Montgomery, Douglas C. and Anderson-Cook, Christine M.},
+	title = {Response Surface Methodology: Process and Design Optimization Using Designed Experiments},
+	year = {2016},
+	edition = {4},
+	publisher = {John Wiley \& Sons, Inc.},
+	address = {Hoboken, NJ, USA},
+	isbn = {9781118916032},
+}
+
+@article{narcowich1991norms,
+	author = {Narcowich, Francis J and Ward, Joseph D},
+	title = {Norms of inverses and condition numbers for matrices associated with scattered data},
+	year = {1991},
+	month = {1},
+	journal = {Journal of Approximation Theory},
+	volume = {64},
+	number = {1},
+	pages = {69--94},
+	publisher = {Elsevier},
+	doi = {10.1016/0021-9045(91)90087-q},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/002190459190087Q},
+	issn = {0021-9045},
+	keywords = {},
+}
+
+% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
+@inproceedings{nesterov1983method,
+	author = {Nesterov, Yurii},
+	title = {A method for solving the convex programming problem with convergence rate O (1/k2)},
+	year = {1983},
+	booktitle = {Dokl akad nauk Sssr},
+	volume = {269},
+	numpages = {543},
+}
+
+% OpenMP 4.5 standard: Official definition of OpenMP 4.5 software standard
+@techreport{oarb(2015openmp,
+	title = {{OpenMP Application Programming Interface} version 4.5},
+	year = {2015},
+	month = {November},
+	number = {OpenMP 4.5},
+	institution = {OpenMP Architecture Review Board (ARB)},
+	keywords = {},
+}
+
+% SCS is an open source numerical software for solving second-order cone problems from Steph Boyd's lab
+@article{odonoghue2016conic,
+	author = {O'Donoghue, Brendan and Chu, Eric and Parikh, Neal and Boyd, Stephen},
+	title = {Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding},
+	year = {2016},
+	month = {June},
+	journal = {Journal of Optimization Theory and Applications},
+	volume = {169},
+	number = {3},
+	pages = {1042--1068},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/s10957-016-0892-3},
+	url = {http://link.springer.com/10.1007/s10957-016-0892-3},
+	issn = {0022-3239},
+}
+
+@article{omohundro1990geometric,
+	author = {Omohundro, Stephen M.},
+	title = {Geometric learning algorithms},
+	year = {1990},
+	month = {6},
+	journal = {Physica D: Nonlinear Phenomena},
+	volume = {42},
+	number = {1},
+	pages = {307--321},
+	publisher = {Elsevier BV},
+	doi = {10.1016/0167-2789(90)90085-4},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/0167278990900854},
+	issn = {0167-2789},
+	keywords = {},
+}
+
+@techreport{papazafeiropoulos2014matlab,
+	author = {Papazafeiropoulos, George},
+	title = {{MATLAB} Computational Geometry Toolbox version 1.2},
+	year = {2014},
+	month = {November},
+	institution = {MathWorks},
+	url = {https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox},
+	note = {accessed April 27, 2020},
+	keywords = {},
+}
+
+@article{park1991universal,
+	author = {Park, Jooyoung and Sandberg, Irwin W},
+	title = {Universal approximation using radial-basis-function networks},
+	year = {1991},
+	month = {6},
+	journal = {Neural computation},
+	volume = {3},
+	number = {2},
+	pages = {246--257},
+	publisher = {MIT Press},
+	doi = {10.1162/neco.1991.3.2.246},
+	url = {https://direct.mit.edu/neco/article/3/2/246-257/5580},
+	issn = {0899-7667},
+	keywords = {},
+}
+
+@inproceedings{patki2019performance,
+	author = {Patki, Tapasya and Thiagarajan, Jayaraman J. and Ayala, Alexis and Islam, Tanzima Z.},
+	title = {Performance optimality or reproducibility: that is the question},
+	year = {2019},
+	month = {11},
+	booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+	pages = {1--30},
+	organization = {ACM},
+	location = {Dallas, TX, USA},
+	doi = {10.1145/3295500.3356217},
+	url = {https://dl.acm.org/doi/10.1145/3295500.3356217},
+	keywords = {},
+}
+
+% The official publicatino for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+@article{pedregosa2011scikitlearn,
+	author = {Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others, },
+	title = {Scikit-learn: Machine learning in {P}ython},
+	year = {2011},
+	journal = {Journal of Machine Learning Research},
+	volume = {12},
+	pages = {2825--2830},
+	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
+}
+
+@book{petitet2018hpl,
+	author = {Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack and Cleary, Andy},
+	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
+	year = {2018},
+	publisher = {Innovation Computing Laboratory, University of Tennessee},
+	keywords = {},
+}
+
+@inproceedings{petrini2003case,
+	author = {Petrini, Fabrizio and Kerbyson, Darren J. and Pakin, Scott},
+	title = {The case of the missing supercomputer performance: Achieving optimal performance on the 8,192 processors of {ASCI Q}},
+	year = {2003},
+	month = {11},
+	booktitle = {Proceedings of the 2003 ACM/IEEE Conference on Supercomputing (SC '03)},
+	pages = {55--55},
+	organization = {ACM},
+	location = {Phoenix, AZ, USA},
+	doi = {10.1145/1048935.1050204},
+	url = {https://dl.acm.org/doi/10.1145/1048935.1050204},
+	keywords = {},
+}
+
+@inproceedings{polianskii2020voronoi,
+	author = {Polianskii, Vladislav and Pokorny, Florian T},
+	title = {Voronoi Graph Traversal in High Dimensions with Applications to Topological Data Analysis and Piecewise Linear Interpolation},
+	year = {2020},
+	month = {8},
+	booktitle = {Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+	pages = {2154--2164},
+	organization = {ACM},
+	location = {Virtual Event CA USA},
+	doi = {10.1145/3394486.3403266},
+	url = {https://dl.acm.org/doi/10.1145/3394486.3403266},
+	keywords = {},
+}
+
+@article{powell1994uniform,
+	author = {Powell, Michael JD},
+	title = {The uniform convergence of thin plate spline interpolation in two dimensions},
+	year = {1994},
+	month = {6},
+	journal = {Numerische Mathematik},
+	volume = {68},
+	number = {1},
+	pages = {107--128},
+	publisher = {Springer},
+	doi = {10.1007/s002110050051},
+	url = {http://link.springer.com/10.1007/s002110050051},
+	issn = {0029-599X},
+	keywords = {},
+}
+
+@article{raissi2019physicsinformed,
+	author = {Raissi, M. and Perdikaris, P. and Karniadakis, G.E.},
+	title = {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations},
+	year = {2019},
+	month = {2},
+	journal = {Journal of Computational Physics},
+	volume = {378},
+	pages = {686--707},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.jcp.2018.10.045},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0021999118307125},
+	issn = {0021-9991},
+	keywords = {},
+}
+
+@article{rajan1994optimality,
+	author = {Rajan, V. T.},
+	title = {Optimality of the {D}elaunay triangulation in {$\R^d$}},
+	year = {1994},
+	month = {7},
+	journal = {Discrete \& Computational Geometry},
+	volume = {12},
+	number = {2},
+	pages = {189--202},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/bf02574375},
+	url = {https://link.springer.com/10.1007/BF02574375},
+	issn = {0179-5376},
+	keywords = {},
+}
+
+@article{ranjan2011computationally,
+	author = {Ranjan, Pritam and Haynes, Ronald and Karsten, Richard},
+	title = {A computationally stable approach to Gaussian process interpolation of deterministic computer simulation data},
+	year = {2011},
+	month = {11},
+	journal = {Technometrics},
+	volume = {53},
+	number = {4},
+	pages = {366--378},
+	publisher = {Taylor \& Francis},
+	doi = {10.1198/tech.2011.09141},
+	url = {http://www.tandfonline.com/doi/abs/10.1198/TECH.2011.09141},
+	issn = {0040-1706},
+	keywords = {},
+}
+
+@book{rasmussen2006gaussian,
+	author = {Rasmussen, Carl Edward and Williams, Christopher KI and others, },
+	title = {Gaussian processes for machine learning},
+	year = {2006},
+	volume = {1},
+	publisher = {The MIT Press},
+	keywords = {},
+}
+
+% The calculus of simplex gradients: a detailed analysis of simplex gradients and their properties for approximating true gradients when solving derivative-free and blackbox optimization problems
+@article{regis2015calculus,
+	author = {Regis, Rommel G.},
+	title = {The calculus of simplex gradients},
+	year = {2015},
+	month = {6},
+	journal = {Optimization Letters},
+	volume = {9},
+	number = {5},
+	pages = {845--865},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/s11590-014-0815-x},
+	url = {http://link.springer.com/10.1007/s11590-014-0815-x},
+	issn = {1862-4472},
+	keywords = {},
+}
+
+% Official publication of the scipy.stats.qmc module, which is the newly released module for performing quasi-monte carlo sampling and design-of-experiments in scipy. Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
+@article{roy2023quasimonte,
+	author = {Roy, Pamphile T. and Owen, Art B. and Balandat, Maximilian and Haberland, Matt},
+	title = {Quasi-Monte Carlo Methods in Python},
+	year = {2023},
+	month = {4},
+	journal = {Journal of Open Source Software},
+	volume = {8},
+	number = {84},
+	numpages = {5309},
+	publisher = {The Open Journal},
+	doi = {10.21105/joss.05309},
+	url = {https://joss.theoj.org/papers/10.21105/joss.05309},
+	issn = {2475-9066},
+}
+
+% Techniques and optimal sampling criteria for performing adaptive sampling to enable downstream Gaussian process regression modeling
+@article{sapsis2022optimal,
+	author = {Sapsis, Themistoklis P. and Blanchard, Antoine},
+	title = {Optimal criteria and their asymptotic form for data selection in data-driven reduced-order modelling with {Gaussian} process regression},
+	year = {2022},
+	month = {8},
+	journal = {Philosophical Transactions of the Royal Society A},
+	volume = {380},
+	number = {2229},
+	numpages = {20210197},
+	publisher = {The Royal Society},
+	doi = {10.1098/rsta.2021.0197},
+	url = {https://royalsocietypublishing.org/doi/10.1098/rsta.2021.0197},
+	issn = {1364-503X},
+}
+
+% The SMT 2.0 paper, major improvements to the open source numerical software package (in Python) pySMT for solving multidisciplinary engineering design optimization (MDO) problems, while utilizing derivatives and providing numerical stability analysis for each surrogate model class. In SMT 2.0, support is added for hierarchical and mixed variables, and major improvements have been made to the structure, completeness, and features of the SMT library.
+@article{saves2024smt,
+	author = {Saves, Paul and Lafage, Rémi and Bartoli, Nathalie and Diouane, Youssef and Bussemaker, Jasper and Lefebvre, Thierry and Hwang, John T. and Morlier, Joseph and Martins, Joaquim R.R.A.},
+	title = {SMT 2.0: A Surrogate Modeling Toolbox with a focus on hierarchical and mixed variables Gaussian processes},
+	year = {2024},
+	month = {2},
+	journal = {Advances in Engineering Software},
+	volume = {188},
+	numpages = {103571},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.advengsoft.2023.103571},
+	url = {https://www.sciencedirect.com/science/article/pii/S096599782300162X},
+	issn = {0965-9978},
+}
+
+@article{schaback1995error,
+	author = {Schaback, Robert},
+	title = {Error estimates and condition numbers for radial basis function interpolation},
+	year = {1995},
+	month = {4},
+	journal = {Advances in Computational Mathematics},
+	volume = {3},
+	number = {3},
+	pages = {251--264},
+	publisher = {Springer},
+	doi = {10.1007/BF02432002},
+	url = {http://link.springer.com/10.1007/BF02432002},
+	issn = {1019-7168},
+	keywords = {},
+}
+
+@article{schaback2008limit,
+	author = {Schaback, Robert},
+	title = {Limit problems for interpolation by analytic radial basis functions},
+	year = {2008},
+	month = {3},
+	journal = {Journal of Computational and Applied Mathematics},
+	volume = {212},
+	number = {2},
+	pages = {127--149},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.cam.2006.11.023},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0377042706007151},
+	issn = {0377-0427},
+	keywords = {},
+}
+
+@article{schulz2018tutorial,
+	author = {Schulz, Eric and Speekenbrink, Maarten and Krause, Andreas},
+	title = {A tutorial on Gaussian process regression: Modelling, exploring, and exploiting functions},
+	year = {2018},
+	month = {8},
+	journal = {Journal of Mathematical Psychology},
+	volume = {85},
+	pages = {1--16},
+	publisher = {Elsevier},
+	doi = {10.1016/j.jmp.2018.03.001},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0022249617302158},
+	issn = {0022-2496},
+	keywords = {},
+}
+
+% Extremely thorough analysis of using linear models inside a simplex for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
+@inproceedings{shewchuk2002what,
+	author = {Shewchuk, Jonathan},
+	title = {What is a good linear finite element? {I}nterpolation, conditioning, anisotropy, and quality measures},
+	year = {2002},
+	booktitle = {Proceedings of the 11th International Meshing Roundtable},
+	pages = {115--126},
+	keywords = {},
+}
+
+% The EDBO software: open source Python software for performing multiobjective bayesian optimization for chemical synthesis and molecular discovery. Links a multiobjective optimization solver with the MORDRED software for getting molecular descriptors and optimizes for the desired properties
+@article{shields2021bayesian,
+	author = {Shields, Benjamin J. and Stevens, Jason and Li, Jun and Parasram, Marvin and Damani, Farhan and Alvarado, Jesus I. M. and Janey, Jacob M. and Adams, Rryan P. and Doyle, Abigail G.},
+	title = {Bayesian reaction optimization as a tool for chemical synthesis},
+	year = {2021},
+	month = {2},
+	journal = {Nature},
+	volume = {590},
+	number = {7844},
+	pages = {89--96},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1038/s41586-021-03213-y},
+	url = {https://www.nature.com/articles/s41586-021-03213-y},
+	issn = {0028-0836},
+	git = {http://github.com/b-shields/edbo},
+}
+
+@article{shin2020error,
+	author = {Shin, Yeonjong and Zhang, Zhongqiang and Karniadakis, George Em},
+	title = {Error estimates of residual minimization using neural networks for linear PDEs},
+	year = {2020},
+	journal = {arXiv preprint arXiv:2010.08019},
+	keywords = {},
+}
+
+@article{shroff1992adaptive,
+	author = {Shroff, Gautam M. and Bischof, Christian H.},
+	title = {Adaptive condition estimation for rank-one updates of QR factorizations},
+	year = {1992},
+	month = {10},
+	journal = {SIAM Journal on Matrix Analysis and Applications},
+	volume = {13},
+	number = {4},
+	pages = {1264--1278},
+	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
+	doi = {10.1137/0613077},
+	url = {http://epubs.siam.org/doi/10.1137/0613077},
+	issn = {0895-4798},
+	keywords = {},
+}
+
+@article{shwartzziv2022tabular,
+	author = {Shwartz-Ziv, Ravid and Armon, Amitai},
+	title = {Tabular data: Deep learning is not all you need},
+	year = {2022},
+	month = {5},
+	journal = {Information Fusion},
+	volume = {81},
+	pages = {84--90},
+	publisher = {Elsevier},
+	doi = {10.1016/j.inffus.2021.11.011},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1566253521002360},
+	issn = {1566-2535},
+	keywords = {},
+}
+
+% Steve Smale's list of unsolved open problems in mathematics, and mostly algorithms, one of which is reliably finding basic solutions to linear programming problems
+@article{smale1998mathematical,
+	author = {Smale, Steve},
+	title = {Mathematical problems for the next century},
+	year = {1998},
+	month = {3},
+	journal = {The Mathematical Intelligencer},
+	volume = {20},
+	number = {2},
+	pages = {7--15},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/bf03025291},
+	url = {http://link.springer.com/10.1007/BF03025291},
+	issn = {0343-6993},
+	keywords = {},
+}
+
+% The original publication of the Sobol sequence algorithm for generating well-distributed points for in the context of good nodes for numerical integration. This is now referred to as a low-discrepancy sequence and is also used for design-of-experiments and quasi-random number generation
+@article{sobol1967distribution,
+	author = {Sobol, I. M.},
+	title = {Distribution of points in a cube and approximate evaluation of integrals},
+	year = {1967},
+	month = {1},
+	journal = {\v{Z}urnal Vy\v{c}islitel\cprime no\u{\i} Matematiki i Matemati\v{c}esko\u{\i} Fiziki},
+	volume = {7},
+	number = {4},
+	pages = {784--802},
+	publisher = {Elsevier BV},
+	doi = {10.1016/0041-5553(67)90144-9},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/0041555367901449},
+	issn = {0044-4669},
+}
+
+% The FAIR principles of data management: Scientific data should be findable, accessible, interpretable, and reproducible
+@article{stall2019make,
+	author = {Stall, Shelley and Yarmey, Lynn and Cutcher-Gershenfeld, Joel and Hanson, Brooks and Lehnert, Kerstin and Nosek, Brian and Parsons, Mark and Robinson, Erin and Wyborn, Lesley},
+	title = {Make scientific data {FAIR}},
+	year = {2019},
+	month = {6},
+	journal = {Nature},
+	volume = {570},
+	number = {7759},
+	pages = {27--29},
+	publisher = {Nature Publishing Group},
+	doi = {10.1038/d41586-019-01720-7},
+	url = {https://www.nature.com/articles/d41586-019-01720-7},
+	issn = {0028-0836},
+}
+
+% OSQP is an open source numerical software for solving quadratic programming problems from Stephen Boyd's lab
+@article{stellato2020osqp,
+	author = {Stellato, Bartolomeo and Banjac, Goran and Goulart, Paul and Bemporad, Alberto and Boyd, Stephen},
+	title = {{OSQP}: an operator splitting solver for quadratic programs},
+	year = {2020},
+	month = {12},
+	journal = {Mathematical Programming Computation},
+	volume = {12},
+	number = {4},
+	pages = {637--672},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/s12532-020-00179-2},
+	url = {http://link.springer.com/10.1007/s12532-020-00179-2},
+	issn = {1867-2949},
+}
+
+@article{strang2020solutions,
+	author = {Strang, Alexander},
+	title = {Solutions to the Minimum Variance Problem Using Delaunay Triangulation},
+	year = {2020},
+	month = {1},
+	journal = {SIAM Journal on Discrete Mathematics},
+	volume = {34},
+	number = {4},
+	pages = {2510--2531},
+	publisher = {SIAM},
+	doi = {10.1137/19m1301837},
+	url = {https://epubs.siam.org/doi/10.1137/19M1301837},
+	issn = {0895-4801},
+	keywords = {},
+}
+
+@book{strohmaier2019top,
+	author = {Strohmaier, Eric and Dongarra, Jack and Simon, Horst and Meuer, Martin},
+	title = {The Top 500 List},
+	year = {2019},
+	month = {November},
+	publisher = {\url{https://www.top500.org}, accessed April 18, 2020},
+	keywords = {},
+}
+
+@article{su1997comparison,
+	author = {Su, Peter and Drysdale, Robert L. S.},
+	title = {A comparison of sequential {D}elaunay triangulation algorithms},
+	year = {1997},
+	month = {4},
+	journal = {Computational Geometry},
+	volume = {7},
+	number = {5},
+	pages = {361--385},
+	publisher = {Elsevier BV},
+	doi = {10.1016/s0925-7721(96)00025-9},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0925772196000259},
+	issn = {0925-7721},
+	keywords = {},
+}
+
+@inproceedings{tan2009data,
+	author = {Tan, Tua Zea and Goh, Rick Sow Mong and March, Verdi and See, Simon},
+	title = {Data mining analysis to validate performance tuning practices for HPL},
+	year = {2009},
+	booktitle = {Proceedings of the 2009 IEEE International Conference on Cluster Computing and Workshops},
+	pages = {1--8},
+	organization = {IEEE},
+	location = {New Orlean, LA, USA},
+	doi = {10.1109/clustr.2009.5289175},
+	url = {http://ieeexplore.ieee.org/document/5289175/},
+	keywords = {},
+}
+
+% A benchmark data science problem from the field of computer security: robustly classifying suspicious network traffic based on metadata about the requests
+@inproceedings{tavallaee2009detailed,
+	author = {Tavallaee, Mahbod and Bagheri, Ebrahim and Lu, Wei and Ghorbani, Ali A.},
+	title = {A detailed analysis of the {KDD} {CUP} 99 data set},
+	year = {2009},
+	month = {7},
+	booktitle = {2009 IEEE Symposium on Computational Intelligence for Security and Defense Applications},
+	pages = {1--6},
+	organization = {IEEE},
+	location = {Ottawa, ON, Canada},
+	doi = {10.1109/CISDA.2009.5356528},
+	url = {http://ieeexplore.ieee.org/document/5356528/},
+}
+
+@article{thacker2010algorithm,
+	author = {Thacker, William I. and Zhang, Jingwei and Watson, Layne T. and Birch, Jeffrey B. and Iyer, Manjula A. and Berry, Michael W.},
+	title = {Algorithm 905: {SHEPPACK}: {M}odified {S}hepard algorithm for interpolation of scattered multivariate data},
+	year = {2010},
+	month = {9},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {37},
+	number = {3},
+	numpages = {34},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/1824801.1824812},
+	url = {https://dl.acm.org/doi/10.1145/1824801.1824812},
+	issn = {0098-3500},
+	keywords = {},
+}
+
+@inproceedings{uta2020big,
+	author = {Uta, Alexandru and Custura, Alexandru and Duplyakin, Dmitry and Jimenez, Ivo and Rellermeyer, Jan and Maltzahn, Carlos and Ricci, Robert and Iosup, Alexandru},
+	title = {Is big data performance reproducible in modern cloud networks?},
+	year = {2020},
+	booktitle = {Proc. 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI '20)},
+	pages = {513--527},
+	organization = {USENIX Association},
+	location = {Santa Clara, CA, USA},
+	keywords = {},
+}
+
+% The (recently open source) numerical software library SLATEC from Sandia is something of a precursor to a modern library like scipy. SLATEC provides highly optimized, numerically stable, Fortran implementations for nearly every basic numerical algorithm that one would encounter in scientific computing
+@article{vandevender1982slatec,
+	author = {Vandevender, Walter H. and Haskell, Karen H.},
+	title = {The {SLATEC} Mathematical Subroutine Library},
+	year = {1982},
+	month = {9},
+	journal = {SIGNUM Newsletter},
+	volume = {17},
+	number = {3},
+	pages = {16--21},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/1057594.1057595},
+	url = {https://dl.acm.org/doi/10.1145/1057594.1057595},
+	issn = {0163-5778},
+	keywords = {},
+}
+
+@inproceedings{vaswani2017attention,
+	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+	title = {Attention is all you need},
+	year = {2017},
+	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
+	pages = {1--11},
+	organization = {Curran Associates, Inc.},
+	location = {Long Beach, California, USA},
+	keywords = {},
+}
+
+@incollection{vershynin2015estimation,
+	author = {Vershynin, Roman},
+	title = {Estimation in high dimensions: a geometric perspective},
+	year = {2015},
+	booktitle = {Sampling Theory, a Renaissance: Compressive Sensing and Other Developments},
+	pages = {3--66},
+	publisher = {Springer},
+	keywords = {},
+}
+
+% A tutorial on how to compute Latin hypercube samples (LHS) and some basic properties and ongoing research related to design-of-experiments
+@article{viana2016tutorial,
+	author = {Viana, Felipe AC},
+	title = {A tutorial on Latin hypercube design of experiments},
+	year = {2016},
+	month = {7},
+	journal = {Quality and reliability engineering international},
+	volume = {32},
+	number = {5},
+	pages = {1975--1985},
+	publisher = {Wiley Online Library},
+	doi = {10.1002/qre.1924},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/qre.1924},
+	issn = {0748-8017},
+}
+
+% SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
+@article{virtanen2020scipy,
+	author = {{Virtanen}, Pauli and {Gommers}, Ralf and {Oliphant}, Travis E. and {Haberland}, Matt and {Reddy}, Tyler and {Cournapeau}, David and {Burovski}, Evgeni and {Peterson}, Pearu and {Weckesser}, Warren and {Bright}, Jonathan and {van der Walt}, St{\'e}fan J. and {Brett}, Matthew and {Wilson}, Joshua and {Jarrod Millman}, K. and {Mayorov}, Nikolay and {Nelson}, Andrew R.~J. and {Jones}, Eric and {Kern}, Robert and {Larson}, Eric and {Carey}, CJ and {Polat}, {\.I}lhan and {Feng}, Yu and {Moore}, Eric W. and {VanderPlas}, Jake and {Laxalde}, Denis and {Perktold}, Josef and {Cimrman}, Robert and {Henriksen}, Ian and {Quintero}, E.~A. and {Harris}, Charles R and {Archibald}, Anne M. and {Ribeiro}, Ant{\^o}nio H. and {Pedregosa}, Fabian and {van Mulbregt}, Paul and {Contributors}, {SciPy 1.0}},
+	title = {{SciPy} 1.0: {F}undamental Algorithms for Scientific Computing in {P}ython},
+	year = {2020},
+	month = {3},
+	journal = {Nature Methods},
+	volume = {17},
+	number = {3},
+	pages = {261--272},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1038/s41592-019-0686-2},
+	url = {https://www.nature.com/articles/s41592-019-0686-2},
+	issn = {1548-7091},
+}
+
+@article{wang2018numerical,
+	author = {Wang, Ruoxi and Li, Yingzhou and Darve, Eric},
+	title = {On the numerical rank of radial basis function kernels in high dimensions},
+	year = {2018},
+	month = {1},
+	journal = {SIAM Journal on Matrix Analysis and Applications},
+	volume = {39},
+	number = {4},
+	pages = {1810--1835},
+	publisher = {SIAM},
+	doi = {10.1137/17m1135803},
+	url = {https://epubs.siam.org/doi/10.1137/17M1135803},
+	issn = {0895-4798},
+	keywords = {},
+}
+
+% Open source numerical Python software pyomo.DOE, implementing model-driven design-of-experiments generation in Pyomo
+@article{wang2022pyomo.doe,
+	author = {Wang, Jialu and Dowling, Alexander W.},
+	title = {Pyomo.DOE: An open-source package for model-based design of experiments in Python},
+	year = {2022},
+	month = {12},
+	journal = {AIChE Journal},
+	volume = {68},
+	number = {12},
+	articleno = {e17813},
+	publisher = {Wiley},
+	doi = {10.1002/aic.17813},
+	url = {https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.17813},
+	issn = {0001-1541},
+}
+
+% Survey of design-of-experiments techniques and modifications for HPC system analysis, specifically related to linearly constrained and integer lattice design spaces
+@article{wang2023design,
+	author = {Wang, Yueyao and Xu, Li and Hong, Yili and Pan, Rong and Chang, Tyler H. and Lux, Thomas C. H. and Bernard, Jon and Watson, Layne T. and Cameron, Kirk W.},
+	title = {Design strategies and approximation methods for high-performance computing variability management},
+	year = {2023},
+	month = {1},
+	journal = {Journal of Quality Technology},
+	volume = {55},
+	number = {1},
+	pages = {88--103},
+	publisher = {Taylor \& Francis},
+	doi = {10.1080/00224065.2022.2035285},
+	url = {https://www.tandfonline.com/doi/full/10.1080/00224065.2022.2035285},
+	issn = {0022-4065},
+}
+
+@article{wathen2015spectral,
+	author = {Wathen, Andrew J and Zhu, Shengxin},
+	title = {On spectral distribution of kernel matrices related to radial basis functions},
+	year = {2015},
+	month = {12},
+	journal = {Numerical Algorithms},
+	volume = {70},
+	number = {4},
+	pages = {709--726},
+	publisher = {Springer},
+	doi = {10.1007/s11075-015-9970-0},
+	url = {http://link.springer.com/10.1007/s11075-015-9970-0},
+	issn = {1017-1398},
+	keywords = {},
+}
+
+% The Bowyer-Watson algorithm is one of the first algorithms for computing Delaunay triangulations in arbitrary dimensions. It is not particularly scalable, but a first step toward thinking about Delaunay triangulation in more than 3D. Was published by both Bowyer and Watson in the same issue of the same journal, with a footnote from the publisher that they both submitted at the same time and after investigation, it was determined that this was purely coincidental and no plagiarism was involved. Therefore, both papers were published together and both authors are credited equally for discovery
+@article{watson1981computing,
+	author = {Watson, David F.},
+	title = {Computing the n-dimensional {D}elaunay tessellation with application to {V}oronoi polytopes},
+	year = {1981},
+	month = {2},
+	journal = {The Computer Journal},
+	volume = {24},
+	number = {2},
+	pages = {167--172},
+	publisher = {Oxford University Press (OUP)},
+	doi = {10.1093/comjnl/24.2.167},
+	url = {https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/24.2.167},
+	issn = {0010-4620},
+	keywords = {},
+}
+
+% The latest release of HOMPACK: An open source numerical software package written in Fortran 90 for solving nonlinear and polynomial systems of equations via homotopy methods.
 @article{watson1997algorithm,
 	author = {Watson, Layne T and Sosonkina, Maria and Melville, Robert C and Morgan, Alexander P and Walker, Homer F},
 	title = {Algorithm 777: HOMPACK90: A suite of Fortran 90 codes for globally convergent homotopy algorithms},
 	year = {1997},
+	month = {12},
 	journal = {ACM Transactions on Mathematical Software (TOMS)},
 	volume = {23},
 	number = {4},
 	pages = {514--549},
 	publisher = {ACM},
+	doi = {10.1145/279232.279235},
+	url = {https://dl.acm.org/doi/10.1145/279232.279235},
+	issn = {0098-3500},
 }
+
+@article{weinan2020machine,
+	author = {Weinan, E},
+	title = {Machine learning and computational mathematics},
+	year = {2020},
+	month = {1},
+	journal = {Communications in Computational Physics},
+	volume = {28},
+	number = {5},
+	pages = {1639--1670},
+	publisher = {Global Science Press},
+	doi = {10.4208/cicp.OA-2020-0185},
+	url = {https://global-sci.com/article/79736/machine-learning-and-computational-mathematics},
+	issn = {1991-7120},
+	keywords = {},
+}
+
+% How optimization is used to autotune the configuration of the BLAS subroutines and kernels for the ATLAS project -- since most numerical software relies on BLAS, it is often prudent to spend time optimizing BLAS configurations (such as matrix block sizes, etc.) to match machine specific values (such as cache sizes, etc.) when installing on a HPC that will have a high numerical (compute bound) workload. This can be done automatically via numerical optimization, so that users can just run the ATLAS setup scripts to configure BLAS automatically if they want an optimized installation
+@article{whaley2001automated,
+	author = {Whaley, R. Clint and Petitet, Antoine and Dongarra, Jack J.},
+	title = {Automated empirical optimizations of software and the {ATLAS} project},
+	year = {2001},
+	month = {1},
+	journal = {Parallel Computing},
+	volume = {27},
+	number = {1--2},
+	pages = {3--35},
+	publisher = {Elsevier BV},
+	doi = {10.1016/s0167-8191(00)00087-9},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0167819100000879},
+	issn = {0167-8191},
+	keywords = {},
+}
+
+@article{xu2020modeling,
+	author = {Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne},
+	title = {Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
+	year = {2020},
+	month = {5},
+	journal = {Journal of Parallel and Distributed Computing},
+	volume = {139},
+	pages = {87--89},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.jpdc.2020.01.005},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0743731519302746},
+	issn = {0743-7315},
+	keywords = {},
+}
+
+@article{zhang2021understanding,
+	author = {Zhang, Chiyuan and Bengio, Samy and Hardt, Moritz and Recht, Benjamin and Vinyals, Oriol},
+	title = {Understanding Deep Learning (Still) Requires Rethinking Generalization},
+	year = {2021},
+	month = {3},
+	journal = {Communications of the ACM},
+	volume = {64},
+	number = {3},
+	pages = {107--115},
+	publisher = {Association for Computing Machinery},
+	doi = {10.1145/3446776},
+	url = {https://dl.acm.org/doi/10.1145/3446776},
+	issn = {0001-0782},
+	keywords = {},
+}
+
