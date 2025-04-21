@@ -1181,6 +1181,32 @@ pages={1843--1856}
  url = {https://proceedings.neurips.cc/paper/2021/file/11704817e347269b7254e744b5e22dac-Paper.pdf},
 }
 
+% Interesting paper on why it is generally OK to use local optimizers when
+% solving non convex optimization problems in high-dimensional spaces.  In
+% general, in high-dimensional spaces, almost every critical point will be a
+% saddle point with high probability.  Therefore, first-order methods tend to
+% perform very well on these problems as they converge quickly but are not
+% attracted to saddle points and therefore tend to find the global optimum in
+% the limit.  The analysis of the probability that a critical point will be a
+% saddle point is based on a spectral analysis of the hessian at each critical
+% point other than the global minimum/maximum -- all of the eigenvalues must be
+% positive or negative for the critical point to be a local minima / maxima,
+% and the probability of this occurring decays as the number of eigenvalues
+% grows with the dimension of the Hessian.  The authors also experimentally
+% validate these claims by extracting critical points from the loss landscapes
+% of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
+@inproceedings{dauphin2014identifying,
+ author = {Dauphin, Yann N. and Pascanu, Razvan and Gulcehre, Caglar and Cho, Kyunghyun and Ganguli, Surya and Bengio, Yoshua},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {Z. Ghahramani and M. Welling and C. Cortes and N. Lawrence and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Identifying and attacking the saddle point problem in high-dimensional non-convex optimization},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf},
+ volume = {27},
+ year = {2014}
+}
+
 % The orgiinal NSGA-III paper part 1: a multiobjective evolutionary algorithm
 % similar to NSGA-II, solving the drawback of NSGA-II performing poorly with
 % many objectives by having the user provide a collection of well-spaced
