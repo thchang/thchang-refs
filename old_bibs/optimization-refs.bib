@@ -795,6 +795,19 @@
 	issn = {1065-7339},
 }
 
+% A really thorough review of most common scalarization functions used in
+% multiobjective optimization with a focus on Bayesian optimization.  Provides
+% all scalarization functions, their equations, and a few adaptive schemes very
+% concisely, then presents numerical results on DTLZ2 benchmarks
+@inproceedings{chugh2020scalarizing,
+  title        = {Scalarizing functions in Bayesian multiobjective optimization},
+  author       = {Chugh, Tinkle},
+  booktitle    = {2020 IEEE Congress on Evolutionary Computation (CEC)},
+  pages        = {1--8},
+  year         = {2020},
+  organization = {IEEE}
+}
+
 % The Keras docs -- great and highly impactful open source Python software, needs no introduction. A simplified interface for quickly building neural networks and other deep learning models with various backends frameworks such as Tensorflow, jax, and Pytorch.
 @misc{chollet2015keras,
 	author = {Chollet, Fran\c{c}ois and others, },
@@ -1471,6 +1484,21 @@
 	url = {https://www.jmlr.org/papers/v13/fortin12a.html},
 }
 
+% A tutorial by Peter Frazier on Bayesian optimization -- not much that isn't
+% in the textbooks, except a reference where someone acknowledges the
+% perspective that traditional Bayesian optimization (in pursuit of true global
+% convergence with no localization strategy) doesn't scale well past 20
+% dimensions.  In my experience, even this would be optimistic.  I would say
+% that it usually doesn't scale well past 5-10 dimensions depending on the
+% computational budget
+@article{frazier2018tutorial,
+  author   = {Frazier, Peter I.},
+  title    = {A Tutorial on {B}ayesian Optimization},
+  year     = {2018},
+  journal  = {arXiv preprint arXiv:1807.02811},
+  url      = {http://arxiv.org/abs/1807.02811},
+}
+
 % Landmark textbook on standard design patterns in software engineering, such as builders, factories, observers, etc. Nicknamed the "Gang of Four" book on design patters
 @book{gamma1995design,
 	author = {Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John},
@@ -1883,6 +1911,26 @@
 	keywords = {},
 }
 
+% A thorough analysis of the generational distance (GD), modified generational
+% distance (GD+), and inverted generational distance (IGD) performance
+% indicators for evaluating solutions to multiobjective optimization problems.
+% I like pairing these performance indicators with the hypervolume indicator as
+% they tend to measure convergence while hypervolume is more spread focused.
+% The authors show that of the GD, IGD, and GD+ indicators, only GD+ is "Pareto
+% compliant", which we often refer to as monotonic, meaning it strictly
+% improves when a solution set is a strict superset of another.  IGD is weakly
+% monotonic in this sense, and standard GD is the worst option.  The MGD
+% equation is provided -- I have used it in some of my HPO work and it works
+% very well
+@inproceedings{ishibuchi2015modified,
+  title        = {Modified distance calculation in generational distance and inverted generational distance},
+  author       = {Ishibuchi, Hisao and Masuda, Hiroyuki and Tanigaki, Yuki and Nojima, Yusuke},
+  booktitle    = {Evolutionary Multi-Criterion Optimization: 8th International Conference, EMO 2015, Guimar{\~a}es, Portugal, March 29--April 1, 2015. Proceedings, Part II 8},
+  pages        = {110--125},
+  year         = {2015},
+  organization = {Springer}
+}
+
 % The orgiinal NSGA-III paper part 2: a multiobjective evolutionary algorithm similar to NSGA-II, solving the drawback of NSGA-II performing poorly with many objectives by having the user provide a collection of well-spaced reference points and optimizing toward those -- this paper focuses on how to handle constraints
 @article{jain2013evolutionary,
 	author = {Jain, Himanshu and Deb, Kalyanmoy},
@@ -2123,6 +2171,22 @@
 	publisher = {Wiley-Interscience [John Wiley \& Sons], New York-London-Sydney},
 }
 
+% Often credited as the first paper where the idea of Bayesian optimization (in
+% the 1D case) was proposed -- personally, I usually credit Jones with EGO
+@article{kushner1964new,
+  author   = {Kushner, H. J.},
+  title    = {A New Method of Locating the Maximum Point of an Arbitrary Multipeak Curve in the Presence of Noise},
+  journal  = {Journal of Basic Engineering},
+  volume   = {86},
+  number   = {1},
+  pages    = {97-106},
+  year     = {1964},
+  month    = {03},
+  issn     = {0021-9223},
+  doi      = {10.1115/1.3653121},
+  url      = {https://asmedigitalcollection.asme.org/fluidsengineering/article-pdf/86/1/97/5763745/97\_1.pdf}
+}
+
 % Stochastic approximation algorithm (i.e., stochastic gradient descent) and how to analyze its radius of convergence for a fixed step-size -- you can decay its step size at a square-summable but not summable rate to guarantee convergence in the limit
 @article{lai2003stochastic,
 	author = {Lai, Tze Leung},
@@ -2133,6 +2197,21 @@
 	number = {2},
 	pages = {391--406},
 	publisher = {Institute of Mathematical Statistics},
+}
+
+% HyperNOMAD is the NOMAD team's open source Python software for performing
+% hyperparameter optimization.  Last I checked, it was not yet mature enough to
+% use outside of their test problems, but I suspect improvements have been made
+% since then
+@article{lakhmiri2021hypernomad,
+  title     = {HyperNOMAD: Hyperparameter Optimization of Deep Neural Networks Using Mesh Adaptive Direct Search},
+  author    = {Lakhmiri, Dounia and Digabel, S{\'e}bastien Le and Tribes, Christophe},
+  journal   = {ACM Transactions on Mathematical Software (TOMS)},
+  volume    = {47},
+  number    = {3},
+  pages     = {1--27},
+  year      = {2021},
+  publisher = {ACM New York, NY, USA}
 }
 
 % The APOSMM Python software is a framework for implementing multistart derivative-free optimization algorithms and running them in asynchronously
