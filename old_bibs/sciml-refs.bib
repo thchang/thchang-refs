@@ -997,6 +997,24 @@
 	url = {https://arxiv.org/abs/1412.6980},
 }
 
+% The original paper defining variational autoencoders, a standard practice in
+% performing dimension reduction and training models that encode continuous
+% latent spaces.  The idea being to train and optimize an encoder neural
+% network model whose posterior is a continuous latent space to generate
+% samples in the latent space distribution based on inputs from the original
+% dataset without "losing information", then jointly train a decoder
+% model that samples the latent distribution to produce the original
+% observations.  The idea being to randomly sample new data points that look
+% like the original data.  When trained jointly, these models can also be used
+% as embedder/extractor or compression/decompression pairs.
+@inproceedings{kingma2014auto,
+  author={Kingma, Diederik P and Welling, Max},
+  title={Auto-encoding variational {B}ayes},
+  year={2014},
+  booktitle={2nd International Conference on Learning Representations (ICLR 2014)},
+  url = {https://arxiv.org/abs/1312.6114},
+}
+
 % The Klee Minty cube: A famous counterexample showing that for every pivoting strategy for the simplex method, we can construct a pathological problem where that strategy will visit every vertex of the cube before the solution. This proves that the simplex method cannot be used to solve linear programming problems in strongly polynomial time
 @article{klee1972how,
 	author = {Klee, Victor and Minty, George J.},
@@ -2032,3 +2050,21 @@
 	keywords = {},
 }
 
+% The original dropout paper, this was standard practice in training deep
+% neural networks, especially massive convolutional nets and RNNs for image
+% and language processing for a long time, prior to the invention of
+% transformers -- the idea being that you zero out the effects (and updates to)
+% a small percentage of the nodes in each layer in each iteration, in order to
+% (1) make training cheaper, (2) prevent overfitting since over reliance on
+% any individual node(s) makes the predictions brittle, and (3) redistribute
+% weights to earlier layers and avoid vanishing gradients
+@article{srivastava2014dropout,
+  title     = {Dropout: a simple way to prevent neural networks from overfitting},
+  author    = {Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
+  journal   = {The Journal of Machine Learning research},
+  volume    = {15},
+  number    = {1},
+  pages     = {1929--1958},
+  year      = {2014},
+  publisher = {JMLR. org}
+}
