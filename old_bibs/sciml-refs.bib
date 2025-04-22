@@ -2089,3 +2089,41 @@
   year      = {2014},
   publisher = {JMLR. org}
 }
+
+% Original paper on Shapley values (used to calculate SHAP scores).  The idea
+% is to interpret the importance of features to a model agonstically by making
+% predictions with (and without) every combination of features available.
+% Then, we compute the weighted average of each feature's importance by
+% calculating how much each feature improves the model performance.  This is an
+% expensive but polynomial time procedure given fixed number of features, and
+% can be used to plot the contributions.  The software is in lundberg et al
+% 2017 (github.com/shap/shap)
+@article{shapley1953value,
+  author={Shapley, Lloyd S and others},
+  title={A value for n-person games},
+  year={1953},
+  journal={Contributions to the Theory of Games},
+  volume={2},
+  number={28},
+  pages={307--317},
+  publisher={Princeton University Press Princeton},
+  url={http://www.library.fa.ru/files/Roth2.pdf#page=39}
+}
+
+% Official citation for the open source numerical Python software for
+% evaluating SHAP scores for interpreting feature importance in a model
+% agnostic way for various machine learning (primarily scientific machine
+% learning) applications.  Very popular in many fields, including finance,
+% computational medicine, etc.  github.com/shap/shap  Based on the original
+% publication by Shapley + some additional methods and improvements proposed by
+% the authors and previous works
+@inproceedings{lundberg2017,
+title = {A Unified Approach to Interpreting Model Predictions},
+author = {Lundberg, Scott M and Lee, Su-In},
+booktitle = {Advances in Neural Information Processing Systems 30},
+editor = {I. Guyon and U. V. Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+pages = {4765--4774},
+year = {2017},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf}
+}
