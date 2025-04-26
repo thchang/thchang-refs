@@ -50,14 +50,6 @@
 	keywords = {},
 }
 
-@inproceedings{bagheri2017comparing,
-	author = {Bagheri, Samineh and Konen, Wolfgang and Bäck, Thomas},
-	title = {Comparing Kriging and Radial Basis Function Surrogates},
-	year = {2017},
-	month = {10},
-	keywords = {},
-}
-
 % BoTorch: Modular bayesian optimization framework and numerical software package. Uses Ax for deploying A/B testing applications. Uses pytorch for autograd, and uses monte carlo sampling and kernel reparameterization tricks in order to efficiently evaluate composite objective and acquisition functions and non gaussian kernels. Great example of high-impact open source numerical software and optimization software
 @inproceedings{balandat2020botorch,
 	author = {Balandat, Maximilian and Karrer, Brian and Jiang, Daniel and Daulton, Samuel and Letham, Ben and Wilson, Andrew G and Bakshy, Eytan},
@@ -71,6 +63,10 @@
 	url = {https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf},
 }
 
+% An analysis showing that the condition number of the RBF (and GP)
+% interpolation matrices grow (and lowering bounding them) as the minimum
+% separation distance shrinks.  I.e., when data gets too dense, the RBF
+% conditioning is guaranteed to become arbitrarily bad.
 @article{ball1992sensitivity,
 	author = {Ball, Keith and Sivakumar, Natarajan and Ward, Joseph D},
 	title = {On the sensitivity of radial basis interpolation to minimal data separation distance},
@@ -113,22 +109,6 @@
 	doi = {10.1038/s41597-022-01710-x},
 	url = {https://www.nature.com/articles/s41597-022-01710-x},
 	issn = {2052-4463},
-}
-
-@article{beckman2008benchmarking,
-	author = {Beckman, Pete and Iskra, Kamil and Yoshii, Kazutomo and Coghlan, Susan and Nataraj, Aroon},
-	title = {Benchmarking the effects of operating system interference on extreme-scale parallel machines},
-	year = {2008},
-	month = {3},
-	journal = {Cluster Computing},
-	volume = {11},
-	number = {1},
-	pages = {3--16},
-	publisher = {Springer Science and Business Media LLC},
-	doi = {10.1007/s10586-007-0047-2},
-	url = {http://link.springer.com/10.1007/s10586-007-0047-2},
-	issn = {1386-7857},
-	keywords = {},
 }
 
 % Publication showing that (a) interpolating classification and regression data in order to make predictions is often a reasonable thing to do especially in high dimensions (b) Delaunay interpolation is the correct way to do so and (c) using Delaunay interpolation on high dimensional noisy classification data yields predictions whose misclassification risk can be bounded by twice the Bayes risk (theoretical lowest possible risk for the data given) in the limit as the dimension increases
@@ -216,6 +196,19 @@
 	keywords = {},
 }
 
+% The famous textbook on convex optimization (from which I learned most
+% concepts) covering concepts such as basic convexity definitions and theorems,
+% basic algorithms and optimality conditions, handling constraints, Lagrangian
+% duality, multiobjective optimization basics, gradient descent and newton's
+% method, sequential quadratic programming, linear programming, and a few
+% applications and modeling basics
+@book{boyd2004convex,
+  title={Convex optimization},
+  author={Boyd, Stephen P and Vandenberghe, Lieven},
+  year={2004},
+  publisher={Cambridge university press}
+}
+
 % The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
 @misc{bradbury2018jax,
 	author = {Bradbury, J. and others, },
@@ -225,6 +218,15 @@
 	url = {http://github.com/google/jax},
 }
 
+% The new classic textbook on geometric deep learning -- this book (by the
+% creator of the field) covers how all of representation learning can be broken
+% down into exploiting symmetries, stabilities, and invariances in data,
+% through the lens of group theory.  For example, a convolutional layer
+% exploits a symmetry between equivalent groups of images; and a max pooling
+% layer exploits a scale invariance in image size/resolution; and when we talk
+% about feature encodings, we are often looking for mappings that maintain
+% stability (i.e., similar feature vectors remain close together after
+% encoding).
 @misc{bronstein2021geometric,
 	author = {Bronstein, Michael M. and Bruna, Joan and Cohen, Taco and Veličković, Petar},
 	title = {Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges},
@@ -234,6 +236,9 @@
 	keywords = {},
 }
 
+% Large review paper covering all aspects of RBFs, their interpolation error
+% bounds, their convergence rates, and numerical computation for various kernel
+% functions.
 @article{buhmann2000radial,
 	author = {Buhmann, M. D.},
 	title = {Radial basis functions},
@@ -248,7 +253,10 @@
 	issn = {0962-4929},
 }
 
-% Key findings from the VarSys project on modeling HPC performance variability with surrogates and RSM, and using these models to inform decision making through visualizations, optimization, and otherwise -- a good real-world example of how modeling, interpolation, optimization, and data science can come together to produce actionable results (in the field of HPC performance tuning)
+% Key findings from the VarSys project on modeling HPC performance variability
+% with surrogates, design of experiments, statistical modeling, and response
+% surface modeling, and using these models to inform decision making through
+% visualizations, optimization, and otherwise -- a good real-world example of how modeling, interpolation, optimization, and data science can come together to produce actionable results (in the field of HPC performance tuning)
 @article{cameron2019moana,
 	author = {Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo Ananth  Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas and Hong, Yili and Watson, Layne T. and Butt, Ali R.},
 	title = {{MOANA}: {M}odeling and analyzing {I/O} variability in parallel system experimental design},
@@ -264,6 +272,12 @@
 	issn = {1045-9219},
 }
 
+% An experimental and statistical study (very similar to the VarSys project) on
+% measuring and modeling the performance variability in modern storage stacks.
+% They concluded that block allocation strategies cause performance variability
+% in Ext4-HDD configurations, based on statistical techniques such as Latin
+% hypercube design of experiments over their parameter space and computing the
+% relative standard deviations at each configuration.
 @inproceedings{cao2017performance,
 	author = {Cao, Zhen and Tarasov, Vasily and Raman, Hari Prasath and Hildebrand, Dean and Zadok, Erez},
 	title = {On the performance variation in modern storage stacks},
@@ -275,7 +289,11 @@
 	keywords = {},
 }
 
-% %%%% VarSys references
+% Official IOZone reference -- this benchmarking software can be used to
+% measure the read, write, strided-read, strided-write, first read, first
+% write, etc throughputs on a given system.  In the VarSys project, we used
+% this to measure IO performance (which we then used to calculate performance
+% variability) for various system configurations on our Moana cluster.
 @misc{capps2016iozone,
 	author = {Capps, Don and Capps, Carol and Sawyer, Darren and Lohr, Jerry and Dowding, George and Little, Gary and Capps, Terry and Miller, Robin and Faibish, Sorin and Wang, Raymond and Waghmare, Tanmay and Zhang, Yansheng and Miller, Vernon and Principe, Nick and Jones, Zach and Bapat, Udayan and Norcott, William and Crawford, Isom and Collins, Kirby and Slater, Al and Rhine, Scott and Wisner, Mike and Goss, Ken and Landherr, Steve and Smith, Brad and Kelly, Mark and CYR, Alain and Dunlap, Randy and Montague, Mark and Million, Dan and Brebner, Gavin and Zucconi, Jean-Marc and Blomberg, Jeff and Halevy, Benny and Boone, Dave and Habbinga, Erik and Strecker, Kris and Wong, Walter and Root, Joshua and Bacchella, Fabrice and Xue, Zhenghua and Li, Qin and Sawyer, Darren and Bojaxhi, Vangel and England, Ben and Lapa, Vikentsi and Skidanov, Alexey},
 	title = {{IOzone} Filesystem Benchmark},
@@ -286,6 +304,15 @@
 	keywords = {},
 }
 
+% An algorithm paper on how to compute the umbrella neighborhood of a single
+% point in the Delaunay triangulation.  The idea is to sample a single vertex,
+% generate a single simplex using DelaunaySparse, then pivot across open facets
+% without dropping the center point.  We pivot until we've closed all open
+% facets (therefore, we need to keep track of all open facets).  This algorithm
+% works beautifully for points in general position, but often fails for
+% degenerate sets since we may sample points from conflicting triangulations,
+% therefore failing to close all facets.  It was abandoned in favor of
+% computing the Delaunay graph when creating VTMOP.
 @inproceedings{chang2018computing,
 	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Tyler C. H. and Raghvendra, Sharath and Li, Bo and Xu, Li and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Computing the umbrella neighbourhood of a vertex in the {D}elaunay triangulation and a single {V}oronoi cell in arbitrary dimension},
@@ -354,6 +381,14 @@
 	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
 }
 
+% A great article on the optimality of Delaunay triangulations for
+% interpolation.  The authors show that the Delaunay triangulation can be
+% equivalently defined as the interpolation mesh that minimizes interpolation
+% error for the perfect quadratic function f(x) = <x, x>.  Then, they explore
+% how we can define new metrics to yield a new Delaunay triangulation that is
+% optimal for an arbitrary function.  Ultimatey, it is hard to compute such
+% Delaunay triangulations, so they explore relaxations and definitions of
+% "nearly optimal" Delaunay triangulations.
 @article{chen2004optimal,
 	author = {Chen, Long and Xu, Jin-chao},
 	title = {Optimal {D}elaunay triangulations},
@@ -365,6 +400,14 @@
 	keywords = {},
 }
 
+% The publication for the XGBoost numerical software. XGBoost can be used to
+% efficiently compute optimized gradient boosted decision trees on massive
+% datasets via a fully-distributed algorithm that can be configured to run on
+% Hadoop, SGE, and MPI.  It can also be run on NVIDIA GPUs using CUDA.  The
+% software is fully open-source and written in highly optimized C++, though
+% everyone uses it through its Python interface.  The download is available at
+% github.com/dmlc/xgboost.  Most data science competition winners use XGBoost
+% for tabular data
 @inproceedings{chen2016xgboost,
 	author = {Chen, Tianqi and Guestrin, Carlos},
 	title = {{XGBoost}: A Scalable Tree Boosting System},
@@ -430,7 +473,10 @@
 	keywords = {},
 }
 
-% %%%% NN error refs
+% A paper on the similarities and differences between kriging and Gaussian
+% processes -- in practice, I see very little difference other than that people
+% often perform more performance optimizations on Gaussian processes and
+% consider Kriging to be a bit more strict
 @article{christianson2022traditional,
 	author = {Christianson, Ryan B and Pollyea, Ryan M and Gramacy, Robert B},
 	title = {Traditional kriging versus modern Gaussian processes for large-scale mining data},
@@ -498,7 +544,7 @@
 }
 
 % A common (standard) textbook on computational geometry covering all basic definitions, data structures, algorithms, proofs of correctness, time and space complexity analyses, and applications. This is the textbook that I used in grad school when learning computational geometry
-@book{de berg2008computational,
+@book{deberg2008computational,
 	author = {de Berg, Mark and Cheong, Otfried and van Kreveld, Marc and Overmars, Mark},
 	title = {Computational Geometry: Algorithms and Applications},
 	year = {2008},
@@ -508,7 +554,10 @@
 	keywords = {},
 }
 
-@article{de ryck2022generic,
+% A framework for deriving error bounds for neural networks in scientific
+% machine learning applications, specifically for physics-informed neural
+% networks (PINNs)
+@article{deryck2022generic,
 	author = {De Ryck, Tim and Mishra, Siddhartha},
 	title = {Generic bounds on the approximation error for physics-informed (and) operator learning},
 	year = {2022},
@@ -518,6 +567,8 @@
 	keywords = {},
 }
 
+% An emulation framework for HPC performance modeling and predicting true
+% performance under variability.
 @inproceedings{de2008tracedriven,
 	author = {De, Pradipta and Kothari, Ravi and Mann, Vijay},
 	title = {A trace-driven emulation framework to predict scalability of large clusters in presence of {OS} jitter},
@@ -532,6 +583,10 @@
 	keywords = {},
 }
 
+% A review paper on how HPC performance variability causes issues at scale in
+% Google's data centers, particularly, since requests generally have to wait on
+% the longest running process (i.e., the performance variability "tail") and
+% so the mean performance time can be somewhate meaningless
 @article{dean2013tail,
 	author = {Dean, Jeffrey and Barroso, Luiz Andr{\'e}},
 	title = {The tail at scale},
@@ -602,6 +657,9 @@
 	url = {https://openreview.net/forum?id=HJxyZkBKDr},
 }
 
+% Summary article on the history of the LINPACK of benchmark (the standard
+% benchmark for HPC performance tuning and evaluation), which defines the HPC
+% Top 500 list
 @article{dongarra2003linpack,
 	author = {Dongarra, Jack J. and Luszczek, Piotr and Petitet, Antoine},
 	title = {The {LINPACK} benchmark: past, present, and future},
@@ -630,6 +688,8 @@
 	url = {http://jmlr.org/papers/v12/duchi11a.html},
 }
 
+% An example of using genetic algorithms for autotuning HPC libraries (such as
+% BLAS and LAPACK)
 @inproceedings{dunlop2008use,
 	author = {Dunlop, Dominic and Varrette, Sebastien and Bouvry, Pascal},
 	title = {On the use of a genetic algorithm in high performance computing benchmark tuning},
@@ -655,54 +715,12 @@
 	keywords = {},
 }
 
-@article{fasshauer2012stable,
-	author = {Fasshauer, Gregory E and McCourt, Michael J},
-	title = {Stable evaluation of Gaussian radial basis function interpolants},
-	year = {2012},
-	month = {1},
-	journal = {SIAM Journal on Scientific Computing},
-	volume = {34},
-	number = {2},
-	pages = {A737--A762},
-	publisher = {SIAM},
-	doi = {10.1137/110824784},
-	url = {http://epubs.siam.org/doi/10.1137/110824784},
-	issn = {1064-8275},
-	keywords = {},
-}
-
-@article{fornberg2008stable,
-	author = {Fornberg, Bengt and Piret, C{\'e}cile},
-	title = {A stable algorithm for flat radial basis functions on a sphere},
-	year = {2008},
-	month = {1},
-	journal = {SIAM Journal on Scientific Computing},
-	volume = {30},
-	number = {1},
-	pages = {60--80},
-	publisher = {SIAM},
-	doi = {10.1137/060671991},
-	url = {http://epubs.siam.org/doi/10.1137/060671991},
-	issn = {1064-8275},
-	keywords = {},
-}
-
-@article{fornberg2011stable,
-	author = {Fornberg, Bengt and Larsson, Elisabeth and Flyer, Natasha},
-	title = {Stable computations with Gaussian radial basis functions},
-	year = {2011},
-	month = {1},
-	journal = {SIAM Journal on Scientific Computing},
-	volume = {33},
-	number = {2},
-	pages = {869--892},
-	publisher = {SIAM},
-	doi = {10.1137/09076756x},
-	url = {http://epubs.siam.org/doi/10.1137/09076756X},
-	issn = {1064-8275},
-	keywords = {},
-}
-
+% The famous sweepline algorithm for computing Delaunay triangulations and
+% Voronoi tesselations in 2D.  Works by computing a "beachline" of parabolas
+% whose focii are the points on the current boundary of the Delaunay
+% triangulation.  Any simplices in the triangulation beyond the beachline are
+% "finalized" and those vertices need not be considered when adding new points
+% into the triangulation.  Results in a O(n log n) sweepline algorithm
 @article{fortune1987sweepline,
 	author = {Fortune, Steven},
 	title = {A sweepline algorithm for {V}oronoi diagrams},
@@ -741,12 +759,40 @@
 	isbn = {978-1108425780},
 }
 
+% Introducing a Delaunay density diagnostic -- using the Delaunay interpolant
+% to calculate whether they have enough data to resolve the geometry of a
+% problem for interpolation in the context of SciML.  Essentially, they use
+% DelaunaySparse to make predictions and slowly add data.  Once they have
+% enough data, the predictions begin converging at a linear rate.  Then they
+% have enough data to use whatever method they want to solve the problem
 @misc{gillette2022datadriven,
 	author = {Gillette, Andrew and Kur, Eugene},
 	title = {Data-driven geometric scale detection via Delaunay interpolation},
 	year = {2022},
 	booktitle = {arXiv math.NA},
 	keywords = {},
+}
+
+% Open source numerical software for the Delaunay density diagnostic -- using
+% the Delaunay interpolant to calculate whether they have enough data to
+% resolve the geometry of a problem for interpolation in the context of SciML.
+% Essentially, they use DelaunaySparse to make predictions and slowly add data.
+% Once they have enough data, the predictions begin converging at a linear
+% rate.  Then they have enough data to use whatever method they want to solve
+% the problem
+@article{gillette2024algorithm,
+author = {Gillette, Andrew and Kur, Eugene},
+title = {Algorithm 1049: The Delaunay Density Diagnostic},
+year = {2024},
+publisher = {Association for Computing Machinery},
+volume = {50},
+number = {4},
+issn = {0098-3500},
+url = {https://doi.org/10.1145/3700134},
+doi = {10.1145/3700134},
+journal = {ACM Trans. Math. Softw.},
+articleno = {24},
+numpages = {21},
 }
 
 % Online paper with interactive visualizations explaining what Nesterov's momentum is and how it works intuitively by smoothing out optimization sample paths and preventing oscillations in the optimizer that occur do to poor problem conditioning. Then, they show how the problem conditioning appears as an often ignored constant in the convergence rate of gradient descent. All this is to show intuitively and mathematically that gradient descent with Nesterov's momentum will convergence faster in practice for ill-conditioned problems
@@ -792,6 +838,10 @@
 	issn = {0893-6080},
 }
 
+% An interesting analysis by Bobby Gramacy on how adding a "nugget" (i.e., a
+% small perturbation \varepsilon I to the diagonal of a matrix results in
+% vastly improved numerical stability and therefore performance when modeling
+% data science and other approximation problems via Gaussian processes
 @article{gramacy2012cases,
 	author = {Gramacy, Robert B. and Lee, Herbert K. H.},
 	title = {Cases for the nugget in modeling computer experiments},
@@ -808,6 +858,10 @@
 	keywords = {},
 }
 
+% An error analysis of ReLU multilayer perceptrons (MLPs).  Provides lower
+% bounds on approximation error for feed-forward neural networks with ReLU
+% activation functions.  A good step in SciML, but we typically want upper
+% bounds not lower bounds in practice
 @article{guhring2020error,
 	author = {G{\"u}hring, Ingo and Kutyniok, Gitta and Petersen, Philipp},
 	title = {Error bounds for approximations with deep ReLU neural networks in W s, p norms},
@@ -870,6 +924,11 @@
 	issn = {0028-0836},
 }
 
+% The official CGAL User Guide docs page for computing high-dimensional convex
+% hulls and Delaunay triangulations. CGAL is a standard numerical software
+% package for using computational geometry data structures and algorithms in
+% perfect precision (via symbolic arithmetic). CGAL is a header-only open
+% source C++ library
 @incollection{hert2020convex,
 	author = {Hert, Susan and Seel, Michael},
 	title = {{dD} Convex Hulls and {D}elaunay Triangulations},
@@ -897,7 +956,11 @@
 	issn = {1867-2949},
 }
 
-% %% Misc ML refs
+% An analysis of how adversarial examples for neural network and other AI
+% models are typically indicative of the model using highly predictive but
+% brittle features to make predictions -- i.e., features that are highly
+% predictive but nevertheless not robust enough to use for actually making
+% predictions
 @inproceedings{ilyas2019adversarial,
 	author = {Ilyas, Andrew and Santurkar, Shibani and Tsipras, Dimitris and Engstrom, Logan and Tran, Brandon and Madry, Aleksander},
 	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
@@ -960,6 +1023,11 @@
 	publisher = {Springer},
 }
 
+% One of the earliest applications of DelunaySparse: predicting oblique shocks
+% in supersonic flows for aerospace engineering applications.  This is also a
+% great example of an early example of scientific machine learning since the
+% authors were also using neural networks and other more modern AI methods to
+% make predictions
 @inproceedings{jrad2019selflearning,,
 	author = {Jrad, Mohamed and Kapania, Rakesh K. and Schetz, Joseph A. and Watson, Layne T.},
 	title = {Self-Learning, Adaptive Software for Aerospace Engineering Applications: Example of Oblique Shocks in Supersonic Flow},
@@ -1026,6 +1094,10 @@
 	keywords = {},
 }
 
+% A counter example showing that the worst-case size of the Delaunay
+% triangulation and Voronoi diagram is always exponential in the dimension.
+% The example is somewhat similar to the Klee-Minty cube from linear
+% programming.
 @article{klee1980complexity,
 	author = {Klee, Victor},
 	title = {On the complexity of d-dimensional {V}oronoi diagrams},
@@ -1042,23 +1114,16 @@
 	keywords = {},
 }
 
+% The original paper on neural operators, a now ubiquitous method in scientific
+% machine learning where an operator (i.e., for solving PDEs) between infinite
+% dimensional function spaces is learned by composing integral operator basis
+% functions and regular ReLU layers
 @article{kovachki2021neural,
 	author = {Kovachki, Nikola B. and Li, Zongyi and Liu, Burigede and Azizzadenesheli, Kamyar and Bhattacharya, Kaushik and Stuart, Andrew M. and Anandkumar, Anima},
 	title = {Neural Operator: Learning Maps Between Function Spaces},
 	year = {2021},
 	journal = {CoRR},
 	volume = {abs/2108.08481},
-	keywords = {},
-}
-
-@inproceedings{kramer2003performance,
-	author = {Kramer, William T. and Ryan, Clint},
-	title = {Performance variability of highly parallel architectures},
-	year = {2003},
-	booktitle = {Proceedings of the International Conference on Computational Science},
-	pages = {560--569},
-	organization = {Springer},
-	location = {Melbourne, Australia},
 	keywords = {},
 }
 
@@ -1073,6 +1138,10 @@
 	isbn = {0-471-55604-1},
 }
 
+% A paper on the Delaunay triangulation learner -- an alternative to ReLU
+% multilayer perceptrons where they fit a Delaunay triangulation to a small set
+% of nodes and then train the response values of those nodes to make the
+% Delaunay interpolant match the data
 @inproceedings{liu2019nonparametric,
 	author = {Liu, Yehong and Yin, Guosheng},
 	title = {Nonparametric functional approximation with {D}elaunay triangulation learner},
@@ -1098,6 +1167,8 @@
 	url = {https://easychair.org/publications/preprint/ztfj},
 }
 
+% Fitting nonparametric distribution models by interpolating the cumulative
+% distribution functions
 @inproceedings{lux2018nonparametric,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Nonparametric distribution models for predicting and managing computational performance variability},
@@ -1112,6 +1183,10 @@
 	keywords = {},
 }
 
+% Using various interpolation, neural networks, and other scientific machine
+% learning methods to predict and model HPC performance based on system
+% configuration parameters -- explores Delaunay interpolation, support vector
+% regressors, Shepard's method, and multilayer perceptrons
 @inproceedings{lux2018predictive,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Predictive modeling of {I/O} characteristics in high performance computing systems},
@@ -1123,6 +1198,11 @@
 	keywords = {},
 }
 
+% Error bounds for piecewise linear interpolation within a simplex (i.e.,
+% Delaunay interpolation error bounds) for scattered data.  Also, critically,
+% empirical evidence that you can just interpolate noisy data and it does
+% just as well as true regression in high dimensions.  First hand evidence that
+% feeds my opinion that "overfitting is a lie"
 @article{lux2021interpolation,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Interpolation of sparse high-dimensional data},
@@ -1139,26 +1219,17 @@
 	keywords = {},
 }
 
+% A thorough foundation on analysis of RBF interpolant error bounds, through
+% the lens of the KRHS
 @article{manton2015primer,
-	author = {Manton, Jonathan H and Amblard, Pierre-Olivier and others, },
-	title = {A primer on reproducing kernel hilbert spaces},
+	author = {Manton, Jonathan H and Amblard, Pierre-Olivier and others},
+	title = {A primer on reproducing kernel {H}ilbert spaces},
 	year = {2015},
 	journal = {Foundations and Trends{\textregistered} in Signal Processing},
 	volume = {8},
 	number = {1--2},
 	pages = {1--126},
 	publisher = {Now Publishers, Inc.},
-	keywords = {},
-}
-
-@inproceedings{maricq2018taming,
-	author = {Maricq, Aleksander and Duplyakin, Dmitry and Jimenez, Ivo and Maltzahn, Carlos and Stutsman, Ryan and Ricci, Robert},
-	title = {Taming performance variability},
-	year = {2018},
-	booktitle = {Proceedings of the 13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18)},
-	pages = {409--425},
-	organization = {USENIX Association},
-	location = {Carlsbad, CA, USA},
 	keywords = {},
 }
 
@@ -1179,6 +1250,8 @@
 	keywords = {},
 }
 
+% How to construct meshes whose size only grows linearly (expected space) with
+% the dimension
 @inproceedings{miller2008linearsize,
 	author = {Miller, G. and Phillips, T. and Sheehy, D.},
 	title = {Linear-size meshes},
@@ -1199,22 +1272,6 @@
 	keywords = {},
 }
 
-@article{moody1989fast,
-	author = {Moody, John and Darken, Christian J.},
-	title = {Fast Learning in Networks of Locally-Tuned Processing Units},
-	year = {1989},
-	month = {6},
-	journal = {Neural Computation},
-	volume = {1},
-	number = {2},
-	pages = {281--294},
-	publisher = {MIT Press},
-	doi = {10.1162/neco.1989.1.2.281},
-	url = {https://direct.mit.edu/neco/article/1/2/281-294/5488},
-	issn = {0899-7667},
-	keywords = {},
-}
-
 % MORDRED: A 3D molecular descriptor calculator, which is widely used for embedding molecules into a continuous latent space (parameterized by their descriptors) which can be used to solve chemical property optimization problems. The MORDRED software is available open source in Python.
 @article{moriwaki2018mordred,
 	author = {Moriwaki, Hirotomo and Tia, Yu-Shi and Kawashita, Norihito and Takagi, Tatsuya},
@@ -1232,6 +1289,9 @@
 	issn = {1758-2946},
 }
 
+% An early paper on simplex walks for locating which element of a Delaunay
+% triangulation contains a point (after the triangulation has already been
+% precomputed and stored)
 @article{mucke1999fast,
 	author = {M{\"u}cke, Ernst P. and Saias, Isaac and Zhu, Binhai},
 	title = {Fast randomized point location without preprocessing in two- and three-dimensional {D}elaunay triangulations},
@@ -1254,22 +1314,9 @@
 	isbn = {9781118916032},
 }
 
-@article{narcowich1991norms,
-	author = {Narcowich, Francis J and Ward, Joseph D},
-	title = {Norms of inverses and condition numbers for matrices associated with scattered data},
-	year = {1991},
-	month = {1},
-	journal = {Journal of Approximation Theory},
-	volume = {64},
-	number = {1},
-	pages = {69--94},
-	publisher = {Elsevier},
-	doi = {10.1016/0021-9045(91)90087-q},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/002190459190087Q},
-	issn = {0021-9045},
-	keywords = {},
-}
-
+% Official docs and reference for the Matlab computational geometry toolbox,
+% which includes all of Matlab's built-in tools for computing geometric
+% algorithms and structures, including Delaunay triangulations
 % Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
 @inproceedings{nesterov1983method,
 	author = {Nesterov, Yurii},
@@ -1306,6 +1353,10 @@
 	issn = {0022-3239},
 }
 
+% An early review paper on methods and algorithms in "geometric learning",
+% i.e., a form of topological data analysis that focuses on the usage of
+% geometric algorithms and modeling for machine learning and data science
+% applications
 @article{omohundro1990geometric,
 	author = {Omohundro, Stephen M.},
 	title = {Geometric learning algorithms},
@@ -1322,6 +1373,10 @@
 	keywords = {},
 }
 
+% Official docs and reference for the Matlab computational geometry toolbox
+% (numerical software), which includes all of Matlab's built-in tools for
+% computing geometric algorithms and structures, including Delaunay
+% triangulations
 @techreport{papazafeiropoulos2014matlab,
 	author = {Papazafeiropoulos, George},
 	title = {{MATLAB} Computational Geometry Toolbox version 1.2},
@@ -1333,6 +1388,10 @@
 	keywords = {},
 }
 
+% Original definition of RBF networks, an early form of neural networks that
+% focused on the usage of combining RBF basis functions.  These networks are
+% not used much anymore, although occasionally still come up in the context of
+% scientific machine learning theory and proofs
 @article{park1991universal,
 	author = {Park, Jooyoung and Sandberg, Irwin W},
 	title = {Universal approximation using radial-basis-function networks},
@@ -1370,20 +1429,6 @@
     url = {https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2829845/patel\_2025\_ic\_240355\_1738013025.0942.pdf},
 }
 
-@inproceedings{patki2019performance,
-	author = {Patki, Tapasya and Thiagarajan, Jayaraman J. and Ayala, Alexis and Islam, Tanzima Z.},
-	title = {Performance optimality or reproducibility: that is the question},
-	year = {2019},
-	month = {11},
-	booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
-	pages = {1--30},
-	organization = {ACM},
-	location = {Dallas, TX, USA},
-	doi = {10.1145/3295500.3356217},
-	url = {https://dl.acm.org/doi/10.1145/3295500.3356217},
-	keywords = {},
-}
-
 % The official publicatino for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
 @article{pedregosa2011scikitlearn,
 	author = {Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others, },
@@ -1395,6 +1440,11 @@
 	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
 }
 
+% The official handbook and user's manual for the high-performance LINPACK
+% benchmark (HPL) describing how to set-up and run the HPC performance tuning
+% benchmark on distributed-memory systems, what problem it solves, what values
+% the config file sets, and what are the rules for defining a solver for the
+% problem and having it still count toware the Top 500 list
 @book{petitet2018hpl,
 	author = {Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack and Cleary, Andy},
 	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
@@ -1403,6 +1453,8 @@
 	keywords = {},
 }
 
+% A case report from configuring a Los Alamos HPC, where real-world performance
+% ended up being much lower than expected due to performance variability
 @inproceedings{petrini2003case,
 	author = {Petrini, Fabrizio and Kerbyson, Darren J. and Pakin, Scott},
 	title = {The case of the missing supercomputer performance: Achieving optimal performance on the 8,192 processors of {ASCI Q}},
@@ -1417,6 +1469,9 @@
 	keywords = {},
 }
 
+% A novel traversal algorithm for high-dimensional Vornoi graphs (or
+% equivalently, a simplex walk algorithm for high-dimensional Delaunay
+% triangulations)
 @inproceedings{polianskii2020voronoi,
 	author = {Polianskii, Vladislav and Pokorny, Florian T},
 	title = {Voronoi Graph Traversal in High Dimensions with Applications to Topological Data Analysis and Piecewise Linear Interpolation},
@@ -1431,6 +1486,8 @@
 	keywords = {},
 }
 
+% A thorough analysis and review article by Powell on how to bound the error of
+% thin-plate spline (TPS) RBF interpolants for scattered data
 @article{powell1994uniform,
 	author = {Powell, Michael JD},
 	title = {The uniform convergence of thin plate spline interpolation in two dimensions},
@@ -1447,6 +1504,10 @@
 	keywords = {},
 }
 
+% Official publication where PINNs (physics-informed neural networks) were
+% first defined by Karniadakis' lab at Brown.  Sometimes credited with starting
+% the field of scientific machine learning (SciML) -- or at least boosting its
+% popularity to the main stream
 @article{raissi2019physicsinformed,
 	author = {Raissi, M. and Perdikaris, P. and Karniadakis, G.E.},
 	title = {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations},
@@ -1462,6 +1523,10 @@
 	keywords = {},
 }
 
+% An analysis on whether and how Delaunay triangulations can be optimal in
+% higher dimensional spaces, given that many early optimality conditions had to
+% do with two dimensions (i.e., self-centeredness of elements and minimizing
+% the sum-of-squared edge lengths in the graph only apply in 2D)
 @article{rajan1994optimality,
 	author = {Rajan, V. T.},
 	title = {Optimality of the {D}elaunay triangulation in {$\R^d$}},
@@ -1478,6 +1543,10 @@
 	keywords = {},
 }
 
+% Attempting to make Gaussian process interpolation (i.e., Kriging) numerically
+% stable as the minimum pairwise distance between points shrinks.  In
+% particular, they propose a lower bound on the nugget that must be added to
+% the diagonal to guarantee a sufficient distance to singularity
 @article{ranjan2011computationally,
 	author = {Ranjan, Pritam and Haynes, Ronald and Karsten, Richard},
 	title = {A computationally stable approach to Gaussian process interpolation of deterministic computer simulation data},
@@ -1494,6 +1563,10 @@
 	keywords = {},
 }
 
+% The book that scipy and scikit-learn cite when it comes to Gaussian process
+% regression fundamentals and algorithms.  It's a good thorough book, and I
+% find some of the error bound derivations to be useful, but I generally prefer
+% Garnet's book
 @book{rasmussen2006gaussian,
 	author = {Rasmussen, Carl Edward and Williams, Christopher KI and others, },
 	title = {Gaussian processes for machine learning},
@@ -1567,6 +1640,14 @@
 	issn = {0965-9978},
 }
 
+% Some thorough analysis on upper and lower error bounds for RBF interpolants,
+% which ultimately yield the famous "uncertainty princple for RBFs" -- i.e., a
+% large shape parameter is needed for accuracy but a small shape parameter is
+% needed for solvability of the resulting RBF system.  Both are not possible,
+% so you cannot have accuracy and solvability at once.  Generally, the author
+% recommends making the parameter as large as possible without causing
+% singularity, a tradeoff that is often optimized in modern Gaussian process
+% implementations via L-BFGS-B.
 @article{schaback1995error,
 	author = {Schaback, Robert},
 	title = {Error estimates and condition numbers for radial basis function interpolation},
@@ -1580,37 +1661,6 @@
 	doi = {10.1007/BF02432002},
 	url = {http://link.springer.com/10.1007/BF02432002},
 	issn = {1019-7168},
-	keywords = {},
-}
-
-@article{schaback2008limit,
-	author = {Schaback, Robert},
-	title = {Limit problems for interpolation by analytic radial basis functions},
-	year = {2008},
-	month = {3},
-	journal = {Journal of Computational and Applied Mathematics},
-	volume = {212},
-	number = {2},
-	pages = {127--149},
-	publisher = {Elsevier BV},
-	doi = {10.1016/j.cam.2006.11.023},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/S0377042706007151},
-	issn = {0377-0427},
-	keywords = {},
-}
-
-@article{schulz2018tutorial,
-	author = {Schulz, Eric and Speekenbrink, Maarten and Krause, Andreas},
-	title = {A tutorial on Gaussian process regression: Modelling, exploring, and exploiting functions},
-	year = {2018},
-	month = {8},
-	journal = {Journal of Mathematical Psychology},
-	volume = {85},
-	pages = {1--16},
-	publisher = {Elsevier},
-	doi = {10.1016/j.jmp.2018.03.001},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/S0022249617302158},
-	issn = {0022-2496},
 	keywords = {},
 }
 
@@ -1641,14 +1691,9 @@
 	git = {http://github.com/b-shields/edbo},
 }
 
-@article{shin2020error,
-	author = {Shin, Yeonjong and Zhang, Zhongqiang and Karniadakis, George Em},
-	title = {Error estimates of residual minimization using neural networks for linear PDEs},
-	year = {2020},
-	journal = {arXiv preprint arXiv:2010.08019},
-	keywords = {},
-}
-
+% A numerical algorithm for performing a rank-revealing rank-1 QR update (given
+% an existing orthonormal (QR) matrix factorization and updating just one
+% column of the basis Q)
 @article{shroff1992adaptive,
 	author = {Shroff, Gautam M. and Bischof, Christian H.},
 	title = {Adaptive condition estimation for rank-one updates of QR factorizations},
@@ -1665,6 +1710,11 @@
 	keywords = {},
 }
 
+% A survey on how deep learning models (such as transormer models and neural
+% networks/multilayer perceptrons) still do not perform well (are not the state
+% of the art) when it comes to tabular data, which remains the most important
+% application for most businesses.  Gradient boosted trees remain the most
+% reliable predictors for these applications
 @article{shwartzziv2022tabular,
 	author = {Shwartz-Ziv, Ravid and Armon, Amitai},
 	title = {Tabular data: Deep learning is not all you need},
@@ -1745,31 +1795,20 @@
 	issn = {1867-2949},
 }
 
-@article{strang2020solutions,
-	author = {Strang, Alexander},
-	title = {Solutions to the Minimum Variance Problem Using Delaunay Triangulation},
-	year = {2020},
-	month = {1},
-	journal = {SIAM Journal on Discrete Mathematics},
-	volume = {34},
-	number = {4},
-	pages = {2510--2531},
-	publisher = {SIAM},
-	doi = {10.1137/19m1301837},
-	url = {https://epubs.siam.org/doi/10.1137/19M1301837},
-	issn = {0895-4801},
-	keywords = {},
-}
-
-@book{strohmaier2019top,
+% Citation for the Nov 2019, HPC Top 500 -- measuring the fastest HPCs in the
+% world based on their max throughput on the high-performance LINPACK
+% HPC performance benchmark problem
+@misc{strohmaier2019top,
 	author = {Strohmaier, Eric and Dongarra, Jack and Simon, Horst and Meuer, Martin},
 	title = {The Top 500 List},
 	year = {2019},
 	month = {November},
-	publisher = {\url{https://www.top500.org}, accessed April 18, 2020},
-	keywords = {},
+    url = {https://www.top500.org},
+	note = {accessed April 18, 2020},
 }
 
+% A nice summary article (with some performance comparisons) for a wide variety
+% of sequential Delaunay triangulation algorithms in 2D
 @article{su1997comparison,
 	author = {Su, Peter and Drysdale, Robert L. S.},
 	title = {A comparison of sequential {D}elaunay triangulation algorithms},
@@ -1783,19 +1822,6 @@
 	doi = {10.1016/s0925-7721(96)00025-9},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0925772196000259},
 	issn = {0925-7721},
-	keywords = {},
-}
-
-@inproceedings{tan2009data,
-	author = {Tan, Tua Zea and Goh, Rick Sow Mong and March, Verdi and See, Simon},
-	title = {Data mining analysis to validate performance tuning practices for HPL},
-	year = {2009},
-	booktitle = {Proceedings of the 2009 IEEE International Conference on Cluster Computing and Workshops},
-	pages = {1--8},
-	organization = {IEEE},
-	location = {New Orlean, LA, USA},
-	doi = {10.1109/clustr.2009.5289175},
-	url = {http://ieeexplore.ieee.org/document/5289175/},
 	keywords = {},
 }
 
@@ -1813,6 +1839,10 @@
 	url = {http://ieeexplore.ieee.org/document/5356528/},
 }
 
+% The SHEPPACK numerical software package contains a variety of open source
+% Fortran codes for computing Shepard's method interpolants in two, three, and
+% four dimensions.  There is also a linear Shepard's method interpolant that
+% can be used for interpolation in arbitrary dimension.
 @article{thacker2010algorithm,
 	author = {Thacker, William I. and Zhang, Jingwei and Watson, Layne T. and Birch, Jeffrey B. and Iyer, Manjula A. and Berry, Michael W.},
 	title = {Algorithm 905: {SHEPPACK}: {M}odified {S}hepard algorithm for interpolation of scattered multivariate data},
@@ -1829,18 +1859,7 @@
 	keywords = {},
 }
 
-@inproceedings{uta2020big,
-	author = {Uta, Alexandru and Custura, Alexandru and Duplyakin, Dmitry and Jimenez, Ivo and Rellermeyer, Jan and Maltzahn, Carlos and Ricci, Robert and Iosup, Alexandru},
-	title = {Is big data performance reproducible in modern cloud networks?},
-	year = {2020},
-	booktitle = {Proc. 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI '20)},
-	pages = {513--527},
-	organization = {USENIX Association},
-	location = {Santa Clara, CA, USA},
-	keywords = {},
-}
-
-% The (recently open source) numerical software library SLATEC from Sandia is something of a precursor to a modern library like scipy. SLATEC provides highly optimized, numerically stable, Fortran implementations for nearly every basic numerical algorithm that one would encounter in scientific computing
+% The numerical software library SLATEC from Sandia is something of a precursor to a modern library like scipy. SLATEC provides highly optimized, numerically stable, Fortran implementations for nearly every basic numerical algorithm that one would encounter in scientific computing
 @article{vandevender1982slatec,
 	author = {Vandevender, Walter H. and Haskell, Karen H.},
 	title = {The {SLATEC} Mathematical Subroutine Library},
@@ -1857,6 +1876,13 @@
 	keywords = {},
 }
 
+% The landmark paper showing that transformers alone are capable of capturing
+% all structure needed for language conversion, i.e., recurence relations and
+% the sequential structure of time-series predictions can be encoded into which
+% tokens to "pay attention to" during next word (or any next item) predictions.
+% This paper is often cited as the inspiration for large language models
+% (LLMs), which rely heavily on the transformer architecture, which became a
+% standard after this
 @inproceedings{vaswani2017attention,
 	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
 	title = {Attention is all you need},
@@ -1865,16 +1891,6 @@
 	pages = {1--11},
 	organization = {Curran Associates, Inc.},
 	location = {Long Beach, California, USA},
-	keywords = {},
-}
-
-@incollection{vershynin2015estimation,
-	author = {Vershynin, Roman},
-	title = {Estimation in high dimensions: a geometric perspective},
-	year = {2015},
-	booktitle = {Sampling Theory, a Renaissance: Compressive Sensing and Other Developments},
-	pages = {3--66},
-	publisher = {Springer},
 	keywords = {},
 }
 
@@ -1910,6 +1926,8 @@
 	issn = {1548-7091},
 }
 
+% An analysis and empirical study on how RBF interpolants interpolation
+% matrices tend to always become ill-conditioned in high dimensions
 @article{wang2018numerical,
 	author = {Wang, Ruoxi and Li, Yingzhou and Darve, Eric},
 	title = {On the numerical rank of radial basis function kernels in high dimensions},
@@ -2007,6 +2025,14 @@
 	issn = {0098-3500},
 }
 
+% A summary paper for an influential line of work in the field of scientific
+% machine learning.  Some standard techniques for computing error bounds for
+% neural networks using traditional techniques from numerical analysis and
+% approximation theory, and introducing a universal approximation theorem for
+% neural networks.  I.e., showing the existence of a two-layer multilayer
+% perceptron or similar neural network that can approximate any Sobolev
+% function to arbitrary required accuracy.  Equivalently, we could say that
+% such neural networks are dense in this Sobolev space
 @article{weinan2020machine,
 	author = {Weinan, E},
 	title = {Machine learning and computational mathematics},
@@ -2040,6 +2066,9 @@
 	keywords = {},
 }
 
+% Our VarSys paper on the modeling methodologies that we use for modeling the
+% bimodal performance distributions that we observe in IO throughput on our
+% experimental performance modeling HPC cluster
 @article{xu2020modeling,
 	author = {Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne},
 	title = {Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
@@ -2055,20 +2084,48 @@
 	keywords = {},
 }
 
-@article{zhang2021understanding,
-	author = {Zhang, Chiyuan and Bengio, Samy and Hardt, Moritz and Recht, Benjamin and Vinyals, Oriol},
-	title = {Understanding Deep Learning (Still) Requires Rethinking Generalization},
-	year = {2021},
-	month = {3},
-	journal = {Communications of the ACM},
-	volume = {64},
-	number = {3},
-	pages = {107--115},
-	publisher = {Association for Computing Machinery},
-	doi = {10.1145/3446776},
-	url = {https://dl.acm.org/doi/10.1145/3446776},
-	issn = {0001-0782},
-	keywords = {},
+% One of the original papers proposing that overfitting, the bias variance
+% tradeoff curve, and generalization error are all misunderstood and misused
+% ideas.  The authors present a true holdout set of lost and never-before-seen
+% ImageNet and CIFAR-10 data, and show that massive interpolatory models
+% (models trained to zero error) generalize just as well as the
+% well-regularized models on this new data (better because their training error
+% was lower and total error = training error + generalization error).
+% Ben would go on to claim that (1) you want to interpolate a lot of data
+% that we claim we don't want to overfit (such as image data). (2) Models
+% that interpolate don't generalize poorly in practice and large
+% overparameterized models always perform better in practice. And (3)
+% Hyperparameter tuning is basically a form of training on the test set in
+% order to find the best model that interpolates the training data. This paper
+% was an eye-opener for me personally, and lead me to firmly believe in
+% interpolation for high-dimensional data
+@inproceedings{recht19imagenet,
+  title = 	 {Do {I}mage{N}et Classifiers Generalize to {I}mage{N}et?},
+  author =       {Recht, Benjamin and Roelofs, Rebecca and Schmidt, Ludwig and Shankar, Vaishaal},
+  booktitle = 	 {Proceedings of the 36th International Conference on Machine Learning},
+  pages = 	 {5389--5400},
+  year = 	 {2019},
+  editor = 	 {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+  volume = 	 {97},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {09--15 Jun},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v97/recht19a/recht19a.pdf},
+  url = 	 {https://proceedings.mlr.press/v97/recht19a.html},
+}
+
+% An experiment showing that when training labels are replaced with random
+% values (pure noise), most neural network classifier methods can still be
+% trained to zero training error.  (I.e., obviously overfitting).  However,
+% regularization techniques don't prevent them from doing so.  The authors
+% conclude that regularization isn't doing what we think it's doing and may not
+% actually be related to generalization error
+@inproceedings{zhang2017understanding,
+title={Understanding deep learning requires rethinking generalization},
+author={Chiyuan Zhang and Samy Bengio and Moritz Hardt and Benjamin Recht and Oriol Vinyals},
+booktitle={International Conference on Learning Representations},
+year={2017},
+url={https://openreview.net/forum?id=Sy8gdB9xx}
 }
 
 % The original dropout paper, this was standard practice in training deep
@@ -2127,3 +2184,217 @@ year = {2017},
 publisher = {Curran Associates, Inc.},
 url = {http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf}
 }
+
+% Prasanna and Stefan's original DeepHyper publication -- DeepHyper is an open source extreme-scale distributed optimization package, designed to scale to Argonne's exascale HPCs. Able to train ensembles of neural networks with diverse architectures at scale, with both single and multiobjective hyperparameter tuning support
+@inproceedings{balaprakash2018deephyper,
+	author = {Balaprakash, Prasanna and Salim, Michael and Uram, Thomas D. and Vishwanath, Venkat and Wild, Stefan M.},
+	title = {{DeepHyper}: Asynchronous hyperparameter search for deep neural networks},
+	year = {2018},
+	month = {12},
+	booktitle = {IEEE 25th international conference on high performance computing (HiPC)},
+	pages = {42--51},
+	organization = {IEEE},
+	location = {Bengaluru, India},
+	doi = {10.1109/hipc.2018.00014},
+	url = {https://ieeexplore.ieee.org/document/8638041/},
+}
+
+% Brandon's original paper on differentiabl optimization layers in neural
+% networks -- i.e., solving an optimization problem within a layer of a neural
+% network and propogating the gradient through that solution so that the
+% network parameters can still be trained
+@inproceedings{amos17optnet,
+  title = 	 {{O}pt{N}et: Differentiable Optimization as a Layer in Neural Networks},
+  author =       {Brandon Amos and J. Zico Kolter},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {136--145},
+  year = 	 {2017},
+  editor = 	 {Precup, Doina and Teh, Yee Whye},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--11 Aug},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/amos17a/amos17a.pdf},
+  url = 	 {https://proceedings.mlr.press/v70/amos17a.html},
+}
+
+% Differentiabl convex optimization layers are introduced pytorch and
+% tensorflow via an update to cvxpy, introducing differentiation through the
+% solution to a convex optimization problem modeled in cvxpy.  The open source
+% numerical optimization software is available at github.com/cvxgrp/cvxpylayers
+% in Python
+@inproceedings{akshay2019differentiable,
+ author = {Agrawal, Akshay and Amos, Brandon and Barratt, Shane and Boyd, Stephen and Diamond, Steven and Kolter, J. Zico},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Differentiable Convex Optimization Layers},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf},
+ volume = {32},
+ year = {2019}
+}
+
+% Brandon introduces using neural networks and other scientific machine
+% learning methods to warm-start optimization and control problems.  An open
+% source numerical software tutorial is available at
+% github.com/facebookresearch/amortized-optimization-tutorial
+@article{amos2023tutorial,
+author = {Amos, Brandon},
+title = {Tutorial on Amortized Optimization},
+year = {2023},
+publisher = {Now Publishers Inc.},
+address = {Hanover, MA, USA},
+volume = {16},
+number = {5},
+issn = {1935-8237},
+url = {https://doi.org/10.1561/2200000102},
+doi = {10.1561/2200000102},
+journal = {Found. Trends Mach. Learn.},
+pages = {592–732},
+numpages = {156}
+}
+
+% LeCun et al. show that convolutional nets can outperform all other methods on
+% handwriting classification for efficient document processing
+@article{lecun1998gradient,
+  author={LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
+  title={Gradient-based learning applied to document recognition},
+  year={1998},
+  journal={Proceedings of the IEEE},
+  volume={86},
+  number={11},
+  pages={2278-2324},
+  doi={10.1109/5.726791}
+}
+
+% LeCun et al. show that convolutional nets can outperform all other methods on
+% handwritten digit classification and other perception problems
+@article{lecun1989backpropagation,
+  author={LeCun, Y. and Boser, B. and Denker, J. S. and Henderson, D. and Howard, R. E. and Hubbard, W. and Jackel, L. D.},
+  journal={Neural Computation},
+  title={Backpropagation Applied to Handwritten Zip Code Recognition},
+  year={1989},
+  volume={1},
+  number={4},
+  pages={541-551},
+  doi={10.1162/neco.1989.1.4.541}
+}
+
+% LeCun's original paper on convolutional neural network architecture -- the
+% first example of a problem where neural networks trained with backpropagation
+% actually outperformed other models, and one of the early examples of the
+% magic of representation learning and how exploiting problem structure is
+% essential to making machine learning work.  This remained the state-of-the
+% art in image classification and image processing for over 20 years until the
+% event of transformers, and whether transformers are better for image problems
+% remains debatable
+@article{lecun1995convolutional,
+  title={Convolutional networks for images, speech, and time series},
+  author={LeCun, Yann and Bengio, Yoshua and others},
+  journal={The handbook of brain theory and neural networks},
+  volume={3361},
+  number={10},
+  pages={1995},
+  year={1995},
+  publisher={Citeseer}
+}
+
+% The MNIST dataset presents the first and most popular benchmark problem for
+% image classification via neural networks and other AI and machine learning
+% methods
+@misc{yann1998mnist,
+  title={The mnist database of handwritten digits},
+  author={Yann, LeCun},
+  year={1998},
+  url = {yann.lecun.com/exdb/mnist},
+}
+
+% The official techreport for the CIFAR-10 dataset -- one of the next most
+% popular neural network and image classification benchmark problems for
+% machine learning and AI research in the 2010s.  Just a little harder than
+% MNIST due to having lower quality images and more (imbalanced) classes
+@techreport{krizhevsky2009learning,
+  title={Learning multiple layers of features from tiny images},
+  author={Krizhevsky, Alex and Hinton, Geoffrey and others},
+  year={2009},
+  publisher={Toronto, ON, Canada}
+}
+
+% The official publicatoin for AlexNet -- one of the first truly massive
+% overparameterized convolutional neural networks, which threw away a lot of
+% the conventional wisdom around overfitting and achieved state-of-the-art
+% performance and fine generalization errors on the ImageNet benchmark problem.
+% This could be considered the beginning of "deep" learning in the sense of
+% adding many many layers
+@inproceedings{krizhevsky2012imagenet,
+ author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {F. Pereira and C.J. Burges and L. Bottou and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {{ImageNet} Classification with Deep Convolutional Neural Networks},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
+ volume = {25},
+ year = {2012}
+}
+
+% One of the largest most difficult image classification benchmark problems
+% from the 2010s, which drove a lot of advancement.  Was a bit too difficult
+% for the average researcher to solve since it required a lot of training
+% resources to get good performance, but drove advancement in developing and
+% training large (deep) neural networks with many layers and millions of
+% parameters
+@inproceedings{deng2009imagenet,
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Kai Li and Li Fei-Fei},
+  booktitle={2009 IEEE Conference on Computer Vision and Pattern Recognition},
+  title={{ImageNet}: A large-scale hierarchical image database},
+  year={2009},
+  volume={},
+  number={},
+  pages={248-255},
+  doi={10.1109/CVPR.2009.5206848}
+}
+
+% BERT was one of the first transformer-based neural network architectures for
+% solving language-related tasks, such as language translations, at Google.
+% This was also by far the largest model of its time.  BERT paved the way for
+% modern large language models, probably moreso than the Attention is all you
+% need paper
+@inproceedings{devlin-etal-2019-bert,
+    title = "{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    author = "Devlin, Jacob  and
+      Chang, Ming-Wei  and
+      Lee, Kenton  and
+      Toutanova, Kristina",
+    editor = "Burstein, Jill  and
+      Doran, Christy  and
+      Solorio, Thamar",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/N19-1423/",
+    doi = "10.18653/v1/N19-1423",
+    pages = "4171--4186",
+}
+
+% The culmination of a line of work from Google DeepMind on discovering better
+% matrix factorization algorithms using reinforcement learning.  They defined a
+% tensor game for trying to solve matrix multiplication at a fixed size in
+% fewer moves, then trained a RL agent to play the game using monte carlo tree
+% search and training a neural network to predict a manageable subset of states
+% and expected state outcomes since the number of states was too numerous for
+% true MCTS
+@article{fawzi2022discovering,
+  title={Discovering faster matrix multiplication algorithms with reinforcement learning},
+  author={Fawzi, Alhussein and Balog, Matej and Huang, Aja and Hubert, Thomas and Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and R. Ruiz, Francisco J and Schrittwieser, Julian and Swirszcz, Grzegorz and others},
+  journal={Nature},
+  volume={610},
+  number={7930},
+  pages={47--53},
+  year={2022},
+  publisher={Nature Publishing Group UK London},
+  doi={10.1038/s41586-022-05172-4},
+}
+

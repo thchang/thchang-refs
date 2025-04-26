@@ -304,7 +304,7 @@
 % Prasanna and Stefan's original DeepHyper publication -- DeepHyper is an open source extreme-scale distributed optimization package, designed to scale to Argonne's exascale HPCs. Able to train ensembles of neural networks with diverse architectures at scale, with both single and multiobjective hyperparameter tuning support
 @inproceedings{balaprakash2018deephyper,
 	author = {Balaprakash, Prasanna and Salim, Michael and Uram, Thomas D. and Vishwanath, Venkat and Wild, Stefan M.},
-	title = {DeepHyper: Asynchronous hyperparameter search for deep neural networks},
+	title = {{DeepHyper}: Asynchronous hyperparameter search for deep neural networks},
 	year = {2018},
 	month = {12},
 	booktitle = {IEEE 25th international conference on high performance computing (HiPC)},
@@ -519,6 +519,19 @@
 	issn = {0965-9978},
 }
 
+% The famous textbook on convex optimization (from which I learned most
+% concepts) covering concepts such as basic convexity definitions and theorems,
+% basic algorithms and optimality conditions, handling constraints, Lagrangian
+% duality, multiobjective optimization basics, gradient descent and newton's
+% method, sequential quadratic programming, linear programming, and a few
+% applications and modeling basics
+@book{boyd2004convex,
+  title={Convex optimization},
+  author={Boyd, Stephen P and Vandenberghe, Lieven},
+  year={2004},
+  publisher={Cambridge university press}
+}
+
 % A Multiobjective Bayesian optimization algorithm, very similar to ParEGO -- this algorithm uses the Gaussian process surrogates with NSGA-II to solve the problem. However, spectral sampling and thompson sampling are then employed to subselect a diverse set of candidates for batch evaluation. The resulting algorithm is called TSEMO
 @article{bradford2018efficient,
 	author = {Bradford, Eric and Schweidtmann, Artur M. and Lapkin, Alexei},
@@ -615,6 +628,7 @@
 	issn = {0926-6003},
 }
 
+% The DelaunaySparse software, demonstrates how to calculate simplices from a Delauay triangulation in very high dimensions scalably (and in parallel) using a highly customized simplex method like solver. The resulting Fortran numerical software is fully open source with a C and Python interface
 @article{chang2020algorithm,
 	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Algorithm 1012: {DELAUNAYSPARSE}: {I}nterpolation via a sparse subset of the {D}elaunay triangulation in medium to high dimensions},
