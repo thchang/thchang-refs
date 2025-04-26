@@ -777,6 +777,21 @@
 	isbn = {978-1108425780},
 }
 
+% A survey of static design-of-experiments sampling strategies for surrogate modeling, as well as a novel model-based strategy proposed by the authors
+@article{garud2017smart,
+	author = {Garud, Sushant Suhas and Karimi, Iftekhar A. and Kraft, Markus},
+	title = {Smart Sampling Algorithm for Surrogate Model Development},
+	year = {2017},
+	month = {1},
+	journal = {Computers \& Chemical Engineering},
+	volume = {96},
+	pages = {103--114},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.compchemeng.2016.10.006},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0098135416303210},
+	issn = {0098-1354},
+}
+
 % Introducing a Delaunay density diagnostic -- using the Delaunay interpolant
 % to calculate whether they have enough data to resolve the geometry of a
 % problem for interpolation in the context of SciML.  Essentially, they use
@@ -1007,6 +1022,56 @@ numpages = {21},
 	keywords = {},
 }
 
+% pyOED an open source Python numerical software library for performing optimal experimental design, e.g, for sensor placement at Argonne
+@techreport{chowdhary2024pyoed,
+	author = {Chowdhary, Abhijit and Ahmed, Shady E. and Attia, Ahmed},
+	title = {{PyOED}: An Extensible Suite for Data Assimilation and Model-Constrained Optimal Design of Experiments},
+	year = {2024},
+	month = {6},
+	booktitle = {ACM Transactions on Mathematical Software},
+	volume = {50},
+	number = {2},
+	articleno = {11},
+	numpages = {22},
+	institution = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	doi = {10.1145/3653071},
+	url = {https://doi.org/10.1145/3653071},
+	issn = {0098-3500},
+}
+
+% The original TOMS open source numerical software code implementing Sobol sequence (low discrepancy sequence) generation in Fortran 90. Apparently there is a bug or limitation to this code, fixed by Joe et al. 2003 in their TOMS Remark on 659, and subsequent publication of a new generator used in Scipy
+@article{bratley1988algorithm,
+	author = {Bratley, Paul and Fox, Bennett L.},
+	title = {Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator},
+	year = {1988},
+	month = {3},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {14},
+	number = {1},
+	numpages = {13},
+	publisher = {Association for Computing Machinery},
+	doi = {10.1145/42288.214372},
+	url = {https://doi.org/10.1145/42288.214372},
+	issn = {0098-3500},
+}
+
+% A modification to the original Sobol sequence generator code
+@article{joe2003remark,
+	author = {Joe, Stephen and Kuo, Frances Y.},
+	title = {Remark on Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator},
+	year = {2003},
+	month = {3},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {29},
+	number = {1},
+	numpages = {9},
+	publisher = {Association for Computing Machinery},
+	doi = {10.1145/641876.641879},
+	url = {https://dl.acm.org/doi/10.1145/641876.641879},
+	issn = {0098-3500},
+}
+
 % The numerical software algorithm used in scipy algorithm for generating Sobol sequences (low discrepancy sequences)
 @article{joe2008constructing,
 	author = {Joe, Stephen and Kuo, Frances Y.},
@@ -1021,6 +1086,44 @@ numpages = {21},
 	doi = {10.1137/070709359},
 	url = {http://epubs.siam.org/doi/10.1137/070709359},
 	issn = {1064-8275},
+}
+
+% The textbook on discrepancy that Manisha used to learn about low discrepancy sequences and their motivation
+@book{kuipers1974uniform,
+	author = {Kuipers, L. and Niederreiter, H.},
+	title = {Uniform distribution of sequences},
+	year = {1974},
+	series = {Pure and Applied Mathematics},
+	pages = {xiv--390},
+	publisher = {Wiley-Interscience [John Wiley \& Sons], New York-London-Sydney},
+}
+
+% Hammersley's and Halton sequences -- other low-discrepancy sequences that are commonly used in design-of-experiments
+@article{wong1997sampling,
+	author = {Wong, Tien-Tsin and Luk, Wai-Shing and Heng, Pheng-Ann},
+	title = {Sampling with {H}ammersley and {H}alton points},
+	year = {1997},
+	journal = {Journal of graphics tools},
+	volume = {2},
+	number = {2},
+	pages = {9--24},
+	publisher = {Taylor \& Francis},
+}
+
+% Original publication on maximin and minimax designs for design-of-experiments. I.e., minimize the maximum distance from any point in the bounding box to the nearest point in the design, and maximize the minimum distance between any pair of points in the design.
+@article{johnson1990minimax,
+	author = {Johnson, M.E. and Moore, L.M. and Ylvisaker, D.},
+	title = {Minimax and maximin distance designs},
+	year = {1990},
+	month = {10},
+	journal = {Journal of Statistical Planning and Inference},
+	volume = {26},
+	number = {2},
+	pages = {131--148},
+	publisher = {Elsevier BV},
+	doi = {10.1016/0378-3758(90)90122-B},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/037837589090122B},
+	issn = {0378-3758},
 }
 
 % D.R. Jones' original paper on "efficient global optimization" (EGO). This is often credited as the original implementation of multivariate Bayesian optimization. Jones proposes using Gaussian processes to produce a Gaussian posterior, whose expected improvement function can be efficiently optimized to select the next candidate. This is also one of the early works in sequential optimization via a generic (i.e., non polynomial) surrogate model. However, earlier work on design-of-experiments and response surface modeling did exist in the engineering design optimization space. Earlier papers had explored the idea of optimizing Gaussian processes to select experiments (especially in one and two-dimensions). However, this paper is a landmark in that it gave rise to the field of multivariate Bayesian optimization. EGO is still often used as the benchmark Bayesian optimization algorithm.
