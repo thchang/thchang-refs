@@ -227,13 +227,12 @@
 % about feature encodings, we are often looking for mappings that maintain
 % stability (i.e., similar feature vectors remain close together after
 % encoding).
-@misc{bronstein2021geometric,
+@book{bronstein2021geometric,
 	author = {Bronstein, Michael M. and Bruna, Joan and Cohen, Taco and Veličković, Petar},
 	title = {Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges},
 	year = {2021},
-	booktitle = {arXiv cs.LG},
+	publisher = {arXiv cs.LG},
 	doi = {10.48550/arXiv.2104.13478},
-	keywords = {},
 }
 
 % Large review paper covering all aspects of RBFs, their interpolation error
@@ -765,12 +764,11 @@
 % DelaunaySparse to make predictions and slowly add data.  Once they have
 % enough data, the predictions begin converging at a linear rate.  Then they
 % have enough data to use whatever method they want to solve the problem
-@misc{gillette2022datadriven,
+@techreport{gillette2022datadriven,
 	author = {Gillette, Andrew and Kur, Eugene},
 	title = {Data-driven geometric scale detection via Delaunay interpolation},
 	year = {2022},
-	booktitle = {arXiv math.NA},
-	keywords = {},
+	institution = {arXiv math.NA},
 }
 
 % Open source numerical software for the Delaunay density diagnostic -- using
@@ -2379,13 +2377,63 @@ numpages = {156}
     pages = "4171--4186",
 }
 
+% The official publicatino for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+@inproceedings{paszke2019pytorch,
+	author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
+	title = {{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	pages = {1--12},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
+}
+
+% Google DeepMind's AlphaGo was the first reinforcement learning agent to beat
+% pro players (exceed the maximum human skill) in Go, which is a much more
+% complex game than chess and required modeling an enumerable amount of game
+% states and move possibilities.  This required combining monte carlo tree
+% search (MCTS) with neural networks to filter down to a reasonable number of
+% potential states
+@article{silver2016mastering,
+  title={Mastering the game of Go with deep neural networks and tree search},
+  author={Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
+  journal={nature},
+  volume={529},
+  number={7587},
+  pages={484--489},
+  year={2016},
+  publisher={Nature Publishing Group}
+}
+
+% Google DeepMind's AlphaStar II was the first reinforcement learning agent
+% that could beat pro players in video games, which is a signficantly more
+% complex environment than a board game environment with a finite state and set
+% of possible actions
+@article{oriol2019gradmaster,
+	author = {Vinyals, Oriol and Babuschkin, Igor and Czarnecki, Wojciech M. and Mathieu, Micha{\"e}l and Dudzik, Andrew and Chung, Junyoung and Choi, David H. and Powell, Richard and Ewalds, Timo and Georgiev, Petko and Oh, Junhyuk and Horgan, Dan and Kroiss, Manuel and Danihelka, Ivo and Huang, Aja and Sifre, Laurent and Cai, Trevor and Agapiou, John P. and Jaderberg, Max and Vezhnevets, Alexander S. and Leblond, R{\'e}mi and Pohlen, Tobias and Dalibard, Valentin and Budden, David and Sulsky, Yury and Molloy, James and Paine, Tom L. and Gulcehre, Caglar and Wang, Ziyu and Pfaff, Tobias and Wu, Yuhuai and Ring, Roman and Yogatama, Dani and W{\"u}nsch, Dario and McKinney, Katrina and Smith, Oliver and Schaul, Tom and Lillicrap, Timothy and Kavukcuoglu, Koray and Hassabis, Demis and Apps, Chris and Silver, David},
+	doi = {10.1038/s41586-019-1724-z},
+	isbn = {1476-4687},
+	journal = {Nature},
+	number = {7782},
+	pages = {350--354},
+	title = {Grandmaster level in {StarCraft II} using multi-agent reinforcement learning},
+	url = {https://doi.org/10.1038/s41586-019-1724-z},
+	volume = {575},
+	year = {2019},
+}
+
 % The culmination of a line of work from Google DeepMind on discovering better
 % matrix factorization algorithms using reinforcement learning.  They defined a
 % tensor game for trying to solve matrix multiplication at a fixed size in
 % fewer moves, then trained a RL agent to play the game using monte carlo tree
 % search and training a neural network to predict a manageable subset of states
 % and expected state outcomes since the number of states was too numerous for
-% true MCTS
+% true MCTS.  They were able to match the performance of Strassen's algorithm
+% on 5x5 matrices (this is how recursive block-based recursive multiplication
+% is done) and exceed performance on other sizes and rings (such as modular
+% arithmetic rings)
 @article{fawzi2022discovering,
   title={Discovering faster matrix multiplication algorithms with reinforcement learning},
   author={Fawzi, Alhussein and Balog, Matej and Huang, Aja and Hubert, Thomas and Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and R. Ruiz, Francisco J and Schrittwieser, Julian and Swirszcz, Grzegorz and others},
@@ -2398,3 +2446,28 @@ numpages = {156}
   doi={10.1038/s41586-022-05172-4},
 }
 
+% The largest repository of open source AI, machine learning, and control
+% benchmark problems, maintained by OpenAI.  This was the primary benchmark
+% problem environment for all reinforcement learning researchers not affiliated
+% with another company with their own private environments (such as Meta and
+% Google).  Still available at github.com/openai/gym
+@techreport{brackmen2016openai,
+  author = {Greg Brockman and Vicki Cheung and Ludwig Pettersson and Jonas Schneider and John Schulman and Jie Tang and Wojciech Zaremba},
+  title = {OpenAI Gym},
+  year = {2016},
+  institution = {arXiv:1606.01540},
+}
+
+% Proximal policy optimization (PPO) is the state-of-the-art policy gradient
+% optimization method for reinforcement learning.  Proximal gradient methods
+% computes the update by directly optimizing the parameters for a given batch
+% of observations in order to maximize the intermediate value function.  PPO
+% limits the step size in each iteration and enforces a penalization to
+% discourage models from drifting too far from the original "base" model.
+@techreport{schulman2017proximalpolicyoptimizationalgorithms,
+      title={Proximal Policy Optimization Algorithms},
+      author={John Schulman and Filip Wolski and Prafulla Dhariwal and Alec Radford and Oleg Klimov},
+      year={2017},
+      institution={arXiv cs.LG},
+      url={https://arxiv.org/abs/1707.06347},
+}
