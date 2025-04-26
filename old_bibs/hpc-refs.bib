@@ -1,0 +1,1787 @@
+% The Dakota blackbox and derivative-free simulation optimization framework, a numerical software package (in C++) maintained by Sandia that offers support for AI/ML surrogate modeling, multifidelity modeling, uncertainty quantification (UQ), and distributed and parallel computing
+@techreport{adams2022dakota,,
+	author = {Adams, Brian M. and Bohnhoff, William J. and Dalbey, Keith R. and Ebeida, Mohamed S. and Eddy, John P. and Eldred, Michael S. and Hooper, Russell W. and Hough, Patricia D. and Hu, Kenneth T. and Jakeman, John D. and Khalil, Mohammad and Maupin, Kathryn A. and Monschke, Jason A. and Ridgeway, Elliott M. and Rushdi, Ahmad A. and Seidl, D. Thomas and Stephens, J. Adam and Swiler, Laura P. and Tran, Anh and Winokur, Justin G.},
+	title = {Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.16 User's Manual},
+	year = {2022},
+	number = {SAND2022-6171 version 6.16},
+	institution = {Sandia National Laboratory},
+	address = {Albuquerque, NM, USA},
+	url = {https://dakota.sandia.gov/sites/default/files/docs/6.16.0/Users-6.16.0.pdf},
+}
+
+% Optuna open source software for fully distributed hyperparameter optimization. Maintained by a private startup in Japan (named Optuna). This software provides high-quality distributed wrappers for many neural architecture search and generic optimization algorithms.
+@inproceedings{akiba2019optuna,
+	author = {Akiba, Takuya and Sano, Shotaro and Yanase, Toshihiko and Ohta, Takeru and Koyama, Masanori},
+	title = {Optuna: A next-generation hyperparameter optimization framework},
+	year = {2019},
+	month = {7},
+	booktitle = {Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery \& data mining},
+	pages = {2623--2631},
+	organization = {ACM},
+	location = {Anchorage AK USA},
+	doi = {10.1145/3292500.3330701},
+	url = {https://dl.acm.org/doi/10.1145/3292500.3330701},
+}
+
+% The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
+@misc{bradbury2018jax,
+	author = {Bradbury, J. and others},
+	title = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
+	year = {2018},
+	number = {0.3.13},
+	url = {http://github.com/google/jax},
+}
+
+% JAHS-Bench-201: The latest test suite of benchmark problems for neural architecture search. The baseline is random search, but you can solve the problems in their parameterized search space with any optimization algorithm, record the number of true function / simulation evaluations (i.e., networks trained) and submit this to the JAHS-Bench leaderboards on GitHub. This is a good representative test problem for NAS. Both single and multiobjective benchmarks are provided, also most problems can be run in both single or multifidelity evaluation modes
+@inproceedings{bansal2022jahsbench201,
+    author = {Bansal, Archit and Stoll, Danny and Janowski, Maciej and Zela, Arber and Hutter, Frank},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {38788--38802},
+ publisher = {Curran Associates, Inc.},
+ title = {{JAHS-Bench-201}: A Foundation For Research On Joint Architecture And Hyperparameter Search},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/fd78f2f65881c1c7ce47e26b040cf48f-Paper-Datasets_and_Benchmarks.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+% The user guide for the reference implementation of LAPACK: the original open source numerical software for all common dense linear algebra operations.
+@book{anderson1999lapack,
+	author = {Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A. and Hammarling, S. and McKenney, A. and Sorensen, D.},
+	title = {{LAPACK} Users' Guide},
+	year = {1999},
+	edition = {3},
+	publisher = {SIAM},
+	address = {Philidelphia, PA, USA},
+	keywords = {},
+}
+
+% NOMAD v4 -- open source numerical software package (in C++) for blackbox and derivative-free optimization via the MADS algorithms. After publication, they have added support for multiobjective optimization, mixed variables, nonlinear constraints, etc. Great example of high-impact open source numerical and optimization software. Improvements over NOMAD v3 include improvements to fundamental algorithms, coding practices, release process, and general project structure to support continuous research and development into the future
+@article{audet2022algorithm,
+	author = {Audet, Charles and Le Digabel, S\'{e}bastien and Rochon Montplaisir, Viviane and Tribes, Christophe},
+	title = {{Algorithm 1027}: {NOMAD} Version 4: Nonlinear Optimization with the {MADS} Algorithm},
+	year = {2022},
+	month = {9},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {48},
+	number = {3},
+	articleno = {35},
+	numpages = {22},
+	publisher = {ACM},
+	doi = {10.1145/3544489},
+	url = {https://dl.acm.org/doi/10.1145/3544489},
+	issn = {0098-3500},
+}
+
+% BoTorch: Modular bayesian optimization framework and numerical software package. Uses Ax for deploying A/B testing applications. Uses pytorch for autograd, and uses monte carlo sampling and kernel reparameterization tricks in order to efficiently evaluate composite objective and acquisition functions and non gaussian kernels. Great example of high-impact open source numerical software and optimization software
+@inproceedings{balandat2020botorch,
+	author = {Balandat, Maximilian and Karrer, Brian and Jiang, Daniel and Daulton, Samuel and Letham, Ben and Wilson, Andrew G and Bakshy, Eytan},
+	editor = {Larochelle, H. and Ranzato, M. and Hadsell, R. and Balcan, M.F. and Lin, H.},
+	title = {{BoTorch}: A Framework for Efficient {M}onte-{C}arlo {B}ayesian Optimization},
+	year = {2020},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {33},
+	pages = {21524--21538},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf},
+}
+
+% Prasanna and Stefan's original DeepHyper publication -- DeepHyper is an open source extreme-scale distributed optimization package, designed to scale to Argonne's exascale HPCs. Able to train ensembles of neural networks with diverse architectures at scale, with both single and multiobjective hyperparameter tuning support
+@inproceedings{balaprakash2018deephyper,
+	author = {Balaprakash, Prasanna and Salim, Michael and Uram, Thomas D. and Vishwanath, Venkat and Wild, Stefan M.},
+	title = {{DeepHyper}: Asynchronous hyperparameter search for deep neural networks},
+	year = {2018},
+	month = {12},
+	booktitle = {IEEE 25th international conference on high performance computing (HiPC)},
+	pages = {42--51},
+	organization = {IEEE},
+	location = {Bengaluru, India},
+	doi = {10.1109/hipc.2018.00014},
+	url = {https://ieeexplore.ieee.org/document/8638041/},
+}
+
+% The PETSc user's guide. I haven't used it but PETSc is a widely-used C++ numerical software library and linear algebra / iterative algorithms framework developed at Argonne and used for implementing many well-known iterative solvers, especially in the area of CFD. This is a great example of high-impact open source numerical software and best practices in open source scientific software. Now ships together with TAO, a similar simulation optimization software package
+@techreport{balay2022petsc/tao,
+	author = {Balay, Satish and Abhyankar, Shrirang and Adams, Mark F. and Benson, Steven and Brown, Jed and Brune, Peter and Buschelman, Kris and Constantinescu, Emil and Dalcin, Lisandro and Dener, Alp and Eijkhout, Victor and Gropp, William D. and Hapla, V\'{a}clav and Isaac, Tobin and Jolivet, Pierre and Karpeev, Dmitry and Kaushik, Dinesh and Knepley, Matthew G. and Kong, Fande and Kruger, Scott and May, Dave A. and McInnes, Lois Curfman and Mills, Richard Tran and Mitchell, Lawrence and Munson, Todd and Roman, Jose E. and Rupp, Karl and Sanan, Patrick and Sarich, Jason and Smith, Barry F. and Zampini, Stefano and Zhang, Hong and Zhang, Hong and Zhang, Junchao},
+	title = {{PETSc/TAO} Users Manual},
+	year = {2022},
+	number = {ANL-21/39 - Revision 3.17},
+	institution = {Argonne National Laboratory},
+	address = {Lemont, IL, USA},
+	url = {https://petsc.org/release/docs/manual/manual.pdf},
+}
+
+% An open source numerical software library for solving multiobjective optimization problems in java in real-time via heuristics. The authors combine jMetal with data streaming via Apache Spark to solve distributed multiobjective optimization problems with streaming data in real-time
+@article{barbagonzález2018jmetalsp,
+	author = {Barba-González, Cristóbal and García-Nieto, José and Nebro, Antonio J. and Cordero, José A. and Durillo, Juan J. and Navas-Delgado, Ismael and Aldana-Montes, José F.},
+	title = {{jMetalSP}: A framework for dynamic multi-objective big data optimization},
+	year = {2018},
+	month = {8},
+	journal = {Applied Soft Computing},
+	volume = {69},
+	pages = {737--748},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.asoc.2017.05.004},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1568494617302557},
+	issn = {1568-4946},
+}
+
+% NASA's FUN3D CFD solver. This is one of the oldest and standard numerical softwares for solving CFD problems. Written in mostly Fortran 90. Uses a form of the problem that yields the adjoints, which can be used to optimize structures in fewer steps and perform sensitivity analyses. The kernel uses an iterative solver to solve a massive block-sparse linear system (I think derived from the weak form). Some a priori multiobjective optimization solvers are described in Section 9.9
+@techreport{biedron2019fun3d,
+	author = {Biedron, Robert T. and Carlson, Jan Renee and Derlaga, Joseph M. and Gnoffo, Peter A. and Hammond, Dana P. and Jones, William T. and Kleb, Bill and Lee-Rausch, Elizabeth M. and Nielson, Eric J. and Park, Michael A. and Rumsey, Christopher L. and Thomas, James L. and Thompson, Kyle B. and Wood, William A.},
+	title = {{FUN3D Manual}: 13.6},
+	year = {2019},
+	number = {{NASA} {T}echnical {M}emorandum ({TM}) 2019-220416},
+	institution = {NASA Langley Research Center},
+	address = {Hampton, VA, USA},
+	url = {https://fun3d.larc.nasa.gov/papers/FUN3D_Manual-13.6.pdf},
+}
+
+% The ScaLAPACK user's guide: A highly parallel and scalable open source implementation of the LAPACK software, for solving massive scale numerical linear algebra systems on distributed systems
+@book{blackford1997scalapack,
+	author = {Blackford, L. Susan and Choi, Jaeyoung and Cleary, Andy and D'Azevedo, Eduardo and Demmel, James and Dhillon, Inderjit and Dongarra, Jack and Hammarling, Sven and Henry, Greg and Petitet, Antoine and Stanley, K. and Walker, D. and Whaley, R. C.},
+	title = {ScaLAPACK Users' Guide},
+	year = {1997},
+	volume = {4},
+	publisher = {SIAM},
+	keywords = {},
+}
+
+% Methodolgies for calibrating the Fayans EDF model to experimental data. Data is expensive and limited and the model itself is computationally expensive, so this is a classical inverse problem. The problem is actually multiobective because the data themselves come from various categories representing different types of observations, and the standard deviations for each of these observables is not known. Could be configured as a 3 or 9-objective problem
+@article{bollapragada2020optimization,
+	author = {Bollapragada, Raghu and Menickelly, Matt and Nazarewicz, Witold and O'Neal, Jared and Reinhard, Paul-Gerhard and Wild, Stefan M.},
+	title = {Optimization and supervised machine learning methods for fitting numerical physics models without derivatives},
+	year = {2020},
+	month = {2},
+	journal = {Journal of Physics G: Nuclear and Particle Physics},
+	volume = {48},
+	number = {2},
+	numpages = {24001},
+	publisher = {IOP Publishing},
+	doi = {10.1088/1361-6471/abd009},
+	url = {https://iopscience.iop.org/article/10.1088/1361-6471/abd009},
+	issn = {0954-3899},
+}
+
+% Key findings from the VarSys project on modeling HPC performance variability with surrogates and RSM, and using these models to inform decision making through visualizations, optimization, and otherwise -- a good real-world example of how modeling, interpolation, optimization, and data science can come together to produce actionable results (in the field of HPC performance tuning)
+@article{cameron2019moana,
+	author = {Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo Ananth  Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas and Hong, Yili and Watson, Layne T. and Butt, Ali R.},
+	title = {{MOANA}: {M}odeling and analyzing {I/O} variability in parallel system experimental design},
+	year = {2019},
+	month = {8},
+	journal = {IEEE Transactions on Parallel and Distributed Systems},
+	volume = {30},
+	number = {8},
+	pages = {1843--1856},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/tpds.2019.2892129},
+	url = {https://ieeexplore.ieee.org/document/8631172/},
+	issn = {1045-9219},
+}
+
+% Paper on the challenges of integrating VTMOP into the libEnsemble parallel computing Python software library at Argonne
+@inproceedings{chang2020managing,
+	author = {Chang, Tyler H. and Larson, Jeffrey and Watson, Layne T. and Lux, Thomas C. H.},
+	title = {Managing computationally expensive blackbox multiobjective optimization problems using {libEnsemble}},
+	year = {2020},
+	booktitle = {Proc. 2020 Spring Simulation Conference (SpringSim 2020), the 28th High Performance Computing Symposium (HPC '20)},
+	numpages = {31},
+	organization = {SCS},
+	location = {Fairfax, VA, USA},
+	doi = {10.22360/SpringSim.2020.HPC.001},
+	url = {https://dl.acm.org/doi/abs/10.5555/3408207.3408245},
+}
+
+% My PhD thesis, including multiobjective optimization techniques, algorithm, performance analysis, and software review; description of VTMOP, running parallel simulations, integrating with libE. Also scientific machine learning via Delaunay interpolation and algorithms and proofs for doing so. Several applications related to HPC performance modeling and autotuning.
+@phdthesis{chang2020mathematical,
+	author = {Chang, Tyler H.},
+	title = {Mathematical Software for Multiobjective Optimization Problems},
+	year = {2020},
+	school = {Virginia Tech, Dept. of Computer Science},
+	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
+}
+
+% A study on the multiobjective optimization of the LINPACK benchmark's config files on the leadership class HPC Bebop at Argonne National Laboratory. We used VTMOP but some modifications were required to ensure that mixed variables were properly handled. Some of the techniques that we used here inspired me to provide automatic support in ParMOO. Ultimately, we achieve 3x reduction in performance variability without sacrificing max/mean throughput.
+@inproceedings{chang2020multiobjective,
+	author = {Chang, Tyler H. and Larson, Jeffrey and Watson, Layne T.},
+	title = {Multiobjective optimization of the variability of the high-performance {LINPACK} solver},
+	year = {2020},
+	month = {12},
+	booktitle = {Proc. 2020 Winter Simulation Conference (WSC 2020)},
+	pages = {3081--3092},
+	organization = {IEEE},
+	location = {Orlando, FL, USA},
+	doi = {10.1109/WSC48552.2020.9383875},
+	url = {https://ieeexplore.ieee.org/document/9383875/},
+}
+
+% Publication of my second open source numerical software package: VTMOP a Fortran software for solving blackbox multiobjective optimization problems. Uses surrogate modeling (RSM), with an adaptive weighting scheme, within a trust region framework. The motivating application is a particle accelerator tuning problem at SLAC
+@article{chang2022algorithm,
+	author = {Chang, Tyler H. and Watson, Layne T. and Larson, Jeffrey and Neveu, Nicole and Thacker, William I. and Deshpande, Shubhangi and Lux, Thomas C. H.},
+	title = {{Algorithm 1028}: {VTMOP}: Solver for Blackbox Multiobjective Optimization Problems},
+	year = {2022},
+	month = {9},
+	journal = {{ACM} Transactions on Mathematical Software},
+	volume = {48},
+	number = {3},
+	numpages = {36},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/3529258},
+	url = {https://dl.acm.org/doi/10.1145/3529258},
+	issn = {0098-3500},
+	git = {https://github.com/Libensemble/libe-community-examples/tree/main/vtmop},
+}
+
+% The ParMOO JOSS article -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
+@article{chang2023parmoo,
+	author = {Chang, Tyler H. and Wild, Stefan M.},
+	title = {{ParMOO}: A {P}ython library for parallel multiobjective simulation optimization},
+	year = {2023},
+	month = {2},
+	journal = {Journal of Open Source Software},
+	volume = {8},
+	number = {82},
+	numpages = {4468},
+	publisher = {The Open Journal},
+	doi = {10.21105/joss.04468},
+	url = {https://joss.theoj.org/papers/10.21105/joss.04468},
+	issn = {2475-9066},
+}
+
+% This is the IJOC ParMOO repository DOI -- this is an archive of the software experiments for obtaining our test problems and reproducing our experimental results on those test problems with customized ParMOO solvers.
+@misc{chang2024designing,
+	author = {Chang, Tyler H. and Wild, Stefan M.},
+	title = {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
+	year = {2024},
+	month = {3},
+	booktitle = {INFORMS Journal on Computing},
+	publisher = {INFORMS Journal on Computing},
+	doi = {10.1287/ijoc.2023.0250.cd},
+	url = {https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2023.0250},
+	issn = {1091-9856},
+	note = {Available for download at https://github.com/INFORMSJoC/2023.0250},
+}
+
+% The ParMOO docs -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
+@techreport{chang2024parmoo,
+	author = {Chang, Tyler H. and Wild, Stefan M. and Dickinson, Hyrum},
+	title = {{ParMOO}: {P}ython library for parallel multiobjective simulation optimization},
+	year = {2024},
+	number = {Version 0.4.1},
+	institution = {Argonne National Laboratory},
+	address = {Lemont, IL, USA},
+	url = {https://parmoo.readthedocs.io/en/latest},
+}
+
+% The ParMOO IJOC article describing the design of the ParMOO software, motivation, and providing examples of how ParMOO can be used to solve common scientific problems more efficiently with low effort -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
+@article{chang2025designing,
+	author = {Chang, Tyler H. and Wild, Stefan M.},
+	title = {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
+	year = {2025},
+	month = {3},
+	journal = {INFORMS Journal on Computing},
+	publisher = {Institute for Operations Research and the Management Sciences (INFORMS)},
+	doi = {10.1287/ijoc.2023.0250},
+	url = {https://pubsonline.informs.org/doi/10.1287/ijoc.2023.0250},
+	issn = {1091-9856},
+}
+
+% The funcX and updated Globus publication on the techniques and benefits of using a function-as-a-service (FaaS) framework to perform scientific experimentation at Argonne and other labs. funcX and Globus are scientific software products for performing distributed function evaluations and parallel computing that started at Argonne, and spun off into independent companies
+@inproceedings{chard2020funcx,
+	author = {Chard, Ryan and Babuji, Yadu and Li, Zhuozhao and Skluzacek, Tyler and Woodard, Anna and Blaiszik, Ben and Foster, Ian and Chard, Kyle},
+	title = {{funcX}: A federated function serving fabric for science},
+	year = {2020},
+	month = {6},
+	booktitle = {Proc. 29th International Symposium on High-Performance Parallel and Distributed Computing (HPDC '20)},
+	pages = {65--76},
+	organization = {ACM},
+	location = {Stockholm, Sweden},
+	doi = {10.1145/3369583.3392683},
+	url = {https://dl.acm.org/doi/10.1145/3369583.3392683},
+}
+
+% Publication of our work on multiobjective shape optimization of the RF-gun cavity for the Argonne wakefield accelerator using ParMOO with the POISSON/SUPERFISH simulation software
+@inproceedings{chen2023integrated,
+	author = {Chen, Gongxiaohui and Chang, Tyler H. and Power, John and Jing, Chungunag},
+	title = {An Integrated Multi-Physics Optimization Framework for Particle Accelerator Design},
+	year = {2023},
+	booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023), Industrial Applications Track},
+	numpages = {2},
+	location = {Orlando, FL, USA},
+	doi = {10.48550/arXiv.2311.09415},
+}
+
+% The Keras docs -- great and highly impactful open source Python software, needs no introduction. A simplified interface for quickly building neural networks and other deep learning models with various backends frameworks such as Tensorflow, jax, and Pytorch.
+@misc{chollet2015keras,
+	author = {Chollet, Fran\c{c}ois and others, },
+	title = {Keras},
+	year = {2015},
+	howpublished = {\url{https://keras.io}},
+}
+
+% The exascale computing project press release
+@misc{deanl2019press,
+	title = {Press Release: {U.S.\ Department of Energy and Intel} to deliver first exascale supercomputer},
+	year = {2019},
+	month = {March},
+	publisher = {{U.S.\ Department of Energy, Argonne National Laboratory}},
+	url = {https://www.anl.gov/article/us-department-of-energy-and-intel-to-deliver-first-exascale-supercomputer},
+	note = {accessed April 28, 2020},
+	keywords = {},
+}
+
+% Achieving performance portability of parallel codes in the exascale computing
+% project (ECP) across various GPU-based architectures, which is challenging
+% since different GPU vendors use different GPU programming libraries (e.g.,
+% CUDA for NVIDIA vs HIPP for AMD) -- high-quality re-usable open source
+% software and software hardware codesign are cited as important issues from
+% the software perspective, as well as performance portability (i.e., port
+% between HIPP, CUDA, OpenMP, and SYCL/DPC++ for on-node parallelism)
+@article{dubey2021performance,
+	author = {Dubey, Anshu and McInnes, Lois Curfman and Thakur, Rajeev and Draeger, Erik W. and Evans, Thomas and Germann, Timothy C. and Hart, William E.},
+	title = {Performance Portability in the {E}xascale {C}omputing {P}roject: Exploration Through a Panel Series},
+	year = {2021},
+	month = {9},
+	journal = {Computing in Science \& Engineering},
+	volume = {23},
+	number = {5},
+	pages = {46--54},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/MCSE.2021.3098231},
+	url = {https://ieeexplore.ieee.org/document/9495114/},
+	issn = {1521-9615},
+}
+
+% An example of using genetic algorithms for autotuning HPC libraries (such as
+% BLAS and LAPACK)
+@inproceedings{dunlop2008use,
+	author = {Dunlop, Dominic and Varrette, Sebastien and Bouvry, Pascal},
+	title = {On the use of a genetic algorithm in high performance computing benchmark tuning},
+	year = {2008},
+	booktitle = {Proceedings of the 2008 International Symposium on Performance Evaluation of Computer and Telecommunication Systems},
+	pages = {105--113},
+	organization = {IEEE},
+	location = {Edinburgh, UK},
+	keywords = {},
+}
+
+% The JuMP modeling language in Julia -- a modeling language for modeling and solving linear and nonlinear programming (optimization) problems in Julia. The implementation is an open source numerical software
+@article{dunning2017jump,
+	author = {Dunning, Iain and Huchette, Joey and Lubin, Miles},
+	title = {{JuMP}: A Modeling Language for Mathematical Optimization},
+	year = {2017},
+	month = {1},
+	journal = {SIAM Review},
+	volume = {59},
+	number = {2},
+	pages = {295--320},
+	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
+	doi = {10.1137/15M1020575},
+	url = {https://epubs.siam.org/doi/10.1137/15M1020575},
+	issn = {0036-1445},
+}
+
+% jMetal is an open source numerical software library implementing multiobjective optimization solvers in Java. Last I checked, most of the solvers were heuristic methods such as evolutionary algorithms and/or simulated annealing. This is widely used in some fields of engineering
+@article{durillo2011jmetal,
+	author = {Durillo, Juan J. and Nebro, Antonio J.},
+	title = {{jMetal}: A {J}ava framework for multi-objective optimization},
+	year = {2011},
+	month = {10},
+	journal = {Advances in Engineering Software},
+	volume = {42},
+	number = {10},
+	pages = {760--771},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.advengsoft.2011.05.014},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0965997811001219},
+	issn = {0965-9978},
+}
+
+% The MDML open source software is a wrapper around Apache Kafka with protocols for fast data streaming and logging and dashboard generation. This framework was developed for usage at the material engineering research facility (MERF) at Argonne in order to facilitate the creation of a "smart lab" where MDML is the protocol for sending experiment requests to various equipment in the lab and logging results -- in an old (out-of-date branch) of ParMOO, this was a valid backend for launching simulation / experiment requests
+@article{elias2020manufacturing,
+	author = {Elias, Jakob R. and Chard, Ryan and Libera, Joseph A. and Foster, Ian T. and Chaudhuri, Santanu},
+	title = {The Manufacturing Data and Machine Learning Platform: Enabling Real-time Monitoring and Control of Scientific Experiments via {IoT}},
+	year = {2020},
+	month = {6},
+	journal = {2020 IEEE 6th World Forum on Internet of Things (WF-IoT)},
+	pages = {1--2},
+	publisher = {IEEE},
+	address = {New Orleans, LA, USA},
+	doi = {10.1109/WF-IoT48130.2020.9221078},
+	url = {https://ieeexplore.ieee.org/document/9221078/},
+	git = {GitHub: \url{https://github.com/anl-mdml/MDML_Client}},
+}
+
+% A nice survey paper on neural architecture search covering common search (i.e., architecture) space representations, search (i.e., optimization) strategies, and how to evaluate the performance of NAS methods
+@article{elsken2019neural,
+	author = {Elsken, Thomas and Metzen, Jan Hendrik and Hutter, Frank},
+	title = {Neural architecture search: A survey},
+	year = {2019},
+	journal = {The Journal of Machine Learning Research},
+	volume = {20},
+	number = {1},
+	pages = {1997--2017},
+	publisher = {JMLR.org},
+}
+
+% The DEAP framework is a Python framework for easily implementing and deploying parallel and distributed evolutionary algorithms. Fairly high quality open source software. This is widely used by optimization practitioners, e.g., engineers and scientists that read an evolutionary algorithm paper and want to try it out on their problem
+@article{fortin2012deap,
+	author = {Fortin, F\'elix-Antoine and {De Rainville}, Fran\c{c}ois-Michel and Gardner, Marc-Andr\'e and Parizeau, Marc and Gagn\'e ", Christian},
+	title = {{DEAP}: Evolutionary Algorithms Made Easy},
+	year = {2012},
+	journal = {Journal of Machine Learning Research},
+	volume = {13},
+	number = {1},
+	pages = {2171--2175},
+	url = {https://www.jmlr.org/papers/v13/fortin12a.html},
+}
+
+% An article on the benefits of co design of algorithms and software and hardware in the context of the DOE's exascale computing project (ECP)
+@article{germann2021codesign,
+	author = {Germann, Timothy C.},
+	title = {Co-design in the {Exascale Computing Project}},
+	year = {2021},
+	month = {11},
+	journal = {The International Journal of High Performance Computing Applications},
+	volume = {35},
+	number = {6},
+	pages = {503--507},
+	publisher = {SAGE Publications Sage UK: London, England},
+	doi = {10.1177/10943420211059380},
+	url = {https://journals.sagepub.com/doi/10.1177/10943420211059380},
+	issn = {1094-3420},
+}
+
+% Classical textbook that serves as the "bible" of matrix computations and computational linear algebra -- contains all the standard factorizations, the common algorithms for computing them, and their sensitiviy analyses, pivoting, some basic approximation theory, and the basics of iterative methods
+@book{golub2013matrix,
+	author = {Golub, Gene H. and Van Loan, Charles F.},
+	title = {Matrix computations},
+	year = {2013},
+	edition = {4th},
+	publisher = {Johns Hopkins University Press},
+	doi = {10.56021/9781421407944},
+	url = {https://www.press.jhu.edu/books/title/10678/matrix-computations},
+	isbn = {978-1421407944},
+	keywords = {},
+}
+
+% The OpenMDAO open source numerical software library for modeling and solving multidisciplinary engineering design optimization problems. Combines surrogate modeling, gradient based optimization, parallel computing frameworks, and derivative-free optimization techniques in one package so in order to solve large mixed-variable blackbox optimization problems. Developed by NASA Glenn
+@article{gray2019openmdao,
+	author = {Gray, Justin S. and Hwang, John T. and Martins, Joaquim R.R.A. and Moore, Kenneth T. and Naylor, Bret A.},
+	title = {{OpenMDAO}: An open-source framework for multidisciplinary design, analysis, and optimization},
+	year = {2019},
+	month = {4},
+	journal = {Structural and Multidisciplinary Optimization},
+	volume = {59},
+	number = {4},
+	pages = {1075--1104},
+	publisher = {Springer},
+	doi = {10.1007/s00158-019-02211-z},
+	url = {http://link.springer.com/10.1007/s00158-019-02211-z},
+	issn = {1615-147X},
+}
+
+% Hanson's Fortran numerical software for solving equality constrained nonnegative least-squares (NNLS) problems via an iterative weighted least squares (WNNLS) solver. This is the default constrained least-squares optimization problem solver in the Fortran library SLATEC from Sandia
+@article{hanson1982algorithm,
+	author = {Hanson, Richard J. and Haskell, Karen H.},
+	title = {Algorithm 587: Two Algorithms for the Linearly Constrained Least Squares Problem},
+	year = {1982},
+	month = {9},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {8},
+	number = {3},
+	pages = {323--333},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	doi = {10.1145/356004.356010},
+	url = {https://dl.acm.org/doi/10.1145/356004.356010},
+	issn = {0098-3500},
+}
+
+% The official publication of the open source numerical software numpy: the standard for basic multivariable computations, vector operations, and simple linear algebra in Python
+@article{harris2020array,
+	author = {Harris, Charles R. and Millman, K. Jarrod and Walt, St{\'{e}}fan J. van der and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and Kerkwijk, Marten H. van and Brett, Matthew and Haldane, Allan and R{\'{i}}o, Jaime Fern{\'{a}}ndez del and Wiebe, Mark and Peterson, Pearu and G{\'{e}}rard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.},
+	title = {Array programming with {NumPy}},
+	year = {2020},
+	month = {9},
+	journal = {Nature},
+	volume = {585},
+	number = {7825},
+	pages = {357--362},
+	publisher = {Springer Science and Business Media {LLC}},
+	doi = {10.1038/s41586-020-2649-2},
+	url = {https://www.nature.com/articles/s41586-020-2649-2},
+	issn = {0028-0836},
+}
+
+% The official textbook on the Pyomo modeling language: an open source optimization modeling language and scientific software developed at Sandia by Bill Hart et al. Pyomo is a standard for solving large-scale mathematical programming (linear and nonlinear optimization) problems in Python
+@book{hart2017pyomo,
+	author = {Hart, William E. and Laird, Carl D. and Watson, Jean-Paul and Woodruff, David L. and Hackebeil, Gabriel A. and Nicholson, Bethany L. and Siirola, John D.},
+	title = {Pyomo -- optimization modeling in {P}ython},
+	year = {2017},
+	booktitle = {Springer Optimization and Its Applications},
+	series = {Springer Optimization and Its Applications},
+	edition = {2},
+	publisher = {Springer Cham},
+	address = {Cham, Switzerland},
+	doi = {10.1007/978-3-319-58821-6},
+	url = {http://link.springer.com/10.1007/978-3-319-58821-6},
+	isbn = {9783319588193},
+	issn = {1931-6828},
+}
+
+% VTDIRECT95 reference: a high-performance parallel Fortran implementation of the famous single-objective blackbox (direct search) optimization algorithm DIRECT. The numerical software is now open source (maintained by me) on Dr. Watson's GitHub page.
+@article{he2009algorithm,
+	author = {He, Jian and Watson, Layne T. and Sosonkina, Masha},
+	title = {Algorithm 897: {VTDIRECT95}: Serial and Parallel Codes for the Global Optimization Algorithm {DIRECT}},
+	year = {2009},
+	month = {7},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {36},
+	number = {3},
+	numpages = {17},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/1527286.1527291},
+	url = {https://dl.acm.org/doi/10.1145/1527286.1527291},
+	issn = {0098-3500},
+}
+
+% Studying the parallel performance of VTDIRECT95 at a massive scale: in summary VTDIRECT95 scales very well after the initial "warmup" period since there are not many boxes in the first couple iterations
+@article{he2009performance,
+	author = {He, Jian and Verstak, Alex and Watson, Layne T. and Sosonkina, Masha},
+	title = {Performance modeling and analysis of a massively parallel {DIRECT} -- part 1},
+	year = {2009},
+	month = {2},
+	journal = {The International Journal of High Performance Computing Applications},
+	volume = {23},
+	number = {1},
+	pages = {14--28},
+	publisher = {SAGE Publications},
+	doi = {10.1177/1094342008098463},
+	url = {https://journals.sagepub.com/doi/10.1177/1094342008098463},
+	issn = {1094-3420},
+	keywords = {},
+}
+
+% The better scientific software tech report, with recommendations and rules of thumb for improving the quality of scientific software within the DOE
+@techreport{heroux2020advancing,
+	author = {Heroux, Michael A. and McInnes, Lois and Bernholdt, David E. and Dubey, Anshu and Gonsiorowski, Elsa and Marques, Osni and Moulton, J. David and Norris, Boyana and Raybourn, Elaine and Balay, Satish and Bartlett, Roscoe A. and Childers, Lisa and Gamblin, Todd and Grubel, Patricia and Gupta, Rinku and Hartman-Baker, Rebecca and Hill, Judith C. and Hudson, Stephen and Junghans, Christoph and Klinvex, Alicia and Milewicz, Reed and Miller, Mark and Ah Nam, Hai and O'Neal, Jared and Riley, Katherine and Sims, Ben and Schuler, Jean and Smith, Barry F. and Vernon, Louis and Watson, Gregory R. and Willenbring, James and Wolfenbarger, Paul},
+	title = {Advancing Scientific Productivity through Better Scientific Software: Developer Productivity and Software Sustainability Report},
+	year = {2020},
+	month = {1},
+	number = {ORNL TM-2020 1459 / ECP-U-RPT-2020-0001},
+	institution = {Oak Ridge National Laboratory},
+	address = {Oak Ridge, TN, USA},
+	doi = {10.2172/1606662},
+	url = {https://www.osti.gov/servlets/purl/1606662/},
+}
+
+% The official publication for HiGHS numerical optimization open source software package and solver for linear programming problems. The first successful effort to parallelize a simplex method based solver, specifically, they have successfully parallelized the dual revised simplex approach. HiGHS is now the default solver in most scipy.optimize. HiGHS is written in C++ with Fortran, C, and Python interfaces -- support CPU and GPU parallelism, the authors don't get perfect scaling by any means but this is the first successful effort to parallelize linear programming and still an achievement
+@article{huangfu2018parallelizing,
+	author = {Huangfu, Qi and Hall, JA Julian},
+	title = {Parallelizing the dual revised simplex method},
+	year = {2018},
+	month = {3},
+	journal = {Mathematical Programming Computation},
+	volume = {10},
+	number = {1},
+	pages = {119--142},
+	publisher = {Springer},
+	doi = {10.1007/s12532-017-0130-5},
+	url = {http://link.springer.com/10.1007/s12532-017-0130-5},
+	issn = {1867-2949},
+}
+
+% The original libEnsemble publication focusing on its techniques for distributing and evaluating ensembles of functions in parallel. Although not discussed, libEnsemble was already open source at the time
+@article{hudson2022libensemble,
+	author = {Hudson, Stephen and Larson, Jeffrey and Navarro, John-Luke and Wild, Stefan M.},
+	title = {{libEnsemble}: A Library to Coordinate the Concurrent Evaluation of Dynamic Ensembles of Calculations},
+	year = {2022},
+	month = {4},
+	journal = {{IEEE} Transactions on Parallel and Distributed Systems},
+	volume = {33},
+	number = {4},
+	pages = {977--988},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/tpds.2021.3082815},
+	url = {https://ieeexplore.ieee.org/document/9439163/},
+	issn = {1045-9219},
+}
+
+% The official JOSS paper for libEnsemble: an open source software library for performing parallel and distributed computations involving ensembles of computationally expensive function evaluations in Python
+@techreport{hudson2023libensemble,
+	author = {Hudson, Stephen and Larson, Jeffrey and Navarro, John-Luke and Wild, Stefan M.},
+	title = {{libEnsemble: A} complete {Python} toolkit for dynamic ensembles of calculations},
+	year = {2023},
+	month = {12},
+	booktitle = {Journal of Open Source Software},
+	volume = {8},
+	number = {92},
+	numpages = {6031},
+	institution = {The Open Journal},
+	doi = {10.21105/joss.06031},
+	url = {https://joss.theoj.org/papers/10.21105/joss.06031},
+	issn = {2475-9066},
+}
+
+% ISO Fortran 2003 software standard -- definition of the Fortran 2003 standard
+@techreport{ios2004information,
+	title = {{Information technology -- Programming languages -- Fortran -- Part 1: Base Language}},
+	year = {2004},
+	month = {November},
+	number = {ISO/IEC 1539-1:2004(E)},
+	institution = {International Organization for Standardization},
+	address = {Geneva, Switzerland},
+	keywords = {},
+}
+
+% ISO Fortran 2008 software standard -- definition of the Fortran 2008 standard
+@techreport{ios2010information,
+	title = {{Information technology -- Programming languages -- Fortran -- Part 1: Base Language}},
+	year = {2010},
+	month = {October},
+	number = {ISO/IEC 1539-1:2010(E)},
+	institution = {International Organization for Standardization},
+	address = {Geneva, Switzerland},
+	keywords = {},
+}
+
+% Introducing Dragonfly: an open source numerical software package for solving neural architecture search problems via Bayesian optimization and solving an optimal transport problem to evaluate the distance between two networks. Considered a bit of a landmark paper for neural network architecture search problems. The open source Python software is widely used for a variety of applications outside NAS, including molecular discovery
+@article{kandasamy2020tuning,
+	author = {Kandasamy, Kirthevasan and Vysyaraju, Karun Raju and Neiswanger, Willie and Paria, Biswajit and Collins, Christopher R. and Schneider, Jeff and Poczos, Barnabus and Xing, Eric P.},
+	title = {Tuning Hyperparameters without Grad Students: Scalable and Robust {Bayesian} Optimisation with {Dragonfly}},
+	year = {2020},
+	journal = {Journal of Machine Learning Research},
+	volume = {21},
+	number = {81},
+	pages = {1--27},
+	url = {http://jmlr.org/papers/v21/18-223.html},
+	git = {http://github.com/dragonfly/dragonfly},
+}
+
+% A survey of multiobjective optimization algorithms for hyperparameter tuning in the context of automatic machine learning (autoML)
+@article{karl2023multiobjective,
+	author = {Karl, Florian and Pielok, Tobias and Moosbauer, Julia and Pfisterer, Florian and Coors, Stefan and Binder, Martin and Schneider, Lennart and Thomas, Janek and Richter, Jakob and Lang, Michel and Garrido-Merchán, Eduardo C. and Branke, Juergen and Bischl, Bernd},
+	title = {Multi-Objective Hyperparameter Optimization in Machine Learning -- An Overview},
+	year = {2023},
+	month = {12},
+	journal = {ACM Transactions on Evolutionary Learning and Optimization},
+	volume = {3},
+	number = {4},
+	pages = {1--50},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/3610536},
+	url = {https://dl.acm.org/doi/10.1145/3610536},
+	issn = {2688-299X},
+}
+
+% The SORCER software is a service oriented computing environment used by the US Airforce research lab (AFRL) to distribute expensive computations (such as design optimizations) across their large distributed network of computing resources
+@inproceedings{kolonay2011service,
+	author = {Kolonay, Raymond M. and Sobolewski, Michael},
+	title = {Service oriented computing environment ({SORCER}) for large scale, distributed, dynamic fidelity aeroelastic analysis},
+	year = {2011},
+	booktitle = {International Forum on Aeroelasticity and Structural Dynamics (IFASD 2011), Optimization},
+	pages = {26--30},
+	organization = {Citeseer},
+	location = {Paris, France},
+	url = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.656.7539},
+}
+
+% A whitepaper describing Cerebras's wafer scale neuromorphic computing architectures, as used in the AI incubator at Argonne
+@techreport{lavely2022powering,
+	author = {Lavely, Adam},
+	title = {Powering Extreme-Scale {HPC} with {C}erebras Wafer-Scale Accelerators},
+	year = {2022},
+	institution = {Cerebras Systems, Inc.},
+	address = {Sunnyvale, CA, USA},
+	url = {https://8968533.fs1.hubspotusercontent-na1.net/hubfs/8968533/Powering-Extreme-Scale-HPC-with-Cerebras.pdf},
+}
+
+% NOMAD v3 is a widely-used open source numerical software package (in C++) for blackbox and derivative-free optimization via the MADS algorithms. Includes the official implementations of algorithms such as Ortho-MADS, PSD-MADS, and BiMADS. Support for parallel computing and surrogate modeling, and fairly extensible. Can be linked as a C++ library, or usage from command line interface. Used by a variety of industries and officially supported by Exxon Mobile. Has recently been replaced by the major refactor/rewrite in NOMAD v4. Still an example of widely-used open source numerical software, but the NOMAD v4 paper gives a look at how open source software practices have changed (improved) in the last 10 years
+@article{le digabel2011algorithm,
+	author = {{Le Digabel}, S{\'e}bastien},
+	title = {Algorithm 909: {NOMAD}: Nonlinear Optimization with the {MADS} Algorithm},
+	year = {2011},
+	month = {2},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {37},
+	number = {4},
+	numpages = {44},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/1916461.1916468},
+	url = {https://dl.acm.org/doi/10.1145/1916461.1916468},
+	issn = {0098-3500},
+}
+
+% Publication describing Graphcore's IPU architecture (intelligence processing unit), which is a neuromorphic parallel processor optimized for high-throughput vector operations
+@inproceedings{louw2021using,
+	author = {Louw, Thorben and McIntosh-Smith, Simon},
+	title = {Using the {Graphcore IPU} for traditional {HPC} applications},
+	year = {2021},
+	booktitle = {Proc. 3rd Workshop on Accelerated Machine Learning (AccML)},
+	pages = {1--9},
+	location = {virtual event},
+	url = {https://easychair.org/publications/preprint/ztfj},
+}
+
+% Summary of discussions from Oak Ridge National Laboratory Summit discussing GPU-based architectures and other developments from the exascale computing project
+@article{luo2020preexascale,
+	author = {Luo, L. and P. Straatsma, T. and Suarez, L. E. Aguilar and Broer, R. and Bykov, D. and F. D'Azevedo, E. and S. Faraji, S. and C. Gottiparthi, K. and De Graaf, C. and A. Harris, J. and A. Havenith, R. W. and Jensen, H. J. Aa. and Joubert, W. and K. Kathir, R. and Larkin, J. and W. Li, Y. and I. Lyakh, D. and B. Messer, O. E. and R. Norman, M. and C. Oefelein, J. and Sankaran, R. and F. Tillack, A. and L. Barnes, A. and Visscher, L. and C. Wells, J. and Wibowo, M.},
+	title = {Pre-exascale accelerated application development: The {ORNL Summit} experience},
+	year = {2020},
+	month = {5},
+	journal = {IBM Journal of Research and Development},
+	volume = {64},
+	number = {3/4},
+	pages = {11:1--11:21},
+	publisher = {IBM},
+	doi = {10.1147/JRD.2020.2965881},
+	url = {https://ieeexplore.ieee.org/document/8960361/},
+	issn = {0018-8646},
+}
+
+% Python wrapper around the open source numerical simulation software superfish We used this when performing particle accelerator RF gun cavity optimization at Argonne in order to provide a bridge between POISSON/SUPERFISH (Fortran codes) and the ParMOO optimizer (a Python code)
+@misc{mayes2023pysuperfish,
+	author = {Mayes, Christopher},
+	title = {PySuperfish},
+	year = {2023},
+	url = {https://github.com/ChristopherMayes/PySuperfish},
+}
+
+% The POISSON/SUPERFISH open source numerical software (in Fortran) for calculating static, magnetic, and electric fields and rf electromagnetic fields. Used to design particle accelerators, developed and maintained by Los Alamos
+@techreport{menzel1987users,
+	author = {Menzel, M. T. and Stokes, H. K.},
+	title = {Users guide for the {POISSON/SUPERFISH} group of codes},
+	year = {1987},
+	month = {1},
+	number = {LA-UR-87-115},
+	institution = {Los Alamos National Laboratory},
+	address = {Los Alamos, NM, USA},
+	doi = {10.2172/10140823},
+	url = {https://www.osti.gov/servlets/purl/10140823},
+}
+
+% Report on challenges and experiences gained in porting PETSc to GPUs for the exascale computing project
+@article{mills2021toward,
+	author = {Mills, Richard Tran and Adams, Mark F. and Balay, Satish and Brown, Jed and Dener, Alp and Knepley, Matthew and Kruger, Scott E. and Morgan, Hannah and Munson, Todd and Rupp, Karl and Smith, Barry F. and Zampini, Stefano and Zhang, Hong and Zhang, Junchao},
+	title = {Toward performance-portable {PETSc} for {GPU}-based exascale systems},
+	year = {2021},
+	month = {12},
+	journal = {Parallel Computing},
+	volume = {108},
+	numpages = {102831},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.parco.2021.102831},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S016781912100079X},
+	issn = {0167-8191},
+}
+
+% This is the last TAO (toolkit for advanced optimization) reference before this open source numerical simulation optimization software when merged with PETSc, into a single PETSc + TAO release
+@techreport{munson2015tao,
+	author = {Munson, Todd and Sarich, Jason and Wild, Stefan and Benson, Steven and McInnes, Lois Curfman},
+	title = {{TAO} 3.5 Users Manual},
+	year = {2015},
+	number = {ANL/MCS-TM-322 version 3.5},
+	institution = {Argonne National Laboratory},
+	address = {Lemont, IL, USA},
+	url = {https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf},
+}
+
+% An application of VTMOP for the multiobjective optimization (tuning) of the LCLS-II photoinjector (linear accelerator at SLAC). Had to use some hacks to get VTMOP to work, such as penalizing bad regions of the Pareto front, but ultimately performed better than NSGA-II
+@article{neveu2023comparison,
+	author = {Neveu, Nicole and Chang, Tyler H. and Franz, Paris and Hudson, Stephen and Larson, Jeffrey},
+	title = {Comparison of multiobjective optimization methods for the {LCLS-II} photoinjector},
+	year = {2023},
+	month = {2},
+	journal = {Computer Physics Communication},
+	volume = {283},
+	articleno = {108566},
+	numpages = {10},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.cpc.2022.108566},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0010465522002855},
+	issn = {0010-4655},
+}
+
+% OpenMP 4.5 standard: Official definition of OpenMP 4.5 software standard
+@techreport{oarb(2015openmp,
+	title = {{OpenMP Application Programming Interface} version 4.5},
+	year = {2015},
+	month = {November},
+	number = {OpenMP 4.5},
+	institution = {OpenMP Architecture Review Board (ARB)},
+	keywords = {},
+}
+
+% PABO - a multiobjective Bayesian optimization software package that is specialized for NAS -- basically an inner network is used as a surrogate and an outer network is used to predict which designs to evaluate next -- I have serious reservations about this kind of approach, and it doesn't seem to work that well
+@inproceedings{parsa2019pabo,
+	author = {Parsa, Maryam and Ankit, Aayush and Ziabari, Amirkoushyar and Roy, Kaushik},
+	title = {{PABO}: Pseudo Agent-Based Multi-Objective {B}ayesian Hyperparameter Optimization for Efficient Neural Accelerator Design},
+	year = {2019},
+	month = {11},
+	booktitle = {Proc. 2019 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},
+	pages = {1--8},
+	organization = {IEEE/ACM},
+	location = {Westin Westminster, CO, USA},
+	doi = {10.1109/ICCAD45719.2019.8942046},
+	url = {https://ieeexplore.ieee.org/document/8942046/},
+}
+
+% H-PABO multiobjective Bayesian optimization framework, specialized for NAS, and improvement on PABO
+@article{parsa2020bayesian,
+	author = {Parsa, Maryam and Mitchell, John P. and Schuman, Catherine D. and Patton, Robert M. and Potok, Thomas E. and Roy, Kaushik},
+	title = {Bayesian Multi-objective Hyperparameter Optimization for Accurate, Fast, and Efficient Neural Network Accelerator Design},
+	year = {2020},
+	month = {7},
+	journal = {Frontiers in Neuroscience},
+	volume = {14},
+	numpages = {667},
+	publisher = {Frontiers Media SA},
+	doi = {10.3389/fnins.2020.00667},
+	url = {https://www.frontiersin.org/article/10.3389/fnins.2020.00667/full},
+	issn = {1662-453X},
+}
+
+% The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+@inproceedings{paszke2019pytorch,
+	author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
+	title = {{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	pages = {1--12},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
+}
+
+% The official publication for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+@article{pedregosa2011scikitlearn,
+	author = {Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others, },
+	title = {Scikit-learn: Machine learning in {P}ython},
+	year = {2011},
+	journal = {Journal of Machine Learning Research},
+	volume = {12},
+	pages = {2825--2830},
+	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
+}
+
+% Experiences, challenges, and techniques for integrating the blackbox optimization solvers VTDIRECT95 and QNSTOP into the parallel service architecture SORCER
+@inproceedings{raghunath2017global,
+	author = {Raghunath, Chaitra and Chang, Tyler H. and Watson, Layne T. and Jrad, Mohamad and Kapania, Rakesh K. and Kolonay, Raymond M.},
+	title = {Global deterministic and stochastic optimization in a service oriented architecture},
+	year = {2017},
+	booktitle = {Proc. 2017 Spring Simulation Conference (SpringSim 2017), the 25th High Performance Computing Symposium (HPC '17)},
+	numpages = {7},
+	organization = {SCS},
+	location = {Virginia Beach, VA, USA},
+	doi = {10.22360/springsim.2017.hpc.023},
+	url = {http://dl.acm.org/citation.cfm?id=3108103},
+}
+
+% The docker image for the SUPERFISH/POISSON container + wrapper -- we used this at Argonne to obtain a portable copy of POISSON/SUPERFISH when performing particle accelerator RF gun cavity optimization and distributing work on remote systems
+@misc{slepicka2020poisson,
+	author = {Slepicka, Hugo},
+	title = {Poisson Superfish via Docker},
+	year = {2020},
+	url = {https://github.com/hhslepicka/docker-poisson-superfish-nobin},
+}
+
+% The FAIR principles of data management: Scientific data should be findable, accessible, interpretable, and reproducible
+@article{stall2019make,
+	author = {Stall, Shelley and Yarmey, Lynn and Cutcher-Gershenfeld, Joel and Hanson, Brooks and Lehnert, Kerstin and Nosek, Brian and Parsons, Mark and Robinson, Erin and Wyborn, Lesley},
+	title = {Make scientific data {FAIR}},
+	year = {2019},
+	month = {6},
+	journal = {Nature},
+	volume = {570},
+	number = {7759},
+	pages = {27--29},
+	publisher = {Nature Publishing Group},
+	doi = {10.1038/d41586-019-01720-7},
+	url = {https://www.nature.com/articles/d41586-019-01720-7},
+	issn = {0028-0836},
+}
+
+% BoostDMS is numerical software library providing access to Custodio's direct search and pattern search software, including MultiGLODS and DMS, in Matlab with full parallel computing support
+@article{tavares2022parallel,
+	author = {Tavares, S. and Br\'as, C. P. and Cust\'odio, A. L. and Duarte, V. and Medeiros, P.},
+	title = {Parallel Strategies for Direct Multisearch},
+	year = {2022},
+	month = {3},
+	journal = {Numerical Algorithms},
+	volume = {92},
+	number = {3},
+	pages = {1757--1788},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/s11075-022-01364-1},
+	url = {https://link.springer.com/10.1007/s11075-022-01364-1},
+	issn = {1017-1398},
+}
+
+% The (recently open source) numerical software library SLATEC from Sandia is something of a precursor to a modern library like scipy. SLATEC provides highly optimized, numerically stable, Fortran implementations for nearly every basic numerical algorithm that one would encounter in scientific computing
+@article{vandevender1982slatec,
+	author = {Vandevender, Walter H. and Haskell, Karen H.},
+	title = {The {SLATEC} Mathematical Subroutine Library},
+	year = {1982},
+	month = {9},
+	journal = {SIGNUM Newsletter},
+	volume = {17},
+	number = {3},
+	pages = {16--21},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/1057594.1057595},
+	url = {https://dl.acm.org/doi/10.1145/1057594.1057595},
+	issn = {0163-5778},
+	keywords = {},
+}
+
+% SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
+@article{virtanen2020scipy,
+	author = {{Virtanen}, Pauli and {Gommers}, Ralf and {Oliphant}, Travis E. and {Haberland}, Matt and {Reddy}, Tyler and {Cournapeau}, David and {Burovski}, Evgeni and {Peterson}, Pearu and {Weckesser}, Warren and {Bright}, Jonathan and {van der Walt}, St{\'e}fan J. and {Brett}, Matthew and {Wilson}, Joshua and {Jarrod Millman}, K. and {Mayorov}, Nikolay and {Nelson}, Andrew R.~J. and {Jones}, Eric and {Kern}, Robert and {Larson}, Eric and {Carey}, CJ and {Polat}, {\.I}lhan and {Feng}, Yu and {Moore}, Eric W. and {VanderPlas}, Jake and {Laxalde}, Denis and {Perktold}, Josef and {Cimrman}, Robert and {Henriksen}, Ian and {Quintero}, E.~A. and {Harris}, Charles R and {Archibald}, Anne M. and {Ribeiro}, Ant{\^o}nio H. and {Pedregosa}, Fabian and {van Mulbregt}, Paul and {Contributors}, {SciPy 1.0}},
+	title = {{SciPy} 1.0: {F}undamental Algorithms for Scientific Computing in {P}ython},
+	year = {2020},
+	month = {3},
+	journal = {Nature Methods},
+	volume = {17},
+	number = {3},
+	pages = {261--272},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1038/s41592-019-0686-2},
+	url = {https://www.nature.com/articles/s41592-019-0686-2},
+	issn = {1548-7091},
+}
+
+% Survey of design-of-experiments techniques and modifications for HPC system analysis, specifically related to linearly constrained and integer lattice design spaces
+@article{wang2023design,
+	author = {Wang, Yueyao and Xu, Li and Hong, Yili and Pan, Rong and Chang, Tyler H. and Lux, Thomas C. H. and Bernard, Jon and Watson, Layne T. and Cameron, Kirk W.},
+	title = {Design strategies and approximation methods for high-performance computing variability management},
+	year = {2023},
+	month = {1},
+	journal = {Journal of Quality Technology},
+	volume = {55},
+	number = {1},
+	pages = {88--103},
+	publisher = {Taylor \& Francis},
+	doi = {10.1080/00224065.2022.2035285},
+	url = {https://www.tandfonline.com/doi/full/10.1080/00224065.2022.2035285},
+	issn = {0022-4065},
+}
+
+% How optimization is used to autotune the configuration of the BLAS subroutines and kernels for the ATLAS project -- since most numerical software relies on BLAS, it is often prudent to spend time optimizing BLAS configurations (such as matrix block sizes, etc.) to match machine specific values (such as cache sizes, etc.) when installing on a HPC that will have a high numerical (compute bound) workload. This can be done automatically via numerical optimization, so that users can just run the ATLAS setup scripts to configure BLAS automatically if they want an optimized installation
+@article{whaley2001automated,
+	author = {Whaley, R. Clint and Petitet, Antoine and Dongarra, Jack J.},
+	title = {Automated empirical optimizations of software and the {ATLAS} project},
+	year = {2001},
+	month = {1},
+	journal = {Parallel Computing},
+	volume = {27},
+	number = {1--2},
+	pages = {3--35},
+	publisher = {Elsevier BV},
+	doi = {10.1016/s0167-8191(00)00087-9},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0167819100000879},
+	issn = {0167-8191},
+	keywords = {},
+}
+
+% Prima: open source reference implementation of all of Powell's numerical optimization solvers for blackbox / simulation optimization problems in modern Fortran. IMO, these should be considered the state-of-the-art and reference implementations for all blackbox optimization research
+@misc{zhang2023prima,
+	author = {Zhang, Zaikun},
+	title = {{PRIMA: Reference Implementation for Powell's Methods with Modernization and Amelioration}},
+	year = {2023},
+	howpublished = {github repository},
+	doi = {10.5281/zenodo.8052654},
+	url = {http://www.libprima.net},
+}
+
+% The original publication for L-BFGS-B software, which solves bound-constrained optimization problems using a limited-memory BFGS. This is the standard implementation that is used in all L-BFGS-B codes to date, such as scipy, all machine learning codes, and most engineering codes and nonlinear systems solvers. The code is open source high-quality numerical software, written in old-style Fortran
+@article{zhu1997algorithm,
+	author = {Zhu, Ciyou and Byrd, Richard H. and Lu, Peihuang and Nocedal, Jorge},
+	title = {Algorithm 778: {L-BFGS-B}: {F}ortran Subroutines for Large-Scale Bound-Constrained Optimization},
+	year = {1997},
+	month = {12},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {23},
+	number = {4},
+	pages = {550--560},
+	publisher = {ACM},
+	doi = {10.1145/279232.279236},
+	url = {https://dl.acm.org/doi/10.1145/279232.279236},
+	issn = {0098-3500},
+}
+
+% Cpp-Taskflow original paper on open source software implementing a task-based
+% parallel scheduler and parallel programming interface in C++
+@inproceedings{huang2019,
+  author={Huang, Tsung-Wei and Lin, Chun-Xun and Guo, Guannan and Wong, Martin},
+  booktitle={2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
+  title={{Cpp-Taskflow}: Fast Task-Based Parallel Programming Using Modern {C++}}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={974-983},
+  keywords={Task analysis;C++ languages;Timing;Libraries;Programming;Heuristic algorithms;Very large scale integration;task parallelism;parallel programming library and model;multithreading},
+  doi={10.1109/IPDPS.2019.00105}
+}
+
+% Charm++ original paper introducing open source software for parallel
+% programming in C++ via message-passing objects called "chares"
+@inproceedings{kale1993,
+    author = {Kale, Laxmikant V. and Krishnan, Sanjeev},
+    title = {{CHARM++}: a portable concurrent object oriented system based on {C++}},
+    year = {1993},
+    isbn = {0897915879},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    doi = {10.1145/165854.165874},
+    booktitle = {Proceedings of the Eighth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications},
+    pages = {91–108},
+    numpages = {18},
+    location = {Washington, D.C., USA},
+    series = {OOPSLA '93}
+}
+
+% Original libnuma paper (now dated) introducing the widely used libnuma
+% software providing a C interface for portably binding threads to NUMA nodes
+% on linux and unix systems
+@techreport{kleen2005,
+  title={A {NUMA} {API} for {Linux}},
+  author={Kleen, Andi},
+  institution={Suse Lab},
+  year={2005}
+}
+
+% Official MPI 4.1 standard document for distributed computing via a message
+% passing interface in C and Fortran
+@manual{mpi41,
+    author = {{Message Passing Interface Forum}},
+    title  = {{MPI}: A Message-Passing Interface Standard},
+    number = {version 4.1},
+    url    = {https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf},
+    year   = {2023},
+    month  = {nov}
+}
+
+% The official Intel TBB developer guide / reference for efficient and
+% performance portable task-based parallel programming using a dynamic
+% scheduler with work-stealing in modern C++.  The open source software library
+% can be downloaded from GitHub.  They also offer limited NUMA support in the
+% latest version
+@misc{onetbb,
+ title={{oneAPI} Threading Building Blocks ({oneTBB})},
+ author={UXL Foundation},
+ url={https://uxlfoundation.github.io/oneTBB}
+}
+
+% Kokkos 3 latest paper from Sandia's CCR lab -- an open source, parallel
+% computing software library for performance portable parallel and distributed
+% computing in C++.  Primarily designed and used for high-performance numerical
+% software, e.g., Trilinos
+@article{trott2022,
+  author={Trott, Christian R. and Lebrun-Grandié, Damien and Arndt, Daniel and Ciesko, Jan and Dang, Vinh and Ellingwood, Nathan and Gayatri, Rahulkumar and Harvey, Evan and Hollman, Daisy S. and Ibanez, Dan and Liber, Nevin and Madsen, Jonathan and Miles, Jeff and Poliakoff, David and Powell, Amy and Rajamanickam, Sivasankaran and Simberg, Mikael and Sunderland, Dan and Turcksin, Bruno and Wilke, Jeremiah},
+  journal={IEEE Transactions on Parallel and Distributed Systems},
+  title={Kokkos 3: Programming Model Extensions for the Exascale Era},
+  year={2022},
+  volume={33},
+  number={4},
+  pages={805-817},
+  doi={10.1109/TPDS.2021.3097283}
+}
+
+% Chapter on how to bind an older version of TBB to NUMA nodes using Intel's
+% TBB C++ software interface
+@inbook{voss2019,
+    author={Voss, Michael and Asenjo, Rafael and Reinders, James},
+    title={{TBB} on {NUMA} Architectures},
+    booktitle={Pro {TBB}: {C++} Parallel Programming with Threading Building Blocks},
+    year={2019},
+    publisher={Apress},
+    address={Berkeley, CA},
+    pages={581--604},
+    isbn={978-1-4842-4398-5},
+    doi={10.1007/978-1-4842-4398-5_20},
+    url={https://doi.org/10.1007/978-1-4842-4398-5_20}
+}
+
+% Original VPR paper discussing their simulated-annealing placement and its
+% cost function.  As far as I can tell, this placement approach has been
+% improved but not fundamentally changed in the years since original
+% publication.  VPR is now shipped as part of the open source software package
+% VTR: at github.com/verilog-to-routing/vtr-verilog-to-routing
+@inproceedings{betz1997vpr,
+  author={Betz, Vaughn and Rose, Jonathan},
+  editor={Luk, Wayne and Cheung, Peter Y. K. and Glesner, Manfred},
+  title={{VPR}: a new packing, placement and routing tool for {FPGA} research},
+  booktitle={Field-Programmable Logic and Applications},
+  year={1997},
+  publisher={Springer Berlin Heidelberg},
+  address={Berlin, Heidelberg},
+  pages={213--222},
+  isbn={978-3-540-69557-8}
+}
+
+% Comparison between VPR placement runtime and modern ASIC-based analytic
+% placement runtimes.  Conclusion is that simulated annealing is more accurate,
+% but analytic placement is faster
+@inproceedings{bian2010towards,
+  author = {Bian, Huimin and Ling, Andrew C. and Choong, Alexander and Zhu, Jianwen},
+  title = {Towards scalable placement for {FPGA}s},
+  year = {2010},
+  isbn = {9781605589114},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/1723112.1723140},
+  doi = {10.1145/1723112.1723140},
+  booktitle = {Proceedings of the 18th Annual ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+  pages = {147–156},
+  numpages = {10},
+  keywords = {bipartite matching, convex optimization, fpga, quadratic placement},
+  location = {Monterey, California, USA},
+  series = {FPGA '10}
+}
+
+% A hybrid simulated annealing/partitioning based placer algorithm with
+% parallel terminal assignment.  They are able to recursively divide the
+% problem with partitioning for a few levels then perform placement on the
+% subproblems with simulated annealing
+@inproceedings{chandy1997parallel,
+  author={Chandy, J. A. and Banerjee, P.},
+  booktitle={Proceedings International Conference on Computer Design VLSI in Computers and Processors}, 
+  title={A parallel circuit-partitioned algorithm for timing driven cell placement}, 
+  year={1997},
+  pages={621-627},
+  doi={10.1109/ICCD.1997.628930}
+}
+
+% Survey of common FPGA placement and routing algorithms/techniques, mentioning
+% partition-based placement, analytic placement, and simulated annealing
+% placement as various viable techniques ranging from least computationally
+% expensive/least accurate to most expensive/most accurate.  They also mention
+% the different stages in a moder analytic placer (since analytical placement
+% is the current state-of-the-art), which includes packing and netlist
+% optimizations, global floorplanning and global placement (via quadratic
+% programming), legalization (similar to integer/categorical binning), and
+% detailed placement (typically via simulated annealing)
+@inproceedings{chen2017fpga,
+  author={Chen, Shih-Chun and Chang, Yao-Wen},
+  booktitle={2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}, 
+  title={{FPGA} placement and routing}, 
+  year={2017},
+  pages={914-921},
+  keywords={Field programmable gate arrays;Routing;Wires;Table lookup;Nonvolatile memory;Random access memory;Delays},
+  doi={10.1109/ICCAD.2017.8203878}
+}
+
+% Various applications of Rent's rule, including usage as a partitioning cost
+% function that would optimize partitions to match the rent coefficient of the
+% underlying hardware
+@article{christie2000interpretation,
+  author={Christie, P. and Stroobandt, D.},
+  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, 
+  title={The interpretation and application of Rent's rule}, 
+  year={2000},
+  volume={8},
+  number={6},
+  pages={639-648},
+  keywords={Wire;Very large scale integration;Circuit topology;Distribution functions;Probability distribution;Printed circuits;Large scale integration;Equations;Convergence;Physics computing},
+  doi={10.1109/92.902258}
+}
+
+% The Fiduccia-Matheyses graph partitioning algorithm, which calculates the
+% minimum cut in a hypergraph via the heuristic of generating a random initial
+% cut then moving nodes across the cut (greedily) and remembering the best
+% observed cut until all nodes have been moved.  The magic of this algorithm is
+% the linear complexity due to a heap-like data structure that produces the
+% next node to move in constant time in each iteration.  However, this trick
+% only works for integer-valued cost functions (such as min-cut)
+@inproceedings{fiduccia1982linear,
+author = {Fiduccia, C. M. and Mattheyses, R. M.},
+title = {A linear-time heuristic for improving network partitions},
+year = {1982},
+isbn = {0897910206},
+publisher = {IEEE Press},
+booktitle = {Proceedings of the 19th Design Automation Conference},
+pages = {175–181},
+numpages = {7},
+series = {DAC '82}
+}
+
+% Karypis journal paper on numerical algorithms for multilevel graph
+% partitioning.  The idea in multilevel graph partitioning is that when given a
+% very large graph, we first coarsen the graph to a manageable size.  Then we
+% compute the cut at the coursest level and refine this cut at the finer levels
+% as we flatten (un-coarsen) the graph in a typical V-cycle.  The meat of this
+% paper is actually a detailed comparison of various algorithms for coarsening
+% and their quality tradeoffs, time complexities, and compression factors.
+% Additionally a similar comparison of cut and cut-refinement algorithms
+@article{karypis1998fast,
+author = {Karypis, George and Kumar, Vipin},
+title = {A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs},
+journal = {SIAM Journal on Scientific Computing},
+volume = {20},
+number = {1},
+pages = {359-392},
+year = {1998},
+doi = {10.1137/S1064827595287997},
+}
+
+% Karypis paper on multilevel hypergraph partitioning for VLSI applications.
+% This is also kind of describing the algorithm used in the hMETIS partitioning
+% software
+@article{karypis1999multilevel,
+  author={Karypis, G. and Aggarwal, R. and Kumar, V. and Shekhar, S.},
+  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, 
+  title={Multilevel hypergraph partitioning: applications in {VLSI} domain}, 
+  year={1999},
+  volume={7},
+  number={1},
+  pages={69-79},
+  keywords={Very large scale integration;Partitioning algorithms;Circuit synthesis;Field programmable gate arrays;Joining processes;Workstations;Databases;Data mining;High performance computing;Laboratories},
+  doi={10.1109/92.748202}
+}
+
+% Official documentation and techreport for the widely-used multilevel
+% hypergraph partitioning software hMETIS, which is a standard in partitioning
+% based placement
+@techreport{karypis1998hypergraph,
+  author={Karypis, George and Kumar, Vipin},
+  title={{hMETIS}: A hypergraph partitioning package},
+  year={1998},
+  institution={Department of Computer Science \& Engineering, University of Minnesota},
+  address={Minneapolis, MN, USA},
+  number = {version 1.5.3},
+  url = {https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf},
+}
+
+% Algorithm for multi-threaded graph partitioning, e.g., the parallel version
+% of the hMETIS algorithm
+@inproceedings{lasalle2013multi,
+  author={Lasalle, Dominique and Karypis, George},
+  booktitle={2013 IEEE 27th International Symposium on Parallel and Distributed Processing}, 
+  title={Multi-threaded Graph Partitioning}, 
+  year={2013},
+  volume={},
+  number={},
+  pages={225-236},
+  keywords={Partitioning algorithms;Vectors;Instruction sets;Synchronization;Memory management;Algorithm design and analysis},
+  doi={10.1109/IPDPS.2013.50}
+}
+
+% Offifial publication for the AMF-Placer 2.0 paper, which is an open-source
+% analytical placer using quadratic programming for global placement and
+% simulated annealing for detailed placement.  Written primarily in C++ and
+% available at github.com/zslwyuan/AMF-Placer
+@article{liang2024amf,
+  author={Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={{AMF-Placer 2.0}: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous {FPGA}}, 
+  year={2024},
+  volume={43},
+  number={9},
+  pages={2769-2782},
+  keywords={Field programmable gate arrays;Timing;Computer architecture;Microprocessors;Table lookup;Routing;Standards;Analytical placement;field-programmable gate array (FPGA);mixed-size placement;timing-driven placement},
+  doi={10.1109/TCAD.2024.3373357}
+}
+
+% Latest version of VPR, documenting new features and support -- very little mention of changes (if any) to the actual placement algorithms though
+@article{luu2011vpr,
+author = {Luu, Jason and Kuon, Ian and Jamieson, Peter and Campbell, Ted and Ye, Andy and Fang, Wei Mark and Kent, Kenneth and Rose, Jonathan},
+title = {{VPR} 5.0: {FPGA CAD} and architecture exploration tools with single-driver routing, heterogeneity and process scaling},
+year = {2011},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {4},
+number = {4},
+issn = {1936-7406},
+url = {https://doi.org/10.1145/2068716.2068718},
+doi = {10.1145/2068716.2068718},
+journal = {ACM Trans. Reconfigurable Technol. Syst.},
+articleno = {32},
+numpages = {23},
+keywords = {routing, placement, heterogeneous, hard blocks, field-programmable gate arrays, VPR, FPGA}
+}
+
+% Partition-based placement general algorithms and some possible implementation
+% details
+@article{maidee2005timing,
+  author={Maidee, P. and Ababei, C. and Bazargan, K.},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={Timing-driven partitioning-based placement for island style {FPGAs}}, 
+  year={2005},
+  volume={24},
+  number={3},
+  pages={395-406},
+  keywords={Field programmable gate arrays;Routing;Runtime;Partitioning algorithms;Delay effects;Coupling circuits;Engines;Delay estimation;Minimization;Circuit simulation;Delay estimation;field programmable gate arrays (FPGA);FPGA placement;partitioning-based placement;timing-driven placement},
+  doi={10.1109/TCAD.2004.842812}
+}
+
+% The official publication for the latest version of the VTR
+% (verilog-to-routing) toolkit.  The latest publication focuses on updates to
+% the user interface and new features and support, but not algorithmic changes.
+% VTR is currently the standard in open source placement and routing software,
+% written primarilly in C++ with a Python interface, available for download at:
+% github.com/verilog-to-routing/vtr-verilog-to-routing
+@article{murray2020vtr,
+author = {Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jia Min and Eldafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
+title = {{VTR} 8: High-performance {CAD} and Customizable {FPGA} Architecture Modelling},
+year = {2020},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {13},
+number = {2},
+issn = {1936-7406},
+url = {https://doi.org/10.1145/3388617},
+doi = {10.1145/3388617},
+journal = {ACM Trans. Reconfigurable Technol. Syst.},
+articleno = {9},
+numpages = {55},
+keywords = {Computer aided design (CAD), electronic design automation (EDA), field programmable gate array (FPGA), packing, placement, routing, verilog to routing (VTR), versatile place and route (VPR)}
+}
+
+% DREAMPlaceFPGA the official publication for the DREAMPlace open source
+% using analytical placement with some deep learning for FPGA placement
+% acceleration -- written in C++ with Python interfaces and available at
+% github.com/rachelselinar/DREAMPlaceFPGA
+@inproceedings{rajarathnam2022dreamplace,
+  author={Rajarathnam, Rachel Selina and Alawieh, Mohamed Baker and Jiang, Zixuan and Iyer, Mahesh and Pan, David Z.},
+  booktitle={2022 27th Asia and South Pacific Design Automation Conference (ASP-DAC)}, 
+  title={{DREAMPlaceFPGA}: An Open-Source Analytical Placer for Large Scale Heterogeneous {FPGAs} using Deep-Learning Toolkit}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={300-306},
+  keywords={Performance evaluation;Runtime;Graphics processing units;Programming;Logic gates;Timing;Field programmable gate arrays},
+  doi={10.1109/ASP-DAC52403.2022.9712562}
+}
+
+% The original publication for VTR (Verilog-to-routing) -- open-source
+% synthesis-packing-place-and-route platform.  Still uses VPR for the place and
+% route steps.
+% VTR is currently the standard in open source placement and routing software,
+% written primarilly in C++ with a Python interface, available for download at:
+% github.com/verilog-to-routing/vtr-verilog-to-routing
+@inproceedings{rose2012vtr,
+author = {Rose, Jonathan and Luu, Jason and Yu, Chi Wai and Densmore, Opal and Goeders, Jeffrey and Somerville, Andrew and Kent, Kenneth B. and Jamieson, Peter and Anderson, Jason},
+title = {The {VTR} project: architecture and {CAD} for {FPGAs} from verilog to routing},
+year = {2012},
+isbn = {9781450311557},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2145694.2145708},
+doi = {10.1145/2145694.2145708},
+booktitle = {Proceedings of the ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+pages = {77–86},
+numpages = {10},
+keywords = {CAD, FPGA, architecture},
+location = {Monterey, California, USA},
+series = {FPGA '12}
+}
+
+% The official AMD Vivado docs -- Vivado is Xilinx (acquired by AMD)'s analytic
+% placer, which is currently considered the state-of-the-art and only real
+% option for placement and routing in industrial FPGA pnr applications
+@misc{vivado2024docs,
+  title={Vivado Design Suite User Guide},
+  author={{AMD Vivado Developers}},
+  year={2024},
+  institution={AMD},
+  number={Version 2024.1},
+  url={https://docs.amd.com/r/2024.1-English/ug893-vivado-ide}
+}
+
+% VTR docs with a bit more detail than above reference, and latest version (most up-to-date) information
+% VTR is currently the standard in open source placement and routing software,
+% written primarilly in C++ with a Python interface, available for download at:
+% github.com/verilog-to-routing/vtr-verilog-to-routing
+@misc{vtr2024verilog,
+  title={Verilog-to-routing documentation},
+  author={{VTR Developers}},
+  year={2024},
+  version={Version 8.1.0-dev},
+  url={https://readthedocs.org/projects/vtr/downloads/pdf/latest/}
+}
+
+% Simulated annealing and reinforcement learning based FPGA placement.  The RL
+% contributions are tenuous at best, but still an example of potential RL
+% impact in industry
+@inproceedings{tian2022improving,
+  author={Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
+  booktitle={2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
+  title={Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning}, 
+  year={2022},
+  volume={10},
+  number={},
+  pages={1912-1919},
+  keywords={Technological innovation;Runtime;Design automation;Simulated annealing;Reinforcement learning;Logic gates;Space exploration;FPGA;reinforcement learning;simulated annealing;placement},
+  doi={10.1109/ITAIC54216.2022.9836761}
+}
+
+% DREAMPlaceFPGA-MP: GPU-accelerated macro-placer for DREAMPlaceFPGA
+% (rajrathnam2022) DREAMPlace is an open source using analytical placement with
+% some deep learning for FPGA placement acceleration -- written in C++ with
+% Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
+@misc{xiong2023dreamplace,
+      title={{DREAMPlaceFPGA-MP}: An Open-Source {GPU}-Accelerated Macro Placer for Modern {FPGAs} with Cascade Shapes and Region Constraints}, 
+      author={Zhili Xiong and Rachel Selina Rajarathnam and Zhixing Jiang and Hanqing Zhu and David Z. Pan},
+      year={2023},
+      eprint={2311.08582},
+      archivePrefix={arXiv},
+      primaryClass={cs.AR},
+      url={https://arxiv.org/abs/2311.08582}, 
+}
+
+% NVIDIA's official API docs for the latest version (as of Apr 2025) of the
+% cuBLAS API.  With both C and Fortran bindings.
+@techreport{cublas,
+author={{NVIDIA Corporation}},
+title={{cuBLAS API}},
+year={2025},
+institution={NVIDIA Corporation},
+number={Release 12.8},
+url={https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf},
+note={Last accessed: Apr 26, 2025},
+}
+
+% NVIDIA's official developer's guide and API for writing high-performance CUDA
+% in Fortran95+ on compilers that support the CUDA API, such as Nvidia's nvcc
+% family of compilers and Portland group's pgfrotran family.
+@techreport{cuda,
+author={{NVIDIA HPC Compilers}},
+title={{CUDA Fortran} programming guide},
+year={2025},
+institution={NVIDIA Corporation},
+number={Version 23.3},
+url={https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf},
+note={Last accessed: Apr 26, 2023},
+}
+
+% BERT was one of the first transformer-based neural network architectures for
+% solving language-related tasks, such as language translations, at Google.
+% This was also by far the largest model of its time.  BERT paved the way for
+% modern large language models, probably moreso than the Attention is all you
+% need paper
+@inproceedings{devlin-etal-2019-bert,
+    title = "{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    author = "Devlin, Jacob  and
+      Chang, Ming-Wei  and
+      Lee, Kenton  and
+      Toutanova, Kristina",
+    editor = "Burstein, Jill  and
+      Doran, Christy  and
+      Solorio, Thamar",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/N19-1423/",
+    doi = "10.18653/v1/N19-1423",
+    pages = "4171--4186",
+}
+
+% The official publication for AlexNet -- one of the first truly massive
+% overparameterized convolutional neural networks, which threw away a lot of
+% the conventional wisdom around overfitting and achieved state-of-the-art
+% performance and fine generalization errors on the ImageNet benchmark problem.
+% This could be considered the beginning of "deep" learning in the sense of
+% adding many many layers
+@inproceedings{krizhevsky2012imagenet,
+ author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {F. Pereira and C.J. Burges and L. Bottou and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {{ImageNet} Classification with Deep Convolutional Neural Networks},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
+ volume = {25},
+ year = {2012}
+}
+
+% Our VarSys paper on the modeling methodologies that we use for modeling the
+% bimodal performance distributions that we observe in IO throughput on our
+% experimental performance modeling HPC cluster
+@article{xu2020modeling,
+	author = {Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne},
+	title = {Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
+	year = {2020},
+	month = {5},
+	journal = {Journal of Parallel and Distributed Computing},
+	volume = {139},
+	pages = {87--89},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.jpdc.2020.01.005},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0743731519302746},
+	issn = {0743-7315},
+	keywords = {},
+}
+
+% The FAIR principles for open source scientific software, data, source code, and experiments should by findable (via DOIs or other), accessible (clear purpose and metadata), interoperable (should use standard interfaces, data formats, and schemas), and reusable (well documented, understandable, and not overly specialized to an unnecessarilly niche use-case). These are good principles for any open source software development practices
+@article{barker2022introducing,
+	author = {Barker, Michelle and Chue Hong, Neil P. and Katz, Daniel S. and Lamprecht, Anna-Lena and Martinez-Ortiz, Carlos and Psomopoulos, Fotis and Harrow, Jennifer and Castro, Leyla Jael and Gruenpeter, Morane and Martinez, Paula Andrea and Honeyman, Tom},
+	title = {Introducing the {FAIR} Principles for research software},
+	year = {2022},
+	month = {10},
+	journal = {Scientific Data},
+	volume = {9},
+	number = {1},
+	numpages = {622},
+	publisher = {Nature Publishing Group},
+	doi = {10.1038/s41597-022-01710-x},
+	url = {https://www.nature.com/articles/s41597-022-01710-x},
+	issn = {2052-4463},
+}
+
+% An experimental and statistical study (very similar to the VarSys project) on
+% measuring and modeling the performance variability in modern storage stacks.
+% They concluded that block allocation strategies cause performance variability
+% in Ext4-HDD configurations, based on statistical techniques such as Latin
+% hypercube design of experiments over their parameter space and computing the
+% relative standard deviations at each configuration.
+@inproceedings{cao2017performance,
+	author = {Cao, Zhen and Tarasov, Vasily and Raman, Hari Prasath and Hildebrand, Dean and Zadok, Erez},
+	title = {On the performance variation in modern storage stacks},
+	year = {2017},
+	booktitle = {Proceedings of the 15th USENIX Conference on File and Storage Technologies (FAST '17)},
+	pages = {329--344},
+	organization = {USENIX Association},
+	location = {Vancouver, Canada},
+	keywords = {},
+}
+
+% Official IOZone reference -- this benchmarking software can be used to
+% measure the read, write, strided-read, strided-write, first read, first
+% write, etc throughputs on a given system.  In the VarSys project, we used
+% this to measure IO performance (which we then used to calculate performance
+% variability) for various system configurations on our Moana cluster.
+@misc{capps2016iozone,
+	author = {Capps, Don and Capps, Carol and Sawyer, Darren and Lohr, Jerry and Dowding, George and Little, Gary and Capps, Terry and Miller, Robin and Faibish, Sorin and Wang, Raymond and Waghmare, Tanmay and Zhang, Yansheng and Miller, Vernon and Principe, Nick and Jones, Zach and Bapat, Udayan and Norcott, William and Crawford, Isom and Collins, Kirby and Slater, Al and Rhine, Scott and Wisner, Mike and Goss, Ken and Landherr, Steve and Smith, Brad and Kelly, Mark and CYR, Alain and Dunlap, Randy and Montague, Mark and Million, Dan and Brebner, Gavin and Zucconi, Jean-Marc and Blomberg, Jeff and Halevy, Benny and Boone, Dave and Habbinga, Erik and Strecker, Kris and Wong, Walter and Root, Joshua and Bacchella, Fabrice and Xue, Zhenghua and Li, Qin and Sawyer, Darren and Bojaxhi, Vangel and England, Ben and Lapa, Vikentsi and Skidanov, Alexey},
+	title = {{IOzone} Filesystem Benchmark},
+	year = {2016},
+	month = {January},
+	url = {www.iozone.org},
+	note = {accessed 2016},
+	keywords = {},
+}
+
+% Interpolation errors and runtimes and an early version of the DelaunaySparse algorithm is applied to a HPC performance modeling application
+@inproceedings{chang2018predicting,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Predicting system performance by interpolation using a high-dimensional {D}elaunay triangulation},
+	year = {2018},
+	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
+	articleno = {2},
+	organization = {SCS},
+	location = {Baltimore, MD, USA},
+	keywords = {},
+}
+
+% The DelaunaySparse software, demonstrates how to calculate simplices from a Delauay triangulation in very high dimensions scalably (and in parallel) using a highly customized simplex method like solver. The resulting Fortran numerical software is fully open source with a C and Python interface
+@article{chang2020algorithm,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Algorithm 1012: {DELAUNAYSPARSE}: Interpolation via a Sparse Subset of the {D}elaunay Triangulation in Medium to High Dimensions},
+	year = {2020},
+	month = {12},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {46},
+	number = {4},
+	articleno = {38},
+	numpages = {20},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	doi = {10.1145/3422818},
+	url = {https://dl.acm.org/doi/10.1145/3422818},
+	issn = {0098-3500},
+}
+
+% The publication for the XGBoost numerical software. XGBoost can be used to
+% efficiently compute optimized gradient boosted decision trees on massive
+% datasets via a fully-distributed algorithm that can be configured to run on
+% Hadoop, SGE, and MPI.  It can also be run on NVIDIA GPUs using CUDA.  The
+% software is fully open-source and written in highly optimized C++, though
+% everyone uses it through its Python interface.  The download is available at
+% github.com/dmlc/xgboost.  Most data science competition winners use XGBoost
+% for tabular data
+@inproceedings{chen2016xgboost,
+	author = {Chen, Tianqi and Guestrin, Carlos},
+	title = {{XGBoost}: A Scalable Tree Boosting System},
+	year = {2016},
+	month = {8},
+	booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)},
+	pages = {785--794},
+	organization = {ACM},
+	location = {San Francisco, California, USA},
+	doi = {10.1145/2939672.2939785},
+	url = {https://dl.acm.org/doi/10.1145/2939672.2939785},
+	keywords = {},
+}
+
+% Dantzig's original (landmark) textbook on solving linear programming problems via the simplex method. This was obviously a landmark achievement in how to solve linear programming problems and more generally in the field of numerical optimization
+@book{dantzig1998linear,
+	author = {Dantzig, George B.},
+	title = {Linear Programming and Extensions},
+	year = {1998},
+	series = {Princeton Landmarks in Mathematics and Physics},
+	edition = {11},
+	publisher = {Princeton University Press},
+	address = {Princeton, NJ, USA},
+	keywords = {},
+}
+
+% An emulation framework for HPC performance modeling and predicting true
+% performance under variability.
+@inproceedings{de2008tracedriven,
+	author = {De, Pradipta and Kothari, Ravi and Mann, Vijay},
+	title = {A trace-driven emulation framework to predict scalability of large clusters in presence of {OS} jitter},
+	year = {2008},
+	month = {9},
+	booktitle = {Proceedings of the 2008 IEEE International Conference on Cluster Computing},
+	pages = {232--241},
+	organization = {IEEE},
+	location = {Tsukuba, Japan},
+	doi = {10.1109/clustr.2008.4663776},
+	url = {http://ieeexplore.ieee.org/document/4663776/},
+	keywords = {},
+}
+
+% A review paper on how HPC performance variability causes issues at scale in
+% Google's data centers, particularly, since requests generally have to wait on
+% the longest running process (i.e., the performance variability "tail") and
+% so the mean performance time can be somewhate meaningless
+@article{dean2013tail,
+	author = {Dean, Jeffrey and Barroso, Luiz Andr{\'e}},
+	title = {The tail at scale},
+	year = {2013},
+	journal = {Communications of the ACM},
+	volume = {56},
+	number = {2},
+	pages = {74--80},
+	keywords = {},
+}
+
+% Summary article on the history of the LINPACK of benchmark (the standard
+% benchmark for HPC performance tuning and evaluation), which defines the HPC
+% Top 500 list
+@article{dongarra2003linpack,
+	author = {Dongarra, Jack J. and Luszczek, Piotr and Petitet, Antoine},
+	title = {The {LINPACK} benchmark: past, present, and future},
+	year = {2003},
+	month = {8},
+	journal = {Concurrency and Computation: Practice and Experience},
+	volume = {15},
+	number = {9},
+	pages = {803--820},
+	publisher = {Wiley},
+	doi = {10.1002/cpe.728},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/cpe.728},
+	issn = {1532-0626},
+	keywords = {},
+}
+
+% The official CGAL User Guide docs page for computing high-dimensional convex
+% hulls and Delaunay triangulations. CGAL is a standard numerical software
+% package for using computational geometry data structures and algorithms in
+% perfect precision (via symbolic arithmetic). CGAL is a header-only open
+% source C++ library
+@incollection{hert2020convex,
+	author = {Hert, Susan and Seel, Michael},
+	title = {{dD} Convex Hulls and {D}elaunay Triangulations},
+	year = {2020},
+	booktitle = {{CGAL} User and Reference Manual},
+	edition = {{5.0.2}},
+	publisher = {{CGAL Editorial Board}},
+	url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
+	keywords = {},
+}
+
+% Fitting nonparametric distribution models by interpolating the cumulative
+% distribution functions -- the application is that the CDFs measure HPC
+% throughput distributions, so it is also a little bit of a HPC performance
+% modeling paper
+@inproceedings{lux2018nonparametric,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Nonparametric distribution models for predicting and managing computational performance variability},
+	year = {2018},
+	month = {4},
+	booktitle = {Proceedings of IEEE SoutheastCon 2018},
+	pages = {1--7},
+	organization = {IEEE},
+	location = {St. Petersburg, FL, USA},
+	doi = {10.1109/secon.2018.8478814},
+	url = {https://ieeexplore.ieee.org/document/8478814/},
+	keywords = {},
+}
+
+% Using various interpolation, neural networks, and other scientific machine
+% learning methods to predict and model HPC performance based on system
+% configuration parameters -- explores Delaunay interpolation, support vector
+% regressors, Shepard's method, and multilayer perceptrons
+@inproceedings{lux2018predictive,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Predictive modeling of {I/O} characteristics in high performance computing systems},
+	year = {2018},
+	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
+	articleno = {8},
+	organization = {SCS},
+	location = {Baltimore, MD, USA},
+	keywords = {},
+}
+
+% The official handbook and user's manual for the high-performance LINPACK
+% benchmark (HPL) describing how to set-up and run the HPC performance tuning
+% benchmark on distributed-memory systems, what problem it solves, what values
+% the config file sets, and what are the rules for defining a solver for the
+% problem and having it still count toware the Top 500 list
+@book{petitet2018hpl,
+	author = {Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack and Cleary, Andy},
+	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
+	year = {2018},
+	publisher = {Innovation Computing Laboratory, University of Tennessee},
+	keywords = {},
+}
+
+% A case report from configuring a Los Alamos HPC, where real-world performance
+% ended up being much lower than expected due to performance variability
+@inproceedings{petrini2003case,
+	author = {Petrini, Fabrizio and Kerbyson, Darren J. and Pakin, Scott},
+	title = {The case of the missing supercomputer performance: Achieving optimal performance on the 8,192 processors of {ASCI Q}},
+	year = {2003},
+	month = {11},
+	booktitle = {Proceedings of the 2003 ACM/IEEE Conference on Supercomputing (SC '03)},
+	pages = {55--55},
+	organization = {ACM},
+	location = {Phoenix, AZ, USA},
+	doi = {10.1145/1048935.1050204},
+	url = {https://dl.acm.org/doi/10.1145/1048935.1050204},
+	keywords = {},
+}
+
+% A numerical algorithm for performing a rank-revealing rank-1 QR update (given
+% an existing orthonormal (QR) matrix factorization and updating just one
+% column of the basis Q)
+@article{shroff1992adaptive,
+	author = {Shroff, Gautam M. and Bischof, Christian H.},
+	title = {Adaptive condition estimation for rank-one updates of QR factorizations},
+	year = {1992},
+	month = {10},
+	journal = {SIAM Journal on Matrix Analysis and Applications},
+	volume = {13},
+	number = {4},
+	pages = {1264--1278},
+	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
+	doi = {10.1137/0613077},
+	url = {http://epubs.siam.org/doi/10.1137/0613077},
+	issn = {0895-4798},
+	keywords = {},
+}
+
+% Citation for the Nov 2019, HPC Top 500 -- measuring the fastest HPCs in the
+% world based on their max throughput on the high-performance LINPACK
+% HPC performance benchmark problem
+@misc{strohmaier2019top,
+	author = {Strohmaier, Eric and Dongarra, Jack and Simon, Horst and Meuer, Martin},
+	title = {The Top 500 List},
+	year = {2019},
+	month = {November},
+    url = {https://www.top500.org},
+	note = {accessed April 18, 2020},
+}

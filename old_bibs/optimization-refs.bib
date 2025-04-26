@@ -730,7 +730,7 @@
 	issn = {2475-9066},
 }
 
-% This is the OJOC ParMOO repository DOI -- this is an archive of the software experiments for obtaining our test problems and reproducing our experimental results on those test problems with customized ParMOO solvers.
+% This is the IJOC ParMOO repository DOI -- this is an archive of the software experiments for obtaining our test problems and reproducing our experimental results on those test problems with customized ParMOO solvers.
 @misc{chang2024designing,
 	author = {Chang, Tyler H. and Wild, Stefan M.},
 	title = {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
@@ -1238,7 +1238,13 @@
 	url = {https://openreview.net/forum?id=HJxyZkBKDr},
 }
 
-% Achieving performance portability of parallel codes in the exascale computing project (ECP) across various GPU-based architectures, which is challenging since different GPU vendors use different GPU programming libraries (e.g., CUDA for NVIDIA vs HIPP for AMD)
+% Achieving performance portability of parallel codes in the exascale computing
+% project (ECP) across various GPU-based architectures, which is challenging
+% since different GPU vendors use different GPU programming libraries (e.g.,
+% CUDA for NVIDIA vs HIPP for AMD) -- high-quality re-usable open source
+% software and software hardware codesign are cited as important issues from
+% the software perspective, as well as performance portability (i.e., port
+% between HIPP, CUDA, OpenMP, and SYCL/DPC++ for on-node parallelism)
 @article{dubey2021performance,
 	author = {Dubey, Anshu and McInnes, Lois Curfman and Thakur, Rajeev and Draeger, Erik W. and Evans, Thomas and Germann, Timothy C. and Hart, William E.},
 	title = {Performance Portability in the {E}xascale {C}omputing {P}roject: Exploration Through a Panel Series},
@@ -1264,6 +1270,19 @@
 	number = {61},
 	pages = {2121--2159},
 	url = {http://jmlr.org/papers/v12/duchi11a.html},
+}
+
+% An example of using genetic algorithms for autotuning HPC libraries (such as
+% BLAS and LAPACK)
+@inproceedings{dunlop2008use,
+	author = {Dunlop, Dominic and Varrette, Sebastien and Bouvry, Pascal},
+	title = {On the use of a genetic algorithm in high performance computing benchmark tuning},
+	year = {2008},
+	booktitle = {Proceedings of the 2008 International Symposium on Performance Evaluation of Computer and Telecommunication Systems},
+	pages = {105--113},
+	organization = {IEEE},
+	location = {Edinburgh, UK},
+	keywords = {},
 }
 
 % The JuMP modeling language in Julia -- a modeling language for modeling and solving linear and nonlinear programming (optimization) problems in Julia. The implementation is an open source numerical software
@@ -1810,17 +1829,6 @@
 	doi = {10.1090/S0025-5718-98-00894-1},
 	url = {https://www.ams.org/mcom/1998-67-221/S0025-5718-98-00894-1/},
 	issn = {0025-5718},
-}
-
-% An article on Google GlassBox research: Google's research division dedicated to interpretable machine learning
-@article{hof2015google,
-	author = {Hof, Robert D.},
-	title = {Google Tries to Make Machine Learning a Little More Human},
-	year = {2015},
-	month = {nov},
-	journal = {MIT Technology Review},
-	url = {https://www.technologyreview.com/2015/11/05/165175/google-tries-to-make-machine-learning-a-little-more-human/},
-	note = {Last accessed: June 20, 2022},
 }
 
 % Techniques for optimizing molecule properties via a latent-space embedding that comes from a molecule autoencoder, from IBM Research
@@ -2751,7 +2759,7 @@
 	issn = {1662-453X},
 }
 
-% The official publicatino for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+% The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
 @inproceedings{paszke2019pytorch,
 	author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
 	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
@@ -2764,7 +2772,7 @@
 	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
 }
 
-% The official publicatino for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+% The official publication for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
 @article{pedregosa2011scikitlearn,
 	author = {Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others, },
 	title = {Scikit-learn: Machine learning in {P}ython},
@@ -3577,3 +3585,469 @@
 	git = {https://github.com/manuparra/spea2},
 }
 
+% Cpp-Taskflow original paper on open source software implementing a task-based
+% parallel scheduler and parallel programming interface in C++
+@inproceedings{huang2019,
+  author={Huang, Tsung-Wei and Lin, Chun-Xun and Guo, Guannan and Wong, Martin},
+  booktitle={2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
+  title={{Cpp-Taskflow}: Fast Task-Based Parallel Programming Using Modern {C++}}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={974-983},
+  keywords={Task analysis;C++ languages;Timing;Libraries;Programming;Heuristic algorithms;Very large scale integration;task parallelism;parallel programming library and model;multithreading},
+  doi={10.1109/IPDPS.2019.00105}
+}
+
+% Charm++ original paper introducing open source software for parallel
+% programming in C++ via message-passing objects called "chares"
+@inproceedings{kale1993,
+    author = {Kale, Laxmikant V. and Krishnan, Sanjeev},
+    title = {{CHARM++}: a portable concurrent object oriented system based on {C++}},
+    year = {1993},
+    isbn = {0897915879},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    doi = {10.1145/165854.165874},
+    booktitle = {Proceedings of the Eighth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications},
+    pages = {91–108},
+    numpages = {18},
+    location = {Washington, D.C., USA},
+    series = {OOPSLA '93}
+}
+
+% Original libnuma paper (now dated) introducing the widely used libnuma
+% software providing a C interface for portably binding threads to NUMA nodes
+% on linux and unix systems
+@techreport{kleen2005,
+  title={A {NUMA} {API} for {Linux}},
+  author={Kleen, Andi},
+  institution={Suse Lab},
+  year={2005}
+}
+
+% Official MPI 4.1 standard document for distributed computing via a message
+% passing interface in C and Fortran
+@manual{mpi41,
+    author = {{Message Passing Interface Forum}},
+    title  = {{MPI}: A Message-Passing Interface Standard},
+    number = {version 4.1},
+    url    = {https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf},
+    year   = {2023},
+    month  = {nov}
+}
+
+% The official Intel TBB developer guide / reference for efficient and
+% performance portable task-based parallel programming using a dynamic
+% scheduler with work-stealing in modern C++.  The open source software library
+% can be downloaded from GitHub.  They also offer limited NUMA support in the
+% latest version
+@misc{onetbb,
+ title={{oneAPI} Threading Building Blocks ({oneTBB})},
+ author={UXL Foundation},
+ url={https://uxlfoundation.github.io/oneTBB}
+}
+
+% Kokkos 3 latest paper from Sandia's CCR lab -- an open source, parallel
+% computing software library for performance portable parallel and distributed
+% computing in C++.  Primarily designed and used for high-performance numerical
+% software, e.g., Trilinos
+@article{trott2022,
+  author={Trott, Christian R. and Lebrun-Grandié, Damien and Arndt, Daniel and Ciesko, Jan and Dang, Vinh and Ellingwood, Nathan and Gayatri, Rahulkumar and Harvey, Evan and Hollman, Daisy S. and Ibanez, Dan and Liber, Nevin and Madsen, Jonathan and Miles, Jeff and Poliakoff, David and Powell, Amy and Rajamanickam, Sivasankaran and Simberg, Mikael and Sunderland, Dan and Turcksin, Bruno and Wilke, Jeremiah},
+  journal={IEEE Transactions on Parallel and Distributed Systems},
+  title={Kokkos 3: Programming Model Extensions for the Exascale Era},
+  year={2022},
+  volume={33},
+  number={4},
+  pages={805-817},
+  doi={10.1109/TPDS.2021.3097283}
+}
+
+% Chapter on how to bind an older version of TBB to NUMA nodes using Intel's
+% TBB C++ software interface
+@inbook{voss2019,
+    author={Voss, Michael and Asenjo, Rafael and Reinders, James},
+    title={{TBB} on {NUMA} Architectures},
+    booktitle={Pro {TBB}: {C++} Parallel Programming with Threading Building Blocks},
+    year={2019},
+    publisher={Apress},
+    address={Berkeley, CA},
+    pages={581--604},
+    isbn={978-1-4842-4398-5},
+    doi={10.1007/978-1-4842-4398-5_20},
+    url={https://doi.org/10.1007/978-1-4842-4398-5_20}
+}
+
+% Original VPR paper discussing their simulated-annealing placement and its
+% cost function.  As far as I can tell, this placement approach has been
+% improved but not fundamentally changed in the years since original
+% publication.  VPR is now shipped as part of the open source software package
+% VTR: at github.com/verilog-to-routing/vtr-verilog-to-routing
+@inproceedings{betz1997vpr,
+  author={Betz, Vaughn and Rose, Jonathan},
+  editor={Luk, Wayne and Cheung, Peter Y. K. and Glesner, Manfred},
+  title={{VPR}: a new packing, placement and routing tool for {FPGA} research},
+  booktitle={Field-Programmable Logic and Applications},
+  year={1997},
+  publisher={Springer Berlin Heidelberg},
+  address={Berlin, Heidelberg},
+  pages={213--222},
+  isbn={978-3-540-69557-8}
+}
+
+% Comparison between VPR placement runtime and modern ASIC-based analytic
+% placement runtimes.  Conclusion is that simulated annealing is more accurate,
+% but analytic placement is faster
+@inproceedings{bian2010towards,
+  author = {Bian, Huimin and Ling, Andrew C. and Choong, Alexander and Zhu, Jianwen},
+  title = {Towards scalable placement for {FPGA}s},
+  year = {2010},
+  isbn = {9781605589114},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/1723112.1723140},
+  doi = {10.1145/1723112.1723140},
+  booktitle = {Proceedings of the 18th Annual ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+  pages = {147–156},
+  numpages = {10},
+  keywords = {bipartite matching, convex optimization, fpga, quadratic placement},
+  location = {Monterey, California, USA},
+  series = {FPGA '10}
+}
+
+% A hybrid simulated annealing/partitioning based placer algorithm with
+% parallel terminal assignment.  They are able to recursively divide the
+% problem with partitioning for a few levels then perform placement on the
+% subproblems with simulated annealing
+@inproceedings{chandy1997parallel,
+  author={Chandy, J. A. and Banerjee, P.},
+  booktitle={Proceedings International Conference on Computer Design VLSI in Computers and Processors}, 
+  title={A parallel circuit-partitioned algorithm for timing driven cell placement}, 
+  year={1997},
+  pages={621-627},
+  doi={10.1109/ICCD.1997.628930}
+}
+
+% Survey of common FPGA placement and routing algorithms/techniques, mentioning
+% partition-based placement, analytic placement, and simulated annealing
+% placement as various viable techniques ranging from least computationally
+% expensive/least accurate to most expensive/most accurate.  They also mention
+% the different stages in a moder analytic placer (since analytical placement
+% is the current state-of-the-art), which includes packing and netlist
+% optimizations, global floorplanning and global placement (via quadratic
+% programming), legalization (similar to integer/categorical binning), and
+% detailed placement (typically via simulated annealing)
+@inproceedings{chen2017fpga,
+  author={Chen, Shih-Chun and Chang, Yao-Wen},
+  booktitle={2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}, 
+  title={{FPGA} placement and routing}, 
+  year={2017},
+  pages={914-921},
+  keywords={Field programmable gate arrays;Routing;Wires;Table lookup;Nonvolatile memory;Random access memory;Delays},
+  doi={10.1109/ICCAD.2017.8203878}
+}
+
+% Various applications of Rent's rule, including usage as a partitioning cost
+% function that would optimize partitions to match the rent coefficient of the
+% underlying hardware
+@article{christie2000interpretation,
+  author={Christie, P. and Stroobandt, D.},
+  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, 
+  title={The interpretation and application of Rent's rule}, 
+  year={2000},
+  volume={8},
+  number={6},
+  pages={639-648},
+  keywords={Wire;Very large scale integration;Circuit topology;Distribution functions;Probability distribution;Printed circuits;Large scale integration;Equations;Convergence;Physics computing},
+  doi={10.1109/92.902258}
+}
+
+% The Fiduccia-Matheyses graph partitioning algorithm, which calculates the
+% minimum cut in a hypergraph via the heuristic of generating a random initial
+% cut then moving nodes across the cut (greedily) and remembering the best
+% observed cut until all nodes have been moved.  The magic of this algorithm is
+% the linear complexity due to a heap-like data structure that produces the
+% next node to move in constant time in each iteration.  However, this trick
+% only works for integer-valued cost functions (such as min-cut)
+@inproceedings{fiduccia1982linear,
+author = {Fiduccia, C. M. and Mattheyses, R. M.},
+title = {A linear-time heuristic for improving network partitions},
+year = {1982},
+isbn = {0897910206},
+publisher = {IEEE Press},
+booktitle = {Proceedings of the 19th Design Automation Conference},
+pages = {175–181},
+numpages = {7},
+series = {DAC '82}
+}
+
+% Karypis journal paper on numerical algorithms for multilevel graph
+% partitioning.  The idea in multilevel graph partitioning is that when given a
+% very large graph, we first coarsen the graph to a manageable size.  Then we
+% compute the cut at the coursest level and refine this cut at the finer levels
+% as we flatten (un-coarsen) the graph in a typical V-cycle.  The meat of this
+% paper is actually a detailed comparison of various algorithms for coarsening
+% and their quality tradeoffs, time complexities, and compression factors.
+% Additionally a similar comparison of cut and cut-refinement algorithms
+@article{karypis1998fast,
+author = {Karypis, George and Kumar, Vipin},
+title = {A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs},
+journal = {SIAM Journal on Scientific Computing},
+volume = {20},
+number = {1},
+pages = {359-392},
+year = {1998},
+doi = {10.1137/S1064827595287997},
+}
+
+% Karypis paper on multilevel hypergraph partitioning for VLSI applications.
+% This is also kind of describing the algorithm used in the hMETIS partitioning
+% software
+@article{karypis1999multilevel,
+  author={Karypis, G. and Aggarwal, R. and Kumar, V. and Shekhar, S.},
+  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, 
+  title={Multilevel hypergraph partitioning: applications in {VLSI} domain}, 
+  year={1999},
+  volume={7},
+  number={1},
+  pages={69-79},
+  keywords={Very large scale integration;Partitioning algorithms;Circuit synthesis;Field programmable gate arrays;Joining processes;Workstations;Databases;Data mining;High performance computing;Laboratories},
+  doi={10.1109/92.748202}
+}
+
+% Official documentation and techreport for the widely-used multilevel
+% hypergraph partitioning software hMETIS, which is a standard in partitioning
+% based placement
+@techreport{karypis1998hypergraph,
+  author={Karypis, George and Kumar, Vipin},
+  title={{hMETIS}: A hypergraph partitioning package},
+  year={1998},
+  institution={Department of Computer Science \& Engineering, University of Minnesota},
+  address={Minneapolis, MN, USA},
+  number = {version 1.5.3},
+  url = {https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf},
+}
+
+% Algorithm for multi-threaded graph partitioning, e.g., the parallel version
+% of the hMETIS algorithm
+@inproceedings{lasalle2013multi,
+  author={Lasalle, Dominique and Karypis, George},
+  booktitle={2013 IEEE 27th International Symposium on Parallel and Distributed Processing}, 
+  title={Multi-threaded Graph Partitioning}, 
+  year={2013},
+  volume={},
+  number={},
+  pages={225-236},
+  keywords={Partitioning algorithms;Vectors;Instruction sets;Synchronization;Memory management;Algorithm design and analysis},
+  doi={10.1109/IPDPS.2013.50}
+}
+
+% Offifial publication for the AMF-Placer 2.0 paper, which is an open-source
+% analytical placer using quadratic programming for global placement and
+% simulated annealing for detailed placement.  Written primarily in C++ and
+% available at github.com/zslwyuan/AMF-Placer
+@article{liang2024amf,
+  author={Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={{AMF-Placer 2.0}: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous {FPGA}}, 
+  year={2024},
+  volume={43},
+  number={9},
+  pages={2769-2782},
+  keywords={Field programmable gate arrays;Timing;Computer architecture;Microprocessors;Table lookup;Routing;Standards;Analytical placement;field-programmable gate array (FPGA);mixed-size placement;timing-driven placement},
+  doi={10.1109/TCAD.2024.3373357}
+}
+
+% Latest version of VPR, documenting new features and support -- very little mention of changes (if any) to the actual placement algorithms though
+@article{luu2011vpr,
+author = {Luu, Jason and Kuon, Ian and Jamieson, Peter and Campbell, Ted and Ye, Andy and Fang, Wei Mark and Kent, Kenneth and Rose, Jonathan},
+title = {{VPR} 5.0: {FPGA CAD} and architecture exploration tools with single-driver routing, heterogeneity and process scaling},
+year = {2011},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {4},
+number = {4},
+issn = {1936-7406},
+url = {https://doi.org/10.1145/2068716.2068718},
+doi = {10.1145/2068716.2068718},
+journal = {ACM Trans. Reconfigurable Technol. Syst.},
+articleno = {32},
+numpages = {23},
+keywords = {routing, placement, heterogeneous, hard blocks, field-programmable gate arrays, VPR, FPGA}
+}
+
+% Partition-based placement general algorithms and some possible implementation
+% details
+@article{maidee2005timing,
+  author={Maidee, P. and Ababei, C. and Bazargan, K.},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={Timing-driven partitioning-based placement for island style {FPGAs}}, 
+  year={2005},
+  volume={24},
+  number={3},
+  pages={395-406},
+  keywords={Field programmable gate arrays;Routing;Runtime;Partitioning algorithms;Delay effects;Coupling circuits;Engines;Delay estimation;Minimization;Circuit simulation;Delay estimation;field programmable gate arrays (FPGA);FPGA placement;partitioning-based placement;timing-driven placement},
+  doi={10.1109/TCAD.2004.842812}
+}
+
+% The official publication for the latest version of the VTR
+% (verilog-to-routing) toolkit.  The latest publication focuses on updates to
+% the user interface and new features and support, but not algorithmic changes.
+% VTR is currently the standard in open source placement and routing software,
+% written primarilly in C++ with a Python interface, available for download at:
+% github.com/verilog-to-routing/vtr-verilog-to-routing
+@article{murray2020vtr,
+author = {Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jia Min and Eldafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
+title = {{VTR} 8: High-performance {CAD} and Customizable {FPGA} Architecture Modelling},
+year = {2020},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {13},
+number = {2},
+issn = {1936-7406},
+url = {https://doi.org/10.1145/3388617},
+doi = {10.1145/3388617},
+journal = {ACM Trans. Reconfigurable Technol. Syst.},
+articleno = {9},
+numpages = {55},
+keywords = {Computer aided design (CAD), electronic design automation (EDA), field programmable gate array (FPGA), packing, placement, routing, verilog to routing (VTR), versatile place and route (VPR)}
+}
+
+% DREAMPlaceFPGA the official publication for the DREAMPlace open source
+% using analytical placement with some deep learning for FPGA placement
+% acceleration -- written in C++ with Python interfaces and available at
+% github.com/rachelselinar/DREAMPlaceFPGA
+@inproceedings{rajarathnam2022dreamplace,
+  author={Rajarathnam, Rachel Selina and Alawieh, Mohamed Baker and Jiang, Zixuan and Iyer, Mahesh and Pan, David Z.},
+  booktitle={2022 27th Asia and South Pacific Design Automation Conference (ASP-DAC)}, 
+  title={{DREAMPlaceFPGA}: An Open-Source Analytical Placer for Large Scale Heterogeneous {FPGAs} using Deep-Learning Toolkit}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={300-306},
+  keywords={Performance evaluation;Runtime;Graphics processing units;Programming;Logic gates;Timing;Field programmable gate arrays},
+  doi={10.1109/ASP-DAC52403.2022.9712562}
+}
+
+% The original publication for VTR (Verilog-to-routing) -- open-source
+% synthesis-packing-place-and-route platform.  Still uses VPR for the place and
+% route steps.
+% VTR is currently the standard in open source placement and routing software,
+% written primarilly in C++ with a Python interface, available for download at:
+% github.com/verilog-to-routing/vtr-verilog-to-routing
+@inproceedings{rose2012vtr,
+author = {Rose, Jonathan and Luu, Jason and Yu, Chi Wai and Densmore, Opal and Goeders, Jeffrey and Somerville, Andrew and Kent, Kenneth B. and Jamieson, Peter and Anderson, Jason},
+title = {The {VTR} project: architecture and {CAD} for {FPGAs} from verilog to routing},
+year = {2012},
+isbn = {9781450311557},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2145694.2145708},
+doi = {10.1145/2145694.2145708},
+booktitle = {Proceedings of the ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+pages = {77–86},
+numpages = {10},
+keywords = {CAD, FPGA, architecture},
+location = {Monterey, California, USA},
+series = {FPGA '12}
+}
+
+% The official AMD Vivado docs -- Vivado is Xilinx (acquired by AMD)'s analytic
+% placer, which is currently considered the state-of-the-art and only real
+% option for placement and routing in industrial FPGA pnr applications
+@misc{vivado2024docs,
+  title={Vivado Design Suite User Guide},
+  author={{AMD Vivado Developers}},
+  year={2024},
+  institution={AMD},
+  number={Version 2024.1},
+  url={https://docs.amd.com/r/2024.1-English/ug893-vivado-ide}
+}
+
+% VTR docs with a bit more detail than above reference, and latest version (most up-to-date) information
+% VTR is currently the standard in open source placement and routing software,
+% written primarilly in C++ with a Python interface, available for download at:
+% github.com/verilog-to-routing/vtr-verilog-to-routing
+@misc{vtr2024verilog,
+  title={Verilog-to-routing documentation},
+  author={{VTR Developers}},
+  year={2024},
+  version={Version 8.1.0-dev},
+  url={https://readthedocs.org/projects/vtr/downloads/pdf/latest/}
+}
+
+% Simulated annealing and reinforcement learning based FPGA placement.  The RL
+% contributions are tenuous at best, but still an example of potential RL
+% impact in industry
+@inproceedings{tian2022improving,
+  author={Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
+  booktitle={2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
+  title={Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning}, 
+  year={2022},
+  volume={10},
+  number={},
+  pages={1912-1919},
+  keywords={Technological innovation;Runtime;Design automation;Simulated annealing;Reinforcement learning;Logic gates;Space exploration;FPGA;reinforcement learning;simulated annealing;placement},
+  doi={10.1109/ITAIC54216.2022.9836761}
+}
+
+% DREAMPlaceFPGA-MP: GPU-accelerated macro-placer for DREAMPlaceFPGA
+% (rajrathnam2022) DREAMPlace is an open source using analytical placement with
+% some deep learning for FPGA placement acceleration -- written in C++ with
+% Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
+@misc{xiong2023dreamplace,
+      title={{DREAMPlaceFPGA-MP}: An Open-Source {GPU}-Accelerated Macro Placer for Modern {FPGAs} with Cascade Shapes and Region Constraints}, 
+      author={Zhili Xiong and Rachel Selina Rajarathnam and Zhixing Jiang and Hanqing Zhu and David Z. Pan},
+      year={2023},
+      eprint={2311.08582},
+      archivePrefix={arXiv},
+      primaryClass={cs.AR},
+      url={https://arxiv.org/abs/2311.08582}, 
+}
+
+% NVIDIA's official API docs for the latest version (as of Apr 2025) of the
+% cuBLAS API.  With both C and Fortran bindings.
+@techreport{cublas,
+author={{NVIDIA Corporation}},
+title={{cuBLAS API}},
+year={2025},
+institution={NVIDIA Corporation},
+number={Release 12.8},
+url={https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf},
+note={Last accessed: Apr 26, 2025},
+}
+
+% NVIDIA's official developer's guide and API for writing high-performance CUDA
+% in Fortran95+ on compilers that support the CUDA API, such as Nvidia's nvcc
+% family of compilers and Portland group's pgfrotran family.
+@techreport{cuda,
+author={{NVIDIA HPC Compilers}},
+title={{CUDA Fortran} programming guide},
+year={2025},
+institution={NVIDIA Corporation},
+number={Version 23.3},
+url={https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf},
+note={Last accessed: Apr 26, 2023},
+}
+
+% The publication for the XGBoost numerical software. XGBoost can be used to
+% efficiently compute optimized gradient boosted decision trees on massive
+% datasets via a fully-distributed algorithm that can be configured to run on
+% Hadoop, SGE, and MPI.  It can also be run on NVIDIA GPUs using CUDA.  The
+% software is fully open-source and written in highly optimized C++, though
+% everyone uses it through its Python interface.  The download is available at
+% github.com/dmlc/xgboost.  Most data science competition winners use XGBoost
+% for tabular data
+@inproceedings{chen2016xgboost,
+	author = {Chen, Tianqi and Guestrin, Carlos},
+	title = {{XGBoost}: A Scalable Tree Boosting System},
+	year = {2016},
+	month = {8},
+	booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)},
+	pages = {785--794},
+	organization = {ACM},
+	location = {San Francisco, California, USA},
+	doi = {10.1145/2939672.2939785},
+	url = {https://dl.acm.org/doi/10.1145/2939672.2939785},
+	keywords = {},
+}

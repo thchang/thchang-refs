@@ -179,6 +179,22 @@
 	issn = {0965-9978},
 }
 
+% Methodolgies for calibrating the Fayans EDF model to experimental data. Data is expensive and limited and the model itself is computationally expensive, so this is a classical inverse problem. The problem is actually multiobective because the data themselves come from various categories representing different types of observations, and the standard deviations for each of these observables is not known. Could be configured as a 3 or 9-objective problem
+@article{bollapragada2020optimization,
+	author = {Bollapragada, Raghu and Menickelly, Matt and Nazarewicz, Witold and O'Neal, Jared and Reinhard, Paul-Gerhard and Wild, Stefan M.},
+	title = {Optimization and supervised machine learning methods for fitting numerical physics models without derivatives},
+	year = {2020},
+	month = {2},
+	journal = {Journal of Physics G: Nuclear and Particle Physics},
+	volume = {48},
+	number = {2},
+	numpages = {24001},
+	publisher = {IOP Publishing},
+	doi = {10.1088/1361-6471/abd009},
+	url = {https://iopscience.iop.org/article/10.1088/1361-6471/abd009},
+	issn = {0954-3899},
+}
+
 % The Bowyer-Watson algorithm is one of the first algorithms for computing Delaunay triangulations in arbitrary dimensions. It is not particularly scalable, but a first step toward thinking about Delaunay triangulation in more than 3D. Was published by both Bowyer and Watson in the same issue of the same journal, with a footnote from the publisher that they both submitted at the same time and after investigation, it was determined that this was purely coincidental and no plagiarism was involved. Therefore, both papers were published together and both authors are credited equally for discovery
 @article{bowyer1981computing,
 	author = {Bowyer, Adrian},
@@ -456,6 +472,9 @@
 	howpublished = {\url{https://keras.io}},
 }
 
+% An approximation algorithm for computing Czech complexes (a type of
+% approximation to Delaunay triangulations) which may be scalble to high
+% dimensions
 @article{choudhary2019polynomialsized,
 	author = {Choudhary, Aruni and Kerber, Michael and Raghvendra, Sharath},
 	title = {Polynomial-sized topological approximations using the permutahedron},
@@ -872,23 +891,6 @@ numpages = {21},
 	keywords = {},
 }
 
-@article{hammouda2015noisetolerant,
-	author = {Hammouda, Adam and Siegel, Andrew R. and Siegel, Stephen F.},
-	title = {Noise-tolerant explicit stencil computations for nonuniform process execution rates},
-	year = {2015},
-	month = {5},
-	journal = {ACM Transactions on Parallel Computing},
-	volume = {2},
-	number = {1},
-	articleno = {7},
-	numpages = {33},
-	publisher = {Association for Computing Machinery (ACM)},
-	doi = {10.1145/2742351},
-	url = {https://dl.acm.org/doi/10.1145/2742351},
-	issn = {2329-4949},
-	keywords = {},
-}
-
 % Hanson's Fortran numerical software for solving equality constrained nonnegative least-squares (NNLS) problems via an iterative weighted least squares (WNNLS) solver. This is the default constrained least-squares optimization problem solver in the Fortran library SLATEC from Sandia
 @article{hanson1982algorithm,
 	author = {Hanson, Richard J. and Haskell, Karen H.},
@@ -936,6 +938,17 @@ numpages = {21},
 	publisher = {{CGAL Editorial Board}},
 	url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
 	keywords = {},
+}
+
+% An article on Google GlassBox research: Google's research division dedicated to interpretable machine learning
+@article{hof2015google,
+	author = {Hof, Robert D.},
+	title = {Google Tries to Make Machine Learning a Little More Human},
+	year = {2015},
+	month = {nov},
+	journal = {MIT Technology Review},
+	url = {https://www.technologyreview.com/2015/11/05/165175/google-tries-to-make-machine-learning-a-little-more-human/},
+	note = {Last accessed: June 20, 2022},
 }
 
 % The official publication for HiGHS numerical optimization open source software package and solver for linear programming problems. The first successful effort to parallelize a simplex method based solver, specifically, they have successfully parallelized the dual revised simplex approach. HiGHS is now the default solver in most scipy.optimize. HiGHS is written in C++ with Fortran, C, and Python interfaces -- support CPU and GPU parallelism, the authors don't get perfect scaling by any means but this is the first successful effort to parallelize linear programming and still an achievement
@@ -1052,6 +1065,22 @@ numpages = {21},
 	git = {http://github.com/dragonfly/dragonfly},
 }
 
+% An introductory-level paper to theory-guided data science. I haven't read but I assume it covers the same topics he taught in his class at Virginia Tech
+@article{karpatne2017theoryguided,
+	author = {Karpatne, Anuj and Atluri, Gowtham and Faghmous, James H. and Steinbach, Michael and Banerjee, Arindam and Ganguly, Auroop and Shekhar, Shashi and Samatova, Nagiza and Kumar, Vipin},
+	title = {Theory-Guided Data Science: A New Paradigm for Scientific Discovery from Data},
+	year = {2017},
+	month = {10},
+	journal = {IEEE Transactions on Knowledge and Data Engineering},
+	volume = {29},
+	number = {10},
+	pages = {2318--2331},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/TKDE.2017.2720168},
+	url = {http://ieeexplore.ieee.org/document/7959606/},
+	issn = {1041-4347},
+}
+
 % The original paper on Adam: an adaptive gradient and moment estimator that uses second order moments to approximate curvature (i.e., Hessian information) in order to accelerate the convergence of AdaGrad. In particular, this means applying Nesterov's momentum to both the gradient and curvature estimations. From 2015-2024 this was the state-of-the-art algorithm for optimization of neural network weights during training, and was what was typically meant when people talked about stochastic gradient descent.
 @inproceedings{kingma2015adam,
 	author = {Kingma, Diedrik and Ba, Jimmy},
@@ -1125,6 +1154,18 @@ numpages = {21},
 	keywords = {},
 }
 
+% Stochastic approximation algorithm (i.e., stochastic gradient descent) and how to analyze its radius of convergence for a fixed step-size -- you can decay its step size at a square-summable but not summable rate to guarantee convergence in the limit
+@article{lai2003stochastic,
+	author = {Lai, Tze Leung},
+	title = {Stochastic approximation},
+	year = {2003},
+	journal = {The annals of Statistics},
+	volume = {31},
+	number = {2},
+	pages = {391--406},
+	publisher = {Institute of Mathematical Statistics},
+}
+
 % Peter Lax's classic textbook on functional analysis and all the core theorems Banach spaces, Hilbert spaces, and approximation theory
 @book{lax2002functional,
 	author = {Lax, Peter D.},
@@ -1166,7 +1207,9 @@ numpages = {21},
 }
 
 % Fitting nonparametric distribution models by interpolating the cumulative
-% distribution functions
+% distribution functions -- the application is that the CDFs measure HPC
+% throughput distributions, so it is also a little bit of a HPC performance
+% modeling paper
 @inproceedings{lux2018nonparametric,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Nonparametric distribution models for predicting and managing computational performance variability},
@@ -1312,9 +1355,6 @@ numpages = {21},
 	isbn = {9781118916032},
 }
 
-% Official docs and reference for the Matlab computational geometry toolbox,
-% which includes all of Matlab's built-in tools for computing geometric
-% algorithms and structures, including Delaunay triangulations
 % Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
 @inproceedings{nesterov1983method,
 	author = {Nesterov, Yurii},
@@ -1326,7 +1366,7 @@ numpages = {21},
 }
 
 % OpenMP 4.5 standard: Official definition of OpenMP 4.5 software standard
-@techreport{oarb(2015openmp,
+@techreport{oarb2015openmp,
 	title = {{OpenMP Application Programming Interface} version 4.5},
 	year = {2015},
 	month = {November},
@@ -1427,7 +1467,7 @@ numpages = {21},
     url = {https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2829845/patel\_2025\_ic\_240355\_1738013025.0942.pdf},
 }
 
-% The official publicatino for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+% The official publication for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
 @article{pedregosa2011scikitlearn,
 	author = {Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others, },
 	title = {Scikit-learn: Machine learning in {P}ython},
@@ -1436,35 +1476,6 @@ numpages = {21},
 	volume = {12},
 	pages = {2825--2830},
 	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
-}
-
-% The official handbook and user's manual for the high-performance LINPACK
-% benchmark (HPL) describing how to set-up and run the HPC performance tuning
-% benchmark on distributed-memory systems, what problem it solves, what values
-% the config file sets, and what are the rules for defining a solver for the
-% problem and having it still count toware the Top 500 list
-@book{petitet2018hpl,
-	author = {Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack and Cleary, Andy},
-	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
-	year = {2018},
-	publisher = {Innovation Computing Laboratory, University of Tennessee},
-	keywords = {},
-}
-
-% A case report from configuring a Los Alamos HPC, where real-world performance
-% ended up being much lower than expected due to performance variability
-@inproceedings{petrini2003case,
-	author = {Petrini, Fabrizio and Kerbyson, Darren J. and Pakin, Scott},
-	title = {The case of the missing supercomputer performance: Achieving optimal performance on the 8,192 processors of {ASCI Q}},
-	year = {2003},
-	month = {11},
-	booktitle = {Proceedings of the 2003 ACM/IEEE Conference on Supercomputing (SC '03)},
-	pages = {55--55},
-	organization = {ACM},
-	location = {Phoenix, AZ, USA},
-	doi = {10.1145/1048935.1050204},
-	url = {https://dl.acm.org/doi/10.1145/1048935.1050204},
-	keywords = {},
 }
 
 % A novel traversal algorithm for high-dimensional Vornoi graphs (or
@@ -1645,7 +1656,10 @@ numpages = {21},
 % so you cannot have accuracy and solvability at once.  Generally, the author
 % recommends making the parameter as large as possible without causing
 % singularity, a tradeoff that is often optimized in modern Gaussian process
-% implementations via L-BFGS-B.
+% implementations via L-BFGS-B.  There is also a really nice table of kernel
+% errors for various kernels, which can be directly plugged into the generic
+% RBF interpolation error formula to get error bounds for most common RBF basis
+% functions
 @article{schaback1995error,
 	author = {Schaback, Robert},
 	title = {Error estimates and condition numbers for radial basis function interpolation},
@@ -1662,7 +1676,8 @@ numpages = {21},
 	keywords = {},
 }
 
-% Extremely thorough analysis of using linear models inside a simplex for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
+% Extremely thorough analysis of using linear models inside a simplex (e.g.,
+% tetrahedral meshes) for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
 @inproceedings{shewchuk2002what,
 	author = {Shewchuk, Jonathan},
 	title = {What is a good linear finite element? {I}nterpolation, conditioning, anisotropy, and quality measures},
@@ -1793,18 +1808,6 @@ numpages = {21},
 	issn = {1867-2949},
 }
 
-% Citation for the Nov 2019, HPC Top 500 -- measuring the fastest HPCs in the
-% world based on their max throughput on the high-performance LINPACK
-% HPC performance benchmark problem
-@misc{strohmaier2019top,
-	author = {Strohmaier, Eric and Dongarra, Jack and Simon, Horst and Meuer, Martin},
-	title = {The Top 500 List},
-	year = {2019},
-	month = {November},
-    url = {https://www.top500.org},
-	note = {accessed April 18, 2020},
-}
-
 % A nice summary article (with some performance comparisons) for a wide variety
 % of sequential Delaunay triangulation algorithms in 2D
 @article{su1997comparison,
@@ -1871,24 +1874,6 @@ numpages = {21},
 	doi = {10.1145/1057594.1057595},
 	url = {https://dl.acm.org/doi/10.1145/1057594.1057595},
 	issn = {0163-5778},
-	keywords = {},
-}
-
-% The landmark paper showing that transformers alone are capable of capturing
-% all structure needed for language conversion, i.e., recurence relations and
-% the sequential structure of time-series predictions can be encoded into which
-% tokens to "pay attention to" during next word (or any next item) predictions.
-% This paper is often cited as the inspiration for large language models
-% (LLMs), which rely heavily on the transformer architecture, which became a
-% standard after this
-@inproceedings{vaswani2017attention,
-	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
-	title = {Attention is all you need},
-	year = {2017},
-	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
-	pages = {1--11},
-	organization = {Curran Associates, Inc.},
-	location = {Long Beach, California, USA},
 	keywords = {},
 }
 
@@ -1974,6 +1959,10 @@ numpages = {21},
 	issn = {0022-4065},
 }
 
+% A spectral analysis on the conditioning of the kernel matrics (i.e.,
+% interpolation matrices) for RBF interpolants and Gaussian processes, showing
+% the singular values trending to zero exponentially in both theory and
+% practice
 @article{wathen2015spectral,
 	author = {Wathen, Andrew J and Zhu, Shengxin},
 	title = {On spectral distribution of kernel matrices related to radial basis functions},
@@ -2061,24 +2050,6 @@ numpages = {21},
 	doi = {10.1016/s0167-8191(00)00087-9},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0167819100000879},
 	issn = {0167-8191},
-	keywords = {},
-}
-
-% Our VarSys paper on the modeling methodologies that we use for modeling the
-% bimodal performance distributions that we observe in IO throughput on our
-% experimental performance modeling HPC cluster
-@article{xu2020modeling,
-	author = {Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne},
-	title = {Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
-	year = {2020},
-	month = {5},
-	journal = {Journal of Parallel and Distributed Computing},
-	volume = {139},
-	pages = {87--89},
-	publisher = {Elsevier BV},
-	doi = {10.1016/j.jpdc.2020.01.005},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/S0743731519302746},
-	issn = {0743-7315},
 	keywords = {},
 }
 
@@ -2319,7 +2290,7 @@ numpages = {156}
   publisher={Toronto, ON, Canada}
 }
 
-% The official publicatoin for AlexNet -- one of the first truly massive
+% The official publication for AlexNet -- one of the first truly massive
 % overparameterized convolutional neural networks, which threw away a lot of
 % the conventional wisdom around overfitting and achieved state-of-the-art
 % performance and fine generalization errors on the ImageNet benchmark problem.
@@ -2377,7 +2348,25 @@ numpages = {156}
     pages = "4171--4186",
 }
 
-% The official publicatino for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+% The landmark paper showing that transformers alone are capable of capturing
+% all structure needed for language conversion, i.e., recurence relations and
+% the sequential structure of time-series predictions can be encoded into which
+% tokens to "pay attention to" during next word (or any next item) predictions.
+% This paper is often cited as the inspiration for large language models
+% (LLMs), which rely heavily on the transformer architecture, which became a
+% standard after this
+@inproceedings{vaswani2017attention,
+	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+	title = {Attention is all you need},
+	year = {2017},
+	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
+	pages = {1--11},
+	organization = {Curran Associates, Inc.},
+	location = {Long Beach, California, USA},
+	keywords = {},
+}
+
+% The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
 @inproceedings{paszke2019pytorch,
 	author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
 	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
@@ -2470,4 +2459,84 @@ numpages = {156}
       year={2017},
       institution={arXiv cs.LG},
       url={https://arxiv.org/abs/1707.06347},
+}
+
+% Simulated annealing and reinforcement learning based FPGA placement.  The RL
+% contributions are tenuous at best, but still an example of potential RL
+% impact in industry
+@inproceedings{tian2022improving,
+  author={Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
+  booktitle={2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
+  title={Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning}, 
+  year={2022},
+  volume={10},
+  number={},
+  pages={1912-1919},
+  keywords={Technological innovation;Runtime;Design automation;Simulated annealing;Reinforcement learning;Logic gates;Space exploration;FPGA;reinforcement learning;simulated annealing;placement},
+  doi={10.1109/ITAIC54216.2022.9836761}
+}
+
+% Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
+@inproceedings{farhan2020reinforcement,
+	author = {Farhan, Mohammed and G{\"o}hre, Brett},
+	title = {Reinforcement Learning in {AnyLogic} Simulation Models: A Guiding Example using {Pathmind}},
+	year = {2020},
+	month = {12},
+	booktitle = {Proc. 2020 Winter Simulation Conference (WSC 2020)},
+	pages = {3212--3223},
+	organization = {IEEE},
+	location = {Orlando, FL, USA},
+	doi = {10.1109/WSC48552.2020.9383916},
+	url = {https://ieeexplore.ieee.org/document/9383916/},
+}
+
+% Our VarSys paper on the modeling methodologies that we use for modeling the
+% bimodal performance distributions that we observe in IO throughput on our
+% experimental performance modeling HPC cluster
+@article{xu2020modeling,
+	author = {Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne},
+	title = {Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
+	year = {2020},
+	month = {5},
+	journal = {Journal of Parallel and Distributed Computing},
+	volume = {139},
+	pages = {87--89},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.jpdc.2020.01.005},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0743731519302746},
+	issn = {0743-7315},
+	keywords = {},
+}
+
+% Original tech report introducing recurrent neural networks (RNNs), which
+% use a recursively defined state variable to track the context of sequential
+% data observations so far, plus the value of the current output to predict the
+% next output.  The authors derive how the gradients can be backpropogated
+% through this entire chain for efficient training.  This idea had been around
+% since the 60s, but this is the first paper explicitly proposing such
+% recurrent layers in a representation learning context.  The authors propose
+% these recurrent layers as a means of representation learning for sequence
+% data (such as next-word prediction in language models).  RNNs would go on to
+% become the state-of-the-art in language models and natural language
+% processing for almost 30 years until they were replaced by transformers with
+% the advent of BERT in 2017.
+@techreport{rumelhart1985learning,
+author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+year = {1985},
+title = {Learning internal representations by error propagation},
+number = {ICS 8504},
+address = {San Diego, CA, USA},
+institution={Institute for Cognitive Science, University of California},
+url={https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
+}
+
+% Original tech report where recurent neural networks were originally applied
+% at scale to a language processing (next word prediction) application
+@techreport{jordan1986serial,
+  author       = {Jordan, Michael I.},
+  title        = {Serial order: a parallel distributed processing approach},
+  year         = {1986},
+  institution  = {Institute for Cognitive Science, University of California},
+  address      = {San Diego, La Jolla, CA, USA},
+  url          = {https://www.osti.gov/biblio/6910294},
 }
