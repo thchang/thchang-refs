@@ -1696,7 +1696,13 @@ url={https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
 % for all AI and neural network research.  It is proposed as a simulation model
 % for biologists and psychologists to study brain function.  It would not be
 % useful as a tool for regression, classification, or prediction for many years
-% until the advent of representation learning.
+% until the advent of representation learning.  He originally used a step
+% (discontinuous) activation function since it was well-known from functional
+% analysis and approximation theory that the span of these functions is dense
+% in L2 space.  The sigmoidal activation would later be introduced as a
+% continuous smoothing of the step function (so that back propogation would
+% have gradients to train on), but there is no clear reference for who first
+% proposed this
 @article{rosenblatt1958perceptron,
   author={Rosenblatt, Frank},
   title={The perceptron: a probabilistic model for information storage and organization in the brain.},
@@ -1707,6 +1713,36 @@ url={https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
   pages={386},
   publisher={American Psychological Association},
   doi={10.1037/h0042519},
+}
+
+% The first paper where the ReLU activation function was used as the activation
+% function in neural network models.  This would later become the standard for
+% many years (and still is for regressor models)
+@article{fukushima1975cognitron,
+  title={Cognitron: A self-organizing multilayered neural network},
+  author={Fukushima, Kunihiko},
+  journal={Biological cybernetics},
+  volume={20},
+  number={3},
+  pages={121--136},
+  year={1975},
+  publisher={Springer}
+}
+
+% Paper where ReLU functions were first used to replace sigmoidal activations
+% in a restricted Boltzmann machine with much success.  After this, ReLU became
+% the standard activation function in all neural network regressive models
+@inproceedings{10.5555/3104322.3104425,
+author = {Nair, Vinod and Hinton, Geoffrey E.},
+title = {Rectified linear units improve restricted boltzmann machines},
+year = {2010},
+isbn = {9781605589077},
+publisher = {Omnipress},
+address = {Madison, WI, USA},
+booktitle = {Proceedings of the 27th International Conference on International Conference on Machine Learning},
+pages = {807–814},
+location = {Haifa, Israel},
+series = {ICML'10}
 }
 
 % Original paper on Bayesian neural networks (or just Bayesian networks), which
@@ -1812,7 +1848,9 @@ series = {ICML '04}
 % model is not unlike quantum annealing.  The model learns a distribution of
 % potential inference values for each input combination.  Thus, it is a form of
 % distribution learning.  These were a commonly used alternative to neural
-% networks for a time, and often cited as explainable alternatives
+% networks for a time, and often cited as explainable alternatives.  The binary
+% state variables would later be replaced by sigmoidal activation functions
+% (for smoothness)
 @inproceedings{hinton1983optimal,
   title={Optimal perceptual inference},
   author={Hinton, Geoffrey E and Sejnowski, Terrence J},
