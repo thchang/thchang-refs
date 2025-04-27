@@ -1,0 +1,718 @@
+% The famous textbook on convex optimization (from which I learned most
+% concepts) covering concepts such as basic convexity definitions and theorems,
+% basic algorithms and optimality conditions, handling constraints, Lagrangian
+% duality, multiobjective optimization basics, gradient descent and newton's
+% method, sequential quadratic programming, linear programming, and a few
+% applications and modeling basics
+@book{boyd2004convex,
+  title={Convex optimization},
+  author={Boyd, Stephen P and Vandenberghe, Lieven},
+  year={2004},
+  publisher={Cambridge university press}
+}
+
+% The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
+@misc{bradbury2018jax,
+	author = {Bradbury, J. and others, },
+	title = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
+	year = {2018},
+	number = {0.3.13},
+	url = {http://github.com/google/jax},
+}
+
+% The new classic textbook on geometric deep learning -- this book (by the
+% creator of the field) covers how all of representation learning can be broken
+% down into exploiting symmetries, stabilities, and invariances in data,
+% through the lens of group theory.  For example, a convolutional layer
+% exploits a symmetry between equivalent groups of images; and a max pooling
+% layer exploits a scale invariance in image size/resolution; and when we talk
+% about feature encodings, we are often looking for mappings that maintain
+% stability (i.e., similar feature vectors remain close together after
+% encoding).
+@book{bronstein2021geometric,
+	author = {Bronstein, Michael M. and Bruna, Joan and Cohen, Taco and Veličković, Petar},
+	title = {Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges},
+	year = {2021},
+	publisher = {arXiv cs.LG},
+	doi = {10.48550/arXiv.2104.13478},
+}
+
+% The publication for the XGBoost numerical software. XGBoost can be used to
+% efficiently compute optimized gradient boosted decision trees on massive
+% datasets via a fully-distributed algorithm that can be configured to run on
+% Hadoop, SGE, and MPI.  It can also be run on NVIDIA GPUs using CUDA.  The
+% software is fully open-source and written in highly optimized C++, though
+% everyone uses it through its Python interface.  The download is available at
+% github.com/dmlc/xgboost.  Most data science competition winners use XGBoost
+% for tabular data
+@inproceedings{chen2016xgboost,
+	author = {Chen, Tianqi and Guestrin, Carlos},
+	title = {{XGBoost}: A Scalable Tree Boosting System},
+	year = {2016},
+	month = {8},
+	booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)},
+	pages = {785--794},
+	organization = {ACM},
+	location = {San Francisco, California, USA},
+	doi = {10.1145/2939672.2939785},
+	url = {https://dl.acm.org/doi/10.1145/2939672.2939785},
+	keywords = {},
+}
+
+% The Keras docs -- great and highly impactful open source Python software, needs no introduction. A simplified interface for quickly building neural networks and other deep learning models with various backends frameworks such as Tensorflow, jax, and Pytorch.
+@misc{chollet2015keras,
+	author = {Chollet, Fran\c{c}ois and others, },
+	title = {Keras},
+	year = {2015},
+	howpublished = {\url{https://keras.io}},
+}
+
+% Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
+@inproceedings{dauphin2014identifying,
+	author = {Dauphin, Yann N. and Pascanu, Razvan and Gulcehre, Caglar and Cho, Kyunghyun and Ganguli, Surya and Bengio, Yoshua},
+	editor = {Ghahramani, Z. and Welling, M. and Cortes, C. and Lawrence, N. and Weinberger, K.Q.},
+	title = {Identifying and attacking the saddle point problem in high-dimensional non-convex optimization},
+	year = {2014},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {27},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf},
+}
+
+% The original paper for AdaGrad (adaptive subgradient method) which replaced the subgradient method with an adaptive estimate for the gradient, where each component of the gradient is rescaled by an adaptive estimate for the standard deviation in that direction based on previous iterates. This adaptive estimate for standard deviation in each axis-aligned direction serves as a diagonal approximation to the Hessian matrix, giving second-order like properties to the method and greatly improving the practical convergence. AdaGrad was very popular and considered the state-of-the-art optimization algorithm for training neural networks upon its initial release, but was quickly replaced by Adam, which added a Nesterov momentum esque smoothing to this adaptive gradient estimation in order to further improve convergence rates on nonsmooth, highly stochastic, and ill-conditioned problems
+@article{duchi2011adaptive,
+	author = {Duchi, John and Hazan, Elad and Singer, Yoram},
+	title = {Adaptive Subgradient Methods for Online Learning and Stochastic Optimization},
+	year = {2011},
+	journal = {Journal of Machine Learning Research},
+	volume = {12},
+	number = {61},
+	pages = {2121--2159},
+	url = {http://jmlr.org/papers/v12/duchi11a.html},
+}
+
+% Online paper with interactive visualizations explaining what Nesterov's momentum is and how it works intuitively by smoothing out optimization sample paths and preventing oscillations in the optimizer that occur do to poor problem conditioning. Then, they show how the problem conditioning appears as an often ignored constant in the convergence rate of gradient descent. All this is to show intuitively and mathematically that gradient descent with Nesterov's momentum will convergence faster in practice for ill-conditioned problems
+@article{goh2017why,
+	author = {Goh, Gabriel},
+	title = {Why Momentum Really Works},
+	year = {2017},
+	month = {4},
+	journal = {Distill},
+	volume = {2},
+	number = {4},
+	publisher = {Distill Working Group},
+	doi = {10.23915/distill.00006},
+	url = {http://distill.pub/2017/momentum},
+	issn = {2476-0757},
+}
+
+% Classical textbook that serves as the "bible" of matrix computations and computational linear algebra -- contains all the standard factorizations, the common algorithms for computing them, and their sensitiviy analyses, pivoting, some basic approximation theory, and the basics of iterative methods
+@book{golub2013matrix,
+	author = {Golub, Gene H. and Van Loan, Charles F.},
+	title = {Matrix computations},
+	year = {2013},
+	edition = {4th},
+	publisher = {Johns Hopkins University Press},
+	doi = {10.56021/9781421407944},
+	url = {https://www.press.jhu.edu/books/title/10678/matrix-computations},
+	isbn = {978-1421407944},
+	keywords = {},
+}
+
+% Theorems on the curse of dimensionality when it comes to drawing data points in high-dimensional spaces. The main theorem implies that the convex hull of N points in D dimensions has volume ~0 for D sufficiently large -- this occurs because of a concentration of measure type result
+@article{gorban2017stochastic,
+	author = {Gorban, Alexander N and Tyukin, Ivan Yu},
+	title = {Stochastic separation theorems},
+	year = {2017},
+	month = {10},
+	journal = {Neural Networks},
+	volume = {94},
+	pages = {255--259},
+	publisher = {Elsevier},
+	doi = {10.1016/j.neunet.2017.07.014},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0893608017301776},
+	issn = {0893-6080},
+}
+
+% An article on Google GlassBox research: Google's research division dedicated to interpretable machine learning
+@article{hof2015google,
+	author = {Hof, Robert D.},
+	title = {Google Tries to Make Machine Learning a Little More Human},
+	year = {2015},
+	month = {nov},
+	journal = {MIT Technology Review},
+	url = {https://www.technologyreview.com/2015/11/05/165175/google-tries-to-make-machine-learning-a-little-more-human/},
+	note = {Last accessed: June 20, 2022},
+}
+
+% An analysis of how adversarial examples for neural network and other AI
+% models are typically indicative of the model using highly predictive but
+% brittle features to make predictions -- i.e., features that are highly
+% predictive but nevertheless not robust enough to use for actually making
+% predictions
+@inproceedings{ilyas2019adversarial,
+	author = {Ilyas, Andrew and Santurkar, Shibani and Tsipras, Dimitris and Engstrom, Logan and Tran, Brandon and Madry, Aleksander},
+	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
+	title = {Adversarial Examples Are Not Bugs, They Are Features},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	pages = {125--136},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf},
+	keywords = {},
+}
+
+% The original paper on Adam: an adaptive gradient and moment estimator that uses second order moments to approximate curvature (i.e., Hessian information) in order to accelerate the convergence of AdaGrad. In particular, this means applying Nesterov's momentum to both the gradient and curvature estimations. From 2015-2024 this was the state-of-the-art algorithm for optimization of neural network weights during training, and was what was typically meant when people talked about stochastic gradient descent.
+@inproceedings{kingma2015adam,
+	author = {Kingma, Diedrik and Ba, Jimmy},
+	title = {Adam: A method for stochastic optimization},
+	year = {2015},
+	booktitle = {3rd International Conference on Learning Representations (ICLR 2015)},
+	numpages = {11},
+	location = {San Diego, CA, USA},
+	url = {https://arxiv.org/abs/1412.6980},
+}
+
+% The original paper defining variational autoencoders, a standard practice in
+% performing dimension reduction and training models that encode continuous
+% latent spaces.  The idea being to train and optimize an encoder neural
+% network model whose posterior is a continuous latent space to generate
+% samples in the latent space distribution based on inputs from the original
+% dataset without "losing information", then jointly train a decoder
+% model that samples the latent distribution to produce the original
+% observations.  The idea being to randomly sample new data points that look
+% like the original data.  When trained jointly, these models can also be used
+% as embedder/extractor or compression/decompression pairs.
+@inproceedings{kingma2014auto,
+  author={Kingma, Diederik P and Welling, Max},
+  title={Auto-encoding variational {B}ayes},
+  year={2014},
+  booktitle={2nd International Conference on Learning Representations (ICLR 2014)},
+  url = {https://arxiv.org/abs/1312.6114},
+}
+
+% Stochastic approximation algorithm (i.e., stochastic gradient descent) and how to analyze its radius of convergence for a fixed step-size -- you can decay its step size at a square-summable but not summable rate to guarantee convergence in the limit
+@article{lai2003stochastic,
+	author = {Lai, Tze Leung},
+	title = {Stochastic approximation},
+	year = {2003},
+	journal = {The annals of Statistics},
+	volume = {31},
+	number = {2},
+	pages = {391--406},
+	publisher = {Institute of Mathematical Statistics},
+}
+
+% Our paper proposing test functions for convex optimization problems with very
+% specific properties, in order to gauge the effectiveness and robustness of
+% various techniques subject to various forms of degeneracy
+@inproceedings{lux2020analytic,
+  author = {Lux, Thomas C. H. and Chang, Tyler H.},
+  title = {Analytic test functions for generalizable evaluation of convex optimization techniques},
+  year = {2020},
+  booktitle = {Proc. IEEE SoutheastCon 2020},
+  numpages = {8},
+  location = {Raleigh, NC, USA},
+  organization = {Institute of Electrical and Electronics Engineers},
+  doi = {10.1109/SoutheastCon44009.2020.9368254}
+}
+
+% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
+@inproceedings{nesterov1983method,
+	author = {Nesterov, Yurii},
+	title = {A method for solving the convex programming problem with convergence rate O (1/k2)},
+	year = {1983},
+	booktitle = {Dokl akad nauk Sssr},
+	volume = {269},
+	numpages = {543},
+}
+
+% The official publication for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+@article{pedregosa2011scikitlearn,
+	author = {Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and others, },
+	title = {Scikit-learn: Machine learning in {P}ython},
+	year = {2011},
+	journal = {Journal of Machine Learning Research},
+	volume = {12},
+	pages = {2825--2830},
+	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
+}
+
+% A survey on how deep learning models (such as transformer models and neural
+% networks/multilayer perceptrons) still do not perform well (are not the state
+% of the art) when it comes to tabular data, which remains the most important
+% application for most businesses.  Gradient boosted trees remain the most
+% reliable predictors for these applications
+@article{shwartzziv2022tabular,
+	author = {Shwartz-Ziv, Ravid and Armon, Amitai},
+	title = {Tabular data: Deep learning is not all you need},
+	year = {2022},
+	month = {5},
+	journal = {Information Fusion},
+	volume = {81},
+	pages = {84--90},
+	publisher = {Elsevier},
+	doi = {10.1016/j.inffus.2021.11.011},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1566253521002360},
+	issn = {1566-2535},
+	keywords = {},
+}
+
+% A summary paper for an influential line of work in the field of scientific
+% machine learning.  Some standard techniques for computing error bounds for
+% neural networks using traditional techniques from numerical analysis and
+% approximation theory, and introducing a universal approximation theorem for
+% neural networks.  I.e., showing the existence of a two-layer multilayer
+% perceptron or similar neural network that can approximate any Sobolev
+% function to arbitrary required accuracy.  Equivalently, we could say that
+% such neural networks are dense in this Sobolev space
+@article{weinan2020machine,
+	author = {Weinan, E},
+	title = {Machine learning and computational mathematics},
+	year = {2020},
+	month = {1},
+	journal = {Communications in Computational Physics},
+	volume = {28},
+	number = {5},
+	pages = {1639--1670},
+	publisher = {Global Science Press},
+	doi = {10.4208/cicp.OA-2020-0185},
+	url = {https://global-sci.com/article/79736/machine-learning-and-computational-mathematics},
+	issn = {1991-7120},
+	keywords = {},
+}
+
+% One of the original papers proposing that overfitting, the bias variance
+% tradeoff curve, and generalization error are all misunderstood and misused
+% ideas.  The authors present a true holdout set of lost and never-before-seen
+% ImageNet and CIFAR-10 data, and show that massive interpolatory models
+% (models trained to zero error) generalize just as well as the
+% well-regularized models on this new data (better because their training error
+% was lower and total error = training error + generalization error).
+% Ben would go on to claim that (1) you want to interpolate a lot of data
+% that we claim we don't want to overfit (such as image data). (2) Models
+% that interpolate don't generalize poorly in practice and large
+% overparameterized models always perform better in practice. And (3)
+% Hyperparameter tuning is basically a form of training on the test set in
+% order to find the best model that interpolates the training data. This paper
+% was an eye-opener for me personally, and lead me to firmly believe in
+% interpolation for high-dimensional data
+@inproceedings{recht19imagenet,
+  title = 	 {Do {I}mage{N}et Classifiers Generalize to {I}mage{N}et?},
+  author =       {Recht, Benjamin and Roelofs, Rebecca and Schmidt, Ludwig and Shankar, Vaishaal},
+  booktitle = 	 {Proceedings of the 36th International Conference on Machine Learning},
+  pages = 	 {5389--5400},
+  year = 	 {2019},
+  editor = 	 {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+  volume = 	 {97},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {09--15 Jun},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v97/recht19a/recht19a.pdf},
+  url = 	 {https://proceedings.mlr.press/v97/recht19a.html},
+}
+
+% An experiment showing that when training labels are replaced with random
+% values (pure noise), most neural network classifier methods can still be
+% trained to zero training error.  (I.e., obviously overfitting).  However,
+% regularization techniques don't prevent them from doing so.  The authors
+% conclude that regularization isn't doing what we think it's doing and may not
+% actually be related to generalization error
+@inproceedings{zhang2017understanding,
+title={Understanding deep learning requires rethinking generalization},
+author={Chiyuan Zhang and Samy Bengio and Moritz Hardt and Benjamin Recht and Oriol Vinyals},
+booktitle={International Conference on Learning Representations},
+year={2017},
+url={https://openreview.net/forum?id=Sy8gdB9xx}
+}
+
+% The original dropout paper, this was standard practice in training deep
+% neural networks, especially massive convolutional nets and RNNs for image
+% and language processing for a long time, prior to the invention of
+% transformers -- the idea being that you zero out the effects (and updates to)
+% a small percentage of the nodes in each layer in each iteration, in order to
+% (1) make training cheaper, (2) prevent overfitting since over reliance on
+% any individual node(s) makes the predictions brittle, and (3) redistribute
+% weights to earlier layers and avoid vanishing gradients
+@article{srivastava2014dropout,
+  title     = {Dropout: a simple way to prevent neural networks from overfitting},
+  author    = {Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
+  journal   = {The Journal of Machine Learning research},
+  volume    = {15},
+  number    = {1},
+  pages     = {1929--1958},
+  year      = {2014},
+  publisher = {JMLR. org}
+}
+
+% Brandon's original paper on differentiabl optimization layers in neural
+% networks -- i.e., solving an optimization problem within a layer of a neural
+% network and propogating the gradient through that solution so that the
+% network parameters can still be trained
+@inproceedings{amos17optnet,
+  title = 	 {{O}pt{N}et: Differentiable Optimization as a Layer in Neural Networks},
+  author =       {Brandon Amos and J. Zico Kolter},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {136--145},
+  year = 	 {2017},
+  editor = 	 {Precup, Doina and Teh, Yee Whye},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--11 Aug},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/amos17a/amos17a.pdf},
+  url = 	 {https://proceedings.mlr.press/v70/amos17a.html},
+}
+
+% Differentiabl convex optimization layers are introduced pytorch and
+% tensorflow via an update to cvxpy, introducing differentiation through the
+% solution to a convex optimization problem modeled in cvxpy.  The open source
+% numerical optimization software is available at github.com/cvxgrp/cvxpylayers
+% in Python
+@inproceedings{akshay2019differentiable,
+ author = {Agrawal, Akshay and Amos, Brandon and Barratt, Shane and Boyd, Stephen and Diamond, Steven and Kolter, J. Zico},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Differentiable Convex Optimization Layers},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf},
+ volume = {32},
+ year = {2019}
+}
+
+% Brandon introduces using neural networks and other scientific machine
+% learning methods to warm-start optimization and control problems.  An open
+% source numerical software tutorial is available at
+% github.com/facebookresearch/amortized-optimization-tutorial
+@article{amos2023tutorial,
+author = {Amos, Brandon},
+title = {Tutorial on Amortized Optimization},
+year = {2023},
+publisher = {Now Publishers Inc.},
+address = {Hanover, MA, USA},
+volume = {16},
+number = {5},
+issn = {1935-8237},
+url = {https://doi.org/10.1561/2200000102},
+doi = {10.1561/2200000102},
+journal = {Found. Trends Mach. Learn.},
+pages = {592–732},
+numpages = {156}
+}
+
+% LeCun et al. show that convolutional nets can outperform all other methods on
+% handwriting classification for efficient document processing
+@article{lecun1998gradient,
+  author={LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
+  title={Gradient-based learning applied to document recognition},
+  year={1998},
+  journal={Proceedings of the IEEE},
+  volume={86},
+  number={11},
+  pages={2278-2324},
+  doi={10.1109/5.726791}
+}
+
+% LeCun et al. show that convolutional nets can outperform all other methods on
+% handwritten digit classification and other perception problems
+@article{lecun1989backpropagation,
+  author={LeCun, Y. and Boser, B. and Denker, J. S. and Henderson, D. and Howard, R. E. and Hubbard, W. and Jackel, L. D.},
+  journal={Neural Computation},
+  title={Backpropagation Applied to Handwritten Zip Code Recognition},
+  year={1989},
+  volume={1},
+  number={4},
+  pages={541-551},
+  doi={10.1162/neco.1989.1.4.541}
+}
+
+% LeCun's original paper on convolutional neural network architecture -- the
+% first example of a problem where neural networks trained with backpropagation
+% actually outperformed other models, and one of the early examples of the
+% magic of representation learning and how exploiting problem structure is
+% essential to making machine learning work.  This remained the state-of-the
+% art in image classification and image processing for over 20 years until the
+% event of transformers, and whether transformers are better for image problems
+% remains debatable
+@article{lecun1995convolutional,
+  title={Convolutional networks for images, speech, and time series},
+  author={LeCun, Yann and Bengio, Yoshua and others},
+  journal={The handbook of brain theory and neural networks},
+  volume={3361},
+  number={10},
+  pages={1995},
+  year={1995},
+  publisher={Citeseer}
+}
+
+% The MNIST dataset presents the first and most popular benchmark problem for
+% image classification via neural networks and other AI and machine learning
+% methods
+@misc{yann1998mnist,
+  title={The mnist database of handwritten digits},
+  author={Yann, LeCun},
+  year={1998},
+  url = {yann.lecun.com/exdb/mnist},
+}
+
+% The official techreport for the CIFAR-10 dataset -- one of the next most
+% popular neural network and image classification benchmark problems for
+% machine learning and AI research in the 2010s.  Just a little harder than
+% MNIST due to having lower quality images and more (imbalanced) classes
+@techreport{krizhevsky2009learning,
+  title={Learning multiple layers of features from tiny images},
+  author={Krizhevsky, Alex and Hinton, Geoffrey and others},
+  year={2009},
+  publisher={Toronto, ON, Canada}
+}
+
+% The official publication for AlexNet -- one of the first truly massive
+% overparameterized convolutional neural networks, which threw away a lot of
+% the conventional wisdom around overfitting and achieved state-of-the-art
+% performance and fine generalization errors on the ImageNet benchmark problem.
+% This could be considered the beginning of "deep" learning in the sense of
+% adding many many layers
+@inproceedings{krizhevsky2012imagenet,
+ author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {F. Pereira and C.J. Burges and L. Bottou and K.Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {{ImageNet} Classification with Deep Convolutional Neural Networks},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
+ volume = {25},
+ year = {2012}
+}
+
+% One of the largest most difficult image classification benchmark problems
+% from the 2010s, which drove a lot of advancement.  Was a bit too difficult
+% for the average researcher to solve since it required a lot of training
+% resources to get good performance, but drove advancement in developing and
+% training large (deep) neural networks with many layers and millions of
+% parameters
+@inproceedings{deng2009imagenet,
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Kai Li and Li Fei-Fei},
+  booktitle={2009 IEEE Conference on Computer Vision and Pattern Recognition},
+  title={{ImageNet}: A large-scale hierarchical image database},
+  year={2009},
+  volume={},
+  number={},
+  pages={248-255},
+  doi={10.1109/CVPR.2009.5206848}
+}
+
+% BERT was one of the first transformer-based neural network architectures for
+% solving language-related tasks, such as language translations, at Google.
+% This was also by far the largest model of its time.  BERT paved the way for
+% modern large language models, probably moreso than the Attention is all you
+% need paper
+@inproceedings{devlin-etal-2019-bert,
+    title = "{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    author = "Devlin, Jacob  and
+      Chang, Ming-Wei  and
+      Lee, Kenton  and
+      Toutanova, Kristina",
+    editor = "Burstein, Jill  and
+      Doran, Christy  and
+      Solorio, Thamar",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/N19-1423/",
+    doi = "10.18653/v1/N19-1423",
+    pages = "4171--4186",
+}
+
+% The landmark paper showing that transformers alone are capable of capturing
+% all structure needed for language conversion, i.e., recurence relations and
+% the sequential structure of time-series predictions can be encoded into which
+% tokens to "pay attention to" during next word (or any next item) predictions.
+% This paper is often cited as the inspiration for large language models
+% (LLMs), which rely heavily on the transformer architecture, which became a
+% standard after this
+@inproceedings{vaswani2017attention,
+	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+	title = {Attention is all you need},
+	year = {2017},
+	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
+	pages = {1--11},
+	organization = {Curran Associates, Inc.},
+	location = {Long Beach, California, USA},
+	keywords = {},
+}
+
+% The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+@inproceedings{paszke2019pytorch,
+	author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
+	title = {{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	pages = {1--12},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
+}
+
+% Google DeepMind's AlphaGo was the first reinforcement learning agent to beat
+% pro players (exceed the maximum human skill) in Go, which is a much more
+% complex game than chess and required modeling an enumerable amount of game
+% states and move possibilities.  This required combining monte carlo tree
+% search (MCTS) with neural networks to filter down to a reasonable number of
+% potential states
+@article{silver2016mastering,
+  title={Mastering the game of Go with deep neural networks and tree search},
+  author={Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
+  journal={nature},
+  volume={529},
+  number={7587},
+  pages={484--489},
+  year={2016},
+  publisher={Nature Publishing Group}
+}
+
+% Google DeepMind's AlphaStar II was the first reinforcement learning agent
+% that could beat pro players in video games, which is a signficantly more
+% complex environment than a board game environment with a finite state and set
+% of possible actions
+@article{oriol2019gradmaster,
+	author = {Vinyals, Oriol and Babuschkin, Igor and Czarnecki, Wojciech M. and Mathieu, Micha{\"e}l and Dudzik, Andrew and Chung, Junyoung and Choi, David H. and Powell, Richard and Ewalds, Timo and Georgiev, Petko and Oh, Junhyuk and Horgan, Dan and Kroiss, Manuel and Danihelka, Ivo and Huang, Aja and Sifre, Laurent and Cai, Trevor and Agapiou, John P. and Jaderberg, Max and Vezhnevets, Alexander S. and Leblond, R{\'e}mi and Pohlen, Tobias and Dalibard, Valentin and Budden, David and Sulsky, Yury and Molloy, James and Paine, Tom L. and Gulcehre, Caglar and Wang, Ziyu and Pfaff, Tobias and Wu, Yuhuai and Ring, Roman and Yogatama, Dani and W{\"u}nsch, Dario and McKinney, Katrina and Smith, Oliver and Schaul, Tom and Lillicrap, Timothy and Kavukcuoglu, Koray and Hassabis, Demis and Apps, Chris and Silver, David},
+	doi = {10.1038/s41586-019-1724-z},
+	isbn = {1476-4687},
+	journal = {Nature},
+	number = {7782},
+	pages = {350--354},
+	title = {Grandmaster level in {StarCraft II} using multi-agent reinforcement learning},
+	url = {https://doi.org/10.1038/s41586-019-1724-z},
+	volume = {575},
+	year = {2019},
+}
+
+% The culmination of a line of work from Google DeepMind on discovering better
+% matrix factorization algorithms using reinforcement learning.  They defined a
+% tensor game for trying to solve matrix multiplication at a fixed size in
+% fewer moves, then trained a RL agent to play the game using monte carlo tree
+% search and training a neural network to predict a manageable subset of states
+% and expected state outcomes since the number of states was too numerous for
+% true MCTS.  They were able to match the performance of Strassen's algorithm
+% on 5x5 matrices (this is how recursive block-based recursive multiplication
+% is done) and exceed performance on other sizes and rings (such as modular
+% arithmetic rings)
+@article{fawzi2022discovering,
+  title={Discovering faster matrix multiplication algorithms with reinforcement learning},
+  author={Fawzi, Alhussein and Balog, Matej and Huang, Aja and Hubert, Thomas and Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and R. Ruiz, Francisco J and Schrittwieser, Julian and Swirszcz, Grzegorz and others},
+  journal={Nature},
+  volume={610},
+  number={7930},
+  pages={47--53},
+  year={2022},
+  publisher={Nature Publishing Group UK London},
+  doi={10.1038/s41586-022-05172-4},
+}
+
+% The largest repository of open source AI, machine learning, and control
+% benchmark problems, maintained by OpenAI.  This was the primary benchmark
+% problem environment for all reinforcement learning researchers not affiliated
+% with another company with their own private environments (such as Meta and
+% Google).  Still available at github.com/openai/gym
+@techreport{brackmen2016openai,
+  author = {Greg Brockman and Vicki Cheung and Ludwig Pettersson and Jonas Schneider and John Schulman and Jie Tang and Wojciech Zaremba},
+  title = {OpenAI Gym},
+  year = {2016},
+  institution = {arXiv:1606.01540},
+}
+
+% Proximal policy optimization (PPO) is the state-of-the-art policy gradient
+% optimization method for reinforcement learning.  Proximal gradient methods
+% computes the update by directly optimizing the parameters for a given batch
+% of observations in order to maximize the intermediate value function.  PPO
+% limits the step size in each iteration and enforces a penalization to
+% discourage models from drifting too far from the original "base" model.
+@techreport{schulman2017proximalpolicyoptimizationalgorithms,
+      title={Proximal Policy Optimization Algorithms},
+      author={John Schulman and Filip Wolski and Prafulla Dhariwal and Alec Radford and Oleg Klimov},
+      year={2017},
+      institution={arXiv cs.LG},
+      url={https://arxiv.org/abs/1707.06347},
+}
+
+% Simulated annealing and reinforcement learning based FPGA placement.  The RL
+% contributions are tenuous at best, but still an example of potential RL
+% impact in industry
+@inproceedings{tian2022improving,
+  author={Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
+  booktitle={2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
+  title={Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning}, 
+  year={2022},
+  volume={10},
+  number={},
+  pages={1912-1919},
+  keywords={Technological innovation;Runtime;Design automation;Simulated annealing;Reinforcement learning;Logic gates;Space exploration;FPGA;reinforcement learning;simulated annealing;placement},
+  doi={10.1109/ITAIC54216.2022.9836761}
+}
+
+% Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
+@inproceedings{farhan2020reinforcement,
+	author = {Farhan, Mohammed and G{\"o}hre, Brett},
+	title = {Reinforcement Learning in {AnyLogic} Simulation Models: A Guiding Example using {Pathmind}},
+	year = {2020},
+	month = {12},
+	booktitle = {Proc. 2020 Winter Simulation Conference (WSC 2020)},
+	pages = {3212--3223},
+	organization = {IEEE},
+	location = {Orlando, FL, USA},
+	doi = {10.1109/WSC48552.2020.9383916},
+	url = {https://ieeexplore.ieee.org/document/9383916/},
+}
+
+% Original tech report introducing recurrent neural networks (RNNs), which
+% use a recursively defined state variable to track the context of sequential
+% data observations so far, plus the value of the current output to predict the
+% next output.  The authors derive how the gradients can be backpropogated
+% through this entire chain for efficient training.  This idea had been around
+% since the 60s, but this is the first paper explicitly proposing such
+% recurrent layers in a representation learning context.  The authors propose
+% these recurrent layers as a means of representation learning for sequence
+% data (such as next-word prediction in language models).  RNNs would go on to
+% become the state-of-the-art in language models and natural language
+% processing for almost 30 years until they were replaced by transformers with
+% the advent of BERT in 2017.
+@techreport{rumelhart1985learning,
+author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+year = {1985},
+title = {Learning internal representations by error propagation},
+number = {ICS 8504},
+address = {San Diego, CA, USA},
+institution={Institute for Cognitive Science, University of California},
+url={https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
+}
+
+% Original tech report where recurent neural networks were originally applied
+% at scale to a language processing (next word prediction) application
+@techreport{jordan1986serial,
+  author       = {Jordan, Michael I.},
+  title        = {Serial order: a parallel distributed processing approach},
+  year         = {1986},
+  institution  = {Institute for Cognitive Science, University of California},
+  address      = {San Diego, La Jolla, CA, USA},
+  url          = {https://www.osti.gov/biblio/6910294},
+}
+
+% Paper on how the HPC Frontier at ORNL was configured to train
+% trillion-parameter large language models (LLMs).  There is a really nice
+% discussion of the model architectures and sizes, and the memory requirements
+% of each.  There is also a nice discussion of parallel pipelines and model vs
+% data sharding.  Then they discuss their code bases and software stacks.
+% Finally, they perform a hyperparameter optimization with DeepHyper to
+% determine optimal block sizes and pipeline overlapping configurations.
+@inproceedings{dash2024optimizing,
+  author={Dash, Sajal and Lyngaas, Isaac R and Yin, Junqi and Wang, Xiao and Egele, Romain and Ellis, J. Austin and Maiterth, Matthias and Cong, Guojing and Wang, Feiyi and Balaprakash, Prasanna},
+  booktitle={ISC High Performance 2024 Research Paper Proceedings (39th International Conference)},
+  title={Optimizing Distributed Training on Frontier for Large Language Models},
+  year={2024},
+  pages={1-11},
+  doi={10.23919/ISC.2024.10528939}
+}
