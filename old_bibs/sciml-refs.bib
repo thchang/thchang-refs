@@ -396,6 +396,69 @@
 	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
 }
 
+% Our SciML paper analyzing and comparing the usefulness of error bounds of
+% various interpolation methods for scientific machine learning applications.
+% Ultimately, we show that the Delaunay bounds are most useful (I personally
+% suspect it has something to do with less smooth "low order methods" being
+% more robust for noisy data) and we demonstrate how they can be used for
+% interpretability and verification on an aircraft design application
+% (predicting lift/drag ratios for various airfoils)
+@article{chang2025leveraging,
+  author = {Chang, Tyler H. and Gillette, Andrew K. and Maulik, Romit},
+  title = {Leveraging Interpolation Models and Error Bounds for Verifiable Scientific Machine Learning},
+  year = {2025},
+  journal = {Journal of Computational Physics},
+  volume = {524},
+  articleno = {113726},
+  numpages = {23},
+  doi = {10.1016/j.jcp.2025.113726},
+}
+
+% An update to DelaunaySparse where we use BQPD to solve the problem of
+% projection onto the convex hull.  We rigorously show that this is the only
+% method that achieves a 100% success rate among open source quadratic
+% programming / NNLS solvers for this size and shape of problem.  Then we
+% demonstrate robustness on synthetic test problems and real applications from
+% computer security
+@article{chang2024remark,
+  author = {Chang, Tyler H. and Watson, Layne T. and Leyffer, Sven and Lux, Thomas C. H. and Almohri, Hussain M. J.},
+  title = {Remark on {Algorithm} 1012: Computing projections with large data sets},
+  year = {2024},
+  journal = {ACM Transactions on Mathematical Software},
+  volume = {50},
+  number = {2},
+  articleno = {12},
+  numpages = {8},
+  publisher = {Association of Computing Machinery},
+  doi = {10.1145/3656581},
+}
+
+% Manisha's conference paper on SF-SFD -- the theory is far from ready, but the
+% problem of concentration of measure in high-dimensions making robust sampling
+% difficult and the ability to do something better than just random or latin
+% hypercube sampling are clearly demonstrated
+@inproceedings{garg2023sfsfd,
+  author  = {Garg, Manisha and Chang, Tyler H. and Raghavan, Krishnan},
+  title   = {{SF-SFD}: {S}tochastic optimization of {F}ourier coefficients for space-filling designs},
+  year    = {2023},
+  booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023)},
+  location = {Orlando, FL, USA},
+  pages   = {3636--3646},
+  doi     = {10.1109/WSC60868.2023.10408245}
+}
+
+% Joint work with the DeepHyper team to bring multiobjective optimization to
+% DeepHyper.  Focusing on the challenges of keeping the optimizer focused on
+% interesting regions of the Pareto front and how to rescale objectives so that
+% traditional scalarization approaches can work
+@techreport{egele2023parallel,
+  author = {Egele, Romain and Chang, Tyler H. and Sun, Yixuan and Vishwanath, Venkatram and Balaprakash, Prasanna},
+  title = {Parallel multi-objective hyperparameter optimization with uniform normalization and bounded objectives},
+  year = {2023},
+  institution = {arXiv cs.LG},
+  doi = {10.48550/arXiv.2309.14936},
+}
+
 % A great article on the optimality of Delaunay triangulations for
 % interpolation.  The authors show that the Delaunay triangulation can be
 % equivalently defined as the interpolation mesh that minimizes interpolation
@@ -1051,6 +1114,22 @@ numpages = {21},
 	url = {https://github.com/tisimst/pyDOE},
 }
 
+% Applications of low-discrepancy sequences in Monte carlo simulation
+@inproceedings{dalal2008low,
+	author = {Dalal, Ishaan L. and Stefan, Deian and Harwayne-Gidansky, Jared},
+	title = {Low discrepancy sequences for {M}onte {C}arlo simulations on reconfigurable platforms},
+	year = {2008},
+	month = {7},
+	booktitle = {2008 International Conference on Application-Specific Systems, Architectures and Processors},
+	volume = {},
+	number = {},
+	pages = {108--113},
+	organization = {IEEE},
+	location = {Leuven, Belgium},
+	doi = {10.1109/ASAP.2008.4580163},
+	url = {http://ieeexplore.ieee.org/document/4580163/},
+}
+
 % The original TOMS open source numerical software code implementing Sobol sequence (low discrepancy sequence) generation in Fortran 90. Apparently there is a bug or limitation to this code, fixed by Joe et al. 2003 in their TOMS Remark on 659, and subsequent publication of a new generator used in Scipy
 @article{bratley1988algorithm,
 	author = {Bratley, Paul and Fox, Bennett L.},
@@ -1372,6 +1451,38 @@ numpages = {21},
 	url = {https://link.springer.com/10.1007/s11075-020-01040-2},
 	issn = {1017-1398},
 	keywords = {},
+}
+
+% Thomas' open source montone quintic spline interpolation software -- a high
+% order spline interpolant implemented in modern Fortran.  Really nice high
+% performance numerical software.  Available open source on Dr. Watson's
+% GitHub.  His main application was distribution modeling, but I think for
+% noisy data, lower order methods may actually be more robust
+@article{lux2023algorithm,
+  author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Thacker, William I.},
+  title = {Algorithm 1031: {MQSI}---{M}onotone quintic spline interpolation},
+  year = {2023},
+  journal = {ACM Transactions on Mathematical Software},
+  volume = {49},
+  number = {1},
+  articleno = {6},
+  numpages = {17},
+  publisher = {Association of Computing Machinery},
+  doi = {10.1145/3570157}
+}
+
+% Our paper proposing test functions for convex optimization problems with very
+% specific properties, in order to gauge the effectiveness and robustness of
+% various techniques subject to various forms of degeneracy
+@inproceedings{lux2020analytic,
+  author = {Lux, Thomas C. H. and Chang, Tyler H.},
+  title = {Analytic test functions for generalizable evaluation of convex optimization techniques},
+  year = {2020},
+  booktitle = {Proc. IEEE SoutheastCon 2020},
+  numpages = {8},
+  location = {Raleigh, NC, USA},
+  organization = {Institute of Electrical and Electronics Engineers},
+  doi = {10.1109/SoutheastCon44009.2020.9368254}
 }
 
 % A thorough foundation on analysis of RBF interpolant error bounds, through

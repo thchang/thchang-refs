@@ -728,6 +728,20 @@ numpages = {21},
 	keywords = {},
 }
 
+% Thomas' thorough survey paper on useful meshes and their properties for
+% multivariate interpolation
+@inproceedings{lux2018novel,
+  author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Yao, Danfeng and Hong, Yili},
+  title = {Novel meshes for multivariate interpolation and approximation},
+  year = {2018},
+  booktitle = {Proc. 2018 ACM Southeast Conference (ACMSE '18)},
+  articleno = {13},
+  numpages = {7},
+  location = {Richmond, KY, USA},
+  organization = {Association of Computing Machinery},
+  doi = {10.1145/3190645.3190687}
+}
+
 % Algorithms and theorems on the difficulty of finding basic solutions for linear programming problems
 @article{megiddo1991finding,
 	author = {Megiddo, Nimrod},
@@ -1129,4 +1143,41 @@ numpages = {21},
 	url = {https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/24.2.167},
 	issn = {0010-4620},
 	keywords = {},
+}
+
+% Our SciML paper analyzing and comparing the usefulness of error bounds of
+% various interpolation methods for scientific machine learning applications.
+% Ultimately, we show that the Delaunay bounds are most useful (I personally
+% suspect it has something to do with less smooth "low order methods" being
+% more robust for noisy data) and we demonstrate how they can be used for
+% interpretability and verification on an aircraft design application
+% (predicting lift/drag ratios for various airfoils)
+@article{chang2025leveraging,
+  author = {Chang, Tyler H. and Gillette, Andrew K. and Maulik, Romit},
+  title = {Leveraging Interpolation Models and Error Bounds for Verifiable Scientific Machine Learning},
+  year = {2025},
+  journal = {Journal of Computational Physics},
+  volume = {524},
+  articleno = {113726},
+  numpages = {23},
+  doi = {10.1016/j.jcp.2025.113726},
+}
+
+% An update to DelaunaySparse where we use BQPD to solve the problem of
+% projection onto the convex hull.  We rigorously show that this is the only
+% method that achieves a 100% success rate among open source quadratic
+% programming / NNLS solvers for this size and shape of problem.  Then we
+% demonstrate robustness on synthetic test problems and real applications from
+% computer security
+@article{chang2024remark,
+  author = {Chang, Tyler H. and Watson, Layne T. and Leyffer, Sven and Lux, Thomas C. H. and Almohri, Hussain M. J.},
+  title = {Remark on {Algorithm} 1012: Computing projections with large data sets},
+  year = {2024},
+  journal = {ACM Transactions on Mathematical Software},
+  volume = {50},
+  number = {2},
+  articleno = {12},
+  numpages = {8},
+  publisher = {Association of Computing Machinery},
+  doi = {10.1145/3656581},
 }
