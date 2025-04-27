@@ -346,62 +346,6 @@ url={https://openreview.net/forum?id=Sy8gdB9xx}
   publisher = {JMLR. org}
 }
 
-% Brandon's original paper on differentiabl optimization layers in neural
-% networks -- i.e., solving an optimization problem within a layer of a neural
-% network and propogating the gradient through that solution so that the
-% network parameters can still be trained
-@inproceedings{amos17optnet,
-  title = 	 {{O}pt{N}et: Differentiable Optimization as a Layer in Neural Networks},
-  author =       {Brandon Amos and J. Zico Kolter},
-  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
-  pages = 	 {136--145},
-  year = 	 {2017},
-  editor = 	 {Precup, Doina and Teh, Yee Whye},
-  volume = 	 {70},
-  series = 	 {Proceedings of Machine Learning Research},
-  month = 	 {06--11 Aug},
-  publisher =    {PMLR},
-  pdf = 	 {http://proceedings.mlr.press/v70/amos17a/amos17a.pdf},
-  url = 	 {https://proceedings.mlr.press/v70/amos17a.html},
-}
-
-% Differentiabl convex optimization layers are introduced pytorch and
-% tensorflow via an update to cvxpy, introducing differentiation through the
-% solution to a convex optimization problem modeled in cvxpy.  The open source
-% numerical optimization software is available at github.com/cvxgrp/cvxpylayers
-% in Python
-@inproceedings{akshay2019differentiable,
- author = {Agrawal, Akshay and Amos, Brandon and Barratt, Shane and Boyd, Stephen and Diamond, Steven and Kolter, J. Zico},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
- pages = {},
- publisher = {Curran Associates, Inc.},
- title = {Differentiable Convex Optimization Layers},
- url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf},
- volume = {32},
- year = {2019}
-}
-
-% Brandon introduces using neural networks and other scientific machine
-% learning methods to warm-start optimization and control problems.  An open
-% source numerical software tutorial is available at
-% github.com/facebookresearch/amortized-optimization-tutorial
-@article{amos2023tutorial,
-author = {Amos, Brandon},
-title = {Tutorial on Amortized Optimization},
-year = {2023},
-publisher = {Now Publishers Inc.},
-address = {Hanover, MA, USA},
-volume = {16},
-number = {5},
-issn = {1935-8237},
-url = {https://doi.org/10.1561/2200000102},
-doi = {10.1561/2200000102},
-journal = {Found. Trends Mach. Learn.},
-pages = {592–732},
-numpages = {156}
-}
-
 % LeCun et al. show that convolutional nets can outperform all other methods on
 % handwriting classification for efficient document processing
 @article{lecun1998gradient,
@@ -639,35 +583,6 @@ numpages = {156}
       url={https://arxiv.org/abs/1707.06347},
 }
 
-% Simulated annealing and reinforcement learning based FPGA placement.  The RL
-% contributions are tenuous at best, but still an example of potential RL
-% impact in industry
-@inproceedings{tian2022improving,
-  author={Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
-  booktitle={2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
-  title={Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning}, 
-  year={2022},
-  volume={10},
-  number={},
-  pages={1912-1919},
-  keywords={Technological innovation;Runtime;Design automation;Simulated annealing;Reinforcement learning;Logic gates;Space exploration;FPGA;reinforcement learning;simulated annealing;placement},
-  doi={10.1109/ITAIC54216.2022.9836761}
-}
-
-% Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
-@inproceedings{farhan2020reinforcement,
-	author = {Farhan, Mohammed and G{\"o}hre, Brett},
-	title = {Reinforcement Learning in {AnyLogic} Simulation Models: A Guiding Example using {Pathmind}},
-	year = {2020},
-	month = {12},
-	booktitle = {Proc. 2020 Winter Simulation Conference (WSC 2020)},
-	pages = {3212--3223},
-	organization = {IEEE},
-	location = {Orlando, FL, USA},
-	doi = {10.1109/WSC48552.2020.9383916},
-	url = {https://ieeexplore.ieee.org/document/9383916/},
-}
-
 % Original tech report introducing recurrent neural networks (RNNs), which
 % use a recursively defined state variable to track the context of sequential
 % data observations so far, plus the value of the current output to predict the
@@ -679,7 +594,13 @@ numpages = {156}
 % data (such as next-word prediction in language models).  RNNs would go on to
 % become the state-of-the-art in language models and natural language
 % processing for almost 30 years until they were replaced by transformers with
-% the advent of BERT in 2017.
+% the advent of BERT in 2017.  Although the idea of encoding state information
+% is a valid solution, RNNs notoriously suffered from a vanishing gradient
+% issue where tokens further back in the sequence had little effect on the
+% current prediction.  Although the idea of encoding state information
+% is a valid solution, RNNs notoriously suffered from a vanishing gradient
+% issue where tokens further back in the sequence had little effect on the
+% current prediction.
 @techreport{rumelhart1985learning,
 author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
 year = {1985},
@@ -715,4 +636,153 @@ url={https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
   year={2024},
   pages={1-11},
   doi={10.23919/ISC.2024.10528939}
+}
+
+% Original definition of RBF networks, an early form of neural networks that
+% focused on the usage of combining RBF basis functions.  These networks are
+% not used much anymore, although occasionally still come up in the context of
+% scientific machine learning theory and proofs
+@article{park1991universal,
+	author = {Park, Jooyoung and Sandberg, Irwin W},
+	title = {Universal approximation using radial-basis-function networks},
+	year = {1991},
+	month = {6},
+	journal = {Neural computation},
+	volume = {3},
+	number = {2},
+	pages = {246--257},
+	publisher = {MIT Press},
+	doi = {10.1162/neco.1991.3.2.246},
+	url = {https://direct.mit.edu/neco/article/3/2/246-257/5580},
+	issn = {0899-7667},
+	keywords = {},
+}
+
+% Original paper on back-propagation for training neural networks.  Equivalent
+% to reverse-mode algorithmic differentiation or more simply applying the chain
+% rule recursively.  
+@article{rumelhart1986,
+    author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+    title = {Learning representations by back-propagating errors},
+    year = {1986},
+    journal = {Nature},
+    volume = {323},
+    number = {6088},
+    pages = {533--536},
+    doi = {10.1038/323533a0},
+}
+
+% Rosenblatt's original paper proposing the multi-layer perceptron with an
+% input layer, output layer, and a single hidden layer: this is the foundation
+% for all AI and neural network research.  It is proposed as a simulation model
+% for biologists and psychologists to study brain function.  It would not be
+% useful as a tool for regression, classification, or prediction for many years
+% until the advent of representation learning.
+@article{rosenblatt1958perceptron,
+  author={Rosenblatt, Frank},
+  title={The perceptron: a probabilistic model for information storage and organization in the brain.},
+  year={1958},
+  journal={Psychological review},
+  volume={65},
+  number={6},
+  pages={386},
+  publisher={American Psychological Association},
+  doi={10.1037/h0042519},
+}
+
+% Not an original paper, as L1 and L2 regularization have been around since the
+% beginning of machine learning and applied math, and are generally not
+% attributed to anyone in particular, but a nice review paper on the usage and
+% effects of L1 and L2 regularization in machine learning and neural network
+% training with back propagation.  Regularization was considered an essential
+% part of neural network training (and still is in scientific machine learning)
+% for many many years.
+@inproceedings{10.1145/1015330.1015435,
+author = {Ng, Andrew Y.},
+title = {Feature selection, L1 vs. L2 regularization, and rotational invariance},
+year = {2004},
+isbn = {1581138385},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1015330.1015435},
+doi = {10.1145/1015330.1015435},
+booktitle = {Proceedings of the Twenty-First International Conference on Machine Learning},
+pages = {78},
+location = {Banff, Alberta, Canada},
+series = {ICML '04}
+}
+
+% Original publication on using long-short term memory within a recurrent
+% neural network framework to address the issue of vanishing gradients during
+% training.  The idea is to truncate gradients for certain blocks (short-term
+% memory units) and chain these blocks to generate skip connections for long
+% term memory.  These would be the state-of-the-art in natural language
+% processing and other sequential prediction tasks until BERT replaces them
+% with transformer models.
+@article{10.1162/neco.1997.9.8.1735,
+    author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+    title = {Long Short-Term Memory},
+    journal = {Neural Computation},
+    volume = {9},
+    number = {8},
+    pages = {1735-1780},
+    year = {1997},
+    month = {11},
+    issn = {0899-7667},
+    doi = {10.1162/neco.1997.9.8.1735},
+}
+
+% First published work using Geoff Hinton's unpublished optimization algorithm
+% RMSProp (root mean squared propogation, an adjustment to AdaGrad using an
+% adaptive learning rate in each dimension).  The author uses RMSProp to train
+% a recurrent neural network (RNN) with long short-term memory (LSTM) in order
+% to generate handwritten digits
+@misc{graves2014generatingsequencesrecurrentneural,
+      title={Generating Sequences With Recurrent Neural Networks},
+      author={Alex Graves},
+      year={2014},
+      eprint={1308.0850},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/1308.0850},
+}
+
+% A review article on representation learning and unifying the ideas of
+% representation learning, density estimation, and manifold learning under a
+% single geometric umbrella.  The authors show broadly how representation
+% learning has been the key to the performance of neural networks across many
+% fields, often allowing us to break the curse of dimensionality.
+% Additionally, they discuss the general requirements (priors) about a problem
+% / function for representation learning to be an effective approach.
+@article{6472238,
+  author={Bengio, Yoshua and Courville, Aaron and Vincent, Pascal},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title={Representation Learning: A Review and New Perspectives},
+  year={2013},
+  volume={35},
+  number={8},
+  pages={1798-1828},
+  doi={10.1109/TPAMI.2013.50}
+}
+
+% Original publication of the Boltzman machine, an early type of AI model that
+% made predictions by modeling the Ising spin-glass model with public input
+% units (set by the user with the independent variables during inference) and
+% hidden internal units that are correlated to eachother and the public units
+% through learned Ising model weights and biases.  Each unit has a binary {0,
+% 1} state.  The energy of the system is the output (prediction).  The weights
+% and biases are learned through simulated annealing, and in this way, the
+% model is not unlike quantum annealing.  The model learns a distribution of
+% potential inference values for each input combination.  Thus, it is a form of
+% distribution learning.  These were a commonly used alternative to neural
+% networks for a time, and often cited as explainable alternatives
+@inproceedings{hinton1983optimal,
+  title={Optimal perceptual inference},
+  author={Hinton, Geoffrey E and Sejnowski, Terrence J},
+  booktitle={Proceedings of the IEEE conference on Computer Vision and Pattern Recognition},
+  volume={448},
+  pages={448--453},
+  year={1983},
+  organization={Citeseer},
+  url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b89e9f0cef5ace08946a7c07bf7284854c418445},
 }

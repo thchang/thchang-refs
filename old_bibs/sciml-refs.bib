@@ -1661,3 +1661,164 @@ url={https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
   address      = {San Diego, La Jolla, CA, USA},
   url          = {https://www.osti.gov/biblio/6910294},
 }
+
+% AutoDEUQ paper proposing that an ensemble of neural networks can be a more
+% powerful and scalable tool for uncertainty quantification than a Bayesian
+% neural network.  They trained AutoDEUQ using DeepHyper in multiobjective
+% mode.  I don't think the code is available, but an example can be found on
+% the DeepHyper GitHub
+@inproceedings{egele2022autodeuq,
+  title={{AutoDEUQ}: Automated deep ensemble with uncertainty quantification},
+  author={Egele, Romain and Maulik, Romit and Raghavan, Krishnan and Lusch, Bethany and Guyon, Isabelle and Balaprakash, Prasanna},
+  booktitle={2022 26th International Conference on Pattern Recognition (ICPR)},
+  pages={1908--1914},
+  year={2022},
+  organization={IEEE}
+}
+
+% Original paper on back-propagation for training neural networks.  Equivalent
+% to reverse-mode algorithmic differentiation or more simply applying the chain
+% rule recursively.  
+@article{rumelhart1986,
+    author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+    title = {Learning representations by back-propagating errors},
+    year = {1986},
+    journal = {Nature},
+    volume = {323},
+    number = {6088},
+    pages = {533--536},
+    doi = {10.1038/323533a0},
+}
+
+% Rosenblatt's original paper proposing the multi-layer perceptron with an
+% input layer, output layer, and a single hidden layer: this is the foundation
+% for all AI and neural network research.  It is proposed as a simulation model
+% for biologists and psychologists to study brain function.  It would not be
+% useful as a tool for regression, classification, or prediction for many years
+% until the advent of representation learning.
+@article{rosenblatt1958perceptron,
+  author={Rosenblatt, Frank},
+  title={The perceptron: a probabilistic model for information storage and organization in the brain.},
+  year={1958},
+  journal={Psychological review},
+  volume={65},
+  number={6},
+  pages={386},
+  publisher={American Psychological Association},
+  doi={10.1037/h0042519},
+}
+
+% Original paper on Bayesian neural networks (or just Bayesian networks), which
+% learn joint-probability distributions of neural network weights and biases
+% instead of just single sets.  The original proposal was as a means of
+% regularization, to avoid overfitting.  However, sampling networks from this
+% distribution can also be used as a means of uncertainty quantification.
+@article{mackay1992practical,
+  title={A practical Bayesian framework for backpropagation networks},
+  author={MacKay, David JC},
+  journal={Neural computation},
+  volume={4},
+  number={3},
+  pages={448--472},
+  year={1992},
+  publisher={MIT Press},
+  address = {Cambridge, MA, USA},
+  doi = {10.1162/neco.1992.4.3.448},
+}
+
+% Not an original paper, as L1 and L2 regularization have been around since the
+% beginning of machine learning and applied math, and are generally not
+% attributed to anyone in particular, but a nice review paper on the usage and
+% effects of L1 and L2 regularization in machine learning and neural network
+% training with back propagation.  Regularization was considered an essential
+% part of neural network training (and still is in scientific machine learning)
+% for many many years.
+@inproceedings{10.1145/1015330.1015435,
+author = {Ng, Andrew Y.},
+title = {Feature selection, L1 vs. L2 regularization, and rotational invariance},
+year = {2004},
+isbn = {1581138385},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1015330.1015435},
+doi = {10.1145/1015330.1015435},
+booktitle = {Proceedings of the Twenty-First International Conference on Machine Learning},
+pages = {78},
+location = {Banff, Alberta, Canada},
+series = {ICML '04}
+}
+
+% Original publication on using long-short term memory within a recurrent
+% neural network framework to address the issue of vanishing gradients during
+% training.  The idea is to truncate gradients for certain blocks (short-term
+% memory units) and chain these blocks to generate skip connections for long
+% term memory.  These would be the state-of-the-art in natural language
+% processing and other sequential prediction tasks until BERT replaces them
+% with transformer models.
+@article{10.1162/neco.1997.9.8.1735,
+    author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+    title = {Long Short-Term Memory},
+    journal = {Neural Computation},
+    volume = {9},
+    number = {8},
+    pages = {1735-1780},
+    year = {1997},
+    month = {11},
+    issn = {0899-7667},
+    doi = {10.1162/neco.1997.9.8.1735},
+}
+
+% First published work using Geoff Hinton's unpublished optimization algorithm
+% RMSProp (root mean squared propogation, an adjustment to AdaGrad using an
+% adaptive learning rate in each dimension).  The author uses RMSProp to train
+% a recurrent neural network (RNN) with long short-term memory (LSTM) in order
+% to generate handwritten digits
+@misc{graves2014generatingsequencesrecurrentneural,
+      title={Generating Sequences With Recurrent Neural Networks},
+      author={Alex Graves},
+      year={2014},
+      eprint={1308.0850},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/1308.0850},
+}
+
+% A review article on representation learning and unifying the ideas of
+% representation learning, density estimation, and manifold learning under a
+% single geometric umbrella.  The authors show broadly how representation
+% learning has been the key to the performance of neural networks across many
+% fields, often allowing us to break the curse of dimensionality.
+% Additionally, they discuss the general requirements (priors) about a problem
+% / function for representation learning to be an effective approach.
+@article{6472238,
+  author={Bengio, Yoshua and Courville, Aaron and Vincent, Pascal},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title={Representation Learning: A Review and New Perspectives},
+  year={2013},
+  volume={35},
+  number={8},
+  pages={1798-1828},
+  doi={10.1109/TPAMI.2013.50}
+}
+
+% Original publication of the Boltzman machine, an early type of AI model that
+% made predictions by modeling the Ising spin-glass model with public input
+% units (set by the user with the independent variables during inference) and
+% hidden internal units that are correlated to eachother and the public units
+% through learned Ising model weights and biases.  Each unit has a binary {0,
+% 1} state.  The energy of the system is the output (prediction).  The weights
+% and biases are learned through simulated annealing, and in this way, the
+% model is not unlike quantum annealing.  The model learns a distribution of
+% potential inference values for each input combination.  Thus, it is a form of
+% distribution learning.  These were a commonly used alternative to neural
+% networks for a time, and often cited as explainable alternatives
+@inproceedings{hinton1983optimal,
+  title={Optimal perceptual inference},
+  author={Hinton, Geoffrey E and Sejnowski, Terrence J},
+  booktitle={Proceedings of the IEEE conference on Computer Vision and Pattern Recognition},
+  volume={448},
+  pages={448--453},
+  year={1983},
+  organization={Citeseer},
+  url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b89e9f0cef5ace08946a7c07bf7284854c418445},
+}

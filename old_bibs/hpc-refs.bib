@@ -1836,3 +1836,29 @@ url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.8322},
   pages={1-11},
   doi={10.23919/ISC.2024.10528939}
 }
+
+% Original publication of MapReduce from Google research, the distributed
+% computing paradigm that drives all Hadoop clusters.  This was the most common
+% distributed computing programming and filesystem in the 2010s, and still
+% persist today.  The idea is that each computation over massive datasets is
+% posed as a sequence of map and reduce operations, where the map performs some
+% simple operation on the data (which can be massively parallelized) and the
+% reduce provides a way for two data items to be reduced into a single item.
+% By applying map and reduce over and over on all the data, a computation on a
+% massive fully distributed dataset can be performed in parallel with a
+% logarithmic number of sequential steps and without ever holding all the data
+% on one machine
+@article{10.1145/1327452.1327492,
+author = {Dean, Jeffrey and Ghemawat, Sanjay},
+title = {MapReduce: simplified data processing on large clusters},
+year = {2008},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {1},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/1327452.1327492},
+doi = {10.1145/1327452.1327492},
+journal = {Communications of the ACM},
+pages = {107–113},
+}
