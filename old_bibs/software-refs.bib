@@ -2007,3 +2007,65 @@ pages = {495–508},
   publisher = {Association of Computing Machinery},
   doi = {10.1145/3570157}
 }
+
+% YAHPO gym is yet another hyperparameter optimization gym consisting of
+% benchmark and test problems for testing neural architecture search and
+% hyperparameter optimization algorithms.  Most of the test problems are based
+% on xgboost, knn, or svm models of real data.  As of 2022, this one was not as
+% mature as HPOBench and JAHS-Bench, so we didn't use it.  They claim to now
+% offer multiobjective optimization test problems as well.  Open source Python
+% software implementation available at:  github.com/slds-lmu/yahpo_gym
+@inproceedings{pfisterer2022yahpo,
+  title = 	 {{YAHPO} Gym - An Efficient Multi-Objective Multi-Fidelity Benchmark for Hyperparameter Optimization},
+  author =       {Pfisterer, Florian and Schneider, Lennart and Moosbauer, Julia and Binder, Martin and Bischl, Bernd},
+  booktitle = 	 {Proceedings of the First International Conference on Automated Machine Learning},
+  pages = 	 {3/1--39},
+  year = 	 {2022},
+  editor = 	 {Guyon, Isabelle and Lindauer, Marius and van der Schaar, Mihaela and Hutter, Frank and Garnett, Roman},
+  volume = 	 {188},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  url = 	 {https://proceedings.mlr.press/v188/pfisterer22a.html},
+}
+
+% HPOBench is another suite of automl (hyperparameter tuning) benchmark
+% problems from the automl research group.  The problems can be configured to
+% be either single or multi-fidelity.  They can either be run tabular (meaning
+% the raw data is accessed in a table and only configurations in the dataset
+% can be evaluated) or with a regression model (XGBoost).  The open source
+% software is available for download in Python at: github.com/automl/HPOBench
+@inproceedings{eggensperger2021hpobench,
+  title     = {{HPOB}ench: A Collection of Reproducible Multi-Fidelity Benchmark Problems for {HPO}},
+  author    = {Katharina Eggensperger and Philipp M{\"u}ller and Neeratyoy Mallik and Matthias Feurer and Rene Sass and Aaron Klein and Noor Awad and Marius Lindauer and Frank Hutter},
+  booktitle = {Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year      = {2021},
+  url       = {https://openreview.net/forum?id=1k4rJYEwda-}
+}
+
+% NSGA-Net is the NSGA-II/pymoo team's multiobjective genetic algorithm based
+% NAS solver.  The open source python software is available from:
+% github.com/ianwhale/nsga-net
+@article{lu2018nsga,
+  title     = {NSGA-NET: a multi-objective genetic algorithm for neural architecture search},
+  author    = {Lu, Zhichao and Whalen, Ian and Boddeti, Vishnu and Dhebar, Yashesh and Deb, Kalyanmoy and Goodman, Erik and  Banzhaf, Wolfgang},
+  booktitle = {GECCO-2019},
+  year      = {2018}
+}
+
+% The official publication of SMAC3 -- the latest version of SMAC from the
+% automl group.  SMAC was the first hyperparameter optimization and neural
+% architecture search software to use random forest surrogates for modeling the
+% hyperparameter configuration space.  They also use a hierarchy of
+% hyperparameters to handle "hidden parameters".  They support multi and
+% single-fidelity NAS applications.  The open source software is written in
+% Python and available from:  github.com/automl/SMAC3
+@article{smac3_2022,
+  author  = {Marius Lindauer and Katharina Eggensperger and Matthias Feurer and André Biedenkapp and Difan Deng and Carolin Benjamins and Tim Ruhkopf and René Sass and Frank Hutter},
+  title   = {{SMAC3}: A Versatile Bayesian Optimization Package for Hyperparameter Optimization},
+  journal = {Journal of Machine Learning Research},
+  year    = {2022},
+  volume  = {23},
+  number  = {54},
+  pages   = {1--9},
+  url     = {http://jmlr.org/papers/v23/21-0888.html}
+}
