@@ -506,7 +506,8 @@ url={https://openreview.net/forum?id=Sy8gdB9xx}
 % complex game than chess and required modeling an enumerable amount of game
 % states and move possibilities.  This required combining monte carlo tree
 % search (MCTS) with neural networks to filter down to a reasonable number of
-% potential states
+% potential states.  This is credited as the first RL model to use MCTS, which
+% is now a standard in RL
 @article{silver2016mastering,
   title={Mastering the game of Go with deep neural networks and tree search},
   author={Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
@@ -555,6 +556,19 @@ url={https://openreview.net/forum?id=Sy8gdB9xx}
   year={2022},
   publisher={Nature Publishing Group UK London},
   doi={10.1038/s41586-022-05172-4},
+}
+
+% A repository of baseline models for reinforcement learning algorithms.
+% OpenAI encourages researchers to compare their models against these
+% baselines.  All of the provided RL models are open source and available for
+% download in Python from:  github.com/openai/baselines
+@misc{dhariwal2017openai,
+  author = {Dhariwal, Prafulla and Hesse, Christopher and Klimov, Oleg and Nichol, Alex and Plappert, Matthias and Radford, Alec and Schulman, John and Sidor, Szymon and Wu, Yuhuai and Zhokhov, Peter},
+  title = {{OpenAI} Baselines},
+  year = {2017},
+  publisher = {GitHub},
+  howpublished = {GitHub repository},
+  url = {https://github.com/openai/baselines},
 }
 
 % The largest repository of open source AI, machine learning, and control
@@ -852,6 +866,43 @@ series = {ICML '04}
   location={Scottsdale, AZ, USA},
 }
 
+% The original publication from OpenAI for reinforcement learning with human
+% feedback (RLHF), a method for fine-tuning large language models (LLMs) and
+% other neural network type models using human provided labels (i.e., "cold
+% data") to better align model outputs with desired behavior.  This is now one
+% of the standard approaches to fine-tuning foundational models.  The authors
+% propose collecting cold start data encompassing human preferences, taking a
+% pre-trained model, and further training the weights on the cold start data
+% using proximal policy optimization (PPO).  Since this predates large language
+% models, this examples are with convolutional neural networks (CNNs).  There
+% is publicly available code for reproducing their results here:
+% github.com/openai/lm-human-preferences
+@techreport{ziegler2019finetuning,
+  title={Fine-Tuning Language Models from Human Preferences},
+  author={Ziegler, Daniel M. and Stiennon, Nisan and Wu, Jeffrey and Brown, Tom B. and Radford, Alec and Amodei, Dario and Christiano, Paul and Irving, Geoffrey},
+  institution={arXiv preprint arXiv:1909.08593},
+  url={https://arxiv.org/abs/1909.08593},
+  year={2019},
+}
+
+% Paper showing that using the process reward model (PRM) during fine-tuning
+% can easily lead models to over-optimize for quick rewards, leading to worse
+% overall ability to reach the correct solution.  This doesn't mean that
+% process can't work, we just need a mechanism to encourage better long-term
+% planning
+@inproceedings{gao2023scaling,
+  title = 	 {Scaling Laws for Reward Model Overoptimization},
+  author =       {Gao, Leo and Schulman, John and Hilton, Jacob},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {10835--10866},
+  year = 	 {2023},
+  editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+  volume = 	 {202},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  url = 	 {https://proceedings.mlr.press/v202/gao23h.html},
+}
+
 % DeepSeek-V3 technical report:  DeepSeek-V3 is the first open source model to
 % obtain performance on par with closed source models.  The architecture is
 % transformer based with multi-headed latent attention applied to a mixture of
@@ -880,6 +931,16 @@ series = {ICML '04}
   doi={https://doi.org/10.48550/arXiv.2412.19437},
 }
 
+% DeepSeekMath: TODO -- Haven't read yet, but describes how DeepSeek's
+% mathematical specialist model was trained
+@techreport{shao2024deepseekmath,
+  title={{DeepSeekMath}: Pushing the limits of mathematical reasoning in open language models},
+  author={Shao, Zhihong and Wang, Peiyi and Zhu, Qihao and Xu, Runxin and Song, Junxiao and Bi, Xiao and Zhang, Haowei and Zhang, Mingchuan and Li, YK and Wu, Y and others},
+  institution={arXiv preprint arXiv:2402.03300},
+  year={2024},
+  doi={doi.org/10.48550/arXiv.2402.03300},
+}
+
 % DeepSeek-R1 tech report:  DeepSeek-R1 is DeepSeek's first state-of-the-art
 % reasoning model.  DeepSeek-R1-Zero was fine-tuned from DeepSeek-V3, by
 % allowing chain-of-thought reasoning and using training objectives without
@@ -906,4 +967,110 @@ series = {ICML '04}
   year={2025},
   institution={arXiv preprint arXiv:2501.12948},
   doi={10.48550/arXiv.2501.12948},
+}
+
+% HumanEval: OpenAI's publicly available test set of function headers and
+% docstrings + unit tests for evaluating the performance of generative AI
+% models and LLMs that generate Python code from function docstings.  They also
+% train a code generation model from GitHub data and evaluate its performance
+% on their test set with mixed results.  The challenge appears to be having the
+% LLM understand long multi-step docstrings and binding the results of
+% operations to variables (and remembering those variables in the future!).
+% Other popular benchmarks for code generation involve mostly just having the
+% AI answer questions on Codebench and Codefore.  The HumanEval benchmark is
+% available with a Python interface at: github.com/openai/human-eval
+@techreport{chen2021evaluating,
+  title={Evaluating large language models trained on code},
+  author={Chen, Mark and Tworek, Jerry and Jun, Heewoo and Yuan, Qiming and Pinto, Henrique Ponde De Oliveira and Kaplan, Jared and Edwards, Harri and Burda, Yuri and Joseph, Nicholas and Brockman, Greg and others},
+  institution={arXiv preprint arXiv:2107.03374},
+  year={2021},
+  doi={10.48550/arXiv.2107.03374},
+}
+
+% LiveCodeBench is a LLM code generation evaluation benchmark.  It continuously
+% collects new problems from CodeBench and annotates them with their release
+% dates, so that LLMs can be evaluated on just problems from specific
+% timeframes.  This allows researchers to prevent contamination of the test set
+% with data from the training set.  An open source Python interface is
+% available at:  github.com/LiveCodeBench/LiveCodeBench  Submissions to the
+% leaderboard are made via pull request to github.com/LiveCodeBench/submissions
+@article{jain2024livecodebench,
+    title={{LiveCodeBench}: Holistic and Contamination Free Evaluation of Large Language Models for Code},
+    author={Jain, Naman and Han, King and Gu, Alex and Li, Wen-Ding and Yan, Fanjia and Zhang, Tianjun and Wang, Sida and Solar-Lezama, Armando and Sen, Koushik and Stoica, Ion},
+    journal={arXiv preprint arXiv:2403.07974},
+    year={2024},
+    doi = {10.48550/arXiv.2403.07974},
+}
+
+% Latest AlpacaEval paper introducing length control to the evaluation
+% pipeline, which prevents models from being able to game the evaluation system
+% by producing longer outputs.  AlpacaEval is a standard English-language LLM
+% evaluation benchmark, which ranks and evaluates how well a LLM is capable of
+% following instructions and completing basic tasks using the Alpaca model
+% (another LLM) to judge performance instead of a human judge.  This particular
+% benchmark has a 98% correlation with the LLM Chatbot Arena without requiring
+% human participants and using minimal OpenAI credits to run.  Open source
+% Python interface at:  github.com/tatsu-lab/alpaca_eval
+@techreport{dubois2024length,
+  title={Length-Controlled {AlpacaEval}: A Simple Way to Debias Automatic Evaluators},
+  author={Dubois, Yann and Galambosi, Bal{\'a}zs and Liang, Percy and Hashimoto, Tatsunori B},
+  institution={arXiv preprint arXiv:2404.04475},
+  year={2024},
+  doi={10.48550/arXiv.2404.04475},
+}
+
+% Official reference for the LLM Chatbot Arena website where humans go to ask
+% questions and rank their preference for various chatbots, generating a
+% leaderboard for the "best" current chatbot.  This is still considered the
+% most reliable way to rank LLM performance on real problems.  The website is
+% https://chat.lmsys.org/
+@inproceedings{chiang2024chatbot,
+title={{Chatbot Arena}: An Open Platform for Evaluating {LLM}s by Human Preference},
+author={Wei-Lin Chiang and Lianmin Zheng and Ying Sheng and Anastasios Nikolas Angelopoulos and Tianle Li and Dacheng Li and Banghua Zhu and Hao Zhang and Michael Jordan and Joseph E. Gonzalez and Ion Stoica},
+booktitle={Forty-first International Conference on Machine Learning (ICML)},
+year={2024},
+url={https://openreview.net/forum?id=3MW8GKNyzI},
+}
+
+% Publication of Google Research IF-Eval benchmark, testing whether a LLM is
+% capable of following very particular instructions (including formatting
+% instructions) such as "answer in at least 400 words" or "mention AI at least
+% 3 times".  The open source Python benchmark code is available at:
+% github.com/google-research/google-research/tree/master/instruction_following_eval
+@techreport{zhou2023instruction,
+      title={Instruction-Following Evaluation for Large Language Models},
+      author={Jeffrey Zhou and Tianjian Lu and Swaroop Mishra and Siddhartha Brahma and Sujoy Basu and Yi Luan and Denny Zhou and Le Hou},
+      year={2023},
+      institution={arXiv cs.CL preprint arxXiv:2211.07911},
+      url={https://arxiv.org/abs/2311.07911},
+}
+
+% Math-Shepherd paper describing how the Math-Shepherd model was trained via
+% RLHF to evaluate each step in a LLM's logical process.  The resulting model
+% can be used to validate other LLM's mathematical and reasoning skills.
+@inproceedings{wangLSXDLCWS24,
+  author={Peiyi Wang and Lei Li and Zhihong Shao and Runxin Xu and Damai Dai and Yifei Li and Deli Chen and Yu Wu and Zhifang Sui},
+  title={Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations},
+  year={2024},
+  pages={9426-9439},
+  doi={10.18653/v1/2024.acl-long.510},
+  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  volume = {1},
+  publisher = {Association for Computational Linguistics},
+}
+
+% The MMLU-Pro benchmark.  The current go to benchmark for multitask
+% understanding and reasoning in large language models (LLMs).  Focuses on
+% logical reasoning capabilities.  The benchmark interface is available in
+% Python from  github.com/TIGER-AI-Lab/MMLU-Pro
+@inproceedings{NEURIPS2024_ad236edc,
+ author = {Wang, Yubo and Ma, Xueguang and Zhang, Ge and Ni, Yuansheng and Chandra, Abhranil and Guo, Shiguang and Ren, Weiming and Arulraj, Aaran and He, Xuan and Jiang, Ziyan and Li, Tianle and Ku, Max and Wang, Kai and Zhuang, Alex and Fan, Rongqi and Yue, Xiang and Chen, Wenhu},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+ pages = {95266--95290},
+ publisher = {Curran Associates, Inc.},
+ title = {{MMLU-Pro}: A More Robust and Challenging Multi-Task Language Understanding Benchmark},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/ad236edc564f3e3156e1b2feafb99a24-Paper-Datasets_and_Benchmarks_Track.pdf},
+ volume = {37},
+ year = {2024},
 }
