@@ -1845,3 +1845,45 @@ series = {ICML '04}
   publisher =    {PMLR},
   url = 	 {https://proceedings.mlr.press/v37/sohl-dickstein15.html},
 }
+
+% Introduces the idea of semantic regularization for generating word
+% embeddings.  This is a massive improvement over bag of word embeddings, where
+% each word gets a dimension and sentences / documents are embedded as vectors
+% listing the number of occurrences for each word.  Instead, for this work,
+% words are compressed into a continuous latent space using a RNN-based
+% compression model.  In the compression, the embedding is regularized by
+% relationships between words.  For example, 
+% embedding(king):embedding(queen) ~ embedding(man):embedding(woman) and
+% embedding(clothes):embedding(shirt) ~ embedding(dishes):embedding(bowl).
+% These relationships are enforced using the cosin similarity score of their
+% embeddings.  The authors also collected a massive dataset of english words
+% and the corresponding relationships, and successfully trained the first word
+% to vector embedding that (mostly) preserves these relationships, meaning that
+% all vector operations remain meaningful
+@inproceedings{mikolov2013linguistic,
+  title={Linguistic regularities in continuous space word representations},
+  author={Mikolov, Tom{\'a}{\v{s}} and Yih, Wen-tau and Zweig, Geoffrey},
+  booktitle={Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
+  pages={746--751},
+  year={2013}
+}
+
+% Original word2vec publication: embedding words into a continuous vector space
+% in a "dense" way, meaning that the embedding is somewhat minimal and no
+% extra dimensions are added and word relationships are preserved (as in
+% semantic regularization).  The authors show that a relatively small and
+% simple model with semantic regularization is sufficient to train such an
+% embedding in less than a day, and the resulting word2vec embedding layer is
+% fast and cheap to evaluate.  The word2vec embedding would go on to be the
+% basis for most early transformer models.  Modern LLMs train their own
+% embedding as the embedding layers of the network, but use the same techniques
+% as word2vec.  The open source software is available for download from Google:
+% https://code.google.com/archive/p/word2vec
+@inproceedings{mikolov2013efficient,
+  title={Efficient estimation of word representations in vector space},
+  author={Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
+  year={2013},
+  booktitle = {1st International Conference on Learning Representations (ICLR 2013)},
+  url={https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq},
+  location={Scottsdale, AZ, USA},
+}
