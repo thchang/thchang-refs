@@ -1,0 +1,562 @@
+% The Dakota blackbox and derivative-free simulation optimization framework, a numerical software package (in C++) maintained by Sandia that offers support for AI/ML surrogate modeling, multifidelity modeling, uncertainty quantification (UQ), and distributed and parallel computing
+@techreport{adams2022dakota,,
+	author = {Adams, Brian M. and Bohnhoff, William J. and Dalbey, Keith R. and Ebeida, Mohamed S. and Eddy, John P. and Eldred, Michael S. and Hooper, Russell W. and Hough, Patricia D. and Hu, Kenneth T. and Jakeman, John D. and Khalil, Mohammad and Maupin, Kathryn A. and Monschke, Jason A. and Ridgeway, Elliott M. and Rushdi, Ahmad A. and Seidl, D. Thomas and Stephens, J. Adam and Swiler, Laura P. and Tran, Anh and Winokur, Justin G.},
+	title = {Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.16 User's Manual},
+	year = {2022},
+	number = {SAND2022-6171 version 6.16},
+	institution = {Sandia National Laboratory},
+	address = {Albuquerque, NM, USA},
+	url = {https://dakota.sandia.gov/sites/default/files/docs/6.16.0/Users-6.16.0.pdf},
+}
+
+% A Fortran 90 implementation of quasi-Newton stochastic optimization algorithms. This open source numerical software solves both determinisitc and stochastic blackbox optimization problems via a quasi-Newton trust-region method. It is a bit wasteful in terms of the number of function evaluations per iteration as it performs a fully Latin hypercube sampling of the trust region in each iteration, and does not explicitly re-use previous iterates to reduce iteration costs, like some of the more advanced model based methods. Still, it is extremely robust and a good choice in stochastic situations. Also includes a good Fortran implementation of Latin hypercube sampling and efficient sorting algorithms
+@article{amos2020algorithm,
+	author = {Amos, Brandon D. and Easterling, David R. and Watson, Layne T. and Thacker, William I. and Castle, Brent S. and Trosset, Michael W.},
+	title = {Algorithm 1007: {QNSTOP}: {Q}uasi-{N}ewton algorithm for stochastic optimization},
+	year = {2020},
+	month = {6},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {46},
+	number = {2},
+	numpages = {17},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/3374219},
+	url = {https://dl.acm.org/doi/10.1145/3374219},
+	issn = {0098-3500},
+	keywords = {},
+}
+
+% The original TOMS open source numerical software code implementing Sobol sequence (low discrepancy sequence) generation in Fortran 90. Apparently there is a bug or limitation to this code, fixed by Joe et al. 2003 in their TOMS Remark on 659, and subsequent publication of a new generator used in Scipy
+@article{bratley1988algorithm,
+	author = {Bratley, Paul and Fox, Bennett L.},
+	title = {Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator},
+	year = {1988},
+	month = {3},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {14},
+	number = {1},
+	numpages = {13},
+	publisher = {Association for Computing Machinery},
+	doi = {10.1145/42288.214372},
+	url = {https://doi.org/10.1145/42288.214372},
+	issn = {0098-3500},
+}
+
+% Analysis of hypervolume indicator as proxy for solution set quality -- results for 2-objectives only, this paper shows that the hypervolume indicator is the best single indicator we have, but with some caveates
+@article{bringmann2013approximation,
+	author = {Bringmann, Karl and Friedrich, Tobias},
+	title = {Approximation quality of the hypervolume indicator},
+	year = {2013},
+	month = {2},
+	journal = {Artificial Intelligence},
+	volume = {195},
+	number = {0004-3702},
+	pages = {265--290},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.artint.2012.09.005},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0004370212001178},
+	issn = {0004-3702},
+}
+
+% My PhD thesis, including multiobjective optimization techniques, algorithm, performance analysis, and software review; description of VTMOP, running parallel simulations, integrating with libE. Also scientific machine learning via Delaunay interpolation and algorithms and proofs for doing so. Several applications related to HPC performance modeling and autotuning.
+@phdthesis{chang2020mathematical,
+	author = {Chang, Tyler H.},
+	title = {Mathematical Software for Multiobjective Optimization Problems},
+	year = {2020},
+	school = {Virginia Tech, Dept. of Computer Science},
+	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
+}
+
+% Publication of my second open source numerical software package: VTMOP a Fortran software for solving blackbox multiobjective optimization problems. Uses surrogate modeling (RSM), with an adaptive weighting scheme, within a trust region framework. The motivating application is a particle accelerator tuning problem at SLAC
+@article{chang2022algorithm,
+	author = {Chang, Tyler H. and Watson, Layne T. and Larson, Jeffrey and Neveu, Nicole and Thacker, William I. and Deshpande, Shubhangi and Lux, Thomas C. H.},
+	title = {{Algorithm 1028}: {VTMOP}: Solver for Blackbox Multiobjective Optimization Problems},
+	year = {2022},
+	month = {9},
+	journal = {{ACM} Transactions on Mathematical Software},
+	volume = {48},
+	number = {3},
+	numpages = {36},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/3529258},
+	url = {https://dl.acm.org/doi/10.1145/3529258},
+	issn = {0098-3500},
+	git = {https://github.com/Libensemble/libe-community-examples/tree/main/vtmop},
+}
+
+% The ParMOO JOSS article -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
+@article{chang2023parmoo,
+	author = {Chang, Tyler H. and Wild, Stefan M.},
+	title = {{ParMOO}: A {P}ython library for parallel multiobjective simulation optimization},
+	year = {2023},
+	month = {2},
+	journal = {Journal of Open Source Software},
+	volume = {8},
+	number = {82},
+	numpages = {4468},
+	publisher = {The Open Journal},
+	doi = {10.21105/joss.04468},
+	url = {https://joss.theoj.org/papers/10.21105/joss.04468},
+	issn = {2475-9066},
+}
+
+% This is the IJOC ParMOO repository DOI -- this is an archive of the software experiments for obtaining our test problems and reproducing our experimental results on those test problems with customized ParMOO solvers.
+@misc{chang2024designing,
+	author = {Chang, Tyler H. and Wild, Stefan M.},
+	title = {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
+	year = {2024},
+	month = {3},
+	booktitle = {INFORMS Journal on Computing},
+	publisher = {INFORMS Journal on Computing},
+	doi = {10.1287/ijoc.2023.0250.cd},
+	url = {https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2023.0250},
+	issn = {1091-9856},
+	note = {Available for download at https://github.com/INFORMSJoC/2023.0250},
+}
+
+% The ParMOO docs -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
+@techreport{chang2024parmoo,
+	author = {Chang, Tyler H. and Wild, Stefan M. and Dickinson, Hyrum},
+	title = {{ParMOO}: {P}ython library for parallel multiobjective simulation optimization},
+	year = {2024},
+	number = {Version 0.4.1},
+	institution = {Argonne National Laboratory},
+	address = {Lemont, IL, USA},
+	url = {https://parmoo.readthedocs.io/en/latest},
+}
+
+% The ParMOO IJOC article describing the design of the ParMOO software, motivation, and providing examples of how ParMOO can be used to solve common scientific problems more efficiently with low effort -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
+@article{chang2025designing,
+	author = {Chang, Tyler H. and Wild, Stefan M.},
+	title = {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
+	year = {2025},
+	journal = {INFORMS Journal on Computing},
+	publisher = {Institute for Operations Research and the Management Sciences (INFORMS)},
+	doi = {10.1287/ijoc.2023.0250},
+	url = {https://pubsonline.informs.org/doi/10.1287/ijoc.2023.0250},
+	issn = {1091-9856},
+}
+
+% Publication of our work on multiobjective shape optimization of the RF-gun cavity for the Argonne wakefield accelerator using ParMOO with the POISSON/SUPERFISH simulation software
+@inproceedings{chen2023integrated,
+	author = {Chen, Gongxiaohui and Chang, Tyler H. and Power, John and Jing, Chungunag},
+	title = {An Integrated Multi-Physics Optimization Framework for Particle Accelerator Design},
+	year = {2023},
+	booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023), Industrial Applications Track},
+	numpages = {2},
+	location = {Orlando, FL, USA},
+	doi = {10.48550/arXiv.2311.09415},
+}
+
+% The classic textbook by Cheney and Light on the fundamentals of approximation theory for multivariate functions -- topics include: basics of interpolation, approximation theory, and linear operators; multivariate polynomials, their interpolation nodes, and error kernels; selecting good polynomial interpolants via Newton and Lagrange type methods; positive-definite functions, kernel interpretations, and good kernels for interpolation; basis functions, orthonormal bases, common bases for interpolation and convergence rates; Chebyshev nodes; B-splines, Box splines, and thin-plate splines; and basics of artificial neural networks. Other topics include wavelets, orthogonal projection algorithms, Hilbert spaces, and reproducing kernel Hilbert spaces (RKHS).
+@book{cheney2009course,
+	author = {Cheney, Elliott W. and Light, William A.},
+	title = {A Course in Approximation Theory},
+	year = {2009},
+	month = {1},
+	booktitle = {Graduate Studies in Mathematics},
+	series = {Graduate Studies in Mathematics},
+	publisher = {AMS},
+	address = {Providence, RI, USA},
+	doi = {10.1090/gsm/101},
+	url = {http://www.ams.org/gsm/101},
+	isbn = {9780821847985},
+	issn = {1065-7339},
+}
+
+% pyOED an open source Python numerical software library for performing optimal experimental design, e.g, for sensor placement at Argonne
+@article{chowdhary2024pyoed,
+	author = {Chowdhary, Abhijit and Ahmed, Shady E. and Attia, Ahmed},
+	title = {{PyOED}: An Extensible Suite for Data Assimilation and Model-Constrained Optimal Design of Experiments},
+	year = {2024},
+	month = {6},
+	booktitle = {ACM Transactions on Mathematical Software},
+	volume = {50},
+	number = {2},
+	articleno = {11},
+	numpages = {22},
+	institution = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	doi = {10.1145/3653071},
+	issn = {0098-3500},
+}
+
+% Andrew Conn's landmark paper on interpolation dataset geometry -- leads to the definition of sets being "well-poised" for interpolation, meaning that when the interpolation set's geometry meats some local geometric conditions (basically bounded away from singularity), then the resulting interpolant's error (and gradient / hessian errors) can be bounded and the resulting models can be used to perform gradient descent or SQP within a trust-region framework with guaranteed convergence
+@article{conn2008geometry,
+	author = {Conn, Andrew R and Scheinberg, Katya and Vicente, Lu{\'\i}s N},
+	title = {Geometry of interpolation sets in derivative free optimization},
+	year = {2008},
+	month = {6},
+	journal = {Mathematical programming},
+	volume = {111},
+	number = {1-2},
+	pages = {141--172},
+	publisher = {Springer},
+	doi = {10.1007/s10107-006-0073-5},
+	url = {http://link.springer.com/10.1007/s10107-006-0073-5},
+	issn = {0025-5610},
+}
+
+% Applications of low-discrepancy sequences in Monte carlo simulation
+@inproceedings{dalal2008low,
+	author = {Dalal, Ishaan L. and Stefan, Deian and Harwayne-Gidansky, Jared},
+	title = {Low discrepancy sequences for {M}onte {C}arlo simulations on reconfigurable platforms},
+	year = {2008},
+	month = {7},
+	booktitle = {2008 International Conference on Application-Specific Systems, Architectures and Processors},
+	volume = {},
+	number = {},
+	pages = {108--113},
+	organization = {IEEE},
+	location = {Leuven, Belgium},
+	doi = {10.1109/ASAP.2008.4580163},
+	url = {http://ieeexplore.ieee.org/document/4580163/},
+}
+
+% Theorems on the curse of dimensionality when it comes to drawing data points in high-dimensional spaces. The main theorem implies that the convex hull of N points in D dimensions has volume ~0 for D sufficiently large -- this occurs because of a concentration of measure type result
+@article{gorban2017stochastic,
+	author = {Gorban, Alexander N and Tyukin, Ivan Yu},
+	title = {Stochastic separation theorems},
+	year = {2017},
+	month = {10},
+	journal = {Neural Networks},
+	volume = {94},
+	pages = {255--259},
+	publisher = {Elsevier},
+	doi = {10.1016/j.neunet.2017.07.014},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0893608017301776},
+	issn = {0893-6080},
+}
+
+% A numerical-quadrature based approximation to discrepancy. For high-dimensional ill-spaced points, the quadrature error can be huge, and although discrepancies should always be between 0 and 1, the approximation can approach (13/12)^d - 1, where d is the dimension of the problem. When points are randomly or quasi-randomly sampled, such large values of the approximation could be indicative of measure collapse. This is the technique used in scipy.stats.qmc.discrepancy(...)
+@article{hickernell1998generalized,
+	author = {Hickernell, Fred J.},
+	title = {A generalized discrepancy and quadrature error bound},
+	year = {1998},
+	journal = {Mathematics of computation},
+	volume = {67},
+	number = {221},
+	pages = {299--322},
+	publisher = {American Mathematical Society (AMS)},
+	doi = {10.1090/S0025-5718-98-00894-1},
+	url = {https://www.ams.org/mcom/1998-67-221/S0025-5718-98-00894-1/},
+	issn = {0025-5718},
+}
+
+% A modification to the original Sobol sequence generator code
+@article{joe2003remark,
+	author = {Joe, Stephen and Kuo, Frances Y.},
+	title = {Remark on Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator},
+	year = {2003},
+	month = {3},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {29},
+	number = {1},
+	numpages = {9},
+	publisher = {Association for Computing Machinery},
+	doi = {10.1145/641876.641879},
+	url = {https://dl.acm.org/doi/10.1145/641876.641879},
+	issn = {0098-3500},
+}
+
+% The numerical software algorithm used in scipy algorithm for generating Sobol sequences (low discrepancy sequences)
+@article{joe2008constructing,
+	author = {Joe, Stephen and Kuo, Frances Y.},
+	title = {Constructing Sobol sequences with better two-dimensional projections},
+	year = {2008},
+	month = {1},
+	journal = {SIAM Journal on Scientific Computing},
+	volume = {30},
+	number = {5},
+	pages = {2635--2654},
+	publisher = {SIAM},
+	doi = {10.1137/070709359},
+	url = {http://epubs.siam.org/doi/10.1137/070709359},
+	issn = {1064-8275},
+}
+
+% Original publication on maximin and minimax designs for design-of-experiments. I.e., minimize the maximum distance from any point in the bounding box to the nearest point in the design, and maximize the minimum distance between any pair of points in the design.
+@article{johnson1990minimax,
+	author = {Johnson, M.E. and Moore, L.M. and Ylvisaker, D.},
+	title = {Minimax and maximin distance designs},
+	year = {1990},
+	month = {10},
+	journal = {Journal of Statistical Planning and Inference},
+	volume = {26},
+	number = {2},
+	pages = {131--148},
+	publisher = {Elsevier BV},
+	doi = {10.1016/0378-3758(90)90122-B},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/037837589090122B},
+	issn = {0378-3758},
+}
+
+% The textbook on discrepancy that Manisha used to learn about low discrepancy sequences and their motivation
+@book{kuipers1974uniform,
+	author = {Kuipers, L. and Niederreiter, H.},
+	title = {Uniform distribution of sequences},
+	year = {1974},
+	series = {Pure and Applied Mathematics},
+	pages = {xiv--390},
+	publisher = {Wiley-Interscience [John Wiley \& Sons], New York-London-Sydney},
+}
+
+% pyDOE a popular software repository for the common design-of-experiments in Python. This has been widely replaced by the new release of scipy which includes scipy.stats.qmc, which includes most of these techniques (used for monte carlo sampling, but still the same techniques)
+@misc{lee2015pydoe,
+	author = {Lee, Abraham D. and others},
+	title = {py{DOE}: The experimental design package for python},
+	year = {2015},
+	booktitle = {GitHub repository},
+	number = {0.3.8},
+	publisher = {GitHub},
+	url = {https://github.com/tisimst/pyDOE},
+}
+
+% Adaptive Kriging model-based sampling basically means using an interpolating Gaussian process's uncertainty information to select where to sample the next point during an adaptive sampling algorithm (for generating design-of-experiments or design space exploration).
+@article{liu2017adaptive,
+	author = {Liu, Haitao and Cai, Jianfei and Ong, Yew-Soon},
+	title = {An adaptive sampling approach for Kriging metamodeling by maximizing expected prediction error},
+	year = {2017},
+	month = {11},
+	journal = {Computers \& Chemical Engineering, Special Section - ESCAPE-26},
+	volume = {106},
+	pages = {171--182},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.compchemeng.2017.05.025},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S009813541730234X},
+	issn = {0098-1354},
+}
+
+% SOCEMO: A response surface modeling (RSM) based algorithm for solving multiobjective optimization problems. Uses a Latin hypercube design-of-experiments, RBF surrogate modeling, multiple scalarizations, and solves the scalarized subproblem via evolutionary algorithms to produce a batch of evaluations in each iteration of the algorithm
+@article{muller2017socemo,
+	author = {M{\"u}ller, Juliane},
+	title = {{SOCEMO}: {S}urrogate optimization of computationally expensive multiobjective problems},
+	year = {2017},
+	month = {11},
+	journal = {INFORMS Journal on Computing},
+	volume = {29},
+	number = {4},
+	pages = {581--596},
+	publisher = {Institute for Operations Research and the Management Sciences (INFORMS)},
+	doi = {10.1287/ijoc.2017.0749},
+	url = {https://pubsonline.informs.org/doi/10.1287/ijoc.2017.0749},
+	issn = {1091-9856},
+}
+
+% The classical textbook on response surface methodology and modeling practices. Contains useful information on the basic framework and applications of RSM. Also a useful reference for many of the options for specific techniques: Chapter 7 is a good reference for basic techniques in multiobjective RSM and Chapters 8-9 surveys the basic methods in design-of-experiments
+@book{myers2016response,
+	author = {Myers, Raymond H. and Montgomery, Douglas C. and Anderson-Cook, Christine M.},
+	title = {Response Surface Methodology: Process and Design Optimization Using Designed Experiments},
+	year = {2016},
+	edition = {4},
+	publisher = {John Wiley \& Sons, Inc.},
+	address = {Hoboken, NJ, USA},
+	isbn = {9781118916032},
+}
+
+% The original publication where Sobol's sequences are generalized to the class now known as low-discrepancy sequenes
+@article{niederreiter1988lowdiscrepancy,
+	author = {Niederreiter, Harald},
+	title = {Low-discrepancy and low-dispersion sequences},
+	year = {1988},
+	month = {9},
+	journal = {Journal of Number Theory},
+	volume = {30},
+	number = {1},
+	pages = {51--70},
+	publisher = {Elsevier BV},
+	doi = {10.1016/0022-314X(88)90025-X},
+	url = {https://doi.org/10.1016/0022-314X(88)90025-X},
+	issn = {0022-314X},
+}
+
+% An active learning method for extreme event modeling. Specifically, the authors provide a novel acquisition function which targets extreme events
+@article{pickering2022discovering,
+	author = {Pickering, Ethan and Guth, Stephen and Karniadakis, George Em and Sapsis, Themistoklis P},
+	title = {Discovering and forecasting extreme events via active learning in neural operators},
+	year = {2022},
+	month = {12},
+	journal = {Nature Computational Science},
+	volume = {2},
+	number = {12},
+	pages = {823--833},
+	publisher = {Nature Publishing Group US New York},
+	doi = {10.1038/s43588-022-00376-0},
+	url = {https://www.nature.com/articles/s43588-022-00376-0},
+	issn = {2662-8457},
+}
+
+% Review of minimax and maximin techniques and computational methods. Minimax is what we want, but it is hard to compute in high dimensions (would require optimizing a Delaunay triangulation, which is exponential complexity to compute). Maximin is easier to compute (and often used in many algorithms because of this). However, minimax gives better dispersion
+@article{pronzato2017minimax,
+	author = {Pronzato, Luc},
+	title = {Minimax and maximin space-filling designs: some properties and methods for construction},
+	year = {2017},
+	journal = {Journal de la Soci{\'e}t{\'e} Fran{\c{c}}aise de Statistique},
+	volume = {158},
+	number = {1},
+	pages = {7--36},
+	url = {http://www.numdam.org/item/JSFS_2017__158_1_7_0},
+}
+
+% Official publication of the scipy.stats.qmc module, which is the newly released module for performing quasi-monte carlo sampling and design-of-experiments in scipy. Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
+@article{roy2023quasimonte,
+	author = {Roy, Pamphile T. and Owen, Art B. and Balandat, Maximilian and Haberland, Matt},
+	title = {Quasi-Monte Carlo Methods in Python},
+	year = {2023},
+	month = {4},
+	journal = {Journal of Open Source Software},
+	volume = {8},
+	number = {84},
+	numpages = {5309},
+	publisher = {The Open Journal},
+	doi = {10.21105/joss.05309},
+	url = {https://joss.theoj.org/papers/10.21105/joss.05309},
+	issn = {2475-9066},
+}
+
+% Techniques and optimal sampling criteria for performing adaptive sampling to enable downstream Gaussian process regression modeling
+@article{sapsis2022optimal,
+	author = {Sapsis, Themistoklis P. and Blanchard, Antoine},
+	title = {Optimal criteria and their asymptotic form for data selection in data-driven reduced-order modelling with {Gaussian} process regression},
+	year = {2022},
+	month = {8},
+	journal = {Philosophical Transactions of the Royal Society A},
+	volume = {380},
+	number = {2229},
+	numpages = {20210197},
+	publisher = {The Royal Society},
+	doi = {10.1098/rsta.2021.0197},
+	url = {https://royalsocietypublishing.org/doi/10.1098/rsta.2021.0197},
+	issn = {1364-503X},
+}
+
+% The SMT 2.0 paper, major improvements to the open source numerical software package (in Python) pySMT for solving multidisciplinary engineering design optimization (MDO) problems, while utilizing derivatives and providing numerical stability analysis for each surrogate model class. In SMT 2.0, support is added for hierarchical and mixed variables, and major improvements have been made to the structure, completeness, and features of the SMT library.
+@article{saves2024smt,
+	author = {Saves, Paul and Lafage, Rémi and Bartoli, Nathalie and Diouane, Youssef and Bussemaker, Jasper and Lefebvre, Thierry and Hwang, John T. and Morlier, Joseph and Martins, Joaquim R.R.A.},
+	title = {SMT 2.0: A Surrogate Modeling Toolbox with a focus on hierarchical and mixed variables Gaussian processes},
+	year = {2024},
+	month = {2},
+	journal = {Advances in Engineering Software},
+	volume = {188},
+	numpages = {103571},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.advengsoft.2023.103571},
+	url = {https://www.sciencedirect.com/science/article/pii/S096599782300162X},
+	issn = {0965-9978},
+}
+
+% One of the most popular textbooks in the field of multidisciplinary engineering design optimization. The introduction provides plenty of motivation for solving computational expensive multiobjective simulation / blackbox optimization problems
+@book{sobieszczanskisobieski2015multidisciplinary,
+	author = {Sobieszczanski-Sobieski, Jaroslaw and Morris, Alan and Van Tooren, Michel},
+	title = {Multidisciplinary Design Optimization Supported by Knowledge Based Engineering},
+	year = {2015},
+	publisher = {John Wiley \& Sons, Ltd.},
+	address = {Chichester, UK},
+	isbn = {978-1-118-49212-3},
+}
+
+% The original publication of the Sobol sequence algorithm for generating well-distributed points for in the context of good nodes for numerical integration. This is now referred to as a low-discrepancy sequence and is also used for design-of-experiments and quasi-random number generation
+@article{sobol1967distribution,
+	author = {Sobol, I. M.},
+	title = {Distribution of points in a cube and approximate evaluation of integrals},
+	year = {1967},
+	month = {1},
+	journal = {\v{Z}urnal Vy\v{c}islitel\cprime no\u{\i} Matematiki i Matemati\v{c}esko\u{\i} Fiziki},
+	volume = {7},
+	number = {4},
+	pages = {784--802},
+	publisher = {Elsevier BV},
+	doi = {10.1016/0041-5553(67)90144-9},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/0041555367901449},
+	issn = {0044-4669},
+}
+
+% A tutorial on how to compute Latin hypercube samples (LHS) and some basic properties and ongoing research related to design-of-experiments
+@article{viana2016tutorial,
+	author = {Viana, Felipe AC},
+	title = {A tutorial on Latin hypercube design of experiments},
+	year = {2016},
+	month = {7},
+	journal = {Quality and reliability engineering international},
+	volume = {32},
+	number = {5},
+	pages = {1975--1985},
+	publisher = {Wiley Online Library},
+	doi = {10.1002/qre.1924},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/qre.1924},
+	issn = {0748-8017},
+}
+
+% SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
+@article{virtanen2020scipy,
+	author = {{Virtanen}, Pauli and {Gommers}, Ralf and {Oliphant}, Travis E. and {Haberland}, Matt and {Reddy}, Tyler and {Cournapeau}, David and {Burovski}, Evgeni and {Peterson}, Pearu and {Weckesser}, Warren and {Bright}, Jonathan and {van der Walt}, St{\'e}fan J. and {Brett}, Matthew and {Wilson}, Joshua and {Jarrod Millman}, K. and {Mayorov}, Nikolay and {Nelson}, Andrew R.~J. and {Jones}, Eric and {Kern}, Robert and {Larson}, Eric and {Carey}, CJ and {Polat}, {\.I}lhan and {Feng}, Yu and {Moore}, Eric W. and {VanderPlas}, Jake and {Laxalde}, Denis and {Perktold}, Josef and {Cimrman}, Robert and {Henriksen}, Ian and {Quintero}, E.~A. and {Harris}, Charles R and {Archibald}, Anne M. and {Ribeiro}, Ant{\^o}nio H. and {Pedregosa}, Fabian and {van Mulbregt}, Paul and {Contributors}, {SciPy 1.0}},
+	title = {{SciPy} 1.0: {F}undamental Algorithms for Scientific Computing in {P}ython},
+	year = {2020},
+	month = {3},
+	journal = {Nature Methods},
+	volume = {17},
+	number = {3},
+	pages = {261--272},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1038/s41592-019-0686-2},
+	url = {https://www.nature.com/articles/s41592-019-0686-2},
+	issn = {1548-7091},
+}
+
+% Open source numerical Python software pyomo.DOE, implementing model-driven design-of-experiments generation in Pyomo
+@article{wang2022pyomo.doe,
+	author = {Wang, Jialu and Dowling, Alexander W.},
+	title = {Pyomo.DOE: An open-source package for model-based design of experiments in Python},
+	year = {2022},
+	month = {12},
+	journal = {AIChE Journal},
+	volume = {68},
+	number = {12},
+	articleno = {e17813},
+	publisher = {Wiley},
+	doi = {10.1002/aic.17813},
+	url = {https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.17813},
+	issn = {0001-1541},
+}
+
+% Survey of design-of-experiments techniques and modifications for HPC system analysis, specifically related to linearly constrained and integer lattice design spaces
+@article{wang2023design,
+	author = {Wang, Yueyao and Xu, Li and Hong, Yili and Pan, Rong and Chang, Tyler H. and Lux, Thomas C. H. and Bernard, Jon and Watson, Layne T. and Cameron, Kirk W.},
+	title = {Design strategies and approximation methods for high-performance computing variability management},
+	year = {2023},
+	month = {1},
+	journal = {Journal of Quality Technology},
+	volume = {55},
+	number = {1},
+	pages = {88--103},
+	publisher = {Taylor \& Francis},
+	doi = {10.1080/00224065.2022.2035285},
+	url = {https://www.tandfonline.com/doi/full/10.1080/00224065.2022.2035285},
+	issn = {0022-4065},
+}
+
+% Hammersley's and Halton sequences -- other low-discrepancy sequences that are commonly used in design-of-experiments
+@article{wong1997sampling,
+	author = {Wong, Tien-Tsin and Luk, Wai-Shing and Heng, Pheng-Ann},
+	title = {Sampling with {H}ammersley and {H}alton points},
+	year = {1997},
+	journal = {Journal of graphics tools},
+	volume = {2},
+	number = {2},
+	pages = {9--24},
+	publisher = {Taylor \& Francis},
+}
+
+% Manisha's conference paper on SF-SFD -- the theory is far from ready, but the
+% problem of concentration of measure in high-dimensions making robust sampling
+% difficult and the ability to do something better than just random or latin
+% hypercube sampling are clearly demonstrated
+@inproceedings{garg2023sfsfd,
+  author  = {Garg, Manisha and Chang, Tyler H. and Raghavan, Krishnan},
+  title   = {{SF-SFD}: {S}tochastic optimization of {F}ourier coefficients for space-filling designs},
+  year    = {2023},
+  booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023)},
+  location = {Orlando, FL, USA},
+  pages   = {3636--3646},
+  doi     = {10.1109/WSC60868.2023.10408245}
+}
