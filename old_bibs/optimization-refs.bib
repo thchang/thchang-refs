@@ -4240,3 +4240,171 @@ pages = {495–508},
   pages={554-565},
   doi={10.1109/WSC.2016.7822121}
 }
+
+% Some thorough analysis on upper and lower error bounds for RBF interpolants,
+% which ultimately yield the famous "uncertainty princple for RBFs" -- i.e., a
+% large shape parameter is needed for accuracy but a small shape parameter is
+% needed for solvability of the resulting RBF system.  Both are not possible,
+% so you cannot have accuracy and solvability at once.  Generally, the author
+% recommends making the parameter as large as possible without causing
+% singularity, a tradeoff that is often optimized in modern Gaussian process
+% implementations via L-BFGS-B.  There is also a really nice table of kernel
+% errors for various kernels, which can be directly plugged into the generic
+% RBF interpolation error formula to get error bounds for most common RBF basis
+% functions
+@article{schaback1995error,
+	author = {Schaback, Robert},
+	title = {Error estimates and condition numbers for radial basis function interpolation},
+	year = {1995},
+	month = {4},
+	journal = {Advances in Computational Mathematics},
+	volume = {3},
+	number = {3},
+	pages = {251--264},
+	publisher = {Springer},
+	doi = {10.1007/BF02432002},
+	url = {http://link.springer.com/10.1007/BF02432002},
+	issn = {1019-7168},
+	keywords = {},
+}
+
+% An interesting analysis by Bobby Gramacy on how adding a "nugget" (i.e., a
+% small perturbation \varepsilon I to the diagonal of a matrix results in
+% vastly improved numerical stability and therefore performance when modeling
+% data science and other approximation problems via Gaussian processes
+@article{gramacy2012cases,
+	author = {Gramacy, Robert B. and Lee, Herbert K. H.},
+	title = {Cases for the nugget in modeling computer experiments},
+	year = {2012},
+	month = {5},
+	journal = {Statistics and Computing},
+	volume = {22},
+	number = {3},
+	pages = {713--722},
+	publisher = {Springer},
+	doi = {10.1007/s11222-010-9224-x},
+	url = {http://link.springer.com/10.1007/s11222-010-9224-x},
+	issn = {0960-3174},
+	keywords = {},
+}
+
+% A paper on the similarities and differences between kriging and Gaussian
+% processes -- in practice, I see very little difference other than that people
+% often perform more performance optimizations on Gaussian processes and
+% consider Kriging to be a bit more strict
+@article{christianson2022traditional,
+	author = {Christianson, Ryan B and Pollyea, Ryan M and Gramacy, Robert B},
+	title = {Traditional kriging versus modern Gaussian processes for large-scale mining data},
+	year = {2022},
+	journal = {Statistical Analysis and Data Mining: The ASA Data Science Journal},
+	publisher = {Wiley Online Library},
+	keywords = {},
+}
+
+% An analysis showing that the condition number of the RBF (and GP)
+% interpolation matrices grow (and lowering bounding them) as the minimum
+% separation distance shrinks.  I.e., when data gets too dense, the RBF
+% conditioning is guaranteed to become arbitrarily bad.
+@article{ball1992sensitivity,
+	author = {Ball, Keith and Sivakumar, Natarajan and Ward, Joseph D},
+	title = {On the sensitivity of radial basis interpolation to minimal data separation distance},
+	year = {1992},
+	month = {12},
+	journal = {Constructive Approximation},
+	volume = {8},
+	number = {4},
+	pages = {401--426},
+	publisher = {Springer},
+	doi = {10.1007/bf01203461},
+	url = {http://link.springer.com/10.1007/BF01203461},
+	issn = {0176-4276},
+	keywords = {},
+}
+
+% Large review paper covering all aspects of RBFs, their interpolation error
+% bounds, their convergence rates, and numerical computation for various kernel
+% functions.
+@article{buhmann2000radial,
+	author = {Buhmann, M. D.},
+	title = {Radial basis functions},
+	year = {2000},
+	month = {1},
+	journal = {Acta Numerica},
+	volume = {9},
+	pages = {1--38},
+	publisher = {Cambridge University Press},
+	doi = {10.1017/S0962492900000015},
+	url = {https://www.cambridge.org/core/product/identifier/S0962492900000015/type/journal_article},
+	issn = {0962-4929},
+}
+
+% An analysis and empirical study on how RBF interpolants interpolation
+% matrices tend to always become ill-conditioned in high dimensions
+@article{wang2018numerical,
+	author = {Wang, Ruoxi and Li, Yingzhou and Darve, Eric},
+	title = {On the numerical rank of radial basis function kernels in high dimensions},
+	year = {2018},
+	month = {1},
+	journal = {SIAM Journal on Matrix Analysis and Applications},
+	volume = {39},
+	number = {4},
+	pages = {1810--1835},
+	publisher = {SIAM},
+	doi = {10.1137/17m1135803},
+	url = {https://epubs.siam.org/doi/10.1137/17M1135803},
+	issn = {0895-4798},
+	keywords = {},
+}
+
+% A spectral analysis on the conditioning of the kernel matrics (i.e.,
+% interpolation matrices) for RBF interpolants and Gaussian processes, showing
+% the singular values trending to zero exponentially in both theory and
+% practice
+@article{wathen2015spectral,
+	author = {Wathen, Andrew J and Zhu, Shengxin},
+	title = {On spectral distribution of kernel matrices related to radial basis functions},
+	year = {2015},
+	month = {12},
+	journal = {Numerical Algorithms},
+	volume = {70},
+	number = {4},
+	pages = {709--726},
+	publisher = {Springer},
+	doi = {10.1007/s11075-015-9970-0},
+	url = {http://link.springer.com/10.1007/s11075-015-9970-0},
+	issn = {1017-1398},
+	keywords = {},
+}
+
+% Attempting to make Gaussian process interpolation (i.e., Kriging) numerically
+% stable as the minimum pairwise distance between points shrinks.  In
+% particular, they propose a lower bound on the nugget that must be added to
+% the diagonal to guarantee a sufficient distance to singularity
+@article{ranjan2011computationally,
+	author = {Ranjan, Pritam and Haynes, Ronald and Karsten, Richard},
+	title = {A computationally stable approach to Gaussian process interpolation of deterministic computer simulation data},
+	year = {2011},
+	month = {11},
+	journal = {Technometrics},
+	volume = {53},
+	number = {4},
+	pages = {366--378},
+	publisher = {Taylor \& Francis},
+	doi = {10.1198/tech.2011.09141},
+	url = {http://www.tandfonline.com/doi/abs/10.1198/TECH.2011.09141},
+	issn = {0040-1706},
+	keywords = {},
+}
+
+% The book that scipy and scikit-learn cite when it comes to Gaussian process
+% regression fundamentals and algorithms.  It's a good thorough book, and I
+% find some of the error bound derivations to be useful, but I generally prefer
+% Garnet's book
+@book{rasmussen2006gaussian,
+	author = {Rasmussen, Carl Edward and Williams, Christopher KI and others, },
+	title = {Gaussian processes for machine learning},
+	year = {2006},
+	volume = {1},
+	publisher = {The MIT Press},
+	keywords = {},
+}
