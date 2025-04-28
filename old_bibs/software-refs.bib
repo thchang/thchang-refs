@@ -891,8 +891,8 @@
 }
 
 % NOMAD v3 is a widely-used open source numerical software package (in C++) for blackbox and derivative-free optimization via the MADS algorithms. Includes the official implementations of algorithms such as Ortho-MADS, PSD-MADS, and BiMADS. Support for parallel computing and surrogate modeling, and fairly extensible. Can be linked as a C++ library, or usage from command line interface. Used by a variety of industries and officially supported by Exxon Mobile. Has recently been replaced by the major refactor/rewrite in NOMAD v4. Still an example of widely-used open source numerical software, but the NOMAD v4 paper gives a look at how open source software practices have changed (improved) in the last 10 years
-@article{le digabel2011algorithm,
-	author = {{Le Digabel}, S{\'e}bastien},
+@article{ledigabel2011algorithm,
+	author = {Le Digabel, S{\'e}bastien},
 	title = {Algorithm 909: {NOMAD}: Nonlinear Optimization with the {MADS} Algorithm},
 	year = {2011},
 	month = {2},
@@ -1263,7 +1263,7 @@
 
 % SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
 @article{virtanen2020scipy,
-	author = {{Virtanen}, Pauli and {Gommers}, Ralf and {Oliphant}, Travis E. and {Haberland}, Matt and {Reddy}, Tyler and {Cournapeau}, David and {Burovski}, Evgeni and {Peterson}, Pearu and {Weckesser}, Warren and {Bright}, Jonathan and {van der Walt}, St{\'e}fan J. and {Brett}, Matthew and {Wilson}, Joshua and {Jarrod Millman}, K. and {Mayorov}, Nikolay and {Nelson}, Andrew R.~J. and {Jones}, Eric and {Kern}, Robert and {Larson}, Eric and {Carey}, CJ and {Polat}, {\.I}lhan and {Feng}, Yu and {Moore}, Eric W. and {VanderPlas}, Jake and {Laxalde}, Denis and {Perktold}, Josef and {Cimrman}, Robert and {Henriksen}, Ian and {Quintero}, E.~A. and {Harris}, Charles R and {Archibald}, Anne M. and {Ribeiro}, Ant{\^o}nio H. and {Pedregosa}, Fabian and {van Mulbregt}, Paul and {Contributors}, {SciPy 1.0}},
+	author = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and van der Walt, St{\'e}fan J. and Brett, Matthew and Wilson, Joshua and Jarrod Millman, K. and Mayorov, Nikolay and Nelson, Andrew R.~J. and Jones, Eric and Kern, Robert and Larson, Eric and Carey, CJ and Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and VanderPlas, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E.~A. and Harris, Charles R and Archibald, Anne M. and Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and van Mulbregt, Paul and Contributors, SciPy 1.0},
 	title = {{SciPy} 1.0: {F}undamental Algorithms for Scientific Computing in {P}ython},
 	year = {2020},
 	month = {3},
@@ -1805,7 +1805,7 @@ keywords = {routing, placement, heterogeneous, hard blocks, field-programmable g
 % convergence of the MADS algorithm on problems where the blackbox function /
 % simulation evaluation is stochastic
 @article{AuDzKoDi2021,
-	Author   = {C. Audet and K.J. Dzahini and M. Kokkolaras and S. {Le~Digabel}},
+	Author   = {Charles Audet and Kwassi Joseph Dzahini and Michael Kokkolaras and Sebastien Le~Digabel},
 	Title    = {Stochastic mesh adaptive direct search for blackbox optimization using probabilistic estimates},
 	Journal  = {Computational Optimization and Applications},
 	Year     = {2021},
@@ -1816,38 +1816,22 @@ keywords = {routing, placement, heterogeneous, hard blocks, field-programmable g
 	Url      = {https://doi.org/10.1007/s10589-020-00249-0}
 }
 
-% The STYRENE benchmark problem and application for derivative-free blackbox
+% Introducing the MADS algorithm of variable neighborhood search plus a
+% generalized pattern search adapted to a mesh.  Also includes
+% the STYRENE benchmark problem and application for derivative-free blackbox
 % and simulation optimization algorithms.  The objective is to maximize the net
 % present value subject to several process and economic constraints.  The open
 % source C++ numerical simulation code that defines the problem is available at
 % github.com/bbopt/styrene
 @article{AuBeLe08,
-  Author    = {C. Audet and V. B\'echard and S. {Le~Digabel}},
-  Title     = {{Nonsmooth optimization through Mesh Adaptive Direct Search and Variable Neighborhood Search}},
+  Author    = {Charles Audet and Vincent B\'echard and Sebastien Le~Digabel},
+  Title     = {Nonsmooth optimization through Mesh Adaptive Direct Search and Variable Neighborhood Search},
   Journal   = {Journal of Global Optimization},
   Volume    = {41},
   Number    = {2},
   Pages     = {299--318},
   Year      = {2008},
   Doi       = {10.1007/s10898-007-9234-1},
-}
-
-% A multiobjective (three objective) variation of the STYRENE benchmark for
-% derivative-free blackbox and simulation optimization problems.
-% The STYRENE benchmark problem and application for derivative-free blackbox
-% and simulation optimization algorithms.  The objective is to maximize the net
-% present value subject to several process and economic constraints.  The open
-% source C++ numerical simulation code that defines the problem is available at
-% github.com/bbopt/styrene
-@article{AuSaZg2010a,
-  Author   = {C. Audet and G. Savard and W. Zghal},
-  Title    = {{A mesh adaptive direct search algorithm for multiobjective optimization}},
-  Journal  = {European Journal of Operational Research},
-  Volume   = {204},
-  Number   = {3},
-  Pages    = {545--556},
-  Year     = {2010},
-  Doi      = {10.1016/j.ejor.2009.11.010},
 }
 
 % The SOLAR monte carlo simulation software suite contains a collection of ten
@@ -1861,8 +1845,8 @@ keywords = {routing, placement, heterogeneous, hard blocks, field-programmable g
 % github.com/bbopt/solar
 @article{solar_paper,
   author      = {Nicolau Andr\'{e}s-Thi\'{o} and Charles Audet and Miguel Diago
-  and A{\"i}men E. Gheribi and Sebastien {Le~Digabel} and Xavier Lebeuf and
-  Mathieu {Lemyre~Garneau} and Christophe Tribes},
+  and A{\"i}men E. Gheribi and Sebastien Le~Digabel and Xavier Lebeuf and
+  Mathieu Lemyre~Garneau and Christophe Tribes},
   title       = {solar: A solar thermal power plant simulator for blackbox optimization benchmarking},
   year = {2025},
   journal     = {Optimization and Engineering},
