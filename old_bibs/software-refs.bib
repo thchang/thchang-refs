@@ -30,6 +30,7 @@
 	year = {2018},
 	number = {0.3.13},
 	url = {http://github.com/google/jax},
+    note = {Last accessed: Jul 2024},
 }
 
 % JAHS-Bench-201: The latest test suite of benchmark problems for neural architecture search. The baseline is random search, but you can solve the problems in their parameterized search space with any optimization algorithm, record the number of true function / simulation evaluations (i.e., networks trained) and submit this to the JAHS-Bench leaderboards on GitHub. This is a good representative test problem for NAS. Both single and multiobjective benchmarks are provided, also most problems can be run in both single or multifidelity evaluation modes
@@ -386,6 +387,7 @@
 	title = {Keras},
 	year = {2015},
 	howpublished = {\url{https://keras.io}},
+    note = {Last accessed: Nov 2023},
 }
 
 % pyOED an open source Python numerical software library for performing optimal experimental design, e.g, for sensor placement at Argonne
@@ -456,7 +458,7 @@
 	month = {March},
 	publisher = {{U.S.\ Department of Energy, Argonne National Laboratory}},
 	url = {https://www.anl.gov/article/us-department-of-energy-and-intel-to-deliver-first-exascale-supercomputer},
-	note = {accessed April 28, 2020},
+	note = {Last accessed: April 28, 2020},
 }
 
 % The DTLZ test problems are the standard test problems used in all multiobjective evolutionary optimization papers. They are algebraic test problems that can scale to as many objectives and variables as one desires. Each problem also has a pathological property that makes it extremely difficult or degenerate for multiobjective optimization algorithms. This maeks the suite as a whole extremely convenient for testing, scaling, and evaluating results. However, several of the problems are so difficult that no solvers can reliably solve them. Additionally, all the problems have the property that the last "n" variables are essentially unused, with their optimum being 0.5 and not changing as we move across the Pareto front, which could be unrealistic for certain problems
@@ -915,6 +917,7 @@
 	number = {0.3.8},
 	publisher = {GitHub},
 	url = {https://github.com/tisimst/pyDOE},
+    note = {Last accessed: Nov 2022},
 }
 
 % The official GitHub account for the DFO-lib -- open source numerical software in Fortran for solving blackbox optimization and multiobjective optimization problems. The library used to be obtained via download from Liuzzi's personal website, where it was referred to as the DFO lib. In 2024 it appears to have been migrated to a GitHub account, with each individual piece of software in its own separate repository. Therefore, any reference to the DFO-lib must now be directed to the account as a whole, not an individual repository.
@@ -926,6 +929,7 @@
 	number = {0.3.8},
 	publisher = {GitHub},
 	url = {https://github.com/DerivativeFreeLibrary},
+    note = {Last accessed: Jul 2024},
 }
 
 % pyMDO: an open source numerical Python framework for modeling and solving multidisciplinary engineering design optimization problems
@@ -950,6 +954,7 @@
 	title = {PySuperfish},
 	year = {2023},
 	url = {https://github.com/ChristopherMayes/PySuperfish},
+    note = {Last accessed: Aug 2023},
 }
 
 % The POISSON/SUPERFISH open source numerical software (in Fortran) for calculating static, magnetic, and electric fields and rf electromagnetic fields. Used to design particle accelerators, developed and maintained by Los Alamos
@@ -1025,7 +1030,7 @@
 % OpenMP 4.5 standard: Official definition of OpenMP 4.5 software standard
 @techreport{oarb2015openmp,
 	title = {{OpenMP} Application Programming Interface},
-	author = {Architecture Review Board, OpenMP},
+	author = {OpenMP, Architecture Review Board},
 	year = {2015},
 	month = {November},
 	number = {version 4.5},
@@ -1123,6 +1128,7 @@
 	number = {1.2},
 	publisher = {GitHub},
 	url = {https://github.com/pdfo/pdfo},
+    note = {Last accessed: Apr 2025},
 }
 
 % Official publication of the scipy.stats.qmc module, which is the newly released module for performing quasi-monte carlo sampling and design-of-experiments in scipy. Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -1179,6 +1185,7 @@
 	title = {Poisson Superfish via Docker},
 	year = {2020},
 	url = {https://github.com/hhslepicka/docker-poisson-superfish-nobin},
+    note = {Last accessed: Aug 2023},
 }
 
 % The FAIR principles of data management: Scientific data should be findable, accessible, interpretable, and reproducible
@@ -1341,6 +1348,7 @@
 	howpublished = {github repository},
 	doi = {10.5281/zenodo.8052654},
 	url = {http://www.libprima.net},
+    note = {Last accessed: Apr 2025},
 }
 
 % The original publication for L-BFGS-B software, which solves bound-constrained optimization problems using a limited-memory BFGS. This is the standard implementation that is used in all L-BFGS-B codes to date, such as scipy, all machine learning codes, and most engineering codes and nonlinear systems solvers. The code is open source high-quality numerical software, written in old-style Fortran
@@ -1381,7 +1389,7 @@
     year = {2016},
     month = {January},
     url = {www.iozone.org},
-    note = {accessed 2016},
+    note = {Last accessed: Nov 2016},
 }
 
 % The publication for the XGBoost numerical software. XGBoost can be used to
@@ -1453,7 +1461,7 @@ numpages = {21},
 	month = {November},
 	institution = {MathWorks},
 	url = {https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox},
-	note = {accessed April 27, 2020},
+	note = {Last accessed: April 27, 2020},
 }
 
 % The SHEPPACK numerical software package contains a variety of open source
@@ -1563,7 +1571,7 @@ url = {http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model
 
 % Official MPI 4.1 standard document for distributed computing via a message
 % passing interface in C and Fortran
-@manual{mpi41,
+@techreport{mpi41,
     author = {Message Passing Interface Forum},
     title  = {{MPI}: A Message-Passing Interface Standard},
     number = {version 4.1},
@@ -1578,9 +1586,13 @@ url = {http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model
 % can be downloaded from GitHub.  They also offer limited NUMA support in the
 % latest version
 @misc{onetbb,
+ author={Intel},
  title={{oneAPI} Threading Building Blocks ({oneTBB})},
- author={UXL Foundation},
- url={https://uxlfoundation.github.io/oneTBB}
+ year={2025},
+ institution={Intel Corporation},
+ number={release 2022.1.0},
+ url={https://uxlfoundation.github.io/oneTBB},
+ note={Last accessed: Apr 28, 2025},
 }
 
 % Kokkos 3 latest paper from Sandia's CCR lab -- an open source, parallel
@@ -1719,7 +1731,8 @@ series = {FPGA '12}
   year={2024},
   institution={AMD},
   number={Version 2024.1},
-  url={https://docs.amd.com/r/2024.1-English/ug893-vivado-ide}
+  url={https://docs.amd.com/r/2024.1-English/ug893-vivado-ide},
+  note = {Last accessed: Feb 2025},
 }
 
 % VTR docs with a bit more detail than above reference, and latest version (most up-to-date) information
@@ -1731,7 +1744,8 @@ series = {FPGA '12}
   author={VTR~Developers},
   year={2024},
   version={Version 8.1.0-dev},
-  url={https://readthedocs.org/projects/vtr/downloads/pdf/latest}
+  url={https://readthedocs.org/projects/vtr/downloads/pdf/latest},
+  note = {Last accessed: Feb 2025},
 }
 
 % Official documentation and techreport for the widely-used multilevel

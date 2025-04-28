@@ -18,6 +18,7 @@
 	year = {2018},
 	number = {0.3.13},
 	url = {http://github.com/google/jax},
+    note = {Last accessed: Jul 2024},
 }
 
 % The new classic textbook on geometric deep learning -- this book (by the
@@ -64,6 +65,7 @@
 	title = {Keras},
 	year = {2015},
 	howpublished = {\url{https://keras.io}},
+    note = {Last accessed: Nov 2023},
 }
 
 % Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
@@ -381,6 +383,7 @@ url={https://openreview.net/forum?id=Sy8gdB9xx}
   author={Yann, LeCun},
   year={1998},
   url = {yann.lecun.com/exdb/mnist},
+  note = {Last accessed: Apr 2025},
 }
 
 % The official techreport for the CIFAR-10 dataset -- one of the next most
@@ -549,6 +552,7 @@ url={https://openreview.net/forum?id=Sy8gdB9xx}
   publisher = {GitHub},
   howpublished = {GitHub repository},
   url = {https://github.com/openai/baselines},
+  note = {Last accessed: Apr 2025},
 }
 
 % The largest repository of open source AI, machine learning, and control
@@ -766,13 +770,11 @@ series = {ICML '04}
 % adaptive learning rate in each dimension).  The author uses RMSProp to train
 % a recurrent neural network (RNN) with long short-term memory (LSTM) in order
 % to generate handwritten digits
-@misc{graves2014generatingsequencesrecurrentneural,
+@techreport{graves2014generatingsequencesrecurrentneural,
       title={Generating Sequences With Recurrent Neural Networks},
       author={Alex Graves},
       year={2014},
-      eprint={1308.0850},
-      archivePrefix={arXiv},
-      primaryClass={cs.NE},
+      institution={arXiv cs.NE preprint},
       url={https://arxiv.org/abs/1308.0850},
 }
 
@@ -920,6 +922,51 @@ series = {ICML '04}
   url = 	 {https://proceedings.mlr.press/v202/gao23h.html},
 }
 
+% The authors take a 137B parameter foundational LLM and fine tune if for about
+% 60 types of instruction-based tasks (they refer to this as "instruction tuning").
+% Then they evaluate the model on task types not in the training list, and it
+% performs adequately.  They claim this shows that LLMs are zero-shot learners.
+% I think this may be a stretch as the tasks likely have a lot of overlapping
+% similarities.  However, the idea that LLMs can complete semi-related but new
+% tasks (not in the training data) is obviously true to anyone who has used
+% one.
+@inproceedings{wei2022finetuned,
+title={Finetuned Language Models are Zero-Shot Learners},
+author={Jason Wei and Maarten Bosma and Vincent Zhao and Kelvin Guu and Adams Wei Yu and Brian Lester and Nan Du and Andrew M. Dai and Quoc V Le},
+booktitle={International Conference on Learning Representations (ICLR 2022)},
+year={2022},
+url={https://openreview.net/forum?id=gEZrGCozdqR},
+}
+
+% Original publication on "chain of thought" (CoT) reasoning in LLMs, based on
+% the observation that when prompted to solve complex logic problems in
+% multiple small steps (with no fine tuning), language models achieve better
+% performance than when directly prompted for the solution.  This discovery is
+% important, as it would lead to the release of numerous "reasoning models,"
+% which generate long CoT discussions within a <think> ... </think> (or
+% similar) block.  The authors claim that these chains of thoughts mimic a
+% human reasoning process, but acknowledge that this may not actually be
+% indicative of any emergent reasoning behavior in the network (which I believe
+% is the correct take).  It seems natural to me that the model is better able
+% to succeed on simple logic problems, and is also able to use the previous
+% state (i.e.,the solution to the previous small problem) to make another small
+% logical step.  That process actually is a form of reasoning, but when
+% prompted or fine-tuned to encourage this behavior, it becomes unclear whether
+% we can call that true reasoning.
+@inproceedings{10.5555/3600270.3602070,
+author = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed H. and Le, Quoc V. and Zhou, Denny},
+title = {Chain-of-thought prompting elicits reasoning in large language models},
+year = {2022},
+isbn = {9781713871088},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+booktitle = {Proceedings of the 36th International Conference on Neural Information Processing Systems},
+articleno = {1800},
+numpages = {14},
+location = {New Orleans, LA, USA},
+url={https://openreview.net/forum?id=_VjQlMeSB_J},
+}
+
 % DeepSeek-V3 technical report:  DeepSeek-V3 is the first open source model to
 % obtain performance on par with closed source models.  The architecture is
 % transformer based with multi-headed latent attention applied to a mixture of
@@ -940,6 +987,7 @@ series = {ICML '04}
 % which they use to hide latency.  The model is trained in FP8 and mixed
 % precision.  The weight checkpoints are publicly available at:
 % https://github.com/deepseek-ai/DeepSeek-V3
+% TODO: read this report carefully
 @techreport{liu2024deepseek,
   title={{DeepSeek-V3} technical report},
   author={Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others},
@@ -948,8 +996,9 @@ series = {ICML '04}
   doi={https://doi.org/10.48550/arXiv.2412.19437},
 }
 
-% DeepSeekMath: TODO -- Haven't read yet, but describes how DeepSeek's
-% mathematical specialist model was trained
+% DeepSeekMath: Describes how DeepSeek's mathematical specialist model was
+% trained
+% TODO: read this report carefully
 @techreport{shao2024deepseekmath,
   title={{DeepSeekMath}: Pushing the limits of mathematical reasoning in open language models},
   author={Shao, Zhihong and Wang, Peiyi and Zhu, Qihao and Xu, Runxin and Song, Junxiao and Bi, Xiao and Zhang, Haowei and Zhang, Mingchuan and Li, YK and Wu, Y and others},
@@ -1011,10 +1060,10 @@ series = {ICML '04}
 % with data from the training set.  An open source Python interface is
 % available at:  github.com/LiveCodeBench/LiveCodeBench  Submissions to the
 % leaderboard are made via pull request to github.com/LiveCodeBench/submissions
-@article{jain2024livecodebench,
+@techreport{jain2024livecodebench,
     title={{LiveCodeBench}: Holistic and Contamination Free Evaluation of Large Language Models for Code},
     author={Jain, Naman and Han, King and Gu, Alex and Li, Wen-Ding and Yan, Fanjia and Zhang, Tianjun and Wang, Sida and Solar-Lezama, Armando and Sen, Koushik and Stoica, Ion},
-    journal={arXiv preprint arXiv:2403.07974},
+    institution={arXiv preprint arXiv:2403.07974},
     year={2024},
     doi = {10.48550/arXiv.2403.07974},
 }
@@ -1065,6 +1114,7 @@ url={https://openreview.net/forum?id=3MW8GKNyzI},
 % Math-Shepherd paper describing how the Math-Shepherd model was trained via
 % RLHF to evaluate each step in a LLM's logical process.  The resulting model
 % can be used to validate other LLM's mathematical and reasoning skills.
+% TODO: read this report carefully
 @inproceedings{wangLSXDLCWS24,
   author={Peiyi Wang and Lei Li and Zhihong Shao and Runxin Xu and Damai Dai and Yifei Li and Deli Chen and Yu Wu and Zhifang Sui},
   title={Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations},
@@ -1103,6 +1153,7 @@ url={https://openreview.net/forum?id=3MW8GKNyzI},
 % share performance on common benchmarks.  The model architectures and
 % instructions to download the weights (form HuggingFace) are obtained from
 % github.com/meta-llama/llama
+% TODO: read this report carefully
 @techreport{touvron2023llama,
   title={{LLaMA}: Open and efficient foundation language models},
   author={Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne and Lacroix, Timoth{\'e}e and Rozi{\`e}re, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and others},
@@ -1116,10 +1167,11 @@ url={https://openreview.net/forum?id=3MW8GKNyzI},
 % features.  The latest models range from 7B to 70B total parameters.
 % The model architectures and instructions to download the weights (form
 % HuggingFace) are obtained from github.com/meta-llama/llama
-@article{touvron2023llama,
+% TODO: read this report carefully
+@techreport{touvron2023llama,
   title={{LLaMA} 2: Open foundation and fine-tuned chat models},
   author={Touvron, Hugo and Martin, Louis and Stone, Kevin and Albert, Peter and Almahairi, Amjad and Babaei, Yasmine and Bashlykov, Nikolay and Batra, Soumya and Bhargava, Prajjwal and Bhosale, Shruti and others},
-  journal={arXiv preprint arXiv:2307.09288},
+  institution={arXiv preprint arXiv:2307.09288},
   year={2023}
 }
 
@@ -1129,10 +1181,27 @@ url={https://openreview.net/forum?id=3MW8GKNyzI},
 % GPT-4 from OpenAI.
 % The model architectures and instructions to download the weights (form
 % HuggingFace) are obtained from github.com/meta-llama/llama
-@article{grattafiori2024llama,
+% TODO: read this report carefully, especially the training details, I have only skimmed
+@techreport{grattafiori2024llama,
   title={The {LLaMA} 3 herd of models},
   author={Grattafiori, Aaron and Dubey, Abhimanyu and Jauhri, Abhinav and Pandey, Abhinav and Kadian, Abhishek and Al-Dahle, Ahmad and Letman, Aiesha and Mathur, Akhil and Schelten, Alan and Vaughan, Alex and others},
-  journal={arXiv preprint arXiv:2407.21783},
+  institution={arXiv preprint arXiv:2407.21783},
   year={2024},
   url={https://arxiv.org/abs/2407.21783},
+}
+
+% The original Google Gemini tech report.  The model is closed, so this is not
+% that useful, but they discuss the architecture.  There is an interesting
+% contribution to architecture, where they utilize heterogeneous encoders from
+% text, speech, video, and images into the same latent space, then feed these
+% encoded tokens (in sequence) to a transformer-based decoder-only model, then
+% pass its output to either an image or text decoder to generate the next
+% token.
+% TODO: read this report carefully, especially the architecture details.
+@techreport{team2023gemini,
+  title={Gemini: a family of highly capable multimodal models},
+  author={Team, Gemini and Anil, Rohan and Borgeaud, Sebastian and Alayrac, Jean-Baptiste and Yu, Jiahui and Soricut, Radu and Schalkwyk, Johan and Dai, Andrew M and Hauth, Anja and Millican, Katie and others},
+  institution={arXiv preprint arXiv:2312.11805},
+  year={2023},
+  doi={10.48550/arXiv.2312.11805},
 }
