@@ -18,32 +18,6 @@
 	pages = {469--483},
 }
 
-% Publication showing that (a) interpolating classification and regression data in order to make predictions is often a reasonable thing to do especially in high dimensions (b) Delaunay interpolation is the correct way to do so and (c) using Delaunay interpolation on high dimensional noisy classification data yields predictions whose misclassification risk can be bounded by twice the Bayes risk (theoretical lowest possible risk for the data given) in the limit as the dimension increases
-@inproceedings{belkin2018overfitting,
-	author = {Belkin, Mikhail and Hsu, Daniel and Mitra, Partha P.},
-	title = {Overfitting or perfect fitting? {R}isk bounds for classification and regression rules that interpolate},
-	year = {2018},
-	booktitle = {Proceedings of the 32nd International Conference on Neural Information Processing Systems (NIPS'18)},
-	pages = {2306--2317},
-	organization = {Curran Associates Inc.},
-	location = {Montr{\'e}al, Canada},
-}
-
-% A massive review article on the magic of just interpolating noisy machine learning and deep learning data in high dimensions, and some theorems on why this is acceptable and even desirable as the dimension increases. Delaunay interpolation is spotlighted as one of the interpolation methods to use
-@article{belkin2021fit,
-	author = {Belkin, Mikhail},
-	title = {Fit without fear: remarkable mathematical phenomena of deep learning through the prism of interpolation},
-	year = {2021},
-	month = {5},
-	journal = {Acta Numerica},
-	volume = {30},
-	pages = {203--248},
-	publisher = {Cambridge University Press},
-	doi = {10.1017/S0962492921000039},
-	url = {https://www.cambridge.org/core/product/identifier/S0962492921000039/type/journal_article},
-	issn = {0962-4929},
-}
-
 % A method for constructing Delaunay triangulations incrementally in medium to high dimensions. The key is to only store the Delaunay graph instead of the entire triangulation in order to get around storage issues. Then, simplices are either retrieved from a cache or reconstructed upon request. This dodges the curse of dimensionality in the spatial sense, but the time complexity of constructing the graph is still exponential since they do so by computing every simplex in the triangulation and storing the edges. This is the method used in CGAL, a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
 @inproceedings{boissonnat2009incremental,
 	author = {Boissonnat, Jean-Daniel and Devillers, Olivier and Hornus, Samuel},
@@ -626,22 +600,6 @@ numpages = {21},
 	pages = {63--83},
 }
 
-% SCS is an open source numerical software for solving second-order cone problems from Steph Boyd's lab
-@article{odonoghue2016conic,
-	author = {O'Donoghue, Brendan and Chu, Eric and Parikh, Neal and Boyd, Stephen},
-	title = {Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding},
-	year = {2016},
-	month = {June},
-	journal = {Journal of Optimization Theory and Applications},
-	volume = {169},
-	number = {3},
-	pages = {1042--1068},
-	publisher = {Springer Science and Business Media LLC},
-	doi = {10.1007/s10957-016-0892-3},
-	url = {http://link.springer.com/10.1007/s10957-016-0892-3},
-	issn = {0022-3239},
-}
-
 % An early review paper on methods and algorithms in "geometric learning",
 % i.e., a form of topological data analysis that focuses on the usage of
 % geometric algorithms and modeling for machine learning and data science
@@ -708,22 +666,6 @@ numpages = {21},
 	doi = {10.1007/bf02574375},
 	url = {https://link.springer.com/10.1007/BF02574375},
 	issn = {0179-5376},
-}
-
-% The calculus of simplex gradients: a detailed analysis of simplex gradients and their properties for approximating true gradients when solving derivative-free and blackbox optimization problems
-@article{regis2015calculus,
-	author = {Regis, Rommel G.},
-	title = {The calculus of simplex gradients},
-	year = {2015},
-	month = {6},
-	journal = {Optimization Letters},
-	volume = {9},
-	number = {5},
-	pages = {845--865},
-	publisher = {Springer Science and Business Media LLC},
-	doi = {10.1007/s11590-014-0815-x},
-	url = {http://link.springer.com/10.1007/s11590-014-0815-x},
-	issn = {1862-4472},
 }
 
 % Extremely thorough analysis of using linear models inside a simplex (e.g.,
