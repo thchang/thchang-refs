@@ -502,22 +502,6 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, CNNs, neural networks},
 }
 
-% Original publication on "chain of thought" (CoT) reasoning in LLMs, based on the observation that when prompted to solve complex logic problems in multiple small steps (with no fine tuning), language models achieve better performance than when directly prompted for the solution. This discovery is important, as it would lead to the release of numerous "reasoning models," which generate long CoT discussions within a <think> ... </think> (or similar) block. The authors claim that these chains of thoughts mimic a human reasoning process, but acknowledge that this may not actually be indicative of any emergent reasoning behavior in the network (which I believe is the correct take). It seems natural to me that the model is better able to succeed on simple logic problems, and is also able to use the previous state (i.e.,the solution to the previous small problem) to make another small logical step. That process actually is a form of reasoning, but when prompted or fine-tuned to encourage this behavior, it becomes unclear whether we can call that true reasoning.
-@inproceedings{wei2022,
-author = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed H. and Le, Quoc V. and Zhou, Denny},
-title = {Chain-of-thought prompting elicits reasoning in large language models},
-year = {2022},
-isbn = {9781713871088},
-publisher = {Curran Associates Inc.},
-address = {Red Hook, NY, USA},
-booktitle = {Proceedings of the 36th International Conference on Neural Information Processing Systems},
-articleno = {1800},
-numpages = {14},
-location = {New Orleans, LA, USA},
-url={https://openreview.net/forum?id=_VjQlMeSB_J},
-keywords = {AI, artificial intelligence, machine learning, ML, LLMs},
-}
-
 % DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data (as opposed to using word2vec). Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
 @techreport{liu2024deepseekv3,
 	author = {Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others, },
@@ -883,7 +867,7 @@ keywords = {AI, artificial intelligence, machine learning, ML, LLMs},
 	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, benchmarking},
 }
 
-% The authors take a 137B parameter foundational LLM and fine tune if for about 60 types of instruction-based tasks (they refer to this as "instruction tuning"). Then they evaluate the model on task types not in the training list, and it performs adequately. They claim this shows that LLMs are zero-shot learners. I think this may be a stretch as the tasks likely have a lot of overlapping similarities. However, the idea that LLMs can complete semi-related but new tasks (not in the training data) is obviously true to anyone who has used one.
+% Original publication on "chain of thought" (CoT) reasoning in LLMs The authors take a 137B parameter foundational LLM and fine tune if for about 60 types of instruction-based tasks (they refer to this as "instruction tuning"). Then they evaluate the model on task types not in the training list, and it performs adequately. They claim this shows that LLMs are zero-shot learners. I think this may be a stretch as the tasks likely have a lot of overlapping similarities. However, the idea that LLMs can complete semi-related but new tasks (not in the training data) is obviously true to anyone who has used one.
 @inproceedings{wei2022chainofthought,
 	author = {Wei, Jason and Bosma, Maarten and Zhao, Vincent and Guu, Kelvin and Yu, Adams Wei and Lester, Brian and Du, Nan and Dai, Andrew M. and Le, Quoc V and Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed H. and Le, Quoc V. and Zhou, Denny},
 	title = {Chain-of-thought prompting elicits reasoning in large language models},
