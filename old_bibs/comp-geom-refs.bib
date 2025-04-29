@@ -8,6 +8,20 @@
 	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms, high dimension},
 }
 
+% Official PROX-QP paper -- the best open source QP solver according to several benchmarks. Open source C++ code is availabe through the proxsuite github: https://github.com/Simple-Robotics/proxsuite and a Python interface is available through CvxPy
+@inproceedings{bambade2022proxqp,
+	author = {Bambade, Antoine and El-Kazdadi, Sarah and Taylor, Adrien and Carpentier, Justin},
+	title = {{PROX-QP}: Yet another Quadratic Programming Solver for Robotics and beyond},
+	year = {2022},
+	month = {June},
+	booktitle = {RSS 2022 - Robotics: Science and Systems},
+	organization = {Robotics: Science and Systems Foundation},
+	location = {New York, United States},
+	doi = {10.15607/rss.2022.xviii.040},
+	url = {https://hal.inria.fr/hal-03683733},
+	keywords = {computational geometry, projection},
+}
+
 % The Quickhull algorithm and corresponding numerical software package is one of the best algorithms for computing convex hulls in high dimensions. Since Delaunay triangulations can be obtained by lifting to d+1 dimensional parabola and computing its lower convex hull, Quickhull can also be used to obtain Delaunay triangulations and convex hulls. This is the standard and baseline for high-dimensional Delaunay triangulation, although it seldom scales past 6-7 dimensions before a memory failure occurs, unless the data set is extremely small (exponential time and space complexity in dimension). However, for problems that Quickhull can solve, it's often the fastest and most robust solution. This is also the official reference for the authors' corresponding open source C++ software, which is the default method for Delaunay triangulation and piecewise linear interpolation in scipy.spatial and scipy.interpolate, respectively
 @article{barber1996quickhull,
 	author = {Barber, C. Bradford and Dobkin, David P. and Huhdanpaa, Hannu},
