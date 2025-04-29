@@ -12,10 +12,15 @@
 	author = {Barber, C. Bradford and Dobkin, David P. and Huhdanpaa, Hannu},
 	title = {The {Q}uickhull algorithm for convex hulls},
 	year = {1996},
+	month = {12},
 	journal = {ACM Transactions on Mathematical Software},
 	volume = {22},
 	number = {4},
 	pages = {469--483},
+	publisher = {Association for Computing Machinery (ACM)},
+	doi = {10.1145/235815.235821},
+	url = {https://dl.acm.org/doi/10.1145/235815.235821},
+	issn = {0098-3500},
 }
 
 % A method for constructing Delaunay triangulations incrementally in medium to high dimensions. The key is to only store the Delaunay graph instead of the entire triangulation in order to get around storage issues. Then, simplices are either retrieved from a cache or reconstructed upon request. This dodges the curse of dimensionality in the spatial sense, but the time complexity of constructing the graph is still exponential since they do so by computing every simplex in the triangulation and storing the edges. This is the method used in CGAL, a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
@@ -48,28 +53,15 @@
 	issn = {0010-4620},
 }
 
-% The famous textbook on convex optimization (from which I learned most
-% concepts) covering concepts such as basic convexity definitions and theorems,
-% basic algorithms and optimality conditions, handling constraints, Lagrangian
-% duality, multiobjective optimization basics, gradient descent and newton's
-% method, sequential quadratic programming, linear programming, and a few
-% applications and modeling basics
+% The famous textbook on convex optimization (from which I learned most concepts) covering concepts such as basic convexity definitions and theorems, basic algorithms and optimality conditions, handling constraints, Lagrangian duality, multiobjective optimization basics, gradient descent and newton's method, sequential quadratic programming, linear programming, and a few applications and modeling basics
 @book{boyd2004convex,
-  title={Convex optimization},
-  author={Boyd, Stephen P and Vandenberghe, Lieven},
-  year={2004},
-  publisher={Cambridge university press}
+	author = {Boyd, Stephen P and Vandenberghe, Lieven},
+	title = {Convex optimization},
+	year = {2004},
+	publisher = {Cambridge university press},
 }
 
-% An algorithm paper on how to compute the umbrella neighborhood of a single
-% point in the Delaunay triangulation.  The idea is to sample a single vertex,
-% generate a single simplex using DelaunaySparse, then pivot across open facets
-% without dropping the center point.  We pivot until we've closed all open
-% facets (therefore, we need to keep track of all open facets).  This algorithm
-% works beautifully for points in general position, but often fails for
-% degenerate sets since we may sample points from conflicting triangulations,
-% therefore failing to close all facets.  It was abandoned in favor of
-% computing the Delaunay graph when creating VTMOP.
+% An algorithm paper on how to compute the umbrella neighborhood of a single point in the Delaunay triangulation. The idea is to sample a single vertex, generate a single simplex using DelaunaySparse, then pivot across open facets without dropping the center point. We pivot until we've closed all open facets (therefore, we need to keep track of all open facets). This algorithm works beautifully for points in general position, but often fails for degenerate sets since we may sample points from conflicting triangulations, therefore failing to close all facets. It was abandoned in favor of computing the Delaunay graph when creating VTMOP.
 @inproceedings{chang2018computing,
 	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Tyler C. H. and Raghvendra, Sharath and Li, Bo and Xu, Li and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Computing the umbrella neighbourhood of a vertex in the {D}elaunay triangulation and a single {V}oronoi cell in arbitrary dimension},
@@ -135,14 +127,24 @@
 	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
 }
 
-% A great article on the optimality of Delaunay triangulations for
-% interpolation.  The authors show that the Delaunay triangulation can be
-% equivalently defined as the interpolation mesh that minimizes interpolation
-% error for the perfect quadratic function f(x) = <x, x>.  Then, they explore
-% how we can define new metrics to yield a new Delaunay triangulation that is
-% optimal for an arbitrary function.  Ultimatey, it is hard to compute such
-% Delaunay triangulations, so they explore relaxations and definitions of
-% "nearly optimal" Delaunay triangulations.
+% An update to DelaunaySparse where we use BQPD to solve the problem of projection onto the convex hull. We rigorously show that this is the only method that achieves a 100% success rate among open source quadratic programming / NNLS solvers for this size and shape of problem. Then we demonstrate robustness on synthetic test problems and real applications from computer security
+@article{chang2024remark,
+	author = {Chang, Tyler H. and Watson, Layne T. and Leyffer, Sven and Lux, Thomas C. H. and Almohri, Hussain M. J.},
+	title = {Remark on {Algorithm} 1012: Computing projections with large data sets},
+	year = {2024},
+	month = {6},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {50},
+	number = {2},
+	articleno = {12},
+	numpages = {8},
+	publisher = {Association of Computing Machinery},
+	doi = {10.1145/3656581},
+	url = {https://dl.acm.org/doi/10.1145/3656581},
+	issn = {0098-3500},
+}
+
+% A great article on the optimality of Delaunay triangulations for interpolation. The authors show that the Delaunay triangulation can be equivalently defined as the interpolation mesh that minimizes interpolation error for the perfect quadratic function f(x) = <x, x>. Then, they explore how we can define new metrics to yield a new Delaunay triangulation that is optimal for an arbitrary function. Ultimatey, it is hard to compute such Delaunay triangulations, so they explore relaxations and definitions of "nearly optimal" Delaunay triangulations.
 @article{chen2004optimal,
 	author = {Chen, Long and Xu, Jin-chao},
 	title = {Optimal {D}elaunay triangulations},
@@ -163,9 +165,7 @@
 	address = {Boca Raton, FL, USA},
 }
 
-% An approximation algorithm for computing Czech complexes (a type of
-% approximation to Delaunay triangulations) which may be scalble to high
-% dimensions
+% An approximation algorithm for computing Czech complexes (a type of approximation to Delaunay triangulations) which may be scalble to high dimensions
 @article{choudhary2019polynomialsized,
 	author = {Choudhary, Aruni and Kerber, Michael and Raghvendra, Sharath},
 	title = {Polynomial-sized topological approximations using the permutahedron},
@@ -279,28 +279,23 @@
 	url = {http://portal.acm.org/citation.cfm?doid=73833.73850},
 }
 
-% Edelsbrunner's famous simulation of simplicity: introducing minimal
-% perturbations to real-world datasets to ensure general position.  This allows
-% us to use non robust computational geometry algorithms without worrying about
-% handling degeneracy.  The method is a bit too expensive for high-dimensional
-% problems, but standard for lower-dimensional problems.
+% Edelsbrunner's famous simulation of simplicity: introducing minimal perturbations to real-world datasets to ensure general position. This allows us to use non robust computational geometry algorithms without worrying about handling degeneracy. The method is a bit too expensive for high-dimensional problems, but standard for lower-dimensional problems.
 @article{edelsbrunner1990simulation,
-  title={Simulation of simplicity: a technique to cope with degenerate cases in geometric algorithms},
-  author={Edelsbrunner, Herbert and M{\"u}cke, Ernst Peter},
-  journal={ACM Transactions on Graphics (tog)},
-  volume={9},
-  number={1},
-  pages={66--104},
-  year={1990},
-  publisher={ACM New York, NY, USA}
+	author = {Edelsbrunner, Herbert and M{\"u}cke, Ernst Peter},
+	title = {Simulation of simplicity: a technique to cope with degenerate cases in geometric algorithms},
+	year = {1990},
+	month = {1},
+	journal = {ACM Transactions on Graphics (tog)},
+	volume = {9},
+	number = {1},
+	pages = {66--104},
+	publisher = {ACM New York, NY, USA},
+	doi = {10.1145/77635.77639},
+	url = {https://dl.acm.org/doi/10.1145/77635.77639},
+	issn = {0730-0301},
 }
 
-% The famous sweepline algorithm for computing Delaunay triangulations and
-% Voronoi tesselations in 2D.  Works by computing a "beachline" of parabolas
-% whose focii are the points on the current boundary of the Delaunay
-% triangulation.  Any simplices in the triangulation beyond the beachline are
-% "finalized" and those vertices need not be considered when adding new points
-% into the triangulation.  Results in a O(n log n) sweepline algorithm
+% The famous sweepline algorithm for computing Delaunay triangulations and Voronoi tesselations in 2D. Works by computing a "beachline" of parabolas whose focii are the points on the current boundary of the Delaunay triangulation. Any simplices in the triangulation beyond the beachline are "finalized" and those vertices need not be considered when adding new points into the triangulation. Results in a O(n log n) sweepline algorithm
 @article{fortune1987sweepline,
 	author = {Fortune, Steven},
 	title = {A sweepline algorithm for {V}oronoi diagrams},
@@ -327,12 +322,7 @@
 	note = {Retrieved [November 16, 2022]},
 }
 
-% Introducing a Delaunay density diagnostic -- using the Delaunay interpolant
-% to calculate whether they have enough data to resolve the geometry of a
-% problem for interpolation in the context of SciML.  Essentially, they use
-% DelaunaySparse to make predictions and slowly add data.  Once they have
-% enough data, the predictions begin converging at a linear rate.  Then they
-% have enough data to use whatever method they want to solve the problem
+% Introducing a Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
 @techreport{gillette2022datadriven,
 	author = {Gillette, Andrew and Kur, Eugene},
 	title = {Data-driven geometric scale detection via Delaunay interpolation},
@@ -340,26 +330,21 @@
 	institution = {arXiv math.NA},
 }
 
-% Open source numerical software for the Delaunay density diagnostic -- using
-% the Delaunay interpolant to calculate whether they have enough data to
-% resolve the geometry of a problem for interpolation in the context of SciML.
-% Essentially, they use DelaunaySparse to make predictions and slowly add data.
-% Once they have enough data, the predictions begin converging at a linear
-% rate.  Then they have enough data to use whatever method they want to solve
-% the problem
+% Open source numerical software for the Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
 @article{gillette2024algorithm,
-author = {Gillette, Andrew and Kur, Eugene},
-title = {Algorithm 1049: The Delaunay Density Diagnostic},
-year = {2024},
-publisher = {Association for Computing Machinery},
-volume = {50},
-number = {4},
-issn = {0098-3500},
-url = {https://doi.org/10.1145/3700134},
-doi = {10.1145/3700134},
-journal = {ACM Trans. Math. Softw.},
-articleno = {24},
-numpages = {21},
+	author = {Gillette, Andrew and Kur, Eugene},
+	title = {Algorithm 1049: The Delaunay Density Diagnostic},
+	year = {2024},
+	month = {12},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {50},
+	number = {4},
+	articleno = {24},
+	numpages = {21},
+	publisher = {Association for Computing Machinery},
+	doi = {10.1145/3700134},
+	url = {https://doi.org/10.1145/3700134},
+	issn = {0098-3500},
 }
 
 % Theorems on the curse of dimensionality when it comes to drawing data points in high-dimensional spaces. The main theorem implies that the convex hull of N points in D dimensions has volume ~0 for D sufficiently large -- this occurs because of a concentration of measure type result
@@ -410,11 +395,7 @@ numpages = {21},
 	issn = {0028-0836},
 }
 
-% The official CGAL User Guide docs page for computing high-dimensional convex
-% hulls and Delaunay triangulations. CGAL is a standard numerical software
-% package for using computational geometry data structures and algorithms in
-% perfect precision (via symbolic arithmetic). CGAL is a header-only open
-% source C++ library
+% The official CGAL User Guide docs page for computing high-dimensional convex hulls and Delaunay triangulations. CGAL is a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
 @incollection{hert2020convex,
 	author = {Hert, Susan and Seel, Michael},
 	title = {{dD} Convex Hulls and {D}elaunay Triangulations},
@@ -467,10 +448,7 @@ numpages = {21},
 	pages = {159--175},
 }
 
-% A counter example showing that the worst-case size of the Delaunay
-% triangulation and Voronoi diagram is always exponential in the dimension.
-% The example is somewhat similar to the Klee-Minty cube from linear
-% programming.
+% A counter example showing that the worst-case size of the Delaunay triangulation and Voronoi diagram is always exponential in the dimension. The example is somewhat similar to the Klee-Minty cube from linear programming.
 @article{klee1980complexity,
 	author = {Klee, Victor},
 	title = {On the complexity of d-dimensional {V}oronoi diagrams},
@@ -486,10 +464,7 @@ numpages = {21},
 	issn = {0003-889X},
 }
 
-% A paper on the Delaunay triangulation learner -- an alternative to ReLU
-% multilayer perceptrons where they fit a Delaunay triangulation to a small set
-% of nodes and then train the response values of those nodes to make the
-% Delaunay interpolant match the data
+% A paper on the Delaunay triangulation learner -- an alternative to ReLU multilayer perceptrons where they fit a Delaunay triangulation to a small set of nodes and then train the response values of those nodes to make the Delaunay interpolant match the data
 @inproceedings{liu2019nonparametric,
 	author = {Liu, Yehong and Yin, Guosheng},
 	title = {Nonparametric functional approximation with {D}elaunay triangulation learner},
@@ -503,10 +478,22 @@ numpages = {21},
 	url = {https://ieeexplore.ieee.org/document/8944414},
 }
 
-% Using various interpolation, neural networks, and other scientific machine
-% learning methods to predict and model HPC performance based on system
-% configuration parameters -- explores Delaunay interpolation, support vector
-% regressors, Shepard's method, and multilayer perceptrons
+% Thomas' thorough survey paper on useful meshes and their properties for multivariate interpolation
+@inproceedings{lux2018novel,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Yao, Danfeng and Hong, Yili},
+	title = {Novel meshes for multivariate interpolation and approximation},
+	year = {2018},
+	month = {3},
+	booktitle = {Proc. 2018 ACM Southeast Conference (ACMSE '18)},
+	articleno = {13},
+	numpages = {7},
+	organization = {Association of Computing Machinery},
+	location = {Richmond, KY, USA},
+	doi = {10.1145/3190645.3190687},
+	url = {https://dl.acm.org/doi/10.1145/3190645.3190687},
+}
+
+% Using various interpolation, neural networks, and other scientific machine learning methods to predict and model HPC performance based on system configuration parameters -- explores Delaunay interpolation, support vector regressors, Shepard's method, and multilayer perceptrons
 @inproceedings{lux2018predictive,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Predictive modeling of {I/O} characteristics in high performance computing systems},
@@ -517,11 +504,7 @@ numpages = {21},
 	location = {Baltimore, MD, USA},
 }
 
-% Error bounds for piecewise linear interpolation within a simplex (i.e.,
-% Delaunay interpolation error bounds) for scattered data.  Also, critically,
-% empirical evidence that you can just interpolate noisy data and it does
-% just as well as true regression in high dimensions.  First hand evidence that
-% feeds my opinion that "overfitting is a lie"
+% Error bounds for piecewise linear interpolation within a simplex (i.e., Delaunay interpolation error bounds) for scattered data. Also, critically, empirical evidence that you can just interpolate noisy data and it does just as well as true regression in high dimensions. First hand evidence that feeds my opinion that "overfitting is a lie"
 @article{lux2021interpolation,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Interpolation of sparse high-dimensional data},
@@ -535,20 +518,6 @@ numpages = {21},
 	doi = {10.1007/s11075-020-01040-2},
 	url = {https://link.springer.com/10.1007/s11075-020-01040-2},
 	issn = {1017-1398},
-}
-
-% Thomas' thorough survey paper on useful meshes and their properties for
-% multivariate interpolation
-@inproceedings{lux2018novel,
-  author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Yao, Danfeng and Hong, Yili},
-  title = {Novel meshes for multivariate interpolation and approximation},
-  year = {2018},
-  booktitle = {Proc. 2018 ACM Southeast Conference (ACMSE '18)},
-  articleno = {13},
-  numpages = {7},
-  location = {Richmond, KY, USA},
-  organization = {Association of Computing Machinery},
-  doi = {10.1145/3190645.3190687}
 }
 
 % Algorithms and theorems on the difficulty of finding basic solutions for linear programming problems
@@ -567,8 +536,7 @@ numpages = {21},
 	issn = {0899-1499},
 }
 
-% How to construct meshes whose size only grows linearly (expected space) with
-% the dimension
+% How to construct meshes whose size only grows linearly (expected space) with the dimension
 @inproceedings{miller2008linearsize,
 	author = {Miller, G. and Phillips, T. and Sheehy, D.},
 	title = {Linear-size meshes},
@@ -587,9 +555,7 @@ numpages = {21},
 	publisher = {Verlag von Johann Ambrosius Barth},
 }
 
-% An early paper on simplex walks for locating which element of a Delaunay
-% triangulation contains a point (after the triangulation has already been
-% precomputed and stored)
+% An early paper on simplex walks for locating which element of a Delaunay triangulation contains a point (after the triangulation has already been precomputed and stored)
 @article{mucke1999fast,
 	author = {M{\"u}cke, Ernst P. and Saias, Isaac and Zhu, Binhai},
 	title = {Fast randomized point location without preprocessing in two- and three-dimensional {D}elaunay triangulations},
@@ -600,10 +566,7 @@ numpages = {21},
 	pages = {63--83},
 }
 
-% An early review paper on methods and algorithms in "geometric learning",
-% i.e., a form of topological data analysis that focuses on the usage of
-% geometric algorithms and modeling for machine learning and data science
-% applications
+% An early review paper on methods and algorithms in "geometric learning", i.e., a form of topological data analysis that focuses on the usage of geometric algorithms and modeling for machine learning and data science applications
 @article{omohundro1990geometric,
 	author = {Omohundro, Stephen M.},
 	title = {Geometric learning algorithms},
@@ -619,10 +582,7 @@ numpages = {21},
 	issn = {0167-2789},
 }
 
-% Official docs and reference for the Matlab computational geometry toolbox
-% (numerical software), which includes all of Matlab's built-in tools for
-% computing geometric algorithms and structures, including Delaunay
-% triangulations
+% Official docs and reference for the Matlab computational geometry toolbox (numerical software), which includes all of Matlab's built-in tools for computing geometric algorithms and structures, including Delaunay triangulations
 @techreport{papazafeiropoulos2014matlab,
 	author = {Papazafeiropoulos, George},
 	title = {{MATLAB} Computational Geometry Toolbox version 1.2},
@@ -633,9 +593,7 @@ numpages = {21},
 	note = {Last accessed: April 27, 2020},
 }
 
-% A novel traversal algorithm for high-dimensional Vornoi graphs (or
-% equivalently, a simplex walk algorithm for high-dimensional Delaunay
-% triangulations)
+% A novel traversal algorithm for high-dimensional Vornoi graphs (or equivalently, a simplex walk algorithm for high-dimensional Delaunay triangulations)
 @inproceedings{polianskii2020voronoi,
 	author = {Polianskii, Vladislav and Pokorny, Florian T},
 	title = {Voronoi Graph Traversal in High Dimensions with Applications to Topological Data Analysis and Piecewise Linear Interpolation},
@@ -649,10 +607,7 @@ numpages = {21},
 	url = {https://dl.acm.org/doi/10.1145/3394486.3403266},
 }
 
-% An analysis on whether and how Delaunay triangulations can be optimal in
-% higher dimensional spaces, given that many early optimality conditions had to
-% do with two dimensions (i.e., self-centeredness of elements and minimizing
-% the sum-of-squared edge lengths in the graph only apply in 2D)
+% An analysis on whether and how Delaunay triangulations can be optimal in higher dimensional spaces, given that many early optimality conditions had to do with two dimensions (i.e., self-centeredness of elements and minimizing the sum-of-squared edge lengths in the graph only apply in 2D)
 @article{rajan1994optimality,
 	author = {Rajan, V. T.},
 	title = {Optimality of the {D}elaunay triangulation in {$\R^d$}},
@@ -668,8 +623,7 @@ numpages = {21},
 	issn = {0179-5376},
 }
 
-% Extremely thorough analysis of using linear models inside a simplex (e.g.,
-% tetrahedral meshes) for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
+% Extremely thorough analysis of using linear models inside a simplex (e.g., tetrahedral meshes) for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
 @inproceedings{shewchuk2002what,
 	author = {Shewchuk, Jonathan},
 	title = {What is a good linear finite element? {I}nterpolation, conditioning, anisotropy, and quality measures},
@@ -710,8 +664,7 @@ numpages = {21},
 	issn = {1867-2949},
 }
 
-% A nice summary article (with some performance comparisons) for a wide variety
-% of sequential Delaunay triangulation algorithms in 2D
+% A nice summary article (with some performance comparisons) for a wide variety of sequential Delaunay triangulation algorithms in 2D
 @article{su1997comparison,
 	author = {Su, Peter and Drysdale, Robert L. S.},
 	title = {A comparison of sequential {D}elaunay triangulation algorithms},
@@ -773,21 +726,3 @@ numpages = {21},
 	issn = {0010-4620},
 }
 
-% An update to DelaunaySparse where we use BQPD to solve the problem of
-% projection onto the convex hull.  We rigorously show that this is the only
-% method that achieves a 100% success rate among open source quadratic
-% programming / NNLS solvers for this size and shape of problem.  Then we
-% demonstrate robustness on synthetic test problems and real applications from
-% computer security
-@article{chang2024remark,
-  author = {Chang, Tyler H. and Watson, Layne T. and Leyffer, Sven and Lux, Thomas C. H. and Almohri, Hussain M. J.},
-  title = {Remark on {Algorithm} 1012: Computing projections with large data sets},
-  year = {2024},
-  journal = {ACM Transactions on Mathematical Software},
-  volume = {50},
-  number = {2},
-  articleno = {12},
-  numpages = {8},
-  publisher = {Association of Computing Machinery},
-  doi = {10.1145/3656581},
-}
