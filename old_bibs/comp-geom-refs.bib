@@ -5,6 +5,7 @@
 	year = {2013},
 	publisher = {World Scientific Publishing Co.},
 	address = {Hackensack, NJ, USA},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms, high dimension},
 }
 
 % The Quickhull algorithm and corresponding numerical software package is one of the best algorithms for computing convex hulls in high dimensions. Since Delaunay triangulations can be obtained by lifting to d+1 dimensional parabola and computing its lower convex hull, Quickhull can also be used to obtain Delaunay triangulations and convex hulls. This is the standard and baseline for high-dimensional Delaunay triangulation, although it seldom scales past 6-7 dimensions before a memory failure occurs, unless the data set is extremely small (exponential time and space complexity in dimension). However, for problems that Quickhull can solve, it's often the fastest and most robust solution. This is also the official reference for the authors' corresponding open source C++ software, which is the default method for Delaunay triangulation and piecewise linear interpolation in scipy.spatial and scipy.interpolate, respectively
@@ -21,6 +22,7 @@
 	doi = {10.1145/235815.235821},
 	url = {https://dl.acm.org/doi/10.1145/235815.235821},
 	issn = {0098-3500},
+	keywords = {computational geometry, Delaunay triangulation, interpolation, algorithms, convex hull, high dimension},
 }
 
 % A method for constructing Delaunay triangulations incrementally in medium to high dimensions. The key is to only store the Delaunay graph instead of the entire triangulation in order to get around storage issues. Then, simplices are either retrieved from a cache or reconstructed upon request. This dodges the curse of dimensionality in the spatial sense, but the time complexity of constructing the graph is still exponential since they do so by computing every simplex in the triangulation and storing the edges. This is the method used in CGAL, a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
@@ -35,6 +37,7 @@
 	location = {Aarhus, Denmark},
 	doi = {10.1145/1542362.1542403},
 	url = {https://dl.acm.org/doi/10.1145/1542362.1542403},
+	keywords = {computational geometry, Delaunay triangulation, algorithms, high dimension},
 }
 
 % The Bowyer-Watson algorithm is one of the first algorithms for computing Delaunay triangulations in arbitrary dimensions. It is not particularly scalable, but a first step toward thinking about Delaunay triangulation in more than 3D. Was published by both Bowyer and Watson in the same issue of the same journal, with a footnote from the publisher that they both submitted at the same time and after investigation, it was determined that this was purely coincidental and no plagiarism was involved. Therefore, both papers were published together and both authors are credited equally for discovery
@@ -51,6 +54,7 @@
 	doi = {10.1093/comjnl/24.2.162},
 	url = {https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/24.2.162},
 	issn = {0010-4620},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
 % The famous textbook on convex optimization (from which I learned most concepts) covering concepts such as basic convexity definitions and theorems, basic algorithms and optimality conditions, handling constraints, Lagrangian duality, multiobjective optimization basics, gradient descent and newton's method, sequential quadratic programming, linear programming, and a few applications and modeling basics
@@ -59,6 +63,7 @@
 	title = {Convex optimization},
 	year = {2004},
 	publisher = {Cambridge university press},
+	keywords = {computational geometry, algorithms, projection},
 }
 
 % An algorithm paper on how to compute the umbrella neighborhood of a single point in the Delaunay triangulation. The idea is to sample a single vertex, generate a single simplex using DelaunaySparse, then pivot across open facets without dropping the center point. We pivot until we've closed all open facets (therefore, we need to keep track of all open facets). This algorithm works beautifully for points in general position, but often fails for degenerate sets since we may sample points from conflicting triangulations, therefore failing to close all facets. It was abandoned in favor of computing the Delaunay graph when creating VTMOP.
@@ -73,6 +78,7 @@
 	location = {St. Petersburg, FL, USA},
 	doi = {10.1109/secon.2018.8479003},
 	url = {https://ieeexplore.ieee.org/document/8479003},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms},
 }
 
 % The official publication for the DelaunaySparse algorithm -- but not the software. This is where the most thorough algorithm analysis and proof of correctness is published -- implementation details and handilng numerical degeneracy are briefly touched on but not detailed (and not yet finalized) until the submission of the TOMS paper
@@ -87,6 +93,7 @@
 	location = {Richmond, KY, USA},
 	doi = {10.1145/3190645.3190680},
 	url = {https://dl.acm.org/doi/10.1145/3190645.3190680},
+	keywords = {computational geometry, Delaunay triangulation, algorithms, high dimension},
 }
 
 % Interpolation errors and runtimes and an early version of the DelaunaySparse algorithm is applied to a HPC performance modeling application
@@ -98,6 +105,7 @@
 	articleno = {2},
 	organization = {SCS},
 	location = {Baltimore, MD, USA},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
 % The DelaunaySparse software, demonstrates how to calculate simplices from a Delauay triangulation in very high dimensions scalably (and in parallel) using a highly customized simplex method like solver. The resulting Fortran numerical software is fully open source with a C and Python interface
@@ -116,6 +124,7 @@
 	doi = {10.1145/3422818},
 	url = {https://dl.acm.org/doi/10.1145/3422818},
 	issn = {0098-3500},
+	keywords = {computational geometry, Delaunay triangulation, algorithms, high dimension},
 }
 
 % My PhD thesis, including multiobjective optimization techniques, algorithm, performance analysis, and software review; description of VTMOP, running parallel simulations, integrating with libE. Also scientific machine learning via Delaunay interpolation and algorithms and proofs for doing so. Several applications related to HPC performance modeling and autotuning.
@@ -125,6 +134,7 @@
 	year = {2020},
 	school = {Virginia Tech, Dept. of Computer Science},
 	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
+	keywords = {computational geometry, Delaunay triangulation, interpolation, algorithms, high dimension},
 }
 
 % An update to DelaunaySparse where we use BQPD to solve the problem of projection onto the convex hull. We rigorously show that this is the only method that achieves a 100% success rate among open source quadratic programming / NNLS solvers for this size and shape of problem. Then we demonstrate robustness on synthetic test problems and real applications from computer security
@@ -142,6 +152,7 @@
 	doi = {10.1145/3656581},
 	url = {https://dl.acm.org/doi/10.1145/3656581},
 	issn = {0098-3500},
+	keywords = {computational geometry, Delaunay triangulation, algorithms, projection, convex hull, high dimension},
 }
 
 % A great article on the optimality of Delaunay triangulations for interpolation. The authors show that the Delaunay triangulation can be equivalently defined as the interpolation mesh that minimizes interpolation error for the perfect quadratic function f(x) = <x, x>. Then, they explore how we can define new metrics to yield a new Delaunay triangulation that is optimal for an arbitrary function. Ultimatey, it is hard to compute such Delaunay triangulations, so they explore relaxations and definitions of "nearly optimal" Delaunay triangulations.
@@ -153,6 +164,7 @@
 	volume = {22},
 	number = {2},
 	pages = {299--308},
+	keywords = {computational geometry, Delaunay triangulation, interpolation},
 }
 
 % Another textbook on Delaunay triangulations in the context of mesh generation. This book is less thorough than the book by Aurenhammer in terms of theory, but a bit more complete in its coverage and analysis of modern algorithms, including the often forgotten gift-wrapping algorithm, which forms the basis for several operations in DelaunaySparse. This book also has some interesting algorithms and analysis that are specific to mesh generation.
@@ -163,9 +175,10 @@
 	series = {Computer and Information Science Series},
 	publisher = {CRC Press},
 	address = {Boca Raton, FL, USA},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
-% An approximation algorithm for computing Czech complexes (a type of approximation to Delaunay triangulations) which may be scalble to high dimensions
+% An algorithm for approximating Cech complexes (a type of simplicial complex) in high dimensions
 @article{choudhary2019polynomialsized,
 	author = {Choudhary, Aruni and Kerber, Michael and Raghvendra, Sharath},
 	title = {Polynomial-sized topological approximations using the permutahedron},
@@ -179,6 +192,7 @@
 	doi = {10.1007/s00454-017-9951-2},
 	url = {http://link.springer.com/10.1007/s00454-017-9951-2},
 	issn = {0179-5376},
+	keywords = {computational geometry, algorithms, high dimension},
 }
 
 % The DeWall algorithm is a divide-and-conquer algorithm for computing Delaunay triangulations in arbitrary dimensions. The idea is to build a wall of Delaunay simplices bisecting the space using a variation of the gift-wrapping algorithm. Then, each half can be triangulated separately (and possibly in parallel) an attempt to reproduce these results and parallelize the algorithm was what originally spawned the idea for DelaunaySparse
@@ -195,6 +209,7 @@
 	doi = {10.1016/s0010-4485(97)00082-1},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0010448597000821},
 	issn = {0010-4485},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
 % Dantzig's original (landmark) textbook on solving linear programming problems via the simplex method. This was obviously a landmark achievement in how to solve linear programming problems and more generally in the field of numerical optimization
@@ -206,6 +221,7 @@
 	edition = {11},
 	publisher = {Princeton University Press},
 	address = {Princeton, NJ, USA},
+	keywords = {computational geometry},
 }
 
 % A common (standard) textbook on computational geometry covering all basic definitions, data structures, algorithms, proofs of correctness, time and space complexity analyses, and applications. This is the textbook that I used in grad school when learning computational geometry
@@ -216,6 +232,7 @@
 	edition = {3},
 	publisher = {Springer-Verlag, TELOS},
 	address = {Santa Clara, CA, USA},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms, projection, convex hull},
 }
 
 % Original reference for Delaunay triangulations -- I have not read this, it's in French, but this is the proper way to cite the original idea for Delaunay triangulations
@@ -224,6 +241,7 @@
 	title = {Sur la sph\'ere vide},
 	year = {1934},
 	journal = {Bull. Acad. Science USSR VII: Class. Sci. Math.,},
+	keywords = {computational geometry, Delaunay triangulation},
 }
 
 % One of (if not the) early publication on how to perform various simplex walks (such as a visibility walk) within a triangulation in order to locate target simplices, after the triangulation has already been computed and stored in a standard data structure (such as a simplex list)
@@ -238,6 +256,7 @@
 	location = {Medford, MA, USA},
 	doi = {10.1145/378583.378643},
 	url = {https://dl.acm.org/doi/10.1145/378583.378643},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
 % CVXPY is an open source Python optimization and modeling language for solving convex optimization problems in a disciplined way (meaning that we ensure convexity through hard rules on the problem definition). From the lab of Stephen Boyd
@@ -250,6 +269,7 @@
 	number = {83},
 	pages = {1--5},
 	url = {http://jmlr.org/papers/v17/15-408.html},
+	keywords = {computational geometry},
 }
 
 % ECOS is an open source numerical software for solving second-order cone optimization problems, from the lab of Stephen Boyd. In my experience, this software is the best tool from Boyd's lab and the most robust to degeneracy
@@ -264,6 +284,7 @@
 	location = {Z{\"u}rich, Switzerland},
 	doi = {10.23919/ECC.2013.6669541},
 	url = {https://ieeexplore.ieee.org/document/6669541},
+	keywords = {computational geometry},
 }
 
 % In a general triangulation, most simplex walks including a visibility walk are not guaranteed to converge. I.e., due to poor geometry one could get stuck in an infinite cycle walking in circles. This is related to how Dantzig's simplex method can also get caught in infinite cycles. Edelsbrunner proves that in the special case of Delaunay triangulations, this actually can't happen and so the convergence of the visibility walk is guaranteed
@@ -277,6 +298,7 @@
 	location = {Saarbruchen, West Germany},
 	doi = {10.1145/73833.73850},
 	url = {http://portal.acm.org/citation.cfm?doid=73833.73850},
+	keywords = {computational geometry, Delaunay triangulation},
 }
 
 % Edelsbrunner's famous simulation of simplicity: introducing minimal perturbations to real-world datasets to ensure general position. This allows us to use non robust computational geometry algorithms without worrying about handling degeneracy. The method is a bit too expensive for high-dimensional problems, but standard for lower-dimensional problems.
@@ -293,6 +315,7 @@
 	doi = {10.1145/77635.77639},
 	url = {https://dl.acm.org/doi/10.1145/77635.77639},
 	issn = {0730-0301},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms},
 }
 
 % The famous sweepline algorithm for computing Delaunay triangulations and Voronoi tesselations in 2D. Works by computing a "beachline" of parabolas whose focii are the points on the current boundary of the Delaunay triangulation. Any simplices in the triangulation beyond the beachline are "finalized" and those vertices need not be considered when adding new points into the triangulation. Results in a O(n log n) sweepline algorithm
@@ -309,6 +332,7 @@
 	doi = {10.1007/bf01840357},
 	url = {http://link.springer.com/10.1007/BF01840357},
 	issn = {0178-4617},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms},
 }
 
 % A famous blog post by K. Fukuda on how to efficiently calculate Delaunay simplices (or equivalently, Voronoi cell neighbors) efficiently in high dimensions via geometric programming. This method was never published anywhere but appears to be an often forgotten technique. This only works for points in general position (i.e., non degenerate data sets) in perfect precision, but it is somewhat similar to DelaunaySparse in that both could be considered simplex methods for solving either the primal or dual form of Fukuda's problem -- I have personally implemented the dual form in addition to DelaunaySparse and it is publicly available on GitHub: https://github.com/thchang/DualSimplex However, I could not make this form robust to degeneracy
@@ -320,6 +344,7 @@
 	booktitle = {Polyhedral computation {FAQ} (blog)},
 	url = {http://www.cs.mcgill.ca/~fukuda/soft/polyfaq/polyfaq.html},
 	note = {Retrieved [November 16, 2022]},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithm, projection, convex hull, high dimension},
 }
 
 % Introducing a Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
@@ -328,6 +353,7 @@
 	title = {Data-driven geometric scale detection via Delaunay interpolation},
 	year = {2022},
 	institution = {arXiv math.NA},
+	keywords = {computational geometry, Delaunay triangulation, interpolation},
 }
 
 % Open source numerical software for the Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
@@ -345,6 +371,7 @@
 	doi = {10.1145/3700134},
 	url = {https://doi.org/10.1145/3700134},
 	issn = {0098-3500},
+	keywords = {computational geometry, Delaunay triangulation, interpolation},
 }
 
 % Theorems on the curse of dimensionality when it comes to drawing data points in high-dimensional spaces. The main theorem implies that the convex hull of N points in D dimensions has volume ~0 for D sufficiently large -- this occurs because of a concentration of measure type result
@@ -360,6 +387,7 @@
 	doi = {10.1016/j.neunet.2017.07.014},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0893608017301776},
 	issn = {0893-6080},
+	keywords = {computational geometry, convex hull, high dimension},
 }
 
 % Hanson's Fortran numerical software for solving equality constrained nonnegative least-squares (NNLS) problems via an iterative weighted least squares (WNNLS) solver. This is the default constrained least-squares optimization problem solver in the Fortran library SLATEC from Sandia
@@ -377,22 +405,7 @@
 	doi = {10.1145/356004.356010},
 	url = {https://dl.acm.org/doi/10.1145/356004.356010},
 	issn = {0098-3500},
-}
-
-% The official publication of the open source numerical software numpy: the standard for basic multivariable computations, vector operations, and simple linear algebra in Python
-@article{harris2020array,
-	author = {Harris, Charles R. and Millman, K. Jarrod and Walt, St{\'{e}}fan J. van der and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and Kerkwijk, Marten H. van and Brett, Matthew and Haldane, Allan and R{\'{i}}o, Jaime Fern{\'{a}}ndez del and Wiebe, Mark and Peterson, Pearu and G{\'{e}}rard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.},
-	title = {Array programming with {NumPy}},
-	year = {2020},
-	month = {9},
-	journal = {Nature},
-	volume = {585},
-	number = {7825},
-	pages = {357--362},
-	publisher = {Springer Science and Business Media {LLC}},
-	doi = {10.1038/s41586-020-2649-2},
-	url = {https://www.nature.com/articles/s41586-020-2649-2},
-	issn = {0028-0836},
+	keywords = {computational geometry, projection},
 }
 
 % The official CGAL User Guide docs page for computing high-dimensional convex hulls and Delaunay triangulations. CGAL is a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
@@ -404,6 +417,7 @@
 	edition = {{5.0.2}},
 	publisher = {{CGAL Editorial Board}},
 	url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms, convex hull, high dimension},
 }
 
 % The official publication for HiGHS numerical optimization open source software package and solver for linear programming problems. The first successful effort to parallelize a simplex method based solver, specifically, they have successfully parallelized the dual revised simplex approach. HiGHS is now the default solver in most scipy.optimize. HiGHS is written in C++ with Fortran, C, and Python interfaces -- support CPU and GPU parallelism, the authors don't get perfect scaling by any means but this is the first successful effort to parallelize linear programming and still an achievement
@@ -420,6 +434,7 @@
 	doi = {10.1007/s12532-017-0130-5},
 	url = {http://link.springer.com/10.1007/s12532-017-0130-5},
 	issn = {1867-2949},
+	keywords = {computational geometry},
 }
 
 % Original publication on maximin and minimax designs for design-of-experiments. I.e., minimize the maximum distance from any point in the bounding box to the nearest point in the design, and maximize the minimum distance between any pair of points in the design.
@@ -436,6 +451,7 @@
 	doi = {10.1016/0378-3758(90)90122-B},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/037837589090122B},
 	issn = {0378-3758},
+	keywords = {computational geometry},
 }
 
 % The Klee Minty cube: A famous counterexample showing that for every pivoting strategy for the simplex method, we can construct a pathological problem where that strategy will visit every vertex of the cube before the solution. This proves that the simplex method cannot be used to solve linear programming problems in strongly polynomial time
@@ -446,6 +462,7 @@
 	journal = {Inequalities},
 	volume = {III},
 	pages = {159--175},
+	keywords = {computational geometry},
 }
 
 % A counter example showing that the worst-case size of the Delaunay triangulation and Voronoi diagram is always exponential in the dimension. The example is somewhat similar to the Klee-Minty cube from linear programming.
@@ -462,6 +479,7 @@
 	doi = {10.1007/bf01224932},
 	url = {http://link.springer.com/10.1007/BF01224932},
 	issn = {0003-889X},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, high dimension},
 }
 
 % A paper on the Delaunay triangulation learner -- an alternative to ReLU multilayer perceptrons where they fit a Delaunay triangulation to a small set of nodes and then train the response values of those nodes to make the Delaunay interpolant match the data
@@ -476,6 +494,7 @@
 	location = {Beijing, China},
 	doi = {10.1109/icbk.2019.00030},
 	url = {https://ieeexplore.ieee.org/document/8944414},
+	keywords = {computational geometry, Delaunay triangulation},
 }
 
 % Thomas' thorough survey paper on useful meshes and their properties for multivariate interpolation
@@ -491,6 +510,7 @@
 	location = {Richmond, KY, USA},
 	doi = {10.1145/3190645.3190687},
 	url = {https://dl.acm.org/doi/10.1145/3190645.3190687},
+	keywords = {computational geometry, interpolation, Delaunay triangulation},
 }
 
 % Using various interpolation, neural networks, and other scientific machine learning methods to predict and model HPC performance based on system configuration parameters -- explores Delaunay interpolation, support vector regressors, Shepard's method, and multilayer perceptrons
@@ -502,6 +522,7 @@
 	articleno = {8},
 	organization = {SCS},
 	location = {Baltimore, MD, USA},
+	keywords = {computational geometry, Delaunay triangulation, interpolation},
 }
 
 % Error bounds for piecewise linear interpolation within a simplex (i.e., Delaunay interpolation error bounds) for scattered data. Also, critically, empirical evidence that you can just interpolate noisy data and it does just as well as true regression in high dimensions. First hand evidence that feeds my opinion that "overfitting is a lie"
@@ -518,6 +539,7 @@
 	doi = {10.1007/s11075-020-01040-2},
 	url = {https://link.springer.com/10.1007/s11075-020-01040-2},
 	issn = {1017-1398},
+	keywords = {computational geometry, Delaunay triangulation, interpolation, high dimension},
 }
 
 % Algorithms and theorems on the difficulty of finding basic solutions for linear programming problems
@@ -534,6 +556,7 @@
 	doi = {10.1287/ijoc.3.1.63},
 	url = {https://pubsonline.informs.org/doi/10.1287/ijoc.3.1.63},
 	issn = {0899-1499},
+	keywords = {computational geometry, algorithms},
 }
 
 % How to construct meshes whose size only grows linearly (expected space) with the dimension
@@ -544,6 +567,7 @@
 	booktitle = {Proceedings of the 20th Canadian Conference on Computational Geometry (CCCG 2008)},
 	pages = {175--178},
 	location = {Montr{\'e}al, Qu{\'e}bec},
+	keywords = {computational geometry, algorithms, high dimension},
 }
 
 % Original reference for barycentric weight based interpolation -- I have not read this, it's in German, but this is the proper way to cite barycentric interpolation
@@ -553,6 +577,7 @@
 	year = {1827},
 	pages = {1--388},
 	publisher = {Verlag von Johann Ambrosius Barth},
+	keywords = {computational geometry, Delaunay triangulation, interpolation},
 }
 
 % An early paper on simplex walks for locating which element of a Delaunay triangulation contains a point (after the triangulation has already been precomputed and stored)
@@ -564,6 +589,7 @@
 	volume = {12},
 	number = {1},
 	pages = {63--83},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
 % An early review paper on methods and algorithms in "geometric learning", i.e., a form of topological data analysis that focuses on the usage of geometric algorithms and modeling for machine learning and data science applications
@@ -580,6 +606,7 @@
 	doi = {10.1016/0167-2789(90)90085-4},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/0167278990900854},
 	issn = {0167-2789},
+	keywords = {computational geometry, Delaunay triangulations, algorithms},
 }
 
 % Official docs and reference for the Matlab computational geometry toolbox (numerical software), which includes all of Matlab's built-in tools for computing geometric algorithms and structures, including Delaunay triangulations
@@ -591,6 +618,7 @@
 	institution = {MathWorks},
 	url = {https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox},
 	note = {Last accessed: April 27, 2020},
+	keywords = {computational geometry, Delaunay triangulation, algorithms, convex hull, high dimension},
 }
 
 % A novel traversal algorithm for high-dimensional Vornoi graphs (or equivalently, a simplex walk algorithm for high-dimensional Delaunay triangulations)
@@ -605,6 +633,7 @@
 	location = {Virtual Event CA USA},
 	doi = {10.1145/3394486.3403266},
 	url = {https://dl.acm.org/doi/10.1145/3394486.3403266},
+	keywords = {computational geometry, Delaunay triangulation, Voronoi diagram, algorithms, high dimension},
 }
 
 % An analysis on whether and how Delaunay triangulations can be optimal in higher dimensional spaces, given that many early optimality conditions had to do with two dimensions (i.e., self-centeredness of elements and minimizing the sum-of-squared edge lengths in the graph only apply in 2D)
@@ -621,6 +650,7 @@
 	doi = {10.1007/bf02574375},
 	url = {https://link.springer.com/10.1007/BF02574375},
 	issn = {0179-5376},
+	keywords = {computational geometry, Delaunay triangulation, high dimension},
 }
 
 % Extremely thorough analysis of using linear models inside a simplex (e.g., tetrahedral meshes) for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
@@ -630,6 +660,7 @@
 	year = {2002},
 	booktitle = {Proceedings of the 11th International Meshing Roundtable},
 	pages = {115--126},
+	keywords = {computational geometry, interpolation, Delaunay triangulation, algorithms},
 }
 
 % Steve Smale's list of unsolved open problems in mathematics, and mostly algorithms, one of which is reliably finding basic solutions to linear programming problems
@@ -646,6 +677,7 @@
 	doi = {10.1007/bf03025291},
 	url = {http://link.springer.com/10.1007/BF03025291},
 	issn = {0343-6993},
+	keywords = {computational geometry, algorithms},
 }
 
 % OSQP is an open source numerical software for solving quadratic programming problems from Stephen Boyd's lab
@@ -662,6 +694,7 @@
 	doi = {10.1007/s12532-020-00179-2},
 	url = {http://link.springer.com/10.1007/s12532-020-00179-2},
 	issn = {1867-2949},
+	keywords = {computational geometry, projection},
 }
 
 % A nice summary article (with some performance comparisons) for a wide variety of sequential Delaunay triangulation algorithms in 2D
@@ -678,20 +711,7 @@
 	doi = {10.1016/s0925-7721(96)00025-9},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0925772196000259},
 	issn = {0925-7721},
-}
-
-% A benchmark data science problem from the field of computer security: robustly classifying suspicious network traffic based on metadata about the requests
-@inproceedings{tavallaee2009detailed,
-	author = {Tavallaee, Mahbod and Bagheri, Ebrahim and Lu, Wei and Ghorbani, Ali A.},
-	title = {A detailed analysis of the {KDD} {CUP} 99 data set},
-	year = {2009},
-	month = {7},
-	booktitle = {2009 IEEE Symposium on Computational Intelligence for Security and Defense Applications},
-	pages = {1--6},
-	organization = {IEEE},
-	location = {Ottawa, ON, Canada},
-	doi = {10.1109/CISDA.2009.5356528},
-	url = {http://ieeexplore.ieee.org/document/5356528},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
 % SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -708,6 +728,7 @@
 	doi = {10.1038/s41592-019-0686-2},
 	url = {https://www.nature.com/articles/s41592-019-0686-2},
 	issn = {1548-7091},
+	keywords = {computational geometry},
 }
 
 % The Bowyer-Watson algorithm is one of the first algorithms for computing Delaunay triangulations in arbitrary dimensions. It is not particularly scalable, but a first step toward thinking about Delaunay triangulation in more than 3D. Was published by both Bowyer and Watson in the same issue of the same journal, with a footnote from the publisher that they both submitted at the same time and after investigation, it was determined that this was purely coincidental and no plagiarism was involved. Therefore, both papers were published together and both authors are credited equally for discovery
@@ -724,5 +745,6 @@
 	doi = {10.1093/comjnl/24.2.167},
 	url = {https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/24.2.167},
 	issn = {0010-4620},
+	keywords = {computational geometry, Delaunay triangulation, algorithms},
 }
 
