@@ -1202,6 +1202,23 @@ numpages = {21},
   url = 	 {https://proceedings.mlr.press/v97/recht19a.html},
 }
 
+% The original paper on the bias-variance tradeoff curve. Now widely debunked (in my opinion) the theory that machine learning and neural networks had to tradeoff between training accuracy and overfitting (which would lead to the idea of so-called "generalization error") and had to be combatted by limiting model size or regularization rules ruled AI theory for many, many years. One key insight in this paper that was perhaps ahead of its time, is that the important part of machine learning is the representation learning, in which sense training neural networks with backpropagation for regression problems is somewhat not special
+@article{geman1992neural,
+	author = {Geman, Stuart and Bienenstock, Elie and Doursat, Ren\'e},
+	title = {Neural networks and the bias/variance dilemma},
+	year = {1992},
+	month = {jan},
+	journal = {Neural Computation},
+	volume = {4},
+	number = {1},
+	pages = {1--58},
+	publisher = {MIT Press},
+	address = {Cambridge, MA, USA},
+	doi = {10.1162/neco.1992.4.1.1},
+	url = {https://direct.mit.edu/neco/article/4/1/1-58/5624},
+	issn = {0899-7667},
+}
+
 % An experiment showing that when training labels are replaced with random
 % values (pure noise), most neural network classifier methods can still be
 % trained to zero training error.  (I.e., obviously overfitting).  However,
@@ -1376,7 +1393,7 @@ numpages = {156}
 % image classification via neural networks and other AI and machine learning
 % methods
 @misc{yann1998mnist,
-  title={The mnist database of handwritten digits},
+  title={The {MNIST} database of handwritten digits},
   author={Yann, LeCun},
   year={1998},
   url = {yann.lecun.com/exdb/mnist},
@@ -1603,7 +1620,10 @@ numpages = {156}
 % data (such as next-word prediction in language models).  RNNs would go on to
 % become the state-of-the-art in language models and natural language
 % processing for almost 30 years until they were replaced by transformers with
-% the advent of BERT in 2017.
+% the advent of BERT in 2017. Although the idea of encoding state information
+% is a valid solution, RNNs notoriously suffered from a vanishing gradient
+% issue where tokens further back in the sequence had little effect on the
+% current prediction.
 @techreport{rumelhart1985learning,
 author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
 year = {1985},

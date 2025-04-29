@@ -21,7 +21,7 @@
 	title = {Convex optimization},
 	year = {2004},
 	publisher = {Cambridge university press},
-	keywords = {AI, artificial intelligence, machine learning, ML},
+	keywords = {AI, artificial intelligence, machine learning, ML, optimization},
 }
 
 % The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
@@ -111,7 +111,7 @@
 	location = {Hamburg, Germany},
 	doi = {10.23919/ISC.2024.10528939},
 	url = {https://ieeexplore.ieee.org/document/10528939/},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization},
 }
 
 % Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
@@ -124,7 +124,7 @@
 	volume = {27},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf},
-	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, optimization},
 }
 
 % One of the largest most difficult image classification benchmark problems from the 2010s, which drove a lot of advancement. Was a bit too difficult for the average researcher to solve since it required a lot of training resources to get good performance, but drove advancement in developing and training large (deep) neural networks with many layers and millions of parameters
@@ -191,7 +191,7 @@
 	number = {61},
 	pages = {2121--2159},
 	url = {http://jmlr.org/papers/v12/duchi11a.html},
-	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, optimization},
 }
 
 % The culmination of a line of work from Google DeepMind on discovering better matrix factorization algorithms using reinforcement learning. They defined a tensor game for trying to solve matrix multiplication at a fixed size in fewer moves, then trained a RL agent to play the game using monte carlo tree search and training a neural network to predict a manageable subset of states and expected state outcomes since the number of states was too numerous for true MCTS. They were able to match the performance of Strassen's algorithm on 5x5 matrices (this is how recursive block-based recursive multiplication is done) and exceed performance on other sizes and rings (such as modular arithmetic rings)
@@ -211,6 +211,22 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, neural networks},
 }
 
+% The first paper where the ReLU activation function was used as the activation function in neural network models. This would later become the standard for many years (and still is for regressor models)
+@article{fukushima1975cognitron,
+	author = {Fukushima, Kunihiko},
+	title = {Cognitron: A self-organizing multilayered neural network},
+	year = {1975},
+	journal = {Biological cybernetics},
+	volume = {20},
+	number = {3},
+	pages = {121--136},
+	publisher = {Springer},
+	doi = {10.1007/bf00342633},
+	url = {http://link.springer.com/10.1007/BF00342633},
+	issn = {0340-1200},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
+}
+
 % Paper showing that using the process reward model (PRM) during fine-tuning can easily lead models to over-optimize for quick rewards, leading to worse overall ability to reach the correct solution. This doesn't mean that process can't work, we just need a mechanism to encourage better long-term planning
 @inproceedings{gao2023scaling,
 	author = {Gao, Leo and Schulman, John and Hilton, Jacob},
@@ -223,32 +239,25 @@
 	pages = {10835--10866},
 	organization = {PMLR},
 	url = {https://proceedings.mlr.press/v202/gao23h.html},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, overfitting},
 }
 
-% The original paper on the bias-variance tradeoff curve.  Now widely debunked
-% (in my opinion) the theory that machine learning and neural networks had to
-% tradeoff between training accuracy and overfitting (which would lead to the
-% idea of so-called "generalization error") and had to be combatted by limiting
-% model size or regularization rules ruled AI theory for many, many years.  One
-% key insight in this paper that was perhaps ahead of its time, is that the
-% important part of machine learning is the representation learning, in which
-% sense training neural networks with backpropagation for regression problems
-% is somewhat not special
+% The original paper on the bias-variance tradeoff curve. Now widely debunked (in my opinion) the theory that machine learning and neural networks had to tradeoff between training accuracy and overfitting (which would lead to the idea of so-called "generalization error") and had to be combatted by limiting model size or regularization rules ruled AI theory for many, many years. One key insight in this paper that was perhaps ahead of its time, is that the important part of machine learning is the representation learning, in which sense training neural networks with backpropagation for regression problems is somewhat not special
 @article{geman1992neural,
-  title={Neural networks and the bias/variance dilemma},
-  author={Geman, Stuart and Bienenstock, Elie and Doursat, Ren\'e},
-  journal={Neural Computation},
-  volume={4},
-  number={1},
-  pages={1--58},
-  year={1992},
-  month={jan},
-  publisher={MIT Press},
-  address={Cambridge, MA, USA},
-  doi={10.1162/neco.1992.4.1.1},
-  issn = {0899-7667},
-  keywords = {AI, artificial intelligence, machine learning, ML, neural networks, representation learning, regularization, overfitting},
+	author = {Geman, Stuart and Bienenstock, Elie and Doursat, Ren\'e},
+	title = {Neural networks and the bias/variance dilemma},
+	year = {1992},
+	month = {jan},
+	journal = {Neural Computation},
+	volume = {4},
+	number = {1},
+	pages = {1--58},
+	publisher = {MIT Press},
+	address = {Cambridge, MA, USA},
+	doi = {10.1162/neco.1992.4.1.1},
+	url = {https://direct.mit.edu/neco/article/4/1/1-58/5624},
+	issn = {0899-7667},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, representation learning, regularization, overfitting},
 }
 
 % Online paper with interactive visualizations explaining what Nesterov's momentum is and how it works intuitively by smoothing out optimization sample paths and preventing oscillations in the optimizer that occur do to poor problem conditioning. Then, they show how the problem conditioning appears as an often ignored constant in the convergence rate of gradient descent. All this is to show intuitively and mathematically that gradient descent with Nesterov's momentum will convergence faster in practice for ill-conditioned problems
@@ -264,7 +273,7 @@
 	doi = {10.23915/distill.00006},
 	url = {http://distill.pub/2017/momentum},
 	issn = {2476-0757},
-	keywords = {AI, artificial intelligence, machine learning, ML},
+	keywords = {AI, artificial intelligence, machine learning, ML, optimization},
 }
 
 % Theorems on the curse of dimensionality when it comes to drawing data points in high-dimensional spaces. The main theorem implies that the convex hull of N points in D dimensions has volume ~0 for D sufficiently large -- this occurs because of a concentration of measure type result
@@ -293,68 +302,6 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, open source},
 }
 
-% The first paper where the ReLU activation function was used as the activation function in neural network models. This would later become the standard for many years (and still is for regressor models)
-@article{fukushima1975cognitron,
-  title={Cognitron: A self-organizing multilayered neural network},
-  author={Fukushima, Kunihiko},
-  journal={Biological cybernetics},
-  volume={20},
-  number={3},
-  pages={121--136},
-  year={1975},
-  publisher={Springer},
-  keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
-}
-
-% Paper where ReLU functions were first used to replace sigmoidal activations
-% in a restricted Boltzmann machine with much success.  After this, ReLU became
-% the standard activation function in all neural network regressive models
-@inproceedings{vinod2010,
-author = {Nair, Vinod and Hinton, Geoffrey E.},
-title = {Rectified linear units improve restricted boltzmann machines},
-year = {2010},
-isbn = {9781605589077},
-publisher = {Omnipress},
-address = {Madison, WI, USA},
-booktitle = {Proceedings of the 27th International Conference on International Conference on Machine Learning},
-pages = {807–814},
-location = {Haifa, Israel},
-series = {ICML'10},
-keywords = {AI, artificial intelligence, machine learning, ML, neural networks, Boltzmann machine},
-}
-
-% Not an original paper, as L1 and L2 regularization have been around since the beginning of machine learning and applied math, and are generally not attributed to anyone in particular, but a nice review paper on the usage and effects of L1 and L2 regularization in machine learning and neural network training with back propagation. Regularization was considered an essential part of neural network training (and still is in scientific machine learning) for many many years.
-@inproceedings{ng2004,
-author = {Ng, Andrew Y.},
-title = {Feature selection, L1 vs. L2 regularization, and rotational invariance},
-year = {2004},
-isbn = {1581138385},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/1015330.1015435},
-doi = {10.1145/1015330.1015435},
-booktitle = {Proceedings of the Twenty-First International Conference on Machine Learning},
-pages = {78},
-location = {Banff, Alberta, Canada},
-series = {ICML '04},
-keywords = {AI, artificial intelligence, machine learning, ML, neural networks, regularization, overfitting},
-}
-
-% Original publication on using long-short term memory within a recurrent neural network framework to address the issue of vanishing gradients during training. The idea is to truncate gradients for certain blocks (short-term memory units) and chain these blocks to generate skip connections for long term memory. These would be the state-of-the-art in natural language processing and other sequential prediction tasks until BERT replaces them with transformer models.
-@article{neco1997,
-    author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
-    title = {Long Short-Term Memory},
-    journal = {Neural Computation},
-    volume = {9},
-    number = {8},
-    pages = {1735-1780},
-    year = {1997},
-    month = {11},
-    issn = {0899-7667},
-    doi = {10.1162/neco.1997.9.8.1735},
-	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, RNNs},
-}
-
 % First published work using Geoff Hinton's unpublished optimization algorithm RMSProp (root mean squared propogation, an adjustment to AdaGrad using an adaptive learning rate in each dimension). The author uses RMSProp to train a recurrent neural network (RNN) with long short-term memory (LSTM) in order to generate handwritten digits
 @techreport{graves2014generating,
 	author = {Graves, Alex},
@@ -362,7 +309,7 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	year = {2014},
 	institution = {arXiv cs.NE preprint},
 	url = {https://arxiv.org/abs/1308.0850},
-	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, optimization},
 }
 
 % DeepSeek-R1 tech report: DeepSeek-R1 is DeepSeek's first state-of-the-art reasoning model. DeepSeek-R1-Zero was fine-tuned from DeepSeek-V3, by allowing chain-of-thought reasoning and using training objectives without cold start consisting of mostly checkable rules and formatting. I.e., it is possible to penalize any computer code that doesn't compile, any images that spill out of a bounding box, and any thought chains that are not enclosed within <think></think> blocks. This model has good performance but mixes languages and doesn't always generate human readable output. Next, they trained DeepSeek-R1 using some carefully crafted cold-start examples to enforce reasoning and logic and output language consistency, using mostly coding, math, logic, and science problem sets and language mixing penalties. These penalties are critically applied inside as well as without the CoT blocks. The authors trained both R1 and R1-Zero via reinforcement learning with group relative policy optimization (GRPO). They claim the model naturally learned to use long chains of thoughts and internal discussions unprompted, but that's debatable since this kind of discussion is actually common in internet data. The resulting model performs well on standard AI model benchmarks. They also show that information from their large MoE models can be distilled into smaller dense models with better results than just fine-tuning those dense models on the same data
@@ -386,6 +333,23 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	organization = {Citeseer},
 	url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b89e9f0cef5ace08946a7c07bf7284854c418445},
 	keywords = {AI, artificial intelligence, machine learning, ML, Boltzmann machine, neural networks},
+}
+
+% Original publication on using long-short term memory within a recurrent neural network framework to address the issue of vanishing gradients during training. The idea is to truncate gradients for certain blocks (short-term memory units) and chain these blocks to generate skip connections for long term memory. These would be the state-of-the-art in natural language processing and other sequential prediction tasks until BERT replaces them with transformer models.
+@article{hochreiter1997long,
+	author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+	title = {Long Short-Term Memory},
+	year = {1997},
+	month = {11},
+	journal = {Neural Computation},
+	volume = {9},
+	number = {8},
+	pages = {1735--1780},
+	publisher = {MIT Press},
+	doi = {10.1162/neco.1997.9.8.1735},
+	url = {https://direct.mit.edu/neco/article/9/8/1735-1780/6109},
+	issn = {0899-7667},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, RNNs},
 }
 
 % An article on Google GlassBox research: Google's research division dedicated to interpretable machine learning
@@ -454,7 +418,7 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	numpages = {11},
 	location = {San Diego, CA, USA},
 	url = {https://arxiv.org/abs/1412.6980},
-	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, optimization},
 }
 
 % The official techreport for the CIFAR-10 dataset -- one of the next most popular neural network and image classification benchmark problems for machine learning and AI research in the 2010s. Just a little harder than MNIST due to having lower quality images and more (imbalanced) classes
@@ -538,7 +502,23 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	keywords = {AI, artificial intelligence, machine learning, ML, CNNs, neural networks},
 }
 
-% Original publication on "chain of thought" (CoT) reasoning in LLMs, based on the observation that when prompted to solve complex logic problems in multiple small steps (with no fine tuning), language models achieve better performance than when directly prompted for the solution. This discovery is important, as it would lead to the release of numerous "reasoning models," which generate long CoT discussions within a <think> ... </think> (or similar) block. The authors claim that these chains of thoughts mimic a human reasoning process, but acknowledge that this may not actually be indicative of any emergent reasoning behavior in the network (which I believe is the correct take). It seems natural to me that the model is better able to succeed on simple logic problems, and is also able to use the previous state (i.e.,the solution to the previous small problem) to make another small logical step. That process actually is a form of reasoning, but when prompted or fine-tuned to encourage this behavior, it becomes unclear whether we can call that true reasoning. DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data (as opposed to using word2vec). Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
+% Original publication on "chain of thought" (CoT) reasoning in LLMs, based on the observation that when prompted to solve complex logic problems in multiple small steps (with no fine tuning), language models achieve better performance than when directly prompted for the solution. This discovery is important, as it would lead to the release of numerous "reasoning models," which generate long CoT discussions within a <think> ... </think> (or similar) block. The authors claim that these chains of thoughts mimic a human reasoning process, but acknowledge that this may not actually be indicative of any emergent reasoning behavior in the network (which I believe is the correct take). It seems natural to me that the model is better able to succeed on simple logic problems, and is also able to use the previous state (i.e.,the solution to the previous small problem) to make another small logical step. That process actually is a form of reasoning, but when prompted or fine-tuned to encourage this behavior, it becomes unclear whether we can call that true reasoning.
+@inproceedings{wei2022,
+author = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed H. and Le, Quoc V. and Zhou, Denny},
+title = {Chain-of-thought prompting elicits reasoning in large language models},
+year = {2022},
+isbn = {9781713871088},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+booktitle = {Proceedings of the 36th International Conference on Neural Information Processing Systems},
+articleno = {1800},
+numpages = {14},
+location = {New Orleans, LA, USA},
+url={https://openreview.net/forum?id=_VjQlMeSB_J},
+keywords = {AI, artificial intelligence, machine learning, ML, LLMs},
+}
+
+% DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data (as opposed to using word2vec). Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
 @techreport{liu2024deepseekv3,
 	author = {Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others, },
 	title = {{DeepSeek-V3} technical report},
@@ -560,7 +540,7 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	location = {Raleigh, NC, USA},
 	doi = {10.1109/SoutheastCon44009.2020.9368254},
 	url = {https://ieeexplore.ieee.org/document/9368254/},
-	keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, open source},
+	keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, open source, optimization},
 }
 
 % Original word2vec publication: embedding words into a continuous vector space in a "dense" way, meaning that the embedding is somewhat minimal and no extra dimensions are added and word relationships are preserved (as in semantic regularization). The authors show that a relatively small and simple model with semantic regularization is sufficient to train such an embedding in less than a day, and the resulting word2vec embedding layer is fast and cheap to evaluate. The word2vec embedding would go on to be the basis for most early transformer models. Modern LLMs train their own embedding as the embedding layers of the network, but use the same techniques as word2vec. The open source software is available for download from Google: https://code.google.com/archive/p/word2vec
@@ -584,6 +564,20 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks, regularization},
 }
 
+% Paper where ReLU functions were first used to replace sigmoidal activations in a restricted Boltzmann machine with much success. After this, ReLU became the standard activation function in all neural network regressive models
+@inproceedings{nair2010rectified,
+	author = {Nair, Vinod and Hinton, Geoffrey E.},
+	title = {Rectified linear units improve restricted {B}oltzmann machines},
+	year = {2010},
+	booktitle = {Proceedings of the 27th International Conference on International Conference on Machine Learning},
+	series = {ICML'10},
+	pages = {807--814},
+	organization = {Omnipress},
+	location = {Haifa, Israel},
+	isbn = {9781605589077},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, Boltzmann machine},
+}
+
 % Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
 @inproceedings{nesterov1983method,
 	author = {Nesterov, Yurii},
@@ -592,7 +586,23 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	booktitle = {Dokl akad nauk Sssr},
 	volume = {269},
 	numpages = {543},
-	keywords = {AI, artificial intelligence, machine learning, ML},
+	keywords = {AI, artificial intelligence, machine learning, ML, optimization},
+}
+
+% Not an original paper, as L1 and L2 regularization have been around since the beginning of machine learning and applied math, and are generally not attributed to anyone in particular, but a nice review paper on the usage and effects of L1 and L2 regularization in machine learning and neural network training with back propagation. Regularization was considered an essential part of neural network training (and still is in scientific machine learning) for many many years.
+@inproceedings{ng2004feature,
+	author = {Ng, Andrew Y.},
+	title = {Feature selection, L1 vs. L2 regularization, and rotational invariance},
+	year = {2004},
+	booktitle = {Proceedings of the Twenty-First International Conference on Machine Learning},
+	series = {ICML '04},
+	numpages = {78},
+	organization = {Association for Computing Machinery},
+	location = {Banff, Alberta, Canada},
+	doi = {10.1145/1015330.1015435},
+	url = {https://doi.org/10.1145/1015330.1015435},
+	isbn = {1581138385},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, regularization, overfitting},
 }
 
 % Original definition of RBF networks, an early form of neural networks that focused on the usage of combining RBF basis functions. These networks are not used much anymore, although occasionally still come up in the context of scientific machine learning theory and proofs
@@ -670,7 +680,7 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, autograd, algorithmic differentiation, backpropagation, neural networks},
 }
 
-% Original tech report introducing recurrent neural networks (RNNs), which use a recursively defined state variable to track the context of sequential data observations so far, plus the value of the current output to predict the next output. The authors derive how the gradients can be backpropogated through this entire chain for efficient training. This idea had been around since the 60s, but this is the first paper explicitly proposing such recurrent layers in a representation learning context. The authors propose these recurrent layers as a means of representation learning for sequence data (such as next-word prediction in language models). RNNs would go on to become the state-of-the-art in language models and natural language processing for almost 30 years until they were replaced by transformers with the advent of BERT in 2017. Although the idea of encoding state information is a valid solution, RNNs notoriously suffered from a vanishing gradient issue where tokens further back in the sequence had little effect on the current prediction. Although the idea of encoding state information is a valid solution, RNNs notoriously suffered from a vanishing gradient issue where tokens further back in the sequence had little effect on the current prediction.
+% Original tech report introducing recurrent neural networks (RNNs), which use a recursively defined state variable to track the context of sequential data observations so far, plus the value of the current output to predict the next output. The authors derive how the gradients can be backpropogated through this entire chain for efficient training. This idea had been around since the 60s, but this is the first paper explicitly proposing such recurrent layers in a representation learning context. The authors propose these recurrent layers as a means of representation learning for sequence data (such as next-word prediction in language models). RNNs would go on to become the state-of-the-art in language models and natural language processing for almost 30 years until they were replaced by transformers with the advent of BERT in 2017. Although the idea of encoding state information is a valid solution, RNNs notoriously suffered from a vanishing gradient issue where tokens further back in the sequence had little effect on the current prediction.
 @techreport{rumelhart1985learning,
 	author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
 	title = {Learning internal representations by error propagation},
@@ -708,7 +718,7 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	year = {2017},
 	institution = {arXiv cs.LG},
 	url = {https://arxiv.org/abs/1707.06347},
-	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, neural networks, optimization},
 }
 
 % DeepSeekMath: Describes how DeepSeek's mathematical specialist model was trained TODO: read this report carefully
@@ -908,7 +918,7 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 % The MNIST dataset presents the first and most popular benchmark problem for image classification via neural networks and other AI and machine learning methods
 @misc{yann1998mnist,
 	author = {Yann, LeCun},
-	title = {The mnist database of handwritten digits},
+	title = {The {MNIST} database of handwritten digits},
 	year = {1998},
 	url = {yann.lecun.com/exdb/mnist},
 	note = {Last accessed: Apr 2025},
@@ -942,6 +952,6 @@ keywords = {AI, artificial intelligence, machine learning, ML, neural networks, 
 	year = {2019},
 	institution = {arXiv preprint arXiv:1909.08593},
 	url = {https://arxiv.org/abs/1909.08593},
-	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, neural networks, optimization},
 }
 
