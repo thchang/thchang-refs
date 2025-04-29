@@ -33,19 +33,6 @@
     note = {Last accessed: Jul 2024},
 }
 
-% JAHS-Bench-201: The latest test suite of benchmark problems for neural architecture search. The baseline is random search, but you can solve the problems in their parameterized search space with any optimization algorithm, record the number of true function / simulation evaluations (i.e., networks trained) and submit this to the JAHS-Bench leaderboards on GitHub. This is a good representative test problem for NAS. Both single and multiobjective benchmarks are provided, also most problems can be run in both single or multifidelity evaluation modes
-@inproceedings{bansal2022jahsbench201,
-    author = {Bansal, Archit and Stoll, Danny and Janowski, Maciej and Zela, Arber and Hutter, Frank},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
- pages = {38788--38802},
- publisher = {Curran Associates, Inc.},
- title = {{JAHS-Bench-201}: A Foundation For Research On Joint Architecture And Hyperparameter Search},
- url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/fd78f2f65881c1c7ce47e26b040cf48f-Paper-Datasets_and_Benchmarks.pdf},
- volume = {35},
- year = {2022}
-}
-
 % The user guide for the reference implementation of LAPACK: the original open source numerical software for all common dense linear algebra operations.
 @book{anderson1999lapack,
 	author = {Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A. and Hammarling, S. and McKenney, A. and Sorensen, D.},
@@ -101,7 +88,7 @@
 }
 
 % The PETSc user's guide. I haven't used it but PETSc is a widely-used C++ numerical software library and linear algebra / iterative algorithms framework developed at Argonne and used for implementing many well-known iterative solvers, especially in the area of CFD. This is a great example of high-impact open source numerical software and best practices in open source scientific software. Now ships together with TAO, a similar simulation optimization software package
-@techreport{balay2022petsc/tao,
+@techreport{balay2022petsc,
 	author = {Balay, Satish and Abhyankar, Shrirang and Adams, Mark F. and Benson, Steven and Brown, Jed and Brune, Peter and Buschelman, Kris and Constantinescu, Emil and Dalcin, Lisandro and Dener, Alp and Eijkhout, Victor and Gropp, William D. and Hapla, V\'{a}clav and Isaac, Tobin and Jolivet, Pierre and Karpeev, Dmitry and Kaushik, Dinesh and Knepley, Matthew G. and Kong, Fande and Kruger, Scott and May, Dave A. and McInnes, Lois Curfman and Mills, Richard Tran and Mitchell, Lawrence and Munson, Todd and Roman, Jose E. and Rupp, Karl and Sanan, Patrick and Sarich, Jason and Smith, Barry F. and Zampini, Stefano and Zhang, Hong and Zhang, Hong and Zhang, Junchao},
 	title = {{PETSc/TAO} Users Manual},
 	year = {2022},
@@ -112,7 +99,7 @@
 }
 
 % An open source numerical software library for solving multiobjective optimization problems in java in real-time via heuristics. The authors combine jMetal with data streaming via Apache Spark to solve distributed multiobjective optimization problems with streaming data in real-time
-@article{barbagonzález2018jmetalsp,
+@article{barbagonzalez2018jmetalsp,
 	author = {Barba-González, Cristóbal and García-Nieto, José and Nebro, Antonio J. and Cordero, José A. and Durillo, Juan J. and Navas-Delgado, Ismael and Aldana-Montes, José F.},
 	title = {{jMetalSP}: A framework for dynamic multi-objective big data optimization},
 	year = {2018},
@@ -144,22 +131,6 @@
 	year = {1997},
 	volume = {4},
 	publisher = {SIAM},
-}
-
-% Methodolgies for calibrating the Fayans EDF model to experimental data. Data is expensive and limited and the model itself is computationally expensive, so this is a classical inverse problem. The problem is actually multiobective because the data themselves come from various categories representing different types of observations, and the standard deviations for each of these observables is not known. Could be configured as a 3 or 9-objective problem
-@article{bollapragada2020optimization,
-	author = {Bollapragada, Raghu and Menickelly, Matt and Nazarewicz, Witold and O'Neal, Jared and Reinhard, Paul-Gerhard and Wild, Stefan M.},
-	title = {Optimization and supervised machine learning methods for fitting numerical physics models without derivatives},
-	year = {2020},
-	month = {2},
-	journal = {Journal of Physics G: Nuclear and Particle Physics},
-	volume = {48},
-	number = {2},
-	numpages = {24001},
-	publisher = {IOP Publishing},
-	doi = {10.1088/1361-6471/abd009},
-	url = {https://iopscience.iop.org/article/10.1088/1361-6471/abd009},
-	issn = {0954-3899},
 }
 
 % Key findings from the VarSys project on modeling HPC performance variability with surrogates and RSM, and using these models to inform decision making through visualizations, optimization, and otherwise -- a good real-world example of how modeling, interpolation, optimization, and data science can come together to produce actionable results (in the field of HPC performance tuning)
@@ -1712,7 +1683,7 @@ url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.8322},
 % massive fully distributed dataset can be performed in parallel with a
 % logarithmic number of sequential steps and without ever holding all the data
 % on one machine
-@article{10.1145/1327452.1327492,
+@article{mapreduce,
 author = {Dean, Jeffrey and Ghemawat, Sanjay},
 title = {MapReduce: simplified data processing on large clusters},
 year = {2008},
