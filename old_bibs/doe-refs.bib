@@ -1,5 +1,5 @@
 % The Dakota blackbox and derivative-free simulation optimization framework, a numerical software package (in C++) maintained by Sandia that offers support for AI/ML surrogate modeling, multifidelity modeling, uncertainty quantification (UQ), and distributed and parallel computing
-@techreport{adams2022dakota,,
+@techreport{adams2022dakota,
 	author = {Adams, Brian M. and Bohnhoff, William J. and Dalbey, Keith R. and Ebeida, Mohamed S. and Eddy, John P. and Eldred, Michael S. and Hooper, Russell W. and Hough, Patricia D. and Hu, Kenneth T. and Jakeman, John D. and Khalil, Mohammad and Maupin, Kathryn A. and Monschke, Jason A. and Ridgeway, Elliott M. and Rushdi, Ahmad A. and Seidl, D. Thomas and Stephens, J. Adam and Swiler, Laura P. and Tran, Anh and Winokur, Justin G.},
 	title = {Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.16 User's Manual},
 	year = {2022},
@@ -39,22 +39,6 @@
 	doi = {10.1145/42288.214372},
 	url = {https://doi.org/10.1145/42288.214372},
 	issn = {0098-3500},
-}
-
-% Analysis of hypervolume indicator as proxy for solution set quality -- results for 2-objectives only, this paper shows that the hypervolume indicator is the best single indicator we have, but with some caveates
-@article{bringmann2013approximation,
-	author = {Bringmann, Karl and Friedrich, Tobias},
-	title = {Approximation quality of the hypervolume indicator},
-	year = {2013},
-	month = {2},
-	journal = {Artificial Intelligence},
-	volume = {195},
-	number = {0004-3702},
-	pages = {265--290},
-	publisher = {Elsevier BV},
-	doi = {10.1016/j.artint.2012.09.005},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/S0004370212001178},
-	issn = {0004-3702},
 }
 
 % My PhD thesis, including multiobjective optimization techniques, algorithm, performance analysis, and software review; description of VTMOP, running parallel simulations, integrating with libE. Also scientific machine learning via Delaunay interpolation and algorithms and proofs for doing so. Several applications related to HPC performance modeling and autotuning.
@@ -129,6 +113,7 @@
 	author = {Chang, Tyler H. and Wild, Stefan M.},
 	title = {Designing a Framework for Solving Multiobjective Simulation Optimization Problems},
 	year = {2025},
+	month = {3},
 	journal = {INFORMS Journal on Computing},
 	publisher = {Institute for Operations Research and the Management Sciences (INFORMS)},
 	doi = {10.1287/ijoc.2023.0250},
@@ -169,31 +154,16 @@
 	title = {{PyOED}: An Extensible Suite for Data Assimilation and Model-Constrained Optimal Design of Experiments},
 	year = {2024},
 	month = {6},
-	booktitle = {ACM Transactions on Mathematical Software},
+	journal = {ACM Transactions on Mathematical Software},
 	volume = {50},
 	number = {2},
 	articleno = {11},
 	numpages = {22},
-	institution = {Association for Computing Machinery},
+	publisher = {Association for Computing Machinery},
 	address = {New York, NY, USA},
 	doi = {10.1145/3653071},
+	url = {https://dl.acm.org/doi/10.1145/3653071},
 	issn = {0098-3500},
-}
-
-% Andrew Conn's landmark paper on interpolation dataset geometry -- leads to the definition of sets being "well-poised" for interpolation, meaning that when the interpolation set's geometry meats some local geometric conditions (basically bounded away from singularity), then the resulting interpolant's error (and gradient / hessian errors) can be bounded and the resulting models can be used to perform gradient descent or SQP within a trust-region framework with guaranteed convergence
-@article{conn2008geometry,
-	author = {Conn, Andrew R and Scheinberg, Katya and Vicente, Lu{\'\i}s N},
-	title = {Geometry of interpolation sets in derivative free optimization},
-	year = {2008},
-	month = {6},
-	journal = {Mathematical programming},
-	volume = {111},
-	number = {1-2},
-	pages = {141--172},
-	publisher = {Springer},
-	doi = {10.1007/s10107-006-0073-5},
-	url = {http://link.springer.com/10.1007/s10107-006-0073-5},
-	issn = {0025-5610},
 }
 
 % Applications of low-discrepancy sequences in Monte carlo simulation
@@ -210,6 +180,20 @@
 	location = {Leuven, Belgium},
 	doi = {10.1109/ASAP.2008.4580163},
 	url = {http://ieeexplore.ieee.org/document/4580163},
+}
+
+% Manisha's conference paper on SF-SFD -- the theory is far from ready, but the problem of concentration of measure in high-dimensions making robust sampling difficult and the ability to do something better than just random or latin hypercube sampling are clearly demonstrated
+@inproceedings{garg2023sfsfd,
+	author = {Garg, Manisha and Chang, Tyler H. and Raghavan, Krishnan},
+	title = {{SF-SFD}: {S}tochastic optimization of {F}ourier coefficients for space-filling designs},
+	year = {2023},
+	month = {12},
+	booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023)},
+	pages = {3636--3646},
+	organization = {IEEE},
+	location = {Orlando, FL, USA},
+	doi = {10.1109/WSC60868.2023.10408245},
+	url = {https://ieeexplore.ieee.org/document/10408245/},
 }
 
 % Theorems on the curse of dimensionality when it comes to drawing data points in high-dimensional spaces. The main theorem implies that the convex hull of N points in D dimensions has volume ~0 for D sufficiently large -- this occurs because of a concentration of measure type result
@@ -300,16 +284,27 @@
 	publisher = {Wiley-Interscience [John Wiley \& Sons], New York-London-Sydney},
 }
 
+% Peter Lax's classic textbook on functional analysis and all the core theorems Banach spaces, Hilbert spaces, and approximation theory
+@book{lax2002functional,
+	author = {Lax, Peter D.},
+	title = {Functional analysis},
+	year = {2002},
+	series = {Pure and Applied Mathematics (New York)},
+	pages = {xx--580},
+	publisher = {Wiley-Interscience [John Wiley \& Sons], New York},
+	isbn = {0-471-55604-1},
+}
+
 % pyDOE a popular software repository for the common design-of-experiments in Python. This has been widely replaced by the new release of scipy which includes scipy.stats.qmc, which includes most of these techniques (used for monte carlo sampling, but still the same techniques)
 @misc{lee2015pydoe,
-	author = {Lee, Abraham D. and others},
+	author = {Lee, Abraham D. and others, },
 	title = {py{DOE}: The experimental design package for python},
 	year = {2015},
 	booktitle = {GitHub repository},
 	number = {0.3.8},
 	publisher = {GitHub},
 	url = {https://github.com/tisimst/pyDOE},
-    note = {Last accessed: Nov 2022},
+	note = {Last accessed: Nov 2022},
 }
 
 % Adaptive Kriging model-based sampling basically means using an interpolating Gaussian process's uncertainty information to select where to sample the next point during an adaptive sampling algorithm (for generating design-of-experiments or design space exploration).
@@ -325,6 +320,21 @@
 	doi = {10.1016/j.compchemeng.2017.05.025},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S009813541730234X},
 	issn = {0098-1354},
+}
+
+% Thomas' thorough survey paper on useful meshes and their properties for multivariate interpolation
+@inproceedings{lux2018novel,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Yao, Danfeng and Hong, Yili},
+	title = {Novel meshes for multivariate interpolation and approximation},
+	year = {2018},
+	month = {3},
+	booktitle = {Proc. 2018 ACM Southeast Conference (ACMSE '18)},
+	articleno = {13},
+	numpages = {7},
+	organization = {Association of Computing Machinery},
+	location = {Richmond, KY, USA},
+	doi = {10.1145/3190645.3190687},
+	url = {https://dl.acm.org/doi/10.1145/3190645.3190687},
 }
 
 % SOCEMO: A response surface modeling (RSM) based algorithm for solving multiobjective optimization problems. Uses a Latin hypercube design-of-experiments, RBF surrogate modeling, multiple scalarizations, and solves the scalarized subproblem via evolutionary algorithms to produce a batch of evaluations in each iteration of the algorithm
@@ -471,6 +481,19 @@
 	issn = {0044-4669},
 }
 
+% The textbook from which I learned measure theory: covering measure theory and topology bases, common measure and metric spaces, Banach and Hilbert spaces, compactness, strong and weak topologies for a linear operator, L^p spaces, Fourier transforms, the Hausdorff dimension, and most basic theorems (Hahn-Banach, Caratheodory, Baire Category theorem, etc.)
+@book{tao2011epsilon,
+	author = {Tao, Terence},
+	title = {An Epsilon of Room: Pages from year three of a mathematical blog},
+	year = {2011},
+	month = {3},
+	volume = {2},
+	publisher = {American Mathematical Society},
+	doi = {10.1090/mbk/077},
+	url = {http://www.ams.org/mbk/077},
+	isbn = {9780821852804},
+}
+
 % A tutorial on how to compute Latin hypercube samples (LHS) and some basic properties and ongoing research related to design-of-experiments
 @article{viana2016tutorial,
 	author = {Viana, Felipe AC},
@@ -504,7 +527,7 @@
 }
 
 % Open source numerical Python software pyomo.DOE, implementing model-driven design-of-experiments generation in Pyomo
-@article{wang2022pyomo.doe,
+@article{wang2022pyomodoe,
 	author = {Wang, Jialu and Dowling, Alexander W.},
 	title = {Pyomo.DOE: An open-source package for model-based design of experiments in Python},
 	year = {2022},
@@ -540,61 +563,14 @@
 	author = {Wong, Tien-Tsin and Luk, Wai-Shing and Heng, Pheng-Ann},
 	title = {Sampling with {H}ammersley and {H}alton points},
 	year = {1997},
+	month = {1},
 	journal = {Journal of graphics tools},
 	volume = {2},
 	number = {2},
 	pages = {9--24},
 	publisher = {Taylor \& Francis},
+	doi = {10.1080/10867651.1997.10487471},
+	url = {http://www.tandfonline.com/doi/abs/10.1080/10867651.1997.10487471},
+	issn = {1086-7651},
 }
 
-% Manisha's conference paper on SF-SFD -- the theory is far from ready, but the
-% problem of concentration of measure in high-dimensions making robust sampling
-% difficult and the ability to do something better than just random or latin
-% hypercube sampling are clearly demonstrated
-@inproceedings{garg2023sfsfd,
-  author  = {Garg, Manisha and Chang, Tyler H. and Raghavan, Krishnan},
-  title   = {{SF-SFD}: {S}tochastic optimization of {F}ourier coefficients for space-filling designs},
-  year    = {2023},
-  booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023)},
-  location = {Orlando, FL, USA},
-  pages   = {3636--3646},
-  doi     = {10.1109/WSC60868.2023.10408245}
-}
-
-% Thomas' thorough survey paper on useful meshes and their properties for
-% multivariate interpolation
-@inproceedings{lux2018novel,
-  author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Yao, Danfeng and Hong, Yili},
-  title = {Novel meshes for multivariate interpolation and approximation},
-  year = {2018},
-  booktitle = {Proc. 2018 ACM Southeast Conference (ACMSE '18)},
-  articleno = {13},
-  numpages = {7},
-  location = {Richmond, KY, USA},
-  organization = {Association of Computing Machinery},
-  doi = {10.1145/3190645.3190687}
-}
-
-% The textbook from which I learned measure theory: covering measure
-% theory and topology bases, common measure and metric spaces, Banach and
-% Hilbert spaces, compactness, strong and weak topologies for a linear
-% operator, L^p spaces, Fourier transforms, the Hausdorff dimension, and most
-% basic theorems (Hahn-Banach, Caratheodory, Baire Category theorem, etc.)
-@book{tao2022epsilon,
-  title={An Epsilon of Room: Pages from year three of a mathematical blog},
-  author={Tao, Terence},
-  volume={2},
-  year={2011},
-  publisher={American Mathematical Society},
-}
-
-% Peter Lax's classic textbook on functional analysis and all the core theorems Banach spaces, Hilbert spaces, and approximation theory
-@book{lax2002functional,
-	author = {Lax, Peter D.},
-	title = {Functional analysis},
-	year = {2002},
-	series = {Pure and Applied Mathematics (New York)},
-	pages = {xx--580},
-	publisher = {Wiley-Interscience [John Wiley \& Sons], New York},
-	isbn = {0-471-55604-1},
-}
