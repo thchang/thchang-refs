@@ -1744,3 +1744,32 @@ pages = {107–113},
 	institution = {arXiv preprint arXiv:2412.19437},
 	doi = {10.48550/arXiv.2412.19437},
 }
+
+% Original Kafka paper: a fully-distributed, scalable message-passing and log
+% processing interface.  A Kafka system consists of producer, consumer, and
+% broker processes / nodes.  Producers generate logs/messages and consumers
+% subscribte to log/message streams from producers.  When a producer generates
+% a new message or log, it publishes that message to a given topic.  Those
+% topics are broken up into sequential partitions and distributed across the
+% broker nodes.  The broker nodes and their partitions are all stateless.
+% Consumers are placed in groups, with each group subscribing to a topic.  Each
+% group will read messages/logs from a specific topic, with a guarantee that
+% each partition is read sequentially, but messages from different partitions
+% will be read in any order.  They guarantee that each group will read each
+% message in their subscribed topics at least once.  Groups store all state
+% information locally, and therefore have the ability to roll-back and replay a
+% topic from any offset.  The original application is for distributing LinkedIn
+% messages.  Kafka is a standard in scalable distributed message/log streaming,
+% and created the paradigm of subscribable topics.  The official open-source
+% implementation is Apache Kafka  https://github.com/apache/kafka
+@inproceedings{kreps2011kafka,
+  title={Kafka: A distributed messaging system for log processing},
+  author={Kreps, Jay and Narkhede, Neha and Rao, Jun and others},
+  booktitle={Proceedings of the NetDB},
+  volume={11},
+  number={2011},
+  pages={1--7},
+  year={2011},
+  organization={Athens, Greece},
+  url={https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf},
+}
