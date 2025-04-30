@@ -1,5 +1,5 @@
 % The Dakota blackbox and derivative-free simulation optimization framework, a numerical software package (in C++) maintained by Sandia that offers support for AI/ML surrogate modeling, multifidelity modeling, uncertainty quantification (UQ), and distributed and parallel computing
-@techreport{adams2022dakota,,
+@techreport{adams2022dakota,
 	author = {Adams, Brian M. and Bohnhoff, William J. and Dalbey, Keith R. and Ebeida, Mohamed S. and Eddy, John P. and Eldred, Michael S. and Hooper, Russell W. and Hough, Patricia D. and Hu, Kenneth T. and Jakeman, John D. and Khalil, Mohammad and Maupin, Kathryn A. and Monschke, Jason A. and Ridgeway, Elliott M. and Rushdi, Ahmad A. and Seidl, D. Thomas and Stephens, J. Adam and Swiler, Laura P. and Tran, Anh and Winokur, Justin G.},
 	title = {Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.16 User's Manual},
 	year = {2022},
@@ -23,14 +23,15 @@
 	url = {https://dl.acm.org/doi/10.1145/3292500.3330701},
 }
 
-% The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
-@misc{bradbury2018jax,
-	author = {Bradbury, J. and others},
-	title = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
-	year = {2018},
-	number = {0.3.13},
-	url = {http://github.com/google/jax},
-    note = {Last accessed: Jul 2024},
+% The official AMD Vivado docs -- Vivado is Xilinx (acquired by AMD)'s analytic placer, which is currently considered the state-of-the-art and only real option for placement and routing in industrial FPGA pnr applications
+@misc{amdvivadodevelopers2024vivado,
+	author = {AMD~Vivado~Developers, },
+	title = {Vivado Design Suite User Guide},
+	year = {2024},
+	number = {Version 2024.1},
+	publisher = {AMD},
+	url = {https://docs.amd.com/r/2024.1-English/ug893-vivado-ide},
+	note = {Last accessed: Feb 2025},
 }
 
 % The user guide for the reference implementation of LAPACK: the original open source numerical software for all common dense linear algebra operations.
@@ -45,7 +46,7 @@
 
 % NOMAD v4 -- open source numerical software package (in C++) for blackbox and derivative-free optimization via the MADS algorithms. After publication, they have added support for multiobjective optimization, mixed variables, nonlinear constraints, etc. Great example of high-impact open source numerical and optimization software. Improvements over NOMAD v3 include improvements to fundamental algorithms, coding practices, release process, and general project structure to support continuous research and development into the future
 @article{audet2022algorithm,
-	author = {Audet, Charles and Le Digabel, S\'{e}bastien and Rochon Montplaisir, Viviane and Tribes, Christophe},
+	author = {Audet, Charles and Le Digabel, S\'ebastien and Rochon Montplaisir, Viviane and Tribes, Christophe},
 	title = {{Algorithm 1027}: {NOMAD} Version 4: Nonlinear Optimization with the {MADS} Algorithm},
 	year = {2022},
 	month = {9},
@@ -88,7 +89,7 @@
 }
 
 % The PETSc user's guide. I haven't used it but PETSc is a widely-used C++ numerical software library and linear algebra / iterative algorithms framework developed at Argonne and used for implementing many well-known iterative solvers, especially in the area of CFD. This is a great example of high-impact open source numerical software and best practices in open source scientific software. Now ships together with TAO, a similar simulation optimization software package
-@techreport{balay2022petsc,
+@techreport{balay2022petsctao,
 	author = {Balay, Satish and Abhyankar, Shrirang and Adams, Mark F. and Benson, Steven and Brown, Jed and Brune, Peter and Buschelman, Kris and Constantinescu, Emil and Dalcin, Lisandro and Dener, Alp and Eijkhout, Victor and Gropp, William D. and Hapla, V\'{a}clav and Isaac, Tobin and Jolivet, Pierre and Karpeev, Dmitry and Kaushik, Dinesh and Knepley, Matthew G. and Kong, Fande and Kruger, Scott and May, Dave A. and McInnes, Lois Curfman and Mills, Richard Tran and Mitchell, Lawrence and Munson, Todd and Roman, Jose E. and Rupp, Karl and Sanan, Patrick and Sarich, Jason and Smith, Barry F. and Zampini, Stefano and Zhang, Hong and Zhang, Hong and Zhang, Junchao},
 	title = {{PETSc/TAO} Users Manual},
 	year = {2022},
@@ -99,7 +100,7 @@
 }
 
 % An open source numerical software library for solving multiobjective optimization problems in java in real-time via heuristics. The authors combine jMetal with data streaming via Apache Spark to solve distributed multiobjective optimization problems with streaming data in real-time
-@article{barbagonzalez2018jmetalsp,
+@article{barbagonzález2018jmetalsp,
 	author = {Barba-González, Cristóbal and García-Nieto, José and Nebro, Antonio J. and Cordero, José A. and Durillo, Juan J. and Navas-Delgado, Ismael and Aldana-Montes, José F.},
 	title = {{jMetalSP}: A framework for dynamic multi-objective big data optimization},
 	year = {2018},
@@ -111,6 +112,51 @@
 	doi = {10.1016/j.asoc.2017.05.004},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S1568494617302557},
 	issn = {1568-4946},
+}
+
+% The FAIR principles for open source scientific software, data, source code, and experiments should by findable (via DOIs or other), accessible (clear purpose and metadata), interoperable (should use standard interfaces, data formats, and schemas), and reusable (well documented, understandable, and not overly specialized to an unnecessarilly niche use-case). These are good principles for any open source software development practices
+@article{barker2022introducing,
+	author = {Barker, Michelle and Chue Hong, Neil P. and Katz, Daniel S. and Lamprecht, Anna-Lena and Martinez-Ortiz, Carlos and Psomopoulos, Fotis and Harrow, Jennifer and Castro, Leyla Jael and Gruenpeter, Morane and Martinez, Paula Andrea and Honeyman, Tom},
+	title = {Introducing the {FAIR} Principles for research software},
+	year = {2022},
+	month = {10},
+	journal = {Scientific Data},
+	volume = {9},
+	number = {1},
+	numpages = {622},
+	publisher = {Nature Publishing Group},
+	doi = {10.1038/s41597-022-01710-x},
+	url = {https://www.nature.com/articles/s41597-022-01710-x},
+	issn = {2052-4463},
+}
+
+% Original VPR paper discussing their simulated-annealing placement and its cost function. As far as I can tell, this placement approach has been improved but not fundamentally changed in the years since original publication. VPR is now shipped as part of the open source software package VTR: at github.com/verilog-to-routing/vtr-verilog-to-routing
+@inproceedings{betz1997vpr,
+	author = {Betz, Vaughn and Rose, Jonathan},
+	editor = {Luk, Wayne and Cheung, Peter Y. K. and Glesner, Manfred},
+	title = {{VPR}: a new packing, placement and routing tool for {FPGA} research},
+	year = {1997},
+	booktitle = {Field-Programmable Logic and Applications},
+	pages = {213--222},
+	organization = {Springer Berlin Heidelberg},
+	location = {Berlin, Heidelberg},
+	isbn = {978-3-540-69557-8},
+}
+
+% Comparison between VPR placement runtime and modern ASIC-based analytic placement runtimes. Conclusion is that simulated annealing is more accurate, but analytic placement is faster
+@inproceedings{bian2010towards,
+	author = {Bian, Huimin and Ling, Andrew C. and Choong, Alexander and Zhu, Jianwen},
+	title = {Towards scalable placement for {FPGA}s},
+	year = {2010},
+	month = {2},
+	booktitle = {Proceedings of the 18th Annual ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+	series = {FPGA '10},
+	numpages = {10},
+	organization = {Association for Computing Machinery},
+	location = {Monterey, California, USA},
+	doi = {10.1145/1723112.1723140},
+	url = {https://doi.org/10.1145/1723112.1723140},
+	isbn = {9781605589114},
 }
 
 % NASA's FUN3D CFD solver. This is one of the oldest and standard numerical softwares for solving CFD problems. Written in mostly Fortran 90. Uses a form of the problem that yields the adjoints, which can be used to optimize structures in fewer steps and perform sensitivity analyses. The kernel uses an iterative solver to solve a massive block-sparse linear system (I think derived from the weak form). Some a priori multiobjective optimization solvers are described in Section 9.9
@@ -133,9 +179,19 @@
 	publisher = {SIAM},
 }
 
+% The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
+@misc{bradbury2018jax,
+	author = {Bradbury, J. and others, },
+	title = {{JAX}: composable transformations of {P}ython+{N}um{P}y programs},
+	year = {2018},
+	number = {0.3.13},
+	url = {http://github.com/google/jax},
+	note = {Last accessed: Jul 2024},
+}
+
 % Key findings from the VarSys project on modeling HPC performance variability with surrogates and RSM, and using these models to inform decision making through visualizations, optimization, and otherwise -- a good real-world example of how modeling, interpolation, optimization, and data science can come together to produce actionable results (in the field of HPC performance tuning)
 @article{cameron2019moana,
-	author = {Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo Ananth  Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas and Hong, Yili and Watson, Layne T. and Butt, Ali R.},
+	author = {Cameron, Kirk W. and Anwar, Ali and Cheng, Yue and Xu, Li and Li, Bo Ananth Uday and Bernard, Jon and Jearls, Chandler and Lux, Thomas and Hong, Yili and Watson, Layne T. and Butt, Ali R.},
 	title = {{MOANA}: {M}odeling and analyzing {I/O} variability in parallel system experimental design},
 	year = {2019},
 	month = {8},
@@ -147,6 +203,79 @@
 	doi = {10.1109/tpds.2019.2892129},
 	url = {https://ieeexplore.ieee.org/document/8631172},
 	issn = {1045-9219},
+}
+
+% An experimental and statistical study (very similar to the VarSys project) on measuring and modeling the performance variability in modern storage stacks. They concluded that block allocation strategies cause performance variability in Ext4-HDD configurations, based on statistical techniques such as Latin hypercube design of experiments over their parameter space and computing the relative standard deviations at each configuration.
+@inproceedings{cao2017performance,
+	author = {Cao, Zhen and Tarasov, Vasily and Raman, Hari Prasath and Hildebrand, Dean and Zadok, Erez},
+	title = {On the performance variation in modern storage stacks},
+	year = {2017},
+	booktitle = {Proceedings of the 15th USENIX Conference on File and Storage Technologies (FAST '17)},
+	pages = {329--344},
+	organization = {USENIX Association},
+	location = {Vancouver, Canada},
+}
+
+% Official IOZone reference -- this benchmarking software can be used to measure the read, write, strided-read, strided-write, first read, first write, etc throughputs on a given system. In the VarSys project, we used this to measure IO performance (which we then used to calculate performance variability) for various system configurations on our Moana cluster.
+@misc{capps2016iozone,
+	author = {Capps, Don and Capps, Carol and Sawyer, Darren and Lohr, Jerry and Dowding, George and Little, Gary and Capps, Terry and Miller, Robin and Faibish, Sorin and Wang, Raymond and Waghmare, Tanmay and Zhang, Yansheng and Miller, Vernon and Principe, Nick and Jones, Zach and Bapat, Udayan and Norcott, William and Crawford, Isom and Collins, Kirby and Slater, Al and Rhine, Scott and Wisner, Mike and Goss, Ken and Landherr, Steve and Smith, Brad and Kelly, Mark and CYR, Alain and Dunlap, Randy and Montague, Mark and Million, Dan and Brebner, Gavin and Zucconi, Jean-Marc and Blomberg, Jeff and Halevy, Benny and Boone, Dave and Habbinga, Erik and Strecker, Kris and Wong, Walter and Root, Joshua and Bacchella, Fabrice and Xue, Zhenghua and Li, Qin and Sawyer, Darren and Bojaxhi, Vangel and England, Ben and Lapa, Vikentsi and Skidanov, Alexey},
+	title = {{IOzone} Filesystem Benchmark},
+	year = {2016},
+	month = {January},
+	url = {www.iozone.org},
+	note = {Last accessed: Nov 2016},
+}
+
+% A hybrid simulated annealing/partitioning based placer algorithm with parallel terminal assignment. They are able to recursively divide the problem with partitioning for a few levels then perform placement on the subproblems with simulated annealing
+@inproceedings{chandy1997parallel,
+	author = {Chandy, J. A. and Banerjee, P.},
+	title = {A parallel circuit-partitioned algorithm for timing driven cell placement},
+	year = {1997},
+	booktitle = {Proceedings International Conference on Computer Design VLSI in Computers and Processors},
+	pages = {621--627},
+	organization = {IEEE Comput. Soc},
+	location = {Austin, TX, USA},
+	doi = {10.1109/ICCD.1997.628930},
+	url = {http://ieeexplore.ieee.org/document/628930/},
+}
+
+% My bachelor's thesis on how to use and measuring the overhead of using NVIDIA's CUDA MPS contol daemon to distribute small matrix-vector multiplication kernels between available resources on HPC systems
+@misc{chang2016gpu,
+	author = {Chang, Tyler H.},
+	title = {{GPU} Saturation for Multiple Matrix-Vector Multiplications},
+	year = {2016},
+	howpublished = {Bachelor's Thesis},
+	publisher = {Department of Computer Science, Virginia Wesleyan University},
+	address = {Virginia Beach, VA, USA},
+}
+
+% Interpolation errors and runtimes and an early version of the DelaunaySparse algorithm is applied to a HPC performance modeling application
+@inproceedings{chang2018predicting,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Predicting system performance by interpolation using a high-dimensional {D}elaunay triangulation},
+	year = {2018},
+	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
+	articleno = {2},
+	organization = {SCS},
+	location = {Baltimore, MD, USA},
+}
+
+% The DelaunaySparse software, demonstrates how to calculate simplices from a Delauay triangulation in very high dimensions scalably (and in parallel) using a highly customized simplex method like solver. The resulting Fortran numerical software is fully open source with a C and Python interface
+@article{chang2020algorithm,
+	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Algorithm 1012: {DELAUNAYSPARSE}: Interpolation via a Sparse Subset of the {D}elaunay Triangulation in Medium to High Dimensions},
+	year = {2020},
+	month = {12},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {46},
+	number = {4},
+	articleno = {38},
+	numpages = {20},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	doi = {10.1145/3422818},
+	url = {https://dl.acm.org/doi/10.1145/3422818},
+	issn = {0098-3500},
 }
 
 % Paper on the challenges of integrating VTMOP into the libEnsemble parallel computing Python software library at Argonne
@@ -270,6 +399,34 @@
 	url = {https://dl.acm.org/doi/10.1145/3369583.3392683},
 }
 
+% The publication for the XGBoost numerical software. XGBoost can be used to efficiently compute optimized gradient boosted decision trees on massive datasets via a fully-distributed algorithm that can be configured to run on Hadoop, SGE, and MPI. It can also be run on NVIDIA GPUs using CUDA. The software is fully open-source and written in highly optimized C++, though everyone uses it through its Python interface. The download is available at github.com/dmlc/xgboost. Most data science competition winners use XGBoost for tabular data
+@inproceedings{chen2016xgboost,
+	author = {Chen, Tianqi and Guestrin, Carlos},
+	title = {{XGBoost}: A Scalable Tree Boosting System},
+	year = {2016},
+	month = {8},
+	booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)},
+	pages = {785--794},
+	organization = {ACM},
+	location = {San Francisco, California, USA},
+	doi = {10.1145/2939672.2939785},
+	url = {https://dl.acm.org/doi/10.1145/2939672.2939785},
+}
+
+% Survey of common FPGA placement and routing algorithms/techniques, mentioning partition-based placement, analytic placement, and simulated annealing placement as various viable techniques ranging from least computationally expensive/least accurate to most expensive/most accurate. They also mention the different stages in a moder analytic placer (since analytical placement is the current state-of-the-art), which includes packing and netlist optimizations, global floorplanning and global placement (via quadratic programming), legalization (similar to integer/categorical binning), and detailed placement (typically via simulated annealing)
+@inproceedings{chen2017fpga,
+	author = {Chen, Shih-Chun and Chang, Yao-Wen},
+	title = {{FPGA} placement and routing},
+	year = {2017},
+	month = {11},
+	booktitle = {2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},
+	pages = {914--921},
+	organization = {IEEE},
+	location = {Irvine, CA},
+	doi = {10.1109/ICCAD.2017.8203878},
+	url = {http://ieeexplore.ieee.org/document/8203878/},
+}
+
 % Publication of our work on multiobjective shape optimization of the RF-gun cavity for the Argonne wakefield accelerator using ParMOO with the POISSON/SUPERFISH simulation software
 @inproceedings{chen2023integrated,
 	author = {Chen, Gongxiaohui and Chang, Tyler H. and Power, John and Jing, Chungunag},
@@ -279,6 +436,89 @@
 	numpages = {2},
 	location = {Orlando, FL, USA},
 	doi = {10.48550/arXiv.2311.09415},
+}
+
+% Various applications of Rent's rule, including usage as a partitioning cost function that would optimize partitions to match the rent coefficient of the underlying hardware
+@article{christie2000interpretation,
+	author = {Christie, P. and Stroobandt, D.},
+	title = {The interpretation and application of Rent's rule},
+	year = {2000},
+	month = {12},
+	journal = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+	volume = {8},
+	number = {6},
+	pages = {639--648},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/92.902258},
+	url = {http://ieeexplore.ieee.org/document/902258/},
+	issn = {1063-8210},
+}
+
+% Dantzig's original (landmark) textbook on solving linear programming problems via the simplex method. This was obviously a landmark achievement in how to solve linear programming problems and more generally in the field of numerical optimization
+@book{dantzig1998linear,
+	author = {Dantzig, George B.},
+	title = {Linear Programming and Extensions},
+	year = {1998},
+	series = {Princeton Landmarks in Mathematics and Physics},
+	edition = {11},
+	publisher = {Princeton University Press},
+	address = {Princeton, NJ, USA},
+}
+
+% Paper on how the HPC Frontier at ORNL was configured to train trillion-parameter large language models (LLMs). There is a really nice discussion of the model architectures and sizes, and the memory requirements of each. There is also a nice discussion of parallel pipelines and model vs data sharding. Then they discuss their code bases and software stacks. Finally, they perform a hyperparameter optimization with DeepHyper to determine optimal block sizes and pipeline overlapping configurations.
+@inproceedings{dash2024optimizing,
+	author = {Dash, Sajal and Lyngaas, Isaac R and Yin, Junqi and Wang, Xiao and Egele, Romain and Ellis, J. Austin and Maiterth, Matthias and Cong, Guojing and Wang, Feiyi and Balaprakash, Prasanna},
+	title = {Optimizing Distributed Training on Frontier for Large Language Models},
+	year = {2024},
+	month = {5},
+	booktitle = {ISC High Performance 2024 Research Paper Proceedings (39th International Conference)},
+	pages = {1--11},
+	organization = {IEEE},
+	location = {Hamburg, Germany},
+	doi = {10.23919/ISC.2024.10528939},
+	url = {https://ieeexplore.ieee.org/document/10528939/},
+}
+
+% An emulation framework for HPC performance modeling and predicting true performance under variability.
+@inproceedings{de2008tracedriven,
+	author = {De, Pradipta and Kothari, Ravi and Mann, Vijay},
+	title = {A trace-driven emulation framework to predict scalability of large clusters in presence of {OS} jitter},
+	year = {2008},
+	month = {9},
+	booktitle = {Proceedings of the 2008 IEEE International Conference on Cluster Computing},
+	pages = {232--241},
+	organization = {IEEE},
+	location = {Tsukuba, Japan},
+	doi = {10.1109/clustr.2008.4663776},
+	url = {http://ieeexplore.ieee.org/document/4663776},
+}
+
+% Original publication of MapReduce from Google research, the distributed computing paradigm that drives all Hadoop clusters. This was the most common distributed computing programming and filesystem in the 2010s, and still persist today. The idea is that each computation over massive datasets is posed as a sequence of map and reduce operations, where the map performs some simple operation on the data (which can be massively parallelized) and the reduce provides a way for two data items to be reduced into a single item. By applying map and reduce over and over on all the data, a computation on a massive fully distributed dataset can be performed in parallel with a logarithmic number of sequential steps and without ever holding all the data on one machine
+@article{dean2008mapreduce,
+	author = {Dean, Jeffrey and Ghemawat, Sanjay},
+	title = {MapReduce: simplified data processing on large clusters},
+	year = {2008},
+	month = {1},
+	journal = {Communications of the ACM},
+	volume = {51},
+	number = {1},
+	pages = {107--113},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	doi = {10.1145/1327452.1327492},
+	url = {https://doi.org/10.1145/1327452.1327492},
+	issn = {0001-0782},
+}
+
+% A review paper on how HPC performance variability causes issues at scale in Google's data centers, particularly, since requests generally have to wait on the longest running process (i.e., the performance variability "tail") and so the mean performance time can be somewhate meaningless
+@article{dean2013tail,
+	author = {Dean, Jeffrey and Barroso, Luiz Andr'e},
+	title = {The tail at scale},
+	year = {2013},
+	journal = {Communications of the ACM},
+	volume = {56},
+	number = {2},
+	pages = {74--80},
 }
 
 % The exascale computing project press release
@@ -291,13 +531,37 @@
 	note = {Last accessed: April 28, 2020},
 }
 
-% Achieving performance portability of parallel codes in the exascale computing
-% project (ECP) across various GPU-based architectures, which is challenging
-% since different GPU vendors use different GPU programming libraries (e.g.,
-% CUDA for NVIDIA vs HIPP for AMD) -- high-quality re-usable open source
-% software and software hardware codesign are cited as important issues from
-% the software perspective, as well as performance portability (i.e., port
-% between HIPP, CUDA, OpenMP, and SYCL/DPC++ for on-node parallelism)
+% BERT was one of the first transformer-based neural network architectures for solving language-related tasks, such as language translations, at Google. This was also by far the largest model of its time. BERT paved the way for modern large language models, probably moreso than the Attention is all you need paper
+@inproceedings{devlin2019bert,
+	author = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+	editor = {Burstein, Jill and Doran, Christy and Solorio, Thamar},
+	title = {{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+	year = {2019},
+	booktitle = {Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},
+	pages = {4171--4186},
+	organization = {Association for Computational Linguistics},
+	location = {Minneapolis, Minnesota},
+	doi = {10.18653/v1/N19-1423},
+	url = {https://aclanthology.org/N19-1423/},
+}
+
+% Summary article on the history of the LINPACK of benchmark (the standard benchmark for HPC performance tuning and evaluation), which defines the HPC Top 500 list
+@article{dongarra2003linpack,
+	author = {Dongarra, Jack J. and Luszczek, Piotr and Petitet, Antoine},
+	title = {The {LINPACK} benchmark: past, present, and future},
+	year = {2003},
+	month = {8},
+	journal = {Concurrency and Computation: Practice and Experience},
+	volume = {15},
+	number = {9},
+	pages = {803--820},
+	publisher = {Wiley},
+	doi = {10.1002/cpe.728},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/cpe.728},
+	issn = {1532-0626},
+}
+
+% Achieving performance portability of parallel codes in the exascale computing project (ECP) across various GPU-based architectures, which is challenging since different GPU vendors use different GPU programming libraries (e.g., CUDA for NVIDIA vs HIPP for AMD) -- high-quality re-usable open source software and software hardware codesign are cited as important issues from the software perspective, as well as performance portability (i.e., port between HIPP, CUDA, OpenMP, and SYCL/DPC++ for on-node parallelism)
 @article{dubey2021performance,
 	author = {Dubey, Anshu and McInnes, Lois Curfman and Thakur, Rajeev and Draeger, Erik W. and Evans, Thomas and Germann, Timothy C. and Hart, William E.},
 	title = {Performance Portability in the {E}xascale {C}omputing {P}roject: Exploration Through a Panel Series},
@@ -313,8 +577,7 @@
 	issn = {1521-9615},
 }
 
-% An example of using genetic algorithms for autotuning HPC libraries (such as
-% BLAS and LAPACK)
+% An example of using genetic algorithms for autotuning HPC libraries (such as BLAS and LAPACK)
 @inproceedings{dunlop2008use,
 	author = {Dunlop, Dominic and Varrette, Sebastien and Bouvry, Pascal},
 	title = {On the use of a genetic algorithm in high performance computing benchmark tuning},
@@ -356,9 +619,24 @@
 	git = {GitHub: \url{https://github.com/anl-mdml/MDML_Client}},
 }
 
+% The Fiduccia-Matheyses graph partitioning algorithm, which calculates the minimum cut in a hypergraph via the heuristic of generating a random initial cut then moving nodes across the cut (greedily) and remembering the best observed cut until all nodes have been moved. The magic of this algorithm is the linear complexity due to a heap-like data structure that produces the next node to move in constant time in each iteration. However, this trick only works for integer-valued cost functions (such as min-cut)
+@inproceedings{fiduccia1982lineartime,
+	author = {Fiduccia, C. M. and Mattheyses, R. M.},
+	title = {A linear-time heuristic for improving network partitions},
+	year = {1982},
+	booktitle = {Proceedings of the 19th Design Automation Conference},
+	series = {DAC '82},
+	numpages = {7},
+	organization = {IEEE Press},
+	location = {Las Vegas, NV, USA},
+	doi = {10.1109/dac.1982.1585498},
+	url = {http://ieeexplore.ieee.org/document/1585498/},
+	isbn = {0897910206},
+}
+
 % The DEAP framework is a Python framework for easily implementing and deploying parallel and distributed evolutionary algorithms. Fairly high quality open source software. This is widely used by optimization practitioners, e.g., engineers and scientists that read an evolutionary algorithm paper and want to try it out on their problem
 @article{fortin2012deap,
-	author = {Fortin, F\'elix-Antoine and {De Rainville}, Fran\c{c}ois-Michel and Gardner, Marc-Andr\'e and Parizeau, Marc and Gagn\'e ", Christian},
+	author = {Fortin, F\'elix-Antoine and De~Rainville, Fran\ccois-Michel and Gardner, Marc-Andr\'e and Parizeau, Marc and Gagn\'e, Christian},
 	title = {{DEAP}: Evolutionary Algorithms Made Easy},
 	year = {2012},
 	journal = {Journal of Machine Learning Research},
@@ -366,6 +644,16 @@
 	number = {1},
 	pages = {2171--2175},
 	url = {https://www.jmlr.org/papers/v13/fortin12a.html},
+}
+
+% Official MPI 4.1 standard document for distributed computing via a message passing interface in C and Fortran
+@techreport{forum2023mpi,
+	author = {Forum, Message Passing Interface},
+	title = {{MPI}: A Message-Passing Interface Standard},
+	year = {2023},
+	month = {nov},
+	number = {version 4.1},
+	url = {https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf},
 }
 
 % An article on the benefits of co design of algorithms and software and hardware in the context of the DOE's exascale computing project (ECP)
@@ -394,6 +682,15 @@
 	doi = {10.56021/9781421407944},
 	url = {https://www.press.jhu.edu/books/title/10678/matrix-computations},
 	isbn = {978-1421407944},
+}
+
+% The LLaMA 3 model publication. In addition to the information from LLaMA 1 tech report, they add information on training and pipeline parallelism. The latest max model size is a 405B parameter (dense) model, which competes with GPT-4 from OpenAI. The model architectures and instructions to download the weights (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this report carefully, especially the training details, I have only skimmed
+@techreport{grattafiori2024llama,
+	author = {Grattafiori, Aaron and Dubey, Abhimanyu and Jauhri, Abhinav and Pandey, Abhinav and Kadian, Abhishek and Al-Dahle, Ahmad and Letman, Aiesha and Mathur, Akhil and Schelten, Alan and Vaughan, Alex and others, },
+	title = {The {LLaMA} 3 herd of models},
+	year = {2024},
+	institution = {arXiv preprint arXiv:2407.21783},
+	url = {https://arxiv.org/abs/2407.21783},
 }
 
 % The OpenMDAO open source numerical software library for modeling and solving multidisciplinary engineering design optimization problems. Combines surrogate modeling, gradient based optimization, parallel computing frameworks, and derivative-free optimization techniques in one package so in order to solve large mixed-variable blackbox optimization problems. Developed by NASA Glenn
@@ -431,7 +728,7 @@
 
 % The official publication of the open source numerical software numpy: the standard for basic multivariable computations, vector operations, and simple linear algebra in Python
 @article{harris2020array,
-	author = {Harris, Charles R. and Millman, K. Jarrod and Walt, St{\'{e}}fan J. van der and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and Kerkwijk, Marten H. van and Brett, Matthew and Haldane, Allan and R{\'{i}}o, Jaime Fern{\'{a}}ndez del and Wiebe, Mark and Peterson, Pearu and G{\'{e}}rard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.},
+	author = {Harris, Charles R. and Millman, K. Jarrod and Walt, St\'efan J. van der and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and Kerkwijk, Marten H. van and Brett, Matthew and Haldane, Allan and R\'io, Jaime Fern\'andez del and Wiebe, Mark and Peterson, Pearu and G\'erard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.},
 	title = {Array programming with {NumPy}},
 	year = {2020},
 	month = {9},
@@ -490,9 +787,36 @@
 	url = {https://www.osti.gov/servlets/purl/1606662},
 }
 
+% The official CGAL User Guide docs page for computing high-dimensional convex hulls and Delaunay triangulations. CGAL is a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
+@incollection{hert2020convex,
+	author = {Hert, Susan and Seel, Michael},
+	title = {{dD} Convex Hulls and {D}elaunay Triangulations},
+	year = {2020},
+	booktitle = {{CGAL} User and Reference Manual},
+	edition = {{5.0.2}},
+	publisher = {{CGAL Editorial Board}},
+	url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
+}
+
+% Cpp-Taskflow original paper on open source software implementing a task-based parallel scheduler and parallel programming interface in C++
+@inproceedings{huang2019cpptaskflow,
+	author = {Huang, Tsung-Wei and Lin, Chun-Xun and Guo, Guannan and Wong, Martin},
+	title = {{Cpp-Taskflow}: Fast Task-Based Parallel Programming Using Modern {C++}},
+	year = {2019},
+	month = {5},
+	booktitle = {2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS)},
+	volume = {},
+	number = {},
+	pages = {974--983},
+	organization = {IEEE},
+	location = {Rio de Janeiro, Brazil},
+	doi = {10.1109/IPDPS.2019.00105},
+	url = {https://ieeexplore.ieee.org/document/8821011/},
+}
+
 % The official publication for HiGHS numerical optimization open source software package and solver for linear programming problems. The first successful effort to parallelize a simplex method based solver, specifically, they have successfully parallelized the dual revised simplex approach. HiGHS is now the default solver in most scipy.optimize. HiGHS is written in C++ with Fortran, C, and Python interfaces -- support CPU and GPU parallelism, the authors don't get perfect scaling by any means but this is the first successful effort to parallelize linear programming and still an achievement
 @article{huangfu2018parallelizing,
-	author = {Huangfu, Qi and Hall, JA Julian},
+	author = {Huangfu, Qi and Hall, J. A. Julian},
 	title = {Parallelizing the dual revised simplex method},
 	year = {2018},
 	month = {3},
@@ -525,7 +849,7 @@
 % The official JOSS paper for libEnsemble: an open source software library for performing parallel and distributed computations involving ensembles of computationally expensive function evaluations in Python
 @techreport{hudson2023libensemble,
 	author = {Hudson, Stephen and Larson, Jeffrey and Navarro, John-Luke and Wild, Stefan M.},
-	title = {{libEnsemble: A} complete {Python} toolkit for dynamic ensembles of calculations},
+	title = {{libEnsemble}: A complete {Python} toolkit for dynamic ensembles of calculations},
 	year = {2023},
 	month = {12},
 	booktitle = {Journal of Open Source Software},
@@ -536,6 +860,17 @@
 	doi = {10.21105/joss.06031},
 	url = {https://joss.theoj.org/papers/10.21105/joss.06031},
 	issn = {2475-9066},
+}
+
+% The official Intel TBB developer guide / reference for efficient and performance portable task-based parallel programming using a dynamic scheduler with work-stealing in modern C++. The open source software library can be downloaded from GitHub. They also offer limited NUMA support in the latest version
+@misc{intel2025oneapi,
+	author = {Intel, },
+	title = {{oneAPI} Threading Building Blocks ({oneTBB})},
+	year = {2025},
+	number = {release 2022.1.0},
+	publisher = {Intel Corporation},
+	url = {https://uxlfoundation.github.io/oneTBB},
+	note = {Last accessed: Apr 28, 2025},
 }
 
 % ISO Fortran 2003 software standard -- definition of the Fortran 2003 standard
@@ -558,6 +893,23 @@
 	address = {Geneva, Switzerland},
 }
 
+% Charm++ original paper introducing open source software for parallel programming in C++ via message-passing objects called "chares"
+@techreport{kale1993charm,
+	author = {Kale, Laxmikant V. and Krishnan, Sanjeev},
+	title = {{CHARM++}: a portable concurrent object oriented system based on {C++}},
+	year = {1993},
+	month = {10},
+	booktitle = {Proceedings of the Eighth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications},
+	series = {OOPSLA '93},
+	number = {ISO/IEC 1539-1:2010(E)},
+	numpages = {18},
+	institution = {Association for Computing Machinery},
+	address = {Washington, D.C., USA},
+	doi = {10.1145/165854.165874},
+	url = {https://dl.acm.org/doi/10.1145/165854.165874},
+	isbn = {0897915879},
+}
+
 % A survey of multiobjective optimization algorithms for hyperparameter tuning in the context of automatic machine learning (autoML)
 @article{karl2023multiobjective,
 	author = {Karl, Florian and Pielok, Tobias and Moosbauer, Julia and Pfisterer, Florian and Coors, Stefan and Binder, Martin and Schneider, Lennart and Thomas, Janek and Richter, Jakob and Lang, Michel and Garrido-Merchán, Eduardo C. and Branke, Juergen and Bischl, Bernd},
@@ -574,6 +926,57 @@
 	issn = {2688-299X},
 }
 
+% Karypis journal paper on numerical algorithms for multilevel graph partitioning. The idea in multilevel graph partitioning is that when given a very large graph, we first coarsen the graph to a manageable size. Then we compute the cut at the coursest level and refine this cut at the finer levels as we flatten (un-coarsen) the graph in a typical V-cycle. The meat of this paper is actually a detailed comparison of various algorithms for coarsening and their quality tradeoffs, time complexities, and compression factors. Additionally a similar comparison of cut and cut-refinement algorithms
+@article{karypis1998fast,
+	author = {Karypis, George and Kumar, Vipin},
+	title = {A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs},
+	year = {1998},
+	month = {1},
+	journal = {SIAM Journal on Scientific Computing},
+	volume = {20},
+	number = {1},
+	pages = {359--392},
+	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
+	doi = {10.1137/S1064827595287997},
+	url = {http://epubs.siam.org/doi/10.1137/S1064827595287997},
+	issn = {1064-8275},
+}
+
+% Official documentation and techreport for the widely-used multilevel hypergraph partitioning software hMETIS, which is a standard in partitioning based placement
+@techreport{karypis1998hmetis,
+	author = {Karypis, George and Kumar, Vipin},
+	title = {{hMETIS}: A hypergraph partitioning package},
+	year = {1998},
+	number = {version 1.5.3},
+	institution = {Department of Computer Science \& Engineering, University of Minnesota},
+	address = {Minneapolis, MN, USA},
+	url = {https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf},
+}
+
+% Karypis paper on multilevel hypergraph partitioning for VLSI applications. This is also kind of describing the algorithm used in the hMETIS partitioning software
+@article{karypis1999multilevel,
+	author = {Karypis, G. and Aggarwal, R. and Kumar, V. and Shekhar, S.},
+	title = {Multilevel hypergraph partitioning: applications in {VLSI} domain},
+	year = {1999},
+	month = {3},
+	journal = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+	volume = {7},
+	number = {1},
+	pages = {69--79},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/92.748202},
+	url = {http://ieeexplore.ieee.org/document/748202/},
+	issn = {1063-8210},
+}
+
+% Original libnuma paper (now dated) introducing the widely used libnuma software providing a C interface for portably binding threads to NUMA nodes on linux and unix systems
+@techreport{kleen2005numa,
+	author = {Kleen, Andi},
+	title = {A {NUMA} {API} for {Linux}},
+	year = {2005},
+	institution = {Suse Lab},
+}
+
 % The SORCER software is a service oriented computing environment used by the US Airforce research lab (AFRL) to distribute expensive computations (such as design optimizations) across their large distributed network of computing resources
 @inproceedings{kolonay2011service,
 	author = {Kolonay, Raymond M. and Sobolewski, Michael},
@@ -584,6 +987,47 @@
 	organization = {Citeseer},
 	location = {Paris, France},
 	url = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.656.7539},
+}
+
+% Original Kafka paper: a fully-distributed, scalable message-passing and log processing interface. A Kafka system consists of producer, consumer, and broker processes / nodes. Producers generate logs/messages and consumers subscribte to log/message streams from producers. When a producer generates a new message or log, it publishes that message to a given topic. Those topics are broken up into sequential partitions and distributed across the broker nodes. The broker nodes and their partitions are all stateless. Consumers are placed in groups, with each group subscribing to a topic. Each group will read messages/logs from a specific topic, with a guarantee that each partition is read sequentially, but messages from different partitions will be read in any order. They guarantee that each group will read each message in their subscribed topics at least once. Groups store all state information locally, and therefore have the ability to roll-back and replay a topic from any offset. The original application is for distributing LinkedIn messages. Kafka is a standard in scalable distributed message/log streaming, and created the paradigm of subscribable topics. The official open-source implementation is Apache Kafka https://github.com/apache/kafka
+@inproceedings{kreps2011kafka,
+	author = {Kreps, Jay and Narkhede, Neha and Rao, Jun and others, },
+	title = {Kafka: A distributed messaging system for log processing},
+	year = {2011},
+	booktitle = {Proceedings of the NetDB},
+	volume = {11},
+	number = {2011},
+	pages = {1--7},
+	organization = {Athens, Greece},
+	url = {https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf},
+}
+
+% The official publication for AlexNet -- one of the first truly massive overparameterized convolutional neural networks, which threw away a lot of the conventional wisdom around overfitting and achieved state-of-the-art performance and fine generalization errors on the ImageNet benchmark problem. This could be considered the beginning of "deep" learning in the sense of adding many many layers
+@inproceedings{krizhevsky2012imagenet,
+	author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+	editor = {Pereira, F. and Burges, C.J. and Bottou, L. and Weinberger, K.Q.},
+	title = {{ImageNet} Classification with Deep Convolutional Neural Networks},
+	year = {2012},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {25},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
+}
+
+% Algorithm for multi-threaded graph partitioning, e.g., the parallel version of the hMETIS algorithm
+@inproceedings{lasalle2013multithreaded,
+	author = {Lasalle, Dominique and Karypis, George},
+	title = {Multi-threaded Graph Partitioning},
+	year = {2013},
+	month = {5},
+	booktitle = {2013 IEEE 27th International Symposium on Parallel and Distributed Processing},
+	volume = {},
+	number = {},
+	pages = {225--236},
+	organization = {IEEE},
+	location = {Cambridge, MA, USA},
+	doi = {10.1109/IPDPS.2013.50},
+	url = {http://ieeexplore.ieee.org/document/6569814/},
 }
 
 % A whitepaper describing Cerebras's wafer scale neuromorphic computing architectures, as used in the AI incubator at Argonne
@@ -598,7 +1042,7 @@
 
 % NOMAD v3 is a widely-used open source numerical software package (in C++) for blackbox and derivative-free optimization via the MADS algorithms. Includes the official implementations of algorithms such as Ortho-MADS, PSD-MADS, and BiMADS. Support for parallel computing and surrogate modeling, and fairly extensible. Can be linked as a C++ library, or usage from command line interface. Used by a variety of industries and officially supported by Exxon Mobile. Has recently been replaced by the major refactor/rewrite in NOMAD v4. Still an example of widely-used open source numerical software, but the NOMAD v4 paper gives a look at how open source software practices have changed (improved) in the last 10 years
 @article{ledigabel2011algorithm,
-	author = {Le Digabel, S{\'e}bastien},
+	author = {Le~Digabel, S\'ebastien},
 	title = {Algorithm 909: {NOMAD}: Nonlinear Optimization with the {MADS} Algorithm},
 	year = {2011},
 	month = {2},
@@ -610,6 +1054,31 @@
 	doi = {10.1145/1916461.1916468},
 	url = {https://dl.acm.org/doi/10.1145/1916461.1916468},
 	issn = {0098-3500},
+}
+
+% Offifial publication for the AMF-Placer 2.0 paper, which is an open-source analytical placer using quadratic programming for global placement and simulated annealing for detailed placement. Written primarily in C++ and available at github.com/zslwyuan/AMF-Placer
+@article{liang2024amfplacer,
+	author = {Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},
+	title = {{AMF-Placer 2.0}: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous {FPGA}},
+	year = {2024},
+	month = {9},
+	journal = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+	volume = {43},
+	number = {9},
+	pages = {2769--2782},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/TCAD.2024.3373357},
+	url = {https://ieeexplore.ieee.org/document/10459236/},
+	issn = {0278-0070},
+}
+
+% DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data (as opposed to using word2vec). Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
+@techreport{liu2024deepseekv3,
+	author = {Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others, },
+	title = {{DeepSeek-V3} technical report},
+	year = {2024},
+	institution = {arXiv preprint arXiv:2412.19437},
+	doi = {10.48550/arXiv.2412.19437},
 }
 
 % Publication describing Graphcore's IPU architecture (intelligence processing unit), which is a neuromorphic parallel processor optimized for high-throughput vector operations
@@ -639,13 +1108,73 @@
 	issn = {0018-8646},
 }
 
+% Latest version of VPR, documenting new features and support -- very little mention of changes (if any) to the actual placement algorithms though
+@article{luu2011vpr,
+	author = {Luu, Jason and Kuon, Ian and Jamieson, Peter and Campbell, Ted and Ye, Andy and Fang, Wei Mark and Kent, Kenneth and Rose, Jonathan},
+	title = {{VPR} 5.0: {FPGA CAD} and architecture exploration tools with single-driver routing, heterogeneity and process scaling},
+	year = {2011},
+	month = {12},
+	journal = {ACM Trans. Reconfigurable Technol. Syst.},
+	volume = {4},
+	number = {4},
+	articleno = {32},
+	numpages = {23},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	doi = {10.1145/2068716.2068718},
+	url = {https://doi.org/10.1145/2068716.2068718},
+	issn = {1936-7406},
+	keywords = {routing, placement, heterogeneous, hard blocks, field-programmable gate arrays, VPR, FPGA},
+}
+
+% Fitting nonparametric distribution models by interpolating the cumulative distribution functions -- the application is that the CDFs measure HPC throughput distributions, so it is also a little bit of a HPC performance modeling paper
+@inproceedings{lux2018nonparametric,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Nonparametric distribution models for predicting and managing computational performance variability},
+	year = {2018},
+	month = {4},
+	booktitle = {Proceedings of IEEE SoutheastCon 2018},
+	pages = {1--7},
+	organization = {IEEE},
+	location = {St. Petersburg, FL, USA},
+	doi = {10.1109/secon.2018.8478814},
+	url = {https://ieeexplore.ieee.org/document/8478814},
+}
+
+% Using various interpolation, neural networks, and other scientific machine learning methods to predict and model HPC performance based on system configuration parameters -- explores Delaunay interpolation, support vector regressors, Shepard's method, and multilayer perceptrons
+@inproceedings{lux2018predictive,
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
+	title = {Predictive modeling of {I/O} characteristics in high performance computing systems},
+	year = {2018},
+	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
+	articleno = {8},
+	organization = {SCS},
+	location = {Baltimore, MD, USA},
+}
+
+% Partition-based placement general algorithms and some possible implementation details
+@article{maidee2005timingdriven,
+	author = {Maidee, P. and Ababei, C. and Bazargan, K.},
+	title = {Timing-driven partitioning-based placement for island style {FPGAs}},
+	year = {2005},
+	month = {3},
+	journal = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+	volume = {24},
+	number = {3},
+	pages = {395--406},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/TCAD.2004.842812},
+	url = {http://ieeexplore.ieee.org/document/1397800/},
+	issn = {0278-0070},
+}
+
 % Python wrapper around the open source numerical simulation software superfish We used this when performing particle accelerator RF gun cavity optimization at Argonne in order to provide a bridge between POISSON/SUPERFISH (Fortran codes) and the ParMOO optimizer (a Python code)
 @misc{mayes2023pysuperfish,
 	author = {Mayes, Christopher},
 	title = {PySuperfish},
 	year = {2023},
 	url = {https://github.com/ChristopherMayes/PySuperfish},
-    note = {Last accessed: Aug 2023},
+	note = {Last accessed: Aug 2023},
 }
 
 % The POISSON/SUPERFISH open source numerical software (in Fortran) for calculating static, magnetic, and electric fields and rf electromagnetic fields. Used to design particle accelerators, developed and maintained by Los Alamos
@@ -687,6 +1216,25 @@
 	url = {https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf},
 }
 
+% The official publication for the latest version of the VTR (verilog-to-routing) toolkit. The latest publication focuses on updates to the user interface and new features and support, but not algorithmic changes. VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
+@article{murray2020vtr,
+	author = {Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jia Min and Eldafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
+	title = {{VTR} 8: High-performance {CAD} and Customizable {FPGA} Architecture Modelling},
+	year = {2020},
+	month = {6},
+	journal = {ACM Trans. Reconfigurable Technol. Syst.},
+	volume = {13},
+	number = {2},
+	articleno = {9},
+	numpages = {55},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	doi = {10.1145/3388617},
+	url = {https://doi.org/10.1145/3388617},
+	issn = {1936-7406},
+	keywords = {Computer aided design (CAD), electronic design automation (EDA), field programmable gate array (FPGA), packing, placement, routing, verilog to routing (VTR), versatile place and route (VPR)},
+}
+
 % An application of VTMOP for the multiobjective optimization (tuning) of the LCLS-II photoinjector (linear accelerator at SLAC). Had to use some hacks to get VTMOP to work, such as penalizing bad regions of the Pareto front, but ultimately performed better than NSGA-II
 @article{neveu2023comparison,
 	author = {Neveu, Nicole and Chang, Tyler H. and Franz, Paris and Hudson, Stephen and Larson, Jeffrey},
@@ -703,10 +1251,32 @@
 	issn = {0010-4655},
 }
 
+% NVIDIA's official API docs for the latest version (as of Apr 2025) of the cuBLAS API. With both C and Fortran bindings.
+@techreport{nvidiacorporation2025cublas,
+	author = {NVIDIA~Corporation, },
+	title = {{cuBLAS API}},
+	year = {2025},
+	number = {Release 12.8},
+	institution = {NVIDIA Corporation},
+	url = {https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf},
+	note = {Last accessed: Apr 26, 2025},
+}
+
+% NVIDIA's official developer's guide and API for writing high-performance CUDA in Fortran95+ on compilers that support the CUDA API, such as Nvidia's nvcc family of compilers and Portland group's pgfrotran family.
+@techreport{nvidiahpccompilers2025cuda,
+	author = {NVIDIA~HPC~Compilers, },
+	title = {{CUDA Fortran} programming guide},
+	year = {2025},
+	number = {Version 23.3},
+	institution = {NVIDIA Corporation},
+	url = {https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf},
+	note = {Last accessed: Apr 26, 2023},
+}
+
 % OpenMP 4.5 standard: Official definition of OpenMP 4.5 software standard
-@techreport{oarb2015openmp,
-	title = {{OpenMP} Application Programming Interface},
+@techreport{openmp2015openmp,
 	author = {OpenMP, Architecture Review Board},
+	title = {{OpenMP} Application Programming Interface},
 	year = {2015},
 	month = {November},
 	number = {version 4.5},
@@ -725,6 +1295,28 @@
 	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
 }
 
+% The official handbook and user's manual for the high-performance LINPACK benchmark (HPL) describing how to set-up and run the HPC performance tuning benchmark on distributed-memory systems, what problem it solves, what values the config file sets, and what are the rules for defining a solver for the problem and having it still count toware the Top 500 list
+@book{petitet2018hpl,
+	author = {Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack and Cleary, Andy},
+	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
+	year = {2018},
+	publisher = {Innovation Computing Laboratory, University of Tennessee},
+}
+
+% A case report from configuring a Los Alamos HPC, where real-world performance ended up being much lower than expected due to performance variability
+@inproceedings{petrini2003case,
+	author = {Petrini, Fabrizio and Kerbyson, Darren J. and Pakin, Scott},
+	title = {The case of the missing supercomputer performance: Achieving optimal performance on the 8,192 processors of {ASCI Q}},
+	year = {2003},
+	month = {11},
+	booktitle = {Proceedings of the 2003 ACM/IEEE Conference on Supercomputing (SC '03)},
+	pages = {55--55},
+	organization = {ACM},
+	location = {Phoenix, AZ, USA},
+	doi = {10.1145/1048935.1050204},
+	url = {https://dl.acm.org/doi/10.1145/1048935.1050204},
+}
+
 % Experiences, challenges, and techniques for integrating the blackbox optimization solvers VTDIRECT95 and QNSTOP into the parallel service architecture SORCER
 @inproceedings{raghunath2017global,
 	author = {Raghunath, Chaitra and Chang, Tyler H. and Watson, Layne T. and Jrad, Mohamad and Kapania, Rakesh K. and Kolonay, Raymond M.},
@@ -738,13 +1330,61 @@
 	url = {http://dl.acm.org/citation.cfm?id=3108103},
 }
 
+% DREAMPlaceFPGA the official publication for the DREAMPlace open source using analytical placement with some deep learning for FPGA placement acceleration -- written in C++ with Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
+@inproceedings{rajarathnam2022dreamplacefpga,
+	author = {Rajarathnam, Rachel Selina and Alawieh, Mohamed Baker and Jiang, Zixuan and Iyer, Mahesh and Pan, David Z.},
+	title = {{DREAMPlaceFPGA}: An Open-Source Analytical Placer for Large Scale Heterogeneous {FPGAs} using Deep-Learning Toolkit},
+	year = {2022},
+	month = {1},
+	booktitle = {2022 27th Asia and South Pacific Design Automation Conference (ASP-DAC)},
+	volume = {},
+	number = {},
+	pages = {300--306},
+	organization = {IEEE},
+	location = {Taipei, Taiwan},
+	doi = {10.1109/ASP-DAC52403.2022.9712562},
+	url = {https://ieeexplore.ieee.org/document/9712562/},
+}
+
+% The original publication for VTR (Verilog-to-routing) -- open-source synthesis-packing-place-and-route platform. Still uses VPR for the place and route steps. VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
+@inproceedings{rose2012vtr,
+	author = {Rose, Jonathan and Luu, Jason and Yu, Chi Wai and Densmore, Opal and Goeders, Jeffrey and Somerville, Andrew and Kent, Kenneth B. and Jamieson, Peter and Anderson, Jason},
+	title = {The {VTR} project: architecture and {CAD} for {FPGAs} from verilog to routing},
+	year = {2012},
+	month = {2},
+	booktitle = {Proceedings of the ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+	series = {FPGA '12},
+	numpages = {10},
+	organization = {Association for Computing Machinery},
+	location = {Monterey, California, USA},
+	doi = {10.1145/2145694.2145708},
+	url = {https://doi.org/10.1145/2145694.2145708},
+	isbn = {9781450311557},
+}
+
+% A numerical algorithm for performing a rank-revealing rank-1 QR update (given an existing orthonormal (QR) matrix factorization and updating just one column of the basis Q)
+@article{shroff1992adaptive,
+	author = {Shroff, Gautam M. and Bischof, Christian H.},
+	title = {Adaptive condition estimation for rank-one updates of QR factorizations},
+	year = {1992},
+	month = {10},
+	journal = {SIAM Journal on Matrix Analysis and Applications},
+	volume = {13},
+	number = {4},
+	pages = {1264--1278},
+	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
+	doi = {10.1137/0613077},
+	url = {http://epubs.siam.org/doi/10.1137/0613077},
+	issn = {0895-4798},
+}
+
 % The docker image for the SUPERFISH/POISSON container + wrapper -- we used this at Argonne to obtain a portable copy of POISSON/SUPERFISH when performing particle accelerator RF gun cavity optimization and distributing work on remote systems
 @misc{slepicka2020poisson,
 	author = {Slepicka, Hugo},
 	title = {Poisson Superfish via Docker},
 	year = {2020},
 	url = {https://github.com/hhslepicka/docker-poisson-superfish-nobin},
-    note = {Last accessed: Aug 2023},
+	note = {Last accessed: Aug 2023},
 }
 
 % The FAIR principles of data management: Scientific data should be findable, accessible, interpretable, and reproducible
@@ -763,6 +1403,16 @@
 	issn = {0028-0836},
 }
 
+% Citation for the Nov 2019, HPC Top 500 -- measuring the fastest HPCs in the world based on their max throughput on the high-performance LINPACK HPC performance benchmark problem
+@misc{strohmaier2019top,
+	author = {Strohmaier, Eric and Dongarra, Jack and Simon, Horst and Meuer, Martin},
+	title = {The Top 500 List},
+	year = {2019},
+	month = {November},
+	url = {https://www.top500.org},
+	note = {Last accessed: April 18, 2020},
+}
+
 % BoostDMS is numerical software library providing access to Custodio's direct search and pattern search software, including MultiGLODS and DMS, in Matlab with full parallel computing support
 @article{tavares2022parallel,
 	author = {Tavares, S. and Br\'as, C. P. and Cust\'odio, A. L. and Duarte, V. and Medeiros, P.},
@@ -777,6 +1427,38 @@
 	doi = {10.1007/s11075-022-01364-1},
 	url = {https://link.springer.com/10.1007/s11075-022-01364-1},
 	issn = {1017-1398},
+}
+
+% Simulated annealing and reinforcement learning based FPGA placement. The RL contributions are tenuous at best, but still an example of potential RL impact in industry
+@inproceedings{tian2022improving,
+	author = {Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
+	title = {Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning},
+	year = {2022},
+	month = {6},
+	booktitle = {2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)},
+	volume = {10},
+	number = {},
+	pages = {1912--1919},
+	organization = {IEEE},
+	location = {Chongqing, China},
+	doi = {10.1109/ITAIC54216.2022.9836761},
+	url = {https://ieeexplore.ieee.org/document/9836761/},
+}
+
+% Kokkos 3 latest paper from Sandia's CCR lab -- an open source, parallel computing software library for performance portable parallel and distributed computing in C++. Primarily designed and used for high-performance numerical software, e.g., Trilinos
+@article{trott2022kokkos,
+	author = {Trott, Christian R. and Lebrun-Grandié, Damien and Arndt, Daniel and Ciesko, Jan and Dang, Vinh and Ellingwood, Nathan and Gayatri, Rahulkumar and Harvey, Evan and Hollman, Daisy S. and Ibanez, Dan and Liber, Nevin and Madsen, Jonathan and Miles, Jeff and Poliakoff, David and Powell, Amy and Rajamanickam, Sivasankaran and Simberg, Mikael and Sunderland, Dan and Turcksin, Bruno and Wilke, Jeremiah},
+	title = {Kokkos 3: Programming Model Extensions for the Exascale Era},
+	year = {2022},
+	month = {4},
+	journal = {IEEE Transactions on Parallel and Distributed Systems},
+	volume = {33},
+	number = {4},
+	pages = {805--817},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/TPDS.2021.3097283},
+	url = {https://ieeexplore.ieee.org/document/9485033/},
+	issn = {1045-9219},
 }
 
 % The (recently open source) numerical software library SLATEC from Sandia is something of a precursor to a modern library like scipy. SLATEC provides highly optimized, numerically stable, Fortran implementations for nearly every basic numerical algorithm that one would encounter in scientific computing
@@ -797,7 +1479,7 @@
 
 % SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
 @article{virtanen2020scipy,
-	author = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and van der Walt, St{\'e}fan J. and Brett, Matthew and Wilson, Joshua and Jarrod Millman, K. and Mayorov, Nikolay and Nelson, Andrew R.~J. and Jones, Eric and Kern, Robert and Larson, Eric and Carey, CJ and Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and VanderPlas, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E.~A. and Harris, Charles R and Archibald, Anne M. and Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and van Mulbregt, Paul and Contributors, SciPy 1.0},
+	author = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and van der Walt, St\'efan J. and Brett, Matthew and Wilson, Joshua and Jarrod Millman, K. and Mayorov, Nikolay and Nelson, Andrew R.~J. and Jones, Eric and Kern, Robert and Larson, Eric and Carey, CJ and Polat, \.Ilhan and Feng, Yu and Moore, Eric W. and VanderPlas, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E.~A. and Harris, Charles R and Archibald, Anne M. and Ribeiro, Ant\^onio H. and Pedregosa, Fabian and van Mulbregt, Paul and Contributors, SciPy 1.0},
 	title = {{SciPy} 1.0: {F}undamental Algorithms for Scientific Computing in {P}ython},
 	year = {2020},
 	month = {3},
@@ -809,6 +1491,30 @@
 	doi = {10.1038/s41592-019-0686-2},
 	url = {https://www.nature.com/articles/s41592-019-0686-2},
 	issn = {1548-7091},
+}
+
+% Chapter on how to bind an older version of TBB to NUMA nodes using Intel's TBB C++ software interface
+@inbook{voss2019tbb,
+	author = {Voss, Michael and Asenjo, Rafael and Reinders, James},
+	title = {{TBB} on {NUMA} Architectures},
+	year = {2019},
+	booktitle = {Pro {TBB}: {C++} Parallel Programming with Threading Building Blocks},
+	pages = {581--604},
+	publisher = {Apress},
+	address = {Berkeley, CA},
+	doi = {10.1007/978-1-4842-4398-5_20},
+	url = {https://doi.org/10.1007/978-1-4842-4398-5_20},
+	isbn = {978-1-4842-4398-5},
+}
+
+% VTR docs with a bit more detail than above reference, and latest version (most up-to-date) information VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
+@misc{vtrdevelopers2024verilogtorouting,
+	author = {VTR~Developers, },
+	title = {Verilog-to-routing documentation},
+	year = {2024},
+	number = {Version 8.1.0-dev},
+	url = {https://readthedocs.org/projects/vtr/downloads/pdf/latest},
+	note = {Last accessed: Feb 2025},
 }
 
 % Survey of design-of-experiments techniques and modifications for HPC system analysis, specifically related to linearly constrained and integer lattice design spaces
@@ -843,6 +1549,46 @@
 	issn = {0167-8191},
 }
 
+% Official publication for ytopt: Argonne's HPC and scientific library autotuning software using Bayesian optimization to portably autotune numerical libraries for optimal performance on a given HPC as part of the exasale computing project. The software uses a random forest surrogate model and calculates their model-form uncertainties through resampling models. Then, they use random sampling of their acquisition function to perform Bayesian optimization at scale with fully distributed evaluation of the selected configurations. The results scale well on the HPCs Theta and Summit. The open source Python software is available at github.com/ytopt-team/ytopt
+@article{wu2025ytopt,
+	author = {Wu, Xingfu and Balaprakash, Prasanna and Kruse, Michael and Koo, Jaehoon and Videau, Brice and Hovland, Paul and Taylor, Valerie and Geltz, Brad and Jana, Siddhartha and Hall, Mary},
+	title = {ytopt: Autotuning Scientific Applications for Energy Efficiency at Large Scales},
+	year = {2025},
+	month = {1},
+	journal = {Concurrency and Computation: Practice and Experience},
+	volume = {37},
+	number = {1},
+	articleno = {e8322},
+	publisher = {Wiley},
+	doi = {10.1002/cpe.8322},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.8322},
+	issn = {1532-0626},
+}
+
+% DREAMPlaceFPGA-MP: GPU-accelerated macro-placer for DREAMPlaceFPGA (rajrathnam2022) DREAMPlace is an open source using analytical placement with some deep learning for FPGA placement acceleration -- written in C++ with Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
+@techreport{xiong2023dreamplacefpgamp,
+	author = {Xiong, Zhili and Rajarathnam, Rachel Selina and Jiang, Zhixing and Zhu, Hanqing and Pan, David Z.},
+	title = {{DREAMPlaceFPGA-MP}: An Open-Source {GPU}-Accelerated Macro Placer for Modern {FPGAs} with Cascade Shapes and Region Constraints},
+	year = {2023},
+	institution = {arXiv cs.AR preprint},
+	url = {https://arxiv.org/abs/2311.08582},
+}
+
+% Our VarSys paper on the modeling methodologies that we use for modeling the bimodal performance distributions that we observe in IO throughput on our experimental performance modeling HPC cluster
+@article{xu2020modeling,
+	author = {Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne},
+	title = {Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
+	year = {2020},
+	month = {5},
+	journal = {Journal of Parallel and Distributed Computing},
+	volume = {139},
+	pages = {87--89},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.jpdc.2020.01.005},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0743731519302746},
+	issn = {0743-7315},
+}
+
 % Prima: open source reference implementation of all of Powell's numerical optimization solvers for blackbox / simulation optimization problems in modern Fortran. IMO, these should be considered the state-of-the-art and reference implementations for all blackbox optimization research
 @misc{zhang2023prima,
 	author = {Zhang, Zaikun},
@@ -851,7 +1597,7 @@
 	howpublished = {github repository},
 	doi = {10.5281/zenodo.8052654},
 	url = {http://www.libprima.net},
-    note = {Last accessed: Apr 2025},
+	note = {Last accessed: Apr 2025},
 }
 
 % The original publication for L-BFGS-B software, which solves bound-constrained optimization problems using a limited-memory BFGS. This is the standard implementation that is used in all L-BFGS-B codes to date, such as scipy, all machine learning codes, and most engineering codes and nonlinear systems solvers. The code is open source high-quality numerical software, written in old-style Fortran
@@ -870,877 +1616,3 @@
 	issn = {0098-3500},
 }
 
-% Cpp-Taskflow original paper on open source software implementing a task-based
-% parallel scheduler and parallel programming interface in C++
-@inproceedings{huang2019,
-  author={Huang, Tsung-Wei and Lin, Chun-Xun and Guo, Guannan and Wong, Martin},
-  booktitle={2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
-  title={{Cpp-Taskflow}: Fast Task-Based Parallel Programming Using Modern {C++}}, 
-  year={2019},
-  volume={},
-  number={},
-  pages={974-983},
-  doi={10.1109/IPDPS.2019.00105}
-}
-
-% Charm++ original paper introducing open source software for parallel
-% programming in C++ via message-passing objects called "chares"
-@inproceedings{kale1993,
-    author = {Kale, Laxmikant V. and Krishnan, Sanjeev},
-    title = {{CHARM++}: a portable concurrent object oriented system based on {C++}},
-    year = {1993},
-    isbn = {0897915879},
-    publisher = {Association for Computing Machinery},
-    address = {New York, NY, USA},
-    doi = {10.1145/165854.165874},
-    booktitle = {Proceedings of the Eighth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications},
-    pages = {91–108},
-    numpages = {18},
-    location = {Washington, D.C., USA},
-    series = {OOPSLA '93}
-}
-
-% Original libnuma paper (now dated) introducing the widely used libnuma
-% software providing a C interface for portably binding threads to NUMA nodes
-% on linux and unix systems
-@techreport{kleen2005,
-  title={A {NUMA} {API} for {Linux}},
-  author={Kleen, Andi},
-  institution={Suse Lab},
-  year={2005}
-}
-
-% Official MPI 4.1 standard document for distributed computing via a message
-% passing interface in C and Fortran
-@techreport{mpi41,
-    author = {{Message Passing Interface Forum}},
-    title  = {{MPI}: A Message-Passing Interface Standard},
-    number = {version 4.1},
-    url    = {https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf},
-    year   = {2023},
-    month  = {nov}
-}
-
-% The official Intel TBB developer guide / reference for efficient and
-% performance portable task-based parallel programming using a dynamic
-% scheduler with work-stealing in modern C++.  The open source software library
-% can be downloaded from GitHub.  They also offer limited NUMA support in the
-% latest version
-@misc{onetbb,
- author={Intel},
- title={{oneAPI} Threading Building Blocks ({oneTBB})},
- year={2025},
- institution={Intel Corporation},
- number={release 2022.1.0},
- url={https://uxlfoundation.github.io/oneTBB},
- note={Last accessed: Apr 28, 2025},
-}
-
-% Kokkos 3 latest paper from Sandia's CCR lab -- an open source, parallel
-% computing software library for performance portable parallel and distributed
-% computing in C++.  Primarily designed and used for high-performance numerical
-% software, e.g., Trilinos
-@article{trott2022,
-  author={Trott, Christian R. and Lebrun-Grandié, Damien and Arndt, Daniel and Ciesko, Jan and Dang, Vinh and Ellingwood, Nathan and Gayatri, Rahulkumar and Harvey, Evan and Hollman, Daisy S. and Ibanez, Dan and Liber, Nevin and Madsen, Jonathan and Miles, Jeff and Poliakoff, David and Powell, Amy and Rajamanickam, Sivasankaran and Simberg, Mikael and Sunderland, Dan and Turcksin, Bruno and Wilke, Jeremiah},
-  journal={IEEE Transactions on Parallel and Distributed Systems},
-  title={Kokkos 3: Programming Model Extensions for the Exascale Era},
-  year={2022},
-  volume={33},
-  number={4},
-  pages={805-817},
-  doi={10.1109/TPDS.2021.3097283}
-}
-
-% Chapter on how to bind an older version of TBB to NUMA nodes using Intel's
-% TBB C++ software interface
-@inbook{voss2019,
-    author={Voss, Michael and Asenjo, Rafael and Reinders, James},
-    title={{TBB} on {NUMA} Architectures},
-    booktitle={Pro {TBB}: {C++} Parallel Programming with Threading Building Blocks},
-    year={2019},
-    publisher={Apress},
-    address={Berkeley, CA},
-    pages={581--604},
-    isbn={978-1-4842-4398-5},
-    doi={10.1007/978-1-4842-4398-5_20},
-    url={https://doi.org/10.1007/978-1-4842-4398-5_20}
-}
-
-% Original VPR paper discussing their simulated-annealing placement and its
-% cost function.  As far as I can tell, this placement approach has been
-% improved but not fundamentally changed in the years since original
-% publication.  VPR is now shipped as part of the open source software package
-% VTR: at github.com/verilog-to-routing/vtr-verilog-to-routing
-@inproceedings{betz1997vpr,
-  author={Betz, Vaughn and Rose, Jonathan},
-  editor={Luk, Wayne and Cheung, Peter Y. K. and Glesner, Manfred},
-  title={{VPR}: a new packing, placement and routing tool for {FPGA} research},
-  booktitle={Field-Programmable Logic and Applications},
-  year={1997},
-  publisher={Springer Berlin Heidelberg},
-  address={Berlin, Heidelberg},
-  pages={213--222},
-  isbn={978-3-540-69557-8}
-}
-
-% Comparison between VPR placement runtime and modern ASIC-based analytic
-% placement runtimes.  Conclusion is that simulated annealing is more accurate,
-% but analytic placement is faster
-@inproceedings{bian2010towards,
-  author = {Bian, Huimin and Ling, Andrew C. and Choong, Alexander and Zhu, Jianwen},
-  title = {Towards scalable placement for {FPGA}s},
-  year = {2010},
-  isbn = {9781605589114},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  url = {https://doi.org/10.1145/1723112.1723140},
-  doi = {10.1145/1723112.1723140},
-  booktitle = {Proceedings of the 18th Annual ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
-  pages = {147–156},
-  numpages = {10},
-  location = {Monterey, California, USA},
-  series = {FPGA '10}
-}
-
-% A hybrid simulated annealing/partitioning based placer algorithm with
-% parallel terminal assignment.  They are able to recursively divide the
-% problem with partitioning for a few levels then perform placement on the
-% subproblems with simulated annealing
-@inproceedings{chandy1997parallel,
-  author={Chandy, J. A. and Banerjee, P.},
-  booktitle={Proceedings International Conference on Computer Design VLSI in Computers and Processors}, 
-  title={A parallel circuit-partitioned algorithm for timing driven cell placement}, 
-  year={1997},
-  pages={621-627},
-  doi={10.1109/ICCD.1997.628930}
-}
-
-% Survey of common FPGA placement and routing algorithms/techniques, mentioning
-% partition-based placement, analytic placement, and simulated annealing
-% placement as various viable techniques ranging from least computationally
-% expensive/least accurate to most expensive/most accurate.  They also mention
-% the different stages in a moder analytic placer (since analytical placement
-% is the current state-of-the-art), which includes packing and netlist
-% optimizations, global floorplanning and global placement (via quadratic
-% programming), legalization (similar to integer/categorical binning), and
-% detailed placement (typically via simulated annealing)
-@inproceedings{chen2017fpga,
-  author={Chen, Shih-Chun and Chang, Yao-Wen},
-  booktitle={2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}, 
-  title={{FPGA} placement and routing}, 
-  year={2017},
-  pages={914-921},
-  doi={10.1109/ICCAD.2017.8203878}
-}
-
-% Various applications of Rent's rule, including usage as a partitioning cost
-% function that would optimize partitions to match the rent coefficient of the
-% underlying hardware
-@article{christie2000interpretation,
-  author={Christie, P. and Stroobandt, D.},
-  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, 
-  title={The interpretation and application of Rent's rule}, 
-  year={2000},
-  volume={8},
-  number={6},
-  pages={639-648},
-  doi={10.1109/92.902258}
-}
-
-% The Fiduccia-Matheyses graph partitioning algorithm, which calculates the
-% minimum cut in a hypergraph via the heuristic of generating a random initial
-% cut then moving nodes across the cut (greedily) and remembering the best
-% observed cut until all nodes have been moved.  The magic of this algorithm is
-% the linear complexity due to a heap-like data structure that produces the
-% next node to move in constant time in each iteration.  However, this trick
-% only works for integer-valued cost functions (such as min-cut)
-@inproceedings{fiduccia1982linear,
-author = {Fiduccia, C. M. and Mattheyses, R. M.},
-title = {A linear-time heuristic for improving network partitions},
-year = {1982},
-isbn = {0897910206},
-publisher = {IEEE Press},
-booktitle = {Proceedings of the 19th Design Automation Conference},
-pages = {175–181},
-numpages = {7},
-series = {DAC '82}
-}
-
-% Karypis journal paper on numerical algorithms for multilevel graph
-% partitioning.  The idea in multilevel graph partitioning is that when given a
-% very large graph, we first coarsen the graph to a manageable size.  Then we
-% compute the cut at the coursest level and refine this cut at the finer levels
-% as we flatten (un-coarsen) the graph in a typical V-cycle.  The meat of this
-% paper is actually a detailed comparison of various algorithms for coarsening
-% and their quality tradeoffs, time complexities, and compression factors.
-% Additionally a similar comparison of cut and cut-refinement algorithms
-@article{karypis1998fast,
-author = {Karypis, George and Kumar, Vipin},
-title = {A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs},
-journal = {SIAM Journal on Scientific Computing},
-volume = {20},
-number = {1},
-pages = {359-392},
-year = {1998},
-doi = {10.1137/S1064827595287997},
-}
-
-% Karypis paper on multilevel hypergraph partitioning for VLSI applications.
-% This is also kind of describing the algorithm used in the hMETIS partitioning
-% software
-@article{karypis1999multilevel,
-  author={Karypis, G. and Aggarwal, R. and Kumar, V. and Shekhar, S.},
-  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, 
-  title={Multilevel hypergraph partitioning: applications in {VLSI} domain}, 
-  year={1999},
-  volume={7},
-  number={1},
-  pages={69-79},
-  doi={10.1109/92.748202}
-}
-
-% Official documentation and techreport for the widely-used multilevel
-% hypergraph partitioning software hMETIS, which is a standard in partitioning
-% based placement
-@techreport{karypis1998hypergraph,
-  author={Karypis, George and Kumar, Vipin},
-  title={{hMETIS}: A hypergraph partitioning package},
-  year={1998},
-  institution={Department of Computer Science \& Engineering, University of Minnesota},
-  address={Minneapolis, MN, USA},
-  number = {version 1.5.3},
-  url = {https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf},
-}
-
-% Algorithm for multi-threaded graph partitioning, e.g., the parallel version
-% of the hMETIS algorithm
-@inproceedings{lasalle2013multi,
-  author={Lasalle, Dominique and Karypis, George},
-  booktitle={2013 IEEE 27th International Symposium on Parallel and Distributed Processing}, 
-  title={Multi-threaded Graph Partitioning}, 
-  year={2013},
-  volume={},
-  number={},
-  pages={225-236},
-  doi={10.1109/IPDPS.2013.50}
-}
-
-% Offifial publication for the AMF-Placer 2.0 paper, which is an open-source
-% analytical placer using quadratic programming for global placement and
-% simulated annealing for detailed placement.  Written primarily in C++ and
-% available at github.com/zslwyuan/AMF-Placer
-@article{liang2024amf,
-  author={Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},
-  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
-  title={{AMF-Placer 2.0}: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous {FPGA}}, 
-  year={2024},
-  volume={43},
-  number={9},
-  pages={2769-2782},
-  doi={10.1109/TCAD.2024.3373357}
-}
-
-% Latest version of VPR, documenting new features and support -- very little mention of changes (if any) to the actual placement algorithms though
-@article{luu2011vpr,
-author = {Luu, Jason and Kuon, Ian and Jamieson, Peter and Campbell, Ted and Ye, Andy and Fang, Wei Mark and Kent, Kenneth and Rose, Jonathan},
-title = {{VPR} 5.0: {FPGA CAD} and architecture exploration tools with single-driver routing, heterogeneity and process scaling},
-year = {2011},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {4},
-number = {4},
-issn = {1936-7406},
-url = {https://doi.org/10.1145/2068716.2068718},
-doi = {10.1145/2068716.2068718},
-journal = {ACM Trans. Reconfigurable Technol. Syst.},
-articleno = {32},
-numpages = {23},
-keywords = {routing, placement, heterogeneous, hard blocks, field-programmable gate arrays, VPR, FPGA}
-}
-
-% Partition-based placement general algorithms and some possible implementation
-% details
-@article{maidee2005timing,
-  author={Maidee, P. and Ababei, C. and Bazargan, K.},
-  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
-  title={Timing-driven partitioning-based placement for island style {FPGAs}}, 
-  year={2005},
-  volume={24},
-  number={3},
-  pages={395-406},
-  doi={10.1109/TCAD.2004.842812}
-}
-
-% The official publication for the latest version of the VTR
-% (verilog-to-routing) toolkit.  The latest publication focuses on updates to
-% the user interface and new features and support, but not algorithmic changes.
-% VTR is currently the standard in open source placement and routing software,
-% written primarilly in C++ with a Python interface, available for download at:
-% github.com/verilog-to-routing/vtr-verilog-to-routing
-@article{murray2020vtr,
-author = {Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jia Min and Eldafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
-title = {{VTR} 8: High-performance {CAD} and Customizable {FPGA} Architecture Modelling},
-year = {2020},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {13},
-number = {2},
-issn = {1936-7406},
-url = {https://doi.org/10.1145/3388617},
-doi = {10.1145/3388617},
-journal = {ACM Trans. Reconfigurable Technol. Syst.},
-articleno = {9},
-numpages = {55},
-keywords = {Computer aided design (CAD), electronic design automation (EDA), field programmable gate array (FPGA), packing, placement, routing, verilog to routing (VTR), versatile place and route (VPR)}
-}
-
-% DREAMPlaceFPGA the official publication for the DREAMPlace open source
-% using analytical placement with some deep learning for FPGA placement
-% acceleration -- written in C++ with Python interfaces and available at
-% github.com/rachelselinar/DREAMPlaceFPGA
-@inproceedings{rajarathnam2022dreamplace,
-  author={Rajarathnam, Rachel Selina and Alawieh, Mohamed Baker and Jiang, Zixuan and Iyer, Mahesh and Pan, David Z.},
-  booktitle={2022 27th Asia and South Pacific Design Automation Conference (ASP-DAC)}, 
-  title={{DREAMPlaceFPGA}: An Open-Source Analytical Placer for Large Scale Heterogeneous {FPGAs} using Deep-Learning Toolkit}, 
-  year={2022},
-  volume={},
-  number={},
-  pages={300-306},
-  doi={10.1109/ASP-DAC52403.2022.9712562}
-}
-
-% The original publication for VTR (Verilog-to-routing) -- open-source
-% synthesis-packing-place-and-route platform.  Still uses VPR for the place and
-% route steps.
-% VTR is currently the standard in open source placement and routing software,
-% written primarilly in C++ with a Python interface, available for download at:
-% github.com/verilog-to-routing/vtr-verilog-to-routing
-@inproceedings{rose2012vtr,
-author = {Rose, Jonathan and Luu, Jason and Yu, Chi Wai and Densmore, Opal and Goeders, Jeffrey and Somerville, Andrew and Kent, Kenneth B. and Jamieson, Peter and Anderson, Jason},
-title = {The {VTR} project: architecture and {CAD} for {FPGAs} from verilog to routing},
-year = {2012},
-isbn = {9781450311557},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/2145694.2145708},
-doi = {10.1145/2145694.2145708},
-booktitle = {Proceedings of the ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
-pages = {77–86},
-numpages = {10},
-location = {Monterey, California, USA},
-series = {FPGA '12}
-}
-
-% The official AMD Vivado docs -- Vivado is Xilinx (acquired by AMD)'s analytic
-% placer, which is currently considered the state-of-the-art and only real
-% option for placement and routing in industrial FPGA pnr applications
-@misc{vivado2024docs,
-  title={Vivado Design Suite User Guide},
-  author={{AMD Vivado Developers}},
-  year={2024},
-  institution={AMD},
-  number={Version 2024.1},
-  url={https://docs.amd.com/r/2024.1-English/ug893-vivado-ide},
-  note = {Last accessed: Feb 2025},
-}
-
-% VTR docs with a bit more detail than above reference, and latest version (most up-to-date) information
-% VTR is currently the standard in open source placement and routing software,
-% written primarilly in C++ with a Python interface, available for download at:
-% github.com/verilog-to-routing/vtr-verilog-to-routing
-@misc{vtr2024verilog,
-  title={Verilog-to-routing documentation},
-  author={{VTR Developers}},
-  year={2024},
-  version={Version 8.1.0-dev},
-  url={https://readthedocs.org/projects/vtr/downloads/pdf/latest},
-  note = {Last accessed: Feb 2025},
-}
-
-% Simulated annealing and reinforcement learning based FPGA placement.  The RL
-% contributions are tenuous at best, but still an example of potential RL
-% impact in industry
-@inproceedings{tian2022improving,
-  author={Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
-  booktitle={2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
-  title={Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning}, 
-  year={2022},
-  volume={10},
-  number={},
-  pages={1912-1919},
-  doi={10.1109/ITAIC54216.2022.9836761}
-}
-
-% DREAMPlaceFPGA-MP: GPU-accelerated macro-placer for DREAMPlaceFPGA
-% (rajrathnam2022) DREAMPlace is an open source using analytical placement with
-% some deep learning for FPGA placement acceleration -- written in C++ with
-% Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
-@techreport{xiong2023dreamplace,
-      title={{DREAMPlaceFPGA-MP}: An Open-Source {GPU}-Accelerated Macro Placer for Modern {FPGAs} with Cascade Shapes and Region Constraints}, 
-      author={Zhili Xiong and Rachel Selina Rajarathnam and Zhixing Jiang and Hanqing Zhu and David Z. Pan},
-      year={2023},
-      institution={arXiv cs.AR preprint},
-      url={https://arxiv.org/abs/2311.08582}, 
-}
-
-% NVIDIA's official API docs for the latest version (as of Apr 2025) of the
-% cuBLAS API.  With both C and Fortran bindings.
-@techreport{cublas,
-author={NVIDIA~Corporation},
-title={{cuBLAS API}},
-year={2025},
-institution={NVIDIA Corporation},
-number={Release 12.8},
-url={https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf},
-note={Last accessed: Apr 26, 2025},
-}
-
-% NVIDIA's official developer's guide and API for writing high-performance CUDA
-% in Fortran95+ on compilers that support the CUDA API, such as Nvidia's nvcc
-% family of compilers and Portland group's pgfrotran family.
-@techreport{cuda,
-author={NVIDIA~HPC~Compilers},
-title={{CUDA Fortran} programming guide},
-year={2025},
-institution={NVIDIA Corporation},
-number={Version 23.3},
-url={https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf},
-note={Last accessed: Apr 26, 2023},
-}
-
-% BERT was one of the first transformer-based neural network architectures for
-% solving language-related tasks, such as language translations, at Google.
-% This was also by far the largest model of its time.  BERT paved the way for
-% modern large language models, probably moreso than the Attention is all you
-% need paper
-@inproceedings{devlin-etal-2019-bert,
-    title = "{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding",
-    author = "Devlin, Jacob  and
-      Chang, Ming-Wei  and
-      Lee, Kenton  and
-      Toutanova, Kristina",
-    editor = "Burstein, Jill  and
-      Doran, Christy  and
-      Solorio, Thamar",
-    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
-    year = "2019",
-    address = "Minneapolis, Minnesota",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/N19-1423/",
-    doi = "10.18653/v1/N19-1423",
-    pages = "4171--4186",
-}
-
-% The official publication for AlexNet -- one of the first truly massive
-% overparameterized convolutional neural networks, which threw away a lot of
-% the conventional wisdom around overfitting and achieved state-of-the-art
-% performance and fine generalization errors on the ImageNet benchmark problem.
-% This could be considered the beginning of "deep" learning in the sense of
-% adding many many layers
-@inproceedings{krizhevsky2012imagenet,
- author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {F. Pereira and C.J. Burges and L. Bottou and K.Q. Weinberger},
- publisher = {Curran Associates, Inc.},
- title = {{ImageNet} Classification with Deep Convolutional Neural Networks},
- url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
- volume = {25},
- year = {2012}
-}
-
-% Our VarSys paper on the modeling methodologies that we use for modeling the
-% bimodal performance distributions that we observe in IO throughput on our
-% experimental performance modeling HPC cluster
-@article{xu2020modeling,
-	author = {Xu, Li and Wang, Yueyao and Lux, Thomas and Chang, Tyler and Bernard, Jon and Li, Bo and Hong, Yili and Cameron, Kirk and Watson, Layne},
-	title = {Modeling {I/O} performance variability in high-performance computing systems using mixture distributions},
-	year = {2020},
-	month = {5},
-	journal = {Journal of Parallel and Distributed Computing},
-	volume = {139},
-	pages = {87--89},
-	publisher = {Elsevier BV},
-	doi = {10.1016/j.jpdc.2020.01.005},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/S0743731519302746},
-	issn = {0743-7315},
-}
-
-% The FAIR principles for open source scientific software, data, source code, and experiments should by findable (via DOIs or other), accessible (clear purpose and metadata), interoperable (should use standard interfaces, data formats, and schemas), and reusable (well documented, understandable, and not overly specialized to an unnecessarilly niche use-case). These are good principles for any open source software development practices
-@article{barker2022introducing,
-	author = {Barker, Michelle and Chue Hong, Neil P. and Katz, Daniel S. and Lamprecht, Anna-Lena and Martinez-Ortiz, Carlos and Psomopoulos, Fotis and Harrow, Jennifer and Castro, Leyla Jael and Gruenpeter, Morane and Martinez, Paula Andrea and Honeyman, Tom},
-	title = {Introducing the {FAIR} Principles for research software},
-	year = {2022},
-	month = {10},
-	journal = {Scientific Data},
-	volume = {9},
-	number = {1},
-	numpages = {622},
-	publisher = {Nature Publishing Group},
-	doi = {10.1038/s41597-022-01710-x},
-	url = {https://www.nature.com/articles/s41597-022-01710-x},
-	issn = {2052-4463},
-}
-
-% An experimental and statistical study (very similar to the VarSys project) on
-% measuring and modeling the performance variability in modern storage stacks.
-% They concluded that block allocation strategies cause performance variability
-% in Ext4-HDD configurations, based on statistical techniques such as Latin
-% hypercube design of experiments over their parameter space and computing the
-% relative standard deviations at each configuration.
-@inproceedings{cao2017performance,
-	author = {Cao, Zhen and Tarasov, Vasily and Raman, Hari Prasath and Hildebrand, Dean and Zadok, Erez},
-	title = {On the performance variation in modern storage stacks},
-	year = {2017},
-	booktitle = {Proceedings of the 15th USENIX Conference on File and Storage Technologies (FAST '17)},
-	pages = {329--344},
-	organization = {USENIX Association},
-	location = {Vancouver, Canada},
-}
-
-% Official IOZone reference -- this benchmarking software can be used to
-% measure the read, write, strided-read, strided-write, first read, first
-% write, etc throughputs on a given system.  In the VarSys project, we used
-% this to measure IO performance (which we then used to calculate performance
-% variability) for various system configurations on our Moana cluster.
-@misc{capps2016iozone,
-	author = {Capps, Don and Capps, Carol and Sawyer, Darren and Lohr, Jerry and Dowding, George and Little, Gary and Capps, Terry and Miller, Robin and Faibish, Sorin and Wang, Raymond and Waghmare, Tanmay and Zhang, Yansheng and Miller, Vernon and Principe, Nick and Jones, Zach and Bapat, Udayan and Norcott, William and Crawford, Isom and Collins, Kirby and Slater, Al and Rhine, Scott and Wisner, Mike and Goss, Ken and Landherr, Steve and Smith, Brad and Kelly, Mark and CYR, Alain and Dunlap, Randy and Montague, Mark and Million, Dan and Brebner, Gavin and Zucconi, Jean-Marc and Blomberg, Jeff and Halevy, Benny and Boone, Dave and Habbinga, Erik and Strecker, Kris and Wong, Walter and Root, Joshua and Bacchella, Fabrice and Xue, Zhenghua and Li, Qin and Sawyer, Darren and Bojaxhi, Vangel and England, Ben and Lapa, Vikentsi and Skidanov, Alexey},
-	title = {{IOzone} Filesystem Benchmark},
-	year = {2016},
-	month = {January},
-	url = {www.iozone.org},
-	note = {Last accessed: Nov 2016},
-}
-
-% Interpolation errors and runtimes and an early version of the DelaunaySparse algorithm is applied to a HPC performance modeling application
-@inproceedings{chang2018predicting,
-	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-	title = {Predicting system performance by interpolation using a high-dimensional {D}elaunay triangulation},
-	year = {2018},
-	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
-	articleno = {2},
-	organization = {SCS},
-	location = {Baltimore, MD, USA},
-}
-
-% The DelaunaySparse software, demonstrates how to calculate simplices from a Delauay triangulation in very high dimensions scalably (and in parallel) using a highly customized simplex method like solver. The resulting Fortran numerical software is fully open source with a C and Python interface
-@article{chang2020algorithm,
-	author = {Chang, Tyler H. and Watson, Layne T. and Lux, Thomas C. H. and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-	title = {Algorithm 1012: {DELAUNAYSPARSE}: Interpolation via a Sparse Subset of the {D}elaunay Triangulation in Medium to High Dimensions},
-	year = {2020},
-	month = {12},
-	journal = {ACM Trans. Math. Softw.},
-	volume = {46},
-	number = {4},
-	articleno = {38},
-	numpages = {20},
-	publisher = {ACM},
-	address = {New York, NY, USA},
-	doi = {10.1145/3422818},
-	url = {https://dl.acm.org/doi/10.1145/3422818},
-	issn = {0098-3500},
-}
-
-% The publication for the XGBoost numerical software. XGBoost can be used to
-% efficiently compute optimized gradient boosted decision trees on massive
-% datasets via a fully-distributed algorithm that can be configured to run on
-% Hadoop, SGE, and MPI.  It can also be run on NVIDIA GPUs using CUDA.  The
-% software is fully open-source and written in highly optimized C++, though
-% everyone uses it through its Python interface.  The download is available at
-% github.com/dmlc/xgboost.  Most data science competition winners use XGBoost
-% for tabular data
-@inproceedings{chen2016xgboost,
-	author = {Chen, Tianqi and Guestrin, Carlos},
-	title = {{XGBoost}: A Scalable Tree Boosting System},
-	year = {2016},
-	month = {8},
-	booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)},
-	pages = {785--794},
-	organization = {ACM},
-	location = {San Francisco, California, USA},
-	doi = {10.1145/2939672.2939785},
-	url = {https://dl.acm.org/doi/10.1145/2939672.2939785},
-}
-
-% Dantzig's original (landmark) textbook on solving linear programming problems via the simplex method. This was obviously a landmark achievement in how to solve linear programming problems and more generally in the field of numerical optimization
-@book{dantzig1998linear,
-	author = {Dantzig, George B.},
-	title = {Linear Programming and Extensions},
-	year = {1998},
-	series = {Princeton Landmarks in Mathematics and Physics},
-	edition = {11},
-	publisher = {Princeton University Press},
-	address = {Princeton, NJ, USA},
-}
-
-% An emulation framework for HPC performance modeling and predicting true
-% performance under variability.
-@inproceedings{de2008tracedriven,
-	author = {De, Pradipta and Kothari, Ravi and Mann, Vijay},
-	title = {A trace-driven emulation framework to predict scalability of large clusters in presence of {OS} jitter},
-	year = {2008},
-	month = {9},
-	booktitle = {Proceedings of the 2008 IEEE International Conference on Cluster Computing},
-	pages = {232--241},
-	organization = {IEEE},
-	location = {Tsukuba, Japan},
-	doi = {10.1109/clustr.2008.4663776},
-	url = {http://ieeexplore.ieee.org/document/4663776},
-}
-
-% A review paper on how HPC performance variability causes issues at scale in
-% Google's data centers, particularly, since requests generally have to wait on
-% the longest running process (i.e., the performance variability "tail") and
-% so the mean performance time can be somewhate meaningless
-@article{dean2013tail,
-	author = {Dean, Jeffrey and Barroso, Luiz Andr{\'e}},
-	title = {The tail at scale},
-	year = {2013},
-	journal = {Communications of the ACM},
-	volume = {56},
-	number = {2},
-	pages = {74--80},
-}
-
-% Summary article on the history of the LINPACK of benchmark (the standard
-% benchmark for HPC performance tuning and evaluation), which defines the HPC
-% Top 500 list
-@article{dongarra2003linpack,
-	author = {Dongarra, Jack J. and Luszczek, Piotr and Petitet, Antoine},
-	title = {The {LINPACK} benchmark: past, present, and future},
-	year = {2003},
-	month = {8},
-	journal = {Concurrency and Computation: Practice and Experience},
-	volume = {15},
-	number = {9},
-	pages = {803--820},
-	publisher = {Wiley},
-	doi = {10.1002/cpe.728},
-	url = {https://onlinelibrary.wiley.com/doi/10.1002/cpe.728},
-	issn = {1532-0626},
-}
-
-% The official CGAL User Guide docs page for computing high-dimensional convex
-% hulls and Delaunay triangulations. CGAL is a standard numerical software
-% package for using computational geometry data structures and algorithms in
-% perfect precision (via symbolic arithmetic). CGAL is a header-only open
-% source C++ library
-@incollection{hert2020convex,
-	author = {Hert, Susan and Seel, Michael},
-	title = {{dD} Convex Hulls and {D}elaunay Triangulations},
-	year = {2020},
-	booktitle = {{CGAL} User and Reference Manual},
-	edition = {{5.0.2}},
-	publisher = {{CGAL Editorial Board}},
-	url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
-}
-
-% Fitting nonparametric distribution models by interpolating the cumulative
-% distribution functions -- the application is that the CDFs measure HPC
-% throughput distributions, so it is also a little bit of a HPC performance
-% modeling paper
-@inproceedings{lux2018nonparametric,
-	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-	title = {Nonparametric distribution models for predicting and managing computational performance variability},
-	year = {2018},
-	month = {4},
-	booktitle = {Proceedings of IEEE SoutheastCon 2018},
-	pages = {1--7},
-	organization = {IEEE},
-	location = {St. Petersburg, FL, USA},
-	doi = {10.1109/secon.2018.8478814},
-	url = {https://ieeexplore.ieee.org/document/8478814},
-}
-
-% Using various interpolation, neural networks, and other scientific machine
-% learning methods to predict and model HPC performance based on system
-% configuration parameters -- explores Delaunay interpolation, support vector
-% regressors, Shepard's method, and multilayer perceptrons
-@inproceedings{lux2018predictive,
-	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
-	title = {Predictive modeling of {I/O} characteristics in high performance computing systems},
-	year = {2018},
-	booktitle = {Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the 26th High Performance Computing Symposium (HPC '18)},
-	articleno = {8},
-	organization = {SCS},
-	location = {Baltimore, MD, USA},
-}
-
-% The official handbook and user's manual for the high-performance LINPACK
-% benchmark (HPL) describing how to set-up and run the HPC performance tuning
-% benchmark on distributed-memory systems, what problem it solves, what values
-% the config file sets, and what are the rules for defining a solver for the
-% problem and having it still count toware the Top 500 list
-@book{petitet2018hpl,
-	author = {Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack and Cleary, Andy},
-	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
-	year = {2018},
-	publisher = {Innovation Computing Laboratory, University of Tennessee},
-}
-
-% A case report from configuring a Los Alamos HPC, where real-world performance
-% ended up being much lower than expected due to performance variability
-@inproceedings{petrini2003case,
-	author = {Petrini, Fabrizio and Kerbyson, Darren J. and Pakin, Scott},
-	title = {The case of the missing supercomputer performance: Achieving optimal performance on the 8,192 processors of {ASCI Q}},
-	year = {2003},
-	month = {11},
-	booktitle = {Proceedings of the 2003 ACM/IEEE Conference on Supercomputing (SC '03)},
-	pages = {55--55},
-	organization = {ACM},
-	location = {Phoenix, AZ, USA},
-	doi = {10.1145/1048935.1050204},
-	url = {https://dl.acm.org/doi/10.1145/1048935.1050204},
-}
-
-% A numerical algorithm for performing a rank-revealing rank-1 QR update (given
-% an existing orthonormal (QR) matrix factorization and updating just one
-% column of the basis Q)
-@article{shroff1992adaptive,
-	author = {Shroff, Gautam M. and Bischof, Christian H.},
-	title = {Adaptive condition estimation for rank-one updates of QR factorizations},
-	year = {1992},
-	month = {10},
-	journal = {SIAM Journal on Matrix Analysis and Applications},
-	volume = {13},
-	number = {4},
-	pages = {1264--1278},
-	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
-	doi = {10.1137/0613077},
-	url = {http://epubs.siam.org/doi/10.1137/0613077},
-	issn = {0895-4798},
-}
-
-% Citation for the Nov 2019, HPC Top 500 -- measuring the fastest HPCs in the
-% world based on their max throughput on the high-performance LINPACK
-% HPC performance benchmark problem
-@misc{strohmaier2019top,
-	author = {Strohmaier, Eric and Dongarra, Jack and Simon, Horst and Meuer, Martin},
-	title = {The Top 500 List},
-	year = {2019},
-	month = {November},
-    url = {https://www.top500.org},
-	note = {Last accessed: April 18, 2020},
-}
-
-% Official publication for ytopt: Argonne's HPC and scientific library
-% autotuning software using Bayesian optimization to portably autotune
-% numerical libraries for optimal performance on a given HPC as part of the
-% exasale computing project.  The software uses a random forest surrogate model
-% and calculates their model-form uncertainties through resampling models.
-% Then, they use random sampling of their acquisition function to perform
-% Bayesian optimization at scale with fully distributed evaluation of the
-% selected configurations.  The results scale well on the HPCs Theta and
-% Summit.  The open source Python software is available at
-% github.com/ytopt-team/ytopt
-@article{wu2025ytopt,
-author = {Wu, Xingfu and Balaprakash, Prasanna and Kruse, Michael and Koo, Jaehoon and Videau, Brice and Hovland, Paul and Taylor, Valerie and Geltz, Brad and Jana, Siddhartha and Hall, Mary},
-title = {ytopt: Autotuning Scientific Applications for Energy Efficiency at Large Scales},
-year = {2025},
-journal = {Concurrency and Computation: Practice and Experience},
-volume = {37},
-number = {1},
-articleno = {e8322},
-doi = {https://doi.org/10.1002/cpe.8322},
-url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.8322},
-}
-
-% My bachelor's thesis on how to use and measuring the overhead of using
-% NVIDIA's CUDA MPS contol daemon to distribute small matrix-vector
-% multiplication kernels between available resources on HPC systems
-@mastersthesis{chang2016bachelorsthesis,
-  author = {Chang, Tyler H.},
-  title = {{GPU} Saturation for Multiple Matrix-Vector Multiplications},
-  year = {2016},
-  school = {Department of Computer Science, Virginia Wesleyan University},
-  address = {Virginia Beach, VA, USA},
-  type={Bachelor's Thesis}
-}
-
-% Paper on how the HPC Frontier at ORNL was configured to train
-% trillion-parameter large language models (LLMs).  There is a really nice
-% discussion of the model architectures and sizes, and the memory requirements
-% of each.  There is also a nice discussion of parallel pipelines and model vs
-% data sharding.  Then they discuss their code bases and software stacks.
-% Finally, they perform a hyperparameter optimization with DeepHyper to
-% determine optimal block sizes and pipeline overlapping configurations.
-@inproceedings{dash2024optimizing,
-  author={Dash, Sajal and Lyngaas, Isaac R and Yin, Junqi and Wang, Xiao and Egele, Romain and Ellis, J. Austin and Maiterth, Matthias and Cong, Guojing and Wang, Feiyi and Balaprakash, Prasanna},
-  booktitle={ISC High Performance 2024 Research Paper Proceedings (39th International Conference)},
-  title={Optimizing Distributed Training on Frontier for Large Language Models},
-  year={2024},
-  pages={1-11},
-  doi={10.23919/ISC.2024.10528939}
-}
-
-% Original publication of MapReduce from Google research, the distributed
-% computing paradigm that drives all Hadoop clusters.  This was the most common
-% distributed computing programming and filesystem in the 2010s, and still
-% persist today.  The idea is that each computation over massive datasets is
-% posed as a sequence of map and reduce operations, where the map performs some
-% simple operation on the data (which can be massively parallelized) and the
-% reduce provides a way for two data items to be reduced into a single item.
-% By applying map and reduce over and over on all the data, a computation on a
-% massive fully distributed dataset can be performed in parallel with a
-% logarithmic number of sequential steps and without ever holding all the data
-% on one machine
-@article{mapreduce,
-author = {Dean, Jeffrey and Ghemawat, Sanjay},
-title = {MapReduce: simplified data processing on large clusters},
-year = {2008},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {51},
-number = {1},
-issn = {0001-0782},
-url = {https://doi.org/10.1145/1327452.1327492},
-doi = {10.1145/1327452.1327492},
-journal = {Communications of the ACM},
-pages = {107–113},
-}
-
-% The LLaMA 3 model publication. In addition to the information from LLaMA 1 tech report, they add information on training and pipeline parallelism. The latest max model size is a 405B parameter (dense) model, which competes with GPT-4 from OpenAI. The model architectures and instructions to download the weights (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this report carefully, especially the training details, I have only skimmed
-@techreport{grattafiori2024llama,
-	author = {Grattafiori, Aaron and Dubey, Abhimanyu and Jauhri, Abhinav and Pandey, Abhinav and Kadian, Abhishek and Al-Dahle, Ahmad and Letman, Aiesha and Mathur, Akhil and Schelten, Alan and Vaughan, Alex and others, },
-	title = {The {LLaMA} 3 herd of models},
-	year = {2024},
-	institution = {arXiv preprint arXiv:2407.21783},
-	url = {https://arxiv.org/abs/2407.21783},
-}
-
-% DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data (as opposed to using word2vec). Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
-@techreport{liu2024deepseekv3,
-	author = {Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others, },
-	title = {{DeepSeek-V3} technical report},
-	year = {2024},
-	institution = {arXiv preprint arXiv:2412.19437},
-	doi = {10.48550/arXiv.2412.19437},
-}
-
-% Original Kafka paper: a fully-distributed, scalable message-passing and log
-% processing interface.  A Kafka system consists of producer, consumer, and
-% broker processes / nodes.  Producers generate logs/messages and consumers
-% subscribte to log/message streams from producers.  When a producer generates
-% a new message or log, it publishes that message to a given topic.  Those
-% topics are broken up into sequential partitions and distributed across the
-% broker nodes.  The broker nodes and their partitions are all stateless.
-% Consumers are placed in groups, with each group subscribing to a topic.  Each
-% group will read messages/logs from a specific topic, with a guarantee that
-% each partition is read sequentially, but messages from different partitions
-% will be read in any order.  They guarantee that each group will read each
-% message in their subscribed topics at least once.  Groups store all state
-% information locally, and therefore have the ability to roll-back and replay a
-% topic from any offset.  The original application is for distributing LinkedIn
-% messages.  Kafka is a standard in scalable distributed message/log streaming,
-% and created the paradigm of subscribable topics.  The official open-source
-% implementation is Apache Kafka  https://github.com/apache/kafka
-@inproceedings{kreps2011kafka,
-  title={Kafka: A distributed messaging system for log processing},
-  author={Kreps, Jay and Narkhede, Neha and Rao, Jun and others},
-  booktitle={Proceedings of the NetDB},
-  volume={11},
-  number={2011},
-  pages={1--7},
-  year={2011},
-  organization={Athens, Greece},
-  url={https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf},
-}
