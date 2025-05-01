@@ -1,7 +1,47 @@
-% An analysis showing that the condition number of the RBF (and GP)
-% interpolation matrices grow (and lowering bounding them) as the minimum
-% separation distance shrinks.  I.e., when data gets too dense, the RBF
-% conditioning is guaranteed to become arbitrarily bad.
+% Differentiabl convex optimization layers are introduced pytorch and tensorflow via an update to cvxpy, introducing differentiation through the solution to a convex optimization problem modeled in cvxpy. The open source numerical optimization software is available at github.com/cvxgrp/cvxpylayers in Python
+@inproceedings{agrawal2019differentiable,
+	author = {Agrawal, Akshay and Amos, Brandon and Barratt, Shane and Boyd, Stephen and Diamond, Steven and Kolter, J. Zico},
+	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
+	title = {Differentiable Convex Optimization Layers},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf},
+}
+
+% Brandon's original paper on differentiabl optimization layers in neural networks -- i.e., solving an optimization problem within a layer of a neural network and propogating the gradient through that solution so that the network parameters can still be trained
+@inproceedings{amos2017optnet,
+	author = {Amos, Brandon and Kolter, J. Zico},
+	editor = {Precup, Doina and Teh, Yee Whye},
+	title = {{O}pt{N}et: Differentiable Optimization as a Layer in Neural Networks},
+	year = {2017},
+	month = {06--11 Aug},
+	booktitle = {Proceedings of the 34th International Conference on Machine Learning},
+	series = {Proceedings of Machine Learning Research},
+	volume = {70},
+	pages = {136--145},
+	organization = {PMLR},
+	url = {https://proceedings.mlr.press/v70/amos17a.html},
+}
+
+% Brandon introduces using neural networks and other scientific machine learning methods to warm-start optimization and control problems. An open source numerical software tutorial is available at github.com/facebookresearch/amortized-optimization-tutorial
+@article{amos2023tutorial,
+	author = {Amos, Brandon},
+	title = {Tutorial on Amortized Optimization},
+	year = {2023},
+	journal = {Found. Trends Mach. Learn.},
+	volume = {16},
+	number = {5},
+	numpages = {156},
+	publisher = {Now Publishers Inc.},
+	address = {Hanover, MA, USA},
+	doi = {10.1561/2200000102},
+	url = {https://doi.org/10.1561/2200000102},
+	issn = {1935-8237},
+}
+
+% An analysis showing that the condition number of the RBF (and GP) interpolation matrices grow (and lowering bounding them) as the minimum separation distance shrinks. I.e., when data gets too dense, the RBF conditioning is guaranteed to become arbitrarily bad.
 @article{ball1992sensitivity,
 	author = {Ball, Keith and Sivakumar, Natarajan and Ward, Joseph D},
 	title = {On the sensitivity of radial basis interpolation to minimal data separation distance},
@@ -43,6 +83,22 @@
 	issn = {0962-4929},
 }
 
+% A review article on representation learning and unifying the ideas of representation learning, density estimation, and manifold learning under a single geometric umbrella. The authors show broadly how representation learning has been the key to the performance of neural networks across many fields, often allowing us to break the curse of dimensionality. Additionally, they discuss the general requirements (priors) about a problem / function for representation learning to be an effective approach.
+@article{bengio2013representation,
+	author = {Bengio, Yoshua and Courville, Aaron and Vincent, Pascal},
+	title = {Representation Learning: A Review and New Perspectives},
+	year = {2013},
+	month = {8},
+	journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+	volume = {35},
+	number = {8},
+	pages = {1798--1828},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/TPAMI.2013.50},
+	url = {http://ieeexplore.ieee.org/document/6472238/},
+	issn = {0162-8828},
+}
+
 % Methodolgies for calibrating the Fayans EDF model to experimental data. Data is expensive and limited and the model itself is computationally expensive, so this is a classical inverse problem. The problem is actually multiobective because the data themselves come from various categories representing different types of observations, and the standard deviations for each of these observables is not known. Could be configured as a 3 or 9-objective problem
 @article{bollapragada2020optimization,
 	author = {Bollapragada, Raghu and Menickelly, Matt and Nazarewicz, Witold and O'Neal, Jared and Reinhard, Paul-Gerhard and Wild, Stefan M.},
@@ -59,17 +115,12 @@
 	issn = {0954-3899},
 }
 
-% The famous textbook on convex optimization (from which I learned most
-% concepts) covering concepts such as basic convexity definitions and theorems,
-% basic algorithms and optimality conditions, handling constraints, Lagrangian
-% duality, multiobjective optimization basics, gradient descent and newton's
-% method, sequential quadratic programming, linear programming, and a few
-% applications and modeling basics
+% The famous textbook on convex optimization (from which I learned most concepts) covering concepts such as basic convexity definitions and theorems, basic algorithms and optimality conditions, handling constraints, Lagrangian duality, multiobjective optimization basics, gradient descent and newton's method, sequential quadratic programming, linear programming, and a few applications and modeling basics
 @book{boyd2004convex,
-  title={Convex optimization},
-  author={Boyd, Stephen P and Vandenberghe, Lieven},
-  year={2004},
-  publisher={Cambridge university press}
+	author = {Boyd, Stephen P and Vandenberghe, Lieven},
+	title = {Convex optimization},
+	year = {2004},
+	publisher = {Cambridge university press},
 }
 
 % The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
@@ -79,18 +130,18 @@
 	year = {2018},
 	number = {0.3.13},
 	url = {http://github.com/google/jax},
-    note = {Last accessed: Jul 2024},
+	note = {Last accessed: Jul 2024},
 }
 
-% The new classic textbook on geometric deep learning -- this book (by the
-% creator of the field) covers how all of representation learning can be broken
-% down into exploiting symmetries, stabilities, and invariances in data,
-% through the lens of group theory.  For example, a convolutional layer
-% exploits a symmetry between equivalent groups of images; and a max pooling
-% layer exploits a scale invariance in image size/resolution; and when we talk
-% about feature encodings, we are often looking for mappings that maintain
-% stability (i.e., similar feature vectors remain close together after
-% encoding).
+% The largest repository of open source AI, machine learning, and control benchmark problems, maintained by OpenAI. This was the primary benchmark problem environment for all reinforcement learning researchers not affiliated with another company with their own private environments (such as Meta and Google). Still available at github.com/openai/gym
+@techreport{brockman2016openai,
+	author = {Brockman, Greg and Cheung, Vicki and Pettersson, Ludwig and Schneider, Jonas and Schulman, John and Tang, Jie and Zaremba, Wojciech},
+	title = {OpenAI Gym},
+	year = {2016},
+	institution = {arXiv:1606.01540},
+}
+
+% The new classic textbook on geometric deep learning -- this book (by the creator of the field) covers how all of representation learning can be broken down into exploiting symmetries, stabilities, and invariances in data, through the lens of group theory. For example, a convolutional layer exploits a symmetry between equivalent groups of images; and a max pooling layer exploits a scale invariance in image size/resolution; and when we talk about feature encodings, we are often looking for mappings that maintain stability (i.e., similar feature vectors remain close together after encoding).
 @book{bronstein2021geometric,
 	author = {Bronstein, Michael M. and Bruna, Joan and Cohen, Taco and Veličković, Petar},
 	title = {Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges},
@@ -99,9 +150,7 @@
 	doi = {10.48550/arXiv.2104.13478},
 }
 
-% Large review paper covering all aspects of RBFs, their interpolation error
-% bounds, their convergence rates, and numerical computation for various kernel
-% functions.
+% Large review paper covering all aspects of RBFs, their interpolation error bounds, their convergence rates, and numerical computation for various kernel functions.
 @article{buhmann2000radial,
 	author = {Buhmann, M. D.},
 	title = {Radial basis functions},
@@ -143,46 +192,23 @@
 	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
 }
 
-% Our SciML paper analyzing and comparing the usefulness of error bounds of
-% various interpolation methods for scientific machine learning applications.
-% Ultimately, we show that the Delaunay bounds are most useful (I personally
-% suspect it has something to do with less smooth "low order methods" being
-% more robust for noisy data) and we demonstrate how they can be used for
-% interpretability and verification on an aircraft design application
-% (predicting lift/drag ratios for various airfoils)
+% Our SciML paper analyzing and comparing the usefulness of error bounds of various interpolation methods for scientific machine learning applications. Ultimately, we show that the Delaunay bounds are most useful (I personally suspect it has something to do with less smooth "low order methods" being more robust for noisy data) and we demonstrate how they can be used for interpretability and verification on an aircraft design application (predicting lift/drag ratios for various airfoils)
 @article{chang2025leveraging,
-  author = {Chang, Tyler H. and Gillette, Andrew K. and Maulik, Romit},
-  title = {Leveraging Interpolation Models and Error Bounds for Verifiable Scientific Machine Learning},
-  year = {2025},
-  journal = {Journal of Computational Physics},
-  volume = {524},
-  articleno = {113726},
-  numpages = {23},
-  doi = {10.1016/j.jcp.2025.113726},
+	author = {Chang, Tyler H. and Gillette, Andrew K. and Maulik, Romit},
+	title = {Leveraging Interpolation Models and Error Bounds for Verifiable Scientific Machine Learning},
+	year = {2025},
+	month = {3},
+	journal = {Journal of Computational Physics},
+	volume = {524},
+	articleno = {113726},
+	numpages = {23},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.jcp.2025.113726},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0021999125000099},
+	issn = {0021-9991},
 }
 
-% Manisha's conference paper on SF-SFD -- the theory is far from ready, but the
-% problem of concentration of measure in high-dimensions making robust sampling
-% difficult and the ability to do something better than just random or latin
-% hypercube sampling are clearly demonstrated
-@inproceedings{garg2023sfsfd,
-  author  = {Garg, Manisha and Chang, Tyler H. and Raghavan, Krishnan},
-  title   = {{SF-SFD}: {S}tochastic optimization of {F}ourier coefficients for space-filling designs},
-  year    = {2023},
-  booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023)},
-  location = {Orlando, FL, USA},
-  pages   = {3636--3646},
-  doi     = {10.1109/WSC60868.2023.10408245}
-}
-
-% A great article on the optimality of Delaunay triangulations for
-% interpolation.  The authors show that the Delaunay triangulation can be
-% equivalently defined as the interpolation mesh that minimizes interpolation
-% error for the perfect quadratic function f(x) = <x, x>.  Then, they explore
-% how we can define new metrics to yield a new Delaunay triangulation that is
-% optimal for an arbitrary function.  Ultimatey, it is hard to compute such
-% Delaunay triangulations, so they explore relaxations and definitions of
-% "nearly optimal" Delaunay triangulations.
+% A great article on the optimality of Delaunay triangulations for interpolation. The authors show that the Delaunay triangulation can be equivalently defined as the interpolation mesh that minimizes interpolation error for the perfect quadratic function f(x) = <x, x>. Then, they explore how we can define new metrics to yield a new Delaunay triangulation that is optimal for an arbitrary function. Ultimatey, it is hard to compute such Delaunay triangulations, so they explore relaxations and definitions of "nearly optimal" Delaunay triangulations.
 @article{chen2004optimal,
 	author = {Chen, Long and Xu, Jin-chao},
 	title = {Optimal {D}elaunay triangulations},
@@ -193,14 +219,7 @@
 	pages = {299--308},
 }
 
-% The publication for the XGBoost numerical software. XGBoost can be used to
-% efficiently compute optimized gradient boosted decision trees on massive
-% datasets via a fully-distributed algorithm that can be configured to run on
-% Hadoop, SGE, and MPI.  It can also be run on NVIDIA GPUs using CUDA.  The
-% software is fully open-source and written in highly optimized C++, though
-% everyone uses it through its Python interface.  The download is available at
-% github.com/dmlc/xgboost.  Most data science competition winners use XGBoost
-% for tabular data
+% The publication for the XGBoost numerical software. XGBoost can be used to efficiently compute optimized gradient boosted decision trees on massive datasets via a fully-distributed algorithm that can be configured to run on Hadoop, SGE, and MPI. It can also be run on NVIDIA GPUs using CUDA. The software is fully open-source and written in highly optimized C++, though everyone uses it through its Python interface. The download is available at github.com/dmlc/xgboost. Most data science competition winners use XGBoost for tabular data
 @inproceedings{chen2016xgboost,
 	author = {Chen, Tianqi and Guestrin, Carlos},
 	title = {{XGBoost}: A Scalable Tree Boosting System},
@@ -236,13 +255,10 @@
 	title = {Keras},
 	year = {2015},
 	howpublished = {\url{https://keras.io}},
-    note = {Last accessed: Nov 2023},
+	note = {Last accessed: Nov 2023},
 }
 
-% A paper on the similarities and differences between kriging and Gaussian
-% processes -- in practice, I see very little difference other than that people
-% often perform more performance optimizations on Gaussian processes and
-% consider Kriging to be a bit more strict
+% A paper on the similarities and differences between kriging and Gaussian processes -- in practice, I see very little difference other than that people often perform more performance optimizations on Gaussian processes and consider Kriging to be a bit more strict
 @article{christianson2022traditional,
 	author = {Christianson, Ryan B and Pollyea, Ryan M and Gramacy, Robert B},
 	title = {Traditional kriging versus modern Gaussian processes for large-scale mining data},
@@ -279,9 +295,31 @@
 	url = {https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf},
 }
 
-% A framework for deriving error bounds for neural networks in scientific
-% machine learning applications, specifically for physics-informed neural
-% networks (PINNs)
+% Original reference for Delaunay triangulations -- I have not read this, it's in French, but this is the proper way to cite the original idea for Delaunay triangulations
+@article{delaunay1934sur,
+	author = {Delaunay, B.},
+	title = {Sur la sph\'ere vide},
+	year = {1934},
+	journal = {Bull. Acad. Science USSR VII: Class. Sci. Math.,},
+}
+
+% One of the largest most difficult image classification benchmark problems from the 2010s, which drove a lot of advancement. Was a bit too difficult for the average researcher to solve since it required a lot of training resources to get good performance, but drove advancement in developing and training large (deep) neural networks with many layers and millions of parameters
+@inproceedings{deng2009imagenet,
+	author = {Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+	title = {{ImageNet}: A large-scale hierarchical image database},
+	year = {2009},
+	month = {6},
+	booktitle = {2009 IEEE Conference on Computer Vision and Pattern Recognition},
+	volume = {},
+	number = {},
+	pages = {248--255},
+	organization = {IEEE},
+	location = {Miami, FL},
+	doi = {10.1109/CVPR.2009.5206848},
+	url = {https://ieeexplore.ieee.org/document/5206848/},
+}
+
+% A framework for deriving error bounds for neural networks in scientific machine learning applications, specifically for physics-informed neural networks (PINNs)
 @article{deryck2022generic,
 	author = {De Ryck, Tim and Mishra, Siddhartha},
 	title = {Generic bounds on the approximation error for physics-informed (and) operator learning},
@@ -291,12 +329,18 @@
 	pages = {10945--10958},
 }
 
-% Original reference for Delaunay triangulations -- I have not read this, it's in French, but this is the proper way to cite the original idea for Delaunay triangulations
-@article{delaunay1934sur,
-	author = {Delaunay, B.},
-	title = {Sur la sph\'ere vide},
-	year = {1934},
-	journal = {Bull. Acad. Science USSR VII: Class. Sci. Math.,},
+% BERT was one of the first transformer-based neural network architectures for solving language-related tasks, such as language translations, at Google. This was also by far the largest model of its time. BERT paved the way for modern large language models, probably moreso than the Attention is all you need paper
+@inproceedings{devlin2019bert,
+	author = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+	editor = {Burstein, Jill and Doran, Christy and Solorio, Thamar},
+	title = {{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+	year = {2019},
+	booktitle = {Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},
+	pages = {4171--4186},
+	organization = {Association for Computational Linguistics},
+	location = {Minneapolis, Minnesota},
+	doi = {10.18653/v1/N19-1423},
+	url = {https://aclanthology.org/N19-1423/},
 }
 
 % CVXPY is an open source Python optimization and modeling language for solving convex optimization problems in a disciplined way (meaning that we ensure convexity through hard rules on the problem definition). From the lab of Stephen Boyd
@@ -337,6 +381,79 @@
 	url = {http://jmlr.org/papers/v12/duchi11a.html},
 }
 
+% AutoDEUQ paper proposing that an ensemble of neural networks can be a more powerful and scalable tool for uncertainty quantification than a Bayesian neural network. They trained AutoDEUQ using DeepHyper in multiobjective mode. I don't think the code is available, but an example can be found on the DeepHyper GitHub
+@inproceedings{egele2022autodeuq,
+	author = {Egele, Romain and Maulik, Romit and Raghavan, Krishnan and Lusch, Bethany and Guyon, Isabelle and Balaprakash, Prasanna},
+	title = {{AutoDEUQ}: Automated deep ensemble with uncertainty quantification},
+	year = {2022},
+	month = {8},
+	booktitle = {2022 26th International Conference on Pattern Recognition (ICPR)},
+	pages = {1908--1914},
+	organization = {IEEE},
+	location = {Montreal, QC, Canada},
+	doi = {10.1109/icpr56361.2022.9956231},
+	url = {https://ieeexplore.ieee.org/document/9956231/},
+}
+
+% Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
+@inproceedings{farhan2020reinforcement,
+	author = {Farhan, Mohammed and G{\"o}hre, Brett},
+	title = {Reinforcement Learning in {AnyLogic} Simulation Models: A Guiding Example using {Pathmind}},
+	year = {2020},
+	month = {12},
+	booktitle = {Proc. 2020 Winter Simulation Conference (WSC 2020)},
+	pages = {3212--3223},
+	organization = {IEEE},
+	location = {Orlando, FL, USA},
+	doi = {10.1109/WSC48552.2020.9383916},
+	url = {https://ieeexplore.ieee.org/document/9383916},
+}
+
+% The culmination of a line of work from Google DeepMind on discovering better matrix factorization algorithms using reinforcement learning. They defined a tensor game for trying to solve matrix multiplication at a fixed size in fewer moves, then trained a RL agent to play the game using monte carlo tree search and training a neural network to predict a manageable subset of states and expected state outcomes since the number of states was too numerous for true MCTS. They were able to match the performance of Strassen's algorithm on 5x5 matrices (this is how recursive block-based recursive multiplication is done) and exceed performance on other sizes and rings (such as modular arithmetic rings)
+@article{fawzi2022discovering,
+	author = {Fawzi, Alhussein and Balog, Matej and Huang, Aja and Hubert, Thomas and Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and R. Ruiz, Francisco J and Schrittwieser, Julian and Swirszcz, Grzegorz and others, },
+	title = {Discovering faster matrix multiplication algorithms with reinforcement learning},
+	year = {2022},
+	month = {10},
+	journal = {Nature},
+	volume = {610},
+	number = {7930},
+	pages = {47--53},
+	publisher = {Nature Publishing Group UK London},
+	doi = {10.1038/s41586-022-05172-4},
+	url = {https://www.nature.com/articles/s41586-022-05172-4},
+	issn = {0028-0836},
+}
+
+% The first paper where the ReLU activation function was used as the activation function in neural network models. This would later become the standard for many years (and still is for regressor models)
+@article{fukushima1975cognitron,
+	author = {Fukushima, Kunihiko},
+	title = {Cognitron: A self-organizing multilayered neural network},
+	year = {1975},
+	journal = {Biological cybernetics},
+	volume = {20},
+	number = {3},
+	pages = {121--136},
+	publisher = {Springer},
+	doi = {10.1007/bf00342633},
+	url = {http://link.springer.com/10.1007/BF00342633},
+	issn = {0340-1200},
+}
+
+% Manisha's conference paper on SF-SFD -- the theory is far from ready, but the problem of concentration of measure in high-dimensions making robust sampling difficult and the ability to do something better than just random or latin hypercube sampling are clearly demonstrated
+@inproceedings{garg2023sfsfd,
+	author = {Garg, Manisha and Chang, Tyler H. and Raghavan, Krishnan},
+	title = {{SF-SFD}: {S}tochastic optimization of {F}ourier coefficients for space-filling designs},
+	year = {2023},
+	month = {12},
+	booktitle = {Proc. 2023 Winter Simulation Conference (WSC 2023)},
+	pages = {3636--3646},
+	organization = {IEEE},
+	location = {Orlando, FL, USA},
+	doi = {10.1109/WSC60868.2023.10408245},
+	url = {https://ieeexplore.ieee.org/document/10408245/},
+}
+
 % A community reviewed textbook on Bayesian optimization theory and implementation. Very thorough description of Gaussian process and Bayesian optimization fundamentals and theory, common techniques and acquisition functions, and implementation details, drawbacks, and real-world challenges
 @book{garnett2023bayesian,
 	author = {Garnett, Roman},
@@ -347,12 +464,24 @@
 	isbn = {978-1108425780},
 }
 
-% Introducing a Delaunay density diagnostic -- using the Delaunay interpolant
-% to calculate whether they have enough data to resolve the geometry of a
-% problem for interpolation in the context of SciML.  Essentially, they use
-% DelaunaySparse to make predictions and slowly add data.  Once they have
-% enough data, the predictions begin converging at a linear rate.  Then they
-% have enough data to use whatever method they want to solve the problem
+% The original paper on the bias-variance tradeoff curve. Now widely debunked (in my opinion) the theory that machine learning and neural networks had to tradeoff between training accuracy and overfitting (which would lead to the idea of so-called "generalization error") and had to be combatted by limiting model size or regularization rules ruled AI theory for many, many years. One key insight in this paper that was perhaps ahead of its time, is that the important part of machine learning is the representation learning, in which sense training neural networks with backpropagation for regression problems is somewhat not special
+@article{geman1992neural,
+	author = {Geman, Stuart and Bienenstock, Elie and Doursat, Ren\'e},
+	title = {Neural networks and the bias/variance dilemma},
+	year = {1992},
+	month = {jan},
+	journal = {Neural Computation},
+	volume = {4},
+	number = {1},
+	pages = {1--58},
+	publisher = {MIT Press},
+	address = {Cambridge, MA, USA},
+	doi = {10.1162/neco.1992.4.1.1},
+	url = {https://direct.mit.edu/neco/article/4/1/1-58/5624},
+	issn = {0899-7667},
+}
+
+% Introducing a Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
 @techreport{gillette2022datadriven,
 	author = {Gillette, Andrew and Kur, Eugene},
 	title = {Data-driven geometric scale detection via Delaunay interpolation},
@@ -360,26 +489,21 @@
 	institution = {arXiv math.NA},
 }
 
-% Open source numerical software for the Delaunay density diagnostic -- using
-% the Delaunay interpolant to calculate whether they have enough data to
-% resolve the geometry of a problem for interpolation in the context of SciML.
-% Essentially, they use DelaunaySparse to make predictions and slowly add data.
-% Once they have enough data, the predictions begin converging at a linear
-% rate.  Then they have enough data to use whatever method they want to solve
-% the problem
+% Open source numerical software for the Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
 @article{gillette2024algorithm,
-author = {Gillette, Andrew and Kur, Eugene},
-title = {Algorithm 1049: The Delaunay Density Diagnostic},
-year = {2024},
-publisher = {Association for Computing Machinery},
-volume = {50},
-number = {4},
-issn = {0098-3500},
-url = {https://doi.org/10.1145/3700134},
-doi = {10.1145/3700134},
-journal = {ACM Trans. Math. Softw.},
-articleno = {24},
-numpages = {21},
+	author = {Gillette, Andrew and Kur, Eugene},
+	title = {Algorithm 1049: The Delaunay Density Diagnostic},
+	year = {2024},
+	month = {12},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {50},
+	number = {4},
+	articleno = {24},
+	numpages = {21},
+	publisher = {Association for Computing Machinery},
+	doi = {10.1145/3700134},
+	url = {https://doi.org/10.1145/3700134},
+	issn = {0098-3500},
 }
 
 % Online paper with interactive visualizations explaining what Nesterov's momentum is and how it works intuitively by smoothing out optimization sample paths and preventing oscillations in the optimizer that occur do to poor problem conditioning. Then, they show how the problem conditioning appears as an often ignored constant in the convergence rate of gradient descent. All this is to show intuitively and mathematically that gradient descent with Nesterov's momentum will convergence faster in practice for ill-conditioned problems
@@ -424,10 +548,7 @@ numpages = {21},
 	issn = {0893-6080},
 }
 
-% An interesting analysis by Bobby Gramacy on how adding a "nugget" (i.e., a
-% small perturbation \varepsilon I to the diagonal of a matrix results in
-% vastly improved numerical stability and therefore performance when modeling
-% data science and other approximation problems via Gaussian processes
+% An interesting analysis by Bobby Gramacy on how adding a "nugget" (i.e., a small perturbation \varepsilon I to the diagonal of a matrix results in vastly improved numerical stability and therefore performance when modeling data science and other approximation problems via Gaussian processes
 @article{gramacy2012cases,
 	author = {Gramacy, Robert B. and Lee, Herbert K. H.},
 	title = {Cases for the nugget in modeling computer experiments},
@@ -443,10 +564,16 @@ numpages = {21},
 	issn = {0960-3174},
 }
 
-% An error analysis of ReLU multilayer perceptrons (MLPs).  Provides lower
-% bounds on approximation error for feed-forward neural networks with ReLU
-% activation functions.  A good step in SciML, but we typically want upper
-% bounds not lower bounds in practice
+% First published work using Geoff Hinton's unpublished optimization algorithm RMSProp (root mean squared propogation, an adjustment to AdaGrad using an adaptive learning rate in each dimension). The author uses RMSProp to train a recurrent neural network (RNN) with long short-term memory (LSTM) in order to generate handwritten digits
+@techreport{graves2014generating,
+	author = {Graves, Alex},
+	title = {Generating Sequences With Recurrent Neural Networks},
+	year = {2014},
+	institution = {arXiv cs.NE preprint},
+	url = {https://arxiv.org/abs/1308.0850},
+}
+
+% An error analysis of ReLU multilayer perceptrons (MLPs). Provides lower bounds on approximation error for feed-forward neural networks with ReLU activation functions. A good step in SciML, but we typically want upper bounds not lower bounds in practice
 @article{guhring2020error,
 	author = {G{\"u}hring, Ingo and Kutyniok, Gitta and Petersen, Philipp},
 	title = {Error bounds for approximations with deep ReLU neural networks in W s, p norms},
@@ -472,6 +599,34 @@ numpages = {21},
 	doi = {10.1038/s41586-020-2649-2},
 	url = {https://www.nature.com/articles/s41586-020-2649-2},
 	issn = {0028-0836},
+}
+
+% Original publication of the Boltzman machine, an early type of AI model that made predictions by modeling the Ising spin-glass model with public input units (set by the user with the independent variables during inference) and hidden internal units that are correlated to eachother and the public units through learned Ising model weights and biases. Each unit has a binary {0, 1} state. The energy of the system is the output (prediction). The weights and biases are learned through simulated annealing, and in this way, the model is not unlike quantum annealing. The model learns a distribution of potential inference values for each input combination. Thus, it is a form of distribution learning. These were a commonly used alternative to neural networks for a time, and often cited as explainable alternatives. The binary state variables would later be replaced by sigmoidal activation functions (for smoothness)
+@inproceedings{hinton1983optimal,
+	author = {Hinton, Geoffrey E and Sejnowski, Terrence J},
+	title = {Optimal perceptual inference},
+	year = {1983},
+	booktitle = {Proceedings of the IEEE conference on Computer Vision and Pattern Recognition},
+	volume = {448},
+	pages = {448--453},
+	organization = {Citeseer},
+	url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b89e9f0cef5ace08946a7c07bf7284854c418445},
+}
+
+% Original publication on using long-short term memory within a recurrent neural network framework to address the issue of vanishing gradients during training. The idea is to truncate gradients for certain blocks (short-term memory units) and chain these blocks to generate skip connections for long term memory. These would be the state-of-the-art in natural language processing and other sequential prediction tasks until BERT replaces them with transformer models.
+@article{hochreiter1997long,
+	author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+	title = {Long Short-Term Memory},
+	year = {1997},
+	month = {11},
+	journal = {Neural Computation},
+	volume = {9},
+	number = {8},
+	pages = {1735--1780},
+	publisher = {MIT Press},
+	doi = {10.1162/neco.1997.9.8.1735},
+	url = {https://direct.mit.edu/neco/article/9/8/1735-1780/6109},
+	issn = {0899-7667},
 }
 
 % An article on Google GlassBox research: Google's research division dedicated to interpretable machine learning
@@ -501,11 +656,7 @@ numpages = {21},
 	issn = {1867-2949},
 }
 
-% An analysis of how adversarial examples for neural network and other AI
-% models are typically indicative of the model using highly predictive but
-% brittle features to make predictions -- i.e., features that are highly
-% predictive but nevertheless not robust enough to use for actually making
-% predictions
+% An analysis of how adversarial examples for neural network and other AI models are typically indicative of the model using highly predictive but brittle features to make predictions -- i.e., features that are highly predictive but nevertheless not robust enough to use for actually making predictions
 @inproceedings{ilyas2019adversarial,
 	author = {Ilyas, Andrew and Santurkar, Shibani and Tsipras, Dimitris and Engstrom, Logan and Tran, Brandon and Madry, Aleksander},
 	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
@@ -518,12 +669,18 @@ numpages = {21},
 	url = {https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf},
 }
 
-% One of the earliest applications of DelunaySparse: predicting oblique shocks
-% in supersonic flows for aerospace engineering applications.  This is also a
-% great example of an early example of scientific machine learning since the
-% authors were also using neural networks and other more modern AI methods to
-% make predictions
-@inproceedings{jrad2019selflearning,,
+% Original tech report where recurent neural networks were originally applied at scale to a language processing (next word prediction) application
+@techreport{jordan1986serial,
+	author = {Jordan, Michael I.},
+	title = {Serial order: a parallel distributed processing approach},
+	year = {1986},
+	institution = {Institute for Cognitive Science, University of California},
+	address = {San Diego, La Jolla, CA, USA},
+	url = {https://www.osti.gov/biblio/6910294},
+}
+
+% One of the earliest applications of DelunaySparse: predicting oblique shocks in supersonic flows for aerospace engineering applications. This is also a great example of an early example of scientific machine learning since the authors were also using neural networks and other more modern AI methods to make predictions
+@inproceedings{jrad2019selflearning,
 	author = {Jrad, Mohamed and Kapania, Rakesh K. and Schetz, Joseph A. and Watson, Layne T.},
 	title = {Self-Learning, Adaptive Software for Aerospace Engineering Applications: Example of Oblique Shocks in Supersonic Flow},
 	year = {2019},
@@ -551,6 +708,15 @@ numpages = {21},
 	issn = {1041-4347},
 }
 
+% The original paper defining variational autoencoders, a standard practice in performing dimension reduction and training models that encode continuous latent spaces. The idea being to train and optimize an encoder neural network model whose posterior is a continuous latent space to generate samples in the latent space distribution based on inputs from the original dataset without "losing information", then jointly train a decoder model that samples the latent distribution to produce the original observations. The idea being to randomly sample new data points that look like the original data. When trained jointly, these models can also be used as embedder/extractor or compression/decompression pairs.
+@inproceedings{kingma2014autoencoding,
+	author = {Kingma, Diederik P and Welling, Max},
+	title = {Auto-encoding variational {B}ayes},
+	year = {2014},
+	booktitle = {2nd International Conference on Learning Representations (ICLR 2014)},
+	url = {https://arxiv.org/abs/1312.6114},
+}
+
 % The original paper on Adam: an adaptive gradient and moment estimator that uses second order moments to approximate curvature (i.e., Hessian information) in order to accelerate the convergence of AdaGrad. In particular, this means applying Nesterov's momentum to both the gradient and curvature estimations. From 2015-2024 this was the state-of-the-art algorithm for optimization of neural network weights during training, and was what was typically meant when people talked about stochastic gradient descent.
 @inproceedings{kingma2015adam,
 	author = {Kingma, Diedrik and Ba, Jimmy},
@@ -562,34 +728,33 @@ numpages = {21},
 	url = {https://arxiv.org/abs/1412.6980},
 }
 
-% The original paper defining variational autoencoders, a standard practice in
-% performing dimension reduction and training models that encode continuous
-% latent spaces.  The idea being to train and optimize an encoder neural
-% network model whose posterior is a continuous latent space to generate
-% samples in the latent space distribution based on inputs from the original
-% dataset without "losing information", then jointly train a decoder
-% model that samples the latent distribution to produce the original
-% observations.  The idea being to randomly sample new data points that look
-% like the original data.  When trained jointly, these models can also be used
-% as embedder/extractor or compression/decompression pairs.
-@inproceedings{kingma2014auto,
-  author={Kingma, Diederik P and Welling, Max},
-  title={Auto-encoding variational {B}ayes},
-  year={2014},
-  booktitle={2nd International Conference on Learning Representations (ICLR 2014)},
-  url = {https://arxiv.org/abs/1312.6114},
-}
-
-% The original paper on neural operators, a now ubiquitous method in scientific
-% machine learning where an operator (i.e., for solving PDEs) between infinite
-% dimensional function spaces is learned by composing integral operator basis
-% functions and regular ReLU layers
+% The original paper on neural operators, a now ubiquitous method in scientific machine learning where an operator (i.e., for solving PDEs) between infinite dimensional function spaces is learned by composing integral operator basis functions and regular ReLU layers
 @article{kovachki2021neural,
 	author = {Kovachki, Nikola B. and Li, Zongyi and Liu, Burigede and Azizzadenesheli, Kamyar and Bhattacharya, Kaushik and Stuart, Andrew M. and Anandkumar, Anima},
 	title = {Neural Operator: Learning Maps Between Function Spaces},
 	year = {2021},
 	journal = {CoRR},
 	volume = {abs/2108.08481},
+}
+
+% The official techreport for the CIFAR-10 dataset -- one of the next most popular neural network and image classification benchmark problems for machine learning and AI research in the 2010s. Just a little harder than MNIST due to having lower quality images and more (imbalanced) classes
+@techreport{krizhevsky2009learning,
+	author = {Krizhevsky, Alex and Hinton, Geoffrey and others, },
+	title = {Learning multiple layers of features from tiny images},
+	year = {2009},
+	institution = {Toronto, ON, Canada},
+}
+
+% The official publication for AlexNet -- one of the first truly massive overparameterized convolutional neural networks, which threw away a lot of the conventional wisdom around overfitting and achieved state-of-the-art performance and fine generalization errors on the ImageNet benchmark problem. This could be considered the beginning of "deep" learning in the sense of adding many many layers
+@inproceedings{krizhevsky2012imagenet,
+	author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+	editor = {Pereira, F. and Burges, C.J. and Bottou, L. and Weinberger, K.Q.},
+	title = {{ImageNet} Classification with Deep Convolutional Neural Networks},
+	year = {2012},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {25},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
 }
 
 % Stochastic approximation algorithm (i.e., stochastic gradient descent) and how to analyze its radius of convergence for a fixed step-size -- you can decay its step size at a square-summable but not summable rate to guarantee convergence in the limit
@@ -615,10 +780,50 @@ numpages = {21},
 	isbn = {0-471-55604-1},
 }
 
-% A paper on the Delaunay triangulation learner -- an alternative to ReLU
-% multilayer perceptrons where they fit a Delaunay triangulation to a small set
-% of nodes and then train the response values of those nodes to make the
-% Delaunay interpolant match the data
+% LeCun et al. show that convolutional nets can outperform all other methods on handwritten digit classification and other perception problems
+@article{lecun1989backpropagation,
+	author = {LeCun, Y. and Boser, B. and Denker, J. S. and Henderson, D. and Howard, R. E. and Hubbard, W. and Jackel, L. D.},
+	title = {Backpropagation Applied to Handwritten Zip Code Recognition},
+	year = {1989},
+	month = {12},
+	journal = {Neural Computation},
+	volume = {1},
+	number = {4},
+	pages = {541--551},
+	publisher = {MIT Press},
+	doi = {10.1162/neco.1989.1.4.541},
+	url = {https://direct.mit.edu/neco/article/1/4/541-551/5515},
+	issn = {0899-7667},
+}
+
+% LeCun's original paper on convolutional neural network architecture -- the first example of a problem where neural networks trained with backpropagation actually outperformed other models, and one of the early examples of the magic of representation learning and how exploiting problem structure is essential to making machine learning work. This remained the state-of-the art in image classification and image processing for over 20 years until the event of transformers, and whether transformers are better for image problems remains debatable
+@article{lecun1995convolutional,
+	author = {LeCun, Yann and Bengio, Yoshua and others, },
+	title = {Convolutional networks for images, speech, and time series},
+	year = {1995},
+	journal = {The handbook of brain theory and neural networks},
+	volume = {3361},
+	number = {10},
+	numpages = {1995},
+	publisher = {Citeseer},
+}
+
+% LeCun et al. show that convolutional nets can outperform all other methods on handwriting classification for efficient document processing
+@article{lecun1998gradientbased,
+	author = {LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
+	title = {Gradient-based learning applied to document recognition},
+	year = {1998},
+	journal = {Proceedings of the IEEE},
+	volume = {86},
+	number = {11},
+	pages = {2278--2324},
+	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+	doi = {10.1109/5.726791},
+	url = {http://ieeexplore.ieee.org/document/726791/},
+	issn = {0018-9219},
+}
+
+% A paper on the Delaunay triangulation learner -- an alternative to ReLU multilayer perceptrons where they fit a Delaunay triangulation to a small set of nodes and then train the response values of those nodes to make the Delaunay interpolant match the data
 @inproceedings{liu2019nonparametric,
 	author = {Liu, Yehong and Yin, Guosheng},
 	title = {Nonparametric functional approximation with {D}elaunay triangulation learner},
@@ -632,10 +837,19 @@ numpages = {21},
 	url = {https://ieeexplore.ieee.org/document/8944414},
 }
 
-% Fitting nonparametric distribution models by interpolating the cumulative
-% distribution functions -- the application is that the CDFs measure HPC
-% throughput distributions, so it is also a little bit of a HPC performance
-% modeling paper
+% Official citation for the open source numerical Python software for evaluating SHAP scores for interpreting feature importance in a model agnostic way for various machine learning (primarily scientific machine learning) applications. Very popular in many fields, including finance, computational medicine, etc. github.com/shap/shap Based on the original publication by Shapley + some additional methods and improvements proposed by the authors and previous works
+@inproceedings{lundberg2017unified,
+	author = {Lundberg, Scott M and Lee, Su-In},
+	editor = {Guyon, I. and Luxburg, U. V. and Bengio, S. and Wallach, H. and Fergus, R. and Vishwanathan, S. and Garnett, R.},
+	title = {A Unified Approach to Interpreting Model Predictions},
+	year = {2017},
+	booktitle = {Advances in Neural Information Processing Systems 30},
+	pages = {4765--4774},
+	organization = {Curran Associates, Inc.},
+	url = {http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf},
+}
+
+% Fitting nonparametric distribution models by interpolating the cumulative distribution functions -- the application is that the CDFs measure HPC throughput distributions, so it is also a little bit of a HPC performance modeling paper
 @inproceedings{lux2018nonparametric,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Nonparametric distribution models for predicting and managing computational performance variability},
@@ -649,10 +863,7 @@ numpages = {21},
 	url = {https://ieeexplore.ieee.org/document/8478814},
 }
 
-% Using various interpolation, neural networks, and other scientific machine
-% learning methods to predict and model HPC performance based on system
-% configuration parameters -- explores Delaunay interpolation, support vector
-% regressors, Shepard's method, and multilayer perceptrons
+% Using various interpolation, neural networks, and other scientific machine learning methods to predict and model HPC performance based on system configuration parameters -- explores Delaunay interpolation, support vector regressors, Shepard's method, and multilayer perceptrons
 @inproceedings{lux2018predictive,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Predictive modeling of {I/O} characteristics in high performance computing systems},
@@ -663,11 +874,21 @@ numpages = {21},
 	location = {Baltimore, MD, USA},
 }
 
-% Error bounds for piecewise linear interpolation within a simplex (i.e.,
-% Delaunay interpolation error bounds) for scattered data.  Also, critically,
-% empirical evidence that you can just interpolate noisy data and it does
-% just as well as true regression in high dimensions.  First hand evidence that
-% feeds my opinion that "overfitting is a lie"
+% Our paper proposing test functions for convex optimization problems with very specific properties, in order to gauge the effectiveness and robustness of various techniques subject to various forms of degeneracy
+@inproceedings{lux2020analytic,
+	author = {Lux, Thomas C. H. and Chang, Tyler H.},
+	title = {Analytic test functions for generalizable evaluation of convex optimization techniques},
+	year = {2020},
+	month = {3},
+	booktitle = {Proc. IEEE SoutheastCon 2020},
+	numpages = {8},
+	organization = {Institute of Electrical and Electronics Engineers},
+	location = {Raleigh, NC, USA},
+	doi = {10.1109/SoutheastCon44009.2020.9368254},
+	url = {https://ieeexplore.ieee.org/document/9368254/},
+}
+
+% Error bounds for piecewise linear interpolation within a simplex (i.e., Delaunay interpolation error bounds) for scattered data. Also, critically, empirical evidence that you can just interpolate noisy data and it does just as well as true regression in high dimensions. First hand evidence that feeds my opinion that "overfitting is a lie"
 @article{lux2021interpolation,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
 	title = {Interpolation of sparse high-dimensional data},
@@ -683,42 +904,43 @@ numpages = {21},
 	issn = {1017-1398},
 }
 
-% Thomas' open source montone quintic spline interpolation software -- a high
-% order spline interpolant implemented in modern Fortran.  Really nice high
-% performance numerical software.  Available open source on Dr. Watson's
-% GitHub.  His main application was distribution modeling, but I think for
-% noisy data, lower order methods may actually be more robust
+% Thomas' open source montone quintic spline interpolation software -- a high order spline interpolant implemented in modern Fortran. Really nice high performance numerical software. Available open source on Dr. Watson's GitHub. His main application was distribution modeling, but I think for noisy data, lower order methods may actually be more robust
 @article{lux2023algorithm,
-  author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Thacker, William I.},
-  title = {Algorithm 1031: {MQSI}---{M}onotone quintic spline interpolation},
-  year = {2023},
-  journal = {ACM Transactions on Mathematical Software},
-  volume = {49},
-  number = {1},
-  articleno = {6},
-  numpages = {17},
-  publisher = {Association of Computing Machinery},
-  doi = {10.1145/3570157}
+	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Thacker, William I.},
+	title = {Algorithm 1031: {MQSI}---{M}onotone quintic spline interpolation},
+	year = {2023},
+	month = {3},
+	journal = {ACM Transactions on Mathematical Software},
+	volume = {49},
+	number = {1},
+	articleno = {6},
+	numpages = {17},
+	publisher = {Association of Computing Machinery},
+	doi = {10.1145/3570157},
+	url = {https://dl.acm.org/doi/10.1145/3570157},
+	issn = {0098-3500},
 }
 
-% Our paper proposing test functions for convex optimization problems with very
-% specific properties, in order to gauge the effectiveness and robustness of
-% various techniques subject to various forms of degeneracy
-@inproceedings{lux2020analytic,
-  author = {Lux, Thomas C. H. and Chang, Tyler H.},
-  title = {Analytic test functions for generalizable evaluation of convex optimization techniques},
-  year = {2020},
-  booktitle = {Proc. IEEE SoutheastCon 2020},
-  numpages = {8},
-  location = {Raleigh, NC, USA},
-  organization = {Institute of Electrical and Electronics Engineers},
-  doi = {10.1109/SoutheastCon44009.2020.9368254}
+% Original paper on Bayesian neural networks (or just Bayesian networks), which learn joint-probability distributions of neural network weights and biases instead of just single sets. The original proposal was as a means of regularization, to avoid overfitting. However, sampling networks from this distribution can also be used as a means of uncertainty quantification.
+@article{mackay1992practical,
+	author = {MacKay, David JC},
+	title = {A practical Bayesian framework for backpropagation networks},
+	year = {1992},
+	month = {5},
+	journal = {Neural computation},
+	volume = {4},
+	number = {3},
+	pages = {448--472},
+	publisher = {MIT Press},
+	address = {Cambridge, MA, USA},
+	doi = {10.1162/neco.1992.4.3.448},
+	url = {https://direct.mit.edu/neco/article/4/3/448-472/5654},
+	issn = {0899-7667},
 }
 
-% A thorough foundation on analysis of RBF interpolant error bounds, through
-% the lens of the RKHS
+% A thorough foundation on analysis of RBF interpolant error bounds, through the lens of the RKHS
 @article{manton2015primer,
-	author = {Manton, Jonathan H and Amblard, Pierre-Olivier and others},
+	author = {Manton, Jonathan H and Amblard, Pierre-Olivier and others, },
 	title = {A primer on reproducing kernel {H}ilbert spaces},
 	year = {2015},
 	journal = {Foundations and Trends{\textregistered} in Signal Processing},
@@ -726,6 +948,25 @@ numpages = {21},
 	number = {1--2},
 	pages = {1--126},
 	publisher = {Now Publishers, Inc.},
+}
+
+% Original word2vec publication: embedding words into a continuous vector space in a "dense" way, meaning that the embedding is somewhat minimal and no extra dimensions are added and word relationships are preserved (as in semantic regularization). The authors show that a relatively small and simple model with semantic regularization is sufficient to train such an embedding in less than a day, and the resulting word2vec embedding layer is fast and cheap to evaluate. The word2vec embedding would go on to be the basis for most early transformer models. Modern LLMs train their own embedding as the embedding layers of the network, but use the same techniques as word2vec. The open source software is available for download from Google: https://code.google.com/archive/p/word2vec
+@inproceedings{mikolov2013efficient,
+	author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
+	title = {Efficient estimation of word representations in vector space},
+	year = {2013},
+	booktitle = {1st International Conference on Learning Representations (ICLR 2013)},
+	location = {Scottsdale, AZ, USA},
+	url = {https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq},
+}
+
+% Introduces the idea of semantic regularization for generating word embeddings. This is a massive improvement over bag of word embeddings, where each word gets a dimension and sentences / documents are embedded as vectors listing the number of occurrences for each word. Instead, for this work, words are compressed into a continuous latent space using a RNN-based compression model. In the compression, the embedding is regularized by relationships between words. For example, embedding(king):embedding(queen) ~ embedding(man):embedding(woman) and embedding(clothes):embedding(shirt) ~ embedding(dishes):embedding(bowl). These relationships are enforced using the cosin similarity score of their embeddings. The authors also collected a massive dataset of english words and the corresponding relationships, and successfully trained the first word to vector embedding that (mostly) preserves these relationships, meaning that all vector operations remain meaningful
+@inproceedings{mikolov2013linguistic,
+	author = {Mikolov, Tom{\'a}{\v{s}} and Yih, Wen-tau and Zweig, Geoffrey},
+	title = {Linguistic regularities in continuous space word representations},
+	year = {2013},
+	booktitle = {Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
+	pages = {746--751},
 }
 
 % Original reference for barycentric weight based interpolation -- I have not read this, it's in German, but this is the proper way to cite barycentric interpolation
@@ -765,6 +1006,19 @@ numpages = {21},
 	isbn = {9781118916032},
 }
 
+% Paper where ReLU functions were first used to replace sigmoidal activations in a restricted Boltzmann machine with much success. After this, ReLU became the standard activation function in all neural network regressive models
+@inproceedings{nair2010rectified,
+	author = {Nair, Vinod and Hinton, Geoffrey E.},
+	title = {Rectified linear units improve restricted boltzmann machines},
+	year = {2010},
+	booktitle = {Proceedings of the 27th International Conference on International Conference on Machine Learning},
+	series = {ICML'10},
+	pages = {807--814},
+	organization = {Omnipress},
+	location = {Haifa, Israel},
+	isbn = {9781605589077},
+}
+
 % Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
 @inproceedings{nesterov1983method,
 	author = {Nesterov, Yurii},
@@ -775,10 +1029,22 @@ numpages = {21},
 	numpages = {543},
 }
 
-% An early review paper on methods and algorithms in "geometric learning",
-% i.e., a form of topological data analysis that focuses on the usage of
-% geometric algorithms and modeling for machine learning and data science
-% applications
+% Not an original paper, as L1 and L2 regularization have been around since the beginning of machine learning and applied math, and are generally not attributed to anyone in particular, but a nice review paper on the usage and effects of L1 and L2 regularization in machine learning and neural network training with back propagation. Regularization was considered an essential part of neural network training (and still is in scientific machine learning) for many many years.
+@inproceedings{ng2004feature,
+	author = {Ng, Andrew Y.},
+	title = {Feature selection, L1 vs. L2 regularization, and rotational invariance},
+	year = {2004},
+	booktitle = {Proceedings of the Twenty-First International Conference on Machine Learning},
+	series = {ICML '04},
+	numpages = {78},
+	organization = {Association for Computing Machinery},
+	location = {Banff, Alberta, Canada},
+	doi = {10.1145/1015330.1015435},
+	url = {https://doi.org/10.1145/1015330.1015435},
+	isbn = {1581138385},
+}
+
+% An early review paper on methods and algorithms in "geometric learning", i.e., a form of topological data analysis that focuses on the usage of geometric algorithms and modeling for machine learning and data science applications
 @article{omohundro1990geometric,
 	author = {Omohundro, Stephen M.},
 	title = {Geometric learning algorithms},
@@ -794,10 +1060,7 @@ numpages = {21},
 	issn = {0167-2789},
 }
 
-% Original definition of RBF networks, an early form of neural networks that
-% focused on the usage of combining RBF basis functions.  These networks are
-% not used much anymore, although occasionally still come up in the context of
-% scientific machine learning theory and proofs
+% Original definition of RBF networks, an early form of neural networks that focused on the usage of combining RBF basis functions. These networks are not used much anymore, although occasionally still come up in the context of scientific machine learning theory and proofs
 @article{park1991universal,
 	author = {Park, Jooyoung and Sandberg, Irwin W},
 	title = {Universal approximation using radial-basis-function networks},
@@ -813,25 +1076,33 @@ numpages = {21},
 	issn = {0899-7667},
 }
 
-% Anita's commentary paper on recent advancements in SciML for computable
-% phenotypes in the field of computational medicine (i.e., computing medical
-% risks from patient data without human intervention).  She congratulates
-% recent advancments in using uncertainty aware, well-validated SciML methods
-% such as ensemble models and gradient-boosted decision trees (XGBoost) to
-% implement and calibrate (optimize) computable phenotypes in real clinical
-% studies
-@article{patel2025,
-    author = {Patel, Anita K.},
-    title = {The Marriage of Computable Phenotypes With Machine Learning—A Pathway to Evidence-Based Care for Critically Ill Children},
-    journal = {JAMA Network Open},
-    volume = {8},
-    number = {2},
-    pages = {e2457422-e2457422},
-    year = {2025},
-    month = {02},
-    issn = {2574-3805},
-    doi = {10.1001/jamanetworkopen.2024.57422},
-    url = {https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2829845/patel\_2025\_ic\_240355\_1738013025.0942.pdf},
+% The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
+@inproceedings{paszke2019pytorch,
+	author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
+	title = {{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	pages = {1--12},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
+}
+
+% Anita's commentary paper on recent advancements in SciML for computable phenotypes in the field of computational medicine (i.e., computing medical risks from patient data without human intervention). She congratulates recent advancments in using uncertainty aware, well-validated SciML methods such as ensemble models and gradient-boosted decision trees (XGBoost) to implement and calibrate (optimize) computable phenotypes in real clinical studies
+@article{patel2025marriage,
+	author = {Patel, Anita K.},
+	title = {The Marriage of Computable Phenotypes With Machine Learning—A Pathway to Evidence-Based Care for Critically Ill Children},
+	year = {2025},
+	month = {02},
+	journal = {JAMA Network Open},
+	volume = {8},
+	number = {2},
+	pages = {e2457422--e2457422},
+	publisher = {American Medical Association (AMA)},
+	doi = {10.1001/jamanetworkopen.2024.57422},
+	url = {https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2829845/patel\_2025\_ic\_240355\_1738013025.0942.pdf},
+	issn = {2574-3805},
 }
 
 % The official publication for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
@@ -845,8 +1116,7 @@ numpages = {21},
 	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
 }
 
-% A thorough analysis and review article by Powell on how to bound the error of
-% thin-plate spline (TPS) RBF interpolants for scattered data
+% A thorough analysis and review article by Powell on how to bound the error of thin-plate spline (TPS) RBF interpolants for scattered data
 @article{powell1994uniform,
 	author = {Powell, Michael JD},
 	title = {The uniform convergence of thin plate spline interpolation in two dimensions},
@@ -862,10 +1132,7 @@ numpages = {21},
 	issn = {0029-599X},
 }
 
-% Official publication where PINNs (physics-informed neural networks) were
-% first defined by Karniadakis' lab at Brown.  Sometimes credited with starting
-% the field of scientific machine learning (SciML) -- or at least boosting its
-% popularity to the main stream
+% Official publication where PINNs (physics-informed neural networks) were first defined by Karniadakis' lab at Brown. Sometimes credited with starting the field of scientific machine learning (SciML) -- or at least boosting its popularity to the main stream
 @article{raissi2019physicsinformed,
 	author = {Raissi, M. and Perdikaris, P. and Karniadakis, G.E.},
 	title = {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations},
@@ -880,10 +1147,7 @@ numpages = {21},
 	issn = {0021-9991},
 }
 
-% Attempting to make Gaussian process interpolation (i.e., Kriging) numerically
-% stable as the minimum pairwise distance between points shrinks.  In
-% particular, they propose a lower bound on the nugget that must be added to
-% the diagonal to guarantee a sufficient distance to singularity
+% Attempting to make Gaussian process interpolation (i.e., Kriging) numerically stable as the minimum pairwise distance between points shrinks. In particular, they propose a lower bound on the nugget that must be added to the diagonal to guarantee a sufficient distance to singularity
 @article{ranjan2011computationally,
 	author = {Ranjan, Pritam and Haynes, Ronald and Karsten, Richard},
 	title = {A computationally stable approach to Gaussian process interpolation of deterministic computer simulation data},
@@ -899,16 +1163,28 @@ numpages = {21},
 	issn = {0040-1706},
 }
 
-% The book that scipy and scikit-learn cite when it comes to Gaussian process
-% regression fundamentals and algorithms.  It's a good thorough book, and I
-% find some of the error bound derivations to be useful, but I generally prefer
-% Garnet's book
+% The book that scipy and scikit-learn cite when it comes to Gaussian process regression fundamentals and algorithms. It's a good thorough book, and I find some of the error bound derivations to be useful, but I generally prefer Garnet's book
 @book{rasmussen2006gaussian,
 	author = {Rasmussen, Carl Edward and Williams, Christopher KI and others, },
 	title = {Gaussian processes for machine learning},
 	year = {2006},
 	volume = {1},
 	publisher = {The MIT Press},
+}
+
+% One of the original papers proposing that overfitting, the bias variance tradeoff curve, and generalization error are all misunderstood and misused ideas. The authors present a true holdout set of lost and never-before-seen ImageNet and CIFAR-10 data, and show that massive interpolatory models (models trained to zero error) generalize just as well as the well-regularized models on this new data (better because their training error was lower and total error = training error + generalization error). Ben would go on to claim that (1) you want to interpolate a lot of data that we claim we don't want to overfit (such as image data). (2) Models that interpolate don't generalize poorly in practice and large overparameterized models always perform better in practice. And (3) Hyperparameter tuning is basically a form of training on the test set in order to find the best model that interpolates the training data. This paper was an eye-opener for me personally, and lead me to firmly believe in interpolation for high-dimensional data
+@inproceedings{recht2019imagenet,
+	author = {Recht, Benjamin and Roelofs, Rebecca and Schmidt, Ludwig and Shankar, Vaishaal},
+	editor = {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+	title = {Do {I}mage{N}et Classifiers Generalize to {I}mage{N}et?},
+	year = {2019},
+	month = {09--15 Jun},
+	booktitle = {Proceedings of the 36th International Conference on Machine Learning},
+	series = {Proceedings of Machine Learning Research},
+	volume = {97},
+	pages = {5389--5400},
+	organization = {PMLR},
+	url = {https://proceedings.mlr.press/v97/recht19a.html},
 }
 
 % The calculus of simplex gradients: a detailed analysis of simplex gradients and their properties for approximating true gradients when solving derivative-free and blackbox optimization problems
@@ -927,6 +1203,21 @@ numpages = {21},
 	issn = {1862-4472},
 }
 
+% Rosenblatt's original paper proposing the multi-layer perceptron with an input layer, output layer, and a single hidden layer: this is the foundation for all AI and neural network research. It is proposed as a simulation model for biologists and psychologists to study brain function. It would not be useful as a tool for regression, classification, or prediction for many years until the advent of representation learning. He originally used a step (discontinuous) activation function since it was well-known from functional analysis and approximation theory that the span of these functions is dense in L2 space. The sigmoidal activation would later be introduced as a continuous smoothing of the step function (so that back propogation would have gradients to train on), but there is no clear reference for who first proposed this
+@article{rosenblatt1958perceptron,
+	author = {Rosenblatt, Frank},
+	title = {The perceptron: a probabilistic model for information storage and organization in the brain.},
+	year = {1958},
+	journal = {Psychological review},
+	volume = {65},
+	number = {6},
+	numpages = {386},
+	publisher = {American Psychological Association},
+	doi = {10.1037/h0042519},
+	url = {https://doi.apa.org/doi/10.1037/h0042519},
+	issn = {1939-1471},
+}
+
 % Official publication of the scipy.stats.qmc module, which is the newly released module for performing quasi-monte carlo sampling and design-of-experiments in scipy. Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
 @article{roy2023quasimonte,
 	author = {Roy, Pamphile T. and Owen, Art B. and Balandat, Maximilian and Haberland, Matt},
@@ -941,6 +1232,35 @@ numpages = {21},
 	doi = {10.21105/joss.05309},
 	url = {https://joss.theoj.org/papers/10.21105/joss.05309},
 	issn = {2475-9066},
+}
+
+% Original tech report introducing recurrent neural networks (RNNs), which use a recursively defined state variable to track the context of sequential data observations so far, plus the value of the current output to predict the next output. The authors derive how the gradients can be backpropogated through this entire chain for efficient training. This idea had been around since the 60s, but this is the first paper explicitly proposing such recurrent layers in a representation learning context. The authors propose these recurrent layers as a means of representation learning for sequence data (such as next-word prediction in language models). RNNs would go on to become the state-of-the-art in language models and natural language processing for almost 30 years until they were replaced by transformers with the advent of BERT in 2017. Although the idea of encoding state information is a valid solution, RNNs notoriously suffered from a vanishing gradient issue where tokens further back in the sequence had little effect on the current prediction.
+@techreport{rumelhart1985learning,
+	author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+	title = {Learning internal representations by error propagation},
+	year = {1985},
+	month = {9},
+	number = {ICS 8504},
+	institution = {Institute for Cognitive Science, University of California},
+	address = {San Diego, CA, USA},
+	doi = {10.21236/ada164453},
+	url = {https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
+}
+
+% Original paper on back-propagation for training neural networks. Equivalent to reverse-mode algorithmic differentiation or more simply applying the chain rule recursively.
+@article{rumelhart1986learning,
+	author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+	title = {Learning representations by back-propagating errors},
+	year = {1986},
+	month = {10},
+	journal = {Nature},
+	volume = {323},
+	number = {6088},
+	pages = {533--536},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1038/323533a0},
+	url = {https://www.nature.com/articles/323533a0},
+	issn = {0028-0836},
 }
 
 % Techniques and optimal sampling criteria for performing adaptive sampling to enable downstream Gaussian process regression modeling
@@ -959,17 +1279,7 @@ numpages = {21},
 	issn = {1364-503X},
 }
 
-% Some thorough analysis on upper and lower error bounds for RBF interpolants,
-% which ultimately yield the famous "uncertainty princple for RBFs" -- i.e., a
-% large shape parameter is needed for accuracy but a small shape parameter is
-% needed for solvability of the resulting RBF system.  Both are not possible,
-% so you cannot have accuracy and solvability at once.  Generally, the author
-% recommends making the parameter as large as possible without causing
-% singularity, a tradeoff that is often optimized in modern Gaussian process
-% implementations via L-BFGS-B.  There is also a really nice table of kernel
-% errors for various kernels, which can be directly plugged into the generic
-% RBF interpolation error formula to get error bounds for most common RBF basis
-% functions
+% Some thorough analysis on upper and lower error bounds for RBF interpolants, which ultimately yield the famous "uncertainty princple for RBFs" -- i.e., a large shape parameter is needed for accuracy but a small shape parameter is needed for solvability of the resulting RBF system. Both are not possible, so you cannot have accuracy and solvability at once. Generally, the author recommends making the parameter as large as possible without causing singularity, a tradeoff that is often optimized in modern Gaussian process implementations via L-BFGS-B. There is also a really nice table of kernel errors for various kernels, which can be directly plugged into the generic RBF interpolation error formula to get error bounds for most common RBF basis functions
 @article{schaback1995error,
 	author = {Schaback, Robert},
 	title = {Error estimates and condition numbers for radial basis function interpolation},
@@ -985,8 +1295,29 @@ numpages = {21},
 	issn = {1019-7168},
 }
 
-% Extremely thorough analysis of using linear models inside a simplex (e.g.,
-% tetrahedral meshes) for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
+% Proximal policy optimization (PPO) is the state-of-the-art policy gradient optimization method for reinforcement learning. Proximal gradient methods computes the update by directly optimizing the parameters for a given batch of observations in order to maximize the intermediate value function. PPO limits the step size in each iteration and enforces a penalization to discourage models from drifting too far from the original "base" model.
+@techreport{schulman2017proximal,
+	author = {Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+	title = {Proximal Policy Optimization Algorithms},
+	year = {2017},
+	institution = {arXiv cs.LG},
+	url = {https://arxiv.org/abs/1707.06347},
+}
+
+% Original paper on Shapley values (used to calculate SHAP scores). The idea is to interpret the importance of features to a model agonstically by making predictions with (and without) every combination of features available. Then, we compute the weighted average of each feature's importance by calculating how much each feature improves the model performance. This is an expensive but polynomial time procedure given fixed number of features, and can be used to plot the contributions. The software is in lundberg et al 2017 (github.com/shap/shap)
+@article{shapley1953value,
+	author = {Shapley, Lloyd S and others, },
+	title = {A value for n-person games},
+	year = {1953},
+	journal = {Contributions to the Theory of Games},
+	volume = {2},
+	number = {28},
+	pages = {307--317},
+	publisher = {Princeton University Press Princeton},
+	url = {http://www.library.fa.ru/files/Roth2.pdf#page=39},
+}
+
+% Extremely thorough analysis of using linear models inside a simplex (e.g., tetrahedral meshes) for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
 @inproceedings{shewchuk2002what,
 	author = {Shewchuk, Jonathan},
 	title = {What is a good linear finite element? {I}nterpolation, conditioning, anisotropy, and quality measures},
@@ -1012,9 +1343,7 @@ numpages = {21},
 	git = {http://github.com/b-shields/edbo},
 }
 
-% A numerical algorithm for performing a rank-revealing rank-1 QR update (given
-% an existing orthonormal (QR) matrix factorization and updating just one
-% column of the basis Q)
+% A numerical algorithm for performing a rank-revealing rank-1 QR update (given an existing orthonormal (QR) matrix factorization and updating just one column of the basis Q)
 @article{shroff1992adaptive,
 	author = {Shroff, Gautam M. and Bischof, Christian H.},
 	title = {Adaptive condition estimation for rank-one updates of QR factorizations},
@@ -1030,11 +1359,7 @@ numpages = {21},
 	issn = {0895-4798},
 }
 
-% A survey on how deep learning models (such as transformer models and neural
-% networks/multilayer perceptrons) still do not perform well (are not the state
-% of the art) when it comes to tabular data, which remains the most important
-% application for most businesses.  Gradient boosted trees remain the most
-% reliable predictors for these applications
+% A survey on how deep learning models (such as transformer models and neural networks/multilayer perceptrons) still do not perform well (are not the state of the art) when it comes to tabular data, which remains the most important application for most businesses. Gradient boosted trees remain the most reliable predictors for these applications
 @article{shwartzziv2022tabular,
 	author = {Shwartz-Ziv, Ravid and Armon, Amitai},
 	title = {Tabular data: Deep learning is not all you need},
@@ -1047,6 +1372,49 @@ numpages = {21},
 	doi = {10.1016/j.inffus.2021.11.011},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S1566253521002360},
 	issn = {1566-2535},
+}
+
+% Google DeepMind's AlphaGo was the first reinforcement learning agent to beat pro players (exceed the maximum human skill) in Go, which is a much more complex game than chess and required modeling an enumerable amount of game states and move possibilities. This required combining monte carlo tree search (MCTS) with neural networks to filter down to a reasonable number of potential states. This is credited as the first RL model to use MCTS, which is now a standard in RL
+@article{silver2016mastering,
+	author = {Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others, },
+	title = {Mastering the game of Go with deep neural networks and tree search},
+	year = {2016},
+	month = {1},
+	journal = {nature},
+	volume = {529},
+	number = {7587},
+	pages = {484--489},
+	publisher = {Nature Publishing Group},
+	doi = {10.1038/nature16961},
+	url = {https://www.nature.com/articles/nature16961},
+	issn = {0028-0836},
+}
+
+% Original publication on diffusion models. The paper introduces a framework inspired by non-equilibrium thermodynamics where a forward diffusion process gradually destroys structure in the data distribution, transforming it into a simple distribution like Gaussian noise. A reverse diffusion process is then learned to reconstruct the original data distribution, serving as a generative mode. Data can be generated by training the distribution through diffusion, then applying the reverse diffusion operator to sample (or "generate") new data. This is the basis for most image and video generation models
+@inproceedings{sohldickstein2015deep,
+	author = {Sohl-Dickstein, Jascha and Weiss, Eric and Maheswaranathan, Niru and Ganguli, Surya},
+	editor = {Bach, Francis and Blei, David},
+	title = {Deep Unsupervised Learning using Nonequilibrium Thermodynamics},
+	year = {2015},
+	booktitle = {Proceedings of the 32nd International Conference on Machine Learning},
+	series = {Proceedings of Machine Learning Research},
+	volume = {37},
+	pages = {2256--2265},
+	organization = {PMLR},
+	location = {Lille, France},
+	url = {https://proceedings.mlr.press/v37/sohl-dickstein15.html},
+}
+
+% The original dropout paper, this was standard practice in training deep neural networks, especially massive convolutional nets and RNNs for image and language processing for a long time, prior to the invention of transformers -- the idea being that you zero out the effects (and updates to) a small percentage of the nodes in each layer in each iteration, in order to (1) make training cheaper, (2) prevent overfitting since over reliance on any individual node(s) makes the predictions brittle, and (3) redistribute weights to earlier layers and avoid vanishing gradients
+@article{srivastava2014dropout,
+	author = {Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
+	title = {Dropout: a simple way to prevent neural networks from overfitting},
+	year = {2014},
+	journal = {The Journal of Machine Learning research},
+	volume = {15},
+	number = {1},
+	pages = {1929--1958},
+	publisher = {JMLR. org},
 }
 
 % The FAIR principles of data management: Scientific data should be findable, accessible, interpretable, and reproducible
@@ -1079,10 +1447,7 @@ numpages = {21},
 	url = {http://ieeexplore.ieee.org/document/5356528},
 }
 
-% The SHEPPACK numerical software package contains a variety of open source
-% Fortran codes for computing Shepard's method interpolants in two, three, and
-% four dimensions.  There is also a linear Shepard's method interpolant that
-% can be used for interpolation in arbitrary dimension.
+% The SHEPPACK numerical software package contains a variety of open source Fortran codes for computing Shepard's method interpolants in two, three, and four dimensions. There is also a linear Shepard's method interpolant that can be used for interpolation in arbitrary dimension.
 @article{thacker2010algorithm,
 	author = {Thacker, William I. and Zhang, Jingwei and Watson, Layne T. and Birch, Jeffrey B. and Iyer, Manjula A. and Berry, Michael W.},
 	title = {Algorithm 905: {SHEPPACK}: {M}odified {S}hepard algorithm for interpolation of scattered multivariate data},
@@ -1096,6 +1461,50 @@ numpages = {21},
 	doi = {10.1145/1824801.1824812},
 	url = {https://dl.acm.org/doi/10.1145/1824801.1824812},
 	issn = {0098-3500},
+}
+
+% Simulated annealing and reinforcement learning based FPGA placement. The RL contributions are tenuous at best, but still an example of potential RL impact in industry
+@inproceedings{tian2022improving,
+	author = {Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
+	title = {Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning},
+	year = {2022},
+	month = {6},
+	booktitle = {2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)},
+	volume = {10},
+	number = {},
+	pages = {1912--1919},
+	organization = {IEEE},
+	location = {Chongqing, China},
+	doi = {10.1109/ITAIC54216.2022.9836761},
+	url = {https://ieeexplore.ieee.org/document/9836761/},
+}
+
+% The landmark paper showing that transformers alone are capable of capturing all structure needed for language conversion, i.e., recurence relations and the sequential structure of time-series predictions can be encoded into which tokens to "pay attention to" during next word (or any next item) predictions. This paper is often cited as the inspiration for large language models (LLMs), which rely heavily on the transformer architecture, which became a standard after this
+@inproceedings{vaswani2017attention,
+	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+	title = {Attention is all you need},
+	year = {2017},
+	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
+	pages = {1--11},
+	organization = {Curran Associates, Inc.},
+	location = {Long Beach, California, USA},
+}
+
+% Google DeepMind's AlphaStar II was the first reinforcement learning agent that could beat pro players in video games, which is a signficantly more complex environment than a board game environment with a finite state and set of possible actions
+@article{vinyals2019grandmaster,
+	author = {Vinyals, Oriol and Babuschkin, Igor and Czarnecki, Wojciech M. and Mathieu, Micha{\"e}l and Dudzik, Andrew and Chung, Junyoung and Choi, David H. and Powell, Richard and Ewalds, Timo and Georgiev, Petko and Oh, Junhyuk and Horgan, Dan and Kroiss, Manuel and Danihelka, Ivo and Huang, Aja and Sifre, Laurent and Cai, Trevor and Agapiou, John P. and Jaderberg, Max and Vezhnevets, Alexander S. and Leblond, R{\'e}mi and Pohlen, Tobias and Dalibard, Valentin and Budden, David and Sulsky, Yury and Molloy, James and Paine, Tom L. and Gulcehre, Caglar and Wang, Ziyu and Pfaff, Tobias and Wu, Yuhuai and Ring, Roman and Yogatama, Dani and W{\"u}nsch, Dario and McKinney, Katrina and Smith, Oliver and Schaul, Tom and Lillicrap, Timothy and Kavukcuoglu, Koray and Hassabis, Demis and Apps, Chris and Silver, David},
+	title = {Grandmaster level in {StarCraft II} using multi-agent reinforcement learning},
+	year = {2019},
+	month = {11},
+	journal = {Nature},
+	volume = {575},
+	number = {7782},
+	pages = {350--354},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1038/s41586-019-1724-z},
+	url = {https://doi.org/10.1038/s41586-019-1724-z},
+	isbn = {1476-4687},
+	issn = {0028-0836},
 }
 
 % SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -1114,8 +1523,7 @@ numpages = {21},
 	issn = {1548-7091},
 }
 
-% An analysis and empirical study on how RBF interpolants interpolation
-% matrices tend to always become ill-conditioned in high dimensions
+% An analysis and empirical study on how RBF interpolants interpolation matrices tend to always become ill-conditioned in high dimensions
 @article{wang2018numerical,
 	author = {Wang, Ruoxi and Li, Yingzhou and Darve, Eric},
 	title = {On the numerical rank of radial basis function kernels in high dimensions},
@@ -1131,10 +1539,7 @@ numpages = {21},
 	issn = {0895-4798},
 }
 
-% A spectral analysis on the conditioning of the kernel matrics (i.e.,
-% interpolation matrices) for RBF interpolants and Gaussian processes, showing
-% the singular values trending to zero exponentially in both theory and
-% practice
+% A spectral analysis on the conditioning of the kernel matrics (i.e., interpolation matrices) for RBF interpolants and Gaussian processes, showing the singular values trending to zero exponentially in both theory and practice
 @article{wathen2015spectral,
 	author = {Wathen, Andrew J and Zhu, Shengxin},
 	title = {On spectral distribution of kernel matrices related to radial basis functions},
@@ -1150,14 +1555,7 @@ numpages = {21},
 	issn = {1017-1398},
 }
 
-% A summary paper for an influential line of work in the field of scientific
-% machine learning.  Some standard techniques for computing error bounds for
-% neural networks using traditional techniques from numerical analysis and
-% approximation theory, and introducing a universal approximation theorem for
-% neural networks.  I.e., showing the existence of a two-layer multilayer
-% perceptron or similar neural network that can approximate any Sobolev
-% function to arbitrary required accuracy.  Equivalently, we could say that
-% such neural networks are dense in this Sobolev space
+% A summary paper for an influential line of work in the field of scientific machine learning. Some standard techniques for computing error bounds for neural networks using traditional techniques from numerical analysis and approximation theory, and introducing a universal approximation theorem for neural networks. I.e., showing the existence of a two-layer multilayer perceptron or similar neural network that can approximate any Sobolev function to arbitrary required accuracy. Equivalently, we could say that such neural networks are dense in this Sobolev space
 @article{weinan2020machine,
 	author = {Weinan, E},
 	title = {Machine learning and computational mathematics},
@@ -1173,736 +1571,21 @@ numpages = {21},
 	issn = {1991-7120},
 }
 
-% One of the original papers proposing that overfitting, the bias variance
-% tradeoff curve, and generalization error are all misunderstood and misused
-% ideas.  The authors present a true holdout set of lost and never-before-seen
-% ImageNet and CIFAR-10 data, and show that massive interpolatory models
-% (models trained to zero error) generalize just as well as the
-% well-regularized models on this new data (better because their training error
-% was lower and total error = training error + generalization error).
-% Ben would go on to claim that (1) you want to interpolate a lot of data
-% that we claim we don't want to overfit (such as image data). (2) Models
-% that interpolate don't generalize poorly in practice and large
-% overparameterized models always perform better in practice. And (3)
-% Hyperparameter tuning is basically a form of training on the test set in
-% order to find the best model that interpolates the training data. This paper
-% was an eye-opener for me personally, and lead me to firmly believe in
-% interpolation for high-dimensional data
-@inproceedings{recht19imagenet,
-  title = 	 {Do {I}mage{N}et Classifiers Generalize to {I}mage{N}et?},
-  author =       {Recht, Benjamin and Roelofs, Rebecca and Schmidt, Ludwig and Shankar, Vaishaal},
-  booktitle = 	 {Proceedings of the 36th International Conference on Machine Learning},
-  pages = 	 {5389--5400},
-  year = 	 {2019},
-  editor = 	 {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
-  volume = 	 {97},
-  series = 	 {Proceedings of Machine Learning Research},
-  month = 	 {09--15 Jun},
-  publisher =    {PMLR},
-  url = 	 {https://proceedings.mlr.press/v97/recht19a.html},
-}
-
-% The original paper on the bias-variance tradeoff curve. Now widely debunked (in my opinion) the theory that machine learning and neural networks had to tradeoff between training accuracy and overfitting (which would lead to the idea of so-called "generalization error") and had to be combatted by limiting model size or regularization rules ruled AI theory for many, many years. One key insight in this paper that was perhaps ahead of its time, is that the important part of machine learning is the representation learning, in which sense training neural networks with backpropagation for regression problems is somewhat not special
-@article{geman1992neural,
-	author = {Geman, Stuart and Bienenstock, Elie and Doursat, Ren\'e},
-	title = {Neural networks and the bias/variance dilemma},
-	year = {1992},
-	month = {jan},
-	journal = {Neural Computation},
-	volume = {4},
-	number = {1},
-	pages = {1--58},
-	publisher = {MIT Press},
-	address = {Cambridge, MA, USA},
-	doi = {10.1162/neco.1992.4.1.1},
-	url = {https://direct.mit.edu/neco/article/4/1/1-58/5624},
-	issn = {0899-7667},
-}
-
-% An experiment showing that when training labels are replaced with random
-% values (pure noise), most neural network classifier methods can still be
-% trained to zero training error.  (I.e., obviously overfitting).  However,
-% regularization techniques don't prevent them from doing so.  The authors
-% conclude that regularization isn't doing what we think it's doing and may not
-% actually be related to generalization error
-@inproceedings{zhang2017understanding,
-title={Understanding deep learning requires rethinking generalization},
-author={Chiyuan Zhang and Samy Bengio and Moritz Hardt and Benjamin Recht and Oriol Vinyals},
-booktitle={International Conference on Learning Representations},
-year={2017},
-url={https://openreview.net/forum?id=Sy8gdB9xx}
-}
-
-% The original dropout paper, this was standard practice in training deep
-% neural networks, especially massive convolutional nets and RNNs for image
-% and language processing for a long time, prior to the invention of
-% transformers -- the idea being that you zero out the effects (and updates to)
-% a small percentage of the nodes in each layer in each iteration, in order to
-% (1) make training cheaper, (2) prevent overfitting since over reliance on
-% any individual node(s) makes the predictions brittle, and (3) redistribute
-% weights to earlier layers and avoid vanishing gradients
-@article{srivastava2014dropout,
-  title     = {Dropout: a simple way to prevent neural networks from overfitting},
-  author    = {Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
-  journal   = {The Journal of Machine Learning research},
-  volume    = {15},
-  number    = {1},
-  pages     = {1929--1958},
-  year      = {2014},
-  publisher = {JMLR. org}
-}
-
-% Original paper on Shapley values (used to calculate SHAP scores).  The idea
-% is to interpret the importance of features to a model agonstically by making
-% predictions with (and without) every combination of features available.
-% Then, we compute the weighted average of each feature's importance by
-% calculating how much each feature improves the model performance.  This is an
-% expensive but polynomial time procedure given fixed number of features, and
-% can be used to plot the contributions.  The software is in lundberg et al
-% 2017 (github.com/shap/shap)
-@article{shapley1953value,
-  author={Shapley, Lloyd S and others},
-  title={A value for n-person games},
-  year={1953},
-  journal={Contributions to the Theory of Games},
-  volume={2},
-  number={28},
-  pages={307--317},
-  publisher={Princeton University Press Princeton},
-  url={http://www.library.fa.ru/files/Roth2.pdf#page=39}
-}
-
-% Official citation for the open source numerical Python software for
-% evaluating SHAP scores for interpreting feature importance in a model
-% agnostic way for various machine learning (primarily scientific machine
-% learning) applications.  Very popular in many fields, including finance,
-% computational medicine, etc.  github.com/shap/shap  Based on the original
-% publication by Shapley + some additional methods and improvements proposed by
-% the authors and previous works
-@inproceedings{lundberg2017,
-title = {A Unified Approach to Interpreting Model Predictions},
-author = {Lundberg, Scott M and Lee, Su-In},
-booktitle = {Advances in Neural Information Processing Systems 30},
-editor = {I. Guyon and U. V. Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
-pages = {4765--4774},
-year = {2017},
-publisher = {Curran Associates, Inc.},
-url = {http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf}
-}
-
-% Brandon's original paper on differentiabl optimization layers in neural
-% networks -- i.e., solving an optimization problem within a layer of a neural
-% network and propogating the gradient through that solution so that the
-% network parameters can still be trained
-@inproceedings{amos17optnet,
-  title = 	 {{O}pt{N}et: Differentiable Optimization as a Layer in Neural Networks},
-  author =       {Brandon Amos and J. Zico Kolter},
-  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
-  pages = 	 {136--145},
-  year = 	 {2017},
-  editor = 	 {Precup, Doina and Teh, Yee Whye},
-  volume = 	 {70},
-  series = 	 {Proceedings of Machine Learning Research},
-  month = 	 {06--11 Aug},
-  publisher =    {PMLR},
-  url = 	 {https://proceedings.mlr.press/v70/amos17a.html},
-}
-
-% Differentiabl convex optimization layers are introduced pytorch and
-% tensorflow via an update to cvxpy, introducing differentiation through the
-% solution to a convex optimization problem modeled in cvxpy.  The open source
-% numerical optimization software is available at github.com/cvxgrp/cvxpylayers
-% in Python
-@inproceedings{akshay2019differentiable,
- author = {Agrawal, Akshay and Amos, Brandon and Barratt, Shane and Boyd, Stephen and Diamond, Steven and Kolter, J. Zico},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
- publisher = {Curran Associates, Inc.},
- title = {Differentiable Convex Optimization Layers},
- url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf},
- volume = {32},
- year = {2019}
-}
-
-% Brandon introduces using neural networks and other scientific machine
-% learning methods to warm-start optimization and control problems.  An open
-% source numerical software tutorial is available at
-% github.com/facebookresearch/amortized-optimization-tutorial
-@article{amos2023tutorial,
-author = {Amos, Brandon},
-title = {Tutorial on Amortized Optimization},
-year = {2023},
-publisher = {Now Publishers Inc.},
-address = {Hanover, MA, USA},
-volume = {16},
-number = {5},
-issn = {1935-8237},
-url = {https://doi.org/10.1561/2200000102},
-doi = {10.1561/2200000102},
-journal = {Found. Trends Mach. Learn.},
-pages = {592–732},
-numpages = {156}
-}
-
-% LeCun et al. show that convolutional nets can outperform all other methods on
-% handwriting classification for efficient document processing
-@article{lecun1998gradient,
-  author={LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
-  title={Gradient-based learning applied to document recognition},
-  year={1998},
-  journal={Proceedings of the IEEE},
-  volume={86},
-  number={11},
-  pages={2278-2324},
-  doi={10.1109/5.726791}
-}
-
-% LeCun et al. show that convolutional nets can outperform all other methods on
-% handwritten digit classification and other perception problems
-@article{lecun1989backpropagation,
-  author={LeCun, Y. and Boser, B. and Denker, J. S. and Henderson, D. and Howard, R. E. and Hubbard, W. and Jackel, L. D.},
-  journal={Neural Computation},
-  title={Backpropagation Applied to Handwritten Zip Code Recognition},
-  year={1989},
-  volume={1},
-  number={4},
-  pages={541-551},
-  doi={10.1162/neco.1989.1.4.541}
-}
-
-% LeCun's original paper on convolutional neural network architecture -- the
-% first example of a problem where neural networks trained with backpropagation
-% actually outperformed other models, and one of the early examples of the
-% magic of representation learning and how exploiting problem structure is
-% essential to making machine learning work.  This remained the state-of-the
-% art in image classification and image processing for over 20 years until the
-% event of transformers, and whether transformers are better for image problems
-% remains debatable
-@article{lecun1995convolutional,
-  title={Convolutional networks for images, speech, and time series},
-  author={LeCun, Yann and Bengio, Yoshua and others},
-  journal={The handbook of brain theory and neural networks},
-  volume={3361},
-  number={10},
-  pages={1995},
-  year={1995},
-  publisher={Citeseer}
-}
-
-% The MNIST dataset presents the first and most popular benchmark problem for
-% image classification via neural networks and other AI and machine learning
-% methods
+% The MNIST dataset presents the first and most popular benchmark problem for image classification via neural networks and other AI and machine learning methods
 @misc{yann1998mnist,
-  title={The {MNIST} database of handwritten digits},
-  author={Yann, LeCun},
-  year={1998},
-  url = {yann.lecun.com/exdb/mnist},
-  note = {Last accessed: Apr 2025},
+	author = {Yann, LeCun},
+	title = {The {MNIST} database of handwritten digits},
+	year = {1998},
+	url = {yann.lecun.com/exdb/mnist},
+	note = {Last accessed: Apr 2025},
 }
 
-% The official techreport for the CIFAR-10 dataset -- one of the next most
-% popular neural network and image classification benchmark problems for
-% machine learning and AI research in the 2010s.  Just a little harder than
-% MNIST due to having lower quality images and more (imbalanced) classes
-@techreport{krizhevsky2009learning,
-  title={Learning multiple layers of features from tiny images},
-  author={Krizhevsky, Alex and Hinton, Geoffrey and others},
-  year={2009},
-  publisher={Toronto, ON, Canada}
-}
-
-% The official publication for AlexNet -- one of the first truly massive
-% overparameterized convolutional neural networks, which threw away a lot of
-% the conventional wisdom around overfitting and achieved state-of-the-art
-% performance and fine generalization errors on the ImageNet benchmark problem.
-% This could be considered the beginning of "deep" learning in the sense of
-% adding many many layers
-@inproceedings{krizhevsky2012imagenet,
- author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {F. Pereira and C.J. Burges and L. Bottou and K.Q. Weinberger},
- publisher = {Curran Associates, Inc.},
- title = {{ImageNet} Classification with Deep Convolutional Neural Networks},
- url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
- volume = {25},
- year = {2012}
-}
-
-% One of the largest most difficult image classification benchmark problems
-% from the 2010s, which drove a lot of advancement.  Was a bit too difficult
-% for the average researcher to solve since it required a lot of training
-% resources to get good performance, but drove advancement in developing and
-% training large (deep) neural networks with many layers and millions of
-% parameters
-@inproceedings{deng2009imagenet,
-  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Kai Li and Li Fei-Fei},
-  booktitle={2009 IEEE Conference on Computer Vision and Pattern Recognition},
-  title={{ImageNet}: A large-scale hierarchical image database},
-  year={2009},
-  volume={},
-  number={},
-  pages={248-255},
-  doi={10.1109/CVPR.2009.5206848}
-}
-
-% BERT was one of the first transformer-based neural network architectures for
-% solving language-related tasks, such as language translations, at Google.
-% This was also by far the largest model of its time.  BERT paved the way for
-% modern large language models, probably moreso than the Attention is all you
-% need paper
-@inproceedings{devlin-etal-2019-bert,
-    title = "{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding",
-    author = "Devlin, Jacob  and
-      Chang, Ming-Wei  and
-      Lee, Kenton  and
-      Toutanova, Kristina",
-    editor = "Burstein, Jill  and
-      Doran, Christy  and
-      Solorio, Thamar",
-    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
-    year = "2019",
-    address = "Minneapolis, Minnesota",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/N19-1423/",
-    doi = "10.18653/v1/N19-1423",
-    pages = "4171--4186",
-}
-
-% The landmark paper showing that transformers alone are capable of capturing
-% all structure needed for language conversion, i.e., recurence relations and
-% the sequential structure of time-series predictions can be encoded into which
-% tokens to "pay attention to" during next word (or any next item) predictions.
-% This paper is often cited as the inspiration for large language models
-% (LLMs), which rely heavily on the transformer architecture, which became a
-% standard after this
-@inproceedings{vaswani2017attention,
-	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
-	title = {Attention is all you need},
+% An experiment showing that when training labels are replaced with random values (pure noise), most neural network classifier methods can still be trained to zero training error. (I.e., obviously overfitting). However, regularization techniques don't prevent them from doing so. The authors conclude that regularization isn't doing what we think it's doing and may not actually be related to generalization error
+@inproceedings{zhang2017understanding,
+	author = {Zhang, Chiyuan and Bengio, Samy and Hardt, Moritz and Recht, Benjamin and Vinyals, Oriol},
+	title = {Understanding deep learning requires rethinking generalization},
 	year = {2017},
-	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
-	pages = {1--11},
-	organization = {Curran Associates, Inc.},
-	location = {Long Beach, California, USA},
+	booktitle = {International Conference on Learning Representations},
+	url = {https://openreview.net/forum?id=Sy8gdB9xx},
 }
 
-% The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
-@inproceedings{paszke2019pytorch,
-	author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
-	editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and Alch\'{e}-Buc, F. d\textquotesingle and Fox, E. and Garnett, R.},
-	title = {{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
-	year = {2019},
-	booktitle = {Advances in Neural Information Processing Systems},
-	volume = {32},
-	pages = {1--12},
-	organization = {Curran Associates, Inc.},
-	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
-}
-
-% Google DeepMind's AlphaGo was the first reinforcement learning agent to beat
-% pro players (exceed the maximum human skill) in Go, which is a much more
-% complex game than chess and required modeling an enumerable amount of game
-% states and move possibilities.  This required combining monte carlo tree
-% search (MCTS) with neural networks to filter down to a reasonable number of
-% potential states.  This is credited as the first RL model to use MCTS, which
-% is now a standard in RL
-@article{silver2016mastering,
-  title={Mastering the game of Go with deep neural networks and tree search},
-  author={Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
-  journal={nature},
-  volume={529},
-  number={7587},
-  pages={484--489},
-  year={2016},
-  publisher={Nature Publishing Group}
-}
-
-% Google DeepMind's AlphaStar II was the first reinforcement learning agent
-% that could beat pro players in video games, which is a signficantly more
-% complex environment than a board game environment with a finite state and set
-% of possible actions
-@article{oriol2019gradmaster,
-	author = {Vinyals, Oriol and Babuschkin, Igor and Czarnecki, Wojciech M. and Mathieu, Micha{\"e}l and Dudzik, Andrew and Chung, Junyoung and Choi, David H. and Powell, Richard and Ewalds, Timo and Georgiev, Petko and Oh, Junhyuk and Horgan, Dan and Kroiss, Manuel and Danihelka, Ivo and Huang, Aja and Sifre, Laurent and Cai, Trevor and Agapiou, John P. and Jaderberg, Max and Vezhnevets, Alexander S. and Leblond, R{\'e}mi and Pohlen, Tobias and Dalibard, Valentin and Budden, David and Sulsky, Yury and Molloy, James and Paine, Tom L. and Gulcehre, Caglar and Wang, Ziyu and Pfaff, Tobias and Wu, Yuhuai and Ring, Roman and Yogatama, Dani and W{\"u}nsch, Dario and McKinney, Katrina and Smith, Oliver and Schaul, Tom and Lillicrap, Timothy and Kavukcuoglu, Koray and Hassabis, Demis and Apps, Chris and Silver, David},
-	doi = {10.1038/s41586-019-1724-z},
-	isbn = {1476-4687},
-	journal = {Nature},
-	number = {7782},
-	pages = {350--354},
-	title = {Grandmaster level in {StarCraft II} using multi-agent reinforcement learning},
-	url = {https://doi.org/10.1038/s41586-019-1724-z},
-	volume = {575},
-	year = {2019},
-}
-
-% The culmination of a line of work from Google DeepMind on discovering better
-% matrix factorization algorithms using reinforcement learning.  They defined a
-% tensor game for trying to solve matrix multiplication at a fixed size in
-% fewer moves, then trained a RL agent to play the game using monte carlo tree
-% search and training a neural network to predict a manageable subset of states
-% and expected state outcomes since the number of states was too numerous for
-% true MCTS.  They were able to match the performance of Strassen's algorithm
-% on 5x5 matrices (this is how recursive block-based recursive multiplication
-% is done) and exceed performance on other sizes and rings (such as modular
-% arithmetic rings)
-@article{fawzi2022discovering,
-  title={Discovering faster matrix multiplication algorithms with reinforcement learning},
-  author={Fawzi, Alhussein and Balog, Matej and Huang, Aja and Hubert, Thomas and Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and R. Ruiz, Francisco J and Schrittwieser, Julian and Swirszcz, Grzegorz and others},
-  journal={Nature},
-  volume={610},
-  number={7930},
-  pages={47--53},
-  year={2022},
-  publisher={Nature Publishing Group UK London},
-  doi={10.1038/s41586-022-05172-4},
-}
-
-% The largest repository of open source AI, machine learning, and control
-% benchmark problems, maintained by OpenAI.  This was the primary benchmark
-% problem environment for all reinforcement learning researchers not affiliated
-% with another company with their own private environments (such as Meta and
-% Google).  Still available at github.com/openai/gym
-@techreport{brackmen2016openai,
-  author = {Greg Brockman and Vicki Cheung and Ludwig Pettersson and Jonas Schneider and John Schulman and Jie Tang and Wojciech Zaremba},
-  title = {OpenAI Gym},
-  year = {2016},
-  institution = {arXiv:1606.01540},
-}
-
-% Proximal policy optimization (PPO) is the state-of-the-art policy gradient
-% optimization method for reinforcement learning.  Proximal gradient methods
-% computes the update by directly optimizing the parameters for a given batch
-% of observations in order to maximize the intermediate value function.  PPO
-% limits the step size in each iteration and enforces a penalization to
-% discourage models from drifting too far from the original "base" model.
-@techreport{schulman2017proximalpolicyoptimizationalgorithms,
-      title={Proximal Policy Optimization Algorithms},
-      author={John Schulman and Filip Wolski and Prafulla Dhariwal and Alec Radford and Oleg Klimov},
-      year={2017},
-      institution={arXiv cs.LG},
-      url={https://arxiv.org/abs/1707.06347},
-}
-
-% Simulated annealing and reinforcement learning based FPGA placement.  The RL
-% contributions are tenuous at best, but still an example of potential RL
-% impact in industry
-@inproceedings{tian2022improving,
-  author={Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
-  booktitle={2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
-  title={Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning}, 
-  year={2022},
-  volume={10},
-  number={},
-  pages={1912-1919},
-  doi={10.1109/ITAIC54216.2022.9836761}
-}
-
-% Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
-@inproceedings{farhan2020reinforcement,
-	author = {Farhan, Mohammed and G{\"o}hre, Brett},
-	title = {Reinforcement Learning in {AnyLogic} Simulation Models: A Guiding Example using {Pathmind}},
-	year = {2020},
-	month = {12},
-	booktitle = {Proc. 2020 Winter Simulation Conference (WSC 2020)},
-	pages = {3212--3223},
-	organization = {IEEE},
-	location = {Orlando, FL, USA},
-	doi = {10.1109/WSC48552.2020.9383916},
-	url = {https://ieeexplore.ieee.org/document/9383916},
-}
-
-% Original tech report introducing recurrent neural networks (RNNs), which
-% use a recursively defined state variable to track the context of sequential
-% data observations so far, plus the value of the current output to predict the
-% next output.  The authors derive how the gradients can be backpropogated
-% through this entire chain for efficient training.  This idea had been around
-% since the 60s, but this is the first paper explicitly proposing such
-% recurrent layers in a representation learning context.  The authors propose
-% these recurrent layers as a means of representation learning for sequence
-% data (such as next-word prediction in language models).  RNNs would go on to
-% become the state-of-the-art in language models and natural language
-% processing for almost 30 years until they were replaced by transformers with
-% the advent of BERT in 2017. Although the idea of encoding state information
-% is a valid solution, RNNs notoriously suffered from a vanishing gradient
-% issue where tokens further back in the sequence had little effect on the
-% current prediction.
-@techreport{rumelhart1985learning,
-author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
-year = {1985},
-title = {Learning internal representations by error propagation},
-number = {ICS 8504},
-address = {San Diego, CA, USA},
-institution={Institute for Cognitive Science, University of California},
-url={https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
-}
-
-% Original tech report where recurent neural networks were originally applied
-% at scale to a language processing (next word prediction) application
-@techreport{jordan1986serial,
-  author       = {Jordan, Michael I.},
-  title        = {Serial order: a parallel distributed processing approach},
-  year         = {1986},
-  institution  = {Institute for Cognitive Science, University of California},
-  address      = {San Diego, La Jolla, CA, USA},
-  url          = {https://www.osti.gov/biblio/6910294},
-}
-
-% AutoDEUQ paper proposing that an ensemble of neural networks can be a more
-% powerful and scalable tool for uncertainty quantification than a Bayesian
-% neural network.  They trained AutoDEUQ using DeepHyper in multiobjective
-% mode.  I don't think the code is available, but an example can be found on
-% the DeepHyper GitHub
-@inproceedings{egele2022autodeuq,
-  title={{AutoDEUQ}: Automated deep ensemble with uncertainty quantification},
-  author={Egele, Romain and Maulik, Romit and Raghavan, Krishnan and Lusch, Bethany and Guyon, Isabelle and Balaprakash, Prasanna},
-  booktitle={2022 26th International Conference on Pattern Recognition (ICPR)},
-  pages={1908--1914},
-  year={2022},
-  organization={IEEE}
-}
-
-% Original paper on back-propagation for training neural networks.  Equivalent
-% to reverse-mode algorithmic differentiation or more simply applying the chain
-% rule recursively.  
-@article{rumelhart1986,
-    author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
-    title = {Learning representations by back-propagating errors},
-    year = {1986},
-    journal = {Nature},
-    volume = {323},
-    number = {6088},
-    pages = {533--536},
-    doi = {10.1038/323533a0},
-}
-
-% Rosenblatt's original paper proposing the multi-layer perceptron with an
-% input layer, output layer, and a single hidden layer: this is the foundation
-% for all AI and neural network research.  It is proposed as a simulation model
-% for biologists and psychologists to study brain function.  It would not be
-% useful as a tool for regression, classification, or prediction for many years
-% until the advent of representation learning.  He originally used a step
-% (discontinuous) activation function since it was well-known from functional
-% analysis and approximation theory that the span of these functions is dense
-% in L2 space.  The sigmoidal activation would later be introduced as a
-% continuous smoothing of the step function (so that back propogation would
-% have gradients to train on), but there is no clear reference for who first
-% proposed this
-@article{rosenblatt1958perceptron,
-  author={Rosenblatt, Frank},
-  title={The perceptron: a probabilistic model for information storage and organization in the brain.},
-  year={1958},
-  journal={Psychological review},
-  volume={65},
-  number={6},
-  pages={386},
-  publisher={American Psychological Association},
-  doi={10.1037/h0042519},
-}
-
-% The first paper where the ReLU activation function was used as the activation
-% function in neural network models.  This would later become the standard for
-% many years (and still is for regressor models)
-@article{fukushima1975cognitron,
-  title={Cognitron: A self-organizing multilayered neural network},
-  author={Fukushima, Kunihiko},
-  journal={Biological cybernetics},
-  volume={20},
-  number={3},
-  pages={121--136},
-  year={1975},
-  publisher={Springer}
-}
-
-% Paper where ReLU functions were first used to replace sigmoidal activations
-% in a restricted Boltzmann machine with much success.  After this, ReLU became
-% the standard activation function in all neural network regressive models
-@inproceedings{10.5555/3104322.3104425,
-author = {Nair, Vinod and Hinton, Geoffrey E.},
-title = {Rectified linear units improve restricted boltzmann machines},
-year = {2010},
-isbn = {9781605589077},
-publisher = {Omnipress},
-address = {Madison, WI, USA},
-booktitle = {Proceedings of the 27th International Conference on International Conference on Machine Learning},
-pages = {807–814},
-location = {Haifa, Israel},
-series = {ICML'10}
-}
-
-% Original paper on Bayesian neural networks (or just Bayesian networks), which
-% learn joint-probability distributions of neural network weights and biases
-% instead of just single sets.  The original proposal was as a means of
-% regularization, to avoid overfitting.  However, sampling networks from this
-% distribution can also be used as a means of uncertainty quantification.
-@article{mackay1992practical,
-  title={A practical Bayesian framework for backpropagation networks},
-  author={MacKay, David JC},
-  journal={Neural computation},
-  volume={4},
-  number={3},
-  pages={448--472},
-  year={1992},
-  publisher={MIT Press},
-  address = {Cambridge, MA, USA},
-  doi = {10.1162/neco.1992.4.3.448},
-}
-
-% Not an original paper, as L1 and L2 regularization have been around since the
-% beginning of machine learning and applied math, and are generally not
-% attributed to anyone in particular, but a nice review paper on the usage and
-% effects of L1 and L2 regularization in machine learning and neural network
-% training with back propagation.  Regularization was considered an essential
-% part of neural network training (and still is in scientific machine learning)
-% for many many years.
-@inproceedings{10.1145/1015330.1015435,
-author = {Ng, Andrew Y.},
-title = {Feature selection, L1 vs. L2 regularization, and rotational invariance},
-year = {2004},
-isbn = {1581138385},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/1015330.1015435},
-doi = {10.1145/1015330.1015435},
-booktitle = {Proceedings of the Twenty-First International Conference on Machine Learning},
-pages = {78},
-location = {Banff, Alberta, Canada},
-series = {ICML '04}
-}
-
-% Original publication on using long-short term memory within a recurrent
-% neural network framework to address the issue of vanishing gradients during
-% training.  The idea is to truncate gradients for certain blocks (short-term
-% memory units) and chain these blocks to generate skip connections for long
-% term memory.  These would be the state-of-the-art in natural language
-% processing and other sequential prediction tasks until BERT replaces them
-% with transformer models.
-@article{10.1162/neco.1997.9.8.1735,
-    author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
-    title = {Long Short-Term Memory},
-    journal = {Neural Computation},
-    volume = {9},
-    number = {8},
-    pages = {1735-1780},
-    year = {1997},
-    month = {11},
-    issn = {0899-7667},
-    doi = {10.1162/neco.1997.9.8.1735},
-}
-
-% First published work using Geoff Hinton's unpublished optimization algorithm
-% RMSProp (root mean squared propogation, an adjustment to AdaGrad using an
-% adaptive learning rate in each dimension).  The author uses RMSProp to train
-% a recurrent neural network (RNN) with long short-term memory (LSTM) in order
-% to generate handwritten digits
-@techreport{graves2014generatingsequencesrecurrentneural,
-    title={Generating Sequences With Recurrent Neural Networks},
-    author={Alex Graves},
-    year={2014},
-    institution={arXiv cs.NE preprint},
-    url={https://arxiv.org/abs/1308.0850},
-}
-
-% A review article on representation learning and unifying the ideas of
-% representation learning, density estimation, and manifold learning under a
-% single geometric umbrella.  The authors show broadly how representation
-% learning has been the key to the performance of neural networks across many
-% fields, often allowing us to break the curse of dimensionality.
-% Additionally, they discuss the general requirements (priors) about a problem
-% / function for representation learning to be an effective approach.
-@article{6472238,
-  author={Bengio, Yoshua and Courville, Aaron and Vincent, Pascal},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  title={Representation Learning: A Review and New Perspectives},
-  year={2013},
-  volume={35},
-  number={8},
-  pages={1798-1828},
-  doi={10.1109/TPAMI.2013.50}
-}
-
-% Original publication of the Boltzman machine, an early type of AI model that
-% made predictions by modeling the Ising spin-glass model with public input
-% units (set by the user with the independent variables during inference) and
-% hidden internal units that are correlated to eachother and the public units
-% through learned Ising model weights and biases.  Each unit has a binary {0,
-% 1} state.  The energy of the system is the output (prediction).  The weights
-% and biases are learned through simulated annealing, and in this way, the
-% model is not unlike quantum annealing.  The model learns a distribution of
-% potential inference values for each input combination.  Thus, it is a form of
-% distribution learning.  These were a commonly used alternative to neural
-% networks for a time, and often cited as explainable alternatives.  The binary
-% state variables would later be replaced by sigmoidal activation functions
-% (for smoothness)
-@inproceedings{hinton1983optimal,
-  title={Optimal perceptual inference},
-  author={Hinton, Geoffrey E and Sejnowski, Terrence J},
-  booktitle={Proceedings of the IEEE conference on Computer Vision and Pattern Recognition},
-  volume={448},
-  pages={448--453},
-  year={1983},
-  organization={Citeseer},
-  url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b89e9f0cef5ace08946a7c07bf7284854c418445},
-}
-
-% Original publication on diffusion models. The paper introduces a framework
-% inspired by non-equilibrium thermodynamics where a forward diffusion process
-% gradually destroys structure in the data distribution, transforming it into a
-% simple distribution like Gaussian noise. A reverse diffusion process is then
-% learned to reconstruct the original data distribution, serving as a
-% generative mode.  Data can be generated by training the distribution through
-% diffusion, then applying the reverse diffusion operator to sample (or
-% "generate") new data.  This is the basis for most image and video generation
-% models
-@inproceedings{pmlr-v37-sohl-dickstein15,
-  title = 	 {Deep Unsupervised Learning using Nonequilibrium Thermodynamics},
-  author = 	 {Sohl-Dickstein, Jascha and Weiss, Eric and Maheswaranathan, Niru and Ganguli, Surya},
-  booktitle = 	 {Proceedings of the 32nd International Conference on Machine Learning},
-  pages = 	 {2256--2265},
-  year = 	 {2015},
-  editor = 	 {Bach, Francis and Blei, David},
-  volume = 	 {37},
-  series = 	 {Proceedings of Machine Learning Research},
-  location = 	 {Lille, France},
-  publisher =    {PMLR},
-  url = 	 {https://proceedings.mlr.press/v37/sohl-dickstein15.html},
-}
-
-% Introduces the idea of semantic regularization for generating word
-% embeddings.  This is a massive improvement over bag of word embeddings, where
-% each word gets a dimension and sentences / documents are embedded as vectors
-% listing the number of occurrences for each word.  Instead, for this work,
-% words are compressed into a continuous latent space using a RNN-based
-% compression model.  In the compression, the embedding is regularized by
-% relationships between words.  For example, 
-% embedding(king):embedding(queen) ~ embedding(man):embedding(woman) and
-% embedding(clothes):embedding(shirt) ~ embedding(dishes):embedding(bowl).
-% These relationships are enforced using the cosin similarity score of their
-% embeddings.  The authors also collected a massive dataset of english words
-% and the corresponding relationships, and successfully trained the first word
-% to vector embedding that (mostly) preserves these relationships, meaning that
-% all vector operations remain meaningful
-@inproceedings{mikolov2013linguistic,
-  title={Linguistic regularities in continuous space word representations},
-  author={Mikolov, Tom{\'a}{\v{s}} and Yih, Wen-tau and Zweig, Geoffrey},
-  booktitle={Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
-  pages={746--751},
-  year={2013}
-}
-
-% Original word2vec publication: embedding words into a continuous vector space
-% in a "dense" way, meaning that the embedding is somewhat minimal and no
-% extra dimensions are added and word relationships are preserved (as in
-% semantic regularization).  The authors show that a relatively small and
-% simple model with semantic regularization is sufficient to train such an
-% embedding in less than a day, and the resulting word2vec embedding layer is
-% fast and cheap to evaluate.  The word2vec embedding would go on to be the
-% basis for most early transformer models.  Modern LLMs train their own
-% embedding as the embedding layers of the network, but use the same techniques
-% as word2vec.  The open source software is available for download from Google:
-% https://code.google.com/archive/p/word2vec
-@inproceedings{mikolov2013efficient,
-  title={Efficient estimation of word representations in vector space},
-  author={Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
-  year={2013},
-  booktitle = {1st International Conference on Learning Representations (ICLR 2013)},
-  url={https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq},
-  location={Scottsdale, AZ, USA},
-}
