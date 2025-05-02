@@ -8,7 +8,7 @@
 	volume = {32},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, autograd, algorithmic differentiation, backpropagation},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, autograd, algorithmic differentiation, backpropagation, neural networks},
 }
 
 % Brandon's original paper on differentiabl optimization layers in neural networks -- i.e., solving an optimization problem within a layer of a neural network and propogating the gradient through that solution so that the network parameters can still be trained
@@ -24,7 +24,7 @@
 	pages = {136--145},
 	organization = {PMLR},
 	url = {https://proceedings.mlr.press/v70/amos17a.html},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, autograd, algorithmic differentiation, backpropagation},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, autograd, algorithmic differentiation, backpropagation, neural networks},
 }
 
 % Brandon introduces using neural networks and other scientific machine learning methods to warm-start optimization and control problems. An open source numerical software tutorial is available at github.com/facebookresearch/amortized-optimization-tutorial
@@ -41,7 +41,7 @@
 	doi = {10.1561/2200000102},
 	url = {https://doi.org/10.1561/2200000102},
 	issn = {1935-8237},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, neural networks},
 }
 
 % Introducing the open source PDLP solver (now part of Google OR tools) for solving large scale linear programming problems, where the constraint matrices would never fit in memory using first-order (matrix free) descent methods. The algorithm is based on PDHG, which is an improvement to ADMM specialized for solving LPs. The main contributions of this solver and its predecessor PDHG are adaptive step-sizes and preconditioning to prevent oscillatory motions plus adpaptive an adaptive restart procedures and presolve to prevent stalling out. This solver is not as fast simplex or interior point methods on problems that do fit in memory, but is extremely scalable and robust on larger problems. Obviously, it cannot give a basic solution since first-order methods are always approximate (with order 10^-8 accuracy). Open source code is available through Google OR tools: github.com/google/or-tools
@@ -84,7 +84,7 @@
 	pages = {2306--2317},
 	organization = {Curran Associates Inc.},
 	location = {Montr{\'e}al, Canada},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, overfitting},
 }
 
 % A massive review article on the magic of just interpolating noisy machine learning and deep learning data in high dimensions, and some theorems on why this is acceptable and even desirable as the dimension increases. Delaunay interpolation is spotlighted as one of the interpolation methods to use
@@ -100,7 +100,7 @@
 	doi = {10.1017/S0962492921000039},
 	url = {https://www.cambridge.org/core/product/identifier/S0962492921000039/type/journal_article},
 	issn = {0962-4929},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, overfitting},
 }
 
 % A review article on representation learning and unifying the ideas of representation learning, density estimation, and manifold learning under a single geometric umbrella. The authors show broadly how representation learning has been the key to the performance of neural networks across many fields, often allowing us to break the curse of dimensionality. Additionally, they discuss the general requirements (priors) about a problem / function for representation learning to be an effective approach.
@@ -117,7 +117,7 @@
 	doi = {10.1109/TPAMI.2013.50},
 	url = {http://ieeexplore.ieee.org/document/6472238/},
 	issn = {0162-8828},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning},
 }
 
 % Methodolgies for calibrating the Fayans EDF model to experimental data. Data is expensive and limited and the model itself is computationally expensive, so this is a classical inverse problem. The problem is actually multiobective because the data themselves come from various categories representing different types of observations, and the standard deviations for each of these observables is not known. Could be configured as a 3 or 9-objective problem
@@ -163,7 +163,7 @@
 	title = {OpenAI Gym},
 	year = {2016},
 	institution = {arXiv:1606.01540},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, benchmarking, reinforcement learning, RL},
 }
 
 % The new classic textbook on geometric deep learning -- this book (by the creator of the field) covers how all of representation learning can be broken down into exploiting symmetries, stabilities, and invariances in data, through the lens of group theory. For example, a convolutional layer exploits a symmetry between equivalent groups of images; and a max pooling layer exploits a scale invariance in image size/resolution; and when we talk about feature encodings, we are often looking for mappings that maintain stability (i.e., similar feature vectors remain close together after encoding).
@@ -173,7 +173,7 @@
 	year = {2021},
 	publisher = {arXiv cs.LG},
 	doi = {10.48550/arXiv.2104.13478},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning},
 }
 
 % Large review paper covering all aspects of RBFs, their interpolation error bounds, their convergence rates, and numerical computation for various kernel functions.
@@ -279,7 +279,7 @@
 	url = {http://www.ams.org/gsm/101},
 	isbn = {9780821847985},
 	issn = {1065-7339},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % The Keras docs -- great and highly impactful open source Python software, needs no introduction. A simplified interface for quickly building neural networks and other deep learning models with various backends frameworks such as Tensorflow, jax, and Pytorch.
@@ -289,7 +289,7 @@
 	year = {2015},
 	howpublished = {\url{https://keras.io}},
 	note = {Last accessed: Nov 2023},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % A paper on the similarities and differences between kriging and Gaussian processes -- in practice, I see very little difference other than that people often perform more performance optimizations on Gaussian processes and consider Kriging to be a bit more strict
@@ -349,7 +349,7 @@
 	journal = {Advances in Neural Information Processing Systems},
 	volume = {35},
 	pages = {10945--10958},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % BERT was one of the first transformer-based neural network architectures for solving language-related tasks, such as language translations, at Google. This was also by far the largest model of its time. BERT paved the way for modern large language models, probably moreso than the Attention is all you need paper
@@ -364,7 +364,7 @@
 	location = {Minneapolis, Minnesota},
 	doi = {10.18653/v1/N19-1423},
 	url = {https://aclanthology.org/N19-1423/},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, transformers},
 }
 
 % CVXPY is an open source Python optimization and modeling language for solving convex optimization problems in a disciplined way (meaning that we ensure convexity through hard rules on the problem definition). From the lab of Stephen Boyd
@@ -405,7 +405,7 @@
 	number = {61},
 	pages = {2121--2159},
 	url = {http://jmlr.org/papers/v12/duchi11a.html},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, neural networks},
 }
 
 % AutoDEUQ paper proposing that an ensemble of neural networks can be a more powerful and scalable tool for uncertainty quantification than a Bayesian neural network. They trained AutoDEUQ using DeepHyper in multiobjective mode. I don't think the code is available, but an example can be found on the DeepHyper GitHub
@@ -420,7 +420,7 @@
 	location = {Montreal, QC, Canada},
 	doi = {10.1109/icpr56361.2022.9956231},
 	url = {https://ieeexplore.ieee.org/document/9956231/},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
@@ -435,7 +435,7 @@
 	location = {Orlando, FL, USA},
 	doi = {10.1109/WSC48552.2020.9383916},
 	url = {https://ieeexplore.ieee.org/document/9383916},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, reinforcement learning, RL},
 }
 
 % The culmination of a line of work from Google DeepMind on discovering better matrix factorization algorithms using reinforcement learning. They defined a tensor game for trying to solve matrix multiplication at a fixed size in fewer moves, then trained a RL agent to play the game using monte carlo tree search and training a neural network to predict a manageable subset of states and expected state outcomes since the number of states was too numerous for true MCTS. They were able to match the performance of Strassen's algorithm on 5x5 matrices (this is how recursive block-based recursive multiplication is done) and exceed performance on other sizes and rings (such as modular arithmetic rings)
@@ -452,7 +452,7 @@
 	doi = {10.1038/s41586-022-05172-4},
 	url = {https://www.nature.com/articles/s41586-022-05172-4},
 	issn = {0028-0836},
-	keywords = {machine learning, ML, scientific machine learning, SciML, computational linear algebra},
+	keywords = {machine learning, ML, scientific machine learning, SciML, computational linear algebra, neural networks, reinforcement learning, RL},
 }
 
 % The first paper where the ReLU activation function was used as the activation function in neural network models. This would later become the standard for many years (and still is for regressor models)
@@ -468,7 +468,7 @@
 	doi = {10.1007/bf00342633},
 	url = {http://link.springer.com/10.1007/BF00342633},
 	issn = {0340-1200},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % Manisha's conference paper on SF-SFD -- the theory is far from ready, but the problem of concentration of measure in high-dimensions making robust sampling difficult and the ability to do something better than just random or latin hypercube sampling are clearly demonstrated
@@ -512,7 +512,7 @@
 	doi = {10.1162/neco.1992.4.1.1},
 	url = {https://direct.mit.edu/neco/article/4/1/1-58/5624},
 	issn = {0899-7667},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, overfitting},
 }
 
 % Introducing a Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
@@ -611,7 +611,7 @@
 	year = {2014},
 	institution = {arXiv cs.NE preprint},
 	url = {https://arxiv.org/abs/1308.0850},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, neural networks, RNNs},
 }
 
 % An error analysis of ReLU multilayer perceptrons (MLPs). Provides lower bounds on approximation error for feed-forward neural networks with ReLU activation functions. A good step in SciML, but we typically want upper bounds not lower bounds in practice
@@ -624,7 +624,7 @@
 	number = {05},
 	pages = {803--859},
 	publisher = {World Scientific},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % The official publication of the open source numerical software numpy: the standard for basic multivariable computations, vector operations, and simple linear algebra in Python
@@ -654,7 +654,7 @@
 	pages = {448--453},
 	organization = {Citeseer},
 	url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b89e9f0cef5ace08946a7c07bf7284854c418445},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Boltzmann machine, overfitting},
 }
 
 % Original publication on using long-short term memory within a recurrent neural network framework to address the issue of vanishing gradients during training. The idea is to truncate gradients for certain blocks (short-term memory units) and chain these blocks to generate skip connections for long term memory. These would be the state-of-the-art in natural language processing and other sequential prediction tasks until BERT replaces them with transformer models.
@@ -671,7 +671,7 @@
 	doi = {10.1162/neco.1997.9.8.1735},
 	url = {https://direct.mit.edu/neco/article/9/8/1735-1780/6109},
 	issn = {0899-7667},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, transformers},
 }
 
 % An article on Google GlassBox research: Google's research division dedicated to interpretable machine learning
@@ -714,7 +714,7 @@
 	pages = {125--136},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % Original tech report where recurent neural networks were originally applied at scale to a language processing (next word prediction) application
@@ -725,7 +725,7 @@
 	institution = {Institute for Cognitive Science, University of California},
 	address = {San Diego, La Jolla, CA, USA},
 	url = {https://www.osti.gov/biblio/6910294},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, RNNs},
 }
 
 % One of the earliest applications of DelunaySparse: predicting oblique shocks in supersonic flows for aerospace engineering applications. This is also a great example of an early example of scientific machine learning since the authors were also using neural networks and other more modern AI methods to make predictions
@@ -739,7 +739,7 @@
 	location = {San Diego, CA, USA},
 	doi = {10.2514/6.2019-1704},
 	url = {https://arc.aiaa.org/doi/10.2514/6.2019-1704},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % An introductory-level paper to theory-guided data science. I haven't read but I assume it covers the same topics he taught in his class at Virginia Tech
@@ -766,7 +766,7 @@
 	year = {2014},
 	booktitle = {2nd International Conference on Learning Representations (ICLR 2014)},
 	url = {https://arxiv.org/abs/1312.6114},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning},
 }
 
 % The original paper on Adam: an adaptive gradient and moment estimator that uses second order moments to approximate curvature (i.e., Hessian information) in order to accelerate the convergence of AdaGrad. In particular, this means applying Nesterov's momentum to both the gradient and curvature estimations. From 2015-2024 this was the state-of-the-art algorithm for optimization of neural network weights during training, and was what was typically meant when people talked about stochastic gradient descent.
@@ -778,7 +778,7 @@
 	numpages = {11},
 	location = {San Diego, CA, USA},
 	url = {https://arxiv.org/abs/1412.6980},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, neural networks},
 }
 
 % The original paper on neural operators, a now ubiquitous method in scientific machine learning where an operator (i.e., for solving PDEs) between infinite dimensional function spaces is learned by composing integral operator basis functions and regular ReLU layers
@@ -788,7 +788,7 @@
 	year = {2021},
 	journal = {CoRR},
 	volume = {abs/2108.08481},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % The official publication for AlexNet -- one of the first truly massive overparameterized convolutional neural networks, which threw away a lot of the conventional wisdom around overfitting and achieved state-of-the-art performance and fine generalization errors on the ImageNet benchmark problem. This could be considered the beginning of "deep" learning in the sense of adding many many layers
@@ -801,7 +801,7 @@
 	volume = {25},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, benchmarking, neural networks, CNNs, overfitting},
 }
 
 % Stochastic approximation algorithm (i.e., stochastic gradient descent) and how to analyze its radius of convergence for a fixed step-size -- you can decay its step size at a square-summable but not summable rate to guarantee convergence in the limit
@@ -843,7 +843,7 @@
 	doi = {10.1162/neco.1989.1.4.541},
 	url = {https://direct.mit.edu/neco/article/1/4/541-551/5515},
 	issn = {0899-7667},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, CNNs},
 }
 
 % LeCun's original paper on convolutional neural network architecture -- the first example of a problem where neural networks trained with backpropagation actually outperformed other models, and one of the early examples of the magic of representation learning and how exploiting problem structure is essential to making machine learning work. This remained the state-of-the art in image classification and image processing for over 20 years until the event of transformers, and whether transformers are better for image problems remains debatable
@@ -856,7 +856,7 @@
 	number = {10},
 	numpages = {1995},
 	publisher = {Citeseer},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, CNNs, transformers, representation learning},
 }
 
 % LeCun et al. show that convolutional nets can outperform all other methods on handwriting classification for efficient document processing
@@ -872,7 +872,7 @@
 	doi = {10.1109/5.726791},
 	url = {http://ieeexplore.ieee.org/document/726791/},
 	issn = {0018-9219},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, CNNs},
 }
 
 % A paper on the Delaunay triangulation learner -- an alternative to ReLU multilayer perceptrons where they fit a Delaunay triangulation to a small set of nodes and then train the response values of those nodes to make the Delaunay interpolant match the data
@@ -887,7 +887,7 @@
 	location = {Beijing, China},
 	doi = {10.1109/icbk.2019.00030},
 	url = {https://ieeexplore.ieee.org/document/8944414},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % Official citation for the open source numerical Python software for evaluating SHAP scores for interpreting feature importance in a model agnostic way for various machine learning (primarily scientific machine learning) applications. Very popular in many fields, including finance, computational medicine, etc. github.com/shap/shap Based on the original publication by Shapley + some additional methods and improvements proposed by the authors and previous works
@@ -927,7 +927,7 @@
 	articleno = {8},
 	organization = {SCS},
 	location = {Baltimore, MD, USA},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % Our paper proposing test functions for convex optimization problems with very specific properties, in order to gauge the effectiveness and robustness of various techniques subject to various forms of degeneracy
@@ -959,7 +959,7 @@
 	doi = {10.1007/s11075-020-01040-2},
 	url = {https://link.springer.com/10.1007/s11075-020-01040-2},
 	issn = {1017-1398},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, overfitting},
 }
 
 % Thomas' open source montone quintic spline interpolation software -- a high order spline interpolant implemented in modern Fortran. Really nice high performance numerical software. Available open source on Dr. Watson's GitHub. His main application was distribution modeling, but I think for noisy data, lower order methods may actually be more robust
@@ -995,7 +995,7 @@
 	doi = {10.1162/neco.1992.4.3.448},
 	url = {https://direct.mit.edu/neco/article/4/3/448-472/5654},
 	issn = {0899-7667},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, overfitting},
 }
 
 % A thorough foundation on analysis of RBF interpolant error bounds, through the lens of the RKHS
@@ -1019,7 +1019,7 @@
 	booktitle = {1st International Conference on Learning Representations (ICLR 2013)},
 	location = {Scottsdale, AZ, USA},
 	url = {https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning, overfitting},
 }
 
 % Introduces the idea of semantic regularization for generating word embeddings. This is a massive improvement over bag of word embeddings, where each word gets a dimension and sentences / documents are embedded as vectors listing the number of occurrences for each word. Instead, for this work, words are compressed into a continuous latent space using a RNN-based compression model. In the compression, the embedding is regularized by relationships between words. For example, embedding(king):embedding(queen) ~ embedding(man):embedding(woman) and embedding(clothes):embedding(shirt) ~ embedding(dishes):embedding(bowl). These relationships are enforced using the cosin similarity score of their embeddings. The authors also collected a massive dataset of english words and the corresponding relationships, and successfully trained the first word to vector embedding that (mostly) preserves these relationships, meaning that all vector operations remain meaningful
@@ -1029,7 +1029,7 @@
 	year = {2013},
 	booktitle = {Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
 	pages = {746--751},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning, overfitting},
 }
 
 % Original reference for barycentric weight based interpolation -- I have not read this, it's in German, but this is the proper way to cite barycentric interpolation
@@ -1057,7 +1057,7 @@
 	doi = {10.1186/s13321-018-0258-y},
 	url = {https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0258-y},
 	issn = {1758-2946},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, representation learning},
 }
 
 % The classical textbook on response surface methodology and modeling practices. Contains useful information on the basic framework and applications of RSM. Also a useful reference for many of the options for specific techniques: Chapter 7 is a good reference for basic techniques in multiobjective RSM and Chapters 8-9 surveys the basic methods in design-of-experiments
@@ -1083,7 +1083,7 @@
 	organization = {Omnipress},
 	location = {Haifa, Israel},
 	isbn = {9781605589077},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Boltzmann machine},
 }
 
 % Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
@@ -1110,7 +1110,7 @@
 	doi = {10.1145/1015330.1015435},
 	url = {https://doi.org/10.1145/1015330.1015435},
 	isbn = {1581138385},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, overfitting},
 }
 
 % An early review paper on methods and algorithms in "geometric learning", i.e., a form of topological data analysis that focuses on the usage of geometric algorithms and modeling for machine learning and data science applications
@@ -1144,7 +1144,7 @@
 	doi = {10.1162/neco.1991.3.2.246},
 	url = {https://direct.mit.edu/neco/article/3/2/246-257/5580},
 	issn = {0899-7667},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
@@ -1158,7 +1158,7 @@
 	pages = {1--12},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
-	keywords = {machine learning, ML, scientific machine learning, SciML, autograd, algorithmic differentiation, backpropagation, computational linear algebra},
+	keywords = {machine learning, ML, scientific machine learning, SciML, autograd, algorithmic differentiation, backpropagation, computational linear algebra, neural networks},
 }
 
 % Anita's commentary paper on recent advancements in SciML for computable phenotypes in the field of computational medicine (i.e., computing medical risks from patient data without human intervention). She congratulates recent advancments in using uncertainty aware, well-validated SciML methods such as ensemble models and gradient-boosted decision trees (XGBoost) to implement and calibrate (optimize) computable phenotypes in real clinical studies
@@ -1220,7 +1220,7 @@
 	doi = {10.1016/j.jcp.2018.10.045},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0021999118307125},
 	issn = {0021-9991},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % Attempting to make Gaussian process interpolation (i.e., Kriging) numerically stable as the minimum pairwise distance between points shrinks. In particular, they propose a lower bound on the nugget that must be added to the diagonal to guarantee a sufficient distance to singularity
@@ -1263,7 +1263,7 @@
 	pages = {5389--5400},
 	organization = {PMLR},
 	url = {https://proceedings.mlr.press/v97/recht19a.html},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, CNNs, overfitting},
 }
 
 % The calculus of simplex gradients: a detailed analysis of simplex gradients and their properties for approximating true gradients when solving derivative-free and blackbox optimization problems
@@ -1296,7 +1296,7 @@
 	doi = {10.1037/h0042519},
 	url = {https://doi.apa.org/doi/10.1037/h0042519},
 	issn = {1939-1471},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % Official publication of the scipy.stats.qmc module, which is the newly released module for performing quasi-monte carlo sampling and design-of-experiments in scipy. Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -1327,7 +1327,7 @@
 	address = {San Diego, CA, USA},
 	doi = {10.21236/ada164453},
 	url = {https://www.cs.toronto.edu/~hinton/absps/pdp8.pdf},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, RNNs, transformers, representation learning},
 }
 
 % Original paper on back-propagation for training neural networks. Equivalent to reverse-mode algorithmic differentiation or more simply applying the chain rule recursively.
@@ -1344,7 +1344,7 @@
 	doi = {10.1038/323533a0},
 	url = {https://www.nature.com/articles/323533a0},
 	issn = {0028-0836},
-	keywords = {machine learning, ML, scientific machine learning, SciML, autograd, algorithmic differentiation, backpropagation},
+	keywords = {machine learning, ML, scientific machine learning, SciML, autograd, algorithmic differentiation, backpropagation, neural networks},
 }
 
 % Techniques and optimal sampling criteria for performing adaptive sampling to enable downstream Gaussian process regression modeling
@@ -1361,7 +1361,7 @@
 	doi = {10.1098/rsta.2021.0197},
 	url = {https://royalsocietypublishing.org/doi/10.1098/rsta.2021.0197},
 	issn = {1364-503X},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization},
 }
 
 % Some thorough analysis on upper and lower error bounds for RBF interpolants, which ultimately yield the famous "uncertainty princple for RBFs" -- i.e., a large shape parameter is needed for accuracy but a small shape parameter is needed for solvability of the resulting RBF system. Both are not possible, so you cannot have accuracy and solvability at once. Generally, the author recommends making the parameter as large as possible without causing singularity, a tradeoff that is often optimized in modern Gaussian process implementations via L-BFGS-B. There is also a really nice table of kernel errors for various kernels, which can be directly plugged into the generic RBF interpolation error formula to get error bounds for most common RBF basis functions
@@ -1388,7 +1388,7 @@
 	year = {2017},
 	institution = {arXiv cs.LG},
 	url = {https://arxiv.org/abs/1707.06347},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, reinforcement learning, RL},
 }
 
 % Original paper on Shapley values (used to calculate SHAP scores). The idea is to interpret the importance of features to a model agonstically by making predictions with (and without) every combination of features available. Then, we compute the weighted average of each feature's importance by calculating how much each feature improves the model performance. This is an expensive but polynomial time procedure given fixed number of features, and can be used to plot the contributions. The software is in lundberg et al 2017 (github.com/shap/shap)
@@ -1430,7 +1430,7 @@
 	url = {https://www.nature.com/articles/s41586-021-03213-y},
 	issn = {0028-0836},
 	git = {http://github.com/b-shields/edbo},
-	keywords = {machine learning, ML, scientific machine learning, SciML, optimization},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, representation learning},
 }
 
 % A numerical algorithm for performing a rank-revealing rank-1 QR update (given an existing orthonormal (QR) matrix factorization and updating just one column of the basis Q)
@@ -1463,7 +1463,7 @@
 	doi = {10.1016/j.inffus.2021.11.011},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S1566253521002360},
 	issn = {1566-2535},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, transformers},
 }
 
 % Google DeepMind's AlphaGo was the first reinforcement learning agent to beat pro players (exceed the maximum human skill) in Go, which is a much more complex game than chess and required modeling an enumerable amount of game states and move possibilities. This required combining monte carlo tree search (MCTS) with neural networks to filter down to a reasonable number of potential states. This is credited as the first RL model to use MCTS, which is now a standard in RL
@@ -1480,7 +1480,7 @@
 	doi = {10.1038/nature16961},
 	url = {https://www.nature.com/articles/nature16961},
 	issn = {0028-0836},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, reinforcement learning, RL},
 }
 
 % Original publication on diffusion models. The paper introduces a framework inspired by non-equilibrium thermodynamics where a forward diffusion process gradually destroys structure in the data distribution, transforming it into a simple distribution like Gaussian noise. A reverse diffusion process is then learned to reconstruct the original data distribution, serving as a generative mode. Data can be generated by training the distribution through diffusion, then applying the reverse diffusion operator to sample (or "generate") new data. This is the basis for most image and video generation models
@@ -1496,7 +1496,7 @@
 	organization = {PMLR},
 	location = {Lille, France},
 	url = {https://proceedings.mlr.press/v37/sohl-dickstein15.html},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % The original dropout paper, this was standard practice in training deep neural networks, especially massive convolutional nets and RNNs for image and language processing for a long time, prior to the invention of transformers -- the idea being that you zero out the effects (and updates to) a small percentage of the nodes in each layer in each iteration, in order to (1) make training cheaper, (2) prevent overfitting since over reliance on any individual node(s) makes the predictions brittle, and (3) redistribute weights to earlier layers and avoid vanishing gradients
@@ -1509,7 +1509,7 @@
 	number = {1},
 	pages = {1929--1958},
 	publisher = {JMLR. org},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, overfitting},
 }
 
 % The FAIR principles of data management: Scientific data should be findable, accessible, interpretable, and reproducible
@@ -1541,7 +1541,7 @@
 	location = {Ottawa, ON, Canada},
 	doi = {10.1109/CISDA.2009.5356528},
 	url = {http://ieeexplore.ieee.org/document/5356528},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, benchmarking},
 }
 
 % The SHEPPACK numerical software package contains a variety of open source Fortran codes for computing Shepard's method interpolants in two, three, and four dimensions. There is also a linear Shepard's method interpolant that can be used for interpolation in arbitrary dimension.
@@ -1575,7 +1575,7 @@
 	location = {Chongqing, China},
 	doi = {10.1109/ITAIC54216.2022.9836761},
 	url = {https://ieeexplore.ieee.org/document/9836761/},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, reinforcement learning, RL},
 }
 
 % The landmark paper showing that transformers alone are capable of capturing all structure needed for language conversion, i.e., recurence relations and the sequential structure of time-series predictions can be encoded into which tokens to "pay attention to" during next word (or any next item) predictions. This paper is often cited as the inspiration for large language models (LLMs), which rely heavily on the transformer architecture, which became a standard after this
@@ -1587,7 +1587,7 @@
 	pages = {1--11},
 	organization = {Curran Associates, Inc.},
 	location = {Long Beach, California, USA},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, transformers},
 }
 
 % Google DeepMind's AlphaStar II was the first reinforcement learning agent that could beat pro players in video games, which is a signficantly more complex environment than a board game environment with a finite state and set of possible actions
@@ -1605,7 +1605,7 @@
 	url = {https://doi.org/10.1038/s41586-019-1724-z},
 	isbn = {1476-4687},
 	issn = {0028-0836},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, reinforcement learning, RL},
 }
 
 % SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -1673,7 +1673,7 @@
 	doi = {10.4208/cicp.OA-2020-0185},
 	url = {https://global-sci.com/article/79736/machine-learning-and-computational-mathematics},
 	issn = {1991-7120},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks},
 }
 
 % An experiment showing that when training labels are replaced with random values (pure noise), most neural network classifier methods can still be trained to zero training error. (I.e., obviously overfitting). However, regularization techniques don't prevent them from doing so. The authors conclude that regularization isn't doing what we think it's doing and may not actually be related to generalization error
@@ -1683,7 +1683,7 @@
 	year = {2017},
 	booktitle = {International Conference on Learning Representations},
 	url = {https://openreview.net/forum?id=Sy8gdB9xx},
-	keywords = {machine learning, ML, scientific machine learning, SciML},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, overfitting},
 }
 
 % The original publication for L-BFGS-B software, which solves bound-constrained optimization problems using a limited-memory BFGS. This is the standard implementation that is used in all L-BFGS-B codes to date, such as scipy, all machine learning codes, and most engineering codes and nonlinear systems solvers. The code is open source high-quality numerical software, written in old-style Fortran
@@ -1702,3 +1702,4 @@
 	issn = {0098-3500},
 	keywords = {optimization, constrained optimization, convex optimization, computational linear algebra},
 }
+
