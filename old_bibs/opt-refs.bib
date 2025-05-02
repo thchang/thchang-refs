@@ -106,7 +106,7 @@
 	keywords = {optimization, blackbox optimization, simulation optimization, derivative-free optimization, DFO, stochastic optimization, convex optimization},
 }
 
-% The MOSEK solver is an open source numerical optimization software solver that is used in older versions of scipy.optimize to solve linear programming problems via the interior point method
+% The MOSEK solver is a numerical optimization software solver that is used in older versions of scipy.optimize to solve linear programming problems via the interior point method
 @inproceedings{andersen2000mosek,
 	author = {Andersen, Erling D and Andersen, Knud D},
 	title = {The {MOSEK} interior point optimizer for linear programming: an implementation of the homogeneous algorithm},
@@ -147,6 +147,20 @@
 	url = {https://link.springer.com/10.1007/s11081-024-09952-x},
 	issn = {1389-4420},
 	keywords = {optimization, blackbox optimization, simulation optimization, derivative-free optimization, DFO, constrained optimization, stochastic optimization, benchmarking},
+}
+
+% Introducing the open source PDLP solver (now part of Google OR tools) for solving large scale linear programming problems, where the constraint matrices would never fit in memory using first-order (matrix free) descent methods. The algorithm is based on PDHG, which is an improvement to ADMM specialized for solving LPs. The main contributions of this solver and its predecessor PDHG are adaptive step-sizes and preconditioning to prevent oscillatory motions plus adpaptive an adaptive restart procedures and presolve to prevent stalling out. This solver is not as fast simplex or interior point methods on problems that do fit in memory, but is extremely scalable and robust on larger problems. Obviously, it cannot give a basic solution since first-order methods are always approximate (with order 10^-8 accuracy). Open source code is available through Google OR tools: github.com/google/or-tools
+@inproceedings{applegate2021practical,
+	author = {Applegate, David and Diaz, Mateo and Hinder, Oliver and Lu, Haihao and Lubin, Miles and O\textquotesingle Donoghue, Brendan and Schudy, Warren},
+	editor = {Ranzato, M. and Beygelzimer, A. and Dauphin, Y. and Liang, P.S. and Vaughan, J. Wortman},
+	title = {Practical Large-Scale Linear Programming using Primal-Dual Hybrid Gradient},
+	year = {2021},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {34},
+	pages = {20243--20257},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2021/file/a8fbbd3b11424ce032ba813493d95ad7-Paper.pdf},
+	keywords = {optimization, linear programming, LP, convex optimization, constrained optimization},
 }
 
 % Applying grey-box bayesian optimization tutorial: using Bayesian optimization on structured problems, where a blackbox function is composed with an algebraic function, just like with ParMOO and Jeff's GOOMBAH paper. Tutorial performed using BoTorch
@@ -704,7 +718,7 @@
 	issn = {0098-3500},
 	git = {https://github.com/vtopt/DelaunaySparse},
 	web = {https://vtopt.github.io/DelaunaySparse},
-	keywords = {optimization, linear programming, LP},
+	keywords = {optimization, linear programming, LP, convex optimization, constrained optimization},
 }
 
 % Paper on the challenges of integrating VTMOP into the libEnsemble parallel computing Python software library at Argonne
@@ -995,7 +1009,7 @@
 	keywords = {optimization, blackbox optimization, simulation optimization, derivative-free optimization, DFO, surrogate modeling},
 }
 
-% ParEGO latest code and update introducing algorithmic updates, improved software quality, and (I think) some parallel computing -- ParEGO is the first open source numerical multiobjective bayesian optimization software package and written in C++. It is basically EGO (the original Bayesian optimization software using expected improvment acquisition) plus augmented Lagrangian scalarization
+% ParEGO latest code and update introducing algorithmic updates, improved software quality, and (I think) some parallel computing -- ParEGO is the first open source numerical multiobjective bayesian optimization software package and written in C++. It is basically EGO (the original Bayesian optimization software using expected improvment acquisition) plus augmented Lagrangian scalarization. Available here: github.com/CristinaCristescu/ParEGO_Eigen
 @inproceedings{cristescu2015surrogatebased,
 	author = {Cristescu, Cristina and Knowles, Joshua},
 	title = {Surrogate-based multiobjective optimization: {ParEGO} update and test},

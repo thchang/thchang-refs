@@ -7,6 +7,7 @@
 	institution = {Sandia National Laboratory},
 	address = {Albuquerque, NM, USA},
 	url = {https://dakota.sandia.gov/sites/default/files/docs/6.16.0/Users-6.16.0.pdf},
+	keywords = {software, parallel programming, C++},
 }
 
 % Differentiabl convex optimization layers are introduced pytorch and tensorflow via an update to cvxpy, introducing differentiation through the solution to a convex optimization problem modeled in cvxpy. The open source numerical optimization software is available at github.com/cvxgrp/cvxpylayers in Python
@@ -19,6 +20,7 @@
 	volume = {32},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Optuna open source software for fully distributed hyperparameter optimization. Maintained by a private startup in Japan (named Optuna). This software provides high-quality distributed wrappers for many neural architecture search and generic optimization algorithms.
@@ -33,6 +35,7 @@
 	location = {Anchorage AK USA},
 	doi = {10.1145/3292500.3330701},
 	url = {https://dl.acm.org/doi/10.1145/3292500.3330701},
+	keywords = {software, open source, OSS, Python, parallel programming},
 }
 
 % The official AMD Vivado docs -- Vivado is Xilinx (acquired by AMD)'s analytic placer, which is currently considered the state-of-the-art and only real option for placement and routing in industrial FPGA pnr applications
@@ -44,6 +47,7 @@
 	publisher = {AMD},
 	url = {https://docs.amd.com/r/2024.1-English/ug893-vivado-ide},
 	note = {Last accessed: Feb 2025},
+	keywords = {software, Tcl},
 }
 
 % A Fortran 90 implementation of quasi-Newton stochastic optimization algorithms. This open source numerical software solves both determinisitc and stochastic blackbox optimization problems via a quasi-Newton trust-region method. It is a bit wasteful in terms of the number of function evaluations per iteration as it performs a fully Latin hypercube sampling of the trust region in each iteration, and does not explicitly re-use previous iterates to reduce iteration costs, like some of the more advanced model based methods. Still, it is extremely robust and a good choice in stochastic situations. Also includes a good Fortran implementation of Latin hypercube sampling and efficient sorting algorithms
@@ -60,9 +64,10 @@
 	doi = {10.1145/3374219},
 	url = {https://dl.acm.org/doi/10.1145/3374219},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Fortran},
 }
 
-% The MOSEK solver is an open source numerical optimization software solver that is used in older versions of scipy.optimize to solve linear programming problems via the interior point method
+% The MOSEK solver is a numerical optimization software solver that is used in older versions of scipy.optimize to solve linear programming problems via the interior point method
 @inproceedings{andersen2000mosek,
 	author = {Andersen, Erling D and Andersen, Knud D},
 	title = {The {MOSEK} interior point optimizer for linear programming: an implementation of the homogeneous algorithm},
@@ -71,6 +76,7 @@
 	pages = {197--232},
 	organization = {Springer},
 	url = {https://link.springer.com/chapter/10.1007/978-1-4757-3216-0_8},
+	keywords = {software, Python, Matlab, Go, Julia},
 }
 
 % The user guide for the reference implementation of LAPACK: the original open source numerical software for all common dense linear algebra operations.
@@ -81,6 +87,7 @@
 	edition = {3},
 	publisher = {SIAM},
 	address = {Philidelphia, PA, USA},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % The SOLAR monte carlo simulation software suite contains a collection of ten derivative-free / blackbox / simulation optimization problem instances for bench-marking blackbox optimization solvers. The problems can be configured with one or two objectives, constrained or unconstrained (including hidden constraints), discrete or continuous, single or multi-fidelity, and with varying levels of stochasticity. The numerical simulation code models a solar power plant's yield as a function of various design factors. The open source C++ software with Python bindings is available at: github.com/bbopt/solar
@@ -94,6 +101,21 @@
 	doi = {10.1007/s11081-024-09952-x},
 	url = {https://link.springer.com/10.1007/s11081-024-09952-x},
 	issn = {1389-4420},
+	keywords = {software, open source, OSS, Python, C++},
+}
+
+% Introducing the open source PDLP solver (now part of Google OR tools) for solving large scale linear programming problems, where the constraint matrices would never fit in memory using first-order (matrix free) descent methods. The algorithm is based on PDHG, which is an improvement to ADMM specialized for solving LPs. The main contributions of this solver and its predecessor PDHG are adaptive step-sizes and preconditioning to prevent oscillatory motions plus adpaptive an adaptive restart procedures and presolve to prevent stalling out. This solver is not as fast simplex or interior point methods on problems that do fit in memory, but is extremely scalable and robust on larger problems. Obviously, it cannot give a basic solution since first-order methods are always approximate (with order 10^-8 accuracy). Open source code is available through Google OR tools: github.com/google/or-tools
+@inproceedings{applegate2021practical,
+	author = {Applegate, David and Diaz, Mateo and Hinder, Oliver and Lu, Haihao and Lubin, Miles and O\textquotesingle Donoghue, Brendan and Schudy, Warren},
+	editor = {Ranzato, M. and Beygelzimer, A. and Dauphin, Y. and Liang, P.S. and Vaughan, J. Wortman},
+	title = {Practical Large-Scale Linear Programming using Primal-Dual Hybrid Gradient},
+	year = {2021},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {34},
+	pages = {20243--20257},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2021/file/a8fbbd3b11424ce032ba813493d95ad7-Paper.pdf},
+	keywords = {software, open source, OSS, C, Python, Julia},
 }
 
 % Introducing the MADS algorithm of variable neighborhood search plus a generalized pattern search adapted to a mesh. Also includes the STYRENE benchmark problem and application for derivative-free blackbox and simulation optimization algorithms. The objective is to maximize the net present value subject to several process and economic constraints. The open source C++ numerical simulation code that defines the problem is available at github.com/bbopt/styrene
@@ -110,6 +132,7 @@
 	doi = {10.1007/s10898-007-9234-1},
 	url = {http://link.springer.com/10.1007/s10898-007-9234-1},
 	issn = {0925-5001},
+	keywords = {software, open source, OSS, C++},
 }
 
 % Official StoMADS reference: StoMADS is the stochastic version of the MADS (generalized pattern search) optimization algorithm and software. The open source StoMADS numerical software is available at github.com/bbopt/StoMADS. It is implemented in MATLAB. The main contribution of StoMADS is to calculate how many resamples and shrinking step sizes are needed to guarantee convergence of the MADS algorithm on problems where the blackbox function / simulation evaluation is stochastic
@@ -126,6 +149,7 @@
 	doi = {10.1007/s10589-020-00249-0},
 	url = {https://doi.org/10.1007/s10589-020-00249-0},
 	issn = {0926-6003},
+	keywords = {software, open source, OSS, Matlab},
 }
 
 % NOMAD v4 -- open source numerical software package (in C++) for blackbox and derivative-free optimization via the MADS algorithms. After publication, they have added support for multiobjective optimization, mixed variables, nonlinear constraints, etc. Great example of high-impact open source numerical and optimization software. Improvements over NOMAD v3 include improvements to fundamental algorithms, coding practices, release process, and general project structure to support continuous research and development into the future
@@ -143,6 +167,7 @@
 	doi = {10.1145/3544489},
 	url = {https://dl.acm.org/doi/10.1145/3544489},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, C++, Python, parallel programming},
 }
 
 % BoTorch: Modular bayesian optimization framework and numerical software package. Uses Ax for deploying A/B testing applications. Uses pytorch for autograd, and uses monte carlo sampling and kernel reparameterization tricks in order to efficiently evaluate composite objective and acquisition functions and non gaussian kernels. Great example of high-impact open source numerical software and optimization software
@@ -156,6 +181,7 @@
 	pages = {21524--21538},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf},
+	keywords = {software, open source, OSS, Python, parallel programming},
 }
 
 % Prasanna and Stefan's original DeepHyper publication -- DeepHyper is an open source extreme-scale distributed optimization package, designed to scale to Argonne's exascale HPCs. Able to train ensembles of neural networks with diverse architectures at scale, with both single and multiobjective hyperparameter tuning support
@@ -170,6 +196,7 @@
 	location = {Bengaluru, India},
 	doi = {10.1109/hipc.2018.00014},
 	url = {https://ieeexplore.ieee.org/document/8638041},
+	keywords = {software, open source, OSS, Python, parallel programming, MPI},
 }
 
 % The PETSc user's guide. I haven't used it but PETSc is a widely-used C++ numerical software library and linear algebra / iterative algorithms framework developed at Argonne and used for implementing many well-known iterative solvers, especially in the area of CFD. This is a great example of high-impact open source numerical software and best practices in open source scientific software. Now ships together with TAO, a similar simulation optimization software package
@@ -181,6 +208,7 @@
 	institution = {Argonne National Laboratory},
 	address = {Lemont, IL, USA},
 	url = {https://petsc.org/release/docs/manual/manual.pdf},
+	keywords = {software, open source, OSS, C, C++},
 }
 
 % Official PROX-QP paper -- the best open source QP solver according to several benchmarks. Open source C++ code is availabe through the proxsuite github: https://github.com/Simple-Robotics/proxsuite and a Python interface is available through CvxPy
@@ -194,6 +222,7 @@
 	location = {New York, United States},
 	doi = {10.15607/rss.2022.xviii.040},
 	url = {https://hal.inria.fr/hal-03683733},
+	keywords = {software, open source, OSS, Python, C++},
 }
 
 % JAHS-Bench-201: The latest test suite of benchmark problems for neural architecture search. The baseline is random search, but you can solve the problems in their parameterized search space with any optimization algorithm, record the number of true function / simulation evaluations (i.e., networks trained) and submit this to the JAHS-Bench leaderboards on GitHub. This is a good representative test problem for NAS. Both single and multiobjective benchmarks are provided, also most problems can be run in both single or multifidelity evaluation modes
@@ -207,6 +236,7 @@
 	pages = {38788--38802},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/fd78f2f65881c1c7ce47e26b040cf48f-Paper-Datasets_and_Benchmarks.pdf},
+	keywords = {software, Python},
 }
 
 % An open source numerical software library for solving multiobjective optimization problems in java in real-time via heuristics. The authors combine jMetal with data streaming via Apache Spark to solve distributed multiobjective optimization problems with streaming data in real-time
@@ -222,6 +252,7 @@
 	doi = {10.1016/j.asoc.2017.05.004},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S1568494617302557},
 	issn = {1568-4946},
+	keywords = {software, open source, OSS, Java, parallel programming},
 }
 
 % The Quickhull algorithm and corresponding numerical software package is one of the best algorithms for computing convex hulls in high dimensions. Since Delaunay triangulations can be obtained by lifting to d+1 dimensional parabola and computing its lower convex hull, Quickhull can also be used to obtain Delaunay triangulations and convex hulls. This is the standard and baseline for high-dimensional Delaunay triangulation, although it seldom scales past 6-7 dimensions before a memory failure occurs, unless the data set is extremely small (exponential time and space complexity in dimension). However, for problems that Quickhull can solve, it's often the fastest and most robust solution. This is also the official reference for the authors' corresponding open source C++ software, which is the default method for Delaunay triangulation and piecewise linear interpolation in scipy.spatial and scipy.interpolate, respectively
@@ -238,6 +269,7 @@
 	doi = {10.1145/235815.235821},
 	url = {https://dl.acm.org/doi/10.1145/235815.235821},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, C, C++},
 }
 
 % The FAIR principles for open source scientific software, data, source code, and experiments should by findable (via DOIs or other), accessible (clear purpose and metadata), interoperable (should use standard interfaces, data formats, and schemas), and reusable (well documented, understandable, and not overly specialized to an unnecessarilly niche use-case). These are good principles for any open source software development practices
@@ -254,6 +286,7 @@
 	doi = {10.1038/s41597-022-01710-x},
 	url = {https://www.nature.com/articles/s41597-022-01710-x},
 	issn = {2052-4463},
+	keywords = {software, open source, OSS},
 }
 
 % jMetalPy -- a Python framework for solving MOOs with EAs -- this open source numerical software is a Python implementation of jMetal, with some improvements to code quality and new features for better open source software development and parallelism
@@ -269,6 +302,7 @@
 	doi = {10.1016/j.swevo.2019.100598},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S2210650219301397},
 	issn = {2210-6502},
+	keywords = {software, open source, OSS, Python, Java, parallel programming},
 }
 
 % Original VPR paper discussing their simulated-annealing placement and its cost function. As far as I can tell, this placement approach has been improved but not fundamentally changed in the years since original publication. VPR is now shipped as part of the open source software package VTR: at github.com/verilog-to-routing/vtr-verilog-to-routing
@@ -282,6 +316,7 @@
 	organization = {Springer Berlin Heidelberg},
 	location = {Berlin, Heidelberg},
 	isbn = {978-3-540-69557-8},
+	keywords = {software, open source, OSS, C++, Verilog},
 }
 
 % NASA's FUN3D CFD solver. This is one of the oldest and standard numerical softwares for solving CFD problems. Written in mostly Fortran 90. Uses a form of the problem that yields the adjoints, which can be used to optimize structures in fewer steps and perform sensitivity analyses. The kernel uses an iterative solver to solve a massive block-sparse linear system (I think derived from the weak form). Some a priori multiobjective optimization solvers are described in Section 9.9
@@ -293,6 +328,7 @@
 	institution = {NASA Langley Research Center},
 	address = {Hampton, VA, USA},
 	url = {https://fun3d.larc.nasa.gov/papers/FUN3D_Manual-13.6.pdf},
+	keywords = {software, Fortran, parallel programming, CUDA, MPI},
 }
 
 % pagmo/pygmo - Parallel frameworks for solving multiobjective optimization problems (MOO) in Java and Python. Great example of open source numerical software, published in JOSS
@@ -309,6 +345,7 @@
 	doi = {10.21105/joss.02338},
 	url = {https://joss.theoj.org/papers/10.21105/joss.02338},
 	issn = {2475-9066},
+	keywords = {software, open source, OSS, Python, parallel programming},
 }
 
 % The ScaLAPACK user's guide: A highly parallel and scalable open source implementation of the LAPACK software, for solving massive scale numerical linear algebra systems on distributed systems
@@ -318,6 +355,7 @@
 	year = {1997},
 	volume = {4},
 	publisher = {SIAM},
+	keywords = {software, open source, OSS, Fortran, parallel programming, MPI},
 }
 
 % pymoo is an open source software package implementing NSGA-II, NSGA-III, and many other multiobjective evolutionary algorithms (MOEAs), plus extensions for handling things such as categorical variables. This is a well-maintained and well-documented open-source numerical software package. It is maintained by the lab of the original NSGA-II author, and therefore could be considered the official NSGA-II implementation. all source code in Python
@@ -333,6 +371,7 @@
 	url = {https://ieeexplore.ieee.org/document/9078759},
 	issn = {2169-3536},
 	git = {http://github.com/anyoptimization/pymoo},
+	keywords = {software, open source, OSS, Python},
 }
 
 % The open source numerical software package (in Python) pySMT. This is a surrogate modeling and Bayesian optimization toolbox for solving multidisciplinary engineering design optimization (MDO) problems, while utilizing derivatives and providing numerical stability analysis for each surrogate model class.
@@ -348,6 +387,7 @@
 	doi = {10.1016/j.advengsoft.2019.03.005},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0965997818309360},
 	issn = {0965-9978},
+	keywords = {software, open source, OSS, Python},
 }
 
 % The recommended citation for the jax software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups
@@ -358,6 +398,7 @@
 	number = {0.3.13},
 	url = {http://github.com/google/jax},
 	note = {Last accessed: Jul 2024},
+	keywords = {software, open source, OSS, Python, CUDA},
 }
 
 % The original TOMS open source numerical software code implementing Sobol sequence (low discrepancy sequence) generation in Fortran 90. Apparently there is a bug or limitation to this code, fixed by Joe et al. 2003 in their TOMS Remark on 659, and subsequent publication of a new generator used in Scipy
@@ -374,6 +415,7 @@
 	doi = {10.1145/42288.214372},
 	url = {https://doi.org/10.1145/42288.214372},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % The largest repository of open source AI, machine learning, and control benchmark problems, maintained by OpenAI. This was the primary benchmark problem environment for all reinforcement learning researchers not affiliated with another company with their own private environments (such as Meta and Google). Still available at github.com/openai/gym
@@ -382,6 +424,7 @@
 	title = {OpenAI Gym},
 	year = {2016},
 	institution = {arXiv:1606.01540},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Official IOZone reference -- this benchmarking software can be used to measure the read, write, strided-read, strided-write, first read, first write, etc throughputs on a given system. In the VarSys project, we used this to measure IO performance (which we then used to calculate performance variability) for various system configurations on our Moana cluster.
@@ -392,6 +435,7 @@
 	month = {January},
 	url = {www.iozone.org},
 	note = {Last accessed: Nov 2016},
+	keywords = {software, benchmarking},
 }
 
 % A really nice suite of quadratic programming (QP) benchmark problems
@@ -404,6 +448,7 @@
 	publisher = {GitHub},
 	git = {https://github.com/qpsolvers/qpbenchmark},
 	note = {Last accessed: Apr 29, 2025},
+	keywords = {software, open source, OSS, Python, benchmarking},
 }
 
 % The DelaunaySparse software, demonstrates how to calculate simplices from a Delauay triangulation in very high dimensions scalably (and in parallel) using a highly customized simplex method like solver. The resulting Fortran numerical software is fully open source with a C and Python interface
@@ -425,6 +470,7 @@
 	issn = {0098-3500},
 	git = {https://github.com/vtopt/DelaunaySparse},
 	web = {https://vtopt.github.io/DelaunaySparse},
+	keywords = {software, open source, OSS, Fortran, Python, C, parallel programming, OpenMP},
 }
 
 % My PhD thesis, including multiobjective optimization techniques, algorithm, performance analysis, and software review; description of VTMOP, running parallel simulations, integrating with libE. Also scientific machine learning via Delaunay interpolation and algorithms and proofs for doing so. Several applications related to HPC performance modeling and autotuning.
@@ -434,6 +480,7 @@
 	year = {2020},
 	school = {Virginia Tech, Dept. of Computer Science},
 	url = {https://vtechworks.lib.vt.edu/handle/10919/98915},
+	keywords = {software, parallel programming, Fortran, Python, OpenMP, MPI},
 }
 
 % Publication of my second open source numerical software package: VTMOP a Fortran software for solving blackbox multiobjective optimization problems. Uses surrogate modeling (RSM), with an adaptive weighting scheme, within a trust region framework. The motivating application is a particle accelerator tuning problem at SLAC
@@ -451,6 +498,7 @@
 	url = {https://dl.acm.org/doi/10.1145/3529258},
 	issn = {0098-3500},
 	git = {https://github.com/Libensemble/libe-community-examples/tree/main/vtmop},
+	keywords = {software, open source, OSS, Fortran, OpenMP, MPI},
 }
 
 % The ParMOO JOSS article -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
@@ -467,6 +515,7 @@
 	doi = {10.21105/joss.04468},
 	url = {https://joss.theoj.org/papers/10.21105/joss.04468},
 	issn = {2475-9066},
+	keywords = {software, open source, OSS, Python, parallel programming},
 }
 
 % The ParMOO docs -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
@@ -478,6 +527,7 @@
 	institution = {Argonne National Laboratory},
 	address = {Lemont, IL, USA},
 	url = {https://parmoo.readthedocs.io/en/latest},
+	keywords = {software, open source, OSS, Python, parallel programming, MPI},
 }
 
 % The ParMOO IJOC article describing the design of the ParMOO software, motivation, and providing examples of how ParMOO can be used to solve common scientific problems more efficiently with low effort -- ParMOO is my open source numerical software package and library ParMOO, written in Python, which can be used for implementing custom solvers for multiobjective simulation optimization problems, while supporting mixed variables, non linear constraints, and diverse and custom surrogte models, and composite structures where some components of the problem are blackbox, but the rest are algebraic. In later releases, ParMOO also supports interactive visualization of results via Plotly + Dash, parallel and distributed function evaluations via libEnsemble, and automatic gradient calculations and just-in-time compilation via jax
@@ -491,6 +541,7 @@
 	doi = {10.1287/ijoc.2023.0250},
 	url = {https://pubsonline.informs.org/doi/10.1287/ijoc.2023.0250},
 	issn = {1091-9856},
+	keywords = {software, open source, OSS, Python, parallel programming},
 }
 
 % This is the IJOC ParMOO repository DOI -- this is an archive of the software experiments for obtaining our test problems and reproducing our experimental results on those test problems with customized ParMOO solvers.
@@ -506,9 +557,10 @@
 	issn = {1091-9856},
 	git = {https://github.com/INFORMSJoC/2023.0250},
 	note = {Last accessed: May 1, 2025},
+	keywords = {software, open source, OSS, Python, parallel programming},
 }
 
-% The funcX and updated Globus publication on the techniques and benefits of using a function-as-a-service (FaaS) framework to perform scientific experimentation at Argonne and other labs. funcX and Globus are scientific software products for performing distributed function evaluations and parallel computing that started at Argonne, and spun off into independent companies
+% The funcX from Globus computing publication on the techniques and benefits of using a function-as-a-service (FaaS) framework to perform scientific experimentation at Argonne and other labs. funcX and Globus are scientific software products for performing distributed function evaluations and parallel computing that started at Argonne and UChicago, and used at many other labs and industries. Open source Python implementation is available for download at: github.com/globus/globus-compute
 @inproceedings{chard2020funcx,
 	author = {Chard, Ryan and Babuji, Yadu and Li, Zhuozhao and Skluzacek, Tyler and Woodard, Anna and Blaiszik, Ben and Foster, Ian and Chard, Kyle},
 	title = {{funcX}: A federated function serving fabric for science},
@@ -520,6 +572,7 @@
 	location = {Stockholm, Sweden},
 	doi = {10.1145/3369583.3392683},
 	url = {https://dl.acm.org/doi/10.1145/3369583.3392683},
+	keywords = {software, open source, OSS, Python, parallel programming, Kubernetes, Slurm, PBS},
 }
 
 % The publication for the XGBoost numerical software. XGBoost can be used to efficiently compute optimized gradient boosted decision trees on massive datasets via a fully-distributed algorithm that can be configured to run on Hadoop, SGE, and MPI. It can also be run on NVIDIA GPUs using CUDA. The software is fully open-source and written in highly optimized C++, though everyone uses it through its Python interface. The download is available at github.com/dmlc/xgboost. Most data science competition winners use XGBoost for tabular data
@@ -534,6 +587,7 @@
 	location = {San Francisco, California, USA},
 	doi = {10.1145/2939672.2939785},
 	url = {https://dl.acm.org/doi/10.1145/2939672.2939785},
+	keywords = {software, open source, OSS, Python, C++, CUDA, Kubernetes, Spark},
 }
 
 % The Keras docs -- great and highly impactful open source Python software, needs no introduction. A simplified interface for quickly building neural networks and other deep learning models with various backends frameworks such as Tensorflow, jax, and Pytorch.
@@ -543,6 +597,7 @@
 	year = {2015},
 	howpublished = {\url{https://keras.io}},
 	note = {Last accessed: Nov 2023},
+	keywords = {software, open source, OSS, Python},
 }
 
 % pyOED an open source Python numerical software library for performing optimal experimental design, e.g, for sensor placement at Argonne
@@ -561,6 +616,7 @@
 	doi = {10.1145/3653071},
 	url = {https://doi.org/10.1145/3653071},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Python},
 }
 
 % PyMOSO: an open source Python numerical software library for solving multiobjective simulation optimization problems with integer and discrete variables via direct search / pattern search like techniques
@@ -577,6 +633,7 @@
 	doi = {10.1287/ijoc.2019.0902},
 	url = {http://pubsonline.informs.org/doi/10.1287/ijoc.2019.0902},
 	issn = {1091-9856},
+	keywords = {software, open source, OSS, Python},
 }
 
 % RBFOpt an open source library for solving single-objective blackbox optimization
@@ -593,9 +650,10 @@
 	doi = {10.1007/s12532-018-0144-7},
 	url = {http://link.springer.com/10.1007/s12532-018-0144-7},
 	issn = {1867-2949},
+	keywords = {software, open source, OSS},
 }
 
-% ParEGO latest code and update introducing algorithmic updates, improved software quality, and (I think) some parallel computing -- ParEGO is the first open source numerical multiobjective bayesian optimization software package and written in C++. It is basically EGO (the original Bayesian optimization software using expected improvment acquisition) plus augmented Lagrangian scalarization
+% ParEGO latest code and update introducing algorithmic updates, improved software quality, and (I think) some parallel computing -- ParEGO is the first open source numerical multiobjective bayesian optimization software package and written in C++. It is basically EGO (the original Bayesian optimization software using expected improvment acquisition) plus augmented Lagrangian scalarization. Available here: github.com/CristinaCristescu/ParEGO_Eigen
 @inproceedings{cristescu2015surrogatebased,
 	author = {Cristescu, Cristina and Knowles, Joshua},
 	title = {Surrogate-based multiobjective optimization: {ParEGO} update and test},
@@ -604,6 +662,7 @@
 	volume = {770},
 	url = {https://www.cs.bham.ac.uk/~jdk/UKCI-2015.pdf},
 	git = {https://github.com/CristinaCristescu/ParEGO_Eigen},
+	keywords = {software, open source, OSS, C++, parallel programming},
 }
 
 % The exascale computing project press release
@@ -614,20 +673,7 @@
 	publisher = {{U.S.\ Department of Energy, Argonne National Laboratory}},
 	url = {https://www.anl.gov/article/us-department-of-energy-and-intel-to-deliver-first-exascale-supercomputer},
 	note = {Last accessed: April 28, 2020},
-}
-
-% The DTLZ test problems are the standard test problems used in all multiobjective evolutionary optimization papers. They are algebraic test problems that can scale to as many objectives and variables as one desires. Each problem also has a pathological property that makes it extremely difficult or degenerate for multiobjective optimization algorithms. This maeks the suite as a whole extremely convenient for testing, scaling, and evaluating results. However, several of the problems are so difficult that no solvers can reliably solve them. Additionally, all the problems have the property that the last "n" variables are essentially unused, with their optimum being 0.5 and not changing as we move across the Pareto front, which could be unrealistic for certain problems
-@inproceedings{deb2002scalable,
-	author = {Deb, Kalyanmoy and Thiele, Lothar and Laumanns, Marco and Zitzler, Eckart},
-	title = {Scalable multi-objective optimization test problems},
-	year = {2002},
-	booktitle = {Proc. 2002 IEEE Congress on Evolutionary Computation (CEC '02)},
-	volume = {1},
-	pages = {825--830},
-	organization = {IEEE},
-	location = {Honolulu, HI, USA},
-	doi = {10.1109/CEC.2002.1007032},
-	url = {http://ieeexplore.ieee.org/document/1007032},
+	keywords = {software, parallel programming, MPI, CUDA},
 }
 
 % CVXPY is an open source Python optimization and modeling language for solving convex optimization problems in a disciplined way (meaning that we ensure convexity through hard rules on the problem definition). From the lab of Stephen Boyd
@@ -640,6 +686,7 @@
 	number = {83},
 	pages = {1--5},
 	url = {http://jmlr.org/papers/v17/15-408.html},
+	keywords = {software, open source, OSS, Python},
 }
 
 % ECOS is an open source numerical software for solving second-order cone optimization problems, from the lab of Stephen Boyd. In my experience, this software is the best tool from Boyd's lab and the most robust to degeneracy
@@ -654,6 +701,24 @@
 	location = {Z{\"u}rich, Switzerland},
 	doi = {10.23919/ECC.2013.6669541},
 	url = {https://ieeexplore.ieee.org/document/6669541},
+	keywords = {software, open source, OSS, C},
+}
+
+% Summary article on the history of the LINPACK of benchmark (the standard benchmark for HPC performance tuning and evaluation), which defines the HPC Top 500 list
+@article{dongarra2003linpack,
+	author = {Dongarra, Jack J. and Luszczek, Piotr and Petitet, Antoine},
+	title = {The {LINPACK} benchmark: past, present, and future},
+	year = {2003},
+	month = {8},
+	journal = {Concurrency and Computation: Practice and Experience},
+	volume = {15},
+	number = {9},
+	pages = {803--820},
+	publisher = {Wiley},
+	doi = {10.1002/cpe.728},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/cpe.728},
+	issn = {1532-0626},
+	keywords = {software, Fortran, parallel programming, benchmarking},
 }
 
 % Achieving performance portability of parallel codes in the exascale computing project (ECP) across various GPU-based architectures, which is challenging since different GPU vendors use different GPU programming libraries (e.g., CUDA for NVIDIA vs HIPP for AMD) -- high-quality re-usable open source software and software hardware codesign are cited as important issues from the software perspective, as well as performance portability (i.e., port between HIPP, CUDA, OpenMP, and SYCL/DPC++ for on-node parallelism)
@@ -670,6 +735,7 @@
 	doi = {10.1109/MCSE.2021.3098231},
 	url = {https://ieeexplore.ieee.org/document/9495114},
 	issn = {1521-9615},
+	keywords = {software, CUDA, MPI, OpenMP, parallel programming},
 }
 
 % The JuMP modeling language in Julia -- a modeling language for modeling and solving linear and nonlinear programming (optimization) problems in Julia. The implementation is an open source numerical software
@@ -686,6 +752,7 @@
 	doi = {10.1137/15M1020575},
 	url = {https://epubs.siam.org/doi/10.1137/15M1020575},
 	issn = {0036-1445},
+	keywords = {software, open source, OSS, julia},
 }
 
 % jMetal is an open source numerical software library implementing multiobjective optimization solvers in Java. Last I checked, most of the solvers were heuristic methods such as evolutionary algorithms and/or simulated annealing. This is widely used in some fields of engineering
@@ -702,6 +769,7 @@
 	doi = {10.1016/j.advengsoft.2011.05.014},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0965997811001219},
 	issn = {0965-9978},
+	keywords = {software, open source, OSS, Java},
 }
 
 % SimOpt is a really nice suite of real-world and real-world inspired simulation optimization problems. They are mostly stochastic. This is the standard benchmark suite in the operations research and business operations community. In order to publish work in those venues, one needs to perform well on these problems. The paper details how SimOpt has been refactored to provide new problems, features, reproducability, and better interfaces in the latest patch. The open source Python software is available at github.com/simopt-admin/simopt
@@ -719,6 +787,7 @@
 	doi = {10.1287/ijoc.2023.1273},
 	url = {https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1273},
 	issn = {1526-5528},
+	keywords = {software, open source, OSS, Python},
 }
 
 % HPOBench is another suite of automl (hyperparameter tuning) benchmark problems from the automl research group. The problems can be configured to be either single or multi-fidelity. They can either be run tabular (meaning the raw data is accessed in a table and only configurations in the dataset can be evaluated) or with a regression model (XGBoost). The open source software is available for download in Python at: github.com/automl/HPOBench
@@ -728,6 +797,7 @@
 	year = {2021},
 	booktitle = {Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
 	url = {https://openreview.net/forum?id=1k4rJYEwda-},
+	keywords = {software, open source, OSS, Python},
 }
 
 % The MDML open source software is a wrapper around Apache Kafka with protocols for fast data streaming and logging and dashboard generation. This framework was developed for usage at the material engineering research facility (MERF) at Argonne in order to facilitate the creation of a "smart lab" where MDML is the protocol for sending experiment requests to various equipment in the lab and logging results -- in an old (out-of-date branch) of ParMOO, this was a valid backend for launching simulation / experiment requests
@@ -743,6 +813,7 @@
 	doi = {10.1109/WF-IoT48130.2020.9221078},
 	url = {https://ieeexplore.ieee.org/document/9221078},
 	git = {GitHub: \url{https://github.com/anl-mdml/MDML_Client}},
+	keywords = {software, open source, OSS, Python, Kafka},
 }
 
 % Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
@@ -757,6 +828,7 @@
 	location = {Orlando, FL, USA},
 	doi = {10.1109/WSC48552.2020.9383916},
 	url = {https://ieeexplore.ieee.org/document/9383916},
+	keywords = {software, Python},
 }
 
 % Fletcher's paper on how to handle degeneracy in active set methods for solving quadratic programming problems. This technique would become the basis for the BQPD software package, which is a recently open source (post mortem) numerical software for solving (degenerate) quadratic programs via active set methods
@@ -773,22 +845,7 @@
 	doi = {10.1007/BF02023102},
 	url = {http://link.springer.com/10.1007/BF02023102},
 	issn = {0254-5330},
-}
-
-% Fletcher's paper on an efficient Hessian update method which can be used in an active set method for solving quadratic programming optimization problems
-@article{fletcher2000stable,
-	author = {Fletcher, Roger},
-	title = {Stable reduced Hessian updates for indefinite quadratic programming},
-	year = {2000},
-	month = {4},
-	journal = {Mathematical programming},
-	volume = {87},
-	number = {2},
-	pages = {251--264},
-	publisher = {Springer},
-	doi = {10.1007/s101070050113},
-	url = {http://link.springer.com/10.1007/s101070050113},
-	issn = {0025-5610},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % The DEAP framework is a Python framework for easily implementing and deploying parallel and distributed evolutionary algorithms. Fairly high quality open source software. This is widely used by optimization practitioners, e.g., engineers and scientists that read an evolutionary algorithm paper and want to try it out on their problem
@@ -801,6 +858,7 @@
 	number = {1},
 	pages = {2171--2175},
 	url = {https://www.jmlr.org/papers/v13/fortin12a.html},
+	keywords = {software, open source, OSS, Python, parallel programming, MPI},
 }
 
 % Official MPI 4.1 standard document for distributed computing via a message passing interface in C and Fortran
@@ -811,6 +869,7 @@
 	month = {nov},
 	number = {version 4.1},
 	url = {https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf},
+	keywords = {software, Fortran, C, MPI},
 }
 
 % PyCUTEst is a very nice, easily installed open source Python wrapper for the CUTEst test suite for benchmarking blackbox optimization problems. The CUTEst software is the standard suite of constrained and unconstrained test problems for derivative-free / blackbox / simulation optimization problems. CUTEst is available open source and written in Fortran, but now offer C, Python, Matlab, and Julia interfaces (plus the default command line interface). Available for download at: github.com/jfowkes/pycutest
@@ -827,6 +886,7 @@
 	doi = {10.21105/joss.04377},
 	url = {https://joss.theoj.org/papers/10.21105/joss.04377},
 	issn = {2475-9066},
+	keywords = {software, open source, OSS, Fortran, Python, benchmarking},
 }
 
 % Landmark textbook on standard design patterns in software engineering, such as builders, factories, observers, etc. Nicknamed the "Gang of Four" book on design patters
@@ -837,6 +897,7 @@
 	publisher = {Addison-Wesley},
 	address = {Reading, MA, USA},
 	isbn = {0-201-63361-2},
+	keywords = {software},
 }
 
 % An article on the benefits of co design of algorithms and software and hardware in the context of the DOE's exascale computing project (ECP)
@@ -853,6 +914,7 @@
 	doi = {10.1177/10943420211059380},
 	url = {https://journals.sagepub.com/doi/10.1177/10943420211059380},
 	issn = {1094-3420},
+	keywords = {software, CUDA, OpenMP, MPI, parallel programming},
 }
 
 % Open source numerical software for the Delaunay density diagnostic -- using the Delaunay interpolant to calculate whether they have enough data to resolve the geometry of a problem for interpolation in the context of SciML. Essentially, they use DelaunaySparse to make predictions and slowly add data. Once they have enough data, the predictions begin converging at a linear rate. Then they have enough data to use whatever method they want to solve the problem
@@ -870,6 +932,7 @@
 	doi = {10.1145/3700134},
 	url = {https://doi.org/10.1145/3700134},
 	issn = {0098-3500},
+	keywords = {software, Python},
 }
 
 % Google's OSS Vizier service is a (now open source) blackbox / derivative-free optimization numerical software package and service. As far as I can tell, the package is primarily used for solving system optimization and A/B testing type problems
@@ -884,6 +947,7 @@
 	location = {Halifax, NS, Canada},
 	doi = {10.1145/3097983.3098043},
 	url = {https://dl.acm.org/doi/10.1145/3097983.3098043},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Classical textbook that serves as the "bible" of matrix computations and computational linear algebra -- contains all the standard factorizations, the common algorithms for computing them, and their sensitiviy analyses, pivoting, some basic approximation theory, and the basics of iterative methods
@@ -896,6 +960,7 @@
 	doi = {10.56021/9781421407944},
 	url = {https://www.press.jhu.edu/books/title/10678/matrix-computations},
 	isbn = {978-1421407944},
+	keywords = {software},
 }
 
 % The CUTEst software is the standard suite of constrained and unconstrained test problems for derivative-free / blackbox / simulation optimization problems. CUTEst is available open source and written in Fortran, but now offer C, Python, Matlab, and Julia interfaces (plus the default command line interface). Available for download at: github.com/ralna/CUTEst
@@ -912,6 +977,7 @@
 	doi = {10.1007/s10589-014-9687-3},
 	url = {https://doi.org/10.1007/s10589-014-9687-3},
 	issn = {0926-6003},
+	keywords = {software, open source, OSS, Fortran, Python, Matlab, Julia, benchmarking},
 }
 
 % The OpenMDAO open source numerical software library for modeling and solving multidisciplinary engineering design optimization problems. Combines surrogate modeling, gradient based optimization, parallel computing frameworks, and derivative-free optimization techniques in one package so in order to solve large mixed-variable blackbox optimization problems. Developed by NASA Glenn
@@ -928,6 +994,7 @@
 	doi = {10.1007/s00158-019-02211-z},
 	url = {http://link.springer.com/10.1007/s00158-019-02211-z},
 	issn = {1615-147X},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Platypus: an open source numerical software package for performing multiobjective optimization in Python and comparing results
@@ -938,6 +1005,7 @@
 	number = {Version 1.0.4},
 	institution = {GitHub},
 	url = {https://platypus.readthedocs.io/en/latest},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Hanson's Fortran numerical software for solving equality constrained nonnegative least-squares (NNLS) problems via an iterative weighted least squares (WNNLS) solver. This is the default constrained least-squares optimization problem solver in the Fortran library SLATEC from Sandia
@@ -955,6 +1023,7 @@
 	doi = {10.1145/356004.356010},
 	url = {https://dl.acm.org/doi/10.1145/356004.356010},
 	issn = {0098-3500},
+	keywords = {software, Fortran},
 }
 
 % The official publication of the open source numerical software numpy: the standard for basic multivariable computations, vector operations, and simple linear algebra in Python
@@ -971,6 +1040,7 @@
 	doi = {10.1038/s41586-020-2649-2},
 	url = {https://www.nature.com/articles/s41586-020-2649-2},
 	issn = {0028-0836},
+	keywords = {software, open source, OSS, Python},
 }
 
 % The official textbook on the Pyomo modeling language: an open source optimization modeling language and scientific software developed at Sandia by Bill Hart et al. Pyomo is a standard for solving large-scale mathematical programming (linear and nonlinear optimization) problems in Python
@@ -987,6 +1057,7 @@
 	url = {http://link.springer.com/10.1007/978-3-319-58821-6},
 	isbn = {9783319588193},
 	issn = {1931-6828},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Chimera: a scientific software package for steering self-driving labs via multiobjective optimization -- the software is similar to what we did with ParMOO + MDML in the MERF at Argonne. They focus on applications in robot calibration and molecular system design. The multiobjective component helps them to explore the solution space with experimentation
@@ -1002,6 +1073,7 @@
 	doi = {10.1039/C8SC02239A},
 	url = {https://xlink.rsc.org/?DOI=C8SC02239A},
 	issn = {2041-6520},
+	keywords = {software, open source, OSS, Python},
 }
 
 % VTDIRECT95 reference: a high-performance parallel Fortran implementation of the famous single-objective blackbox (direct search) optimization algorithm DIRECT. The numerical software is now open source (maintained by me) on Dr. Watson's GitHub page.
@@ -1018,6 +1090,7 @@
 	doi = {10.1145/1527286.1527291},
 	url = {https://dl.acm.org/doi/10.1145/1527286.1527291},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Fortran, parallel programming, MPI},
 }
 
 % The better scientific software tech report, with recommendations and rules of thumb for improving the quality of scientific software within the DOE
@@ -1031,6 +1104,7 @@
 	address = {Oak Ridge, TN, USA},
 	doi = {10.2172/1606662},
 	url = {https://www.osti.gov/servlets/purl/1606662},
+	keywords = {software},
 }
 
 % The official CGAL User Guide docs page for computing high-dimensional convex hulls and Delaunay triangulations. CGAL is a standard numerical software package for using computational geometry data structures and algorithms in perfect precision (via symbolic arithmetic). CGAL is a header-only open source C++ library
@@ -1042,6 +1116,7 @@
 	edition = {{5.0.2}},
 	publisher = {{CGAL Editorial Board}},
 	url = {https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD},
+	keywords = {software, open source, OSS, C++},
 }
 
 % Cpp-Taskflow original paper on open source software implementing a task-based parallel scheduler and parallel programming interface in C++
@@ -1058,6 +1133,7 @@
 	location = {Rio de Janeiro, Brazil},
 	doi = {10.1109/IPDPS.2019.00105},
 	url = {https://ieeexplore.ieee.org/document/8821011/},
+	keywords = {software, open source, OSS, parallel programming, C++},
 }
 
 % The official publication for HiGHS numerical optimization open source software package and solver for linear programming problems. The first successful effort to parallelize a simplex method based solver, specifically, they have successfully parallelized the dual revised simplex approach. HiGHS is now the default solver in most scipy.optimize. HiGHS is written in C++ with Fortran, C, and Python interfaces -- support CPU and GPU parallelism, the authors don't get perfect scaling by any means but this is the first successful effort to parallelize linear programming and still an achievement
@@ -1074,6 +1150,7 @@
 	doi = {10.1007/s12532-017-0130-5},
 	url = {http://link.springer.com/10.1007/s12532-017-0130-5},
 	issn = {1867-2949},
+	keywords = {software, open source, OSS, Fortran, Python, CUDA, parallel programming, C++},
 }
 
 % The official JOSS paper for libEnsemble: an open source software library for performing parallel and distributed computations involving ensembles of computationally expensive function evaluations in Python
@@ -1090,6 +1167,7 @@
 	doi = {10.21105/joss.06031},
 	url = {https://joss.theoj.org/papers/10.21105/joss.06031},
 	issn = {2475-9066},
+	keywords = {software, open source, OSS, Python, parallel programming, MPI},
 }
 
 % The official Intel TBB developer guide / reference for efficient and performance portable task-based parallel programming using a dynamic scheduler with work-stealing in modern C++. The open source software library can be downloaded from GitHub. They also offer limited NUMA support in the latest version
@@ -1101,6 +1179,7 @@
 	publisher = {Intel Corporation},
 	url = {https://uxlfoundation.github.io/oneTBB},
 	note = {Last accessed: Apr 28, 2025},
+	keywords = {software, open source, OSS, parallel programming, C++},
 }
 
 % ISO Fortran 2003 software standard -- definition of the Fortran 2003 standard
@@ -1111,6 +1190,7 @@
 	number = {ISO/IEC 1539-1:2004(E)},
 	institution = {International Organization for Standardization},
 	address = {Geneva, Switzerland},
+	keywords = {software, Fortran},
 }
 
 % ISO Fortran 2008 software standard -- definition of the Fortran 2008 standard
@@ -1121,6 +1201,7 @@
 	number = {ISO/IEC 1539-1:2010(E)},
 	institution = {International Organization for Standardization},
 	address = {Geneva, Switzerland},
+	keywords = {software, Fortran},
 }
 
 % A modification to the original Sobol sequence generator code
@@ -1137,6 +1218,7 @@
 	doi = {10.1145/641876.641879},
 	url = {https://dl.acm.org/doi/10.1145/641876.641879},
 	issn = {0098-3500},
+	keywords = {software, Fortran},
 }
 
 % Charm++ original paper introducing open source software for parallel programming in C++ via message-passing objects called "chares"
@@ -1153,6 +1235,7 @@
 	doi = {10.1145/165854.165874},
 	url = {https://dl.acm.org/doi/10.1145/165854.165874},
 	isbn = {0897915879},
+	keywords = {software, open source, OSS, parallel programming, C++},
 }
 
 % Introducing Dragonfly: an open source numerical software package for solving neural architecture search problems via Bayesian optimization and solving an optimal transport problem to evaluate the distance between two networks. Considered a bit of a landmark paper for neural network architecture search problems. The open source Python software is widely used for a variety of applications outside NAS, including molecular discovery
@@ -1166,6 +1249,7 @@
 	pages = {1--27},
 	url = {http://jmlr.org/papers/v21/18-223.html},
 	git = {http://github.com/dragonfly/dragonfly},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Official documentation and techreport for the widely-used multilevel hypergraph partitioning software hMETIS, which is a standard in partitioning based placement
@@ -1177,6 +1261,7 @@
 	institution = {Department of Computer Science \& Engineering, University of Minnesota},
 	address = {Minneapolis, MN, USA},
 	url = {https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf},
+	keywords = {software},
 }
 
 % Original libnuma paper (now dated) introducing the widely used libnuma software providing a C interface for portably binding threads to NUMA nodes on linux and unix systems
@@ -1185,6 +1270,7 @@
 	title = {A {NUMA} {API} for {Linux}},
 	year = {2005},
 	institution = {Suse Lab},
+	keywords = {software, parallel programming, C},
 }
 
 % The SORCER software is a service oriented computing environment used by the US Airforce research lab (AFRL) to distribute expensive computations (such as design optimizations) across their large distributed network of computing resources
@@ -1197,6 +1283,7 @@
 	organization = {Citeseer},
 	location = {Paris, France},
 	url = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.656.7539},
+	keywords = {software, Java, parallel programming},
 }
 
 % Original Kafka paper: a fully-distributed, scalable message-passing and log processing interface. A Kafka system consists of producer, consumer, and broker processes / nodes. Producers generate logs/messages and consumers subscribte to log/message streams from producers. When a producer generates a new message or log, it publishes that message to a given topic. Those topics are broken up into sequential partitions and distributed across the broker nodes. The broker nodes and their partitions are all stateless. Consumers are placed in groups, with each group subscribing to a topic. Each group will read messages/logs from a specific topic, with a guarantee that each partition is read sequentially, but messages from different partitions will be read in any order. They guarantee that each group will read each message in their subscribed topics at least once. Groups store all state information locally, and therefore have the ability to roll-back and replay a topic from any offset. The original application is for distributing LinkedIn messages. Kafka is a standard in scalable distributed message/log streaming, and created the paradigm of subscribable topics. The official open-source implementation is Apache Kafka https://github.com/apache/kafka
@@ -1210,6 +1297,7 @@
 	pages = {1--7},
 	organization = {Athens, Greece},
 	url = {https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf},
+	keywords = {software, open source, OSS, Kafka},
 }
 
 % NOMAD v3 is a widely-used open source numerical software package (in C++) for blackbox and derivative-free optimization via the MADS algorithms. Includes the official implementations of algorithms such as Ortho-MADS, PSD-MADS, and BiMADS. Support for parallel computing and surrogate modeling, and fairly extensible. Can be linked as a C++ library, or usage from command line interface. Used by a variety of industries and officially supported by Exxon Mobile. Has recently been replaced by the major refactor/rewrite in NOMAD v4. Still an example of widely-used open source numerical software, but the NOMAD v4 paper gives a look at how open source software practices have changed (improved) in the last 10 years
@@ -1226,6 +1314,7 @@
 	doi = {10.1145/1916461.1916468},
 	url = {https://dl.acm.org/doi/10.1145/1916461.1916468},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, parallel programming, C++, C},
 }
 
 % pyDOE a popular software repository for the common design-of-experiments in Python. This has been widely replaced by the new release of scipy which includes scipy.stats.qmc, which includes most of these techniques (used for monte carlo sampling, but still the same techniques)
@@ -1238,6 +1327,7 @@
 	publisher = {GitHub},
 	url = {https://github.com/tisimst/pyDOE},
 	note = {Last accessed: Nov 2022},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Offifial publication for the AMF-Placer 2.0 paper, which is an open-source analytical placer using quadratic programming for global placement and simulated annealing for detailed placement. Written primarily in C++ and available at github.com/zslwyuan/AMF-Placer
@@ -1254,6 +1344,7 @@
 	doi = {10.1109/TCAD.2024.3373357},
 	url = {https://ieeexplore.ieee.org/document/10459236/},
 	issn = {0278-0070},
+	keywords = {software, open source, OSS, C++},
 }
 
 % The official publication of SMAC3 -- the latest version of SMAC from the automl group. SMAC was the first hyperparameter optimization and neural architecture search software to use random forest surrogates for modeling the hyperparameter configuration space. They also use a hierarchy of hyperparameters to handle "hidden parameters". They support multi and single-fidelity NAS applications. The open source software is written in Python and available from: github.com/automl/SMAC3
@@ -1266,6 +1357,7 @@
 	number = {54},
 	pages = {1--9},
 	url = {http://jmlr.org/papers/v23/21-0888.html},
+	keywords = {software, open source, OSS, Python},
 }
 
 % The official GitHub account for the DFO-lib -- open source numerical software in Fortran for solving blackbox optimization and multiobjective optimization problems. The library used to be obtained via download from Liuzzi's personal website, where it was referred to as the DFO lib. In 2024 it appears to have been migrated to a GitHub account, with each individual piece of software in its own separate repository. Therefore, any reference to the DFO-lib must now be directed to the account as a whole, not an individual repository.
@@ -1278,6 +1370,7 @@
 	publisher = {GitHub},
 	url = {https://github.com/DerivativeFreeLibrary},
 	note = {Last accessed: Jul 2024},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % NSGA-Net is the NSGA-II/pymoo team's multiobjective genetic algorithm based NAS solver. The open source python software is available from: github.com/ianwhale/nsga-net
@@ -1286,6 +1379,7 @@
 	title = {NSGA-NET: a multi-objective genetic algorithm for neural architecture search},
 	year = {2018},
 	journal = {GECCO-2019},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Official citation for the open source numerical Python software for evaluating SHAP scores for interpreting feature importance in a model agnostic way for various machine learning (primarily scientific machine learning) applications. Very popular in many fields, including finance, computational medicine, etc. github.com/shap/shap Based on the original publication by Shapley + some additional methods and improvements proposed by the authors and previous works
@@ -1298,6 +1392,7 @@
 	pages = {4765--4774},
 	organization = {Curran Associates, Inc.},
 	url = {http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Latest version of VPR, documenting new features and support -- very little mention of changes (if any) to the actual placement algorithms though
@@ -1316,7 +1411,7 @@
 	doi = {10.1145/2068716.2068718},
 	url = {https://doi.org/10.1145/2068716.2068718},
 	issn = {1936-7406},
-	keywords = {routing, placement, heterogeneous, hard blocks, field-programmable gate arrays, VPR, FPGA},
+	keywords = {software, open source, OSS, C++, Verilog},
 }
 
 % Thomas' open source montone quintic spline interpolation software -- a high order spline interpolant implemented in modern Fortran. Really nice high performance numerical software. Available open source on Dr. Watson's GitHub. His main application was distribution modeling, but I think for noisy data, lower order methods may actually be more robust
@@ -1334,6 +1429,7 @@
 	doi = {10.1145/3570157},
 	url = {https://dl.acm.org/doi/10.1145/3570157},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % pyMDO: an open source numerical Python framework for modeling and solving multidisciplinary engineering design optimization problems
@@ -1350,6 +1446,7 @@
 	doi = {10.1145/1555386.1555389},
 	url = {https://dl.acm.org/doi/10.1145/1555386.1555389},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Python wrapper around the open source numerical simulation software superfish We used this when performing particle accelerator RF gun cavity optimization at Argonne in order to provide a bridge between POISSON/SUPERFISH (Fortran codes) and the ParMOO optimizer (a Python code)
@@ -1359,6 +1456,7 @@
 	year = {2023},
 	url = {https://github.com/ChristopherMayes/PySuperfish},
 	note = {Last accessed: Aug 2023},
+	keywords = {software, open source, OSS, Fortran, Python},
 }
 
 % The POISSON/SUPERFISH open source numerical software (in Fortran) for calculating static, magnetic, and electric fields and rf electromagnetic fields. Used to design particle accelerators, developed and maintained by Los Alamos
@@ -1372,6 +1470,7 @@
 	address = {Los Alamos, NM, USA},
 	doi = {10.2172/10140823},
 	url = {https://www.osti.gov/servlets/purl/10140823},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % Original word2vec publication: embedding words into a continuous vector space in a "dense" way, meaning that the embedding is somewhat minimal and no extra dimensions are added and word relationships are preserved (as in semantic regularization). The authors show that a relatively small and simple model with semantic regularization is sufficient to train such an embedding in less than a day, and the resulting word2vec embedding layer is fast and cheap to evaluate. The word2vec embedding would go on to be the basis for most early transformer models. Modern LLMs train their own embedding as the embedding layers of the network, but use the same techniques as word2vec. The open source software is available for download from Google: https://code.google.com/archive/p/word2vec
@@ -1382,6 +1481,7 @@
 	booktitle = {1st International Conference on Learning Representations (ICLR 2013)},
 	location = {Scottsdale, AZ, USA},
 	url = {https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq},
+	keywords = {software},
 }
 
 % Report on challenges and experiences gained in porting PETSc to GPUs for the exascale computing project
@@ -1397,6 +1497,7 @@
 	doi = {10.1016/j.parco.2021.102831},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S016781912100079X},
 	issn = {0167-8191},
+	keywords = {software, CUDA, C++},
 }
 
 % DESDEO an open source Python framework for implementing interactive multiobjective optimization solvers
@@ -1411,6 +1512,7 @@
 	doi = {10.1109/ACCESS.2021.3123825},
 	url = {https://ieeexplore.ieee.org/document/9591595},
 	issn = {2169-3536},
+	keywords = {software, open source, OSS, Python},
 }
 
 % MORDRED: A 3D molecular descriptor calculator, which is widely used for embedding molecules into a continuous latent space (parameterized by their descriptors) which can be used to solve chemical property optimization problems. The MORDRED software is available open source in Python.
@@ -1428,6 +1530,7 @@
 	doi = {10.1186/s13321-018-0258-y},
 	url = {https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0258-y},
 	issn = {1758-2946},
+	keywords = {software, open source, OSS, Python},
 }
 
 % This is the last TAO (toolkit for advanced optimization) reference before this open source numerical simulation optimization software when merged with PETSc, into a single PETSc + TAO release
@@ -1439,6 +1542,7 @@
 	institution = {Argonne National Laboratory},
 	address = {Lemont, IL, USA},
 	url = {https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf},
+	keywords = {software, open source, OSS, C++},
 }
 
 % The official publication for the latest version of the VTR (verilog-to-routing) toolkit. The latest publication focuses on updates to the user interface and new features and support, but not algorithmic changes. VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
@@ -1457,7 +1561,7 @@
 	doi = {10.1145/3388617},
 	url = {https://doi.org/10.1145/3388617},
 	issn = {1936-7406},
-	keywords = {Computer aided design (CAD), electronic design automation (EDA), field programmable gate array (FPGA), packing, placement, routing, verilog to routing (VTR), versatile place and route (VPR)},
+	keywords = {software, open source, OSS, C++, Verilog},
 }
 
 % NVIDIA's official API docs for the latest version (as of Apr 2025) of the cuBLAS API. With both C and Fortran bindings.
@@ -1469,6 +1573,7 @@
 	institution = {NVIDIA Corporation},
 	url = {https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf},
 	note = {Last accessed: Apr 26, 2025},
+	keywords = {software, C, Fortran, CUDA},
 }
 
 % NVIDIA's official developer's guide and API for writing high-performance CUDA in Fortran95+ on compilers that support the CUDA API, such as Nvidia's nvcc family of compilers and Portland group's pgfrotran family.
@@ -1480,6 +1585,7 @@
 	institution = {NVIDIA Corporation},
 	url = {https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf},
 	note = {Last accessed: Apr 26, 2023},
+	keywords = {software, Fortran, CUDA},
 }
 
 % SCS is an open source numerical software for solving second-order cone problems from Stephen Boyd's lab
@@ -1496,6 +1602,7 @@
 	doi = {10.1007/s10957-016-0892-3},
 	url = {http://link.springer.com/10.1007/s10957-016-0892-3},
 	issn = {0022-3239},
+	keywords = {software, open source, OSS, C++},
 }
 
 % OpenMP 4.5 standard: Official definition of OpenMP 4.5 software standard
@@ -1505,6 +1612,7 @@
 	year = {2015},
 	month = {November},
 	number = {version 4.5},
+	keywords = {software, OpenMP, parallel programming, C, Fortran},
 }
 
 % Official docs and reference for the Matlab computational geometry toolbox (numerical software), which includes all of Matlab's built-in tools for computing geometric algorithms and structures, including Delaunay triangulations
@@ -1516,35 +1624,7 @@
 	institution = {MathWorks},
 	url = {https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox},
 	note = {Last accessed: April 27, 2020},
-}
-
-% PABO - a multiobjective Bayesian optimization software package that is specialized for NAS -- basically an inner network is used as a surrogate and an outer network is used to predict which designs to evaluate next -- I have serious reservations about this kind of approach, and it doesn't seem to work that well
-@inproceedings{parsa2019pabo,
-	author = {Parsa, Maryam and Ankit, Aayush and Ziabari, Amirkoushyar and Roy, Kaushik},
-	title = {{PABO}: Pseudo Agent-Based Multi-Objective {B}ayesian Hyperparameter Optimization for Efficient Neural Accelerator Design},
-	year = {2019},
-	month = {11},
-	booktitle = {Proc. 2019 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},
-	pages = {1--8},
-	organization = {IEEE/ACM},
-	location = {Westin Westminster, CO, USA},
-	doi = {10.1109/ICCAD45719.2019.8942046},
-	url = {https://ieeexplore.ieee.org/document/8942046},
-}
-
-% H-PABO multiobjective Bayesian optimization framework, specialized for NAS, and improvement on PABO
-@article{parsa2020bayesian,
-	author = {Parsa, Maryam and Mitchell, John P. and Schuman, Catherine D. and Patton, Robert M. and Potok, Thomas E. and Roy, Kaushik},
-	title = {Bayesian Multi-objective Hyperparameter Optimization for Accurate, Fast, and Efficient Neural Network Accelerator Design},
-	year = {2020},
-	month = {7},
-	journal = {Frontiers in Neuroscience},
-	volume = {14},
-	numpages = {667},
-	publisher = {Frontiers Media SA},
-	doi = {10.3389/fnins.2020.00667},
-	url = {https://www.frontiersin.org/article/10.3389/fnins.2020.00667/full},
-	issn = {1662-453X},
+	keywords = {software, Matlab},
 }
 
 % The official publication for pytorch a gold standard in open source software, providing automatic differentiation and numerical linear algebra in Python, targeted at implementing deep learning algorithms. Pytorch is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
@@ -1558,6 +1638,7 @@
 	pages = {1--12},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf},
+	keywords = {software, open source, OSS, Python, C++, CUDA},
 }
 
 % The official publication for scikit-learn a gold standard in open source software, providing a clean interface to several standard implementations of numerical approximation, optimization, machine learning, and deep learning algorithms. Scikit-learn is pretty much a standard in not just open source software, but also machine learning software, and also numerical software
@@ -1569,6 +1650,16 @@
 	volume = {12},
 	pages = {2825--2830},
 	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
+	keywords = {software, open source, OSS, Python},
+}
+
+% The official handbook and user's manual for the high-performance LINPACK benchmark (HPL) describing how to set-up and run the HPC performance tuning benchmark on distributed-memory systems, what problem it solves, what values the config file sets, and what are the rules for defining a solver for the problem and having it still count toware the Top 500 list
+@book{petitet2018hpl,
+	author = {Petitet, Antoine and Whaley, R. Clint and Dongarra, Jack and Cleary, Andy},
+	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
+	year = {2018},
+	publisher = {Innovation Computing Laboratory, University of Tennessee},
+	keywords = {software, Fortran, parallel programming, benchmarking},
 }
 
 % YAHPO gym is yet another hyperparameter optimization gym consisting of benchmark and test problems for testing neural architecture search and hyperparameter optimization algorithms. Most of the test problems are based on xgboost, knn, or svm models of real data. As of 2022, this one was not as mature as HPOBench and JAHS-Bench, so we didn't use it. They claim to now offer multiobjective optimization test problems as well. Open source Python software implementation available at: github.com/slds-lmu/yahpo_gym
@@ -1583,6 +1674,7 @@
 	pages = {3/1--39},
 	organization = {PMLR},
 	url = {https://proceedings.mlr.press/v188/pfisterer22a.html},
+	keywords = {software, open source, OSS, Python},
 }
 
 % Experiences, challenges, and techniques for integrating the blackbox optimization solvers VTDIRECT95 and QNSTOP into the parallel service architecture SORCER
@@ -1596,6 +1688,7 @@
 	location = {Virginia Beach, VA, USA},
 	doi = {10.22360/springsim.2017.hpc.023},
 	url = {http://dl.acm.org/citation.cfm?id=3108103},
+	keywords = {software, parallel programming, Fortran, C, Java},
 }
 
 % PDFO: An open source modern Python implementation of Powell's derivative-free numerical optimization software suite, which is considered to be the standard (baseline) in derivative-free optimization solvers
@@ -1608,6 +1701,7 @@
 	publisher = {GitHub},
 	url = {https://github.com/pdfo/pdfo},
 	note = {Last accessed: Apr 2025},
+	keywords = {software, open source, OSS, Python},
 }
 
 % DREAMPlaceFPGA the official publication for the DREAMPlace open source using analytical placement with some deep learning for FPGA placement acceleration -- written in C++ with Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
@@ -1624,6 +1718,7 @@
 	location = {Taipei, Taiwan},
 	doi = {10.1109/ASP-DAC52403.2022.9712562},
 	url = {https://ieeexplore.ieee.org/document/9712562/},
+	keywords = {software, open source, OSS, Python, C++},
 }
 
 % The original publication for VTR (Verilog-to-routing) -- open-source synthesis-packing-place-and-route platform. Still uses VPR for the place and route steps. VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
@@ -1640,6 +1735,7 @@
 	doi = {10.1145/2145694.2145708},
 	url = {https://doi.org/10.1145/2145694.2145708},
 	isbn = {9781450311557},
+	keywords = {software, open source, OSS, Python, C++},
 }
 
 % Official publication of the scipy.stats.qmc module, which is the newly released module for performing quasi-monte carlo sampling and design-of-experiments in scipy. Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -1656,6 +1752,7 @@
 	doi = {10.21105/joss.05309},
 	url = {https://joss.theoj.org/papers/10.21105/joss.05309},
 	issn = {2475-9066},
+	keywords = {software, open source, OSS, Fortran, Python},
 }
 
 % The SMT 2.0 paper, major improvements to the open source numerical software package (in Python) pySMT for solving multidisciplinary engineering design optimization (MDO) problems, while utilizing derivatives and providing numerical stability analysis for each surrogate model class. In SMT 2.0, support is added for hierarchical and mixed variables, and major improvements have been made to the structure, completeness, and features of the SMT library.
@@ -1671,6 +1768,7 @@
 	doi = {10.1016/j.advengsoft.2023.103571},
 	url = {https://www.sciencedirect.com/science/article/pii/S096599782300162X},
 	issn = {0965-9978},
+	keywords = {software, open source, OSS, Python},
 }
 
 % ASTRO-DF is a derivative-free stochastic optimization solver, targeted at noisy simulation optimization problems. Particularly those derived from Monte Carlo simulations. The algorithm is model-based within a trust region. The key contribution is adaptively determining how many Monte carlo samples to take in each iteration, in order to guarantee convergence. There are also ASTRO and ASTRO-C variants available. The open source Python software is available at github.com/sshashaa/astro-df
@@ -1685,6 +1783,7 @@
 	location = {Washington, DC, USA},
 	doi = {10.1109/WSC.2016.7822121},
 	url = {http://ieeexplore.ieee.org/document/7822121/},
+	keywords = {software, open source, OSS, Python},
 }
 
 % The EDBO software: open source Python software for performing multiobjective bayesian optimization for chemical synthesis and molecular discovery. Links a multiobjective optimization solver with the MORDRED software for getting molecular descriptors and optimizes for the desired properties
@@ -1702,6 +1801,7 @@
 	url = {https://www.nature.com/articles/s41586-021-03213-y},
 	issn = {0028-0836},
 	git = {http://github.com/b-shields/edbo},
+	keywords = {software, open source, OSS, Python},
 }
 
 % The docker image for the SUPERFISH/POISSON container + wrapper -- we used this at Argonne to obtain a portable copy of POISSON/SUPERFISH when performing particle accelerator RF gun cavity optimization and distributing work on remote systems
@@ -1711,6 +1811,7 @@
 	year = {2020},
 	url = {https://github.com/hhslepicka/docker-poisson-superfish-nobin},
 	note = {Last accessed: Aug 2023},
+	keywords = {software, Fortran, Kubernetes},
 }
 
 % The FAIR principles of data management: Scientific data should be findable, accessible, interpretable, and reproducible
@@ -1727,6 +1828,7 @@
 	doi = {10.1038/d41586-019-01720-7},
 	url = {https://www.nature.com/articles/d41586-019-01720-7},
 	issn = {0028-0836},
+	keywords = {software},
 }
 
 % OSQP is an open source numerical software for solving quadratic programming problems from Stephen Boyd's lab
@@ -1743,6 +1845,7 @@
 	doi = {10.1007/s12532-020-00179-2},
 	url = {http://link.springer.com/10.1007/s12532-020-00179-2},
 	issn = {1867-2949},
+	keywords = {software, open source, OSS, C++},
 }
 
 % BoostDMS is numerical software library providing access to Custodio's direct search and pattern search software, including MultiGLODS and DMS, in Matlab with full parallel computing support
@@ -1759,6 +1862,7 @@
 	doi = {10.1007/s11075-022-01364-1},
 	url = {https://link.springer.com/10.1007/s11075-022-01364-1},
 	issn = {1017-1398},
+	keywords = {software, Matlab, parallel programming},
 }
 
 % The SHEPPACK numerical software package contains a variety of open source Fortran codes for computing Shepard's method interpolants in two, three, and four dimensions. There is also a linear Shepard's method interpolant that can be used for interpolation in arbitrary dimension.
@@ -1775,6 +1879,7 @@
 	doi = {10.1145/1824801.1824812},
 	url = {https://dl.acm.org/doi/10.1145/1824801.1824812},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % An open source MATLAB platform for implementing and running wide-scale comparisons against other multiobjective evolutionary algorithms on standard multiobjective test problems
@@ -1791,6 +1896,7 @@
 	doi = {10.1109/MCI.2017.2742868},
 	url = {http://ieeexplore.ieee.org/document/8065138},
 	issn = {1556-603X},
+	keywords = {software, open source, OSS, Matlab},
 }
 
 % Kokkos 3 latest paper from Sandia's CCR lab -- an open source, parallel computing software library for performance portable parallel and distributed computing in C++. Primarily designed and used for high-performance numerical software, e.g., Trilinos
@@ -1807,6 +1913,7 @@
 	doi = {10.1109/TPDS.2021.3097283},
 	url = {https://ieeexplore.ieee.org/document/9485033/},
 	issn = {1045-9219},
+	keywords = {software, open source, OSS, parallel programming},
 }
 
 % The (recently open source) numerical software library SLATEC from Sandia is something of a precursor to a modern library like scipy. SLATEC provides highly optimized, numerically stable, Fortran implementations for nearly every basic numerical algorithm that one would encounter in scientific computing
@@ -1823,6 +1930,7 @@
 	doi = {10.1145/1057594.1057595},
 	url = {https://dl.acm.org/doi/10.1145/1057594.1057595},
 	issn = {0163-5778},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -1839,6 +1947,7 @@
 	doi = {10.1038/s41592-019-0686-2},
 	url = {https://www.nature.com/articles/s41592-019-0686-2},
 	issn = {1548-7091},
+	keywords = {software, open source, OSS, Fortran, C++, Python},
 }
 
 % Chapter on how to bind an older version of TBB to NUMA nodes using Intel's TBB C++ software interface
@@ -1853,6 +1962,7 @@
 	doi = {10.1007/978-1-4842-4398-5_20},
 	url = {https://doi.org/10.1007/978-1-4842-4398-5_20},
 	isbn = {978-1-4842-4398-5},
+	keywords = {software, C++, parallel programming},
 }
 
 % VTR docs with a bit more detail than above reference, and latest version (most up-to-date) information VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
@@ -1863,6 +1973,7 @@
 	number = {Version 8.1.0-dev},
 	url = {https://readthedocs.org/projects/vtr/downloads/pdf/latest},
 	note = {Last accessed: Feb 2025},
+	keywords = {software, open source, OSS, Python, C++},
 }
 
 % Open source numerical Python software pyomo.DOE, implementing model-driven design-of-experiments generation in Pyomo
@@ -1879,6 +1990,7 @@
 	doi = {10.1002/aic.17813},
 	url = {https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.17813},
 	issn = {0001-1541},
+	keywords = {software, Python},
 }
 
 % The latest release of HOMPACK: An open source numerical software package written in Fortran 90 for solving nonlinear and polynomial systems of equations via homotopy methods.
@@ -1895,6 +2007,7 @@
 	doi = {10.1145/279232.279235},
 	url = {https://dl.acm.org/doi/10.1145/279232.279235},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % How optimization is used to autotune the configuration of the BLAS subroutines and kernels for the ATLAS project -- since most numerical software relies on BLAS, it is often prudent to spend time optimizing BLAS configurations (such as matrix block sizes, etc.) to match machine specific values (such as cache sizes, etc.) when installing on a HPC that will have a high numerical (compute bound) workload. This can be done automatically via numerical optimization, so that users can just run the ATLAS setup scripts to configure BLAS automatically if they want an optimized installation -- could also be considered an early example of performance portability
@@ -1911,6 +2024,7 @@
 	doi = {10.1016/s0167-8191(00)00087-9},
 	url = {https://linkinghub.elsevier.com/retrieve/pii/S0167819100000879},
 	issn = {0167-8191},
+	keywords = {software, parallel programming},
 }
 
 % Official publication for ytopt: Argonne's HPC and scientific library autotuning software using Bayesian optimization to portably autotune numerical libraries for optimal performance on a given HPC as part of the exasale computing project. The software uses a random forest surrogate model and calculates their model-form uncertainties through resampling models. Then, they use random sampling of their acquisition function to perform Bayesian optimization at scale with fully distributed evaluation of the selected configurations. The results scale well on the HPCs Theta and Summit. The open source Python software is available at github.com/ytopt-team/ytopt
@@ -1927,6 +2041,7 @@
 	doi = {10.1002/cpe.8322},
 	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.8322},
 	issn = {1532-0626},
+	keywords = {software, open source, OSS, Python},
 }
 
 % DREAMPlaceFPGA-MP: GPU-accelerated macro-placer for DREAMPlaceFPGA (rajrathnam2022) DREAMPlace is an open source using analytical placement with some deep learning for FPGA placement acceleration -- written in C++ with Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
@@ -1936,6 +2051,7 @@
 	year = {2023},
 	institution = {arXiv cs.AR preprint},
 	url = {https://arxiv.org/abs/2311.08582},
+	keywords = {software, open source, OSS, Python, CUDA, C++},
 }
 
 % Prima: open source reference implementation of all of Powell's numerical optimization solvers for blackbox / simulation optimization problems in modern Fortran. IMO, these should be considered the state-of-the-art and reference implementations for all blackbox optimization research
@@ -1947,6 +2063,7 @@
 	doi = {10.5281/zenodo.8052654},
 	url = {http://www.libprima.net},
 	note = {Last accessed: Apr 2025},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % The original publication for L-BFGS-B software, which solves bound-constrained optimization problems using a limited-memory BFGS. This is the standard implementation that is used in all L-BFGS-B codes to date, such as scipy, all machine learning codes, and most engineering codes and nonlinear systems solvers. The code is open source high-quality numerical software, written in old-style Fortran
@@ -1963,5 +2080,6 @@
 	doi = {10.1145/279232.279236},
 	url = {https://dl.acm.org/doi/10.1145/279232.279236},
 	issn = {0098-3500},
+	keywords = {software, open source, OSS, Fortran},
 }
 
