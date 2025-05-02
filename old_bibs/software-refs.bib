@@ -1916,6 +1916,19 @@
 	keywords = {software, open source, OSS, parallel programming},
 }
 
+% Original publication of t-SNE, which performs latent space embedding and dimension reduction for high-dimensional data. The idea is to minimize the distribution error via KL-divergence between a target distribution and the a low-dimensional embedding of that distribution that is trained via gradient descent. The KL-divergence is calculated based on a similarity score between points in the target distribution (which perfectly maintains the relative distances / exponentiated relative distances between points in the original high-dimensional space) and the low-dimensional embedding, so the objective is ultimately to maintain the relative distances between points in the embedding. The method was originally proposed as a visualization technique for high-dimensional data (where the embedding produces clusters in 2 or 3 dimensions that can be plotted), but t-SNE can be and is also used for generic dimension reduction and latent-space embedding. The original software is not open source, but many open source implementations are linked on the original author's website: lvdmaaten.github.io/tsne
+@article{vandermaaten2008visualizing,
+	author = {van der Maaten, Laurens and Hinton, Geoffrey},
+	title = {Visualizing Data using {t-SNE}},
+	year = {2008},
+	journal = {Journal of Machine Learning Research},
+	volume = {9},
+	number = {86},
+	pages = {2579--2605},
+	url = {http://jmlr.org/papers/v9/vandermaaten08a.html},
+	keywords = {software, open source, OSS, C, C++, Python, Java, Julia, Matlab, CUDA},
+}
+
 % The (recently open source) numerical software library SLATEC from Sandia is something of a precursor to a modern library like scipy. SLATEC provides highly optimized, numerically stable, Fortran implementations for nearly every basic numerical algorithm that one would encounter in scientific computing
 @article{vandevender1982slatec,
 	author = {Vandevender, Walter H. and Haskell, Karen H.},
