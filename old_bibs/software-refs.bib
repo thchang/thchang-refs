@@ -1473,7 +1473,15 @@
 	keywords = {software, open source, OSS, Fortran},
 }
 
-% Original word2vec publication: embedding words into a continuous vector space in a "dense" way, meaning that the embedding is somewhat minimal and no extra dimensions are added and word relationships are preserved (as in semantic regularization). The authors show that a relatively small and simple model with semantic regularization is sufficient to train such an embedding in less than a day, and the resulting word2vec embedding layer is fast and cheap to evaluate. The word2vec embedding would go on to be the basis for most early transformer models. Modern LLMs train their own embedding as the embedding layers of the network, but use the same techniques as word2vec. The open source software is available for download from Google: https://code.google.com/archive/p/word2vec
+% Original word2vec publication: embedding words into a continuous vector space
+% in a "dense" way, meaning that the embedding is somewhat minimal and no extra
+% dimensions are added and word relationships are preserved (as in semantic
+% regularization). The authors show that a relatively small and simple model
+% with semantic regularization is sufficient to train such an embedding in less
+% than a day, and the resulting word2vec embedding layer is fast and cheap to
+% evaluate. The word2vec embedding would go on to be the basis for most early
+% language models, until being replaced by BPE for transformer models and
+% modern LLMs. The software is available for download from Google: https://code.google.com/archive/p/word2vec
 @inproceedings{mikolov2013efficient,
 	author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
 	title = {Efficient estimation of word representations in vector space},

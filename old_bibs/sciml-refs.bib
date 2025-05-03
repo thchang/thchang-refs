@@ -1026,7 +1026,15 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, RBFs, interpolation, approximation theory},
 }
 
-% Original word2vec publication: embedding words into a continuous vector space in a "dense" way, meaning that the embedding is somewhat minimal and no extra dimensions are added and word relationships are preserved (as in semantic regularization). The authors show that a relatively small and simple model with semantic regularization is sufficient to train such an embedding in less than a day, and the resulting word2vec embedding layer is fast and cheap to evaluate. The word2vec embedding would go on to be the basis for most early transformer models. Modern LLMs train their own embedding as the embedding layers of the network, but use the same techniques as word2vec. The open source software is available for download from Google: https://code.google.com/archive/p/word2vec
+% Original word2vec publication: embedding words into a continuous vector space
+% in a "dense" way, meaning that the embedding is somewhat minimal and no extra
+% dimensions are added and word relationships are preserved (as in semantic
+% regularization). The authors show that a relatively small and simple model
+% with semantic regularization is sufficient to train such an embedding in less
+% than a day, and the resulting word2vec embedding layer is fast and cheap to
+% evaluate. The word2vec embedding would go on to be the basis for most early
+% language models, until being replaced by BPE for transformer models and
+% modern LLMs. The software is available for download from Google: https://code.google.com/archive/p/word2vec
 @inproceedings{mikolov2013efficient,
 	author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
 	title = {Efficient estimation of word representations in vector space},
@@ -1748,3 +1756,22 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, computational linear algebra},
 }
 
+% The original paper for applying byte pair encoding (BPE) to words.  This is
+% the method used to embed words into numerical tokens for modern LLMs.  The
+% idea is to recursively combine the most commonly paired letters into a single
+% token.  Then an encoding value (number) is assigned to every token in the
+% resulting vocabulary, to generate a massive encoder/decoder lookup table.
+@inproceedings{sennrich2016neural,
+    title = {Neural Machine Translation of Rare Words with Subword Units},
+    author = {Sennrich, Rico and Haddow, Barry and Birch, Alexandra},
+    editor = {Erk, Katrin and Smith, Noah A.},
+    booktitle = {Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+    month = {aug},
+    year = {2016},
+    location = {Berlin, Germany},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/P16-1162/},
+    doi = {10.18653/v1/P16-1162},
+    pages = {1715--1725},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning, high dimension, dimension reduction},
+}
