@@ -3631,6 +3631,115 @@ bronstein2021geometric:
   volume: null
   web: null
   year: 2021
+brown2020language:
+  address: null
+  articleno: null
+  authors:
+  - - Tom
+    - Brown
+  - - Benjamin
+    - Mann
+  - - Nick
+    - Ryder
+  - - Melanie
+    - Subbiah
+  - - Jared D
+    - Kaplan
+  - - Prafulla
+    - Dhariwal
+  - - Arvind
+    - Neelakantan
+  - - Pranav
+    - Shyam
+  - - Girish
+    - Sastry
+  - - Amanda
+    - Askell
+  - - Sandhini
+    - Agarwal
+  - - Ariel
+    - Herbert-Voss
+  - - Gretchen
+    - Krueger
+  - - Tom
+    - Henighan
+  - - Rewon
+    - Child
+  - - Aditya
+    - Ramesh
+  - - Daniel
+    - Ziegler
+  - - Jeffrey
+    - Wu
+  - - Clemens
+    - Winter
+  - - Chris
+    - Hesse
+  - - Mark
+    - Chen
+  - - Eric
+    - Sigler
+  - - Mateusz
+    - Litwin
+  - - Scott
+    - Gray
+  - - Benjamin
+    - Chess
+  - - Jack
+    - Clark
+  - - Christopher
+    - Berner
+  - - Sam
+    - McCandlish
+  - - Alec
+    - Radford
+  - - Ilya
+    - Sutskever
+  - - Dario
+    - Amodei
+  chapter: null
+  descrip: The official GPT-3 report, showing that scaling the same techniques from
+    the GPT-1/2 models up to a 175 billion of parameter model is sufficient to provide
+    state-of-the-art zero- and one-shot performance on a wide variety of benchmark
+    problems. The fine-tuning of GPT-3 would become the original ChatGPT
+  doi: null
+  edition: null
+  editors:
+  - - H.
+    - Larochelle
+  - - M.
+    - Ranzato
+  - - R.
+    - Hadsell
+  - - M.F.
+    - Balcan
+  - - H.
+    - Lin
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '1877'
+  - '1901'
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - transformers
+  - LLMs
+  title: Language Models are Few-Shot Learners
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '33'
+  web: null
+  year: 2020
 buhmann2000radial:
   address: null
   articleno: null
@@ -9998,6 +10107,8 @@ grattafiori2024llama:
   - machine learning
   - ML
   - open source
+  - LLMs
+  - transformers
   - high-performance computing
   - HPC
   - parallel computing
@@ -14097,20 +14208,20 @@ liu2024deepseekv3:
     to obtain performance on par with closed source models. The architecture is transformer
     based with multi-headed latent attention applied to a mixture of experts model.
     The first layer is an embedding layer that is shared by all models and trained
-    on the data (as opposed to using word2vec). Next, the architecture passes through
-    alternating multi-headed latent attention and feed-forward (i.e., MLP) layers.
-    The latent attention blocks are shared between all experts. Each expert then has
-    its own multi-layer perceptron consisting of feed-forward layers with sigmoidal
-    activation functions. Each individual expert model is run sequential and used
-    to generate a sequence of multiple output tokens (as opposed to just the next
-    word). All experts are run in parallel. The predictions from each expert are ultimately
-    combined in an output layer and hit with a softmax to generate the logits for
-    the next word prediction(s). During training, the objective is the CrossEntropy
-    loss for each prediction depth. The authors use model sharding and pipeline paralleism
-    during training. They break apart and overlap forward and backward pass computations
-    to create 2 overlapping pipelines, which they use to hide latency. The model is
-    trained in FP8 and mixed precision. The weight checkpoints are publicly available
-    at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully'
+    on the data. Next, the architecture passes through alternating multi-headed latent
+    attention and feed-forward (i.e., MLP) layers. The latent attention blocks are
+    shared between all experts. Each expert then has its own multi-layer perceptron
+    consisting of feed-forward layers with sigmoidal activation functions. Each individual
+    expert model is run sequential and used to generate a sequence of multiple output
+    tokens (as opposed to just the next word). All experts are run in parallel. The
+    predictions from each expert are ultimately combined in an output layer and hit
+    with a softmax to generate the logits for the next word prediction(s). During
+    training, the objective is the CrossEntropy loss for each prediction depth. The
+    authors use model sharding and pipeline paralleism during training. They break
+    apart and overlap forward and backward pass computations to create 2 overlapping
+    pipelines, which they use to hide latency. The model is trained in FP8 and mixed
+    precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3
+    TODO: read this report carefully'
   doi: 10.48550/arXiv.2412.19437
   edition: null
   editors: []
@@ -15326,10 +15437,9 @@ mikolov2013efficient:
     regularization). The authors show that a relatively small and simple model with
     semantic regularization is sufficient to train such an embedding in less than
     a day, and the resulting word2vec embedding layer is fast and cheap to evaluate.
-    The word2vec embedding would go on to be the basis for most early transformer
-    models. Modern LLMs train their own embedding as the embedding layers of the network,
-    but use the same techniques as word2vec. The open source software is available
-    for download from Google: https://code.google.com/archive/p/word2vec'
+    The word2vec embedding would go on to be the basis for most early language models,
+    until being replaced by BPE for transformer models and modern LLMs. The software
+    is available for download from Google: https://code.google.com/archive/p/word2vec'
   doi: null
   edition: null
   editors: []
@@ -15347,7 +15457,6 @@ mikolov2013efficient:
   - artificial intelligence
   - machine learning
   - ML
-  - LLMs
   - representation learning
   - open source
   - neural networks
@@ -17293,6 +17402,107 @@ pronzato2017minimax:
   volume: '158'
   web: null
   year: 2017
+radford2018improving:
+  address: San Francisco, CA, USA
+  articleno: null
+  authors:
+  - - Alec
+    - Radford
+  - - Karthik
+    - Narasimhan
+  - - Tim
+    - Salimans
+  - - Ilya
+    - Sutskever
+  - - ''
+    - others
+  chapter: null
+  descrip: The original GPT paper, describing the techniques used to train the GPT-1
+    language model. The highlighted contribution over previous decoder-only transformer
+    architectures, is that they focus on training a foundational model on massive
+    amounts of unlabeled web text by simply masking out and generating the next word
+    in each block of web text and using the true next word as the label. Then, after
+    training a massive generative model in this way, they fine-tune the model on carefully
+    curated labeled data in order to optimize it for language tasks. This would become
+    the paradigm which all LLMs are built on, of training a foundational model then
+    fine-tuning.
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: OpenAI
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - transformers
+  - LLMs
+  title: Improving language understanding by generative pre-training
+  type: techreport
+  url: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
+  venue: null
+  volume: null
+  web: null
+  year: 2018
+radford2019language:
+  address: San Francisco, CA, USA
+  articleno: null
+  authors:
+  - - Alec
+    - Radford
+  - - Jeffrey
+    - Wu
+  - - Rewon
+    - Child
+  - - David
+    - Luan
+  - - Dario
+    - Amodei
+  - - Ilya
+    - Sutskever
+  - - ''
+    - others
+  chapter: null
+  descrip: The credited "GPT-2" paper, describing OpenAI's experience in creating
+    the foundational GPT2 language model based on web text. They describe how they
+    have built on top of GPT-1, including the usage of BPE embedding (tokenizer) scheme.
+    Their claim is that by simply memorizing web text and language, GPT-2 is able
+    to complete a reasonably wide variety of tasks and produce sound answers to many
+    questions. This is observation represents the true birth of LLM assistants.
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: OpenAI
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - transformers
+  - LLMs
+  title: Language models are unsupervised multitask learners
+  type: techreport
+  url: https://storage.prod.researchhub.com/uploads/papers/2020/06/01/language-models.pdf
+  venue: null
+  volume: null
+  web: null
+  year: 2019
 raghunath2017global:
   address: Virginia Beach, VA, USA
   articleno: null
@@ -18490,6 +18700,59 @@ schweidtmann2018machine:
   volume: '352'
   web: null
   year: 2018
+sennrich2016neural:
+  address: Berlin, Germany
+  articleno: null
+  authors:
+  - - Rico
+    - Sennrich
+  - - Barry
+    - Haddow
+  - - Alexandra
+    - Birch
+  chapter: null
+  descrip: The original paper for applying byte pair encoding (BPE) to words. This
+    is the method used to embed words into numerical tokens for modern LLMs. The idea
+    is to recursively combine the most commonly paired letters into a single token.
+    Then an encoding value (number) is assigned to every token in the resulting vocabulary,
+    to generate a massive encoder/decoder lookup table.
+  doi: 10.18653/v1/P16-1162
+  edition: null
+  editors:
+  - - Katrin
+    - Erk
+  - - Noah A.
+    - Smith
+  git: null
+  isbn: null
+  issn: null
+  month: aug
+  note: null
+  number: null
+  pages:
+  - '1715'
+  - '1725'
+  publisher: Association for Computational Linguistics
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - representation learning
+  - neural networks
+  - scientific machine learning
+  - SciML
+  - high dimension
+  - dimension reduction
+  title: Neural Machine Translation of Rare Words with Subword Units
+  type: inproceedings
+  url: https://aclanthology.org/P16-1162/
+  venue: 'Proceedings of the 54th Annual Meeting of the Association for Computational
+    Linguistics (Volume 1: Long Papers)'
+  volume: null
+  web: null
+  year: 2016
 shang2020survey:
   address: null
   articleno: null
