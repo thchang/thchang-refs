@@ -54,6 +54,20 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks},
 }
 
+% The official GPT-3 report, showing that scaling the same techniques from the GPT-1/2 models up to a 175 billion of parameter model is sufficient to provide state-of-the-art zero- and one-shot performance on a wide variety of benchmark problems. The fine-tuning of GPT-3 would become the original ChatGPT
+@inproceedings{brown2020language,
+	author = {Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
+	editor = {Larochelle, H. and Ranzato, M. and Hadsell, R. and Balcan, M.F. and Lin, H.},
+	title = {Language Models are Few-Shot Learners},
+	year = {2020},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {33},
+	pages = {1877--1901},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf},
+	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs},
+}
+
 % The publication for the XGBoost numerical software. XGBoost can be used to efficiently compute optimized gradient boosted decision trees on massive datasets via a fully-distributed algorithm that can be configured to run on Hadoop, SGE, and MPI. It can also be run on NVIDIA GPUs using CUDA. The software is fully open-source and written in highly optimized C++, though everyone uses it through its Python interface. The download is available at github.com/dmlc/xgboost. Most data science competition winners use XGBoost for tabular data
 @inproceedings{chen2016xgboost,
 	author = {Chen, Tianqi and Guestrin, Carlos},
@@ -527,15 +541,7 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, open source, optimization},
 }
 
-% Original word2vec publication: embedding words into a continuous vector space
-% in a "dense" way, meaning that the embedding is somewhat minimal and no extra
-% dimensions are added and word relationships are preserved (as in semantic
-% regularization). The authors show that a relatively small and simple model
-% with semantic regularization is sufficient to train such an embedding in less
-% than a day, and the resulting word2vec embedding layer is fast and cheap to
-% evaluate. The word2vec embedding would go on to be the basis for most early
-% language models, until being replaced by BPE for transformer models and
-% modern LLMs. The software is available for download from Google: https://code.google.com/archive/p/word2vec
+% Original word2vec publication: embedding words into a continuous vector space in a "dense" way, meaning that the embedding is somewhat minimal and no extra dimensions are added and word relationships are preserved (as in semantic regularization). The authors show that a relatively small and simple model with semantic regularization is sufficient to train such an embedding in less than a day, and the resulting word2vec embedding layer is fast and cheap to evaluate. The word2vec embedding would go on to be the basis for most early language models, until being replaced by BPE for transformer models and modern LLMs. The software is available for download from Google: https://code.google.com/archive/p/word2vec
 @inproceedings{mikolov2013efficient,
 	author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
 	title = {Efficient estimation of word representations in vector space},
@@ -640,6 +646,28 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, open source, decision trees, neural networks},
 }
 
+% The original GPT paper, describing the techniques used to train the GPT-1 language model. The highlighted contribution over previous decoder-only transformer architectures, is that they focus on training a foundational model on massive amounts of unlabeled web text by simply masking out and generating the next word in each block of web text and using the true next word as the label. Then, after training a massive generative model in this way, they fine-tune the model on carefully curated labeled data in order to optimize it for language tasks. This would become the paradigm which all LLMs are built on, of training a foundational model then fine-tuning.
+@techreport{radford2018improving,
+	author = {Radford, Alec and Narasimhan, Karthik and Salimans, Tim and Sutskever, Ilya and others, },
+	title = {Improving language understanding by generative pre-training},
+	year = {2018},
+	institution = {OpenAI},
+	address = {San Francisco, CA, USA},
+	url = {https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf},
+	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs},
+}
+
+% The credited "GPT-2" paper, describing OpenAI's experience in creating the foundational GPT2 language model based on web text. They describe how they have built on top of GPT-1, including the usage of BPE embedding (tokenizer) scheme. Their claim is that by simply memorizing web text and language, GPT-2 is able to complete a reasonably wide variety of tasks and produce sound answers to many questions. This is observation represents the true birth of LLM assistants.
+@techreport{radford2019language,
+	author = {Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya and others, },
+	title = {Language models are unsupervised multitask learners},
+	year = {2019},
+	institution = {OpenAI},
+	address = {San Francisco, CA, USA},
+	url = {https://storage.prod.researchhub.com/uploads/papers/2020/06/01/language-models.pdf},
+	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs},
+}
+
 % One of the original papers proposing that overfitting, the bias variance tradeoff curve, and generalization error are all misunderstood and misused ideas. The authors present a true holdout set of lost and never-before-seen ImageNet and CIFAR-10 data, and show that massive interpolatory models (models trained to zero error) generalize just as well as the well-regularized models on this new data (better because their training error was lower and total error = training error + generalization error). Ben would go on to claim that (1) you want to interpolate a lot of data that we claim we don't want to overfit (such as image data). (2) Models that interpolate don't generalize poorly in practice and large overparameterized models always perform better in practice. And (3) Hyperparameter tuning is basically a form of training on the test set in order to find the best model that interpolates the training data. This paper was an eye-opener for me personally, and lead me to firmly believe in interpolation for high-dimensional data
 @inproceedings{recht2019imagenet,
 	author = {Recht, Benjamin and Roelofs, Rebecca and Schmidt, Ludwig and Shankar, Vaishaal},
@@ -711,6 +739,22 @@
 	institution = {arXiv cs.LG},
 	url = {https://arxiv.org/abs/1707.06347},
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, neural networks, optimization},
+}
+
+% The original paper for applying byte pair encoding (BPE) to words. This is the method used to embed words into numerical tokens for modern LLMs. The idea is to recursively combine the most commonly paired letters into a single token. Then an encoding value (number) is assigned to every token in the resulting vocabulary, to generate a massive encoder/decoder lookup table.
+@inproceedings{sennrich2016neural,
+	author = {Sennrich, Rico and Haddow, Barry and Birch, Alexandra},
+	editor = {Erk, Katrin and Smith, Noah A.},
+	title = {Neural Machine Translation of Rare Words with Subword Units},
+	year = {2016},
+	month = {aug},
+	booktitle = {Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+	pages = {1715--1725},
+	organization = {Association for Computational Linguistics},
+	location = {Berlin, Germany},
+	doi = {10.18653/v1/P16-1162},
+	url = {https://aclanthology.org/P16-1162/},
+	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks},
 }
 
 % DeepSeekMath: Describes how DeepSeek's mathematical specialist model was trained TODO: read this report carefully
@@ -947,75 +991,3 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, neural networks, optimization},
 }
 
-% The credited "GPT-2" paper, describing OpenAI's experience in creating the
-% foundational GPT2 language model based on web text.  They describe how they
-% have built on top of GPT-1, including the usage of BPE embedding (tokenizer)
-% scheme.  Their claim is that by simply memorizing web text and language,
-% GPT-2 is able to complete a reasonably wide variety of tasks and produce
-% sound answers to many questions.  This is observation represents the true birth of LLM assistants.
-@techreport{radford2019language,
-  author={Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya and others},
-  title={Language models are unsupervised multitask learners},
-  year={2019},
-  institution={OpenAI},
-  address={San Francisco, CA, USA}
-  url = {https://storage.prod.researchhub.com/uploads/papers/2020/06/01/language-models.pdf},
-  keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs},
-}
-
-% The original GPT paper, describing the techniques used to train the GPT-1
-% language model.  The highlighted contribution over previous decoder-only
-% transformer architectures, is that they focus on training a foundational
-% model on massive amounts of unlabeled web text by simply masking out and
-% generating the next word in each block of web text and using the true next
-% word as the label.  Then, after training a massive generative model in this
-% way, they fine-tune the model on carefully curated labeled data in order to
-% optimize it for language tasks.  This would become the paradigm which all
-% LLMs are built on, of training a foundational model then fine-tuning.
-@techreport{radford2018improving,
-  title={Improving language understanding by generative pre-training},
-  author={Radford, Alec and Narasimhan, Karthik and Salimans, Tim and Sutskever, Ilya and others},
-  year={2018},
-  institution={OpenAI},
-  address={San Francisco, CA, USA},
-  url = {https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf},
-  keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs},
-}
-
-% The original paper for applying byte pair encoding (BPE) to words.  This is
-% the method used to embed words into numerical tokens for modern LLMs.  The
-% idea is to recursively combine the most commonly paired letters into a single
-% token.  Then an encoding value (number) is assigned to every token in the
-% resulting vocabulary, to generate a massive encoder/decoder lookup table.
-@inproceedings{sennrich2016neural,
-    title = {Neural Machine Translation of Rare Words with Subword Units},
-    author = {Sennrich, Rico and Haddow, Barry and Birch, Alexandra},
-    editor = {Erk, Katrin and Smith, Noah A.},
-    booktitle = {Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
-    month = {aug},
-    year = {2016},
-    location = {Berlin, Germany},
-    publisher = {Association for Computational Linguistics},
-    url = {https://aclanthology.org/P16-1162/},
-    doi = {10.18653/v1/P16-1162},
-    pages = {1715--1725},
-	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks},
-}
-
-% The official GPT-3 report, showing that scaling the same techniques from the
-% GPT-1/2 models up to a 175 billion of parameter model is sufficient to provide
-% state-of-the-art zero- and one-shot performance on a wide variety of
-% benchmark problems.  The fine-tuning of GPT-3 would become the original
-% ChatGPT
-@inproceedings{brown2020language,
- author = {Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
- pages = {1877--1901},
- publisher = {Curran Associates, Inc.},
- title = {Language Models are Few-Shot Learners},
- url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf},
- volume = {33},
- year = {2020},
-  keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs},
-}
