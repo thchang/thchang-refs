@@ -1,3 +1,13 @@
+% Introducing layer normalization: as opposed to batch normalization, where we normalize each dimension to a Gaussian (with trainable mean and standard deviation) within each batch, we instead normalize either the inputs to or outputs of each layer. This normalization helps stabilize the neural network layer inputs during training, so that adjusting the weights to an earlier layer doesn't completely invalidate the weights at a later layer within a single step of training, and allows the weights in each layer to adjust gradually and together
+@inproceedings{ba2016layer,
+	author = {Ba, Jimmy Lei and Kiros, Jamie Ryan and Hinton, Geoffrey E.},
+	title = {Layer Normalization},
+	year = {2016},
+	booktitle = {Proceedings of the 30th International Conference on Neural Information Processing Systems (NIPS 2016) Deep Learning Symposium},
+	url = {https://arxiv.org/abs/1607.06450v1},
+	keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, classification, neural networks, CNNs, regularization, overfitting, optimization},
+}
+
 % A review article on representation learning and unifying the ideas of representation learning, density estimation, and manifold learning under a single geometric umbrella. The authors show broadly how representation learning has been the key to the performance of neural networks across many fields, often allowing us to break the curse of dimensionality. Additionally, they discuss the general requirements (priors) about a problem / function for representation learning to be an effective approach.
 @article{bengio2013representation,
 	author = {Bengio, Yoshua and Courville, Aaron and Vincent, Pascal},
@@ -336,6 +346,21 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, open source},
 }
 
+% The original ResNet paper, which proposes the usage of residual layers to help solve the vanishing gradient problem when training deep neural networks. This technique is still used today in training LLMs. The original paper is applied to image segmentation and classification problems (on CIFAR-10 and ImageNet) and the resulting models ResNet-50, -101, and -152 were considered state-of-the-art. While the author's original model and weights are available open source, they recommend using FAIR's repo which also contains open source training in pytorch: github.com/facebookarchive/fb.resnet.torch
+@inproceedings{he2016deep,
+	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	title = {Deep Residual Learning for Image Recognition},
+	year = {2016},
+	month = {6},
+	booktitle = {2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+	pages = {770--778},
+	organization = {IEEE},
+	location = {Las Vegas, NV, USA},
+	doi = {10.1109/CVPR.2016.90},
+	url = {https://arxiv.org/pdf/1512.03385},
+	keywords = {AI, artificial intelligence, machine learning, ML, classification, neural networks, CNNs, regularization, overfitting, optimization},
+}
+
 % Original publication of the Boltzman machine, an early type of AI model that made predictions by modeling the Ising spin-glass model with public input units (set by the user with the independent variables during inference) and hidden internal units that are correlated to eachother and the public units through learned Ising model weights and biases. Each unit has a binary {0, 1} state. The energy of the system is the output (prediction). The weights and biases are learned through simulated annealing, and in this way, the model is not unlike quantum annealing. The model learns a distribution of potential inference values for each input combination. Thus, it is a form of distribution learning. These were a commonly used alternative to neural networks for a time, and often cited as explainable alternatives. The binary state variables would later be replaced by sigmoidal activation functions (for smoothness)
 @inproceedings{hinton1983optimal,
 	author = {Hinton, Geoffrey E and Sejnowski, Terrence J},
@@ -390,6 +415,19 @@
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf},
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, overfitting},
+}
+
+% The specific BPE tokenizer used by OpenAI in all their LLMs
+@misc{jain2022tiktoken,
+	author = {Jain, Shantanu and others, },
+	title = {tiktoken},
+	year = {2022},
+	number = {0.9.0},
+	howpublished = {GitHub repository},
+	publisher = {GitHub},
+	git = {https://github.com/openai/tiktoken},
+	note = {Last accessed: May 4, 2025},
+	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks, LLMs},
 }
 
 % LiveCodeBench is a LLM code generation evaluation benchmark. It continuously collects new problems from CodeBench and annotates them with their release dates, so that LLMs can be evaluated on just problems from specific timeframes. This allows researchers to prevent contamination of the test set with data from the training set. An open source Python interface is available at: github.com/LiveCodeBench/LiveCodeBench Submissions to the leaderboard are made via pull request to github.com/LiveCodeBench/submissions
@@ -989,54 +1027,5 @@
 	institution = {arXiv preprint arXiv:1909.08593},
 	url = {https://arxiv.org/abs/1909.08593},
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, neural networks},
-}
-
-% The original ResNet paper, which proposes the usage of residual layers to
-% help solve the vanishing gradient problem when training deep neural networks.
-% This technique is still used today in training LLMs.  The original paper is
-% applied to image segmentation and classification problems (on CIFAR-10 and
-% ImageNet) and the resulting models ResNet-50, -101, and -152 were considered
-% state-of-the-art.  While the author's original model and weights are
-% available open source, they recommend using FAIR's repo which also contains
-% open source training in pytorch:  github.com/facebookarchive/fb.resnet.torch
-@inproceedings{he2016deep,
-    author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
-    booktitle={2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-    title={Deep Residual Learning for Image Recognition},
-    year={2016},
-    pages={770-778},
-    doi={10.1109/CVPR.2016.90},
-    url = {https://arxiv.org/pdf/1512.03385},
-    keywords = {AI, artificial intelligence, machine learning, ML, classification, neural networks, CNNs, regularization, overfitting, optimization},
-}
-
-% The specific BPE tokenizer used by OpenAI in all their LLMs
-@misc{jain2024tiktoken,
-	author = {Jain, Shantanu and others, },
-	title = {tiktoken},
-	year = {2022},
-	booktitle = {GitHub repository},
-	number = {0.9.0},
-	publisher = {GitHub},
-	git = {https://github.com/openai/tiktoken},
-	note = {Last accessed: May 4, 2025},
-	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks, LLMs},
-}
-
-% Introducing layer normalization: as opposed to batch normalization, where we
-% normalize each dimension to a Gaussian (with trainable mean and standard
-% deviation) within each batch, we instead normalize either the inputs to or
-% outputs of each layer.  This normalization helps stabilize the neural network
-% layer inputs during training, so that adjusting the weights to an earlier
-% layer doesn't completely invalidate the weights at a later layer within a
-% single step of training, and allows the weights in each layer to adjust
-% gradually and together
-@inproceedings{ba2016layer,
-    author = {Ba, Jimmy Lei and Kiros, Jamie Ryan and Hinton, Geoffrey E.},
-    title = {Layer Normalization},
-    year = {2016},
-    booktitle = {Proceedings of the 30th International Conference on Neural Information Processing Systems (NIPS 2016) Deep Learning Symposium},
-    url = {https://arxiv.org/abs/1607.06450v1},
-    keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, classification, neural networks, CNNs, regularization, overfitting, optimization},
 }
 
