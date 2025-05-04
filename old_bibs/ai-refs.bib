@@ -454,7 +454,7 @@
 	volume = {25},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
-	keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, classification, neural networks, CNNs, regularization, overfitting},
+	keywords = {AI, artificial intelligence, machine learning, ML, classification, neural networks, CNNs, regularization, overfitting},
 }
 
 % Stochastic approximation algorithm (i.e., stochastic gradient descent) and how to analyze its radius of convergence for a fixed step-size -- you can decay its step size at a square-summable but not summable rate to guarantee convergence in the limit
@@ -754,7 +754,7 @@
 	location = {Berlin, Germany},
 	doi = {10.18653/v1/P16-1162},
 	url = {https://aclanthology.org/P16-1162/},
-	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks, LLMs},
 }
 
 % DeepSeekMath: Describes how DeepSeek's mathematical specialist model was trained TODO: read this report carefully
@@ -863,7 +863,7 @@
 	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
 	title = {Attention is all you need},
 	year = {2017},
-	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPs '17)},
+	booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems (NeurIPS '17)},
 	pages = {1--11},
 	organization = {Curran Associates, Inc.},
 	location = {Long Beach, California, USA},
@@ -988,6 +988,55 @@
 	year = {2019},
 	institution = {arXiv preprint arXiv:1909.08593},
 	url = {https://arxiv.org/abs/1909.08593},
-	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, neural networks, optimization},
+	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, neural networks},
+}
+
+% The original ResNet paper, which proposes the usage of residual layers to
+% help solve the vanishing gradient problem when training deep neural networks.
+% This technique is still used today in training LLMs.  The original paper is
+% applied to image segmentation and classification problems (on CIFAR-10 and
+% ImageNet) and the resulting models ResNet-50, -101, and -152 were considered
+% state-of-the-art.  While the author's original model and weights are
+% available open source, they recommend using FAIR's repo which also contains
+% open source training in pytorch:  github.com/facebookarchive/fb.resnet.torch
+@inproceedings{he2016deep,
+    author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+    booktitle={2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    title={Deep Residual Learning for Image Recognition},
+    year={2016},
+    pages={770-778},
+    doi={10.1109/CVPR.2016.90},
+    url = {https://arxiv.org/pdf/1512.03385},
+    keywords = {AI, artificial intelligence, machine learning, ML, classification, neural networks, CNNs, regularization, overfitting, optimization},
+}
+
+% The specific BPE tokenizer used by OpenAI in all their LLMs
+@misc{jain2024tiktoken,
+	author = {Jain, Shantanu and others, },
+	title = {tiktoken},
+	year = {2022},
+	booktitle = {GitHub repository},
+	number = {0.9.0},
+	publisher = {GitHub},
+	git = {https://github.com/openai/tiktoken},
+	note = {Last accessed: May 4, 2025},
+	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks, LLMs},
+}
+
+% Introducing layer normalization: as opposed to batch normalization, where we
+% normalize each dimension to a Gaussian (with trainable mean and standard
+% deviation) within each batch, we instead normalize either the inputs to or
+% outputs of each layer.  This normalization helps stabilize the neural network
+% layer inputs during training, so that adjusting the weights to an earlier
+% layer doesn't completely invalidate the weights at a later layer within a
+% single step of training, and allows the weights in each layer to adjust
+% gradually and together
+@inproceedings{ba2016layer,
+    author = {Ba, Jimmy Lei and Kiros, Jamie Ryan and Hinton, Geoffrey E.},
+    title = {Layer Normalization},
+    year = {2016},
+    booktitle = {Proceedings of the 30th International Conference on Neural Information Processing Systems (NIPS 2016) Deep Learning Symposium},
+    url = {https://arxiv.org/abs/1607.06450v1},
+    keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, classification, neural networks, CNNs, regularization, overfitting, optimization},
 }
 
