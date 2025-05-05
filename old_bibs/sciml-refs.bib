@@ -337,7 +337,7 @@
 	url = {http://www.ams.org/gsm/101},
 	isbn = {9780821847985},
 	issn = {1065-7339},
-	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, RBFs, high dimension, interpolation, regression, approximation theory, RBFs},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, RBFs, high dimension, interpolation, regression, approximation theory},
 }
 
 % The Keras docs -- great and highly impactful open source Python software, needs no introduction. A simplified interface for quickly building neural networks and other deep learning models with various backends frameworks such as Tensorflow, jax, and Pytorch.
@@ -390,47 +390,21 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, high dimension},
 }
 
-% DeBoor's classic textbook on splines and B-spline interpolation, covering
-% polynomial interpolation, divided differences, and error kernels; node
-% spacing and chebyshev nodes; piecewise linear and polynomial interpolation;
-% piecewise polynomials as combination of basis functions; generalized B-spline
-% via a recursive definition; algorithms for stably building and evaluating B-Splines;
-% knot and node placement and error rates and diminishing returns; The
-% Schoenberg-Whitney Theorem and B-splines as RKHS kernels; multivariate
-% B-splines as tensor products; applications; and Fortran subroutines for all
-% steps in the process.
+% DeBoor's classic textbook on splines and B-spline interpolation, covering polynomial interpolation, divided differences, and error kernels; node spacing and chebyshev nodes; piecewise linear and polynomial interpolation; piecewise polynomials as combination of basis functions; generalized B-spline via a recursive definition; algorithms for stably building and evaluating B-Splines; knot and node placement and error rates and diminishing returns; The Schoenberg-Whitney Theorem and B-splines as RKHS kernels; multivariate B-splines as tensor products; applications; and Fortran subroutines for all steps in the process.
 @book{deboor1978practical,
-    author = {de Boor, Carl R.},
-    year = {1978},
-    month = {jan},
-    title = {A Practical Guide to Splines},
-    journal = {Applied Mathematical Sciences},
-    address = {New York, NY, USA},
-    publisher = {Springer-Verlag},
-    doi = {10.2307/2006241},
-    url = {https://www.researchgate.net/publication/200744645_A_Practical_Guide_to_Spline},
+	author = {de Boor, Carl R.},
+	title = {A Practical Guide to Splines},
+	year = {1978},
+	month = {jan},
+	booktitle = {Applied Mathematical Sciences},
+	volume = {34},
+	number = {149},
+	publisher = {Springer-Verlag},
+	address = {New York, NY, USA},
+	doi = {10.2307/2006241},
+	url = {https://www.researchgate.net/publication/200744645_A_Practical_Guide_to_Spline},
+	issn = {0025-5718},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, RBFs, high dimension, interpolation, regression, approximation theory},
-}
-
-% Landmark paper showing that given a target function f, set of scattered data
-% (xi, f(xi)), and family of SPD kernel functions K(x1, x2) spanning
-% the RKHS, the unique basis for the RKHS is K(xi, x), and furthermore the
-% minimizer for any definite integral of Lf for (where L is any linear
-% operator) can be found by solving a least squares problem with the kernel
-% matrix K(xi, xj)*b = f(xi) for any pair xi, xj in (xi, f(xi)).  This is the
-% theoretical basis for all RBF interpolation and regularized RBFs / RBFs with
-% tail.
-@article{kimeldorf1971some,
-  title={Some results on {Tchebycheffian} spline functions},
-  author={Kimeldorf, George and Wahba, Grace},
-  journal={Journal of mathematical analysis and applications},
-  volume={33},
-  number={1},
-  pages={82--95},
-  year={1971},
-  publisher={Elsevier},
-  url={https://pages.stat.wisc.edu/~wahba/ftp1/oldie/kw71.pdf},
-	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, RBFs, high dimension, interpolation, regression, approximation theory, RBFs},
 }
 
 % Original reference for Delaunay triangulations -- I have not read this, it's in French, but this is the proper way to cite the original idea for Delaunay triangulations
@@ -872,6 +846,23 @@
 	url = {http://ieeexplore.ieee.org/document/7959606},
 	issn = {1041-4347},
 	keywords = {machine learning, ML, scientific machine learning, SciML, regression, classification},
+}
+
+% Landmark paper showing that given a target function f, set of scattered data (xi, f(xi)), and family of SPD kernel functions K(x1, x2) spanning the RKHS, the unique basis for the RKHS is K(xi, x), and furthermore the minimizer for any definite integral of Lf for (where L is any linear operator) can be found by solving a least squares problem with the kernel matrix K(xi, xj)*b = f(xi) for any pair xi, xj in (xi, f(xi)). This is the theoretical basis for all RBF interpolation and regularized RBFs / RBFs with tail.
+@article{kimeldorf1971some,
+	author = {Kimeldorf, George and Wahba, Grace},
+	title = {Some results on {Tchebycheffian} spline functions},
+	year = {1971},
+	month = {1},
+	journal = {Journal of mathematical analysis and applications},
+	volume = {33},
+	number = {1},
+	pages = {82--95},
+	publisher = {Elsevier},
+	doi = {10.1016/0022-247x(71)90184-3},
+	url = {https://pages.stat.wisc.edu/~wahba/ftp1/oldie/kw71.pdf},
+	issn = {0022-247X},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, RBFs, high dimension, interpolation, regression, approximation theory},
 }
 
 % The original paper defining variational autoencoders, a standard practice in performing dimension reduction and training models that encode continuous latent spaces. The idea being to train and optimize an encoder neural network model whose posterior is a continuous latent space to generate samples in the latent space distribution based on inputs from the original dataset without "losing information", then jointly train a decoder model that samples the latent distribution to produce the original observations. The idea being to randomly sample new data points that look like the original data. When trained jointly, these models can also be used as embedder/extractor or compression/decompression pairs.
