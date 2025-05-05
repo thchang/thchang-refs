@@ -776,7 +776,7 @@ anderson1999lapack:
   - Fortran
   title: '{LAPACK} Users'' Guide'
   type: book
-  url: null
+  url: https://netlib.org/lapack/lug/
   venue: null
   volume: null
   web: null
@@ -1532,7 +1532,7 @@ aurenhammer2013voronoi:
   - high dimension
   title: Voronoi diagrams and {D}elaunay triangulations
   type: book
-  url: null
+  url: https://www.worldscientific.com/worldscibooks/10.1142/8685?srsltid=AfmBOoqYyCEcMxI7JQyJKonU2CZAy-dXYFcqnxJkrlJCSsAMHLbMPI70#t=aboutBook
   venue: null
   volume: null
   web: null
@@ -2301,7 +2301,7 @@ belkin2018overfitting:
   title: Overfitting or perfect fitting? {R}isk bounds for classification and regression
     rules that interpolate
   type: inproceedings
-  url: null
+  url: https://proceedings.neurips.cc/paper/2018/hash/e22312179bf43e61576081a2f250f845-Abstract.html
   venue: Proceedings of the 32nd International Conference on Neural Information Processing
     Systems (NIPS'18)
   volume: null
@@ -2944,9 +2944,9 @@ blackford1997scalapack:
   - Fortran
   - parallel programming
   - MPI
-  title: ScaLAPACK Users' Guide
+  title: '{ScaLAPACK} Users'' Guide'
   type: book
-  url: null
+  url: https://www.netlib.org/scalapack/
   venue: null
   volume: '4'
   web: null
@@ -5333,7 +5333,7 @@ chen2004optimal:
   - UQ
   title: Optimal {D}elaunay triangulations
   type: article
-  url: null
+  url: https://www.math.uci.edu/~chenlong/Papers/Chen.L%3BXu.J2004.pdf
   venue: Journal of Computational Mathematics
   volume: '22'
   web: null
@@ -5646,7 +5646,7 @@ cheng2012delaunay:
   - algorithms
   title: Delaunay Mesh Generation
   type: book
-  url: null
+  url: https://people.eecs.berkeley.edu/~jrs/meshbook.html
   venue: null
   volume: null
   web: null
@@ -5874,7 +5874,7 @@ christianson2022traditional:
   title: Traditional kriging versus modern Gaussian processes for large-scale mining
     data
   type: article
-  url: null
+  url: https://arxiv.org/abs/2207.10138
   venue: 'Statistical Analysis and Data Mining: The ASA Data Science Journal'
   volume: null
   web: null
@@ -6514,7 +6514,7 @@ dantzig1998linear:
   - constrained optimization
   title: Linear Programming and Extensions
   type: book
-  url: null
+  url: https://d1wqtxts1xzle7.cloudfront.net/56278680/Libro_Linear_Programming_George_Dantzig-libre.pdf?1523307505=&response-content-disposition=inline%3B+filename%3DLinear_Programming_and_Extensions.pdf&Expires=1746491165&Signature=WQRD07CTKkhpfjxG1R6Kb2tSq0cRnDUia1ETKdgTQX2wbUxpA2p7ZGudVpOpbsKgUZzsKL-U3CddGBaVVSTr~TSLwPadmYe8xHRVZ4KqyB~ms5zyu08vntJ0V-pRNY0sws9H~ktLJTgoABlZMkoYDA23Dbrh07yQqukyaqHsDuoTEZRzng6AIqN7CXO1KW2M4J~rS-M1mmM3bdTSMAoWPozK7Suea-HJPd7QbCMq2hB0JY5mhhi6nUHa6zIQVmjTCcPPdnX9O4lYgYPQgOBiMlIJ5yhYolhlHKXMA~2-g3rbpe4kqJXIEqICSWPByh72uohGvRJkDgUX-CkBw7FZNA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
   venue: null
   volume: null
   web: null
@@ -7261,7 +7261,7 @@ deberg2008computational:
   - convex hull
   title: 'Computational Geometry: Algorithms and Applications'
   type: book
-  url: null
+  url: https://cimec.org.ar/foswiki/pub/Main/Cimec/GeometriaComputacional/DeBerg_-_Computational_Geometry_-_Algorithms_and_Applications_2e.pdf
   venue: null
   volume: null
   web: null
@@ -7438,7 +7438,7 @@ deryck2022generic:
   title: Generic bounds on the approximation error for physics-informed (and) operator
     learning
   type: article
-  url: null
+  url: https://proceedings.neurips.cc/paper_files/paper/2022/file/46f0114c06524debc60ef2a72769f7a9-Paper-Conference.pdf
   venue: Advances in Neural Information Processing Systems
   volume: '35'
   web: null
@@ -11676,7 +11676,7 @@ ios2004information:
   title: '{Information technology -- Programming languages -- Fortran -- Part 1: Base
     Language}'
   type: techreport
-  url: null
+  url: https://j3-fortran.org/doc/year/04/04-007.pdf
   venue: null
   volume: null
   web: null
@@ -11707,7 +11707,7 @@ ios2010information:
   title: '{Information technology -- Programming languages -- Fortran -- Part 1: Base
     Language}'
   type: techreport
-  url: null
+  url: https://j3-fortran.org/doc/year/10/10-007.pdf
   venue: null
   volume: null
   web: null
@@ -12300,7 +12300,7 @@ kale1993charm:
   issn: null
   month: '10'
   note: null
-  number: ISO/IEC 1539-1:2010(E)
+  number: null
   pages:
   - 18
   publisher: Association for Computing Machinery
@@ -13051,7 +13051,7 @@ kleen2005numa:
   - C
   title: A {NUMA} {API} for {Linux}
   type: techreport
-  url: null
+  url: https://halobates.de/numaapi3.pdf
   venue: null
   volume: null
   web: null
@@ -13188,7 +13188,7 @@ kovachki2021neural:
   - approximation theory
   title: 'Neural Operator: Learning Maps Between Function Spaces'
   type: article
-  url: null
+  url: https://www.jmlr.org/papers/volume24/21-1524/21-1524.pdf
   venue: CoRR
   volume: abs/2108.08481
   web: null
@@ -13252,17 +13252,13 @@ kreps2011kafka:
   web: null
   year: 2011
 krizhevsky2009learning:
-  address: null
+  address: Toronto, ON, Canada
   articleno: null
   authors:
   - - Alex
     - Krizhevsky
-  - - Geoffrey
-    - Hinton
-  - - ''
-    - others
   chapter: null
-  descrip: The official techreport for the CIFAR-10 dataset -- one of the next most
+  descrip: The official reference for the CIFAR-10 dataset -- one of the next most
     popular neural network and image classification benchmark problems for machine
     learning and AI research in the 2010s. Just a little harder than MNIST due to
     having lower quality images and more (imbalanced) classes
@@ -13276,7 +13272,7 @@ krizhevsky2009learning:
   note: null
   number: null
   pages: null
-  publisher: Toronto, ON, Canada
+  publisher: University of Toronto, Dept. of Computer Science
   series: null
   tags:
   - AI
@@ -13287,8 +13283,8 @@ krizhevsky2009learning:
   - classification
   - neural networks
   title: Learning multiple layers of features from tiny images
-  type: techreport
-  url: null
+  type: phdthesis
+  url: https://www.cs.utoronto.ca/~kriz/learning-features-2009-TR.pdf
   venue: null
   volume: null
   web: null
@@ -13462,7 +13458,7 @@ lai2003stochastic:
   - SciML
   title: Stochastic approximation
   type: article
-  url: null
+  url: https://projecteuclid.org/journals/annals-of-statistics/volume-31/issue-2/Stochastic-approximation-invited-paper/10.1214/aos/1051027873.full
   venue: The annals of Statistics
   volume: '31'
   web: null
@@ -13814,7 +13810,7 @@ lax2002functional:
   - approximation theory
   title: Functional analysis
   type: book
-  url: null
+  url: https://books.google.com/books?hl=en&lr=&id=18VqDwAAQBAJ&oi=fnd&pg=PR17&ots=8FU4i_jAff&sig=Lh4GrUCrS_gt-HKqHSq4X7BaxMs#v=onepage&q&f=false
   venue: null
   volume: null
   web: null
@@ -13919,7 +13915,7 @@ lecun1995convolutional:
   - classification
   title: Convolutional networks for images, speech, and time series
   type: article
-  url: null
+  url: https://www.cs.utoronto.ca/~bonner/courses/2016s/csc321/readings/Convolutional%20networks%20for%20images,%20speech,%20and%20time%20series.pdf
   venue: The handbook of brain theory and neural networks
   volume: '3361'
   web: null
@@ -15792,7 +15788,7 @@ mikolov2013linguistic:
   - dimension reduction
   title: Linguistic regularities in continuous space word representations
   type: inproceedings
-  url: null
+  url: https://aclanthology.org/N13-1090.pdf
   venue: 'Proceedings of the 2013 conference of the north american chapter of the
     association for computational linguistics: Human language technologies'
   volume: null
@@ -16335,7 +16331,7 @@ myers2016response:
   title: 'Response Surface Methodology: Process and Design Optimization Using Designed
     Experiments'
   type: book
-  url: null
+  url: https://books.google.com/books?hl=en&lr=&id=T-BbCwAAQBAJ&oi=fnd&pg=PR13&dq=Response+Surface+Methodology:+Process+and+Product+Optimization+Using+Designed+Experiments,+4th+Edition&ots=O3jdPna83T&sig=IimJlE46JBVkHOu7eik3RN9Z5GA#v=onepage&q=Response%20Surface%20Methodology%3A%20Process%20and%20Product%20Optimization%20Using%20Designed%20Experiments%2C%204th%20Edition&f=false
   venue: null
   volume: null
   web: null
@@ -16379,7 +16375,7 @@ nair2010rectified:
   - classification
   title: Rectified linear units improve restricted {B}oltzmann machines
   type: inproceedings
-  url: null
+  url: https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf
   venue: Proceedings of the 27th International Conference on International Conference
     on Machine Learning
   volume: null
@@ -16791,7 +16787,7 @@ openmp2015openmp:
   - Fortran
   title: '{OpenMP} Application Programming Interface'
   type: techreport
-  url: null
+  url: https://www.openmp.org/wp-content/uploads/openmp-4.5.pdf
   venue: null
   volume: null
   web: null
@@ -17355,7 +17351,7 @@ petitet2018hpl:
   title: '{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark
     for Distributed-Memory Computers}'
   type: book
-  url: null
+  url: https://www.netlib.org/benchmark/hpl/
   venue: null
   volume: null
   web: null
@@ -20628,7 +20624,7 @@ touvron2023llama2:
   - open source
   title: '{LLaMA}~2: Open foundation and fine-tuned chat models'
   type: techreport
-  url: null
+  url: https://arxiv.org/abs/2307.09288
   venue: null
   volume: null
   web: null
