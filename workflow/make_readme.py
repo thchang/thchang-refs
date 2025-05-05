@@ -7,7 +7,7 @@ from bibmgr.database_manager import DatabaseManager
 db_mgr = DatabaseManager()
 db_mgr.read_yaml("bibmgr_db.yaml")
 
-print("List of topics (may be some overlap between topics):\n")
+print("\nList of topics (may be some overlap between topics):\n")
 for topic in sys.argv[1:]:
     print(f" * [{topic}](#{topic.strip().replace(' ', '-')})")
 
