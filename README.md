@@ -75,7 +75,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Team et al., 2023. Gemini: a family of highly capable multimodal models](https://doi.com/10.48550/arXiv.2312.11805)
  * [Touvron et al., 2023. LLaMA: Open and efficient foundation language models](https://doi.com/10.48550/arXiv.2302.13971)
  * Touvron et al., 2023. LLaMA~2: Open foundation and fine-tuned chat models
- * Vaswani et al., 2017. Attention is all you need
+ * [Vaswani et al., 2017. Attention is all you need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
  * [Vinyals et al., 2019. Grandmaster level in StarCraft II using multi-agent reinforcement learning](https://doi.org/10.1038/s41586-019-1724-z)
  * [Wang et al., 2024. Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations](https://aclanthology.org/2024.acl-long.510)
  * [Wang et al., 2024. MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark](https://proceedings.neurips.cc/paper_files/paper/2024/file/ad236edc564f3e3156e1b2feafb99a24-Paper-Datasets_and_Benchmarks_Track.pdf)
@@ -209,7 +209,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Thacker et al., 2010. Algorithm 905: SHEPPACK: Modified Shepard algorithm for interpolation of scattered multivariate data](https://dl.acm.org/doi/10.1145/1824801.1824812)
  * [Tian et al., 2022. Improving Simulated Annealing Algorithm for FPGA Placement Based on Reinforcement Learning](https://ieeexplore.ieee.org/document/9836761/)
  * [van der Maaten et al., 2008. Visualizing Data using t-SNE](http://jmlr.org/papers/v9/vandermaaten08a.html)
- * Vaswani et al., 2017. Attention is all you need
+ * [Vaswani et al., 2017. Attention is all you need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
  * [Vinyals et al., 2019. Grandmaster level in StarCraft II using multi-agent reinforcement learning](https://doi.org/10.1038/s41586-019-1724-z)
  * [Virtanen et al., 2020. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python](https://www.nature.com/articles/s41592-019-0686-2)
  * [Wang et al., 2018. On the numerical rank of radial basis function kernels in high dimensions](https://epubs.siam.org/doi/10.1137/17M1135803)

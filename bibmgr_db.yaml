@@ -20948,7 +20948,7 @@ vaswani2017attention:
   - SciML
   title: Attention is all you need
   type: inproceedings
-  url: null
+  url: https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
   venue: Proceedings of the 31st International Conference on Neural Information Processing
     Systems (NeurIPS '17)
   volume: null
