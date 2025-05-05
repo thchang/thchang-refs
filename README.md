@@ -10,13 +10,13 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Bengio et al., 2013. Representation Learning: A Review and New Perspectives](http://ieeexplore.ieee.org/document/6472238/)
  * [Boyd et al., 2004. Convex optimization](https://stanford.edu/~boyd/cvxbook/)
  * [Bradbury et al., 2018. JAX: composable transformations of Python+NumPy programs](http://github.com/google/jax)
- * Brockman et al., 2016. OpenAI Gym
+ * [Brockman et al., 2016. OpenAI Gym](https://github.com/openai/gym)
  * [Bronstein et al., 2021. Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://doi.com/10.48550/arXiv.2104.13478)
  * [Brown et al., 2020. Language Models are Few-Shot Learners](https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf)
  * [Chen et al., 2016. XGBoost: A Scalable Tree Boosting System](https://dl.acm.org/doi/10.1145/2939672.2939785)
  * [Chen et al., 2021. Evaluating large language models trained on code](https://doi.com/10.48550/arXiv.2107.03374)
  * [Chiang et al., 2024. Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](https://openreview.net/forum?id=3MW8GKNyzI)
- * Chollet et al., 2015. Keras
+ * [Chollet et al., 2015. Keras](https://keras.io)
  * [Dash et al., 2024. Optimizing Distributed Training on Frontier for Large Language Models](https://ieeexplore.ieee.org/document/10528939/)
  * [Dauphin et al., 2014. Identifying and attacking the saddle point problem in high-dimensional non-convex optimization](https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf)
  * [Deng et al., 2009. ImageNet: A large-scale hierarchical image database](https://ieeexplore.ieee.org/document/5206848/)
@@ -103,7 +103,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Bollapragada et al., 2020. Optimization and supervised machine learning methods for fitting numerical physics models without derivatives](https://iopscience.iop.org/article/10.1088/1361-6471/abd009)
  * [Boyd et al., 2004. Convex optimization](https://stanford.edu/~boyd/cvxbook/)
  * [Bradbury et al., 2018. JAX: composable transformations of Python+NumPy programs](http://github.com/google/jax)
- * Brockman et al., 2016. OpenAI Gym
+ * [Brockman et al., 2016. OpenAI Gym](https://github.com/openai/gym)
  * [Bronstein et al., 2021. Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://doi.com/10.48550/arXiv.2104.13478)
  * [Buhmann, 2000. Radial basis functions](https://www.cambridge.org/core/product/identifier/S0962492900000015/type/journal_article)
  * [Chang et al., 2020. Algorithm 1012: DELAUNAYSPARSE: Interpolation via a Sparse Subset of the Delaunay Triangulation in Medium to High Dimensions](https://dl.acm.org/doi/10.1145/3422818)
@@ -112,7 +112,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * Chen et al., 2004. Optimal Delaunay triangulations
  * [Chen et al., 2016. XGBoost: A Scalable Tree Boosting System](https://dl.acm.org/doi/10.1145/2939672.2939785)
  * [Cheney et al., 2009. A Course in Approximation Theory](http://www.ams.org/gsm/101)
- * Chollet et al., 2015. Keras
+ * [Chollet et al., 2015. Keras](https://keras.io)
  * Christianson et al., 2022. Traditional kriging versus modern Gaussian processes for large-scale mining data
  * [Conn et al., 2008. Geometry of interpolation sets in derivative free optimization](http://link.springer.com/10.1007/s10107-006-0073-5)
  * [Dauphin et al., 2014. Identifying and attacking the saddle point problem in high-dimensional non-convex optimization](https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf)
@@ -601,7 +601,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Bouhlel et al., 2019. A Python surrogate modeling framework with derivatives](https://linkinghub.elsevier.com/retrieve/pii/S0965997818309360)
  * [Bradbury et al., 2018. JAX: composable transformations of Python+NumPy programs](http://github.com/google/jax)
  * [Bratley et al., 1988. Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator](https://doi.org/10.1145/42288.214372)
- * Brockman et al., 2016. OpenAI Gym
+ * [Brockman et al., 2016. OpenAI Gym](https://github.com/openai/gym)
  * [Capps et al., 2016. IOzone Filesystem Benchmark](www.iozone.org)
  * [Caron et al., 2024. qpbenchmark: Benchmark for quadratic programming solvers available in Python](https://github.com/qpsolvers/qpbenchmark)
  * [Chang et al., 2020. Algorithm 1012: DELAUNAYSPARSE: Interpolation via a Sparse Subset of the Delaunay Triangulation in Medium to High Dimensions](https://dl.acm.org/doi/10.1145/3422818)
@@ -613,7 +613,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Chang et al., 2025. Repository for ``Designing a Framework for Solving Multiobjective Simulation Optimization Problems''](https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2023.0250)
  * [Chard et al., 2020. funcX: A federated function serving fabric for science](https://dl.acm.org/doi/10.1145/3369583.3392683)
  * [Chen et al., 2016. XGBoost: A Scalable Tree Boosting System](https://dl.acm.org/doi/10.1145/2939672.2939785)
- * Chollet et al., 2015. Keras
+ * [Chollet et al., 2015. Keras](https://keras.io)
  * [Chowdhary et al., 2024. PyOED: An Extensible Suite for Data Assimilation and Model-Constrained Optimal Design of Experiments](https://dl.acm.org/doi/10.1145/3653071)
  * [Cooper et al., 2020. PyMOSO: Software for multi-objective simulation optimization with R-PERLE and R-MinRLE](http://pubsonline.informs.org/doi/10.1287/ijoc.2019.0902)
  * [Costa et al., 2018. RBFOpt: an open-source library for black-box optimization with costly function evaluations](http://link.springer.com/10.1007/s12532-018-0144-7)

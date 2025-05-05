@@ -3616,7 +3616,7 @@ brockman2016openai:
   doi: null
   edition: null
   editors: []
-  git: null
+  git: https://github.com/openai/gym
   isbn: null
   issn: null
   month: null
@@ -5730,7 +5730,7 @@ chollet2015keras:
   note: 'Last accessed: Nov 2023'
   number: null
   pages: null
-  publisher: null
+  publisher: GitHub
   series: null
   tags:
   - AI
@@ -5747,8 +5747,8 @@ chollet2015keras:
   - OSS
   - Python
   title: Keras
-  type: \url{https://keras.io}
-  url: null
+  type: GitHub repository
+  url: https://keras.io
   venue: null
   volume: null
   web: null
