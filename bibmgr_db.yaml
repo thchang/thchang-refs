@@ -3366,7 +3366,7 @@ boyd2004convex:
   - SciML
   title: Convex optimization
   type: book
-  url: null
+  url: https://stanford.edu/~boyd/cvxbook/
   venue: null
   volume: null
   web: null
@@ -19257,7 +19257,7 @@ shewchuk2002what:
   title: What is a good linear finite element? {I}nterpolation, conditioning, anisotropy,
     and quality measures
   type: inproceedings
-  url: null
+  url: https://people.eecs.berkeley.edu/~jrs/papers/elemj.pdf
   venue: Proceedings of the 11th International Meshing Roundtable
   volume: null
   web: null
@@ -19820,7 +19820,7 @@ srivastava2014dropout:
   - overfitting
   title: 'Dropout: a simple way to prevent neural networks from overfitting'
   type: article
-  url: null
+  url: https://jmlr.org/papers/v15/srivastava14a.html
   venue: The Journal of Machine Learning research
   volume: '15'
   web: null

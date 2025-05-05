@@ -8,7 +8,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
 
  * [Ba et al., 2016. Layer Normalization](https://arxiv.org/abs/1607.06450v1)
  * [Bengio et al., 2013. Representation Learning: A Review and New Perspectives](http://ieeexplore.ieee.org/document/6472238/)
- * Boyd et al., 2004. Convex optimization
+ * [Boyd et al., 2004. Convex optimization](https://stanford.edu/~boyd/cvxbook/)
  * [Bradbury et al., 2018. JAX: composable transformations of Python+NumPy programs](http://github.com/google/jax)
  * Brockman et al., 2016. OpenAI Gym
  * [Bronstein et al., 2021. Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://doi.com/10.48550/arXiv.2104.13478)
@@ -71,7 +71,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Shwartz-Ziv et al., 2022. Tabular data: Deep learning is not all you need](https://linkinghub.elsevier.com/retrieve/pii/S1566253521002360)
  * [Silver et al., 2016. Mastering the game of Go with deep neural networks and tree search](https://www.nature.com/articles/nature16961)
  * [Sohl-Dickstein et al., 2015. Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://proceedings.mlr.press/v37/sohl-dickstein15.html)
- * Srivastava et al., 2014. Dropout: a simple way to prevent neural networks from overfitting
+ * [Srivastava et al., 2014. Dropout: a simple way to prevent neural networks from overfitting](https://jmlr.org/papers/v15/srivastava14a.html)
  * [Team et al., 2023. Gemini: a family of highly capable multimodal models](https://doi.com/10.48550/arXiv.2312.11805)
  * [Touvron et al., 2023. LLaMA: Open and efficient foundation language models](https://doi.com/10.48550/arXiv.2302.13971)
  * Touvron et al., 2023. LLaMA~2: Open foundation and fine-tuned chat models
@@ -101,7 +101,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Belkin, 2021. Fit without fear: remarkable mathematical phenomena of deep learning through the prism of interpolation](https://www.cambridge.org/core/product/identifier/S0962492921000039/type/journal_article)
  * [Bengio et al., 2013. Representation Learning: A Review and New Perspectives](http://ieeexplore.ieee.org/document/6472238/)
  * [Bollapragada et al., 2020. Optimization and supervised machine learning methods for fitting numerical physics models without derivatives](https://iopscience.iop.org/article/10.1088/1361-6471/abd009)
- * Boyd et al., 2004. Convex optimization
+ * [Boyd et al., 2004. Convex optimization](https://stanford.edu/~boyd/cvxbook/)
  * [Bradbury et al., 2018. JAX: composable transformations of Python+NumPy programs](http://github.com/google/jax)
  * Brockman et al., 2016. OpenAI Gym
  * [Bronstein et al., 2021. Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://doi.com/10.48550/arXiv.2104.13478)
@@ -197,13 +197,13 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Schulman et al., 2017. Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
  * [Sennrich et al., 2016. Neural Machine Translation of Rare Words with Subword Units](https://aclanthology.org/P16-1162/)
  * [Shapley et al., 1953. A value for n-person games](http://www.library.fa.ru/files/Roth2.pdf#page=39)
- * Shewchuk, 2002. What is a good linear finite element? Interpolation, conditioning, anisotropy, and quality measures
+ * [Shewchuk, 2002. What is a good linear finite element? Interpolation, conditioning, anisotropy, and quality measures](https://people.eecs.berkeley.edu/~jrs/papers/elemj.pdf)
  * [Shields et al., 2021. Bayesian reaction optimization as a tool for chemical synthesis](https://www.nature.com/articles/s41586-021-03213-y)
  * [Shroff et al., 1992. Adaptive condition estimation for rank-one updates of QR factorizations](http://epubs.siam.org/doi/10.1137/0613077)
  * [Shwartz-Ziv et al., 2022. Tabular data: Deep learning is not all you need](https://linkinghub.elsevier.com/retrieve/pii/S1566253521002360)
  * [Silver et al., 2016. Mastering the game of Go with deep neural networks and tree search](https://www.nature.com/articles/nature16961)
  * [Sohl-Dickstein et al., 2015. Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://proceedings.mlr.press/v37/sohl-dickstein15.html)
- * Srivastava et al., 2014. Dropout: a simple way to prevent neural networks from overfitting
+ * [Srivastava et al., 2014. Dropout: a simple way to prevent neural networks from overfitting](https://jmlr.org/papers/v15/srivastava14a.html)
  * [Stall et al., 2019. Make scientific data FAIR](https://www.nature.com/articles/d41586-019-01720-7)
  * [Tavallaee et al., 2009. A detailed analysis of the KDD CUP 99 data set](http://ieeexplore.ieee.org/document/5356528)
  * [Thacker et al., 2010. Algorithm 905: SHEPPACK: Modified Shepard algorithm for interpolation of scattered multivariate data](https://dl.acm.org/doi/10.1145/1824801.1824812)
@@ -263,7 +263,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Blank et al., 2020. pymoo: Multi-Objective Optimization in Python](https://ieeexplore.ieee.org/document/9078759)
  * [Bollapragada et al., 2020. Optimization and supervised machine learning methods for fitting numerical physics models without derivatives](https://iopscience.iop.org/article/10.1088/1361-6471/abd009)
  * [Bouhlel et al., 2019. A Python surrogate modeling framework with derivatives](https://linkinghub.elsevier.com/retrieve/pii/S0965997818309360)
- * Boyd et al., 2004. Convex optimization
+ * [Boyd et al., 2004. Convex optimization](https://stanford.edu/~boyd/cvxbook/)
  * [Bradford et al., 2018. Efficient multiobjective optimization employing Gaussian processes, spectral sampling and a genetic algorithm](http://link.springer.com/10.1007/s10898-018-0609-2)
  * [Br{\'a}s et al., 2020. On the use of polynomial models in multiobjective directional direct search](https://link.springer.com/10.1007/s10589-020-00233-8)
  * [Bringmann et al., 2013. Approximation quality of the hypervolume indicator](https://linkinghub.elsevier.com/retrieve/pii/S0004370212001178)
@@ -725,7 +725,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Barber et al., 1996. The Quickhull algorithm for convex hulls](https://dl.acm.org/doi/10.1145/235815.235821)
  * [Boissonnat et al., 2009. Incremental construction of the Delaunay triangulation and the Delaunay graph in medium dimension](https://dl.acm.org/doi/10.1145/1542362.1542403)
  * [Bowyer, 1981. Computing Dirichlet tessellations](https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/24.2.162)
- * Boyd et al., 2004. Convex optimization
+ * [Boyd et al., 2004. Convex optimization](https://stanford.edu/~boyd/cvxbook/)
  * [Chang et al., 2018. Computing the umbrella neighbourhood of a vertex in the Delaunay triangulation and a single Voronoi cell in arbitrary dimension](https://ieeexplore.ieee.org/document/8479003)
  * [Chang et al., 2018. A polynomial time algorithm for multivariate interpolation in arbitrary dimension via the Delaunay triangulation](https://dl.acm.org/doi/10.1145/3190645.3190680)
  * Chang et al., 2018. Predicting system performance by interpolation using a high-dimensional Delaunay triangulation
@@ -767,7 +767,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Papazafeiropoulos, 2014. MATLAB Computational Geometry Toolbox version 1.2](https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox)
  * [Polianskii et al., 2020. Voronoi Graph Traversal in High Dimensions with Applications to Topological Data Analysis and Piecewise Linear Interpolation](https://dl.acm.org/doi/10.1145/3394486.3403266)
  * [Rajan, 1994. Optimality of the Delaunay triangulation in $\R^d$](https://link.springer.com/10.1007/BF02574375)
- * Shewchuk, 2002. What is a good linear finite element? Interpolation, conditioning, anisotropy, and quality measures
+ * [Shewchuk, 2002. What is a good linear finite element? Interpolation, conditioning, anisotropy, and quality measures](https://people.eecs.berkeley.edu/~jrs/papers/elemj.pdf)
  * [Smale, 1998. Mathematical problems for the next century](http://link.springer.com/10.1007/BF03025291)
  * [Stellato et al., 2020. OSQP: an operator splitting solver for quadratic programs](http://link.springer.com/10.1007/s12532-020-00179-2)
  * [Su et al., 1997. A comparison of sequential Delaunay triangulation algorithms](https://linkinghub.elsevier.com/retrieve/pii/S0925772196000259)
