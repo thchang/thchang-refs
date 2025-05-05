@@ -3,6 +3,16 @@
 Bib information and reading notes for papers I've read.
 
 Reading list is a yaml file generated using my personal [bibmgr tool](https://github.com/thchang/bib-manager).
+List of topics (may be some overlap between topics):
+
+ * [AI](#AI)
+ * [SciML](#SciML)
+ * [optimization](#optimization)
+ * [HPC](#HPC)
+ * [software](#software)
+ * [computational geometry](#computational-geometry)
+ * [design of experiments](#design-of-experiments)
+ * [quantum computing](#quantum-computing)
 
 ## AI
 
@@ -370,7 +380,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Larson et al., 2024. Structure-Aware Methods for Expensive Derivative-Free Nonsmooth Composite Optimization](https://link.springer.com/10.1007/s12532-023-00245-5)
  * [Lasserre, 2001. Global optimization with polynomials and the problem of moments](http://epubs.siam.org/doi/10.1137/S1052623400366802)
  * [Laumanns et al., 2006. An efficient, adaptive parameter variation scheme for metaheuristics based on the epsilon-constraint method](https://linkinghub.elsevier.com/retrieve/pii/S0377221704005715)
- * [Le~Digabel, 2011. Algorithm 909: NOMAD: Nonlinear Optimization with the MADS Algorithm](https://dl.acm.org/doi/10.1145/1916461.1916468)
+ * [Le Digabel, 2011. Algorithm 909: NOMAD: Nonlinear Optimization with the MADS Algorithm](https://dl.acm.org/doi/10.1145/1916461.1916468)
  * [Le Digabel et al., 2024. A Taxonomy of Constraints in Black-Box Simulation-Based Optimization](https://link.springer.com/10.1007/s11081-023-09839-3)
  * [Lewis et al., 2002. A Globally Convergent Augmented Lagrangian Pattern Search Algorithm for Optimization with General Constraints and Simple Bounds](http://epubs.siam.org/doi/10.1137/S1052623498339727)
  * [Lindauer et al., 2022. SMAC3: A Versatile Bayesian Optimization Package for Hyperparameter Optimization](http://jmlr.org/papers/v23/21-0888.html)
@@ -452,7 +462,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
 
  * [Adams et al., 2022. Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.16 User's Manual](https://dakota.sandia.gov/sites/default/files/docs/6.16.0/Users-6.16.0.pdf)
  * [Akiba et al., 2019. Optuna: A next-generation hyperparameter optimization framework](https://dl.acm.org/doi/10.1145/3292500.3330701)
- * [AMD~Vivado~Developers, 2024. Vivado Design Suite User Guide](https://docs.amd.com/r/2024.1-English/ug893-vivado-ide)
+ * [AMD Vivado Developers, 2024. Vivado Design Suite User Guide](https://docs.amd.com/r/2024.1-English/ug893-vivado-ide)
  * Anderson et al., 1999. LAPACK Users' Guide
  * [Audet et al., 2022. Algorithm 1027: NOMAD Version 4: Nonlinear Optimization with the MADS Algorithm](https://dl.acm.org/doi/10.1145/3544489)
  * [Balandat et al., 2020. BoTorch: A Framework for Efficient Monte-Carlo Bayesian Optimization](https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf)
@@ -527,7 +537,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Krizhevsky et al., 2012. ImageNet Classification with Deep Convolutional Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
  * [Lasalle et al., 2013. Multi-threaded Graph Partitioning](http://ieeexplore.ieee.org/document/6569814/)
  * [Lavely, 2022. Powering Extreme-Scale HPC with Cerebras Wafer-Scale Accelerators](https://8968533.fs1.hubspotusercontent-na1.net/hubfs/8968533/Powering-Extreme-Scale-HPC-with-Cerebras.pdf)
- * [Le~Digabel, 2011. Algorithm 909: NOMAD: Nonlinear Optimization with the MADS Algorithm](https://dl.acm.org/doi/10.1145/1916461.1916468)
+ * [Le Digabel, 2011. Algorithm 909: NOMAD: Nonlinear Optimization with the MADS Algorithm](https://dl.acm.org/doi/10.1145/1916461.1916468)
  * [Liang et al., 2024. AMF-Placer 2.0: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous FPGA](https://ieeexplore.ieee.org/document/10459236/)
  * [Liu et al., 2024. DeepSeek-V3 technical report](https://doi.com/10.48550/arXiv.2412.19437)
  * [Louw et al., 2021. Using the Graphcore IPU for traditional HPC applications](https://easychair.org/publications/preprint/ztfj)
@@ -542,8 +552,8 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Munson et al., 2015. TAO 3.5 Users Manual](https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf)
  * [Murray et al., 2020. VTR 8: High-performance CAD and Customizable FPGA Architecture Modelling](https://doi.org/10.1145/3388617)
  * [Neveu et al., 2023. Comparison of multiobjective optimization methods for the LCLS-II photoinjector](https://linkinghub.elsevier.com/retrieve/pii/S0010465522002855)
- * [NVIDIA~Corporation, 2025. cuBLAS API](https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf)
- * [NVIDIA~HPC~Compilers, 2025. CUDA Fortran programming guide](https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf)
+ * [NVIDIA Corporation, 2025. cuBLAS API](https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf)
+ * [NVIDIA HPC Compilers, 2025. CUDA Fortran programming guide](https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf)
  * OpenMP, 2015. OpenMP Application Programming Interface
  * [Paszke et al., 2019. PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf)
  * Petitet et al., 2018. HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers
@@ -561,7 +571,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Vandevender et al., 1982. The SLATEC Mathematical Subroutine Library](https://dl.acm.org/doi/10.1145/1057594.1057595)
  * [Virtanen et al., 2020. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python](https://www.nature.com/articles/s41592-019-0686-2)
  * [Voss et al., 2019. TBB on NUMA Architectures](https://doi.org/10.1007/978-1-4842-4398-5_20)
- * [VTR~Developers, 2024. Verilog-to-routing documentation](https://readthedocs.org/projects/vtr/downloads/pdf/latest)
+ * [VTR Developers, 2024. Verilog-to-routing documentation](https://readthedocs.org/projects/vtr/downloads/pdf/latest)
  * [Wang et al., 2023. Design strategies and approximation methods for high-performance computing variability management](https://www.tandfonline.com/doi/full/10.1080/00224065.2022.2035285)
  * [Whaley et al., 2001. Automated empirical optimizations of software and the ATLAS project](https://linkinghub.elsevier.com/retrieve/pii/S0167819100000879)
  * [Wu et al., 2025. ytopt: Autotuning Scientific Applications for Energy Efficiency at Large Scales](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.8322)
@@ -575,7 +585,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Adams et al., 2022. Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.16 User's Manual](https://dakota.sandia.gov/sites/default/files/docs/6.16.0/Users-6.16.0.pdf)
  * [Agrawal et al., 2019. Differentiable Convex Optimization Layers](https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf)
  * [Akiba et al., 2019. Optuna: A next-generation hyperparameter optimization framework](https://dl.acm.org/doi/10.1145/3292500.3330701)
- * [AMD~Vivado~Developers, 2024. Vivado Design Suite User Guide](https://docs.amd.com/r/2024.1-English/ug893-vivado-ide)
+ * [AMD Vivado Developers, 2024. Vivado Design Suite User Guide](https://docs.amd.com/r/2024.1-English/ug893-vivado-ide)
  * [Amos et al., 2020. Algorithm 1007: QNSTOP: Quasi-Newton algorithm for stochastic optimization](https://dl.acm.org/doi/10.1145/3374219)
  * [Andersen et al., 2000. The MOSEK interior point optimizer for linear programming: an implementation of the homogeneous algorithm](https://link.springer.com/chapter/10.1007/978-1-4757-3216-0_8)
  * Anderson et al., 1999. LAPACK Users' Guide
@@ -663,7 +673,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * Kleen, 2005. A NUMA API for Linux
  * [Kolonay et al., 2011. Service oriented computing environment (SORCER) for large scale, distributed, dynamic fidelity aeroelastic analysis](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.656.7539)
  * [Kreps et al., 2011. Kafka: A distributed messaging system for log processing](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf)
- * [Le~Digabel, 2011. Algorithm 909: NOMAD: Nonlinear Optimization with the MADS Algorithm](https://dl.acm.org/doi/10.1145/1916461.1916468)
+ * [Le Digabel, 2011. Algorithm 909: NOMAD: Nonlinear Optimization with the MADS Algorithm](https://dl.acm.org/doi/10.1145/1916461.1916468)
  * [Lee et al., 2015. pyDOE: The experimental design package for python](https://github.com/tisimst/pyDOE)
  * [Liang et al., 2024. AMF-Placer 2.0: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous FPGA](https://ieeexplore.ieee.org/document/10459236/)
  * [Lindauer et al., 2022. SMAC3: A Versatile Bayesian Optimization Package for Hyperparameter Optimization](http://jmlr.org/papers/v23/21-0888.html)
@@ -681,8 +691,8 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Moriwaki et al., 2018. Mordred: a molecular descriptor calculator](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0258-y)
  * [Munson et al., 2015. TAO 3.5 Users Manual](https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf)
  * [Murray et al., 2020. VTR 8: High-performance CAD and Customizable FPGA Architecture Modelling](https://doi.org/10.1145/3388617)
- * [NVIDIA~Corporation, 2025. cuBLAS API](https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf)
- * [NVIDIA~HPC~Compilers, 2025. CUDA Fortran programming guide](https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf)
+ * [NVIDIA Corporation, 2025. cuBLAS API](https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf)
+ * [NVIDIA HPC Compilers, 2025. CUDA Fortran programming guide](https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf)
  * [O'Donoghue et al., 2016. Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding](http://link.springer.com/10.1007/s10957-016-0892-3)
  * OpenMP, 2015. OpenMP Application Programming Interface
  * [Papazafeiropoulos, 2014. MATLAB Computational Geometry Toolbox version 1.2](https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox)
@@ -709,7 +719,7 @@ Reading list is a yaml file generated using my personal [bibmgr tool](https://gi
  * [Vandevender et al., 1982. The SLATEC Mathematical Subroutine Library](https://dl.acm.org/doi/10.1145/1057594.1057595)
  * [Virtanen et al., 2020. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python](https://www.nature.com/articles/s41592-019-0686-2)
  * [Voss et al., 2019. TBB on NUMA Architectures](https://doi.org/10.1007/978-1-4842-4398-5_20)
- * [VTR~Developers, 2024. Verilog-to-routing documentation](https://readthedocs.org/projects/vtr/downloads/pdf/latest)
+ * [VTR Developers, 2024. Verilog-to-routing documentation](https://readthedocs.org/projects/vtr/downloads/pdf/latest)
  * [Wang et al., 2022. Pyomo.DOE: An open-source package for model-based design of experiments in Python](https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.17813)
  * [Watson et al., 1997. Algorithm 777: HOMPACK90: A suite of Fortran 90 codes for globally convergent homotopy algorithms](https://dl.acm.org/doi/10.1145/279232.279235)
  * [Whaley et al., 2001. Automated empirical optimizations of software and the ATLAS project](https://linkinghub.elsevier.com/retrieve/pii/S0167819100000879)
