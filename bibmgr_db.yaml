@@ -60,9 +60,6 @@ adams2022dakota:
   publisher: Sandia National Laboratory
   series: null
   tags:
-  - software
-  - parallel programming
-  - C++
   - design of experiments
   - DoE
   - model-based sampling
@@ -77,6 +74,9 @@ adams2022dakota:
   - derivative-free optimization
   - DFO
   - surrogate modeling
+  - software
+  - parallel programming
+  - C++
   title: 'Dakota, A Multilevel Parallel Object-Oriented Framework for Design Optimization,
     Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version
     6.16 User''s Manual'
@@ -132,10 +132,6 @@ agrawal2019differentiable:
   publisher: Curran Associates, Inc.
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - machine learning
   - ML
   - scientific machine learning
@@ -146,6 +142,10 @@ agrawal2019differentiable:
   - algorithmic differentiation
   - backpropagation
   - neural networks
+  - software
+  - open source
+  - OSS
+  - Python
   title: Differentiable Convex Optimization Layers
   type: inproceedings
   url: https://proceedings.neurips.cc/paper_files/paper/2019/file/9ce3c52fc54362e22053399d3181c638-Paper.pdf
@@ -272,11 +272,6 @@ akiba2019optuna:
   publisher: ACM
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
   - high-performance computing
   - HPC
   - distributed computing
@@ -289,6 +284,17 @@ akiba2019optuna:
   - evolutionary algorithms
   - EA
   - Gaussian process
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - uncertainty quantification
+  - UQ
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
   title: 'Optuna: A next-generation hyperparameter optimization framework'
   type: inproceedings
   url: https://dl.acm.org/doi/10.1145/3292500.3330701
@@ -513,11 +519,11 @@ amdvivadodevelopers2024vivado:
   publisher: AMD
   series: null
   tags:
-  - software
-  - Tcl
   - high-performance computing
   - HPC
   - FPGA
+  - software
+  - Tcl
   title: Vivado Design Suite User Guide
   type: misc
   url: https://docs.amd.com/r/2024.1-English/ug893-vivado-ide
@@ -613,10 +619,6 @@ amos2020algorithm:
   publisher: Association for Computing Machinery (ACM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - design of experiments
   - DoE
   - Latin hypercube sampling
@@ -628,6 +630,10 @@ amos2020algorithm:
   - DFO
   - stochastic optimization
   - convex optimization
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: 'Algorithm 1007: {QNSTOP}: {Q}uasi-{N}ewton algorithm for stochastic optimization'
   type: article
   url: https://dl.acm.org/doi/10.1145/3374219
@@ -701,16 +707,16 @@ andersen2000mosek:
   publisher: Springer
   series: null
   tags:
-  - software
-  - Python
-  - Matlab
-  - Go
-  - Julia
   - optimization
   - linear programming
   - LP
   - convex optimization
   - constrained optimization
+  - software
+  - Python
+  - Matlab
+  - Go
+  - Julia
   title: 'The {MOSEK} interior point optimizer for linear programming: an implementation
     of the homogeneous algorithm'
   type: inproceedings
@@ -761,13 +767,13 @@ anderson1999lapack:
   publisher: SIAM
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - computational linear algebra
   - software
   - open source
   - OSS
   - Fortran
-  - high-performance computing
-  - HPC
-  - computational linear algebra
   title: '{LAPACK} Users'' Guide'
   type: book
   url: null
@@ -861,11 +867,6 @@ andresthio2025solar:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - C++
   - optimization
   - blackbox optimization
   - simulation optimization
@@ -874,6 +875,11 @@ andresthio2025solar:
   - constrained optimization
   - stochastic optimization
   - benchmarking
+  - software
+  - open source
+  - OSS
+  - Python
+  - C++
   title: 'solar: A solar thermal power plant simulator for blackbox optimization benchmarking'
   type: article
   url: https://link.springer.com/10.1007/s11081-024-09952-x
@@ -980,12 +986,6 @@ applegate2021practical:
   publisher: Curran Associates, Inc.
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C
-  - Python
-  - Julia
   - optimization
   - linear programming
   - LP
@@ -996,6 +996,12 @@ applegate2021practical:
   - ML
   - scientific machine learning
   - SciML
+  - software
+  - open source
+  - OSS
+  - C
+  - Python
+  - Julia
   title: Practical Large-Scale Linear Programming using Primal-Dual Hybrid Gradient
   type: inproceedings
   url: https://proceedings.neurips.cc/paper_files/paper/2021/file/a8fbbd3b11424ce032ba813493d95ad7-Paper.pdf
@@ -1120,10 +1126,6 @@ audet2008nonsmooth:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C++
   - optimization
   - blackbox optimization
   - simulation optimization
@@ -1133,6 +1135,10 @@ audet2008nonsmooth:
   - global optimization
   - constrained optimization
   - benchmarking
+  - software
+  - open source
+  - OSS
+  - C++
   title: Nonsmooth optimization through Mesh Adaptive Direct Search and Variable Neighborhood
     Search
   type: article
@@ -1358,10 +1364,6 @@ audet2021stochastic:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Matlab
   - optimization
   - blackbox optimization
   - simulation optimization
@@ -1369,6 +1371,10 @@ audet2021stochastic:
   - DFO
   - pattern search
   - stochastic optimization
+  - software
+  - open source
+  - OSS
+  - Matlab
   title: Stochastic mesh adaptive direct search for blackbox optimization using probabilistic
     estimates
   type: article
@@ -1383,7 +1389,7 @@ audet2022algorithm:
   authors:
   - - Charles
     - Audet
-  - - S\'{e}bastien
+  - - S\'ebastien
     - Le Digabel
   - - Viviane
     - Rochon Montplaisir
@@ -1411,12 +1417,6 @@ audet2022algorithm:
   publisher: ACM
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C++
-  - Python
-  - parallel programming
   - high-performance computing
   - HPC
   - parallel computing
@@ -1429,6 +1429,12 @@ audet2022algorithm:
   - pattern search
   - global optimization
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - C++
+  - Python
+  - parallel programming
   title: '{Algorithm 1027}: {NOMAD} Version 4: Nonlinear Optimization with the {MADS}
     Algorithm'
   type: article
@@ -1631,11 +1637,6 @@ balandat2020botorch:
   publisher: Curran Associates, Inc.
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
   - high-performance computing
   - HPC
   - autograd
@@ -1649,6 +1650,17 @@ balandat2020botorch:
   - mixed-variable optimization
   - surrogate modeling
   - Gaussian process
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - uncertainty quantification
+  - UQ
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
   title: '{BoTorch}: A Framework for Efficient {M}onte-{C}arlo {B}ayesian Optimization'
   type: inproceedings
   url: https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf
@@ -1691,12 +1703,6 @@ balaprakash2018deephyper:
   publisher: IEEE
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
-  - MPI
   - high-performance computing
   - HPC
   - distributed computing
@@ -1714,6 +1720,12 @@ balaprakash2018deephyper:
   - SciML
   - uncertainty quantification
   - UQ
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
+  - MPI
   title: '{DeepHyper}: Asynchronous hyperparameter search for deep neural networks'
   type: inproceedings
   url: https://ieeexplore.ieee.org/document/8638041
@@ -1813,11 +1825,6 @@ balay2022petsctao:
   publisher: Argonne National Laboratory
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C
-  - C++
   - high-performance computing
   - HPC
   - simulation
@@ -1825,6 +1832,11 @@ balay2022petsctao:
   - optimization
   - simulation optimization
   - convex optimization
+  - software
+  - open source
+  - OSS
+  - C
+  - C++
   title: '{PETSc/TAO} Users Manual'
   type: techreport
   url: https://petsc.org/release/docs/manual/manual.pdf
@@ -1908,11 +1920,6 @@ bambade2022proxqp:
   publisher: 'Robotics: Science and Systems Foundation'
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - C++
   - computational geometry
   - projection
   - optimization
@@ -1920,6 +1927,15 @@ bambade2022proxqp:
   - QP
   - convex optimization
   - constrained optimization
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - software
+  - open source
+  - OSS
+  - Python
+  - C++
   title: '{PROX-QP}: Yet another Quadratic Programming Solver for Robotics and beyond'
   type: inproceedings
   url: https://hal.inria.fr/hal-03683733
@@ -2019,14 +2035,14 @@ bansal2022jahsbench201:
   publisher: Curran Associates, Inc.
   series: null
   tags:
-  - software
-  - Python
   - optimization
   - multiobjective optimization
   - mixed-variable optimization
   - autotuning
   - hyperparameter optimization
   - benchmarking
+  - software
+  - Python
   title: '{JAHS-Bench-201}: A Foundation For Research On Joint Architecture And Hyperparameter
     Search'
   type: inproceedings
@@ -2104,11 +2120,6 @@ barahona1982computational:
   publisher: Elsevier BV
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Java
-  - parallel programming
   - high-performance computing
   - HPC
   - distributed computing
@@ -2116,6 +2127,11 @@ barahona1982computational:
   - multiobjective optimization
   - evolutionary algorithm
   - EA
+  - software
+  - open source
+  - OSS
+  - Java
+  - parallel programming
   title: '{jMetalSP}: A framework for dynamic multi-objective big data optimization'
   type: article
   url: https://linkinghub.elsevier.com/retrieve/pii/S1568494617302557
@@ -2161,17 +2177,17 @@ barber1996quickhull:
   publisher: Association for Computing Machinery (ACM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C
-  - C++
   - computational geometry
   - Delaunay triangulation
   - interpolation
   - algorithms
   - convex hull
   - high dimension
+  - software
+  - open source
+  - OSS
+  - C
+  - C++
   title: The {Q}uickhull algorithm for convex hulls
   type: article
   url: https://dl.acm.org/doi/10.1145/235815.235821
@@ -2226,11 +2242,11 @@ barker2022introducing:
   publisher: Nature Publishing Group
   series: null
   tags:
+  - high-performance computing
+  - HPC
   - software
   - open source
   - OSS
-  - high-performance computing
-  - HPC
   title: Introducing the {FAIR} Principles for research software
   type: article
   url: https://www.nature.com/articles/s41597-022-01710-x
@@ -2420,14 +2436,14 @@ benitezhidalgo2019jmetalpy:
   publisher: Elsevier BV
   series: null
   tags:
+  - optimization
+  - multiobjective optimization
   - software
   - open source
   - OSS
   - Python
   - Java
   - parallel programming
-  - optimization
-  - multiobjective optimization
   title: '{jMetalPy}: A {P}ython framework for multi-objective optimization with metaheuristics'
   type: article
   url: https://linkinghub.elsevier.com/retrieve/pii/S2210650219301397
@@ -2567,14 +2583,14 @@ betz1997vpr:
   publisher: Springer Berlin Heidelberg
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - FPGA
   - software
   - open source
   - OSS
   - C++
   - Verilog
-  - high-performance computing
-  - HPC
-  - FPGA
   title: '{VPR}: a new packing, placement and routing tool for {FPGA} research'
   type: inproceedings
   url: null
@@ -2764,11 +2780,6 @@ biedron2019fun3d:
   publisher: NASA Langley Research Center
   series: null
   tags:
-  - software
-  - Fortran
-  - parallel programming
-  - CUDA
-  - MPI
   - high-performance computing
   - HPC
   - simulation
@@ -2779,6 +2790,11 @@ biedron2019fun3d:
   - multiobjective optimization
   - simulation optimization
   - autotuning
+  - software
+  - Fortran
+  - parallel programming
+  - CUDA
+  - MPI
   title: '{FUN3D Manual}: 13.6'
   type: techreport
   url: https://fun3d.larc.nasa.gov/papers/FUN3D_Manual-13.6.pdf
@@ -2856,13 +2872,13 @@ biscani2020parallel:
   publisher: The Open Journal
   series: null
   tags:
+  - optimization
+  - multiobjective optimization
   - software
   - open source
   - OSS
   - Python
   - parallel programming
-  - optimization
-  - multiobjective optimization
   title: 'A parallel global multiobjective framework for optimization: pagmo'
   type: article
   url: https://joss.theoj.org/papers/10.21105/joss.02338
@@ -2917,17 +2933,17 @@ blackford1997scalapack:
   publisher: SIAM
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - distributed computing
+  - parallel computing
+  - computational linear algebra
   - software
   - open source
   - OSS
   - Fortran
   - parallel programming
   - MPI
-  - high-performance computing
-  - HPC
-  - distributed computing
-  - parallel computing
-  - computational linear algebra
   title: ScaLAPACK Users' Guide
   type: book
   url: null
@@ -2965,16 +2981,16 @@ blank2020pymoo:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - multiobjective optimization
   - mixed-variable optimization
   - evolutionary algorithms
   - EA
   - evolutionary algorithm
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{pymoo}: Multi-Objective Optimization in {Python}'
   type: article
   url: https://ieeexplore.ieee.org/document/9078759
@@ -3244,10 +3260,6 @@ bouhlel2019python:
   publisher: Elsevier BV
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - blackbox optimization
   - simulation optimization
@@ -3257,6 +3269,10 @@ bouhlel2019python:
   - surrogate modeling
   - RBFs
   - Gaussian process
+  - software
+  - open source
+  - OSS
+  - Python
   title: A {P}ython surrogate modeling framework with derivatives
   type: article
   url: https://linkinghub.elsevier.com/retrieve/pii/S0965997818309360
@@ -3390,15 +3406,15 @@ bradbury2018jax:
   - algorithmic differentiation
   - backpropagation
   - open source
-  - software
-  - OSS
-  - Python
-  - CUDA
   - high-performance computing
   - HPC
   - computational linear algebra
   - scientific machine learning
   - SciML
+  - software
+  - OSS
+  - Python
+  - CUDA
   title: '{JAX}: composable transformations of {P}ython+{N}um{P}y programs'
   type: misc
   url: http://github.com/google/jax
@@ -3521,14 +3537,14 @@ bratley1988algorithm:
   publisher: Association for Computing Machinery
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - design of experiments
   - DoE
   - low-discrepancy sequences
   - Sobol sequence
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: 'Algorithm 659: Implementing Sobol''s Quasirandom Sequence Generator'
   type: article
   url: https://doi.org/10.1145/42288.214372
@@ -3618,11 +3634,11 @@ brockman2016openai:
   - RL
   - benchmarking
   - open source
+  - scientific machine learning
+  - SciML
   - software
   - OSS
   - Python
-  - scientific machine learning
-  - SciML
   title: OpenAI Gym
   type: techreport
   url: null
@@ -4145,11 +4161,11 @@ capps2016iozone:
   publisher: null
   series: null
   tags:
-  - software
-  - benchmarking
   - high-performance computing
   - HPC
+  - benchmarking
   - performance modeling
+  - software
   title: '{IOzone} Filesystem Benchmark'
   type: misc
   url: www.iozone.org
@@ -4190,16 +4206,16 @@ caron2024qpbenchmark:
   publisher: GitHub
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - benchmarking
   - optimization
   - quadratic programming
   - QP
   - convex optimization
   - constrained optimization
+  - benchmarking
+  - software
+  - open source
+  - OSS
+  - Python
   title: 'qpbenchmark: Benchmark for quadratic programming solvers available in {Python}'
   type: misc
   url: null
@@ -4531,7 +4547,7 @@ chang2020algorithm:
   doi: 10.1145/3422818
   edition: null
   editors: []
-  git: https://github.com/vtopt/DelaunaySparse
+  git: null
   isbn: null
   issn: 0098-3500
   month: '12'
@@ -4539,17 +4555,9 @@ chang2020algorithm:
   number: '4'
   pages:
   - 20
-  publisher: Association of Computing Machinery
-  series: Collections of the ACM
+  publisher: ACM
+  series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
-  - Python
-  - C
-  - parallel programming
-  - OpenMP
   - computational geometry
   - Delaunay triangulation
   - algorithms
@@ -4568,13 +4576,21 @@ chang2020algorithm:
   - SciML
   - computational linear algebra
   - interpolation
-  title: 'Algorithm 1012: {DELAUNAYSPARSE}: {I}nterpolation via a sparse subset of
-    the {D}elaunay triangulation in medium to high dimensions'
+  - software
+  - open source
+  - OSS
+  - Fortran
+  - Python
+  - C
+  - parallel programming
+  - OpenMP
+  title: 'Algorithm 1012: {DELAUNAYSPARSE}: Interpolation via a Sparse Subset of the
+    {D}elaunay Triangulation in Medium to High Dimensions'
   type: article
   url: https://dl.acm.org/doi/10.1145/3422818
-  venue: home
+  venue: ACM Trans. Math. Softw.
   volume: '46'
-  web: https://vtopt.github.io/DelaunaySparse
+  web: null
   year: 2020
 chang2020managing:
   address: Fairfax, VA, USA
@@ -4648,12 +4664,6 @@ chang2020mathematical:
   publisher: Virginia Tech, Dept. of Computer Science
   series: null
   tags:
-  - software
-  - parallel programming
-  - Fortran
-  - Python
-  - OpenMP
-  - MPI
   - computational geometry
   - Delaunay triangulation
   - interpolation
@@ -4678,6 +4688,12 @@ chang2020mathematical:
   - scientific machine learning
   - SciML
   - computational linear algebra
+  - software
+  - parallel programming
+  - Fortran
+  - Python
+  - OpenMP
+  - MPI
   title: Mathematical Software for Multiobjective Optimization Problems
   type: phdthesis
   url: https://vtechworks.lib.vt.edu/handle/10919/98915
@@ -4776,12 +4792,6 @@ chang2022algorithm:
   publisher: Association for Computing Machinery (ACM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
-  - OpenMP
-  - MPI
   - design of experiments
   - DoE
   - adaptive sampling
@@ -4795,6 +4805,12 @@ chang2022algorithm:
   - derivative-free optimization
   - DFO
   - surrogate modeling
+  - software
+  - open source
+  - OSS
+  - Fortran
+  - OpenMP
+  - MPI
   title: '{Algorithm 1028}: {VTMOP}: Solver for Blackbox Multiobjective Optimization
     Problems'
   type: article
@@ -4890,11 +4906,6 @@ chang2023parmoo:
   publisher: The Open Journal
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
   - design of experiments
   - DoE
   - high-performance computing
@@ -4912,6 +4923,11 @@ chang2023parmoo:
   - mixed-variable optimization
   - surrogate modeling
   - RBFs
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
   title: '{ParMOO}: A {P}ython library for parallel multiobjective simulation optimization'
   type: article
   url: https://joss.theoj.org/papers/10.21105/joss.04468
@@ -4952,12 +4968,6 @@ chang2024parmoo:
   publisher: Argonne National Laboratory
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
-  - MPI
   - design of experiments
   - DoE
   - high-performance computing
@@ -4979,6 +4989,12 @@ chang2024parmoo:
   - surrogate modeling
   - RBFs
   - high dimension
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
+  - MPI
   title: '{ParMOO}: {P}ython library for parallel multiobjective simulation optimization'
   type: techreport
   url: https://parmoo.readthedocs.io/en/latest
@@ -5071,11 +5087,6 @@ chang2025designing:
   publisher: Institute for Operations Research and the Management Sciences (INFORMS)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
   - design of experiments
   - DoE
   - high-performance computing
@@ -5093,6 +5104,11 @@ chang2025designing:
   - mixed-variable optimization
   - surrogate modeling
   - RBFs
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
   title: Designing a Framework for Solving Multiobjective Simulation Optimization
     Problems
   type: article
@@ -5181,11 +5197,6 @@ chang2025repository:
   publisher: Institute for Operations Research and the Management Sciences (INFORMS)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
   - design of experiments
   - DoE
   - high-performance computing
@@ -5203,6 +5214,11 @@ chang2025repository:
   - mixed-variable optimization
   - surrogate modeling
   - RBFs
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
   title: Repository for ``Designing a Framework for Solving Multiobjective Simulation
     Optimization Problems''
   type: misc
@@ -5232,12 +5248,11 @@ chard2020funcx:
   - - Kyle
     - Chard
   chapter: null
-  descrip: 'The funcX from Globus computing publication on the techniques and benefits
+  descrip: The funcX and updated Globus publication on the techniques and benefits
     of using a function-as-a-service (FaaS) framework to perform scientific experimentation
     at Argonne and other labs. funcX and Globus are scientific software products for
     performing distributed function evaluations and parallel computing that started
-    at Argonne and UChicago, and used at many other labs and industries. Open source
-    Python implementation is available for download at: github.com/globus/globus-compute'
+    at Argonne, and spun off into independent companies
   doi: 10.1145/3369583.3392683
   edition: null
   editors: []
@@ -5253,6 +5268,10 @@ chard2020funcx:
   publisher: ACM
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - distributed computing
+  - parallel computing
   - software
   - open source
   - OSS
@@ -5261,10 +5280,6 @@ chard2020funcx:
   - Kubernetes
   - Slurm
   - PBS
-  - high-performance computing
-  - HPC
-  - distributed computing
-  - parallel computing
   title: '{funcX}: A federated function serving fabric for science'
   type: inproceedings
   url: https://dl.acm.org/doi/10.1145/3369583.3392683
@@ -5360,21 +5375,21 @@ chen2016xgboost:
   - ML
   - decision trees
   - open source
-  - software
-  - OSS
-  - Python
-  - C++
-  - CUDA
-  - Kubernetes
-  - Spark
   - high-performance computing
   - HPC
   - distributed computing
   - GPU computing
+  - CUDA
   - scientific machine learning
   - SciML
   - regression
   - classification
+  - software
+  - OSS
+  - Python
+  - C++
+  - Kubernetes
+  - Spark
   title: '{XGBoost}: A Scalable Tree Boosting System'
   type: inproceedings
   url: https://dl.acm.org/doi/10.1145/2939672.2939785
@@ -5724,13 +5739,13 @@ chollet2015keras:
   - ML
   - open source
   - neural networks
-  - software
-  - OSS
-  - Python
   - scientific machine learning
   - SciML
   - regression
   - classification
+  - software
+  - OSS
+  - Python
   title: Keras
   type: \url{https://keras.io}
   url: null
@@ -5803,17 +5818,17 @@ chowdhary2024pyoed:
   publisher: Association for Computing Machinery
   series: null
   tags:
+  - design of experiments
+  - DoE
+  - model-based sampling
   - software
   - open source
   - OSS
   - Python
-  - design of experiments
-  - DoE
-  - model-based sampling
   title: '{PyOED}: An Extensible Suite for Data Assimilation and Model-Constrained
     Optimal Design of Experiments'
-  type: techreport
-  url: https://doi.org/10.1145/3653071
+  type: article
+  url: https://dl.acm.org/doi/10.1145/3653071
   venue: ACM Transactions on Mathematical Software
   volume: '50'
   web: null
@@ -6186,10 +6201,6 @@ cooper2020pymoso:
   publisher: Institute for Operations Research and the Management Sciences (INFORMS)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - multiobjective optimization
   - blackbox optimization
@@ -6197,6 +6208,10 @@ cooper2020pymoso:
   - pattern search
   - mixed-variable optimization
   - stochastic optimization
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{PyMOSO}: {S}oftware for multi-objective simulation optimization with {R-PERLE}
     and {R-MinRLE}'
   type: article
@@ -6230,9 +6245,6 @@ costa2018rbfopt:
   publisher: Springer
   series: null
   tags:
-  - software
-  - open source
-  - OSS
   - optimization
   - blackbox optimization
   - simulation optimization
@@ -6240,6 +6252,9 @@ costa2018rbfopt:
   - DFO
   - surrogate modeling
   - RBFs
+  - software
+  - open source
+  - OSS
   title: '{RBFOpt}: an open-source library for black-box optimization with costly
     function evaluations'
   type: article
@@ -6276,11 +6291,6 @@ cristescu2015surrogatebased:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C++
-  - parallel programming
   - optimization
   - multiobjective optimization
   - blackbox optimization
@@ -6290,6 +6300,11 @@ cristescu2015surrogatebased:
   - surrogate modeling
   - scalarization
   - Gaussian process
+  - software
+  - open source
+  - OSS
+  - C++
+  - parallel programming
   title: 'Surrogate-based multiobjective optimization: {ParEGO} update and test'
   type: inproceedings
   url: https://www.cs.bham.ac.uk/~jdk/UKCI-2015.pdf
@@ -7049,14 +7064,14 @@ deanl2019press:
   publisher: '{U.S.\ Department of Energy, Argonne National Laboratory}'
   series: null
   tags:
-  - software
-  - parallel programming
-  - MPI
-  - CUDA
   - high-performance computing
   - HPC
   - parallel computing
   - distributed computing
+  - software
+  - parallel programming
+  - MPI
+  - CUDA
   title: 'Press Release: {U.S.\ Department of Energy and Intel} to deliver first exascale
     supercomputer'
   type: misc
@@ -7251,6 +7266,51 @@ deberg2008computational:
   volume: null
   web: null
   year: 2008
+deboor1978practical:
+  address: New York, NY, USA
+  articleno: null
+  authors:
+  - - Carl R.
+    - de Boor
+  chapter: null
+  descrip: DeBoor's classic textbook on splines and B-spline interpolation, covering
+    polynomial interpolation, divided differences, and error kernels; node spacing
+    and chebyshev nodes; piecewise linear and polynomial interpolation; piecewise
+    polynomials as combination of basis functions; generalized B-spline via a recursive
+    definition; algorithms for stably building and evaluating B-Splines; knot and
+    node placement and error rates and diminishing returns; The Schoenberg-Whitney
+    Theorem and B-splines as RKHS kernels; multivariate B-splines as tensor products;
+    applications; and Fortran subroutines for all steps in the process.
+  doi: 10.2307/2006241
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 0025-5718
+  month: jan
+  note: null
+  number: '149'
+  pages: null
+  publisher: Springer-Verlag
+  series: null
+  tags:
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - RBFs
+  - high dimension
+  - interpolation
+  - regression
+  - approximation theory
+  title: A Practical Guide to Splines
+  type: book
+  url: https://www.researchgate.net/publication/200744645_A_Practical_Guide_to_Spline
+  venue: Applied Mathematical Sciences
+  volume: '34'
+  web: null
+  year: 1978
 delaunay1934sur:
   address: null
   articleno: null
@@ -7664,10 +7724,6 @@ diamond2016cvxpy:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - computational geometry
   - optimization
   - linear programming
@@ -7680,6 +7736,10 @@ diamond2016cvxpy:
   - ML
   - scientific machine learning
   - SciML
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{CVXPY}: {A} {P}ython-embedded modeling language for convex optimization'
   type: article
   url: http://jmlr.org/papers/v17/15-408.html
@@ -7716,10 +7776,6 @@ domahidi2013ecos:
   publisher: IEEE
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C
   - computational geometry
   - optimization
   - quadratic programming
@@ -7730,6 +7786,10 @@ domahidi2013ecos:
   - ML
   - scientific machine learning
   - SciML
+  - software
+  - open source
+  - OSS
+  - C
   title: '{ECOS}: {A}n {SOCP} solver for embedded systems'
   type: inproceedings
   url: https://ieeexplore.ieee.org/document/6669541
@@ -7804,13 +7864,13 @@ dongarra2003linpack:
   publisher: Wiley
   series: null
   tags:
-  - software
-  - Fortran
-  - parallel programming
-  - benchmarking
   - high-performance computing
   - HPC
   - computational linear algebra
+  - benchmarking
+  - software
+  - Fortran
+  - parallel programming
   title: 'The {LINPACK} benchmark: past, present, and future'
   type: article
   url: https://onlinelibrary.wiley.com/doi/10.1002/cpe.728
@@ -7893,15 +7953,15 @@ dubey2021performance:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - software
-  - CUDA
-  - MPI
-  - OpenMP
-  - parallel programming
   - high-performance computing
   - HPC
   - parallel computing
   - GPU computing
+  - CUDA
+  - software
+  - MPI
+  - OpenMP
+  - parallel programming
   title: 'Performance Portability in the {E}xascale {C}omputing {P}roject: Exploration
     Through a Panel Series'
   type: article
@@ -8084,10 +8144,6 @@ dunning2017jump:
   publisher: Society for Industrial & Applied Mathematics (SIAM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - julia
   - high-performance computing
   - HPC
   - optimization
@@ -8097,6 +8153,10 @@ dunning2017jump:
   - QP
   - convex optimization
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - julia
   title: '{JuMP}: A Modeling Language for Mathematical Optimization'
   type: article
   url: https://epubs.siam.org/doi/10.1137/15M1020575
@@ -8132,16 +8192,16 @@ durillo2011jmetal:
   publisher: Elsevier BV
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Java
   - optimization
   - multiobjective optimization
   - evolutionary algorithms
   - EA
   - simulated annealing
   - SA
+  - software
+  - open source
+  - OSS
+  - Java
   title: '{jMetal}: A {J}ava framework for multi-objective optimization'
   type: article
   url: https://linkinghub.elsevier.com/retrieve/pii/S0965997811001219
@@ -8219,15 +8279,15 @@ eckman2023simopt:
   publisher: INFORMS
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - blackbox optimization
   - simulation optimization
   - stochastic optimization
   - benchmarking
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{SimOpt}: A Testbed for Simulation-Optimization Experiments'
   type: article
   url: https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1273
@@ -8457,14 +8517,14 @@ eggensperger2021hpobench:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - autotuning
   - hyperparameter optimization
   - benchmarking
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{HPOB}ench: A Collection of Reproducible Multi-Fidelity Benchmark Problems
     for {HPO}'
   type: inproceedings
@@ -8617,14 +8677,14 @@ elias2020manufacturing:
   publisher: IEEE
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - distributed computing
   - software
   - open source
   - OSS
   - Python
   - Kafka
-  - high-performance computing
-  - HPC
-  - distributed computing
   title: 'The Manufacturing Data and Machine Learning Platform: Enabling Real-time
     Monitoring and Control of Scientific Experiments via {IoT}'
   type: article
@@ -8817,8 +8877,6 @@ farhan2020reinforcement:
   publisher: IEEE
   series: null
   tags:
-  - software
-  - Python
   - optimization
   - multiobjective optimization
   - blackbox optimization
@@ -8830,6 +8888,8 @@ farhan2020reinforcement:
   - ML
   - scientific machine learning
   - SciML
+  - software
+  - Python
   title: 'Reinforcement Learning in {AnyLogic} Simulation Models: A Guiding Example
     using {Pathmind}'
   type: inproceedings
@@ -9056,15 +9116,15 @@ fletcher1993resolving:
   publisher: Springer
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - optimization
   - quadratic programming
   - QP
   - convex optimization
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: Resolving degeneracy in quadratic programming
   type: article
   url: http://link.springer.com/10.1007/BF02023102
@@ -9114,14 +9174,14 @@ fortin2012deap:
   authors:
   - - F\'elix-Antoine
     - Fortin
-  - - Fran\c{c}ois-Michel
-    - '{De Rainville}'
+  - - Fran\ccois-Michel
+    - De~Rainville
   - - Marc-Andr\'e
     - Gardner
   - - Marc
     - Parizeau
   - - Christian
-    - Gagn\'e "
+    - Gagn\'e
   chapter: null
   descrip: The DEAP framework is a Python framework for easily implementing and deploying
     parallel and distributed evolutionary algorithms. Fairly high quality open source
@@ -9143,12 +9203,6 @@ fortin2012deap:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
-  - parallel programming
-  - MPI
   - high-performance computing
   - HPC
   - distributed computing
@@ -9158,6 +9212,12 @@ fortin2012deap:
   - simulation optimization
   - evolutionary algorithms
   - EA
+  - software
+  - open source
+  - OSS
+  - Python
+  - parallel programming
+  - MPI
   title: '{DEAP}: Evolutionary Algorithms Made Easy'
   type: article
   url: https://www.jmlr.org/papers/v13/fortin12a.html
@@ -9226,13 +9286,13 @@ forum2023mpi:
   publisher: null
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - distributed computing
   - software
   - Fortran
   - C
   - MPI
-  - high-performance computing
-  - HPC
-  - distributed computing
   title: '{MPI}: A Message-Passing Interface Standard'
   type: techreport
   url: https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf
@@ -9272,18 +9332,18 @@ fowkes2022pycutest:
   publisher: The Open Journal
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
-  - Python
-  - benchmarking
   - optimization
   - blackbox optimization
   - simulation optimization
   - derivative-free optimization
   - DFO
   - constrained optimization
+  - benchmarking
+  - software
+  - open source
+  - OSS
+  - Fortran
+  - Python
   title: 'PyCUTEst: an open source Python package of optimization test problems'
   type: article
   url: https://joss.theoj.org/papers/10.21105/joss.04377
@@ -9711,15 +9771,15 @@ germann2021codesign:
   publisher: 'SAGE Publications Sage UK: London, England'
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - parallel computing
+  - distributed computing
   - software
   - CUDA
   - OpenMP
   - MPI
   - parallel programming
-  - high-performance computing
-  - HPC
-  - parallel computing
-  - distributed computing
   title: Co-design in the {Exascale Computing Project}
   type: article
   url: https://journals.sagepub.com/doi/10.1177/10943420211059380
@@ -9801,8 +9861,6 @@ gillette2024algorithm:
   publisher: Association for Computing Machinery
   series: null
   tags:
-  - software
-  - Python
   - computational geometry
   - Delaunay triangulation
   - interpolation
@@ -9813,6 +9871,8 @@ gillette2024algorithm:
   - approximation theory
   - uncertainty quantification
   - UQ
+  - software
+  - Python
   title: 'Algorithm 1049: The Delaunay Density Diagnostic'
   type: article
   url: https://doi.org/10.1145/3700134
@@ -9899,10 +9959,6 @@ golovin2017google:
   publisher: ACM
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - blackbox optimization
   - simulation optimization
@@ -9910,6 +9966,10 @@ golovin2017google:
   - DFO
   - Bayesian optimization
   - Gaussian process
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{Google Vizier}: A Service for Black-Box Optimization'
   type: inproceedings
   url: https://dl.acm.org/doi/10.1145/3097983.3098043
@@ -9944,7 +10004,6 @@ golub2013matrix:
   publisher: Johns Hopkins University Press
   series: null
   tags:
-  - software
   - high-performance computing
   - HPC
   - computational linear algebra
@@ -9952,6 +10011,7 @@ golub2013matrix:
   - ML
   - scientific machine learning
   - SciML
+  - software
   title: Matrix computations
   type: book
   url: https://www.press.jhu.edu/books/title/10678/matrix-computations
@@ -10039,6 +10099,13 @@ gould2015cutest:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
+  - optimization
+  - blackbox optimization
+  - simulation optimization
+  - derivative-free optimization
+  - DFO
+  - constrained optimization
+  - benchmarking
   - software
   - open source
   - OSS
@@ -10046,13 +10113,6 @@ gould2015cutest:
   - Python
   - Matlab
   - Julia
-  - benchmarking
-  - optimization
-  - blackbox optimization
-  - simulation optimization
-  - derivative-free optimization
-  - DFO
-  - constrained optimization
   title: '{CUTEst}: a Constrained and Unconstrained Testing Environment with safe
     threads for mathematical optimization'
   type: article
@@ -10248,10 +10308,6 @@ gray2019openmdao:
   publisher: Springer
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - high-performance computing
   - HPC
   - parallel computing
@@ -10263,6 +10319,10 @@ gray2019openmdao:
   - autotuning
   - hyperparameter optimization
   - surrogate modeling
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{OpenMDAO}: An open-source framework for multidisciplinary design, analysis,
     and optimization'
   type: article
@@ -10414,12 +10474,12 @@ hadka2015platypus:
   publisher: GitHub
   series: null
   tags:
+  - optimization
+  - multiobjective optimization
   - software
   - open source
   - OSS
   - Python
-  - optimization
-  - multiobjective optimization
   title: Platypus -- multiobjective optimization in {P}ython
   type: techreport
   url: https://platypus.readthedocs.io/en/latest
@@ -10455,8 +10515,6 @@ hanson1982algorithm:
   publisher: ACM
   series: null
   tags:
-  - software
-  - Fortran
   - computational geometry
   - projection
   - high-performance computing
@@ -10467,6 +10525,8 @@ hanson1982algorithm:
   - quadratic programming
   - QP
   - convex optimization
+  - software
+  - Fortran
   title: 'Algorithm 587: Two Algorithms for the Linearly Constrained Least Squares
     Problem'
   type: article
@@ -10483,7 +10543,7 @@ harris2020array:
     - Harris
   - - K. Jarrod
     - Millman
-  - - St{\'{e}}fan J. van der
+  - - St\'efan J. van der
     - Walt
   - - Ralf
     - Gommers
@@ -10511,14 +10571,14 @@ harris2020array:
     - Brett
   - - Allan
     - Haldane
-  - - Jaime Fern{\'{a}}ndez del
-    - R{\'{i}}o
+  - - Jaime Fern\'andez del
+    - R\'io
   - - Mark
     - Wiebe
   - - Pearu
     - Peterson
   - - Pierre
-    - G{\'{e}}rard-Marchant
+    - G\'erard-Marchant
   - - Kevin
     - Sheppard
   - - Tyler
@@ -10550,10 +10610,6 @@ harris2020array:
   publisher: Springer Science and Business Media {LLC}
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - high-performance computing
   - HPC
   - computational linear algebra
@@ -10561,6 +10617,10 @@ harris2020array:
   - ML
   - scientific machine learning
   - SciML
+  - software
+  - open source
+  - OSS
+  - Python
   title: Array programming with {NumPy}
   type: article
   url: https://www.nature.com/articles/s41586-020-2649-2
@@ -10604,10 +10664,6 @@ hart2017pyomo:
   publisher: Springer Cham
   series: Springer Optimization and Its Applications
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - linear programming
   - quadratic programming
@@ -10616,6 +10672,10 @@ hart2017pyomo:
   - constrained optimization
   - convex optimization
   - mixed-variable optimization
+  - software
+  - open source
+  - OSS
+  - Python
   title: Pyomo -- optimization modeling in {P}ython
   type: book
   url: http://link.springer.com/10.1007/978-3-319-58821-6
@@ -10654,15 +10714,15 @@ hase2018chimera:
   publisher: Royal Society of Chemistry
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - multiobjective optimization
   - blackbox optimization
   - simulation optimization
   - mixed-variable optimization
+  - software
+  - open source
+  - OSS
+  - Python
   title: 'Chimera: enabling hierarchy based multi-objective optimization for self-driving
     laboratories'
   type: article
@@ -10756,12 +10816,6 @@ he2009algorithm:
   publisher: Association for Computing Machinery (ACM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
-  - parallel programming
-  - MPI
   - high-performance computing
   - HPC
   - parallel computing
@@ -10772,6 +10826,12 @@ he2009algorithm:
   - DFO
   - DIRECT
   - global optimization
+  - software
+  - open source
+  - OSS
+  - Fortran
+  - parallel programming
+  - MPI
   title: 'Algorithm 897: {VTDIRECT95}: Serial and Parallel Codes for the Global Optimization
     Algorithm {DIRECT}'
   type: article
@@ -10970,9 +11030,9 @@ heroux2020advancing:
   publisher: Oak Ridge National Laboratory
   series: null
   tags:
-  - software
   - high-performance computing
   - HPC
+  - software
   title: 'Advancing Scientific Productivity through Better Scientific Software: Developer
     Productivity and Software Sustainability Report'
   type: techreport
@@ -11007,10 +11067,6 @@ hert2020convex:
   publisher: '{CGAL Editorial Board}'
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C++
   - computational geometry
   - Delaunay triangulation
   - Voronoi diagram
@@ -11019,6 +11075,10 @@ hert2020convex:
   - high dimension
   - high-performance computing
   - HPC
+  - software
+  - open source
+  - OSS
+  - C++
   title: '{dD} Convex Hulls and {D}elaunay Triangulations'
   type: incollection
   url: https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD
@@ -11274,14 +11334,14 @@ huang2019cpptaskflow:
   publisher: IEEE
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - parallel computing
   - software
   - open source
   - OSS
   - parallel programming
   - C++
-  - high-performance computing
-  - HPC
-  - parallel computing
   title: '{Cpp-Taskflow}: Fast Task-Based Parallel Programming Using Modern {C++}'
   type: inproceedings
   url: https://ieeexplore.ieee.org/document/8821011/
@@ -11321,14 +11381,6 @@ huangfu2018parallelizing:
   publisher: Springer
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
-  - Python
-  - CUDA
-  - parallel programming
-  - C++
   - computational geometry
   - high-performance computing
   - HPC
@@ -11343,6 +11395,14 @@ huangfu2018parallelizing:
   - ML
   - scientific machine learning
   - SciML
+  - software
+  - open source
+  - OSS
+  - Fortran
+  - Python
+  - CUDA
+  - parallel programming
+  - C++
   title: Parallelizing the dual revised simplex method
   type: article
   url: http://link.springer.com/10.1007/s12532-017-0130-5
@@ -11422,17 +11482,17 @@ hudson2023libensemble:
   publisher: The Open Journal
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - distributed computing
+  - parallel computing
   - software
   - open source
   - OSS
   - Python
   - parallel programming
   - MPI
-  - high-performance computing
-  - HPC
-  - distributed computing
-  - parallel computing
-  title: '{libEnsemble: A} complete {Python} toolkit for dynamic ensembles of calculations'
+  title: '{libEnsemble}: A complete {Python} toolkit for dynamic ensembles of calculations'
   type: techreport
   url: https://joss.theoj.org/papers/10.21105/joss.06031
   venue: Journal of Open Source Software
@@ -11575,14 +11635,14 @@ intel2025oneapi:
   publisher: Intel Corporation
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - parallel computing
   - software
   - open source
   - OSS
   - parallel programming
   - C++
-  - high-performance computing
-  - HPC
-  - parallel computing
   title: '{oneAPI} Threading Building Blocks ({oneTBB})'
   type: misc
   url: https://uxlfoundation.github.io/oneTBB
@@ -11609,10 +11669,10 @@ ios2004information:
   publisher: International Organization for Standardization
   series: null
   tags:
-  - software
-  - Fortran
   - high-performance computing
   - HPC
+  - software
+  - Fortran
   title: '{Information technology -- Programming languages -- Fortran -- Part 1: Base
     Language}'
   type: techreport
@@ -11640,10 +11700,10 @@ ios2010information:
   publisher: International Organization for Standardization
   series: null
   tags:
-  - software
-  - Fortran
   - high-performance computing
   - HPC
+  - software
+  - Fortran
   title: '{Information technology -- Programming languages -- Fortran -- Part 1: Base
     Language}'
   type: techreport
@@ -11911,12 +11971,12 @@ joe2003remark:
   publisher: Association for Computing Machinery
   series: null
   tags:
-  - software
-  - Fortran
   - design of experiments
   - DoE
   - low-discrepancy sequences
   - Sobol sequence
+  - software
+  - Fortran
   title: 'Remark on Algorithm 659: Implementing Sobol''s Quasirandom Sequence Generator'
   type: article
   url: https://dl.acm.org/doi/10.1145/641876.641879
@@ -12240,22 +12300,22 @@ kale1993charm:
   issn: null
   month: '10'
   note: null
-  number: null
+  number: ISO/IEC 1539-1:2010(E)
   pages:
   - 18
   publisher: Association for Computing Machinery
   series: OOPSLA '93
   tags:
+  - high-performance computing
+  - HPC
+  - parallel computing
   - software
   - open source
   - OSS
   - parallel programming
   - C++
-  - high-performance computing
-  - HPC
-  - parallel computing
   title: '{CHARM++}: a portable concurrent object oriented system based on {C++}'
-  type: inproceedings
+  type: techreport
   url: https://dl.acm.org/doi/10.1145/165854.165874
   venue: Proceedings of the Eighth Annual Conference on Object-Oriented Programming
     Systems, Languages, and Applications
@@ -12304,10 +12364,6 @@ kandasamy2020tuning:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - Bayesian optimization
   - global optimization
@@ -12316,6 +12372,17 @@ kandasamy2020tuning:
   - hyperparameter optimization
   - surrogate modeling
   - Gaussian process
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - uncertainty quantification
+  - UQ
+  - representation learning
+  - software
+  - open source
+  - OSS
+  - Python
   title: 'Tuning Hyperparameters without Grad Students: Scalable and Robust {Bayesian}
     Optimisation with {Dragonfly}'
   type: article
@@ -12547,12 +12614,12 @@ karypis1998hmetis:
   publisher: Department of Computer Science \& Engineering, University of Minnesota
   series: null
   tags:
-  - software
   - high-performance computing
   - HPC
   - FPGA
   - optimization
   - partitioning
+  - software
   title: '{hMETIS}: A hypergraph partitioning package'
   type: techreport
   url: https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf
@@ -12732,6 +12799,54 @@ kim2004spea2:
   volume: null
   web: null
   year: 2004
+kimeldorf1971some:
+  address: null
+  articleno: null
+  authors:
+  - - George
+    - Kimeldorf
+  - - Grace
+    - Wahba
+  chapter: null
+  descrip: Landmark paper showing that given a target function f, set of scattered
+    data (xi, f(xi)), and family of SPD kernel functions K(x1, x2) spanning the RKHS,
+    the unique basis for the RKHS is K(xi, x), and furthermore the minimizer for any
+    definite integral of Lf for (where L is any linear operator) can be found by solving
+    a least squares problem with the kernel matrix K(xi, xj)*b = f(xi) for any pair
+    xi, xj in (xi, f(xi)). This is the theoretical basis for all RBF interpolation
+    and regularized RBFs / RBFs with tail.
+  doi: 10.1016/0022-247x(71)90184-3
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 0022-247X
+  month: '1'
+  note: null
+  number: '1'
+  pages:
+  - '82'
+  - '95'
+  publisher: Elsevier
+  series: null
+  tags:
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - RBFs
+  - high dimension
+  - interpolation
+  - regression
+  - approximation theory
+  title: Some results on {Tchebycheffian} spline functions
+  type: article
+  url: https://pages.stat.wisc.edu/~wahba/ftp1/oldie/kw71.pdf
+  venue: Journal of mathematical analysis and applications
+  volume: '33'
+  web: null
+  year: 1971
 kingma2014autoencoding:
   address: null
   articleno: null
@@ -12928,12 +13043,12 @@ kleen2005numa:
   publisher: Suse Lab
   series: null
   tags:
-  - software
-  - parallel programming
-  - C
   - high-performance computing
   - HPC
   - parallel computing
+  - software
+  - parallel programming
+  - C
   title: A {NUMA} {API} for {Linux}
   type: techreport
   url: null
@@ -13013,12 +13128,12 @@ kolonay2011service:
   publisher: Citeseer
   series: null
   tags:
-  - software
-  - Java
-  - parallel programming
   - high-performance computing
   - HPC
   - distributed computing
+  - software
+  - Java
+  - parallel programming
   title: Service oriented computing environment ({SORCER}) for large scale, distributed,
     dynamic fidelity aeroelastic analysis
   type: inproceedings
@@ -13122,13 +13237,13 @@ kreps2011kafka:
   publisher: Athens, Greece
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - distributed computing
   - software
   - open source
   - OSS
   - Kafka
-  - high-performance computing
-  - HPC
-  - distributed computing
   title: 'Kafka: A distributed messaging system for log processing'
   type: inproceedings
   url: https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf
@@ -13224,9 +13339,9 @@ krizhevsky2012imagenet:
   - CNNs
   - regularization
   - overfitting
-  - benchmarking
   - high-performance computing
   - HPC
+  - benchmarking
   - scientific machine learning
   - SciML
   title: '{ImageNet} Classification with Deep Convolutional Neural Networks'
@@ -13859,8 +13974,8 @@ ledigabel2011algorithm:
   address: null
   articleno: null
   authors:
-  - - S{\'e}bastien
-    - Le Digabel
+  - - S\'ebastien
+    - Le~Digabel
   chapter: null
   descrip: NOMAD v3 is a widely-used open source numerical software package (in C++)
     for blackbox and derivative-free optimization via the MADS algorithms. Includes
@@ -13885,12 +14000,6 @@ ledigabel2011algorithm:
   publisher: Association for Computing Machinery (ACM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - parallel programming
-  - C++
-  - C
   - high-performance computing
   - HPC
   - parallel computing
@@ -13904,6 +14013,12 @@ ledigabel2011algorithm:
   - global optimization
   - mixed-variable optimization
   - surrogate modeling
+  - software
+  - open source
+  - OSS
+  - parallel programming
+  - C++
+  - C
   title: 'Algorithm 909: {NOMAD}: Nonlinear Optimization with the {MADS} Algorithm'
   type: article
   url: https://dl.acm.org/doi/10.1145/1916461.1916468
@@ -13977,12 +14092,12 @@ lee2015pydoe:
   publisher: GitHub
   series: null
   tags:
+  - design of experiments
+  - DoE
   - software
   - open source
   - OSS
   - Python
-  - design of experiments
-  - DoE
   title: 'py{DOE}: The experimental design package for python'
   type: misc
   url: https://github.com/tisimst/pyDOE
@@ -14066,13 +14181,13 @@ liang2024amfplacer:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - FPGA
   - software
   - open source
   - OSS
   - C++
-  - high-performance computing
-  - HPC
-  - FPGA
   title: '{AMF-Placer 2.0}: Open-Source Timing-Driven Analytical Mixed-Size Placer
     for Large-Scale Heterogeneous {FPGA}'
   type: article
@@ -14125,10 +14240,6 @@ lindauer2022smac3:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - decision trees
   - Bayesian optimization
@@ -14136,6 +14247,16 @@ lindauer2022smac3:
   - autotuning
   - hyperparameter optimization
   - surrogate modeling
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - uncertainty quantification
+  - UQ
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{SMAC3}: A Versatile Bayesian Optimization Package for Hyperparameter Optimization'
   type: article
   url: http://jmlr.org/papers/v23/21-0888.html
@@ -14473,17 +14594,17 @@ liuzzi2024dfolib:
   publisher: GitHub
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - optimization
   - multiobjective optimization
   - blackbox optimization
   - simulation optimization
   - derivative-free optimization
   - DFO
-  title: DFO-lib
+  - software
+  - open source
+  - OSS
+  - Fortran
+  title: '{DFO-lib}'
   type: misc
   url: https://github.com/DerivativeFreeLibrary
   venue: GitHub repository
@@ -14604,10 +14725,6 @@ lu2018nsganet:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - multiobjective optimization
   - mixed-variable optimization
@@ -14615,6 +14732,10 @@ lu2018nsganet:
   - hyperparameter optimization
   - evolutionary algorithm
   - EA
+  - software
+  - open source
+  - OSS
+  - Python
   title: 'NSGA-NET: a multi-objective genetic algorithm for neural architecture search'
   type: article
   url: null
@@ -14666,10 +14787,6 @@ lundberg2017unified:
   publisher: Curran Associates, Inc.
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - machine learning
   - ML
   - scientific machine learning
@@ -14678,6 +14795,10 @@ lundberg2017unified:
   - dimension reduction
   - regression
   - classification
+  - software
+  - open source
+  - OSS
+  - Python
   title: A Unified Approach to Interpreting Model Predictions
   type: inproceedings
   url: http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf
@@ -14808,14 +14929,14 @@ luu2011vpr:
   publisher: Association for Computing Machinery
   series: null
   tags:
+  - FPGA
+  - high-performance computing
+  - HPC
   - software
   - open source
   - OSS
   - C++
   - Verilog
-  - FPGA
-  - high-performance computing
-  - HPC
   title: '{VPR} 5.0: {FPGA CAD} and architecture exploration tools with single-driver
     routing, heterogeneity and process scaling'
   type: article
@@ -15149,15 +15270,15 @@ lux2023algorithm:
   publisher: Association of Computing Machinery
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - machine learning
   - ML
   - scientific machine learning
   - SciML
   - interpolation
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: 'Algorithm 1031: {MQSI}---{M}onotone quintic spline interpolation'
   type: article
   url: https://dl.acm.org/doi/10.1145/3570157
@@ -15435,15 +15556,15 @@ martins2009pymdo:
   publisher: ACM
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - blackbox optimization
   - simulation optimization
   - derivative-free optimization
   - DFO
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{pyMDO}: An Object-Oriented Framework for Multidisciplinary Design Optimization'
   type: article
   url: https://dl.acm.org/doi/10.1145/1555386.1555389
@@ -15475,14 +15596,14 @@ mayes2023pysuperfish:
   publisher: null
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - simulation
   - software
   - open source
   - OSS
   - Fortran
   - Python
-  - high-performance computing
-  - HPC
-  - simulation
   title: PySuperfish
   type: misc
   url: https://github.com/ChristopherMayes/PySuperfish
@@ -15553,13 +15674,13 @@ menzel1987users:
   publisher: Los Alamos National Laboratory
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - simulation
   - software
   - open source
   - OSS
   - Fortran
-  - high-performance computing
-  - HPC
-  - simulation
   title: Users guide for the {POISSON/SUPERFISH} group of codes
   type: techreport
   url: https://www.osti.gov/servlets/purl/10140823
@@ -15610,9 +15731,9 @@ mikolov2013efficient:
   - open source
   - neural networks
   - regularization
-  - software
   - scientific machine learning
   - SciML
+  - software
   title: Efficient estimation of word representations in vector space
   type: inproceedings
   url: https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq
@@ -15765,14 +15886,14 @@ mills2021toward:
   publisher: Elsevier BV
   series: null
   tags:
-  - software
-  - CUDA
-  - C++
   - high-performance computing
   - HPC
   - GPU computing
   - simulation
   - computational linear algebra
+  - software
+  - CUDA
+  - C++
   title: Toward performance-portable {PETSc} for {GPU}-based exascale systems
   type: article
   url: https://linkinghub.elsevier.com/retrieve/pii/S016781912100079X
@@ -15812,12 +15933,12 @@ misitano2021desdeo:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
+  - optimization
+  - multiobjective optimization
   - software
   - open source
   - OSS
   - Python
-  - optimization
-  - multiobjective optimization
   title: '{DESDEO}: The Modular and Open Source Framework for Interactive Multiobjective
     Optimization'
   type: article
@@ -15940,10 +16061,6 @@ moriwaki2018mordred:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - simulation optimization
   - mixed-variable optimization
@@ -15952,6 +16069,10 @@ moriwaki2018mordred:
   - scientific machine learning
   - SciML
   - representation learning
+  - software
+  - open source
+  - OSS
+  - Python
   title: 'Mordred: a molecular descriptor calculator'
   type: article
   url: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0258-y
@@ -16080,10 +16201,6 @@ munson2015tao:
   publisher: Argonne National Laboratory
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C++
   - high-performance computing
   - HPC
   - simulation
@@ -16093,6 +16210,10 @@ munson2015tao:
   - derivative-free optimization
   - DFO
   - convex optimization
+  - software
+  - open source
+  - OSS
+  - C++
   title: '{TAO} 3.5 Users Manual'
   type: techreport
   url: https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf
@@ -16154,14 +16275,14 @@ murray2020vtr:
   publisher: Association for Computing Machinery
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - FPGA
   - software
   - open source
   - OSS
   - C++
   - Verilog
-  - high-performance computing
-  - HPC
-  - FPGA
   title: '{VTR} 8: High-performance {CAD} and Customizable {FPGA} Architecture Modelling'
   type: article
   url: https://doi.org/10.1145/3388617
@@ -16500,14 +16621,14 @@ nvidiacorporation2025cublas:
   publisher: NVIDIA Corporation
   series: null
   tags:
-  - software
-  - C
-  - Fortran
-  - CUDA
   - high-performance computing
   - HPC
   - GPU computing
+  - CUDA
   - computational linear algebra
+  - software
+  - C
+  - Fortran
   title: '{cuBLAS API}'
   type: techreport
   url: https://docs.nvidia.com/cuda/pdf/CUBLAS_Library.pdf
@@ -16538,12 +16659,12 @@ nvidiahpccompilers2025cuda:
   publisher: NVIDIA Corporation
   series: null
   tags:
-  - software
-  - Fortran
-  - CUDA
   - high-performance computing
   - HPC
   - GPU computing
+  - CUDA
+  - software
+  - Fortran
   title: '{CUDA Fortran} programming guide'
   type: techreport
   url: https://docs.nvidia.com/hpc-sdk/archive/23.3/pdf/hpc233cudaforug.pdf
@@ -16565,7 +16686,7 @@ odonoghue2016conic:
     - Boyd
   chapter: null
   descrip: SCS is an open source numerical software for solving second-order cone
-    problems from Stephen Boyd's lab
+    problems from Steph Boyd's lab
   doi: 10.1007/s10957-016-0892-3
   edition: null
   editors: []
@@ -16581,15 +16702,15 @@ odonoghue2016conic:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C++
   - optimization
   - quadratic programming
   - QP
   - convex optimization
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - C++
   title: Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding
   type: article
   url: http://link.springer.com/10.1007/s10957-016-0892-3
@@ -16660,14 +16781,14 @@ openmp2015openmp:
   publisher: null
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - parallel computing
   - software
   - OpenMP
   - parallel programming
   - C
   - Fortran
-  - high-performance computing
-  - HPC
-  - parallel computing
   title: '{OpenMP} Application Programming Interface'
   type: techreport
   url: null
@@ -16732,13 +16853,13 @@ papazafeiropoulos2014matlab:
   publisher: MathWorks
   series: null
   tags:
-  - software
-  - Matlab
   - computational geometry
   - Delaunay triangulation
   - algorithms
   - convex hull
   - high dimension
+  - software
+  - Matlab
   title: '{MATLAB} Computational Geometry Toolbox version 1.2'
   type: techreport
   url: https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox
@@ -16974,16 +17095,16 @@ paszke2019pytorch:
   - backpropagation
   - open source
   - neural networks
-  - software
-  - OSS
-  - Python
-  - C++
-  - CUDA
   - high-performance computing
   - HPC
   - computational linear algebra
   - scientific machine learning
   - SciML
+  - software
+  - OSS
+  - Python
+  - C++
+  - CUDA
   title: '{PyTorch}: An Imperative Style, High-Performance Deep Learning Library'
   type: inproceedings
   url: https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf
@@ -17133,14 +17254,14 @@ pedregosa2011scikitlearn:
   - open source
   - decision trees
   - neural networks
-  - software
-  - OSS
-  - Python
   - scientific machine learning
   - SciML
   - Gaussian process
   - regression
   - classification
+  - software
+  - OSS
+  - Python
   title: 'Scikit-learn: Machine learning in {P}ython'
   type: article
   url: https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf
@@ -17223,14 +17344,14 @@ petitet2018hpl:
   publisher: Innovation Computing Laboratory, University of Tennessee
   series: null
   tags:
-  - software
-  - Fortran
-  - parallel programming
-  - benchmarking
   - high-performance computing
   - HPC
   - distributed computing
   - computational linear algebra
+  - benchmarking
+  - software
+  - Fortran
+  - parallel programming
   title: '{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark
     for Distributed-Memory Computers}'
   type: book
@@ -17327,15 +17448,15 @@ pfisterer2022yahpo:
   publisher: PMLR
   series: Proceedings of Machine Learning Research
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - multiobjective optimization
   - autotuning
   - hyperparameter optimization
   - benchmarking
+  - software
+  - open source
+  - OSS
+  - Python
   title: '{YAHPO} Gym - An Efficient Multi-Objective Multi-Fidelity Benchmark for
     Hyperparameter Optimization'
   type: inproceedings
@@ -17685,11 +17806,6 @@ raghunath2017global:
   publisher: SCS
   series: null
   tags:
-  - software
-  - parallel programming
-  - Fortran
-  - C
-  - Java
   - high-performance computing
   - HPC
   - parallel computing
@@ -17702,6 +17818,11 @@ raghunath2017global:
   - DIRECT
   - global optimization
   - stochastic optimization
+  - software
+  - parallel programming
+  - Fortran
+  - C
+  - Java
   title: Global deterministic and stochastic optimization in a service oriented architecture
   type: inproceedings
   url: http://dl.acm.org/citation.cfm?id=3108103
@@ -17735,15 +17856,15 @@ ragonneau2021pdfo:
   publisher: GitHub
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - blackbox optimization
   - derivative-free optimization
   - DFO
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - Python
   title: "{PDFO}: Cross-Platform Interfaces for {P}owell\u2019s Derivative-Free Optimization\
     \ Solvers"
   type: misc
@@ -17867,14 +17988,14 @@ rajarathnam2022dreamplacefpga:
   publisher: IEEE
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - FPGA
   - software
   - open source
   - OSS
   - Python
   - C++
-  - high-performance computing
-  - HPC
-  - FPGA
   title: '{DREAMPlaceFPGA}: An Open-Source Analytical Placer for Large Scale Heterogeneous
     {FPGAs} using Deep-Learning Toolkit'
   type: inproceedings
@@ -18205,14 +18326,14 @@ rose2012vtr:
   publisher: Association for Computing Machinery
   series: FPGA '12
   tags:
+  - high-performance computing
+  - HPC
+  - FPGA
   - software
   - open source
   - OSS
   - Python
   - C++
-  - high-performance computing
-  - HPC
-  - FPGA
   title: 'The {VTR} project: architecture and {CAD} for {FPGAs} from verilog to routing'
   type: inproceedings
   url: https://doi.org/10.1145/2145694.2145708
@@ -18340,11 +18461,6 @@ roy2023quasimonte:
   publisher: The Open Journal
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
-  - Python
   - design of experiments
   - DoE
   - machine learning
@@ -18352,6 +18468,11 @@ roy2023quasimonte:
   - scientific machine learning
   - SciML
   - high dimension
+  - software
+  - open source
+  - OSS
+  - Fortran
+  - Python
   title: Quasi-Monte Carlo Methods in Python
   type: article
   url: https://joss.theoj.org/papers/10.21105/joss.05309
@@ -18674,10 +18795,6 @@ saves2024smt:
   publisher: Elsevier BV
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - design of experiments
   - DoE
   - model-based sampling
@@ -18691,6 +18808,10 @@ saves2024smt:
   - constrained optimization
   - RBFs
   - Gaussian process
+  - software
+  - open source
+  - OSS
+  - Python
   title: 'SMT 2.0: A Surrogate Modeling Toolbox with a focus on hierarchical and mixed
     variables Gaussian processes'
   type: article
@@ -19079,17 +19200,17 @@ shashaani2016astrodf:
   publisher: IEEE
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - blackbox optimization
   - simulation optimization
   - derivative-free optimization
   - DFO
   - stochastic optimization
-  title: 'ASTRO-DF: Adaptive sampling trust-region optimization algorithms, heuristics,
+  - software
+  - open source
+  - OSS
+  - Python
+  title: '{ASTRO-DF}: Adaptive sampling trust-region optimization algorithms, heuristics,
     and numerical experience'
   type: inproceedings
   url: http://ieeexplore.ieee.org/document/7822121/
@@ -19231,10 +19352,6 @@ shields2021bayesian:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - optimization
   - multiobjective optimization
   - blackbox optimization
@@ -19248,6 +19365,10 @@ shields2021bayesian:
   - scientific machine learning
   - SciML
   - representation learning
+  - software
+  - open source
+  - OSS
+  - Python
   title: Bayesian reaction optimization as a tool for chemical synthesis
   type: article
   url: https://www.nature.com/articles/s41586-021-03213-y
@@ -19466,12 +19587,12 @@ slepicka2020poisson:
   publisher: null
   series: null
   tags:
-  - software
-  - Fortran
-  - Kubernetes
   - high-performance computing
   - HPC
   - simulation
+  - software
+  - Fortran
+  - Kubernetes
   title: Poisson Superfish via Docker
   type: misc
   url: https://github.com/hhslepicka/docker-poisson-superfish-nobin
@@ -19744,13 +19865,13 @@ stall2019make:
   publisher: Nature Publishing Group
   series: null
   tags:
-  - software
   - high-performance computing
   - HPC
   - machine learning
   - ML
   - scientific machine learning
   - SciML
+  - software
   title: Make scientific data {FAIR}
   type: article
   url: https://www.nature.com/articles/d41586-019-01720-7
@@ -19820,10 +19941,6 @@ stellato2020osqp:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - C++
   - computational geometry
   - projection
   - optimization
@@ -19831,6 +19948,10 @@ stellato2020osqp:
   - QP
   - convex optimization
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - C++
   title: '{OSQP}: an operator splitting solver for quadratic programs'
   type: article
   url: http://link.springer.com/10.1007/s12532-020-00179-2
@@ -20102,9 +20223,6 @@ tavares2022parallel:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - Matlab
-  - parallel programming
   - high-performance computing
   - HPC
   - parallel computing
@@ -20115,6 +20233,9 @@ tavares2022parallel:
   - derivative-free optimization
   - DFO
   - pattern search
+  - software
+  - Matlab
+  - parallel programming
   title: Parallel Strategies for Direct Multisearch
   type: article
   url: https://link.springer.com/10.1007/s11075-022-01364-1
@@ -20218,16 +20339,16 @@ thacker2010algorithm:
   publisher: Association for Computing Machinery (ACM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - machine learning
   - ML
   - scientific machine learning
   - SciML
   - computational linear algebra
   - interpolation
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: 'Algorithm 905: {SHEPPACK}: {M}odified {S}hepard algorithm for interpolation
     of scattered multivariate data'
   type: article
@@ -20312,15 +20433,15 @@ tian2017platemo:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Matlab
   - optimization
   - multiobjective optimization
   - benchmarking
   - evolutionary algorithms
   - EA
+  - software
+  - open source
+  - OSS
+  - Matlab
   title: '{PlatEMO}: A {MATLAB} Platform for Evolutionary Multi-Objective Optimization
     [Educational Forum]'
   type: article
@@ -20576,14 +20697,14 @@ trott2022kokkos:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - parallel programming
   - high-performance computing
   - HPC
   - distributed computing
   - parallel computing
+  - software
+  - open source
+  - OSS
+  - parallel programming
   title: 'Kokkos 3: Programming Model Extensions for the Exascale Era'
   type: article
   url: https://ieeexplore.ieee.org/document/9485033/
@@ -20705,6 +20826,13 @@ vandermaaten2008visualizing:
   publisher: null
   series: null
   tags:
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - representation learning
+  - high dimension
+  - dimension reduction
   - software
   - open source
   - OSS
@@ -20715,13 +20843,6 @@ vandermaaten2008visualizing:
   - Julia
   - Matlab
   - CUDA
-  - machine learning
-  - ML
-  - scientific machine learning
-  - SciML
-  - representation learning
-  - high dimension
-  - dimension reduction
   title: Visualizing Data using {t-SNE}
   type: article
   url: http://jmlr.org/papers/v9/vandermaaten08a.html
@@ -20757,16 +20878,16 @@ vandevender1982slatec:
   publisher: Association for Computing Machinery (ACM)
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - high-performance computing
   - HPC
   - computational linear algebra
   - optimization
   - convex optimization
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: The {SLATEC} Mathematical Subroutine Library
   type: article
   url: https://dl.acm.org/doi/10.1145/1057594.1057595
@@ -21086,12 +21207,6 @@ virtanen2020scipy:
   publisher: Springer Science and Business Media LLC
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
-  - C++
-  - Python
   - computational geometry
   - design of experiments
   - DoE
@@ -21112,6 +21227,12 @@ virtanen2020scipy:
   - scientific machine learning
   - SciML
   - interpolation
+  - software
+  - open source
+  - OSS
+  - Fortran
+  - C++
+  - Python
   title: '{SciPy} 1.0: {F}undamental Algorithms for Scientific Computing in {P}ython'
   type: article
   url: https://www.nature.com/articles/s41592-019-0686-2
@@ -21147,12 +21268,12 @@ voss2019tbb:
   publisher: Apress
   series: null
   tags:
-  - software
-  - C++
-  - parallel programming
   - high-performance computing
   - HPC
   - parallel computing
+  - software
+  - C++
+  - parallel programming
   title: '{TBB} on {NUMA} Architectures'
   type: inbook
   url: https://doi.org/10.1007/978-1-4842-4398-5_20
@@ -21184,14 +21305,14 @@ vtrdevelopers2024verilogtorouting:
   publisher: null
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - FPGA
   - software
   - open source
   - OSS
   - Python
   - C++
-  - high-performance computing
-  - HPC
-  - FPGA
   title: Verilog-to-routing documentation
   type: misc
   url: https://readthedocs.org/projects/vtr/downloads/pdf/latest
@@ -21267,11 +21388,11 @@ wang2022pyomodoe:
   publisher: Wiley
   series: null
   tags:
-  - software
-  - Python
   - design of experiments
   - DoE
   - model-based sampling
+  - software
+  - Python
   title: 'Pyomo.DOE: An open-source package for model-based design of experiments
     in Python'
   type: article
@@ -21593,14 +21714,14 @@ watson1997algorithm:
   publisher: ACM
   series: null
   tags:
+  - optimization
+  - convex optimization
+  - global optimization
   - software
   - open source
   - OSS
   - Fortran
-  - optimization
-  - convex optimization
-  - global optimization
-  title: 'Algorithm 777: HOMPACK90: A suite of Fortran 90 codes for globally convergent
+  title: 'Algorithm 777: {HOMPACK90}: A suite of {Fortran} 90 codes for globally convergent
     homotopy algorithms'
   type: article
   url: https://dl.acm.org/doi/10.1145/279232.279235
@@ -21748,7 +21869,7 @@ whaley2001automated:
     when installing on a HPC that will have a high numerical (compute bound) workload.
     This can be done automatically via numerical optimization, so that users can just
     run the ATLAS setup scripts to configure BLAS automatically if they want an optimized
-    installation -- could also be considered an early example of performance portability
+    installation
   doi: 10.1016/s0167-8191(00)00087-9
   edition: null
   editors: []
@@ -21764,14 +21885,14 @@ whaley2001automated:
   publisher: Elsevier BV
   series: null
   tags:
-  - software
-  - parallel programming
   - high-performance computing
   - HPC
   - computational linear algebra
   - optimization
   - mixed-variable optimization
   - autotuning
+  - software
+  - parallel programming
   title: Automated empirical optimizations of software and the {ATLAS} project
   type: article
   url: https://linkinghub.elsevier.com/retrieve/pii/S0167819100000879
@@ -22085,10 +22206,6 @@ wu2025ytopt:
   publisher: Wiley
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Python
   - high-performance computing
   - HPC
   - distributed computing
@@ -22098,6 +22215,10 @@ wu2025ytopt:
   - global optimization
   - surrogate modeling
   - autotuning
+  - software
+  - open source
+  - OSS
+  - Python
   title: 'ytopt: Autotuning Scientific Applications for Energy Efficiency at Large
     Scales'
   type: article
@@ -22181,16 +22302,16 @@ xiong2023dreamplacefpgamp:
   publisher: arXiv cs.AR preprint
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - FPGA
+  - GPU computing
   - software
   - open source
   - OSS
   - Python
   - CUDA
   - C++
-  - high-performance computing
-  - HPC
-  - FPGA
-  - GPU computing
   title: '{DREAMPlaceFPGA-MP}: An Open-Source {GPU}-Accelerated Macro Placer for Modern
     {FPGAs} with Cascade Shapes and Region Constraints'
   type: techreport
@@ -22621,10 +22742,6 @@ zhang2023prima:
   publisher: null
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - high-performance computing
   - HPC
   - computational linear algebra
@@ -22633,6 +22750,10 @@ zhang2023prima:
   - derivative-free optimization
   - DFO
   - constrained optimization
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: '{PRIMA: Reference Implementation for Powell''s Methods with Modernization
     and Amelioration}'
   type: github repository
@@ -22765,10 +22886,6 @@ zhu1997algorithm:
   publisher: ACM
   series: null
   tags:
-  - software
-  - open source
-  - OSS
-  - Fortran
   - high-performance computing
   - HPC
   - computational linear algebra
@@ -22779,6 +22896,10 @@ zhu1997algorithm:
   - ML
   - scientific machine learning
   - SciML
+  - software
+  - open source
+  - OSS
+  - Fortran
   title: 'Algorithm 778: {L-BFGS-B}: {F}ortran Subroutines for Large-Scale Bound-Constrained
     Optimization'
   type: article
@@ -22839,7 +22960,6 @@ ziegler2019finetuning:
   - RL
   - LLMs
   - neural networks
-  - optimization
   title: Fine-Tuning Language Models from Human Preferences
   type: techreport
   url: https://arxiv.org/abs/1909.08593
