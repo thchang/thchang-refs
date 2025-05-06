@@ -3197,7 +3197,7 @@ borle2019analyzing:
     - Lomonaco
   chapter: null
   descrip: Quantum Annealing algorithm for solving Linear Least Squares equations
-  doi: null
+  doi: 10.1007/978-3-030-10564-8_23
   edition: null
   editors: []
   git: null
@@ -3220,7 +3220,7 @@ borle2019analyzing:
     problems
   type: inproceedings
   url: null
-  venue: International Workshop on Algorithms and Computation
+  venue: International Workshop on Algorithms and Computation (WALCOM 2019)
   volume: null
   web: null
   year: 2019
@@ -4453,7 +4453,7 @@ chang2018predicting:
   title: Predicting system performance by interpolation using a high-dimensional {D}elaunay
     triangulation
   type: inproceedings
-  url: null
+  url: https://par.nsf.gov/servlets/purl/10111451
   venue: Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the
     26th High Performance Computing Symposium (HPC '18)
   volume: null
@@ -6587,7 +6587,7 @@ das2005quantum:
   - quantum annealing
   title: Quantum annealing and related optimization methods
   type: book
-  url: null
+  url: https://www.researchgate.net/publication/252247914_Quantum_Annealing_and_Related_Optimization_Methods
   venue: null
   volume: '679'
   web: null
@@ -6729,7 +6729,7 @@ dattani2019quadratization:
   - D-Wave
   title: Quadratization in discrete optimization and quantum mechanics
   type: article
-  url: null
+  url: https://arxiv.org/abs/1901.04405
   venue: arXiv preprint arXiv:1901.04405
   volume: null
   web: null
@@ -7040,7 +7040,7 @@ dean2013tail:
   - performance modeling
   title: The tail at scale
   type: article
-  url: null
+  url: https://research.google/pubs/the-tail-at-scale
   venue: Communications of the ACM
   volume: '56'
   web: null
@@ -9510,7 +9510,7 @@ gamma1995design:
   - software
   title: 'Design patterns: elements of reusable object-oriented software'
   type: book
-  url: null
+  url: https://en.wikipedia.org/wiki/Design_Patterns
   venue: null
   volume: null
   web: null
@@ -9689,7 +9689,7 @@ gavin2019levenbergmarquardt:
   title: The Levenberg-Marquardt algorithm for nonlinear least squares curve-fitting
     problems
   type: techreport
-  url: null
+  url: https://people.duke.edu/~hpgavin/lm.pdf
   venue: null
   volume: null
   web: null
@@ -15118,7 +15118,7 @@ lux2018predictive:
   title: Predictive modeling of {I/O} characteristics in high performance computing
     systems
   type: inproceedings
-  url: null
+  url: https://par.nsf.gov/servlets/purl/10111447
   venue: Proceedings of the 2018 Spring Simulation Conference (SpringSim 2018), the
     26th High Performance Computing Symposium (HPC '18)
   volume: null
@@ -19649,7 +19649,7 @@ sobieszczanskisobieski2015multidisciplinary:
   descrip: One of the most popular textbooks in the field of multidisciplinary engineering
     design optimization. The introduction provides plenty of motivation for solving
     computational expensive multiobjective simulation / blackbox optimization problems
-  doi: null
+  doi: 10.1002/9781118897072
   edition: null
   editors: []
   git: null

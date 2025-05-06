@@ -173,7 +173,7 @@ List of topics (may be some overlap between topics):
  * [Liu et al., 2019. Nonparametric functional approximation with Delaunay triangulation learner](https://ieeexplore.ieee.org/document/8944414)
  * [Lundberg et al., 2017. A Unified Approach to Interpreting Model Predictions](http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf)
  * [Lux et al., 2018. Nonparametric distribution models for predicting and managing computational performance variability](https://ieeexplore.ieee.org/document/8478814)
- * Lux et al., 2018. Predictive modeling of I/O characteristics in high performance computing systems
+ * [Lux et al., 2018. Predictive modeling of I/O characteristics in high performance computing systems](https://par.nsf.gov/servlets/purl/10111447)
  * [Lux et al., 2020. Analytic test functions for generalizable evaluation of convex optimization techniques](https://ieeexplore.ieee.org/document/9368254/)
  * [Lux et al., 2021. Interpolation of sparse high-dimensional data](https://link.springer.com/10.1007/s11075-020-01040-2)
  * [Lux et al., 2023. Algorithm 1031: MQSI---Monotone quintic spline interpolation](https://dl.acm.org/doi/10.1145/3570157)
@@ -342,7 +342,7 @@ List of topics (may be some overlap between topics):
  * [Fowkes et al., 2022. PyCUTEst: an open source Python package of optimization test problems](https://joss.theoj.org/papers/10.21105/joss.04377)
  * [Frazier, 2018. A Tutorial on Bayesian Optimization](http://arxiv.org/abs/1807.02811)
  * [Garnett, 2023. Bayesian Optimization](https://bayesoptbook.com)
- * Gavin, 2019. The Levenberg-Marquardt algorithm for nonlinear least squares curve-fitting problems
+ * [Gavin, 2019. The Levenberg-Marquardt algorithm for nonlinear least squares curve-fitting problems](https://people.duke.edu/~hpgavin/lm.pdf)
  * [Goh, 2017. Why Momentum Really Works](http://distill.pub/2017/momentum)
  * [Golovin et al., 2017. Google Vizier: A Service for Black-Box Optimization](https://dl.acm.org/doi/10.1145/3097983.3098043)
  * [Gould et al., 2015. CUTEst: a Constrained and Unconstrained Testing Environment with safe threads for mathematical optimization](https://doi.org/10.1007/s10589-014-9687-3)
@@ -427,7 +427,7 @@ List of topics (may be some overlap between topics):
  * [Shi et al., 2023. On the numerical performance of finite-difference-based methods for derivative-free optimization](https://doi.org/10.1080/10556788.2022.2121832)
  * [Shields et al., 2021. Bayesian reaction optimization as a tool for chemical synthesis](https://www.nature.com/articles/s41586-021-03213-y)
  * [Smale, 1998. Mathematical problems for the next century](http://link.springer.com/10.1007/BF03025291)
- * Sobieszczanski-Sobieski et al., 2015. Multidisciplinary Design Optimization Supported by Knowledge Based Engineering
+ * [Sobieszczanski-Sobieski et al., 2015. Multidisciplinary Design Optimization Supported by Knowledge Based Engineering](https://doi.com/10.1002/9781118897072)
  * [Stellato et al., 2020. OSQP: an operator splitting solver for quadratic programs](http://link.springer.com/10.1007/s12532-020-00179-2)
  * [Steuer et al., 1983. An interactive weighted Tchebycheff procedure for multiple objective programming](http://link.springer.com/10.1007/BF02591870)
  * [2005. Evolutionary Multiobjective Optimization: Theoretical Advances and Applications](http://link.springer.com/10.1007/1-84628-137-7)
@@ -481,7 +481,7 @@ List of topics (may be some overlap between topics):
  * [Capps et al., 2016. IOzone Filesystem Benchmark](www.iozone.org)
  * [Chandy et al., 1997. A parallel circuit-partitioned algorithm for timing driven cell placement](http://ieeexplore.ieee.org/document/628930/)
  * Chang, 2016. GPU Saturation for Multiple Matrix-Vector Multiplications
- * Chang et al., 2018. Predicting system performance by interpolation using a high-dimensional Delaunay triangulation
+ * [Chang et al., 2018. Predicting system performance by interpolation using a high-dimensional Delaunay triangulation](https://par.nsf.gov/servlets/purl/10111451)
  * [Chang et al., 2020. Algorithm 1012: DELAUNAYSPARSE: Interpolation via a Sparse Subset of the Delaunay Triangulation in Medium to High Dimensions](https://dl.acm.org/doi/10.1145/3422818)
  * [Chang et al., 2020. Managing computationally expensive blackbox multiobjective optimization problems using libEnsemble](https://dl.acm.org/doi/abs/10.5555/3408207.3408245)
  * [Chang, 2020. Mathematical Software for Multiobjective Optimization Problems](https://vtechworks.lib.vt.edu/handle/10919/98915)
@@ -500,7 +500,7 @@ List of topics (may be some overlap between topics):
  * [Dash et al., 2024. Optimizing Distributed Training on Frontier for Large Language Models](https://ieeexplore.ieee.org/document/10528939/)
  * [De et al., 2008. A trace-driven emulation framework to predict scalability of large clusters in presence of OS jitter](http://ieeexplore.ieee.org/document/4663776)
  * [Dean et al., 2008. MapReduce: simplified data processing on large clusters](https://doi.org/10.1145/1327452.1327492)
- * Dean et al., 2013. The tail at scale
+ * [Dean et al., 2013. The tail at scale](https://research.google/pubs/the-tail-at-scale)
  * [2019. Press Release: U.S.\ Department of Energy and Intel to deliver first exascale supercomputer](https://www.anl.gov/article/us-department-of-energy-and-intel-to-deliver-first-exascale-supercomputer)
  * [Devlin et al., 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423/)
  * [Dongarra et al., 2003. The LINPACK benchmark: past, present, and future](https://onlinelibrary.wiley.com/doi/10.1002/cpe.728)
@@ -545,7 +545,7 @@ List of topics (may be some overlap between topics):
  * [Luo et al., 2020. Pre-exascale accelerated application development: The ORNL Summit experience](https://ieeexplore.ieee.org/document/8960361)
  * [Luu et al., 2011. VPR 5.0: FPGA CAD and architecture exploration tools with single-driver routing, heterogeneity and process scaling](https://doi.org/10.1145/2068716.2068718)
  * [Lux et al., 2018. Nonparametric distribution models for predicting and managing computational performance variability](https://ieeexplore.ieee.org/document/8478814)
- * Lux et al., 2018. Predictive modeling of I/O characteristics in high performance computing systems
+ * [Lux et al., 2018. Predictive modeling of I/O characteristics in high performance computing systems](https://par.nsf.gov/servlets/purl/10111447)
  * [Maidee et al., 2005. Timing-driven partitioning-based placement for island style FPGAs](http://ieeexplore.ieee.org/document/1397800/)
  * [Mayes, 2023. PySuperfish](https://github.com/ChristopherMayes/PySuperfish)
  * [Menzel et al., 1987. Users guide for the POISSON/SUPERFISH group of codes](https://www.osti.gov/servlets/purl/10140823)
@@ -644,7 +644,7 @@ List of topics (may be some overlap between topics):
  * [Fortin et al., 2012. DEAP: Evolutionary Algorithms Made Easy](https://www.jmlr.org/papers/v13/fortin12a.html)
  * [Forum, 2023. MPI: A Message-Passing Interface Standard](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf)
  * [Fowkes et al., 2022. PyCUTEst: an open source Python package of optimization test problems](https://joss.theoj.org/papers/10.21105/joss.04377)
- * Gamma et al., 1995. Design patterns: elements of reusable object-oriented software
+ * [Gamma et al., 1995. Design patterns: elements of reusable object-oriented software](https://en.wikipedia.org/wiki/Design_Patterns)
  * [Germann, 2021. Co-design in the Exascale Computing Project](https://journals.sagepub.com/doi/10.1177/10943420211059380)
  * [Gillette et al., 2024. Algorithm 1049: The Delaunay Density Diagnostic](https://doi.org/10.1145/3700134)
  * [Golovin et al., 2017. Google Vizier: A Service for Black-Box Optimization](https://dl.acm.org/doi/10.1145/3097983.3098043)
@@ -739,7 +739,7 @@ List of topics (may be some overlap between topics):
  * [Boyd et al., 2004. Convex optimization](https://stanford.edu/~boyd/cvxbook/)
  * [Chang et al., 2018. Computing the umbrella neighbourhood of a vertex in the Delaunay triangulation and a single Voronoi cell in arbitrary dimension](https://ieeexplore.ieee.org/document/8479003)
  * [Chang et al., 2018. A polynomial time algorithm for multivariate interpolation in arbitrary dimension via the Delaunay triangulation](https://dl.acm.org/doi/10.1145/3190645.3190680)
- * Chang et al., 2018. Predicting system performance by interpolation using a high-dimensional Delaunay triangulation
+ * [Chang et al., 2018. Predicting system performance by interpolation using a high-dimensional Delaunay triangulation](https://par.nsf.gov/servlets/purl/10111451)
  * [Chang et al., 2020. Algorithm 1012: DELAUNAYSPARSE: Interpolation via a Sparse Subset of the Delaunay Triangulation in Medium to High Dimensions](https://dl.acm.org/doi/10.1145/3422818)
  * [Chang, 2020. Mathematical Software for Multiobjective Optimization Problems](https://vtechworks.lib.vt.edu/handle/10919/98915)
  * [Chang et al., 2024. Remark on Algorithm 1012: Computing projections with large data sets](https://dl.acm.org/doi/10.1145/3656581)
@@ -768,7 +768,7 @@ List of topics (may be some overlap between topics):
  * [Klee, 1980. On the complexity of d-dimensional Voronoi diagrams](http://link.springer.com/10.1007/BF01224932)
  * [Liu et al., 2019. Nonparametric functional approximation with Delaunay triangulation learner](https://ieeexplore.ieee.org/document/8944414)
  * [Lux et al., 2018. Novel meshes for multivariate interpolation and approximation](https://dl.acm.org/doi/10.1145/3190645.3190687)
- * Lux et al., 2018. Predictive modeling of I/O characteristics in high performance computing systems
+ * [Lux et al., 2018. Predictive modeling of I/O characteristics in high performance computing systems](https://par.nsf.gov/servlets/purl/10111447)
  * [Lux et al., 2021. Interpolation of sparse high-dimensional data](https://link.springer.com/10.1007/s11075-020-01040-2)
  * [Megiddo, 1991. On finding primal- and dual-optimal bases](https://pubsonline.informs.org/doi/10.1287/ijoc.3.1.63)
  * Miller et al., 2008. Linear-size meshes
@@ -818,7 +818,7 @@ List of topics (may be some overlap between topics):
  * [Roy et al., 2023. Quasi-Monte Carlo Methods in Python](https://joss.theoj.org/papers/10.21105/joss.05309)
  * [Sapsis et al., 2022. Optimal criteria and their asymptotic form for data selection in data-driven reduced-order modelling with Gaussian process regression](https://royalsocietypublishing.org/doi/10.1098/rsta.2021.0197)
  * [Saves et al., 2024. SMT 2.0: A Surrogate Modeling Toolbox with a focus on hierarchical and mixed variables Gaussian processes](https://www.sciencedirect.com/science/article/pii/S096599782300162X)
- * Sobieszczanski-Sobieski et al., 2015. Multidisciplinary Design Optimization Supported by Knowledge Based Engineering
+ * [Sobieszczanski-Sobieski et al., 2015. Multidisciplinary Design Optimization Supported by Knowledge Based Engineering](https://doi.com/10.1002/9781118897072)
  * [Sobol, 1967. Distribution of points in a cube and approximate evaluation of integrals](https://linkinghub.elsevier.com/retrieve/pii/0041555367901449)
  * [Tao, 2011. An Epsilon of Room: Pages from year three of a mathematical blog](http://www.ams.org/mbk/077)
  * [Viana, 2016. A tutorial on Latin hypercube design of experiments](https://onlinelibrary.wiley.com/doi/10.1002/qre.1924)
@@ -837,11 +837,11 @@ List of topics (may be some overlap between topics):
  * [Biamonte et al., 2017. Quantum machine learning](https://www.nature.com/articles/nature23474)
  * [Boixo et al., 2014. Evidence for quantum annealing with more than one hundred qubits](https://www.nature.com/articles/nphys2900)
  * [Boothby et al., 2018. Next-generation topology of D-Wave quantum processors](https://www.dwavesys.com/sites/default/files/14-1026A-C_Next-Generation-Topology-of-DW-Quantum-Processors.pdf)
- * Borle et al., 2019. Analyzing the quantum annealing approach for solving linear least squares problems
+ * [Borle et al., 2019. Analyzing the quantum annealing approach for solving linear least squares problems](https://doi.com/10.1007/978-3-030-10564-8_23)
  * [Cai et al., 2014. A practical heuristic for finding graph minors](https://arxiv.org/abs/1406.2741)
  * [Chang et al., 2019. Experimental realization of quantum algorithms for a linear system inspired by adiabatic quantum computing](https://link.aps.org/doi/10.1103/PhysRevA.99.012320)
- * Das et al., 2005. Quantum annealing and related optimization methods
- * Dattani, 2019. Quadratization in discrete optimization and quantum mechanics
+ * [Das et al., 2005. Quantum annealing and related optimization methods](https://www.researchgate.net/publication/252247914_Quantum_Annealing_and_Related_Optimization_Methods)
+ * [Dattani, 2019. Quadratization in discrete optimization and quantum mechanics](https://arxiv.org/abs/1901.04405)
  * [Dridi et al., 2017. Prime factorization using quantum annealing and computational algebraic geometry](https://www.nature.com/articles/srep43048)
  * [Elgart et al., 2012. A note on the switching adiabatic theorem](https://aip.scitation.org/doi/abs/10.1063/1.4748968)
  * [Jiang et al., 2018. Quantum annealing for prime factorization](https://www.nature.com/articles/s41598-018-36058-z)
