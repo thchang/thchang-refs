@@ -11571,6 +11571,40 @@ hoffman2022optimizing:
   volume: '4'
   web: null
   year: 2022
+holzmann2006power:
+  address: null
+  articleno: null
+  authors:
+  - - Gerald J.
+    - Holzmann
+  chapter: null
+  descrip: NASA JPL's 10 rules for writing clean, readable, maintainable code that
+    can be statically checked and verified for safety-critical applications. Targeted
+    at C, but applicable to almost any compiled language.
+  doi: 10.1109/MC.2006.212
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 0018-9162
+  month: '6'
+  note: null
+  number: '6'
+  pages:
+  - '95'
+  - '99'
+  publisher: Institute of Electrical and Electronics Engineers (IEEE)
+  series: null
+  tags:
+  - software
+  - C
+  title: 'The power of 10: rules for developing safety-critical code'
+  type: article
+  url: https://spinroot.com/gerard/pdf/P10.pdf
+  venue: Computer
+  volume: '39'
+  web: null
+  year: 2006
 huang2019cpptaskflow:
   address: Rio de Janeiro, Brazil
   articleno: null

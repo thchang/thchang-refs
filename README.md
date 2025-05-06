@@ -655,6 +655,7 @@ List of topics (may be some overlap between topics):
  * [He et al., 2016. Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385)
  * [Heroux et al., 2020. Advancing Scientific Productivity through Better Scientific Software: Developer Productivity and Software Sustainability Report](https://www.osti.gov/servlets/purl/1606662)
  * [Hert et al., 2020. dD Convex Hulls and Delaunay Triangulations](https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD)
+ * [Holzmann, 2006. The power of 10: rules for developing safety-critical code](https://spinroot.com/gerard/pdf/P10.pdf)
  * [Huang et al., 2019. Cpp-Taskflow: Fast Task-Based Parallel Programming Using Modern C++](https://ieeexplore.ieee.org/document/8821011/)
  * [Huangfu et al., 2018. Parallelizing the dual revised simplex method](http://link.springer.com/10.1007/s12532-017-0130-5)
  * [Hudson et al., 2023. libEnsemble: A complete Python toolkit for dynamic ensembles of calculations](https://joss.theoj.org/papers/10.21105/joss.06031)
