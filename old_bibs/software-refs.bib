@@ -87,7 +87,7 @@
 	edition = {3},
 	publisher = {SIAM},
 	address = {Philidelphia, PA, USA},
-    url = {https://netlib.org/lapack/lug/},
+	url = {https://netlib.org/lapack/lug/},
 	keywords = {software, open source, OSS, Fortran},
 }
 
@@ -316,8 +316,8 @@
 	pages = {213--222},
 	organization = {Springer Berlin Heidelberg},
 	location = {Berlin, Heidelberg},
+	url = {https://link.springer.com/chapter/10.1007/3-540-63465-7_226},
 	isbn = {978-3-540-69557-8},
-    url = {https://link.springer.com/chapter/10.1007/3-540-63465-7_226},
 	keywords = {software, open source, OSS, C++, Verilog},
 }
 
@@ -357,7 +357,7 @@
 	year = {1997},
 	volume = {4},
 	publisher = {SIAM},
-    url = {https://www.netlib.org/scalapack/},
+	url = {https://www.netlib.org/scalapack/},
 	keywords = {software, open source, OSS, Fortran, parallel programming, MPI},
 }
 
@@ -427,8 +427,26 @@
 	title = {OpenAI Gym},
 	year = {2016},
 	institution = {arXiv:1606.01540},
-    git = {https://github.com/openai/gym},
+	git = {https://github.com/openai/gym},
 	keywords = {software, open source, OSS, Python},
+}
+
+% Knitro is a well-known high-performance C library of closed-source solvers for linear, quadratic, second-order cone, mixed integer, generic nonlinear programming, nonsmooth, blackbox/DFO, and least squares optimization problems. This book chapter describes interior-point and active set methods for linear and smooth nonlinear programming, with a focus on linear programming, quadratic programming, nonlinear programming, and least squares optimization. Other features were likely added-on later. The official webpage for the current solver is: https://www.artelys.com/solvers/knitro/
+@inbook{byrd2006knitro,
+	author = {Byrd, Richard H. and Nocedal, Jorge and Waltz, Richard A.},
+	editor = {Di Pillo, G. and Roma, M.},
+	title = {Knitro: An Integrated Package for Nonlinear Optimization},
+	year = {2006},
+	booktitle = {Large-Scale Nonlinear Optimization},
+	series = {Nonconvex Optimization and Its Applications},
+	pages = {35--59},
+	publisher = {Springer US},
+	address = {Boston, MA},
+	doi = {10.1007/0-387-30065-1_4},
+	url = {https://link.springer.com/chapter/10.1007/0-387-30065-1_4},
+	isbn = {978-0-387-30065-8},
+	issn = {1571-568X},
+	keywords = {software, parallel programming, C},
 }
 
 % Official IOZone reference -- this benchmarking software can be used to measure the read, write, strided-read, strided-write, first read, first write, etc throughputs on a given system. In the VarSys project, we used this to measure IO performance (which we then used to calculate performance variability) for various system configurations on our Moana cluster.
@@ -601,7 +619,7 @@
 	year = {2015},
 	howpublished = {GitHub repository},
 	publisher = {GitHub},
-    url = {https://keras.io},
+	url = {https://keras.io},
 	note = {Last accessed: Nov 2023},
 	keywords = {software, open source, OSS, Python},
 }
@@ -623,6 +641,23 @@
 	url = {https://doi.org/10.1145/3653071},
 	issn = {0098-3500},
 	keywords = {software, open source, OSS, Python},
+}
+
+% LANCELOT was one of the original (Fortran 77) packages of high-performance optimization solvers for a wide variety of linear and nonlinear optimization and mathematical programming problems. While it has been replaced by more modern solvers, the open source Fortran 77 LANCELOT solvers were a landmark contribution and widely used in high-performance computing for many years. The code is now available on GitHub: github.com/ralna/LANCELOT
+@book{conn1992lancelot,
+	author = {Conn, Andrew R. and Gould, Nicholas I. M. and Toint, Philippe L.},
+	title = {{LANCELOT}: A {Fortran} Package for Large-Scale Nonlinear Optimization (Release A)},
+	year = {1992},
+	booktitle = {Springer Series in Computational Mathematics},
+	series = {Springer Series in Computational Mathematics},
+	number = {1},
+	publisher = {Springer-Verlag},
+	address = {Heidelberg, Germany},
+	doi = {10.1007/978-3-662-12211-2},
+	url = {http://link.springer.com/10.1007/978-3-662-12211-2},
+	isbn = {9783642081392},
+	issn = {0179-3632},
+	keywords = {software, open source, OSS, Fortran},
 }
 
 % PyMOSO: an open source Python numerical software library for solving multiobjective simulation optimization problems with integer and discrete variables via direct search / pattern search like techniques
@@ -878,6 +913,19 @@
 	keywords = {software, Fortran, C, MPI},
 }
 
+% The official book for the AMPL optimization modeling language. AMPL is used less and less as other alternatives and language-embedded modeling languages become more popular, but for a long time, this was the standard public interface for modeling optimization problems and calling optimization solvers. The AMPL modeling files were originall passed as command-line inputs to compiled optimization solvers, but they now appear to offer a Python interface for direct modeling in Python. AMPL is still available from ampl.com
+@book{fourer2003ampl,
+	author = {Fourer, Robert and Gay, David M. and Kernighan, Brian W.},
+	title = {{AMPL}: A Modeling Language for Mathematical Programming},
+	year = {2003},
+	edition = {2nd},
+	publisher = {Thomson Brooks/Cole},
+	address = {Pacific Grove, CA},
+	url = {https://dev.ampl.com/ampl/books/ampl/index.html},
+	isbn = {0-534-38809-4},
+	keywords = {software},
+}
+
 % PyCUTEst is a very nice, easily installed open source Python wrapper for the CUTEst test suite for benchmarking blackbox optimization problems. The CUTEst software is the standard suite of constrained and unconstrained test problems for derivative-free / blackbox / simulation optimization problems. CUTEst is available open source and written in Fortran, but now offer C, Python, Matlab, and Julia interfaces (plus the default command line interface). Available for download at: github.com/jfowkes/pycutest
 @article{fowkes2022pycutest,
 	author = {Fowkes, Jaroslav and Roberts, Lindon and Bűrmen, Árpád},
@@ -895,6 +943,24 @@
 	keywords = {software, open source, OSS, Fortran, Python, benchmarking},
 }
 
+% The latest release for GALAHAD, the successor to the LANCELOT package of high-performance optimization solvers for a wide variety of linear and nonlinear optimization and mathematical programming problems. Now written in modern Fortran 90 and made thread-safe for high-performance and parallel computing. Available from github.com/ralna/GALAHAD Now with Python, C, Julia, and Matlab interfaces.
+@article{fowkes2023galahad,
+	author = {Fowkes, Jaroslav M. and Gould, Nicholas I. m.},
+	title = {{GALAHAD} 4.0: an open source library of {Fortran} packages with {C} and {Matlab} interfaces for continuous optimization},
+	year = {2023},
+	month = {7},
+	journal = {Journal of Open Source Software},
+	volume = {8},
+	number = {87},
+	numpages = {4882},
+	publisher = {The Open Journal},
+	doi = {10.21105/joss.04882},
+	url = {https://doi.org/10.21105/joss.04882},
+	issn = {2475-9066},
+	git = {https://github.com/ralna/GALAHAD},
+	keywords = {software, open source, OSS, parallel programming, Fortran, C, Java, julia, Python, Matlab},
+}
+
 % Landmark textbook on standard design patterns in software engineering, such as builders, factories, observers, etc. Nicknamed the "Gang of Four" book on design patters
 @book{gamma1995design,
 	author = {Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John},
@@ -902,8 +968,8 @@
 	year = {1995},
 	publisher = {Addison-Wesley},
 	address = {Reading, MA, USA},
+	url = {https://en.wikipedia.org/wiki/Design_Patterns},
 	isbn = {0-201-63361-2},
-    url = {https://en.wikipedia.org/wiki/Design_Patterns},
 	keywords = {software},
 }
 
@@ -968,6 +1034,25 @@
 	url = {https://www.press.jhu.edu/books/title/10678/matrix-computations},
 	isbn = {978-1421407944},
 	keywords = {software},
+}
+
+% The original publication for GALAHAD, the successor to the LANCELOT package of high-performance optimization solvers for a wide variety of linear and nonlinear optimization and mathematical programming problems. Now written in modern Fortran 90 and made thread-safe for high-performance and parallel computing. Available from github.com/ralna/GALAHAD
+@article{gould2003galahad,
+	author = {Gould, Nicholas I. M. and Orban, Dominique and Toint, Philippe L.},
+	title = {{GALAHAD}, a library of thread-safe Fortran 90 packages for large-scale nonlinear optimization},
+	year = {2003},
+	month = {dec},
+	journal = {ACM Trans. Math. Softw.},
+	volume = {29},
+	number = {4},
+	pages = {353--372},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	doi = {10.1145/962437.962438},
+	url = {https://doi.org/10.1145/962437.962438},
+	issn = {0098-3500},
+	git = {https://github.com/ralna/GALAHAD},
+	keywords = {software, open source, OSS, parallel programming, Fortran},
 }
 
 % The CUTEst software is the standard suite of constrained and unconstrained test problems for derivative-free / blackbox / simulation optimization problems. CUTEst is available open source and written in Fortran, but now offer C, Python, Matlab, and Julia interfaces (plus the default command line interface). Available for download at: github.com/ralna/CUTEst
@@ -1212,7 +1297,7 @@
 	number = {ISO/IEC 1539-1:2004(E)},
 	institution = {International Organization for Standardization},
 	address = {Geneva, Switzerland},
-    url = {https://j3-fortran.org/doc/year/04/04-007.pdf},
+	url = {https://j3-fortran.org/doc/year/04/04-007.pdf},
 	keywords = {software, Fortran},
 }
 
@@ -1224,7 +1309,7 @@
 	number = {ISO/IEC 1539-1:2010(E)},
 	institution = {International Organization for Standardization},
 	address = {Geneva, Switzerland},
-    url = {https://j3-fortran.org/doc/year/10/10-007.pdf},
+	url = {https://j3-fortran.org/doc/year/10/10-007.pdf},
 	keywords = {software, Fortran},
 }
 
@@ -1307,7 +1392,7 @@
 	title = {A {NUMA} {API} for {Linux}},
 	year = {2005},
 	institution = {Suse Lab},
-    url = {https://halobates.de/numaapi3.pdf},
+	url = {https://halobates.de/numaapi3.pdf},
 	keywords = {software, parallel programming, C},
 }
 
@@ -1413,16 +1498,17 @@
 
 % NSGA-Net is the NSGA-II/pymoo team's multiobjective genetic algorithm based NAS solver. The open source python software is available from: github.com/ianwhale/nsga-net
 @inproceedings{lu2019nsganet,
-    author = {Lu, Zhichao and Whalen, Ian and Boddeti, Vishnu and Dhebar, Yashesh and Deb, Kalyanmoy and Goodman, Erik and Banzhaf, Wolfgang},
-    title = {{NSGA-Net}: neural architecture search using multi-objective genetic algorithm},
-    year = {2019},
-    booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '19)},
-    pages = {419–427},
-    publisher = {Association for Computing Machinery},
-    location = {Prague, Czech Republic},
-    url = {https://doi.org/10.1145/3321707.3321729},
-    doi = {10.1145/3321707.3321729},
-    isbn = {9781450361118},
+	author = {Lu, Zhichao and Whalen, Ian and Boddeti, Vishnu and Dhebar, Yashesh and Deb, Kalyanmoy and Goodman, Erik and Banzhaf, Wolfgang},
+	title = {{NSGA-Net}: neural architecture search using multi-objective genetic algorithm},
+	year = {2019},
+	month = {7},
+	booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '19)},
+	pages = {419--427},
+	organization = {Association for Computing Machinery},
+	location = {Prague, Czech Republic},
+	doi = {10.1145/3321707.3321729},
+	url = {https://doi.org/10.1145/3321707.3321729},
+	isbn = {9781450361118},
 	keywords = {software, open source, OSS, Python},
 }
 
@@ -1656,7 +1742,7 @@
 	year = {2015},
 	month = {November},
 	number = {version 4.5},
-    url = {https://www.openmp.org/wp-content/uploads/openmp-4.5.pdf},
+	url = {https://www.openmp.org/wp-content/uploads/openmp-4.5.pdf},
 	keywords = {software, OpenMP, parallel programming, C, Fortran},
 }
 
@@ -1704,7 +1790,7 @@
 	title = {{HPL -- A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers}},
 	year = {2018},
 	publisher = {Innovation Computing Laboratory, University of Tennessee},
-    url = {https://www.netlib.org/benchmark/hpl/},
+	url = {https://www.netlib.org/benchmark/hpl/},
 	keywords = {software, Fortran, parallel programming, benchmarking},
 }
 
@@ -1962,6 +2048,17 @@
 	keywords = {software, open source, OSS, parallel programming},
 }
 
+% The UNO solver (unified nonlinear optimization) is a modular framework for building custom large-scale nonlinear programming solvers in C++ by mixing-and-matching a constraint-relaxation strategy, a subproblem type (and solver), a globalization strategy, and a globalization mechanism. The paper appears to still be under review, but the UNO solver is mature and available open source at
+@techreport{vanaret2024unifying,
+	author = {Vanaret, Charlie and Leyffer, Sven},
+	title = {Unifying nonlinearly constrained nonconvex optimization},
+	year = {2024},
+	institution = {arXiv preprint math.OC},
+	url = {https://arxiv.org/abs/2406.13454},
+	git = {https://github.com/cvanaret/Uno},
+	keywords = {software, open source, OSS, C++},
+}
+
 % Original publication of t-SNE, which performs latent space embedding and dimension reduction for high-dimensional data. The idea is to minimize the distribution error via KL-divergence between a target distribution and the a low-dimensional embedding of that distribution that is trained via gradient descent. The KL-divergence is calculated based on a similarity score between points in the target distribution (which perfectly maintains the relative distances / exponentiated relative distances between points in the original high-dimensional space) and the low-dimensional embedding, so the objective is ultimately to maintain the relative distances between points in the embedding. The method was originally proposed as a visualization technique for high-dimensional data (where the embedding produces clusters in 2 or 3 dimensions that can be plotted), but t-SNE can be and is also used for generic dimension reduction and latent-space embedding. The original software is not open source, but many open source implementations are linked on the original author's website: lvdmaaten.github.io/tsne
 @article{vandermaaten2008visualizing,
 	author = {van der Maaten, Laurens and Hinton, Geoffrey},
@@ -2101,6 +2198,24 @@
 	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.8322},
 	issn = {1532-0626},
 	keywords = {software, open source, OSS, Python},
+}
+
+% The official publication for the algorithm and software IPOPT, a primal-dual interior-point algorithm with filter line-search for solving large scale nonlinear programming solver. Written in high-performance C++, IPOPT is often considered the current state-of-the-art when it comes to robust generic high-performance and/or large-scale nonlinear programming. The latest open source distribution through Coin-OR comes with a Fortran, C, Java, R, and AMPL interface and is available at: github.com/coin-or/Ipopt
+@article{wächter2006implementation,
+	author = {Wächter, Andreas and Biegler, Lorenz T.},
+	title = {On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming},
+	year = {2006},
+	month = {3},
+	journal = {Mathematical Programming},
+	volume = {106},
+	number = {1},
+	pages = {25--57},
+	publisher = {Springer Science and Business Media LLC},
+	doi = {10.1007/s10107-004-0559-y},
+	url = {http://link.springer.com/10.1007/s10107-004-0559-y},
+	issn = {0025-5610},
+	git = {https://github.com/coin-or/Ipopt},
+	keywords = {software, open source, OSS, parallel programming, C++, Fortran, C, Java},
 }
 
 % DREAMPlaceFPGA-MP: GPU-accelerated macro-placer for DREAMPlaceFPGA (rajrathnam2022) DREAMPlace is an open source using analytical placement with some deep learning for FPGA placement acceleration -- written in C++ with Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA

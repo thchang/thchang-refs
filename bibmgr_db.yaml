@@ -3851,6 +3851,60 @@ buhmann2000radial:
   volume: '9'
   web: null
   year: 2000
+byrd2006knitro:
+  address: Boston, MA
+  articleno: null
+  authors:
+  - - Richard H.
+    - Byrd
+  - - Jorge
+    - Nocedal
+  - - Richard A.
+    - Waltz
+  chapter: null
+  descrip: 'Knitro is a well-known high-performance C library of closed-source solvers
+    for linear, quadratic, second-order cone, mixed integer, generic nonlinear programming,
+    nonsmooth, blackbox/DFO, and least squares optimization problems. This book chapter
+    describes interior-point and active set methods for linear and smooth nonlinear
+    programming, with a focus on linear programming, quadratic programming, nonlinear
+    programming, and least squares optimization. Other features were likely added-on
+    later. The official webpage for the current solver is: https://www.artelys.com/solvers/knitro/'
+  doi: 10.1007/0-387-30065-1_4
+  edition: null
+  editors:
+  - - G.
+    - Di Pillo
+  - - M.
+    - Roma
+  git: null
+  isbn: 978-0-387-30065-8
+  issn: 1571-568X
+  month: null
+  note: null
+  number: null
+  pages:
+  - '35'
+  - '59'
+  publisher: Springer US
+  series: Nonconvex Optimization and Its Applications
+  tags:
+  - optimization
+  - constrained optimization
+  - linear programming
+  - quadratic programming
+  - QP
+  - LP
+  - convex optimization
+  - software
+  - parallel programming
+  - C
+  title: 'Knitro: An Integrated Package for Nonlinear Optimization'
+  type: inbook
+  url: https://link.springer.com/chapter/10.1007/0-387-30065-1_4
+  venue: Large-Scale Nonlinear Optimization
+  volume: null
+  web: null
+  year: 2006
 cai2014practical:
   address: null
   articleno: null
@@ -6095,6 +6149,55 @@ cocchi2020augmented:
   volume: '77'
   web: null
   year: 2020
+conn1992lancelot:
+  address: Heidelberg, Germany
+  articleno: null
+  authors:
+  - - Andrew R.
+    - Conn
+  - - Nicholas I. M.
+    - Gould
+  - - Philippe L.
+    - Toint
+  chapter: null
+  descrip: 'LANCELOT was one of the original (Fortran 77) packages of high-performance
+    optimization solvers for a wide variety of linear and nonlinear optimization and
+    mathematical programming problems. While it has been replaced by more modern solvers,
+    the open source Fortran 77 LANCELOT solvers were a landmark contribution and widely
+    used in high-performance computing for many years. The code is now available on
+    GitHub: github.com/ralna/LANCELOT'
+  doi: 10.1007/978-3-662-12211-2
+  edition: null
+  editors: []
+  git: null
+  isbn: '9783642081392'
+  issn: 0179-3632
+  month: null
+  note: null
+  number: '1'
+  pages: null
+  publisher: Springer-Verlag
+  series: Springer Series in Computational Mathematics
+  tags:
+  - optimization
+  - constrained optimization
+  - linear programming
+  - quadratic programming
+  - QP
+  - LP
+  - convex optimization
+  - software
+  - open source
+  - OSS
+  - Fortran
+  title: '{LANCELOT}: A {Fortran} Package for Large-Scale Nonlinear Optimization (Release
+    A)'
+  type: book
+  url: http://link.springer.com/10.1007/978-3-662-12211-2
+  venue: Springer Series in Computational Mathematics
+  volume: null
+  web: null
+  year: 1992
 conn2008geometry:
   address: null
   articleno: null
@@ -9315,6 +9418,52 @@ forum2023mpi:
   volume: null
   web: null
   year: 2023
+fourer2003ampl:
+  address: Pacific Grove, CA
+  articleno: null
+  authors:
+  - - Robert
+    - Fourer
+  - - David M.
+    - Gay
+  - - Brian W.
+    - Kernighan
+  chapter: null
+  descrip: The official book for the AMPL optimization modeling language. AMPL is
+    used less and less as other alternatives and language-embedded modeling languages
+    become more popular, but for a long time, this was the standard public interface
+    for modeling optimization problems and calling optimization solvers. The AMPL
+    modeling files were originall passed as command-line inputs to compiled optimization
+    solvers, but they now appear to offer a Python interface for direct modeling in
+    Python. AMPL is still available from ampl.com
+  doi: null
+  edition: 2nd
+  editors: []
+  git: null
+  isbn: 0-534-38809-4
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: Thomson Brooks/Cole
+  series: null
+  tags:
+  - optimization
+  - constrained optimization
+  - linear programming
+  - quadratic programming
+  - QP
+  - LP
+  - convex optimization
+  - software
+  title: '{AMPL}: A Modeling Language for Mathematical Programming'
+  type: book
+  url: https://dev.ampl.com/ampl/books/ampl/index.html
+  venue: null
+  volume: null
+  web: null
+  year: 2003
 fowkes2022pycutest:
   address: null
   articleno: null
@@ -9366,6 +9515,59 @@ fowkes2022pycutest:
   volume: '7'
   web: null
   year: 2022
+fowkes2023galahad:
+  address: null
+  articleno: null
+  authors:
+  - - Jaroslav M.
+    - Fowkes
+  - - Nicholas I. m.
+    - Gould
+  chapter: null
+  descrip: The latest release for GALAHAD, the successor to the LANCELOT package of
+    high-performance optimization solvers for a wide variety of linear and nonlinear
+    optimization and mathematical programming problems. Now written in modern Fortran
+    90 and made thread-safe for high-performance and parallel computing. Available
+    from github.com/ralna/GALAHAD Now with Python, C, Julia, and Matlab interfaces.
+  doi: 10.21105/joss.04882
+  edition: null
+  editors: []
+  git: https://github.com/ralna/GALAHAD
+  isbn: null
+  issn: 2475-9066
+  month: '7'
+  note: null
+  number: '87'
+  pages:
+  - 4882
+  publisher: The Open Journal
+  series: null
+  tags:
+  - optimization
+  - constrained optimization
+  - linear programming
+  - quadratic programming
+  - QP
+  - LP
+  - convex optimization
+  - software
+  - open source
+  - OSS
+  - parallel programming
+  - Fortran
+  - C
+  - Java
+  - julia
+  - Python
+  - Matlab
+  title: '{GALAHAD} 4.0: an open source library of {Fortran} packages with {C} and
+    {Matlab} interfaces for continuous optimization'
+  type: article
+  url: https://doi.org/10.21105/joss.04882
+  venue: Journal of Open Source Software
+  volume: '8'
+  web: null
+  year: 2023
 frazier2018tutorial:
   address: null
   articleno: null
@@ -10083,6 +10285,57 @@ gorban2017stochastic:
   volume: '94'
   web: null
   year: 2017
+gould2003galahad:
+  address: New York, NY, USA
+  articleno: null
+  authors:
+  - - Nicholas I. M.
+    - Gould
+  - - Dominique
+    - Orban
+  - - Philippe L.
+    - Toint
+  chapter: null
+  descrip: The original publication for GALAHAD, the successor to the LANCELOT package
+    of high-performance optimization solvers for a wide variety of linear and nonlinear
+    optimization and mathematical programming problems. Now written in modern Fortran
+    90 and made thread-safe for high-performance and parallel computing. Available
+    from github.com/ralna/GALAHAD
+  doi: 10.1145/962437.962438
+  edition: null
+  editors: []
+  git: https://github.com/ralna/GALAHAD
+  isbn: null
+  issn: 0098-3500
+  month: dec
+  note: null
+  number: '4'
+  pages:
+  - '353'
+  - '372'
+  publisher: Association for Computing Machinery
+  series: null
+  tags:
+  - optimization
+  - constrained optimization
+  - linear programming
+  - quadratic programming
+  - QP
+  - LP
+  - convex optimization
+  - software
+  - open source
+  - OSS
+  - parallel programming
+  - Fortran
+  title: '{GALAHAD}, a library of thread-safe Fortran 90 packages for large-scale
+    nonlinear optimization'
+  type: article
+  url: https://doi.org/10.1145/962437.962438
+  venue: ACM Trans. Math. Softw.
+  volume: '29'
+  web: null
+  year: 2003
 gould2015cutest:
   address: null
   articleno: null
@@ -12150,10 +12403,10 @@ jones1998efficient:
   editors: []
   git: null
   isbn: null
-  issn: null
+  issn: 0925-5001
   month: null
   note: null
-  number: null
+  number: '4'
   pages:
   - '455'
   - '492'
@@ -12169,7 +12422,7 @@ jones1998efficient:
   - Gaussian process
   title: Efficient global optimization of expensive black-box functions
   type: article
-  url: null
+  url: http://link.springer.com/10.1023/A:1008306431147
   venue: Journal of Global optimization
   volume: '13'
   web: null
@@ -12794,7 +13047,7 @@ kim2004spea2:
   editors: []
   git: null
   isbn: 978-3-540-30217-9_75
-  issn: null
+  issn: 0302-9743
   month: null
   note: null
   number: null
@@ -12802,7 +13055,7 @@ kim2004spea2:
   - '742'
   - '751'
   publisher: Springer
-  series: null
+  series: Lecture Notes in Computer Science
   tags:
   - optimization
   - multiobjective optimization
@@ -12811,7 +13064,7 @@ kim2004spea2:
   title: '{SPEA2+}: Improving the performance of the {S}trength {P}areto {E}volutionary
     {A}lgorithm 2'
   type: inproceedings
-  url: null
+  url: http://link.springer.com/10.1007/978-3-540-30217-9_75
   venue: Proc. International Conference on Parallel Problem Solving from Nature (PPSN
     VIII)
   volume: null
@@ -14738,7 +14991,7 @@ lu2019nsganet:
   git: null
   isbn: '9781450361118'
   issn: null
-  month: null
+  month: '7'
   note: null
   number: null
   pages:
@@ -20823,6 +21076,47 @@ urquhart2020surrogatebased:
   volume: '88'
   web: null
   year: 2020
+vanaret2024unifying:
+  address: null
+  articleno: null
+  authors:
+  - - Charlie
+    - Vanaret
+  - - Sven
+    - Leyffer
+  chapter: null
+  descrip: The UNO solver (unified nonlinear optimization) is a modular framework
+    for building custom large-scale nonlinear programming solvers in C++ by mixing-and-matching
+    a constraint-relaxation strategy, a subproblem type (and solver), a globalization
+    strategy, and a globalization mechanism. The paper appears to still be under review,
+    but the UNO solver is mature and available open source at
+  doi: null
+  edition: null
+  editors: []
+  git: https://github.com/cvanaret/Uno
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: arXiv preprint math.OC
+  series: null
+  tags:
+  - optimization
+  - constrained optimization
+  - convex optimization
+  - software
+  - open source
+  - OSS
+  - C++
+  title: Unifying nonlinearly constrained nonconvex optimization
+  type: techreport
+  url: https://arxiv.org/abs/2406.13454
+  venue: null
+  volume: null
+  web: null
+  year: 2024
 vandermaaten2008visualizing:
   address: null
   articleno: null
@@ -22263,6 +22557,56 @@ wu2025ytopt:
   volume: '37'
   web: null
   year: 2025
+"w\xE4chter2006implementation":
+  address: null
+  articleno: null
+  authors:
+  - - Andreas
+    - "W\xE4chter"
+  - - Lorenz T.
+    - Biegler
+  chapter: null
+  descrip: 'The official publication for the algorithm and software IPOPT, a primal-dual
+    interior-point algorithm with filter line-search for solving large scale nonlinear
+    programming solver. Written in high-performance C++, IPOPT is often considered
+    the current state-of-the-art when it comes to robust generic high-performance
+    and/or large-scale nonlinear programming. The latest open source distribution
+    through Coin-OR comes with a Fortran, C, Java, R, and AMPL interface and is available
+    at: github.com/coin-or/Ipopt'
+  doi: 10.1007/s10107-004-0559-y
+  edition: null
+  editors: []
+  git: https://github.com/coin-or/Ipopt
+  isbn: null
+  issn: 0025-5610
+  month: '3'
+  note: null
+  number: '1'
+  pages:
+  - '25'
+  - '57'
+  publisher: Springer Science and Business Media LLC
+  series: null
+  tags:
+  - optimization
+  - constrained optimization
+  - convex optimization
+  - software
+  - open source
+  - OSS
+  - parallel programming
+  - C++
+  - Fortran
+  - C
+  - Java
+  title: On the implementation of an interior-point filter line-search algorithm for
+    large-scale nonlinear programming
+  type: article
+  url: http://link.springer.com/10.1007/s10107-004-0559-y
+  venue: Mathematical Programming
+  volume: '106'
+  web: null
+  year: 2006
 xin2018interactive:
   address: null
   articleno: null
