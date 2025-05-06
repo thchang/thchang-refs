@@ -662,6 +662,7 @@ List of topics (may be some overlap between topics):
  * [Intel, 2025. oneAPI Threading Building Blocks (oneTBB)](https://uxlfoundation.github.io/oneTBB)
  * [2004. Information technology -- Programming languages -- Fortran -- Part 1: Base Language](https://j3-fortran.org/doc/year/04/04-007.pdf)
  * [2010. Information technology -- Programming languages -- Fortran -- Part 1: Base Language](https://j3-fortran.org/doc/year/10/10-007.pdf)
+ * [2020. Information technology -- Programming languages -- C++](https://isocpp.org/files/papers/N4860.pdf)
  * [Jain et al., 2022. tiktoken](https://github.com/openai/tiktoken)
  * [Joe et al., 2003. Remark on Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator](https://dl.acm.org/doi/10.1145/641876.641879)
  * [Kale et al., 1993. CHARM++: a portable concurrent object oriented system based on C++](https://dl.acm.org/doi/10.1145/165854.165874)

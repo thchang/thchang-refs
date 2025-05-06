@@ -12013,6 +12013,35 @@ ios2010information:
   volume: null
   web: null
   year: 2010
+ios2020information:
+  address: Geneva, Switzerland
+  articleno: null
+  authors: []
+  chapter: null
+  descrip: ISO C++ 20 software standard -- definition of the C++ 20 standard and its
+    standard library
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: December
+  note: null
+  number: ISO/IEC JTC1 SC22 WG21/N4860
+  pages: null
+  publisher: International Organization for Standardization
+  series: null
+  tags:
+  - software
+  - C++
+  title: '{Information technology -- Programming languages -- C++}'
+  type: techreport
+  url: https://isocpp.org/files/papers/N4860.pdf
+  venue: null
+  volume: null
+  web: null
+  year: 2020
 ishibuchi2015modified:
   address: Madrid Spain
   articleno: null
@@ -21257,6 +21286,36 @@ vandevender1982slatec:
   volume: '17'
   web: null
   year: 1982
+vanrossum2009pythonc:
+  address: Scotts Valley, CA
+  articleno: null
+  authors:
+  - - Guido
+    - Van Rossum
+  - - Fred L.
+    - Drake
+  chapter: null
+  descrip: The original Python 3 C API publication -- the latest version is at docs.python.org/3/c-api/index.html
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: '1441412735'
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: CreateSpace
+  series: null
+  tags: []
+  title: '{Python/C API Manual - Python 3}'
+  type: book
+  url: https://docs.python.org/3/c-api/index.html
+  venue: null
+  volume: null
+  web: null
+  year: 2009
 vaswani2017attention:
   address: Long Beach, California, USA
   articleno: null
