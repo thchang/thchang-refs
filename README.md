@@ -391,7 +391,6 @@ List of topics (may be some overlap between topics):
  * [Liuzzi et al., 2016. A derivative-free approach to constrained multiobjective nonsmooth optimization](http://epubs.siam.org/doi/10.1137/15M1037810)
  * [Liuzzi et al., 2024. DFO-lib](https://github.com/DerivativeFreeLibrary)
  * [Lovison et al., 2021. On the Extension of the DIRECT Algorithm to Multiple Objectives](https://link.springer.com/10.1007/s10898-020-00942-8)
- * Lu et al., 2018. NSGA-NET: a multi-objective genetic algorithm for neural architecture search
  * [Lu et al., 2019. NSGA-Net: neural architecture search using multi-objective genetic algorithm](https://doi.org/10.1145/3321707.3321729)
  * [Lux et al., 2020. Analytic test functions for generalizable evaluation of convex optimization techniques](https://ieeexplore.ieee.org/document/9368254/)
  * [Mannor et al., 2014. Approachability in unknown games: Online learning meets multi-objective optimization](https://proceedings.mlr.press/v35/mannor14.html)
@@ -681,7 +680,6 @@ List of topics (may be some overlap between topics):
  * [Liang et al., 2024. AMF-Placer 2.0: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous FPGA](https://ieeexplore.ieee.org/document/10459236/)
  * [Lindauer et al., 2022. SMAC3: A Versatile Bayesian Optimization Package for Hyperparameter Optimization](http://jmlr.org/papers/v23/21-0888.html)
  * [Liuzzi et al., 2024. DFO-lib](https://github.com/DerivativeFreeLibrary)
- * Lu et al., 2018. NSGA-NET: a multi-objective genetic algorithm for neural architecture search
  * [Lu et al., 2019. NSGA-Net: neural architecture search using multi-objective genetic algorithm](https://doi.org/10.1145/3321707.3321729)
  * [Lundberg et al., 2017. A Unified Approach to Interpreting Model Predictions](http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf)
  * [Luu et al., 2011. VPR 5.0: FPGA CAD and architecture exploration tools with single-driver routing, heterogeneity and process scaling](https://doi.org/10.1145/2068716.2068718)

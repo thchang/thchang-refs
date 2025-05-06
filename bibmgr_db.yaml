@@ -14687,58 +14687,6 @@ lovison2021extension:
   volume: '79'
   web: null
   year: 2021
-lu2018nsganet:
-  address: null
-  articleno: null
-  authors:
-  - - Zhichao
-    - Lu
-  - - Ian
-    - Whalen
-  - - Vishnu
-    - Boddeti
-  - - Yashesh
-    - Dhebar
-  - - Kalyanmoy
-    - Deb
-  - - Erik
-    - Goodman
-  - - Wolfgang
-    - Banzhaf
-  chapter: null
-  descrip: 'NSGA-Net is the NSGA-II/pymoo team''s multiobjective genetic algorithm
-    based NAS solver. The open source python software is available from: github.com/ianwhale/nsga-net'
-  doi: null
-  edition: null
-  editors: []
-  git: null
-  isbn: null
-  issn: null
-  month: null
-  note: null
-  number: null
-  pages: null
-  publisher: null
-  series: null
-  tags:
-  - optimization
-  - multiobjective optimization
-  - mixed-variable optimization
-  - autotuning
-  - hyperparameter optimization
-  - evolutionary algorithm
-  - EA
-  - software
-  - open source
-  - OSS
-  - Python
-  title: 'NSGA-NET: a multi-objective genetic algorithm for neural architecture search'
-  type: article
-  url: null
-  venue: GECCO-2019
-  volume: null
-  web: null
-  year: 2018
 lu2019nsganet:
   address: Prague, Czech Republic
   articleno: null
