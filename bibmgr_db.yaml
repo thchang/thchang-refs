@@ -2593,7 +2593,7 @@ betz1997vpr:
   - Verilog
   title: '{VPR}: a new packing, placement and routing tool for {FPGA} research'
   type: inproceedings
-  url: null
+  url: https://link.springer.com/chapter/10.1007/3-540-63465-7_226
   venue: Field-Programmable Logic and Applications
   volume: null
   web: null
@@ -4022,7 +4022,7 @@ cao2017performance:
   edition: null
   editors: []
   git: null
-  isbn: null
+  isbn: 978-1-931971-36-2
   issn: null
   month: null
   note: null
@@ -4038,7 +4038,7 @@ cao2017performance:
   - performance modeling
   title: On the performance variation in modern storage stacks
   type: inproceedings
-  url: null
+  url: https://www.usenix.org/conference/fast17/technical-sessions/presentation/cao
   venue: Proceedings of the 15th USENIX Conference on File and Storage Technologies
     (FAST '17)
   volume: null
@@ -7329,7 +7329,7 @@ delaunay1934sur:
   issn: null
   month: null
   note: null
-  number: null
+  number: '6'
   pages: null
   publisher: null
   series: null
@@ -7342,7 +7342,7 @@ delaunay1934sur:
   - SciML
   title: Sur la sph\'ere vide
   type: article
-  url: null
+  url: https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4937&option_lang=eng
   venue: 'Bull. Acad. Science USSR VII: Class. Sci. Math.,'
   volume: null
   web: null
@@ -8109,7 +8109,7 @@ dunlop2008use:
   title: On the use of a genetic algorithm in high performance computing benchmark
     tuning
   type: inproceedings
-  url: null
+  url: https://ieeexplore.ieee.org/document/4667550
   venue: Proceedings of the 2008 International Symposium on Performance Evaluation
     of Computer and Telecommunication Systems
   volume: null
@@ -8732,7 +8732,7 @@ elsken2019neural:
   - Gaussian process
   title: 'Neural architecture search: A survey'
   type: article
-  url: null
+  url: https://www.jmlr.org/papers/volume20/18-598/18-598.pdf
   venue: The Journal of Machine Learning Research
   volume: '20'
   web: null
@@ -9827,7 +9827,7 @@ gillette2022datadriven:
   - UQ
   title: Data-driven geometric scale detection via Delaunay interpolation
   type: techreport
-  url: null
+  url: https://arxiv.org/html/2203.05685v2
   venue: null
   volume: null
   web: null
@@ -10346,7 +10346,7 @@ guhring2020error:
     bounds on approximation error for feed-forward neural networks with ReLU activation
     functions. A good step in SciML, but we typically want upper bounds not lower
     bounds in practice
-  doi: null
+  doi: 10.1142/S0219530519410021
   edition: null
   editors: []
   git: null
@@ -10370,7 +10370,7 @@ guhring2020error:
   - approximation theory
   - uncertainty quantification
   - UQ
-  title: Error bounds for approximations with deep ReLU neural networks in W s, p
+  title: Error bounds for approximations with deep ReLU neural networks in $W^{s,p}$
     norms
   type: article
   url: null
@@ -12130,7 +12130,7 @@ jones1998efficient:
     select experiments (especially in one and two-dimensions). However, this paper
     is a landmark in that it gave rise to the field of multivariate Bayesian optimization.
     EGO is still often used as the benchmark Bayesian optimization algorithm.
-  doi: null
+  doi: 10.1023/A:1008306431147
   edition: null
   editors: []
   git: null
@@ -12771,7 +12771,7 @@ kim2004spea2:
   descrip: The SPEA2+ algorithm for solving multiobjective optimization problems with
     evolutionary algorithms. Apparently this is widely-used numerical software, but
     I can't find the download
-  doi: null
+  doi: 10.1007/978-3-540-30217-9_75
   edition: null
   editors: []
   git: null
@@ -12979,7 +12979,7 @@ klee1972how:
   - constrained optimization
   title: How good is the simplex algorithm?
   type: article
-  url: null
+  url: https://en.wikipedia.org/wiki/Klee%E2%80%93Minty_cube
   venue: Inequalities
   volume: III
   web: null
@@ -13378,7 +13378,7 @@ kuipers1974uniform:
   - low-discrepancy sequences
   title: Uniform distribution of sequences
   type: book
-  url: null
+  url: https://web.maths.unsw.edu.au/~josefdick/preprints/KuipersNied_book.pdf
   venue: null
   volume: null
   web: null
@@ -14739,6 +14739,61 @@ lu2018nsganet:
   volume: null
   web: null
   year: 2018
+lu2019nsganet:
+  address: Prague, Czech Republic
+  articleno: null
+  authors:
+  - - Zhichao
+    - Lu
+  - - Ian
+    - Whalen
+  - - Vishnu
+    - Boddeti
+  - - Yashesh
+    - Dhebar
+  - - Kalyanmoy
+    - Deb
+  - - Erik
+    - Goodman
+  - - Wolfgang
+    - Banzhaf
+  chapter: null
+  descrip: 'NSGA-Net is the NSGA-II/pymoo team''s multiobjective genetic algorithm
+    based NAS solver. The open source python software is available from: github.com/ianwhale/nsga-net'
+  doi: 10.1145/3321707.3321729
+  edition: null
+  editors: []
+  git: null
+  isbn: '9781450361118'
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '419'
+  - '427'
+  publisher: Association for Computing Machinery
+  series: null
+  tags:
+  - optimization
+  - multiobjective optimization
+  - mixed-variable optimization
+  - autotuning
+  - hyperparameter optimization
+  - evolutionary algorithm
+  - EA
+  - software
+  - open source
+  - OSS
+  - Python
+  title: '{NSGA-Net}: neural architecture search using multi-objective genetic algorithm'
+  type: inproceedings
+  url: https://doi.org/10.1145/3321707.3321729
+  venue: Proceedings of the Genetic and Evolutionary Computation Conference (GECCO
+    '19)
+  volume: null
+  web: null
+  year: 2019
 lundberg2017unified:
   address: null
   articleno: null
@@ -15416,7 +15471,7 @@ manton2015primer:
   chapter: null
   descrip: A thorough foundation on analysis of RBF interpolant error bounds, through
     the lens of the RKHS
-  doi: null
+  doi: 10.1561/2000000050
   edition: null
   editors: []
   git: null
@@ -15484,7 +15539,7 @@ marler2004survey:
   web: null
   year: 2004
 martens2013asynchronous:
-  address: null
+  address: Amsterdam, The Netherlands
   articleno: null
   authors:
   - - Marcus
@@ -15498,11 +15553,11 @@ martens2013asynchronous:
     from diverging too far apart and allowing for progress to be shared between all
     islands through eventual consistency. This modification allows NSGA-II to run
     fully asynchronously. This is the version used by Optuna
-  doi: null
+  doi: 10.1145/2463372.2463516
   edition: null
   editors: []
   git: null
-  isbn: null
+  isbn: '9781450319638'
   issn: null
   month: null
   note: null
@@ -15510,9 +15565,12 @@ martens2013asynchronous:
   pages:
   - '1173'
   - '1180'
-  publisher: null
+  publisher: Association for Computing Machinery
   series: null
   tags:
+  - high-performance computing
+  - HPC
+  - distributed computing
   - optimization
   - multiobjective optimization
   - evolutionary algorithm
@@ -15520,8 +15578,9 @@ martens2013asynchronous:
   title: 'The asynchronous island model and {NSGA-II}: study of a new migration operator
     and its performance'
   type: inproceedings
-  url: null
-  venue: Proceedings of the 15th annual conference on Genetic and evolutionary computation
+  url: https://doi.org/10.1145/2463372.2463516
+  venue: Proceedings of the 15th Annual Conference on Genetic and Evolutionary Computation
+    (GECCO '13)
   volume: null
   web: null
   year: 2013
@@ -15944,7 +16003,7 @@ misitano2021desdeo:
   web: null
   year: 2021
 mobius1827der:
-  address: null
+  address: Leipzig, Germany
   articleno: null
   authors:
   - - August Ferdinand
@@ -15977,7 +16036,7 @@ mobius1827der:
   - SciML
   title: Der barycentrische Calcul
   type: book
-  url: null
+  url: https://books.google.com/books?id=eFPluv_UqFEC&printsec=frontcover#v=onepage&q&f=false
   venue: null
   volume: null
   web: null
@@ -16090,7 +16149,7 @@ mucke1999fast:
   descrip: An early paper on simplex walks for locating which element of a Delaunay
     triangulation contains a point (after the triangulation has already been precomputed
     and stored)
-  doi: null
+  doi: 10.1016/S0925-7721(98)00035-2
   edition: null
   editors: []
   git: null
@@ -16111,7 +16170,7 @@ mucke1999fast:
   title: Fast randomized point location without preprocessing in two- and three-dimensional
     {D}elaunay triangulations
   type: article
-  url: null
+  url: https://www.osti.gov/biblio/231593
   venue: Computational Geometry
   volume: '12'
   web: null
@@ -16394,7 +16453,7 @@ nesterov1983method:
     update: x'' = x - a*g(x), use x'' = x - a*g(y) - b*v where y = x - b*v and v =
     b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor
     conditioning in the problem by encouraging the algorithm to continue in the direction
-    it was headed instead of oscillating. Nexterov proves that this term also leads
+    it was headed instead of oscillating. Nesterov proves that this term also leads
     to better convergence rates. For best results, b is usually chosen to be a large
     value such as 0.9 or 0.99'
   doi: null
@@ -16405,9 +16464,10 @@ nesterov1983method:
   issn: null
   month: null
   note: null
-  number: null
+  number: '3'
   pages:
-  - 543
+  - '543'
+  - '547'
   publisher: null
   series: null
   tags:
@@ -16421,10 +16481,10 @@ nesterov1983method:
   - scientific machine learning
   - SciML
   title: A method for solving the convex programming problem with convergence rate
-    O (1/k2)
-  type: inproceedings
-  url: null
-  venue: Dokl akad nauk Sssr
+    $O(1/k^2)$
+  type: article
+  url: https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng
+  venue: Dokl. Akad. Nauk SSSR
   volume: '269'
   web: null
   year: 1983
@@ -18066,7 +18126,7 @@ rasmussen2006gaussian:
   edition: null
   editors: []
   git: null
-  isbn: null
+  isbn: 978-0-262-18253-9
   issn: null
   month: null
   note: null
@@ -18086,9 +18146,9 @@ rasmussen2006gaussian:
   - UQ
   title: Gaussian processes for machine learning
   type: book
-  url: null
+  url: https://gaussianprocess.org/gpml
   venue: null
-  volume: '1'
+  volume: '2'
   web: null
   year: 2006
 ray1989sherringtonkirkpatrick:

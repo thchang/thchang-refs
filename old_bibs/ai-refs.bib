@@ -624,14 +624,16 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, Boltzmann machine},
 }
 
-% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
-@inproceedings{nesterov1983method,
+% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nesterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
+@article{nesterov1983method,
 	author = {Nesterov, Yurii},
-	title = {A method for solving the convex programming problem with convergence rate O (1/k2)},
+	title = {A method for solving the convex programming problem with convergence rate $O(1/k^2)$},
 	year = {1983},
-	booktitle = {Dokl akad nauk Sssr},
+	journal = {Dokl. Akad. Nauk SSSR},
 	volume = {269},
-	numpages = {543},
+    number = {3},
+	pages = {543--547},
+    url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng},
 	keywords = {AI, artificial intelligence, machine learning, ML, optimization},
 }
 

@@ -65,7 +65,7 @@ List of topics (may be some overlap between topics):
  * [Mikolov et al., 2013. Efficient estimation of word representations in vector space](https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq)
  * [Mikolov et al., 2013. Linguistic regularities in continuous space word representations](https://aclanthology.org/N13-1090.pdf)
  * [Nair et al., 2010. Rectified linear units improve restricted Boltzmann machines](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)
- * Nesterov, 1983. A method for solving the convex programming problem with convergence rate O (1/k2)
+ * [Nesterov, 1983. A method for solving the convex programming problem with convergence rate $O(1/k^2)$](https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng)
  * [Ng, 2004. Feature selection, L1 vs. L2 regularization, and rotational invariance](https://doi.org/10.1145/1015330.1015435)
  * [Park et al., 1991. Universal approximation using radial-basis-function networks](https://direct.mit.edu/neco/article/3/2/246-257/5580)
  * [Paszke et al., 2019. PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf)
@@ -128,7 +128,7 @@ List of topics (may be some overlap between topics):
  * [Conn et al., 2008. Geometry of interpolation sets in derivative free optimization](http://link.springer.com/10.1007/s10107-006-0073-5)
  * [Dauphin et al., 2014. Identifying and attacking the saddle point problem in high-dimensional non-convex optimization](https://proceedings.neurips.cc/paper_files/paper/2014/file/04192426585542c54b96ba14445be996-Paper.pdf)
  * [de Boor, 1978. A Practical Guide to Splines](https://www.researchgate.net/publication/200744645_A_Practical_Guide_to_Spline)
- * Delaunay, 1934. Sur la sph\'ere vide
+ * [Delaunay, 1934. Sur la sph\'ere vide](https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4937&option_lang=eng)
  * [De Ryck et al., 2022. Generic bounds on the approximation error for physics-informed (and) operator learning](https://proceedings.neurips.cc/paper_files/paper/2022/file/46f0114c06524debc60ef2a72769f7a9-Paper-Conference.pdf)
  * [Devlin et al., 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423/)
  * [Diamond et al., 2016. CVXPY: A Python-embedded modeling language for convex optimization](http://jmlr.org/papers/v17/15-408.html)
@@ -141,14 +141,14 @@ List of topics (may be some overlap between topics):
  * [Garg et al., 2023. SF-SFD: Stochastic optimization of Fourier coefficients for space-filling designs](https://ieeexplore.ieee.org/document/10408245/)
  * [Garnett, 2023. Bayesian Optimization](https://bayesoptbook.com)
  * [Geman et al., 1992. Neural networks and the bias/variance dilemma](https://direct.mit.edu/neco/article/4/1/1-58/5624)
- * Gillette et al., 2022. Data-driven geometric scale detection via Delaunay interpolation
+ * [Gillette et al., 2022. Data-driven geometric scale detection via Delaunay interpolation](https://arxiv.org/html/2203.05685v2)
  * [Gillette et al., 2024. Algorithm 1049: The Delaunay Density Diagnostic](https://doi.org/10.1145/3700134)
  * [Goh, 2017. Why Momentum Really Works](http://distill.pub/2017/momentum)
  * [Golub et al., 2013. Matrix computations](https://www.press.jhu.edu/books/title/10678/matrix-computations)
  * [Gorban et al., 2017. Stochastic separation theorems](https://linkinghub.elsevier.com/retrieve/pii/S0893608017301776)
  * [Gramacy et al., 2012. Cases for the nugget in modeling computer experiments](http://link.springer.com/10.1007/s11222-010-9224-x)
  * [Graves, 2014. Generating Sequences With Recurrent Neural Networks](https://arxiv.org/abs/1308.0850)
- * G{\"u}hring et al., 2020. Error bounds for approximations with deep ReLU neural networks in W s, p norms
+ * [G{\"u}hring et al., 2020. Error bounds for approximations with deep ReLU neural networks in $W^s,p$ norms](https://doi.com/10.1142/S0219530519410021)
  * [Harris et al., 2020. Array programming with NumPy](https://www.nature.com/articles/s41586-020-2649-2)
  * [Hinton et al., 1983. Optimal perceptual inference](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b89e9f0cef5ace08946a7c07bf7284854c418445)
  * [Hochreiter et al., 1997. Long Short-Term Memory](https://direct.mit.edu/neco/article/9/8/1735-1780/6109)
@@ -178,14 +178,14 @@ List of topics (may be some overlap between topics):
  * [Lux et al., 2021. Interpolation of sparse high-dimensional data](https://link.springer.com/10.1007/s11075-020-01040-2)
  * [Lux et al., 2023. Algorithm 1031: MQSI---Monotone quintic spline interpolation](https://dl.acm.org/doi/10.1145/3570157)
  * [MacKay, 1992. A practical Bayesian framework for backpropagation networks](https://direct.mit.edu/neco/article/4/3/448-472/5654)
- * Manton et al., 2015. A primer on reproducing kernel Hilbert spaces
+ * [Manton et al., 2015. A primer on reproducing kernel Hilbert spaces](https://doi.com/10.1561/2000000050)
  * [Mikolov et al., 2013. Efficient estimation of word representations in vector space](https://openreview.net/forum?id=idpCdOWtqXd60&noteld=C8Vn84fq)
  * [Mikolov et al., 2013. Linguistic regularities in continuous space word representations](https://aclanthology.org/N13-1090.pdf)
- * M\"obius, 1827. Der barycentrische Calcul
+ * [M\"obius, 1827. Der barycentrische Calcul](https://books.google.com/books?id=eFPluv_UqFEC&printsec=frontcover#v=onepage&q&f=false)
  * [Moriwaki et al., 2018. Mordred: a molecular descriptor calculator](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0258-y)
  * [Myers et al., 2016. Response Surface Methodology: Process and Design Optimization Using Designed Experiments](https://books.google.com/books?hl=en&lr=&id=T-BbCwAAQBAJ&oi=fnd&pg=PR13&dq=Response+Surface+Methodology:+Process+and+Product+Optimization+Using+Designed+Experiments,+4th+Edition&ots=O3jdPna83T&sig=IimJlE46JBVkHOu7eik3RN9Z5GA#v=onepage&q=Response%20Surface%20Methodology%3A%20Process%20and%20Product%20Optimization%20Using%20Designed%20Experiments%2C%204th%20Edition&f=false)
  * [Nair et al., 2010. Rectified linear units improve restricted Boltzmann machines](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)
- * Nesterov, 1983. A method for solving the convex programming problem with convergence rate O (1/k2)
+ * [Nesterov, 1983. A method for solving the convex programming problem with convergence rate $O(1/k^2)$](https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng)
  * [Ng, 2004. Feature selection, L1 vs. L2 regularization, and rotational invariance](https://doi.org/10.1145/1015330.1015435)
  * [Omohundro, 1990. Geometric learning algorithms](https://linkinghub.elsevier.com/retrieve/pii/0167278990900854)
  * [Park et al., 1991. Universal approximation using radial-basis-function networks](https://direct.mit.edu/neco/article/3/2/246-257/5580)
@@ -196,7 +196,7 @@ List of topics (may be some overlap between topics):
  * [Powell, 1994. The uniform convergence of thin plate spline interpolation in two dimensions](http://link.springer.com/10.1007/s002110050051)
  * [Raissi et al., 2019. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations](https://linkinghub.elsevier.com/retrieve/pii/S0021999118307125)
  * [Ranjan et al., 2011. A computationally stable approach to Gaussian process interpolation of deterministic computer simulation data](http://www.tandfonline.com/doi/abs/10.1198/TECH.2011.09141)
- * Rasmussen et al., 2006. Gaussian processes for machine learning
+ * [Rasmussen et al., 2006. Gaussian processes for machine learning](https://gaussianprocess.org/gpml)
  * [Recht et al., 2019. Do ImageNet Classifiers Generalize to ImageNet?](https://proceedings.mlr.press/v97/recht19a.html)
  * [Regis, 2015. The calculus of simplex gradients](http://link.springer.com/10.1007/s11590-014-0815-x)
  * [Rosenblatt, 1958. The perceptron: a probabilistic model for information storage and organization in the brain.](https://doi.apa.org/doi/10.1037/h0042519)
@@ -320,7 +320,7 @@ List of topics (may be some overlap between topics):
  * [Domahidi et al., 2013. ECOS: An SOCP solver for embedded systems](https://ieeexplore.ieee.org/document/6669541)
  * [Dong et al., 2020. NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search](https://openreview.net/forum?id=HJxyZkBKDr)
  * [Duchi et al., 2011. Adaptive Subgradient Methods for Online Learning and Stochastic Optimization](http://jmlr.org/papers/v12/duchi11a.html)
- * Dunlop et al., 2008. On the use of a genetic algorithm in high performance computing benchmark tuning
+ * [Dunlop et al., 2008. On the use of a genetic algorithm in high performance computing benchmark tuning](https://ieeexplore.ieee.org/document/4667550)
  * [Dunning et al., 2017. JuMP: A Modeling Language for Mathematical Optimization](https://epubs.siam.org/doi/10.1137/15M1020575)
  * [Durillo et al., 2011. jMetal: A Java framework for multi-objective optimization](https://linkinghub.elsevier.com/retrieve/pii/S0965997811001219)
  * [Dzahini et al., 2025. A Class of Sparse Johnson–Lindenstrauss Transforms and Analysis of their Extreme Singular Values](https://doi.org/10.1137/23M1605661)
@@ -329,7 +329,7 @@ List of topics (may be some overlap between topics):
  * [Eggensperger et al., 2021. HPOBench: A Collection of Reproducible Multi-Fidelity Benchmark Problems for HPO](https://openreview.net/forum?id=1k4rJYEwda-)
  * [Ehrgott, 2005. Multicriteria Optimization](http://link.springer.com/10.1007/3-540-27659-9)
  * [Eichfelder, 2009. Scalarizations for adaptively solving multi-objective optimization problems](http://link.springer.com/10.1007/s10589-007-9155-4)
- * Elsken et al., 2019. Neural architecture search: A survey
+ * [Elsken et al., 2019. Neural architecture search: A survey](https://www.jmlr.org/papers/volume20/18-598/18-598.pdf)
  * [Eriksson et al., 2019. Scalable global optimization via local bayesian optimization](https://proceedings.neurips.cc/paper/2019/file/6c990b7aca7bc7058f5e98ea909e924b-Paper.pdf)
  * [Eriksson et al., 2021. Latency-Aware Neural Architecture Search with Multi-Objective Bayesian Optimization](https://openreview.net/forum?id=0ciyfd4SvbI)
  * [Farhan et al., 2020. Reinforcement Learning in AnyLogic Simulation Models: A Guiding Example using Pathmind](https://ieeexplore.ieee.org/document/9383916)
@@ -362,16 +362,16 @@ List of topics (may be some overlap between topics):
  * [Ishibuchi et al., 2015. Modified distance calculation in generational distance and inverted generational distance](https://dl.acm.org/doi/10.1145/2739480.2754792)
  * [Jain et al., 2013. An evolutionary many-objective optimization algorithm using reference-point based nondominated sorting approach, part II: Handling constraints and extending to an adaptive approach](http://ieeexplore.ieee.org/document/6595567)
  * [Jones et al., 1993. Lipschitzian optimization without the Lipschitz constant](http://link.springer.com/10.1007/BF00941892)
- * Jones et al., 1998. Efficient global optimization of expensive black-box functions
+ * [Jones et al., 1998. Efficient global optimization of expensive black-box functions](https://doi.com/10.1023/A:1008306431147)
  * [Kandasamy et al., 2020. Tuning Hyperparameters without Grad Students: Scalable and Robust Bayesian Optimisation with Dragonfly](http://jmlr.org/papers/v21/18-223.html)
  * [Karl et al., 2023. Multi-Objective Hyperparameter Optimization in Machine Learning -- An Overview](https://dl.acm.org/doi/10.1145/3610536)
  * [Karypis et al., 1998. A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs](http://epubs.siam.org/doi/10.1137/S1064827595287997)
  * [Karypis et al., 1998. hMETIS: A hypergraph partitioning package](https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf)
  * [Karypis et al., 1999. Multilevel hypergraph partitioning: applications in VLSI domain](http://ieeexplore.ieee.org/document/748202/)
  * [Khan et al., 2018. Manifold Sampling for Optimization of Nonconvex Functions that are Piecewise Linear Compositions of Smooth Components](https://epubs.siam.org/doi/10.1137/17M114741X)
- * Kim et al., 2004. SPEA2+: Improving the performance of the Strength Pareto Evolutionary Algorithm 2
+ * [Kim et al., 2004. SPEA2+: Improving the performance of the Strength Pareto Evolutionary Algorithm 2](https://doi.com/10.1007/978-3-540-30217-9_75)
  * [Kingma et al., 2015. Adam: A method for stochastic optimization](https://arxiv.org/abs/1412.6980)
- * Klee et al., 1972. How good is the simplex algorithm?
+ * [Klee et al., 1972. How good is the simplex algorithm?](https://en.wikipedia.org/wiki/Klee%E2%80%93Minty_cube)
  * [Knowles, 2006. ParEGO: A hybrid algorithm with on-line landscape approximation for expensive multiobjective optimization problems](http://ieeexplore.ieee.org/document/1583627)
  * [Kushner, 1964. A New Method of Locating the Maximum Point of an Arbitrary Multipeak Curve in the Presence of Noise](https://asmedigitalcollection.asme.org/fluidsengineering/article-pdf/86/1/97/5763745/97\_1.pdf)
  * [Lai, 2003. Stochastic approximation](https://projecteuclid.org/journals/annals-of-statistics/volume-31/issue-2/Stochastic-approximation-invited-paper/10.1214/aos/1051027873.full)
@@ -392,10 +392,11 @@ List of topics (may be some overlap between topics):
  * [Liuzzi et al., 2024. DFO-lib](https://github.com/DerivativeFreeLibrary)
  * [Lovison et al., 2021. On the Extension of the DIRECT Algorithm to Multiple Objectives](https://link.springer.com/10.1007/s10898-020-00942-8)
  * Lu et al., 2018. NSGA-NET: a multi-objective genetic algorithm for neural architecture search
+ * [Lu et al., 2019. NSGA-Net: neural architecture search using multi-objective genetic algorithm](https://doi.org/10.1145/3321707.3321729)
  * [Lux et al., 2020. Analytic test functions for generalizable evaluation of convex optimization techniques](https://ieeexplore.ieee.org/document/9368254/)
  * [Mannor et al., 2014. Approachability in unknown games: Online learning meets multi-objective optimization](https://proceedings.mlr.press/v35/mannor14.html)
  * [Marler et al., 2004. Survey of multi-objective optimization methods for engineering](http://link.springer.com/10.1007/s00158-003-0368-6)
- * M{\"a}rtens et al., 2013. The asynchronous island model and NSGA-II: study of a new migration operator and its performance
+ * [M{\"a}rtens et al., 2013. The asynchronous island model and NSGA-II: study of a new migration operator and its performance](https://doi.org/10.1145/2463372.2463516)
  * [Martins et al., 2009. pyMDO: An Object-Oriented Framework for Multidisciplinary Design Optimization](https://dl.acm.org/doi/10.1145/1555386.1555389)
  * [Megiddo, 1991. On finding primal- and dual-optimal bases](https://pubsonline.informs.org/doi/10.1287/ijoc.3.1.63)
  * [Misitano et al., 2021. DESDEO: The Modular and Open Source Framework for Interactive Multiobjective Optimization](https://ieeexplore.ieee.org/document/9591595)
@@ -404,7 +405,7 @@ List of topics (may be some overlap between topics):
  * [M{\"u}ller, 2017. SOCEMO: Surrogate optimization of computationally expensive multiobjective problems](https://pubsonline.informs.org/doi/10.1287/ijoc.2017.0749)
  * [Munson et al., 2015. TAO 3.5 Users Manual](https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf)
  * [Myers et al., 2016. Response Surface Methodology: Process and Design Optimization Using Designed Experiments](https://books.google.com/books?hl=en&lr=&id=T-BbCwAAQBAJ&oi=fnd&pg=PR13&dq=Response+Surface+Methodology:+Process+and+Product+Optimization+Using+Designed+Experiments,+4th+Edition&ots=O3jdPna83T&sig=IimJlE46JBVkHOu7eik3RN9Z5GA#v=onepage&q=Response%20Surface%20Methodology%3A%20Process%20and%20Product%20Optimization%20Using%20Designed%20Experiments%2C%204th%20Edition&f=false)
- * Nesterov, 1983. A method for solving the convex programming problem with convergence rate O (1/k2)
+ * [Nesterov, 1983. A method for solving the convex programming problem with convergence rate $O(1/k^2)$](https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng)
  * [Neveu et al., 2023. Comparison of multiobjective optimization methods for the LCLS-II photoinjector](https://linkinghub.elsevier.com/retrieve/pii/S0010465522002855)
  * [Nocedal et al., 2006. Numerical Optimization](http://link.springer.com/10.1007/978-0-387-40065-5)
  * [O'Donoghue et al., 2016. Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding](http://link.springer.com/10.1007/s10957-016-0892-3)
@@ -471,13 +472,13 @@ List of topics (may be some overlap between topics):
  * [Balay et al., 2022. PETSc/TAO Users Manual](https://petsc.org/release/docs/manual/manual.pdf)
  * [Barba-González et al., 2018. jMetalSP: A framework for dynamic multi-objective big data optimization](https://linkinghub.elsevier.com/retrieve/pii/S1568494617302557)
  * [Barker et al., 2022. Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x)
- * Betz et al., 1997. VPR: a new packing, placement and routing tool for FPGA research
+ * [Betz et al., 1997. VPR: a new packing, placement and routing tool for FPGA research](https://link.springer.com/chapter/10.1007/3-540-63465-7_226)
  * [Bian et al., 2010. Towards scalable placement for FPGAs](https://doi.org/10.1145/1723112.1723140)
  * [Biedron et al., 2019. FUN3D Manual: 13.6](https://fun3d.larc.nasa.gov/papers/FUN3D_Manual-13.6.pdf)
  * [Blackford et al., 1997. ScaLAPACK Users' Guide](https://www.netlib.org/scalapack/)
  * [Bradbury et al., 2018. JAX: composable transformations of Python+NumPy programs](http://github.com/google/jax)
  * [Cameron et al., 2019. MOANA: Modeling and analyzing I/O variability in parallel system experimental design](https://ieeexplore.ieee.org/document/8631172)
- * Cao et al., 2017. On the performance variation in modern storage stacks
+ * [Cao et al., 2017. On the performance variation in modern storage stacks](https://www.usenix.org/conference/fast17/technical-sessions/presentation/cao)
  * [Capps et al., 2016. IOzone Filesystem Benchmark](www.iozone.org)
  * [Chandy et al., 1997. A parallel circuit-partitioned algorithm for timing driven cell placement](http://ieeexplore.ieee.org/document/628930/)
  * Chang, 2016. GPU Saturation for Multiple Matrix-Vector Multiplications
@@ -505,7 +506,7 @@ List of topics (may be some overlap between topics):
  * [Devlin et al., 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423/)
  * [Dongarra et al., 2003. The LINPACK benchmark: past, present, and future](https://onlinelibrary.wiley.com/doi/10.1002/cpe.728)
  * [Dubey et al., 2021. Performance Portability in the Exascale Computing Project: Exploration Through a Panel Series](https://ieeexplore.ieee.org/document/9495114)
- * Dunlop et al., 2008. On the use of a genetic algorithm in high performance computing benchmark tuning
+ * [Dunlop et al., 2008. On the use of a genetic algorithm in high performance computing benchmark tuning](https://ieeexplore.ieee.org/document/4667550)
  * [Dunning et al., 2017. JuMP: A Modeling Language for Mathematical Optimization](https://epubs.siam.org/doi/10.1137/15M1020575)
  * [Elias et al., 2020. The Manufacturing Data and Machine Learning Platform: Enabling Real-time Monitoring and Control of Scientific Experiments via IoT](https://ieeexplore.ieee.org/document/9221078)
  * [Fiduccia et al., 1982. A linear-time heuristic for improving network partitions](http://ieeexplore.ieee.org/document/1585498/)
@@ -547,6 +548,7 @@ List of topics (may be some overlap between topics):
  * [Lux et al., 2018. Nonparametric distribution models for predicting and managing computational performance variability](https://ieeexplore.ieee.org/document/8478814)
  * [Lux et al., 2018. Predictive modeling of I/O characteristics in high performance computing systems](https://par.nsf.gov/servlets/purl/10111447)
  * [Maidee et al., 2005. Timing-driven partitioning-based placement for island style FPGAs](http://ieeexplore.ieee.org/document/1397800/)
+ * [M{\"a}rtens et al., 2013. The asynchronous island model and NSGA-II: study of a new migration operator and its performance](https://doi.org/10.1145/2463372.2463516)
  * [Mayes, 2023. PySuperfish](https://github.com/ChristopherMayes/PySuperfish)
  * [Menzel et al., 1987. Users guide for the POISSON/SUPERFISH group of codes](https://www.osti.gov/servlets/purl/10140823)
  * [Mills et al., 2021. Toward performance-portable PETSc for GPU-based exascale systems](https://linkinghub.elsevier.com/retrieve/pii/S016781912100079X)
@@ -604,7 +606,7 @@ List of topics (may be some overlap between topics):
  * [Barber et al., 1996. The Quickhull algorithm for convex hulls](https://dl.acm.org/doi/10.1145/235815.235821)
  * [Barker et al., 2022. Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x)
  * [Ben{\'i}tez-Hidalgo et al., 2019. jMetalPy: A Python framework for multi-objective optimization with metaheuristics](https://linkinghub.elsevier.com/retrieve/pii/S2210650219301397)
- * Betz et al., 1997. VPR: a new packing, placement and routing tool for FPGA research
+ * [Betz et al., 1997. VPR: a new packing, placement and routing tool for FPGA research](https://link.springer.com/chapter/10.1007/3-540-63465-7_226)
  * [Biedron et al., 2019. FUN3D Manual: 13.6](https://fun3d.larc.nasa.gov/papers/FUN3D_Manual-13.6.pdf)
  * [Biscani et al., 2020. A parallel global multiobjective framework for optimization: pagmo](https://joss.theoj.org/papers/10.21105/joss.02338)
  * [Blackford et al., 1997. ScaLAPACK Users' Guide](https://www.netlib.org/scalapack/)
@@ -680,6 +682,7 @@ List of topics (may be some overlap between topics):
  * [Lindauer et al., 2022. SMAC3: A Versatile Bayesian Optimization Package for Hyperparameter Optimization](http://jmlr.org/papers/v23/21-0888.html)
  * [Liuzzi et al., 2024. DFO-lib](https://github.com/DerivativeFreeLibrary)
  * Lu et al., 2018. NSGA-NET: a multi-objective genetic algorithm for neural architecture search
+ * [Lu et al., 2019. NSGA-Net: neural architecture search using multi-objective genetic algorithm](https://doi.org/10.1145/3321707.3321729)
  * [Lundberg et al., 2017. A Unified Approach to Interpreting Model Predictions](http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf)
  * [Luu et al., 2011. VPR 5.0: FPGA CAD and architecture exploration tools with single-driver routing, heterogeneity and process scaling](https://doi.org/10.1145/2068716.2068718)
  * [Lux et al., 2023. Algorithm 1031: MQSI---Monotone quintic spline interpolation](https://dl.acm.org/doi/10.1145/3570157)
@@ -749,7 +752,7 @@ List of topics (may be some overlap between topics):
  * [Cignoni et al., 1998. DeWall: A fast divide and conquer Delaunay triangulation algorithm in $\mathbbE^d$](https://linkinghub.elsevier.com/retrieve/pii/S0010448597000821)
  * [Dantzig, 1998. Linear Programming and Extensions](https://d1wqtxts1xzle7.cloudfront.net/56278680/Libro_Linear_Programming_George_Dantzig-libre.pdf?1523307505=&response-content-disposition=inline%3B+filename%3DLinear_Programming_and_Extensions.pdf&Expires=1746491165&Signature=WQRD07CTKkhpfjxG1R6Kb2tSq0cRnDUia1ETKdgTQX2wbUxpA2p7ZGudVpOpbsKgUZzsKL-U3CddGBaVVSTr~TSLwPadmYe8xHRVZ4KqyB~ms5zyu08vntJ0V-pRNY0sws9H~ktLJTgoABlZMkoYDA23Dbrh07yQqukyaqHsDuoTEZRzng6AIqN7CXO1KW2M4J~rS-M1mmM3bdTSMAoWPozK7Suea-HJPd7QbCMq2hB0JY5mhhi6nUHa6zIQVmjTCcPPdnX9O4lYgYPQgOBiMlIJ5yhYolhlHKXMA~2-g3rbpe4kqJXIEqICSWPByh72uohGvRJkDgUX-CkBw7FZNA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
  * [de Berg et al., 2008. Computational Geometry: Algorithms and Applications](https://cimec.org.ar/foswiki/pub/Main/Cimec/GeometriaComputacional/DeBerg_-_Computational_Geometry_-_Algorithms_and_Applications_2e.pdf)
- * Delaunay, 1934. Sur la sph\'ere vide
+ * [Delaunay, 1934. Sur la sph\'ere vide](https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4937&option_lang=eng)
  * [Devillers et al., 2001. Walking in a triangulation](https://dl.acm.org/doi/10.1145/378583.378643)
  * [Diamond et al., 2016. CVXPY: A Python-embedded modeling language for convex optimization](http://jmlr.org/papers/v17/15-408.html)
  * [Domahidi et al., 2013. ECOS: An SOCP solver for embedded systems](https://ieeexplore.ieee.org/document/6669541)
@@ -757,14 +760,14 @@ List of topics (may be some overlap between topics):
  * [Edelsbrunner et al., 1990. Simulation of simplicity: a technique to cope with degenerate cases in geometric algorithms](https://dl.acm.org/doi/10.1145/77635.77639)
  * [Fortune, 1987. A sweepline algorithm for Voronoi diagrams](http://link.springer.com/10.1007/BF01840357)
  * [Fukuda, 2004. Is it possible to compute only the adjacencies of Voronoi cells in the Voronoi diagram efficiently?](http://www.cs.mcgill.ca/~fukuda/soft/polyfaq/polyfaq.html)
- * Gillette et al., 2022. Data-driven geometric scale detection via Delaunay interpolation
+ * [Gillette et al., 2022. Data-driven geometric scale detection via Delaunay interpolation](https://arxiv.org/html/2203.05685v2)
  * [Gillette et al., 2024. Algorithm 1049: The Delaunay Density Diagnostic](https://doi.org/10.1145/3700134)
  * [Gorban et al., 2017. Stochastic separation theorems](https://linkinghub.elsevier.com/retrieve/pii/S0893608017301776)
  * [Hanson et al., 1982. Algorithm 587: Two Algorithms for the Linearly Constrained Least Squares Problem](https://dl.acm.org/doi/10.1145/356004.356010)
  * [Hert et al., 2020. dD Convex Hulls and Delaunay Triangulations](https://doc.cgal.org/5.0.2/Manual/packages.html#PkgConvexHullD)
  * [Huangfu et al., 2018. Parallelizing the dual revised simplex method](http://link.springer.com/10.1007/s12532-017-0130-5)
  * [Johnson et al., 1990. Minimax and maximin distance designs](https://linkinghub.elsevier.com/retrieve/pii/037837589090122B)
- * Klee et al., 1972. How good is the simplex algorithm?
+ * [Klee et al., 1972. How good is the simplex algorithm?](https://en.wikipedia.org/wiki/Klee%E2%80%93Minty_cube)
  * [Klee, 1980. On the complexity of d-dimensional Voronoi diagrams](http://link.springer.com/10.1007/BF01224932)
  * [Liu et al., 2019. Nonparametric functional approximation with Delaunay triangulation learner](https://ieeexplore.ieee.org/document/8944414)
  * [Lux et al., 2018. Novel meshes for multivariate interpolation and approximation](https://dl.acm.org/doi/10.1145/3190645.3190687)
@@ -772,8 +775,8 @@ List of topics (may be some overlap between topics):
  * [Lux et al., 2021. Interpolation of sparse high-dimensional data](https://link.springer.com/10.1007/s11075-020-01040-2)
  * [Megiddo, 1991. On finding primal- and dual-optimal bases](https://pubsonline.informs.org/doi/10.1287/ijoc.3.1.63)
  * Miller et al., 2008. Linear-size meshes
- * M\"obius, 1827. Der barycentrische Calcul
- * M{\"u}cke et al., 1999. Fast randomized point location without preprocessing in two- and three-dimensional Delaunay triangulations
+ * [M\"obius, 1827. Der barycentrische Calcul](https://books.google.com/books?id=eFPluv_UqFEC&printsec=frontcover#v=onepage&q&f=false)
+ * [M{\"u}cke et al., 1999. Fast randomized point location without preprocessing in two- and three-dimensional Delaunay triangulations](https://www.osti.gov/biblio/231593)
  * [Omohundro, 1990. Geometric learning algorithms](https://linkinghub.elsevier.com/retrieve/pii/0167278990900854)
  * [Papazafeiropoulos, 2014. MATLAB Computational Geometry Toolbox version 1.2](https://www.mathworks.com/matlabcentral/fileexchange/48509-computational-geometry-toolbox)
  * [Polianskii et al., 2020. Voronoi Graph Traversal in High Dimensions with Applications to Topological Data Analysis and Piecewise Linear Interpolation](https://dl.acm.org/doi/10.1145/3394486.3403266)
@@ -805,7 +808,7 @@ List of topics (may be some overlap between topics):
  * [Joe et al., 2003. Remark on Algorithm 659: Implementing Sobol's Quasirandom Sequence Generator](https://dl.acm.org/doi/10.1145/641876.641879)
  * [Joe et al., 2008. Constructing Sobol sequences with better two-dimensional projections](http://epubs.siam.org/doi/10.1137/070709359)
  * [Johnson et al., 1990. Minimax and maximin distance designs](https://linkinghub.elsevier.com/retrieve/pii/037837589090122B)
- * Kuipers et al., 1974. Uniform distribution of sequences
+ * [Kuipers et al., 1974. Uniform distribution of sequences](https://web.maths.unsw.edu.au/~josefdick/preprints/KuipersNied_book.pdf)
  * [Lax, 2002. Functional analysis](https://books.google.com/books?hl=en&lr=&id=18VqDwAAQBAJ&oi=fnd&pg=PR17&ots=8FU4i_jAff&sig=Lh4GrUCrS_gt-HKqHSq4X7BaxMs#v=onepage&q&f=false)
  * [Lee et al., 2015. pyDOE: The experimental design package for python](https://github.com/tisimst/pyDOE)
  * [Liu et al., 2017. An adaptive sampling approach for Kriging metamodeling by maximizing expected prediction error](https://linkinghub.elsevier.com/retrieve/pii/S009813541730234X)

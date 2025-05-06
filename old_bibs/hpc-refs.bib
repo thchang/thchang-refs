@@ -152,6 +152,7 @@
 	organization = {Springer Berlin Heidelberg},
 	location = {Berlin, Heidelberg},
 	isbn = {978-3-540-69557-8},
+    url = {https://link.springer.com/chapter/10.1007/3-540-63465-7_226},
 	keywords = {high-performance computing, HPC, FPGA},
 }
 
@@ -232,6 +233,8 @@
 	pages = {329--344},
 	organization = {USENIX Association},
 	location = {Vancouver, Canada},
+    url = {https://www.usenix.org/conference/fast17/technical-sessions/presentation/cao},
+    isbn = {978-1-931971-36-2},
 	keywords = {high-performance computing, HPC, performance modeling},
 }
 
@@ -636,6 +639,7 @@
 	pages = {105--113},
 	organization = {IEEE},
 	location = {Edinburgh, UK},
+    url = {https://ieeexplore.ieee.org/document/4667550},
 	keywords = {high-performance computing, HPC, computational linear algebra},
 }
 
@@ -1244,6 +1248,21 @@
 	url = {http://ieeexplore.ieee.org/document/1397800/},
 	issn = {0278-0070},
 	keywords = {high-performance computing, HPC, FPGA},
+}
+
+% This is a modification to the NSGA-II multiobjective optimization algorithm where the authors introduce a pipeline of smaller "islands" of populations, which evolve independently. Cross migration between these islands keeps the populations from diverging too far apart and allowing for progress to be shared between all islands through eventual consistency. This modification allows NSGA-II to run fully asynchronously. This is the version used by Optuna
+@inproceedings{martens2013asynchronous,
+	author = {M{\"a}rtens, Marcus and Izzo, Dario},
+	title = {The asynchronous island model and {NSGA-II}: study of a new migration operator and its performance},
+	year = {2013},
+	booktitle = {Proceedings of the 15th Annual Conference on Genetic and Evolutionary Computation (GECCO '13)},
+	pages = {1173--1180},
+    publisher = {Association for Computing Machinery},
+    location = {Amsterdam, The Netherlands},
+    url = {https://doi.org/10.1145/2463372.2463516},
+    doi = {10.1145/2463372.2463516},
+    isbn = {9781450319638},
+	keywords = {high-performance computing, HPC, distributed computing},
 }
 
 % Python wrapper around the open source numerical simulation software superfish We used this when performing particle accelerator RF gun cavity optimization at Argonne in order to provide a bridge between POISSON/SUPERFISH (Fortran codes) and the ParMOO optimizer (a Python code)

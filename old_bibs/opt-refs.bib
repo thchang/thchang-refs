@@ -1303,6 +1303,7 @@
 	pages = {105--113},
 	organization = {IEEE},
 	location = {Edinburgh, UK},
+    url = {https://ieeexplore.ieee.org/document/4667550},
 	keywords = {optimization, autotuning, evolutionary algorithms, EA},
 }
 
@@ -1437,6 +1438,7 @@
 	number = {1},
 	pages = {1997--2017},
 	publisher = {JMLR.org},
+    url = {https://www.jmlr.org/papers/volume20/18-598/18-598.pdf},
 	keywords = {optimization, autotuning, hyperparameter optimization, decision trees, Bayesian optimization, evolutionary algorithms, EA, Gaussian process},
 }
 
@@ -1911,6 +1913,7 @@
 	volume = {13},
 	pages = {455--492},
 	publisher = {Springer},
+    doi = {10.1023/A:1008306431147},
 	keywords = {optimization, blackbox optimization, simulation optimization, Bayesian optimization, global optimization, surrogate modeling, Gaussian process},
 }
 
@@ -2018,6 +2021,7 @@
 	organization = {Springer},
 	location = {Birmingham, UK},
 	isbn = {978-3-540-30217-9_75},
+    doi = {10.1007/978-3-540-30217-9_75},
 	keywords = {optimization, multiobjective optimization, evolutionary algorithms, EA},
 }
 
@@ -2041,6 +2045,7 @@
 	journal = {Inequalities},
 	volume = {III},
 	pages = {159--175},
+    url = {https://en.wikipedia.org/wiki/Klee%E2%80%93Minty_cube},
 	keywords = {optimization, linear programming, LP, convex optimization, constrained optimization},
 }
 
@@ -2346,11 +2351,17 @@
 }
 
 % NSGA-Net is the NSGA-II/pymoo team's multiobjective genetic algorithm based NAS solver. The open source python software is available from: github.com/ianwhale/nsga-net
-@article{lu2018nsganet,
-	author = {Lu, Zhichao and Whalen, Ian and Boddeti, Vishnu and Dhebar, Yashesh and Deb, Kalyanmoy and Goodman, Erik and Banzhaf, Wolfgang},
-	title = {NSGA-NET: a multi-objective genetic algorithm for neural architecture search},
-	year = {2018},
-	journal = {GECCO-2019},
+@inproceedings{lu2019nsganet,
+    author = {Lu, Zhichao and Whalen, Ian and Boddeti, Vishnu and Dhebar, Yashesh and Deb, Kalyanmoy and Goodman, Erik and Banzhaf, Wolfgang},
+    title = {{NSGA-Net}: neural architecture search using multi-objective genetic algorithm},
+    year = {2019},
+    booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '19)},
+    pages = {419–427},
+    publisher = {Association for Computing Machinery},
+    location = {Prague, Czech Republic},
+    url = {https://doi.org/10.1145/3321707.3321729},
+    doi = {10.1145/3321707.3321729},
+    isbn = {9781450361118},
 	keywords = {optimization, multiobjective optimization, mixed-variable optimization, autotuning, hyperparameter optimization, evolutionary algorithm, EA},
 }
 
@@ -2407,8 +2418,13 @@
 	author = {M{\"a}rtens, Marcus and Izzo, Dario},
 	title = {The asynchronous island model and {NSGA-II}: study of a new migration operator and its performance},
 	year = {2013},
-	booktitle = {Proceedings of the 15th annual conference on Genetic and evolutionary computation},
+	booktitle = {Proceedings of the 15th Annual Conference on Genetic and Evolutionary Computation (GECCO '13)},
 	pages = {1173--1180},
+    publisher = {Association for Computing Machinery},
+    location = {Amsterdam, The Netherlands},
+    url = {https://doi.org/10.1145/2463372.2463516},
+    doi = {10.1145/2463372.2463516},
+    isbn = {9781450319638},
 	keywords = {optimization, multiobjective optimization, evolutionary algorithm, EA},
 }
 
@@ -2538,14 +2554,16 @@
 	keywords = {optimization, multiobjective optimization, blackbox optimization, simulation optimization, surrogate modeling},
 }
 
-% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
-@inproceedings{nesterov1983method,
+% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nesterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
+@article{nesterov1983method,
 	author = {Nesterov, Yurii},
-	title = {A method for solving the convex programming problem with convergence rate O (1/k2)},
+	title = {A method for solving the convex programming problem with convergence rate $O(1/k^2)$},
 	year = {1983},
-	booktitle = {Dokl akad nauk Sssr},
+	journal = {Dokl. Akad. Nauk SSSR},
 	volume = {269},
-	numpages = {543},
+    number = {3},
+	pages = {543--547},
+    url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng},
 	keywords = {optimization, stochastic optimization, convex optimization},
 }
 

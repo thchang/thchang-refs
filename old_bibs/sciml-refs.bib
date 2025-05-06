@@ -420,6 +420,8 @@
 	title = {Sur la sph\'ere vide},
 	year = {1934},
 	journal = {Bull. Acad. Science USSR VII: Class. Sci. Math.,},
+    number = {6},
+    url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4937&option_lang=eng},
 	keywords = {machine learning, ML, scientific machine learning, SciML, Delaunay triangulation},
 }
 
@@ -604,6 +606,7 @@
 	title = {Data-driven geometric scale detection via Delaunay interpolation},
 	year = {2022},
 	institution = {arXiv math.NA},
+    url = {https://arxiv.org/html/2203.05685v2},
 	keywords = {machine learning, ML, scientific machine learning, SciML, Delaunay triangulation, interpolation, approximation theory, uncertainty quantification, UQ},
 }
 
@@ -700,13 +703,14 @@
 % An error analysis of ReLU multilayer perceptrons (MLPs). Provides lower bounds on approximation error for feed-forward neural networks with ReLU activation functions. A good step in SciML, but we typically want upper bounds not lower bounds in practice
 @article{guhring2020error,
 	author = {G{\"u}hring, Ingo and Kutyniok, Gitta and Petersen, Philipp},
-	title = {Error bounds for approximations with deep ReLU neural networks in W s, p norms},
+	title = {Error bounds for approximations with deep ReLU neural networks in $W^{s,p}$ norms},
 	year = {2020},
 	journal = {Analysis and Applications},
 	volume = {18},
 	number = {05},
 	pages = {803--859},
 	publisher = {World Scientific},
+    doi = {10.1142/S0219530519410021},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, regression, approximation theory, uncertainty quantification, UQ},
 }
 
@@ -1140,6 +1144,7 @@
 	number = {1--2},
 	pages = {1--126},
 	publisher = {Now Publishers, Inc.},
+    doi = {10.1561/2000000050},
 	keywords = {machine learning, ML, scientific machine learning, SciML, RBFs, interpolation, approximation theory},
 }
 
@@ -1172,6 +1177,8 @@
 	year = {1827},
 	pages = {1--388},
 	publisher = {Verlag von Johann Ambrosius Barth},
+    address = {Leipzig, Germany},
+    url = {https://books.google.com/books?id=eFPluv_UqFEC&printsec=frontcover#v=onepage&q&f=false},
 	keywords = {machine learning, ML, scientific machine learning, SciML, interpolation},
 }
 
@@ -1221,14 +1228,16 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Boltzmann machine, regression, classification},
 }
 
-% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nexterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
-@inproceedings{nesterov1983method,
+% Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nesterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
+@article{nesterov1983method,
 	author = {Nesterov, Yurii},
-	title = {A method for solving the convex programming problem with convergence rate O (1/k2)},
+	title = {A method for solving the convex programming problem with convergence rate $O(1/k^2)$},
 	year = {1983},
-	booktitle = {Dokl akad nauk Sssr},
+	journal = {Dokl. Akad. Nauk SSSR},
 	volume = {269},
-	numpages = {543},
+    number = {3},
+	pages = {543--547},
+    url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng},
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
 }
 
@@ -1397,8 +1406,10 @@
 	author = {Rasmussen, Carl Edward and Williams, Christopher KI and others, },
 	title = {Gaussian processes for machine learning},
 	year = {2006},
-	volume = {1},
+	volume = {2},
 	publisher = {The MIT Press},
+    url = {https://gaussianprocess.org/gpml},
+    isbn = {978-0-262-18253-9},
 	keywords = {machine learning, ML, scientific machine learning, SciML, RBFs, Gaussian process, regression, uncertainty quantification, UQ},
 }
 
