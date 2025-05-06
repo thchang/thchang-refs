@@ -25,18 +25,6 @@
 	keywords = {high-performance computing, HPC, distributed computing},
 }
 
-% The official AMD Vivado docs -- Vivado is Xilinx (acquired by AMD)'s analytic placer, which is currently considered the state-of-the-art and only real option for placement and routing in industrial FPGA pnr applications
-@misc{amdvivadodevelopers2024vivado,
-	author = {AMD~Vivado~Developers, },
-	title = {Vivado Design Suite User Guide},
-	year = {2024},
-	number = {Version 2024.1},
-	publisher = {AMD},
-	url = {https://docs.amd.com/r/2024.1-English/ug893-vivado-ide},
-	note = {Last accessed: Feb 2025},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
 % The user guide for the reference implementation of LAPACK: the original open source numerical software for all common dense linear algebra operations.
 @book{anderson1999lapack,
 	author = {Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A. and Hammarling, S. and McKenney, A. and Sorensen, D.},
@@ -139,38 +127,6 @@
 	url = {https://www.nature.com/articles/s41597-022-01710-x},
 	issn = {2052-4463},
 	keywords = {high-performance computing, HPC},
-}
-
-% Original VPR paper discussing their simulated-annealing placement and its cost function. As far as I can tell, this placement approach has been improved but not fundamentally changed in the years since original publication. VPR is now shipped as part of the open source software package VTR: at github.com/verilog-to-routing/vtr-verilog-to-routing
-@inproceedings{betz1997vpr,
-	author = {Betz, Vaughn and Rose, Jonathan},
-	editor = {Luk, Wayne and Cheung, Peter Y. K. and Glesner, Manfred},
-	title = {{VPR}: a new packing, placement and routing tool for {FPGA} research},
-	year = {1997},
-	booktitle = {Field-Programmable Logic and Applications},
-	pages = {213--222},
-	organization = {Springer Berlin Heidelberg},
-	location = {Berlin, Heidelberg},
-	isbn = {978-3-540-69557-8},
-    url = {https://link.springer.com/chapter/10.1007/3-540-63465-7_226},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
-% Comparison between VPR placement runtime and modern ASIC-based analytic placement runtimes. Conclusion is that simulated annealing is more accurate, but analytic placement is faster
-@inproceedings{bian2010towards,
-	author = {Bian, Huimin and Ling, Andrew C. and Choong, Alexander and Zhu, Jianwen},
-	title = {Towards scalable placement for {FPGA}s},
-	year = {2010},
-	month = {2},
-	booktitle = {Proceedings of the 18th Annual ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
-	series = {FPGA '10},
-	numpages = {10},
-	organization = {Association for Computing Machinery},
-	location = {Monterey, California, USA},
-	doi = {10.1145/1723112.1723140},
-	url = {https://doi.org/10.1145/1723112.1723140},
-	isbn = {9781605589114},
-	keywords = {high-performance computing, HPC, FPGA},
 }
 
 % NASA's FUN3D CFD solver. This is one of the oldest and standard numerical softwares for solving CFD problems. Written in mostly Fortran 90. Uses a form of the problem that yields the adjoints, which can be used to optimize structures in fewer steps and perform sensitivity analyses. The kernel uses an iterative solver to solve a massive block-sparse linear system (I think derived from the weak form). Some a priori multiobjective optimization solvers are described in Section 9.9
@@ -452,21 +408,6 @@
 	keywords = {high-performance computing, HPC, distributed computing, GPU computing, CUDA},
 }
 
-% Survey of common FPGA placement and routing algorithms/techniques, mentioning partition-based placement, analytic placement, and simulated annealing placement as various viable techniques ranging from least computationally expensive/least accurate to most expensive/most accurate. They also mention the different stages in a moder analytic placer (since analytical placement is the current state-of-the-art), which includes packing and netlist optimizations, global floorplanning and global placement (via quadratic programming), legalization (similar to integer/categorical binning), and detailed placement (typically via simulated annealing)
-@inproceedings{chen2017fpga,
-	author = {Chen, Shih-Chun and Chang, Yao-Wen},
-	title = {{FPGA} placement and routing},
-	year = {2017},
-	month = {11},
-	booktitle = {2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},
-	pages = {914--921},
-	organization = {IEEE},
-	location = {Irvine, CA},
-	doi = {10.1109/ICCAD.2017.8203878},
-	url = {http://ieeexplore.ieee.org/document/8203878/},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
 % Publication of our work on multiobjective shape optimization of the RF-gun cavity for the Argonne wakefield accelerator using ParMOO with the POISSON/SUPERFISH simulation software
 @inproceedings{chen2023integrated,
 	author = {Chen, Gongxiaohui and Chang, Tyler H. and Power, John and Jing, Chungunag},
@@ -477,23 +418,6 @@
 	location = {Orlando, FL, USA},
 	doi = {10.48550/arXiv.2311.09415},
 	keywords = {high-performance computing, HPC, simulation},
-}
-
-% Various applications of Rent's rule, including usage as a partitioning cost function that would optimize partitions to match the rent coefficient of the underlying hardware
-@article{christie2000interpretation,
-	author = {Christie, P. and Stroobandt, D.},
-	title = {The interpretation and application of Rent's rule},
-	year = {2000},
-	month = {12},
-	journal = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
-	volume = {8},
-	number = {6},
-	pages = {639--648},
-	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
-	doi = {10.1109/92.902258},
-	url = {http://ieeexplore.ieee.org/document/902258/},
-	issn = {1063-8210},
-	keywords = {high-performance computing, HPC, FPGA},
 }
 
 % Dantzig's original (landmark) textbook on solving linear programming problems via the simplex method. This was obviously a landmark achievement in how to solve linear programming problems and more generally in the field of numerical optimization
@@ -674,22 +598,6 @@
 	url = {https://ieeexplore.ieee.org/document/9221078},
 	git = {GitHub: \url{https://github.com/anl-mdml/MDML_Client}},
 	keywords = {high-performance computing, HPC, distributed computing},
-}
-
-% The Fiduccia-Matheyses graph partitioning algorithm, which calculates the minimum cut in a hypergraph via the heuristic of generating a random initial cut then moving nodes across the cut (greedily) and remembering the best observed cut until all nodes have been moved. The magic of this algorithm is the linear complexity due to a heap-like data structure that produces the next node to move in constant time in each iteration. However, this trick only works for integer-valued cost functions (such as min-cut)
-@inproceedings{fiduccia1982lineartime,
-	author = {Fiduccia, C. M. and Mattheyses, R. M.},
-	title = {A linear-time heuristic for improving network partitions},
-	year = {1982},
-	booktitle = {Proceedings of the 19th Design Automation Conference},
-	series = {DAC '82},
-	numpages = {7},
-	organization = {IEEE Press},
-	location = {Las Vegas, NV, USA},
-	doi = {10.1109/dac.1982.1585498},
-	url = {http://ieeexplore.ieee.org/document/1585498/},
-	isbn = {0897910206},
-	keywords = {high-performance computing, HPC, FPGA},
 }
 
 % The DEAP framework is a Python framework for easily implementing and deploying parallel and distributed evolutionary algorithms. Fairly high quality open source software. This is widely used by optimization practitioners, e.g., engineers and scientists that read an evolutionary algorithm paper and want to try it out on their problem
@@ -989,52 +897,6 @@
 	keywords = {high-performance computing, HPC, parallel computing},
 }
 
-% Karypis journal paper on numerical algorithms for multilevel graph partitioning. The idea in multilevel graph partitioning is that when given a very large graph, we first coarsen the graph to a manageable size. Then we compute the cut at the coursest level and refine this cut at the finer levels as we flatten (un-coarsen) the graph in a typical V-cycle. The meat of this paper is actually a detailed comparison of various algorithms for coarsening and their quality tradeoffs, time complexities, and compression factors. Additionally a similar comparison of cut and cut-refinement algorithms
-@article{karypis1998fast,
-	author = {Karypis, George and Kumar, Vipin},
-	title = {A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs},
-	year = {1998},
-	month = {1},
-	journal = {SIAM Journal on Scientific Computing},
-	volume = {20},
-	number = {1},
-	pages = {359--392},
-	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
-	doi = {10.1137/S1064827595287997},
-	url = {http://epubs.siam.org/doi/10.1137/S1064827595287997},
-	issn = {1064-8275},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
-% Official documentation and techreport for the widely-used multilevel hypergraph partitioning software hMETIS, which is a standard in partitioning based placement
-@techreport{karypis1998hmetis,
-	author = {Karypis, George and Kumar, Vipin},
-	title = {{hMETIS}: A hypergraph partitioning package},
-	year = {1998},
-	number = {version 1.5.3},
-	institution = {Department of Computer Science \& Engineering, University of Minnesota},
-	address = {Minneapolis, MN, USA},
-	url = {https://course.ece.cmu.edu/~ee760/760docs/hMetisManual.pdf},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
-% Karypis paper on multilevel hypergraph partitioning for VLSI applications. This is also kind of describing the algorithm used in the hMETIS partitioning software
-@article{karypis1999multilevel,
-	author = {Karypis, G. and Aggarwal, R. and Kumar, V. and Shekhar, S.},
-	title = {Multilevel hypergraph partitioning: applications in {VLSI} domain},
-	year = {1999},
-	month = {3},
-	journal = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
-	volume = {7},
-	number = {1},
-	pages = {69--79},
-	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
-	doi = {10.1109/92.748202},
-	url = {http://ieeexplore.ieee.org/document/748202/},
-	issn = {1063-8210},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
 % Original libnuma paper (now dated) introducing the widely used libnuma software providing a C interface for portably binding threads to NUMA nodes on linux and unix systems
 @techreport{kleen2005numa,
 	author = {Kleen, Andi},
@@ -1130,23 +992,6 @@
 	keywords = {high-performance computing, HPC, parallel computing},
 }
 
-% Offifial publication for the AMF-Placer 2.0 paper, which is an open-source analytical placer using quadratic programming for global placement and simulated annealing for detailed placement. Written primarily in C++ and available at github.com/zslwyuan/AMF-Placer
-@article{liang2024amfplacer,
-	author = {Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},
-	title = {{AMF-Placer 2.0}: Open-Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous {FPGA}},
-	year = {2024},
-	month = {9},
-	journal = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
-	volume = {43},
-	number = {9},
-	pages = {2769--2782},
-	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
-	doi = {10.1109/TCAD.2024.3373357},
-	url = {https://ieeexplore.ieee.org/document/10459236/},
-	issn = {0278-0070},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
 % DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data (as opposed to using word2vec). Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
 @techreport{liu2024deepseekv3,
 	author = {Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others, },
@@ -1186,25 +1031,6 @@
 	keywords = {high-performance computing, HPC, GPU computing, parallel computing, distributed computing},
 }
 
-% Latest version of VPR, documenting new features and support -- very little mention of changes (if any) to the actual placement algorithms though
-@article{luu2011vpr,
-	author = {Luu, Jason and Kuon, Ian and Jamieson, Peter and Campbell, Ted and Ye, Andy and Fang, Wei Mark and Kent, Kenneth and Rose, Jonathan},
-	title = {{VPR} 5.0: {FPGA CAD} and architecture exploration tools with single-driver routing, heterogeneity and process scaling},
-	year = {2011},
-	month = {12},
-	journal = {ACM Trans. Reconfigurable Technol. Syst.},
-	volume = {4},
-	number = {4},
-	articleno = {32},
-	numpages = {23},
-	publisher = {Association for Computing Machinery},
-	address = {New York, NY, USA},
-	doi = {10.1145/2068716.2068718},
-	url = {https://doi.org/10.1145/2068716.2068718},
-	issn = {1936-7406},
-	keywords = {FPGA, high-performance computing, HPC},
-}
-
 % Fitting nonparametric distribution models by interpolating the cumulative distribution functions -- the application is that the CDFs measure HPC throughput distributions, so it is also a little bit of a HPC performance modeling paper
 @inproceedings{lux2018nonparametric,
 	author = {Lux, Thomas C. H. and Watson, Layne T. and Chang, Tyler H. and Bernard, Jon and Li, Bo and Yu, Xiadong and Xu, Li and Back, Godmar and Butt, Ali R. and Cameron, Kirk W. and Hong, Yili},
@@ -1231,23 +1057,6 @@
 	location = {Baltimore, MD, USA},
     url = {https://par.nsf.gov/servlets/purl/10111447},
 	keywords = {high-performance computing, HPC, performance modeling},
-}
-
-% Partition-based placement general algorithms and some possible implementation details
-@article{maidee2005timingdriven,
-	author = {Maidee, P. and Ababei, C. and Bazargan, K.},
-	title = {Timing-driven partitioning-based placement for island style {FPGAs}},
-	year = {2005},
-	month = {3},
-	journal = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
-	volume = {24},
-	number = {3},
-	pages = {395--406},
-	publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
-	doi = {10.1109/TCAD.2004.842812},
-	url = {http://ieeexplore.ieee.org/document/1397800/},
-	issn = {0278-0070},
-	keywords = {high-performance computing, HPC, FPGA},
 }
 
 % This is a modification to the NSGA-II multiobjective optimization algorithm where the authors introduce a pipeline of smaller "islands" of populations, which evolve independently. Cross migration between these islands keeps the populations from diverging too far apart and allowing for progress to be shared between all islands through eventual consistency. This modification allows NSGA-II to run fully asynchronously. This is the version used by Optuna
@@ -1315,25 +1124,6 @@
 	address = {Lemont, IL, USA},
 	url = {https://www.mcs.anl.gov/petsc/petsc-3.5.4/docs/tao_manual.pdf},
 	keywords = {high-performance computing, HPC, simulation},
-}
-
-% The official publication for the latest version of the VTR (verilog-to-routing) toolkit. The latest publication focuses on updates to the user interface and new features and support, but not algorithmic changes. VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
-@article{murray2020vtr,
-	author = {Murray, Kevin E. and Petelin, Oleg and Zhong, Sheng and Wang, Jia Min and Eldafrawy, Mohamed and Legault, Jean-Philippe and Sha, Eugene and Graham, Aaron G. and Wu, Jean and Walker, Matthew J. P. and Zeng, Hanqing and Patros, Panagiotis and Luu, Jason and Kent, Kenneth B. and Betz, Vaughn},
-	title = {{VTR} 8: High-performance {CAD} and Customizable {FPGA} Architecture Modelling},
-	year = {2020},
-	month = {6},
-	journal = {ACM Trans. Reconfigurable Technol. Syst.},
-	volume = {13},
-	number = {2},
-	articleno = {9},
-	numpages = {55},
-	publisher = {Association for Computing Machinery},
-	address = {New York, NY, USA},
-	doi = {10.1145/3388617},
-	url = {https://doi.org/10.1145/3388617},
-	issn = {1936-7406},
-	keywords = {high-performance computing, HPC, FPGA},
 }
 
 % An application of VTMOP for the multiobjective optimization (tuning) of the LCLS-II photoinjector (linear accelerator at SLAC). Had to use some hacks to get VTMOP to work, such as penalizing bad regions of the Pareto front, but ultimately performed better than NSGA-II
@@ -1441,40 +1231,6 @@
 	keywords = {high-performance computing, HPC, parallel computing, distributed computing},
 }
 
-% DREAMPlaceFPGA the official publication for the DREAMPlace open source using analytical placement with some deep learning for FPGA placement acceleration -- written in C++ with Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
-@inproceedings{rajarathnam2022dreamplacefpga,
-	author = {Rajarathnam, Rachel Selina and Alawieh, Mohamed Baker and Jiang, Zixuan and Iyer, Mahesh and Pan, David Z.},
-	title = {{DREAMPlaceFPGA}: An Open-Source Analytical Placer for Large Scale Heterogeneous {FPGAs} using Deep-Learning Toolkit},
-	year = {2022},
-	month = {1},
-	booktitle = {2022 27th Asia and South Pacific Design Automation Conference (ASP-DAC)},
-	volume = {},
-	number = {},
-	pages = {300--306},
-	organization = {IEEE},
-	location = {Taipei, Taiwan},
-	doi = {10.1109/ASP-DAC52403.2022.9712562},
-	url = {https://ieeexplore.ieee.org/document/9712562/},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
-% The original publication for VTR (Verilog-to-routing) -- open-source synthesis-packing-place-and-route platform. Still uses VPR for the place and route steps. VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
-@inproceedings{rose2012vtr,
-	author = {Rose, Jonathan and Luu, Jason and Yu, Chi Wai and Densmore, Opal and Goeders, Jeffrey and Somerville, Andrew and Kent, Kenneth B. and Jamieson, Peter and Anderson, Jason},
-	title = {The {VTR} project: architecture and {CAD} for {FPGAs} from verilog to routing},
-	year = {2012},
-	month = {2},
-	booktitle = {Proceedings of the ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
-	series = {FPGA '12},
-	numpages = {10},
-	organization = {Association for Computing Machinery},
-	location = {Monterey, California, USA},
-	doi = {10.1145/2145694.2145708},
-	url = {https://doi.org/10.1145/2145694.2145708},
-	isbn = {9781450311557},
-	keywords = {high-performance computing, HPC, FPGA},
-}
-
 % A numerical algorithm for performing a rank-revealing rank-1 QR update (given an existing orthonormal (QR) matrix factorization and updating just one column of the basis Q)
 @article{shroff1992adaptive,
 	author = {Shroff, Gautam M. and Bischof, Christian H.},
@@ -1547,23 +1303,6 @@
 	keywords = {high-performance computing, HPC, parallel computing},
 }
 
-% Simulated annealing and reinforcement learning based FPGA placement. The RL contributions are tenuous at best, but still an example of potential RL impact in industry
-@inproceedings{tian2022improving,
-	author = {Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
-	title = {Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement Learning},
-	year = {2022},
-	month = {6},
-	booktitle = {2022 IEEE 10th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)},
-	volume = {10},
-	number = {},
-	pages = {1912--1919},
-	organization = {IEEE},
-	location = {Chongqing, China},
-	doi = {10.1109/ITAIC54216.2022.9836761},
-	url = {https://ieeexplore.ieee.org/document/9836761/},
-	keywords = {high-performance computing, HPC, FPGA, reinforcement learning, RL},
-}
-
 % Kokkos 3 latest paper from Sandia's CCR lab -- an open source, parallel computing software library for performance portable parallel and distributed computing in C++. Primarily designed and used for high-performance numerical software, e.g., Trilinos
 @article{trott2022kokkos,
 	author = {Trott, Christian R. and Lebrun-Grandié, Damien and Arndt, Daniel and Ciesko, Jan and Dang, Vinh and Ellingwood, Nathan and Gayatri, Rahulkumar and Harvey, Evan and Hollman, Daisy S. and Ibanez, Dan and Liber, Nevin and Madsen, Jonathan and Miles, Jeff and Poliakoff, David and Powell, Amy and Rajamanickam, Sivasankaran and Simberg, Mikael and Sunderland, Dan and Turcksin, Bruno and Wilke, Jeremiah},
@@ -1628,17 +1367,6 @@
 	url = {https://doi.org/10.1007/978-1-4842-4398-5_20},
 	isbn = {978-1-4842-4398-5},
 	keywords = {high-performance computing, HPC, parallel computing},
-}
-
-% VTR docs with a bit more detail than above reference, and latest version (most up-to-date) information VTR is currently the standard in open source placement and routing software, written primarilly in C++ with a Python interface, available for download at: github.com/verilog-to-routing/vtr-verilog-to-routing
-@misc{vtrdevelopers2024verilogtorouting,
-	author = {VTR~Developers, },
-	title = {Verilog-to-routing documentation},
-	year = {2024},
-	number = {Version 8.1.0-dev},
-	url = {https://readthedocs.org/projects/vtr/downloads/pdf/latest},
-	note = {Last accessed: Feb 2025},
-	keywords = {high-performance computing, HPC, FPGA},
 }
 
 % Survey of design-of-experiments techniques and modifications for HPC system analysis, specifically related to linearly constrained and integer lattice design spaces

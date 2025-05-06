@@ -519,9 +519,10 @@ amdvivadodevelopers2024vivado:
   publisher: AMD
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - routing
   - software
   - Tcl
   title: Vivado Design Suite User Guide
@@ -2583,9 +2584,12 @@ betz1997vpr:
   publisher: Springer Berlin Heidelberg
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - routing
+  - simulated annealing
+  - SA
   - software
   - open source
   - OSS
@@ -2712,13 +2716,14 @@ bian2010towards:
   publisher: Association for Computing Machinery
   series: FPGA '10
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
-  - optimization
-  - mixed-variable optimization
+  - EDA
+  - placement
+  - analytical placer
   - simulated annealing
   - SA
+  - optimization
+  - mixed-variable optimization
   title: Towards scalable placement for {FPGA}s
   type: inproceedings
   url: https://doi.org/10.1145/1723112.1723140
@@ -4250,10 +4255,15 @@ chandy1997parallel:
   publisher: IEEE Comput. Soc
   series: null
   tags:
+  - FPGA
+  - EDA
+  - placement
+  - graph partitioning
+  - simulated annealing
+  - SA
   - high-performance computing
   - HPC
   - parallel computing
-  - FPGA
   title: A parallel circuit-partitioned algorithm for timing driven cell placement
   type: inproceedings
   url: http://ieeexplore.ieee.org/document/628930/
@@ -5430,17 +5440,20 @@ chen2017fpga:
   publisher: IEEE
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - routing
+  - graph partitioning
+  - analytical placer
+  - simulated annealing
+  - SA
   - optimization
   - quadratic programming
   - QP
   - convex optimization
   - mixed-variable optimization
   - constrained optimization
-  - simulated annealing
-  - SA
   title: '{FPGA} placement and routing'
   type: inproceedings
   url: http://ieeexplore.ieee.org/document/8203878/
@@ -5906,9 +5919,10 @@ christie2000interpretation:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - routing
   title: The interpretation and application of Rent's rule
   type: article
   url: http://ieeexplore.ieee.org/document/902258/
@@ -9077,9 +9091,10 @@ fiduccia1982lineartime:
   publisher: IEEE Press
   series: DAC '82
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - graph partitioning
   - optimization
   - mixed-variable optimization
   - partitioning
@@ -12578,9 +12593,10 @@ karypis1998fast:
   publisher: Society for Industrial & Applied Mathematics (SIAM)
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - graph partitioning
   - optimization
   - partitioning
   title: A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs
@@ -12614,9 +12630,10 @@ karypis1998hmetis:
   publisher: Department of Computer Science \& Engineering, University of Minnesota
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - graph partitioning
   - optimization
   - partitioning
   - software
@@ -12658,9 +12675,10 @@ karypis1999multilevel:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - graph partitioning
   - optimization
   - partitioning
   title: 'Multilevel hypergraph partitioning: applications in {VLSI} domain'
@@ -13659,10 +13677,13 @@ lasalle2013multithreaded:
   publisher: IEEE
   series: null
   tags:
+  - FPGA
+  - EDA
+  - placement
+  - graph partitioning
   - high-performance computing
   - HPC
   - parallel computing
-  - FPGA
   title: Multi-threaded Graph Partitioning
   type: inproceedings
   url: http://ieeexplore.ieee.org/document/6569814/
@@ -14177,9 +14198,12 @@ liang2024amfplacer:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - analytical placer
+  - simulated annealing
+  - SA
   - software
   - open source
   - OSS
@@ -14929,8 +14953,11 @@ luu2011vpr:
   series: null
   tags:
   - FPGA
-  - high-performance computing
-  - HPC
+  - EDA
+  - placement
+  - routing
+  - simulated annealing
+  - SA
   - software
   - open source
   - OSS
@@ -15359,9 +15386,10 @@ maidee2005timingdriven:
   publisher: Institute of Electrical and Electronics Engineers (IEEE)
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - graph partitioning
   title: Timing-driven partitioning-based placement for island style {FPGAs}
   type: article
   url: http://ieeexplore.ieee.org/document/1397800/
@@ -15834,7 +15862,7 @@ miller2008linearsize:
   - high dimension
   title: Linear-size meshes
   type: inproceedings
-  url: null
+  url: https://donsheehy.net/research/miller08linear.pdf
   venue: Proceedings of the 20th Canadian Conference on Computational Geometry (CCCG
     2008)
   volume: null
@@ -16278,9 +16306,10 @@ murray2020vtr:
   publisher: Association for Computing Machinery
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - routing
   - software
   - open source
   - OSS
@@ -17992,9 +18021,10 @@ rajarathnam2022dreamplacefpga:
   publisher: IEEE
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - analytical placer
   - software
   - open source
   - OSS
@@ -18330,9 +18360,10 @@ rose2012vtr:
   publisher: Association for Computing Machinery
   series: FPGA '12
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - routing
   - software
   - open source
   - OSS
@@ -20491,19 +20522,19 @@ tian2022improving:
   publisher: IEEE
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
-  - reinforcement learning
-  - RL
+  - EDA
+  - placement
   - optimization
   - reinforcment learning
+  - RL
   - simulated annealing
   - SA
   - machine learning
   - ML
   - scientific machine learning
   - SciML
+  - reinforcement learning
   title: Improving Simulated Annealing Algorithm for {FPGA} Placement Based on Reinforcement
     Learning
   type: inproceedings
@@ -21309,9 +21340,10 @@ vtrdevelopers2024verilogtorouting:
   publisher: null
   series: null
   tags:
-  - high-performance computing
-  - HPC
   - FPGA
+  - EDA
+  - placement
+  - routing
   - software
   - open source
   - OSS
@@ -22306,9 +22338,12 @@ xiong2023dreamplacefpgamp:
   publisher: arXiv cs.AR preprint
   series: null
   tags:
+  - FPGA
+  - EDA
+  - placement
+  - analytical placer
   - high-performance computing
   - HPC
-  - FPGA
   - GPU computing
   - software
   - open source
