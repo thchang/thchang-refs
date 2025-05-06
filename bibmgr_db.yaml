@@ -3206,8 +3206,8 @@ borle2019analyzing:
   edition: null
   editors: []
   git: null
-  isbn: null
-  issn: null
+  isbn: '9783030105631'
+  issn: 0302-9743
   month: null
   note: null
   number: null
@@ -3215,7 +3215,7 @@ borle2019analyzing:
   - '289'
   - '301'
   publisher: Springer
-  series: null
+  series: Lecture Notes in Computer Science
   tags:
   - quantum computing
   - adiabatic quantum computing
@@ -3224,7 +3224,7 @@ borle2019analyzing:
   title: Analyzing the quantum annealing approach for solving linear least squares
     problems
   type: inproceedings
-  url: null
+  url: https://link.springer.com/10.1007/978-3-030-10564-8_23
   venue: International Workshop on Algorithms and Computation (WALCOM 2019)
   volume: null
   web: null
@@ -4326,41 +4326,6 @@ chandy1997parallel:
   volume: null
   web: null
   year: 1997
-chang2016gpu:
-  address: Virginia Beach, VA, USA
-  articleno: null
-  authors:
-  - - Tyler H.
-    - Chang
-  chapter: null
-  descrip: My bachelor's thesis on how to use and measuring the overhead of using
-    NVIDIA's CUDA MPS contol daemon to distribute small matrix-vector multiplication
-    kernels between available resources on HPC systems
-  doi: null
-  edition: null
-  editors: []
-  git: null
-  isbn: null
-  issn: null
-  month: null
-  note: null
-  number: null
-  pages: null
-  publisher: Department of Computer Science, Virginia Wesleyan University
-  series: null
-  tags:
-  - high-performance computing
-  - HPC
-  - computational linear algebra
-  - GPU computing
-  - CUDA
-  title: '{GPU} Saturation for Multiple Matrix-Vector Multiplications'
-  type: Bachelor's Thesis
-  url: null
-  venue: null
-  volume: null
-  web: null
-  year: 2016
 chang2018computing:
   address: St. Petersburg, FL, USA
   articleno: null
@@ -4585,6 +4550,40 @@ chang2019experimental:
   url: https://link.aps.org/doi/10.1103/PhysRevA.99.012320
   venue: Phys. Rev. A
   volume: '99'
+  web: null
+  year: 2019
+chang2019leastsquares:
+  address: null
+  articleno: '374'
+  authors:
+  - - Tyler H.
+    - Chang
+  - - Thomas C. H.
+    - Lux
+  - - Sai Sindhura
+    - Tipirneni
+  chapter: null
+  descrip: Our publication on solving generic nonlinear programming problems on D-Wave
+    quantum annealers by applying quadratization to the polynomial system.
+  doi: 10.1007/s11128-019-2489-x
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 1570-0755
+  month: '12'
+  note: null
+  number: '12'
+  pages:
+  - 17
+  publisher: Springer
+  series: null
+  tags: []
+  title: Least-squares solutions to polynomial systems of equations with quantum annealing
+  type: article
+  url: http://link.springer.com/10.1007/s11128-019-2489-x
+  venue: Quantum Information Processing
+  volume: '18'
   web: null
   year: 2019
 chang2020algorithm:

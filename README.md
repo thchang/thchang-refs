@@ -484,7 +484,6 @@ List of topics (may be some overlap between topics):
  * [Cao et al., 2017. On the performance variation in modern storage stacks](https://www.usenix.org/conference/fast17/technical-sessions/presentation/cao)
  * [Capps et al., 2016. IOzone Filesystem Benchmark](www.iozone.org)
  * [Chandy et al., 1997. A parallel circuit-partitioned algorithm for timing driven cell placement](http://ieeexplore.ieee.org/document/628930/)
- * Chang, 2016. GPU Saturation for Multiple Matrix-Vector Multiplications
  * [Chang et al., 2018. Predicting system performance by interpolation using a high-dimensional Delaunay triangulation](https://par.nsf.gov/servlets/purl/10111451)
  * [Chang et al., 2020. Algorithm 1012: DELAUNAYSPARSE: Interpolation via a Sparse Subset of the Delaunay Triangulation in Medium to High Dimensions](https://dl.acm.org/doi/10.1145/3422818)
  * [Chang et al., 2020. Managing computationally expensive blackbox multiobjective optimization problems using libEnsemble](https://dl.acm.org/doi/abs/10.5555/3408207.3408245)
@@ -835,7 +834,7 @@ List of topics (may be some overlap between topics):
  * [Biamonte et al., 2017. Quantum machine learning](https://www.nature.com/articles/nature23474)
  * [Boixo et al., 2014. Evidence for quantum annealing with more than one hundred qubits](https://www.nature.com/articles/nphys2900)
  * [Boothby et al., 2018. Next-generation topology of D-Wave quantum processors](https://www.dwavesys.com/sites/default/files/14-1026A-C_Next-Generation-Topology-of-DW-Quantum-Processors.pdf)
- * [Borle et al., 2019. Analyzing the quantum annealing approach for solving linear least squares problems](https://doi.com/10.1007/978-3-030-10564-8_23)
+ * [Borle et al., 2019. Analyzing the quantum annealing approach for solving linear least squares problems](https://link.springer.com/10.1007/978-3-030-10564-8_23)
  * [Cai et al., 2014. A practical heuristic for finding graph minors](https://arxiv.org/abs/1406.2741)
  * [Chang et al., 2019. Experimental realization of quantum algorithms for a linear system inspired by adiabatic quantum computing](https://link.aps.org/doi/10.1103/PhysRevA.99.012320)
  * [Das et al., 2005. Quantum annealing and related optimization methods](https://www.researchgate.net/publication/252247914_Quantum_Annealing_and_Related_Optimization_Methods)
