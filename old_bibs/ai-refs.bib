@@ -31,7 +31,7 @@
 	title = {Convex optimization},
 	year = {2004},
 	publisher = {Cambridge university press},
-    url = {https://stanford.edu/~boyd/cvxbook/},
+	url = {https://stanford.edu/~boyd/cvxbook/},
 	keywords = {AI, artificial intelligence, machine learning, ML, optimization},
 }
 
@@ -52,7 +52,7 @@
 	title = {OpenAI Gym},
 	year = {2016},
 	institution = {arXiv:1606.01540},
-    git = {https://github.com/openai/gym},
+	git = {https://github.com/openai/gym},
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, benchmarking, open source},
 }
 
@@ -122,7 +122,7 @@
 	year = {2015},
 	howpublished = {GitHub repository},
 	publisher = {GitHub},
-    url = {https://keras.io},
+	url = {https://keras.io},
 	note = {Last accessed: Nov 2023},
 	keywords = {AI, artificial intelligence, machine learning, ML, open source, neural networks},
 }
@@ -237,6 +237,17 @@
 	url = {https://www.nature.com/articles/s41586-022-05172-4},
 	issn = {0028-0836},
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, neural networks},
+}
+
+% The original publication for the JAX software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups. This one is a workshop paper and pretty short, it just talks about the restruction on pure and statically composed functions, wrapper for numpy, and XLA compiler support, plus some information on how they stack trace. They also mention how once they have implemented tracing, autograd is pretty easy. They show some performance stats on CPUs and breifly mention TPUs and GPUs, with no results yet. Due to lack of features at the time of publication, this is not the recommended citation. The latest version of the code is open source at github.com/jax-ml/jax
+@inproceedings{frostig2018compiling,
+	author = {Frostig, Roy and Johnson, Matthew and Leary, Chris},
+	title = {Compiling machine learning programs via high-level tracing},
+	year = {2018},
+	booktitle = {Proceedings of Systems for Machine Learning (SysML '18)},
+	location = {Stanford, CA, USA},
+	url = {https://mlsys.org/Conferences/doc/2018/146.pdf},
+	keywords = {AI, artificial intelligence, machine learning, ML, autograd, algorithmic differentiation, backpropagation, open source},
 }
 
 % The first paper where the ReLU activation function was used as the activation function in neural network models. This would later become the standard for many years (and still is for regressor models)
@@ -365,6 +376,17 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, classification, neural networks, CNNs, regularization, overfitting, optimization},
 }
 
+% The recommended citation for the flax software library of neural network primitives in JAX -- since I love jax, this is my preferred neural network framework, though a bit lower level than pytorch or tf.
+@misc{heek2024flax,
+	author = {Heek, Jonathan and Levskaya, Anselm and Oliver, Avital and Ritter, Marvin and Rondepierre, Bertrand and Steiner, Andreas and van Zee, Marc},
+	title = {{F}lax: A neural network library and ecosystem for {JAX}},
+	year = {2024},
+	number = {0.10.6},
+	url = {http://github.com/google/flax},
+	note = {Last accessed: May 2025},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, backpropagation, open source},
+}
+
 % Original publication of the Boltzman machine, an early type of AI model that made predictions by modeling the Ising spin-glass model with public input units (set by the user with the independent variables during inference) and hidden internal units that are correlated to eachother and the public units through learned Ising model weights and biases. Each unit has a binary {0, 1} state. The energy of the system is the output (prediction). The weights and biases are learned through simulated annealing, and in this way, the model is not unlike quantum annealing. The model learns a distribution of potential inference values for each input combination. Thus, it is a form of distribution learning. These were a commonly used alternative to neural networks for a time, and often cited as explainable alternatives. The binary state variables would later be replaced by sigmoidal activation functions (for smoothness)
 @inproceedings{hinton1983optimal,
 	author = {Hinton, Geoffrey E and Sejnowski, Terrence J},
@@ -426,8 +448,8 @@
 	author = {Jain, Shantanu and others, },
 	title = {tiktoken},
 	year = {2022},
-	number = {0.9.0},
 	howpublished = {GitHub repository},
+	number = {0.9.0},
 	publisher = {GitHub},
 	git = {https://github.com/openai/tiktoken},
 	note = {Last accessed: May 4, 2025},
@@ -482,9 +504,9 @@
 	author = {Krizhevsky, Alex},
 	title = {Learning multiple layers of features from tiny images},
 	year = {2009},
-    school = {University of Toronto, Dept. of Computer Science},
+	school = {University of Toronto, Dept. of Computer Science},
 	address = {Toronto, ON, Canada},
-    url = {https://www.cs.utoronto.ca/~kriz/learning-features-2009-TR.pdf},
+	url = {https://www.cs.utoronto.ca/~kriz/learning-features-2009-TR.pdf},
 	keywords = {AI, artificial intelligence, machine learning, ML, benchmarking, classification, neural networks},
 }
 
@@ -511,7 +533,7 @@
 	number = {2},
 	pages = {391--406},
 	publisher = {Institute of Mathematical Statistics},
-    url = {https://projecteuclid.org/journals/annals-of-statistics/volume-31/issue-2/Stochastic-approximation-invited-paper/10.1214/aos/1051027873.full},
+	url = {https://projecteuclid.org/journals/annals-of-statistics/volume-31/issue-2/Stochastic-approximation-invited-paper/10.1214/aos/1051027873.full},
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
 }
 
@@ -542,7 +564,7 @@
 	number = {10},
 	numpages = {1995},
 	publisher = {Citeseer},
-    url = {https://www.cs.utoronto.ca/~bonner/courses/2016s/csc321/readings/Convolutional%20networks%20for%20images,%20speech,%20and%20time%20series.pdf},
+	url = {https://www.cs.utoronto.ca/~bonner/courses/2016s/csc321/readings/Convolutional%20networks%20for%20images,%20speech,%20and%20time%20series.pdf},
 	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, autograd, algorithmic differentiation, backpropagation, CNNs, neural networks},
 }
 
@@ -605,7 +627,7 @@
 	year = {2013},
 	booktitle = {Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
 	pages = {746--751},
-    url = {https://aclanthology.org/N13-1090.pdf},
+	url = {https://aclanthology.org/N13-1090.pdf},
 	keywords = {AI, artificial intelligence, machine learning, ML, representation learning, neural networks, regularization},
 }
 
@@ -619,8 +641,8 @@
 	pages = {807--814},
 	organization = {Omnipress},
 	location = {Haifa, Israel},
+	url = {https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf},
 	isbn = {9781605589077},
-    url = {https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf},
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, Boltzmann machine},
 }
 
@@ -631,9 +653,9 @@
 	year = {1983},
 	journal = {Dokl. Akad. Nauk SSSR},
 	volume = {269},
-    number = {3},
+	number = {3},
 	pages = {543--547},
-    url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng},
+	url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng},
 	keywords = {AI, artificial intelligence, machine learning, ML, optimization},
 }
 
@@ -876,7 +898,7 @@
 	number = {1},
 	pages = {1929--1958},
 	publisher = {JMLR. org},
-    url = {https://jmlr.org/papers/v15/srivastava14a.html},
+	url = {https://jmlr.org/papers/v15/srivastava14a.html},
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
 }
 
@@ -906,7 +928,7 @@
 	title = {{LLaMA}~2: Open foundation and fine-tuned chat models},
 	year = {2023},
 	institution = {arXiv preprint arXiv:2307.09288},
-    url = {https://arxiv.org/abs/2307.09288},
+	url = {https://arxiv.org/abs/2307.09288},
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, open source},
 }
 
@@ -919,7 +941,7 @@
 	pages = {1--11},
 	organization = {Curran Associates, Inc.},
 	location = {Long Beach, California, USA},
-    url = {https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf},
 	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, neural networks},
 }
 

@@ -142,7 +142,7 @@
 	pages = {2306--2317},
 	organization = {Curran Associates Inc.},
 	location = {Montr{\'e}al, Canada},
-    url = {https://proceedings.neurips.cc/paper/2018/hash/e22312179bf43e61576081a2f250f845-Abstract.html},
+	url = {https://proceedings.neurips.cc/paper/2018/hash/e22312179bf43e61576081a2f250f845-Abstract.html},
 	keywords = {machine learning, ML, scientific machine learning, SciML, overfitting, Delaunay triangulation, high dimension, interpolation, regression, classification, approximation theory},
 }
 
@@ -179,6 +179,21 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning, high dimension, dimension reduction, regression, classification},
 }
 
+% The recommended citation for the jaxopt software library of differentiable optimization solvers written in jax. They rely on a technique called automatic implicit differentiation, where the gradient of the solution is automatically inferred from the solver's optimality conditions.
+@inproceedings{blondel2022efficient,
+	author = {Blondel, Mathieu and Berthet, Quentin and Cuturi, Marco and Frostig, Roy and Hoyer, Stephan and Llinares-Lopez, Felipe and Pedregosa, Fabian and Vert, Jean-Philippe},
+	editor = {Koyejo, S. and Mohamed, S. and Agarwal, A. and Belgrave, D. and Cho, K. and Oh, A.},
+	title = {Efficient and Modular Implicit Differentiation},
+	year = {2022},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {35},
+	pages = {5230--5242},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf},
+	git = {https://github.com/google/jaxopt},
+	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, autograd, algorithmic differentiation, backpropagation, neural networks},
+}
+
 % Methodolgies for calibrating the Fayans EDF model to experimental data. Data is expensive and limited and the model itself is computationally expensive, so this is a classical inverse problem. The problem is actually multiobective because the data themselves come from various categories representing different types of observations, and the standard deviations for each of these observables is not known. Could be configured as a 3 or 9-objective problem
 @article{bollapragada2020optimization,
 	author = {Bollapragada, Raghu and Menickelly, Matt and Nazarewicz, Witold and O'Neal, Jared and Reinhard, Paul-Gerhard and Wild, Stefan M.},
@@ -202,7 +217,7 @@
 	title = {Convex optimization},
 	year = {2004},
 	publisher = {Cambridge university press},
-    url = {https://stanford.edu/~boyd/cvxbook/},
+	url = {https://stanford.edu/~boyd/cvxbook/},
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
 }
 
@@ -223,7 +238,7 @@
 	title = {OpenAI Gym},
 	year = {2016},
 	institution = {arXiv:1606.01540},
-    git = {https://github.com/openai/gym},
+	git = {https://github.com/openai/gym},
 	keywords = {machine learning, ML, scientific machine learning, SciML, benchmarking, reinforcement learning, RL},
 }
 
@@ -308,7 +323,7 @@
 	volume = {22},
 	number = {2},
 	pages = {299--308},
-    url = {https://www.math.uci.edu/~chenlong/Papers/Chen.L%3BXu.J2004.pdf},
+	url = {https://www.math.uci.edu/~chenlong/Papers/Chen.L%3BXu.J2004.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, Delaunay triangulation, high dimension, interpolation, regression, approximation theory, uncertainty quantification, UQ},
 }
 
@@ -351,7 +366,7 @@
 	year = {2015},
 	howpublished = {GitHub repository},
 	publisher = {GitHub},
-    url = {https://keras.io},
+	url = {https://keras.io},
 	note = {Last accessed: Nov 2023},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, regression, classification},
 }
@@ -363,7 +378,7 @@
 	year = {2022},
 	journal = {Statistical Analysis and Data Mining: The ASA Data Science Journal},
 	publisher = {Wiley Online Library},
-    url = {https://arxiv.org/abs/2207.10138},
+	url = {https://arxiv.org/abs/2207.10138},
 	keywords = {machine learning, ML, scientific machine learning, SciML, RBFs, Gaussian process, interpolation, regression, uncertainty quantification, UQ},
 }
 
@@ -420,8 +435,8 @@
 	title = {Sur la sph\'ere vide},
 	year = {1934},
 	journal = {Bull. Acad. Science USSR VII: Class. Sci. Math.,},
-    number = {6},
-    url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4937&option_lang=eng},
+	number = {6},
+	url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4937&option_lang=eng},
 	keywords = {machine learning, ML, scientific machine learning, SciML, Delaunay triangulation},
 }
 
@@ -433,7 +448,7 @@
 	journal = {Advances in Neural Information Processing Systems},
 	volume = {35},
 	pages = {10945--10958},
-    url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/46f0114c06524debc60ef2a72769f7a9-Paper-Conference.pdf},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/46f0114c06524debc60ef2a72769f7a9-Paper-Conference.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, PINNs, regression, approximation theory, uncertainty quantification, UQ},
 }
 
@@ -540,6 +555,17 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, computational linear algebra, neural networks, reinforcement learning, RL},
 }
 
+% The original publication for the JAX software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups. This one is a workshop paper and pretty short, it just talks about the restruction on pure and statically composed functions, wrapper for numpy, and XLA compiler support, plus some information on how they stack trace. They also mention how once they have implemented tracing, autograd is pretty easy. They show some performance stats on CPUs and breifly mention TPUs and GPUs, with no results yet. Due to lack of features at the time of publication, this is not the recommended citation. The latest version of the code is open source at github.com/jax-ml/jax
+@inproceedings{frostig2018compiling,
+	author = {Frostig, Roy and Johnson, Matthew and Leary, Chris},
+	title = {Compiling machine learning programs via high-level tracing},
+	year = {2018},
+	booktitle = {Proceedings of Systems for Machine Learning (SysML '18)},
+	location = {Stanford, CA, USA},
+	url = {https://mlsys.org/Conferences/doc/2018/146.pdf},
+	keywords = {machine learning, ML, scientific machine learning, SciML, autograd, algorithmic differentiation, backpropagation, computational linear algebra},
+}
+
 % The first paper where the ReLU activation function was used as the activation function in neural network models. This would later become the standard for many years (and still is for regressor models)
 @article{fukushima1975cognitron,
 	author = {Fukushima, Kunihiko},
@@ -606,7 +632,7 @@
 	title = {Data-driven geometric scale detection via Delaunay interpolation},
 	year = {2022},
 	institution = {arXiv math.NA},
-    url = {https://arxiv.org/html/2203.05685v2},
+	url = {https://arxiv.org/html/2203.05685v2},
 	keywords = {machine learning, ML, scientific machine learning, SciML, Delaunay triangulation, interpolation, approximation theory, uncertainty quantification, UQ},
 }
 
@@ -705,12 +731,15 @@
 	author = {G{\"u}hring, Ingo and Kutyniok, Gitta and Petersen, Philipp},
 	title = {Error bounds for approximations with deep ReLU neural networks in $W^{s,p}$ norms},
 	year = {2020},
+	month = {9},
 	journal = {Analysis and Applications},
 	volume = {18},
 	number = {05},
 	pages = {803--859},
 	publisher = {World Scientific},
-    doi = {10.1142/S0219530519410021},
+	doi = {10.1142/S0219530519410021},
+	url = {https://www.worldscientific.com/doi/abs/10.1142/S0219530519410021},
+	issn = {0219-5305},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, regression, approximation theory, uncertainty quantification, UQ},
 }
 
@@ -729,6 +758,17 @@
 	url = {https://www.nature.com/articles/s41586-020-2649-2},
 	issn = {0028-0836},
 	keywords = {machine learning, ML, scientific machine learning, SciML, computational linear algebra},
+}
+
+% The recommended citation for the flax software library of neural network primitives in JAX -- since I love jax, this is my preferred neural network framework, though a bit lower level than pytorch or tf.
+@misc{heek2024flax,
+	author = {Heek, Jonathan and Levskaya, Anselm and Oliver, Avital and Ritter, Marvin and Rondepierre, Bertrand and Steiner, Andreas and van Zee, Marc},
+	title = {{F}lax: A neural network library and ecosystem for {JAX}},
+	year = {2024},
+	number = {0.10.6},
+	url = {http://github.com/google/flax},
+	note = {Last accessed: May 2025},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, backpropagation, computational linear algebra},
 }
 
 % Original publication of the Boltzman machine, an early type of AI model that made predictions by modeling the Ising spin-glass model with public input units (set by the user with the independent variables during inference) and hidden internal units that are correlated to eachother and the public units through learned Ising model weights and biases. Each unit has a binary {0, 1} state. The energy of the system is the output (prediction). The weights and biases are learned through simulated annealing, and in this way, the model is not unlike quantum annealing. The model learns a distribution of potential inference values for each input combination. Thus, it is a form of distribution learning. These were a commonly used alternative to neural networks for a time, and often cited as explainable alternatives. The binary state variables would later be replaced by sigmoidal activation functions (for smoothness)
@@ -906,7 +946,7 @@
 	year = {2021},
 	journal = {CoRR},
 	volume = {abs/2108.08481},
-    url = {https://www.jmlr.org/papers/volume24/21-1524/21-1524.pdf},
+	url = {https://www.jmlr.org/papers/volume24/21-1524/21-1524.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, neural operators, approximation theory},
 }
 
@@ -933,7 +973,7 @@
 	number = {2},
 	pages = {391--406},
 	publisher = {Institute of Mathematical Statistics},
-    url = {https://projecteuclid.org/journals/annals-of-statistics/volume-31/issue-2/Stochastic-approximation-invited-paper/10.1214/aos/1051027873.full},
+	url = {https://projecteuclid.org/journals/annals-of-statistics/volume-31/issue-2/Stochastic-approximation-invited-paper/10.1214/aos/1051027873.full},
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
 }
 
@@ -945,8 +985,8 @@
 	series = {Pure and Applied Mathematics (New York)},
 	pages = {xx--580},
 	publisher = {Wiley-Interscience [John Wiley \& Sons], New York},
+	url = {https://books.google.com/books?hl=en&lr=&id=18VqDwAAQBAJ&oi=fnd&pg=PR17&ots=8FU4i_jAff&sig=Lh4GrUCrS_gt-HKqHSq4X7BaxMs#v=onepage&q&f=false},
 	isbn = {0-471-55604-1},
-    url = {https://books.google.com/books?hl=en&lr=&id=18VqDwAAQBAJ&oi=fnd&pg=PR17&ots=8FU4i_jAff&sig=Lh4GrUCrS_gt-HKqHSq4X7BaxMs#v=onepage&q&f=false},
 	keywords = {machine learning, ML, scientific machine learning, SciML, approximation theory},
 }
 
@@ -977,7 +1017,7 @@
 	number = {10},
 	numpages = {1995},
 	publisher = {Citeseer},
-    url = {https://www.cs.utoronto.ca/~bonner/courses/2016s/csc321/readings/Convolutional%20networks%20for%20images,%20speech,%20and%20time%20series.pdf},
+	url = {https://www.cs.utoronto.ca/~bonner/courses/2016s/csc321/readings/Convolutional%20networks%20for%20images,%20speech,%20and%20time%20series.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, CNNs, transformers, representation learning, classification},
 }
 
@@ -1062,7 +1102,7 @@
 	articleno = {8},
 	organization = {SCS},
 	location = {Baltimore, MD, USA},
-    url = {https://par.nsf.gov/servlets/purl/10111447},
+	url = {https://par.nsf.gov/servlets/purl/10111447},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Delaunay triangulation, interpolation, regression},
 }
 
@@ -1144,7 +1184,9 @@
 	number = {1--2},
 	pages = {1--126},
 	publisher = {Now Publishers, Inc.},
-    doi = {10.1561/2000000050},
+	doi = {10.1561/2000000050},
+	url = {http://www.nowpublishers.com/article/Details/SIG-050},
+	issn = {1932-8346},
 	keywords = {machine learning, ML, scientific machine learning, SciML, RBFs, interpolation, approximation theory},
 }
 
@@ -1166,7 +1208,7 @@
 	year = {2013},
 	booktitle = {Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies},
 	pages = {746--751},
-    url = {https://aclanthology.org/N13-1090.pdf},
+	url = {https://aclanthology.org/N13-1090.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, representation learning, high dimension, dimension reduction},
 }
 
@@ -1177,8 +1219,8 @@
 	year = {1827},
 	pages = {1--388},
 	publisher = {Verlag von Johann Ambrosius Barth},
-    address = {Leipzig, Germany},
-    url = {https://books.google.com/books?id=eFPluv_UqFEC&printsec=frontcover#v=onepage&q&f=false},
+	address = {Leipzig, Germany},
+	url = {https://books.google.com/books?id=eFPluv_UqFEC&printsec=frontcover#v=onepage&q&f=false},
 	keywords = {machine learning, ML, scientific machine learning, SciML, interpolation},
 }
 
@@ -1208,8 +1250,8 @@
 	edition = {4},
 	publisher = {John Wiley \& Sons, Inc.},
 	address = {Hoboken, NJ, USA},
+	url = {https://books.google.com/books?hl=en&lr=&id=T-BbCwAAQBAJ&oi=fnd&pg=PR13&dq=Response+Surface+Methodology:+Process+and+Product+Optimization+Using+Designed+Experiments,+4th+Edition&ots=O3jdPna83T&sig=IimJlE46JBVkHOu7eik3RN9Z5GA#v=onepage&q=Response%20Surface%20Methodology%3A%20Process%20and%20Product%20Optimization%20Using%20Designed%20Experiments%2C%204th%20Edition&f=false},
 	isbn = {9781118916032},
-    url = {https://books.google.com/books?hl=en&lr=&id=T-BbCwAAQBAJ&oi=fnd&pg=PR13&dq=Response+Surface+Methodology:+Process+and+Product+Optimization+Using+Designed+Experiments,+4th+Edition&ots=O3jdPna83T&sig=IimJlE46JBVkHOu7eik3RN9Z5GA#v=onepage&q=Response%20Surface%20Methodology%3A%20Process%20and%20Product%20Optimization%20Using%20Designed%20Experiments%2C%204th%20Edition&f=false},
 	keywords = {machine learning, ML, scientific machine learning, SciML, regression},
 }
 
@@ -1223,8 +1265,8 @@
 	pages = {807--814},
 	organization = {Omnipress},
 	location = {Haifa, Israel},
+	url = {https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf},
 	isbn = {9781605589077},
-    url = {https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Boltzmann machine, regression, classification},
 }
 
@@ -1235,9 +1277,9 @@
 	year = {1983},
 	journal = {Dokl. Akad. Nauk SSSR},
 	volume = {269},
-    number = {3},
+	number = {3},
 	pages = {543--547},
-    url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng},
+	url = {https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=46009&option_lang=eng},
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization},
 }
 
@@ -1408,8 +1450,8 @@
 	year = {2006},
 	volume = {2},
 	publisher = {The MIT Press},
-    url = {https://gaussianprocess.org/gpml},
-    isbn = {978-0-262-18253-9},
+	url = {https://gaussianprocess.org/gpml},
+	isbn = {978-0-262-18253-9},
 	keywords = {machine learning, ML, scientific machine learning, SciML, RBFs, Gaussian process, regression, uncertainty quantification, UQ},
 }
 
@@ -1591,7 +1633,7 @@
 	year = {2002},
 	booktitle = {Proceedings of the 11th International Meshing Roundtable},
 	pages = {115--126},
-    url = {https://people.eecs.berkeley.edu/~jrs/papers/elemj.pdf},
+	url = {https://people.eecs.berkeley.edu/~jrs/papers/elemj.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, interpolation, approximation theory, uncertainty quantification, UQ},
 }
 
@@ -1689,7 +1731,7 @@
 	number = {1},
 	pages = {1929--1958},
 	publisher = {JMLR. org},
-    url = {https://jmlr.org/papers/v15/srivastava14a.html},
+	url = {https://jmlr.org/papers/v15/srivastava14a.html},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, regularization, overfitting},
 }
 
@@ -1781,7 +1823,7 @@
 	pages = {1--11},
 	organization = {Curran Associates, Inc.},
 	location = {Long Beach, California, USA},
-    url = {https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, transformers},
 }
 

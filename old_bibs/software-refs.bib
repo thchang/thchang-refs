@@ -377,6 +377,21 @@
 	keywords = {software, open source, OSS, Python},
 }
 
+% The recommended citation for the jaxopt software library of differentiable optimization solvers written in jax. They rely on a technique called automatic implicit differentiation, where the gradient of the solution is automatically inferred from the solver's optimality conditions.
+@inproceedings{blondel2022efficient,
+	author = {Blondel, Mathieu and Berthet, Quentin and Cuturi, Marco and Frostig, Roy and Hoyer, Stephan and Llinares-Lopez, Felipe and Pedregosa, Fabian and Vert, Jean-Philippe},
+	editor = {Koyejo, S. and Mohamed, S. and Agarwal, A. and Belgrave, D. and Cho, K. and Oh, A.},
+	title = {Efficient and Modular Implicit Differentiation},
+	year = {2022},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {35},
+	pages = {5230--5242},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf},
+	git = {https://github.com/google/jaxopt},
+	keywords = {software, open source, OSS, Python, CUDA},
+}
+
 % The open source numerical software package (in Python) pySMT. This is a surrogate modeling and Bayesian optimization toolbox for solving multidisciplinary engineering design optimization (MDO) problems, while utilizing derivatives and providing numerical stability analysis for each surrogate model class.
 @article{bouhlel2019python,
 	author = {Bouhlel, Mohamed Amine and Hwang, John T. and Bartoli, Nathalie and Lafage, Rémi and Morlier, Joseph and Martins, Joaquim R.R.A.},
@@ -961,6 +976,17 @@
 	keywords = {software, open source, OSS, parallel programming, Fortran, C, Java, julia, Python, Matlab},
 }
 
+% The original publication for the JAX software project -- one of my personal favorite open source numerical software in Python. Performs autograd (or algorithmic differentiation) in either forward or reverse mode, is strongly typed, can act as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for massive speedups. This one is a workshop paper and pretty short, it just talks about the restruction on pure and statically composed functions, wrapper for numpy, and XLA compiler support, plus some information on how they stack trace. They also mention how once they have implemented tracing, autograd is pretty easy. They show some performance stats on CPUs and breifly mention TPUs and GPUs, with no results yet. Due to lack of features at the time of publication, this is not the recommended citation. The latest version of the code is open source at github.com/jax-ml/jax
+@inproceedings{frostig2018compiling,
+	author = {Frostig, Roy and Johnson, Matthew and Leary, Chris},
+	title = {Compiling machine learning programs via high-level tracing},
+	year = {2018},
+	booktitle = {Proceedings of Systems for Machine Learning (SysML '18)},
+	location = {Stanford, CA, USA},
+	url = {https://mlsys.org/Conferences/doc/2018/146.pdf},
+	keywords = {software, open source, OSS, Python, CUDA},
+}
+
 % Landmark textbook on standard design patterns in software engineering, such as builders, factories, observers, etc. Nicknamed the "Gang of Four" book on design patters
 @book{gamma1995design,
 	author = {Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John},
@@ -1200,6 +1226,17 @@
 	keywords = {software, open source, OSS, Python},
 }
 
+% The recommended citation for the flax software library of neural network primitives in JAX -- since I love jax, this is my preferred neural network framework, though a bit lower level than pytorch or tf.
+@misc{heek2024flax,
+	author = {Heek, Jonathan and Levskaya, Anselm and Oliver, Avital and Ritter, Marvin and Rondepierre, Bertrand and Steiner, Andreas and van Zee, Marc},
+	title = {{F}lax: A neural network library and ecosystem for {JAX}},
+	year = {2024},
+	number = {0.10.6},
+	url = {http://github.com/google/flax},
+	note = {Last accessed: May 2025},
+	keywords = {software, open source, OSS, Python, CUDA},
+}
+
 % The better scientific software tech report, with recommendations and rules of thumb for improving the quality of scientific software within the DOE
 @techreport{heroux2020advancing,
 	author = {Heroux, Michael A. and McInnes, Lois and Bernholdt, David E. and Dubey, Anshu and Gonsiorowski, Elsa and Marques, Osni and Moulton, J. David and Norris, Boyana and Raybourn, Elaine and Balay, Satish and Bartlett, Roscoe A. and Childers, Lisa and Gamblin, Todd and Grubel, Patricia and Gupta, Rinku and Hartman-Baker, Rebecca and Hill, Judith C. and Hudson, Stephen and Junghans, Christoph and Klinvex, Alicia and Milewicz, Reed and Miller, Mark and Ah Nam, Hai and O'Neal, Jared and Riley, Katherine and Sims, Ben and Schuler, Jean and Smith, Barry F. and Vernon, Louis and Watson, Gregory R. and Willenbring, James and Wolfenbarger, Paul},
@@ -1333,13 +1370,13 @@
 % ISO C++ 20 software standard -- definition of the C++ 20 standard and its standard library
 @techreport{ios2020information,
 	title = {{Information technology -- Programming languages -- C++}},
-    year = {2020},
-    month = {December},
-    number = {ISO/IEC JTC1 SC22 WG21/N4860},
+	year = {2020},
+	month = {December},
+	number = {ISO/IEC JTC1 SC22 WG21/N4860},
 	institution = {International Organization for Standardization},
 	address = {Geneva, Switzerland},
-    url = {https://isocpp.org/files/papers/N4860.pdf},
-    keywords = {software, C++},
+	url = {https://isocpp.org/files/papers/N4860.pdf},
+	keywords = {software, C++},
 }
 
 % The specific BPE tokenizer used by OpenAI in all their LLMs
@@ -2119,14 +2156,14 @@
 }
 
 % The original Python 3 C API publication -- the latest version is at docs.python.org/3/c-api/index.html
-@book{vanrossum2009python,
-    author = {Van Rossum, Guido and Drake, Fred L.},
-    title = {{Python/C API Manual - Python 3}},
-    year = {2009},
-    isbn = {1441412735},
-    publisher = {CreateSpace},
-    address = {Scotts Valley, CA},
-    url = {https://docs.python.org/3/c-api/index.html},
+@book{vanrossum2009pythonc,
+	author = {Van Rossum, Guido and Drake, Fred L.},
+	title = {{Python/C API Manual - Python 3}},
+	year = {2009},
+	publisher = {CreateSpace},
+	address = {Scotts Valley, CA},
+	url = {https://docs.python.org/3/c-api/index.html},
+	isbn = {1441412735},
 }
 
 % SciPy official publication: Scipy is an open source numerical software package which is the standard for advanced numerical methods and scientific software packages in Python. Most of scipy are wrappers for much older Fortran or C++ code, that has been highly optimized.
@@ -2296,3 +2333,4 @@
 	issn = {0098-3500},
 	keywords = {software, open source, OSS, Fortran},
 }
+

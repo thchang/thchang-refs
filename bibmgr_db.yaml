@@ -3003,6 +3003,83 @@ blank2020pymoo:
   volume: '8'
   web: null
   year: 2020
+blondel2022efficient:
+  address: null
+  articleno: null
+  authors:
+  - - Mathieu
+    - Blondel
+  - - Quentin
+    - Berthet
+  - - Marco
+    - Cuturi
+  - - Roy
+    - Frostig
+  - - Stephan
+    - Hoyer
+  - - Felipe
+    - Llinares-Lopez
+  - - Fabian
+    - Pedregosa
+  - - Jean-Philippe
+    - Vert
+  chapter: null
+  descrip: The recommended citation for the jaxopt software library of differentiable
+    optimization solvers written in jax. They rely on a technique called automatic
+    implicit differentiation, where the gradient of the solution is automatically
+    inferred from the solver's optimality conditions.
+  doi: null
+  edition: null
+  editors:
+  - - S.
+    - Koyejo
+  - - S.
+    - Mohamed
+  - - A.
+    - Agarwal
+  - - D.
+    - Belgrave
+  - - K.
+    - Cho
+  - - A.
+    - Oh
+  git: https://github.com/google/jaxopt
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '5230'
+  - '5242'
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - high-performance computing
+  - HPC
+  - autograd
+  - algorithmic differentiation
+  - backpropagation
+  - computational linear algebra
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - optimization
+  - convex optimization
+  - neural networks
+  - software
+  - open source
+  - OSS
+  - Python
+  - CUDA
+  title: Efficient and Modular Implicit Differentiation
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2022/file/228b9279ecf9bbafe582406850c57115-Paper-Conference.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '35'
+  web: null
+  year: 2022
 boissonnat2009incremental:
   address: Aarhus, Denmark
   articleno: null
@@ -9608,6 +9685,65 @@ frazier2018tutorial:
   volume: null
   web: null
   year: 2018
+frostig2018compiling:
+  address: Stanford, CA, USA
+  articleno: null
+  authors:
+  - - Roy
+    - Frostig
+  - - Matthew
+    - Johnson
+  - - Chris
+    - Leary
+  chapter: null
+  descrip: The original publication for the JAX software project -- one of my personal
+    favorite open source numerical software in Python. Performs autograd (or algorithmic
+    differentiation) in either forward or reverse mode, is strongly typed, can act
+    as a drop-in replacement for numpy, and can be just-in-time (jit) compiled for
+    massive speedups. This one is a workshop paper and pretty short, it just talks
+    about the restruction on pure and statically composed functions, wrapper for numpy,
+    and XLA compiler support, plus some information on how they stack trace. They
+    also mention how once they have implemented tracing, autograd is pretty easy.
+    They show some performance stats on CPUs and breifly mention TPUs and GPUs, with
+    no results yet. Due to lack of features at the time of publication, this is not
+    the recommended citation. The latest version of the code is open source at github.com/jax-ml/jax
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - autograd
+  - algorithmic differentiation
+  - backpropagation
+  - open source
+  - high-performance computing
+  - HPC
+  - computational linear algebra
+  - scientific machine learning
+  - SciML
+  - software
+  - OSS
+  - Python
+  - CUDA
+  title: Compiling machine learning programs via high-level tracing
+  type: inproceedings
+  url: https://mlsys.org/Conferences/doc/2018/146.pdf
+  venue: Proceedings of Systems for Machine Learning (SysML '18)
+  volume: null
+  web: null
+  year: 2018
 fukuda2004possible:
   address: null
   articleno: null
@@ -10618,8 +10754,8 @@ guhring2020error:
   editors: []
   git: null
   isbn: null
-  issn: null
-  month: null
+  issn: 0219-5305
+  month: '9'
   note: null
   number: '05'
   pages:
@@ -10640,7 +10776,7 @@ guhring2020error:
   title: Error bounds for approximations with deep ReLU neural networks in $W^{s,p}$
     norms
   type: article
-  url: null
+  url: https://www.worldscientific.com/doi/abs/10.1142/S0219530519410021
   venue: Analysis and Applications
   volume: '18'
   web: null
@@ -11213,6 +11349,66 @@ he2016deep:
   volume: null
   web: null
   year: 2016
+heek2024flax:
+  address: null
+  articleno: null
+  authors:
+  - - Jonathan
+    - Heek
+  - - Anselm
+    - Levskaya
+  - - Avital
+    - Oliver
+  - - Marvin
+    - Ritter
+  - - Bertrand
+    - Rondepierre
+  - - Andreas
+    - Steiner
+  - - Marc
+    - van Zee
+  chapter: null
+  descrip: The recommended citation for the flax software library of neural network
+    primitives in JAX -- since I love jax, this is my preferred neural network framework,
+    though a bit lower level than pytorch or tf.
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: 'Last accessed: May 2025'
+  number: 0.10.6
+  pages: null
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - neural networks
+  - backpropagation
+  - open source
+  - high-performance computing
+  - HPC
+  - autograd
+  - algorithmic differentiation
+  - computational linear algebra
+  - scientific machine learning
+  - SciML
+  - software
+  - OSS
+  - Python
+  - CUDA
+  title: '{F}lax: A neural network library and ecosystem for {JAX}'
+  type: misc
+  url: http://github.com/google/flax
+  venue: null
+  volume: null
+  web: null
+  year: 2024
 heroux2020advancing:
   address: Oak Ridge, TN, USA
   articleno: null
@@ -15767,7 +15963,7 @@ manton2015primer:
   editors: []
   git: null
   isbn: null
-  issn: null
+  issn: 1932-8346
   month: null
   note: null
   number: 1--2
@@ -15786,7 +15982,7 @@ manton2015primer:
   - approximation theory
   title: A primer on reproducing kernel {H}ilbert spaces
   type: article
-  url: null
+  url: http://www.nowpublishers.com/article/Details/SIG-050
   venue: Foundations and Trends{\textregistered} in Signal Processing
   volume: '8'
   web: null
@@ -15850,7 +16046,7 @@ martens2013asynchronous:
   git: null
   isbn: '9781450319638'
   issn: null
-  month: null
+  month: '7'
   note: null
   number: null
   pages:
