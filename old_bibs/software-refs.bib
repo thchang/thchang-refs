@@ -1760,6 +1760,19 @@
 	keywords = {software, open source, OSS, C++, Verilog},
 }
 
+% graph2vec is the graph equivalent of word2vec, and the former SoA in graph representation learning, for embedding graph problems as vectors that can be fed to neural networks (pre graph transformers era)
+@inproceedings{narayanan2017graph2vec,
+	author = {Narayanan, Annamalai and Chandramohan, Mahinthan and Venkatesan, Rajasekar and Chen, Lihui and Liu, Yang and Jaiswal, Shantanu},
+	title = {graph2vec: Learning Distributed Representations of Graphs},
+	year = {2017},
+	booktitle = {Proceedings of the 13th International Workshop on Mining and Learning with Graphs (MLG)},
+	numpages = {8},
+	location = {Halifax, Nova Scotia, Canada},
+	url = {https://www.mlgworkshop.org/2017/paper/MLG2017_paper_21.pdf},
+	git = {https://github.com/benedekrozemberczki/graph2vec},
+	keywords = {software},
+}
+
 % NVIDIA's official API docs for the latest version (as of Apr 2025) of the cuBLAS API. With both C and Fortran bindings.
 @techreport{nvidiacorporation2025cublas,
 	author = {NVIDIA~Corporation, },
@@ -1848,6 +1861,22 @@
 	pages = {2825--2830},
 	url = {https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf},
 	keywords = {software, open source, OSS, Python},
+}
+
+% The SCOTCH software implements a highly moduler, parallel graph partitioning framework in C, with Fortran and Python interfaces. The parallelism is handled with MPI. SCOTCH is intended as a research tool to explore different parallelization and refinement schemes during recursive bi- or k-way partitioning. However, there is currently no multi-level aspect to SCOTCH.
+@inproceedings{pellegrini2009distillating,
+	author = {Pellegrini, Francois},
+	title = {Distillating knowledge about {SCOTCH}},
+	year = {2009},
+	booktitle = {Dagstuhl Seminar Proceedings},
+	volume = {9061},
+	numpages = {12},
+	organization = {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+	location = {Wadern, Germany},
+	doi = {10.4230/DagSemProc.09061.9},
+	url = {https://drops.dagstuhl.de/storage/16dagstuhl-seminar-proceedings/dsp-vol09061/DagSemProc.09061.9/DagSemProc.09061.9.pdf},
+	git = {https://gitlab.inria.fr/scotch/scotch},
+	keywords = {software, C, Fortran, Python, open source, OSS, MPI, parallel programming},
 }
 
 % The official handbook and user's manual for the high-performance LINPACK benchmark (HPL) describing how to set-up and run the HPC performance tuning benchmark on distributed-memory systems, what problem it solves, what values the config file sets, and what are the rules for defining a solver for the problem and having it still count toware the Top 500 list
@@ -2303,6 +2332,22 @@
 	institution = {arXiv cs.AR preprint},
 	url = {https://arxiv.org/abs/2311.08582},
 	keywords = {software, open source, OSS, Python, CUDA, C++},
+}
+
+% This paper introduces graph transformers and graph transformer networks (GTNs), which generalize transformers to graphs in the same way GNNs generalize CNNs to graphs. Ths on node classification problems
+@inproceedings{yun2019graph,
+	author = {Yun, Seongjun and Jeong, Minbyul and Kim, Raehyun and Kang, Jaewoo and Kim, Hyunwoo J.},
+	title = {Graph transformer networks},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	articleno = {1073},
+	numpages = {11},
+	organization = {Curran Associates, Inc.},
+	location = {Vancouver, B.C., Canada},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9d63484abb477c97640154d40595a3bb-Paper.pdf},
+	git = {https://github.com/seongjunyun/Graph_Transformer_Networks},
+	keywords = {software},
 }
 
 % Prima: open source reference implementation of all of Powell's numerical optimization solvers for blackbox / simulation optimization problems in modern Fortran. IMO, these should be considered the state-of-the-art and reference implementations for all blackbox optimization research

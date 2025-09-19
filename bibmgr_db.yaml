@@ -456,6 +456,55 @@ alghassi2019graver:
   volume: null
   web: null
   year: 2019
+alhyari2019deep:
+  address: Barcelona, Spain
+  articleno: null
+  authors:
+  - - Abeer
+    - Alhyari
+  - - Ahmed
+    - Shamli
+  - - Ziad
+    - Abuwaimer
+  - - Shawki
+    - Areibi
+  - - Gary
+    - Grewal
+  chapter: null
+  descrip: Convolutional neural networks are trained to predict routability in order
+    to produce a congestion model for analytical placement
+  doi: 10.1109/fpl.2019.00060
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '9'
+  note: null
+  number: null
+  pages: null
+  publisher: IEEE
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - routing
+  - machine learning
+  - ML
+  - artificial intelligence
+  - AI
+  - neural networks
+  - convolutional neural networks
+  - CNNs
+  title: A Deep Learning Framework to Predict Routability for FPGA Circuit Placement
+  type: inproceedings
+  url: https://ieeexplore.ieee.org/document/8892143/
+  venue: 2019 29th International Conference on Field Programmable Logic and Applications
+    (FPL)
+  volume: null
+  web: null
+  year: 2019
 alizadeh2020managing:
   address: null
   articleno: null
@@ -6598,6 +6647,49 @@ custodio2018multiglods:
   volume: '72'
   web: null
   year: 2018
+daigavane2021understanding:
+  address: null
+  articleno: null
+  authors:
+  - - Ameya
+    - Daigavane
+  - - Balaraman
+    - Ravindran
+  - - Gaurav
+    - Aggarwal
+  chapter: null
+  descrip: A review article explaining the concepts behind graph neural networks (GNNs),
+    specifically, what is the graph representation, what is the graph laplacian, and
+    how can convolutions be extended to graphs via polynomials of the graph laplacian.
+    Finally, there is a brief summary of several early GNN implementations.
+  doi: 10.23915/distill.00032
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 2476-0757
+  month: '8'
+  note: null
+  number: '8'
+  pages: null
+  publisher: Distill Working Group
+  series: null
+  tags:
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - CNNs
+  - graph neural networks
+  - GNNs
+  title: Understanding Convolutions on Graphs
+  type: article
+  url: https://distill.pub/2021/understanding-gnns
+  venue: Distill
+  volume: '6'
+  web: null
+  year: 2021
 dalal2008low:
   address: Leuven, Belgium
   articleno: null
@@ -15823,6 +15915,58 @@ lux2023algorithm:
   volume: '49'
   web: null
   year: 2023
+maarouf2018machinelearning:
+  address: Dublin, Ireland
+  articleno: null
+  authors:
+  - - Dani
+    - Maarouf
+  - - Abeer
+    - Alhyari
+  - - Ziad
+    - Abuowaimer
+  - - Timothy
+    - Martin
+  - - Andrew
+    - Gunter
+  - - Gary
+    - Grewal
+  - - Shawki
+    - Areibi
+  - - Anthony
+    - Vannelli
+  chapter: null
+  descrip: Classical machine learning techniques (linear least squares, ANNs, KNN,
+    and random forest) are used to predict routability in order to produce a congestion
+    model for analytical placement
+  doi: 10.1109/fpl.2018.00079
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '8'
+  note: null
+  number: null
+  pages: null
+  publisher: IEEE
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - routing
+  - machine learning
+  - ML
+  - neural networks
+  title: Machine-Learning Based Congestion Estimation for Modern FPGAs
+  type: inproceedings
+  url: https://ieeexplore.ieee.org/document/8533535/
+  venue: 2018 28th International Conference on Field Programmable Logic and Applications
+    (FPL)
+  volume: null
+  web: null
+  year: 2018
 mackay1992practical:
   address: Cambridge, MA, USA
   articleno: null
@@ -16763,6 +16907,45 @@ munson2015tao:
   volume: null
   web: null
   year: 2015
+murray2019adaptive:
+  address: Canmore, AB, Canada
+  articleno: null
+  authors:
+  - - Kevin E.
+    - Murray
+  - - Vaughn
+    - Betz
+  chapter: null
+  descrip: Description of how reinforcement learning can be used to select better
+    movement directions for simulated annealing in order to improve SA-based placer
+    performance
+  doi: 10.1109/mlcad48534.2019.9142079
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '9'
+  note: null
+  number: null
+  pages: null
+  publisher: IEEE
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - reinforcement learning
+  - RL
+  - simulate annealing
+  - SA
+  title: Adaptive FPGA Placement Optimization via Reinforcement Learning
+  type: inproceedings
+  url: https://ieeexplore.ieee.org/document/9142079/
+  venue: 2019 ACM/IEEE 1st Workshop on Machine Learning for CAD (MLCAD)
+  volume: null
+  web: null
+  year: 2019
 murray2020vtr:
   address: New York, NY, USA
   articleno: '9'
@@ -16928,6 +17111,58 @@ nair2010rectified:
   volume: null
   web: null
   year: 2010
+narayanan2017graph2vec:
+  address: Halifax, Nova Scotia, Canada
+  articleno: null
+  authors:
+  - - Annamalai
+    - Narayanan
+  - - Mahinthan
+    - Chandramohan
+  - - Rajasekar
+    - Venkatesan
+  - - Lihui
+    - Chen
+  - - Yang
+    - Liu
+  - - Shantanu
+    - Jaiswal
+  chapter: null
+  descrip: graph2vec is the graph equivalent of word2vec, and the former SoA in graph
+    representation learning, for embedding graph problems as vectors that can be fed
+    to neural networks (pre graph transformers era)
+  doi: null
+  edition: null
+  editors: []
+  git: https://github.com/benedekrozemberczki/graph2vec
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - 8
+  publisher: null
+  series: null
+  tags:
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - graph
+  - graph neural networks
+  - GNNs
+  - representation learning
+  - software
+  title: 'graph2vec: Learning Distributed Representations of Graphs'
+  type: inproceedings
+  url: https://www.mlgworkshop.org/2017/paper/MLG2017_paper_21.pdf
+  venue: Proceedings of the 13th International Workshop on Mining and Learning with
+    Graphs (MLG)
+  volume: null
+  web: null
+  year: 2017
 nesterov1983method:
   address: null
   articleno: null
@@ -17813,6 +18048,50 @@ pedregosa2011scikitlearn:
   volume: '12'
   web: null
   year: 2011
+pellegrini2009distillating:
+  address: Wadern, Germany
+  articleno: null
+  authors:
+  - - Francois
+    - Pellegrini
+  chapter: null
+  descrip: The SCOTCH software implements a highly moduler, parallel graph partitioning
+    framework in C, with Fortran and Python interfaces. The parallelism is handled
+    with MPI. SCOTCH is intended as a research tool to explore different parallelization
+    and refinement schemes during recursive bi- or k-way partitioning. However, there
+    is currently no multi-level aspect to SCOTCH.
+  doi: 10.4230/DagSemProc.09061.9
+  edition: null
+  editors: []
+  git: https://gitlab.inria.fr/scotch/scotch
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - 12
+  publisher: "Schloss Dagstuhl \u2013 Leibniz-Zentrum f\xFCr Informatik"
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - graph partitioning
+  - software
+  - C
+  - Fortran
+  - Python
+  - open source
+  - OSS
+  - MPI
+  - parallel programming
+  title: Distillating knowledge about {SCOTCH}
+  type: inproceedings
+  url: https://drops.dagstuhl.de/storage/16dagstuhl-seminar-proceedings/dsp-vol09061/DagSemProc.09061.9/DagSemProc.09061.9.pdf
+  venue: Dagstuhl Seminar Proceedings
+  volume: '9061'
+  web: null
+  year: 2009
 peng2008quantum:
   address: null
   articleno: null
@@ -18214,6 +18493,51 @@ pronzato2017minimax:
   url: http://www.numdam.org/item/JSFS_2017__158_1_7_0
   venue: Journal de la Soci{\'e}t{\'e} Fran{\c{c}}aise de Statistique
   volume: '158'
+  web: null
+  year: 2017
+pui2017clockaware:
+  address: Irvine, CA
+  articleno: null
+  authors:
+  - - Chak-Wa
+    - Pui
+  - - Gengjie
+    - Chen
+  - - Yuzhe
+    - Ma
+  - - Evangeline F. Y.
+    - Young
+  - - Bei
+    - Yu
+  chapter: null
+  descrip: Classical machine learning techniques (linear least squares and SVMs) are
+    used to predict routability in order to produce a congestion model for analytical
+    placement
+  doi: 10.1109/iccad.2017.8203880
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '11'
+  note: null
+  number: null
+  pages: null
+  publisher: IEEE
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - routing
+  - machine learning
+  - ML
+  title: 'Clock-aware ultrascale FPGA placement with machine learning routability
+    prediction: (Invited paper)'
+  type: inproceedings
+  url: http://ieeexplore.ieee.org/document/8203880/
+  venue: 2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)
+  volume: null
   web: null
   year: 2017
 radford2018improving:
@@ -19211,6 +19535,51 @@ ryu2014derivativefree:
   volume: '24'
   web: null
   year: 2014
+sanchezlengeling2021gentle:
+  address: null
+  articleno: null
+  authors:
+  - - Benjamin
+    - Sanchez-Lengeling
+  - - Emily
+    - Reif
+  - - Adam
+    - Pearce
+  - - Alex
+    - Wiltschko
+  chapter: null
+  descrip: This review article discusses the types of problems that are solved on
+    graphs, with a focus on node and edge level tasks. It then describes how graphs
+    can be represented and trained upon to solve these tasks while preserving symmetries
+    in graphs and their subgraphs using graph neural networks (GNNs)
+  doi: 10.23915/distill.00033
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 2476-0757
+  month: '8'
+  note: null
+  number: '8'
+  pages: null
+  publisher: Distill Working Group
+  series: null
+  tags:
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - CNNs
+  - graph neural networks
+  - GNNs
+  title: A Gentle Introduction to Graph Neural Networks
+  type: article
+  url: https://distill.pub/2021/gnn-intro
+  venue: Distill
+  volume: '6'
+  web: null
+  year: 2021
 santoro2002theory:
   address: null
   articleno: null
@@ -20692,6 +21061,59 @@ tao2011epsilon:
   volume: '2'
   web: null
   year: 2011
+tarnawski2020efficient:
+  address: virtual event
+  articleno: null
+  authors:
+  - - Jakub
+    - Tarnawski
+  - - Amar
+    - Phanishayee
+  - - Nikhil
+    - Devanur
+  - - Divya
+    - Mahajan
+  - - Fanny Nina
+    - Paravecino
+  chapter: null
+  descrip: The authors propose several dynamic programming solutions for placing large
+    neural network compute graphs on CPU, GPU, TPU, and FPGA devices so to maximize
+    throughput. Their solutions are an improvement over AI-based, expert crafted,
+    and graph partitioning-based approaches
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '15451'
+  - '15463'
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - optimization
+  - FPGA
+  - EDA
+  - graph partitioning
+  - neural networks
+  - placement
+  title: Efficient algorithms for device placement of {DNN} graph operators
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '33'
+  web: null
+  year: 2020
 tavallaee2009detailed:
   address: Ottawa, ON, Canada
   articleno: null
@@ -22423,6 +22845,51 @@ wei2022chainofthought:
   volume: null
   web: null
   year: 2022
+wei2025endtoend:
+  address: null
+  articleno: null
+  authors:
+  - - Pengcheng
+    - Wei
+  - - Yuan
+    - Fang
+  - - Zhihao
+    - Wen
+  - - Zheng
+    - Xiao
+  - - Binbin
+    - Chen
+  chapter: null
+  descrip: This is the first graph neural network (GNN) approach to implement AI-based
+    graph partitioning. The authors use a bi-objective balanced min-cut formulation
+    and GNN architecture.
+  doi: 10.1016/j.neunet.2024.106823
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 0893-6080
+  month: '1'
+  note: null
+  number: null
+  pages: null
+  publisher: Elsevier BV
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - graph partitioning
+  - neural networks
+  - graph neural networks
+  - GNNs
+  title: An end-to-end bi-objective approach to deep graph partitioning
+  type: article
+  url: https://linkinghub.elsevier.com/retrieve/pii/S0893608024007470
+  venue: Neural Networks
+  volume: '181'
+  web: null
+  year: 2025
 weinan2020machine:
   address: null
   articleno: null
@@ -23174,6 +23641,51 @@ yann1998mnist:
   volume: null
   web: null
   year: 1998
+yu2019painting:
+  address: Las Vegas NV USA
+  articleno: null
+  authors:
+  - - Cunxi
+    - Yu
+  - - Zhiru
+    - Zhang
+  chapter: null
+  descrip: Convolutional generative adversarial networks (CGANs) are trained to predict
+    routability in order to produce a congestion model for analytical placement
+  doi: 10.1145/3316781.3317876
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '6'
+  note: null
+  number: null
+  pages: null
+  publisher: ACM
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - routing
+  - machine learning
+  - ML
+  - artificial intelligence
+  - AI
+  - neural networks
+  - convolutional neural networks
+  - CNNs
+  - generative adversarial networks
+  - GANs
+  title: 'Painting on Placement: Forecasting Routing Congestion using Conditional
+    Generative Adversarial Nets'
+  type: inproceedings
+  url: https://dl.acm.org/doi/10.1145/3316781.3317876
+  venue: Proceedings of the 56th Annual Design Automation Conference 2019
+  volume: null
+  web: null
+  year: 2019
 yuan2023active:
   address: null
   articleno: null
@@ -23251,6 +23763,55 @@ yukish2004algorithms:
   volume: null
   web: null
   year: 2004
+yun2019graph:
+  address: Vancouver, B.C., Canada
+  articleno: '1073'
+  authors:
+  - - Seongjun
+    - Yun
+  - - Minbyul
+    - Jeong
+  - - Raehyun
+    - Kim
+  - - Jaewoo
+    - Kang
+  - - Hyunwoo J.
+    - Kim
+  chapter: null
+  descrip: This paper introduces graph transformers and graph transformer networks
+    (GTNs), which generalize transformers to graphs in the same way GNNs generalize
+    CNNs to graphs. Ths on node classification problems
+  doi: null
+  edition: null
+  editors: []
+  git: https://github.com/seongjunyun/Graph_Transformer_Networks
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - 11
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - graphs
+  - transformers
+  - neural networks
+  - graph neural networks
+  - GNNs
+  - software
+  title: Graph transformer networks
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2019/file/9d63484abb477c97640154d40595a3bb-Paper.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '32'
+  web: null
+  year: 2019
 zhang2010derivativefree:
   address: null
   articleno: null

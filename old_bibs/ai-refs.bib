@@ -902,6 +902,20 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
 }
 
+% The authors propose several dynamic programming solutions for placing large neural network compute graphs on CPU, GPU, TPU, and FPGA devices so to maximize throughput. Their solutions are an improvement over AI-based, expert crafted, and graph partitioning-based approaches
+@inproceedings{tarnawski2020efficient,
+	author = {Tarnawski, Jakub and Phanishayee, Amar and Devanur, Nikhil and Mahajan, Divya and Paravecino, Fanny Nina},
+	title = {Efficient algorithms for device placement of {DNN} graph operators},
+	year = {2020},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {33},
+	pages = {15451--15463},
+	organization = {Curran Associates, Inc.},
+	location = {virtual event},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization},
+}
+
 % The original Google Gemini tech report. The model is closed, so this is not that useful, but they discuss the architecture. There is an interesting contribution to architecture, where they utilize heterogeneous encoders from text, speech, video, and images into the same latent space, then feed these encoded tokens (in sequence) to a transformer-based decoder-only model, then pass its output to either an image or text decoder to generate the next token. TODO: read this report carefully, especially the architecture details.
 @techreport{team2023gemini,
 	author = {Team, Gemini and Anil, Rohan and Borgeaud, Sebastian and Alayrac, Jean-Baptiste and Yu, Jiahui and Soricut, Radu and Schalkwyk, Johan and Dai, Andrew M and Hauth, Anja and Millican, Katie and others, },

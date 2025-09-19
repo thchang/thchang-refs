@@ -399,6 +399,22 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, interpolation, approximation theory},
 }
 
+% A review article explaining the concepts behind graph neural networks (GNNs), specifically, what is the graph representation, what is the graph laplacian, and how can convolutions be extended to graphs via polynomials of the graph laplacian. Finally, there is a brief summary of several early GNN implementations.
+@article{daigavane2021understanding,
+	author = {Daigavane, Ameya and Ravindran, Balaraman and Aggarwal, Gaurav},
+	title = {Understanding Convolutions on Graphs},
+	year = {2021},
+	month = {8},
+	journal = {Distill},
+	volume = {6},
+	number = {8},
+	publisher = {Distill Working Group},
+	doi = {10.23915/distill.00032},
+	url = {https://distill.pub/2021/understanding-gnns},
+	issn = {2476-0757},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, CNNs, graph neural networks, GNNs},
+}
+
 % Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
 @inproceedings{dauphin2014identifying,
 	author = {Dauphin, Yann N. and Pascanu, Razvan and Gulcehre, Caglar and Cho, Kyunghyun and Ganguli, Surya and Bengio, Yoshua},
@@ -1270,6 +1286,19 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Boltzmann machine, regression, classification},
 }
 
+% graph2vec is the graph equivalent of word2vec, and the former SoA in graph representation learning, for embedding graph problems as vectors that can be fed to neural networks (pre graph transformers era)
+@inproceedings{narayanan2017graph2vec,
+	author = {Narayanan, Annamalai and Chandramohan, Mahinthan and Venkatesan, Rajasekar and Chen, Lihui and Liu, Yang and Jaiswal, Shantanu},
+	title = {graph2vec: Learning Distributed Representations of Graphs},
+	year = {2017},
+	booktitle = {Proceedings of the 13th International Workshop on Mining and Learning with Graphs (MLG)},
+	numpages = {8},
+	location = {Halifax, Nova Scotia, Canada},
+	url = {https://www.mlgworkshop.org/2017/paper/MLG2017_paper_21.pdf},
+	git = {https://github.com/benedekrozemberczki/graph2vec},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, graph, graph neural networks, GNNs, representation learning},
+}
+
 % Original publication on Nesterov's momentum. I haven't read it (it is hard to find a copy and likely in Russian) but this is the preferred citation. The equation for Nesterov momentum in gradient descent is instead of using the update: x' = x - a*g(x), use x' = x - a*g(y) - b*v where y = x - b*v and v = b*v + a*g(x) -- in this equation, b*v is the momentum term which smooths out poor conditioning in the problem by encouraging the algorithm to continue in the direction it was headed instead of oscillating. Nesterov proves that this term also leads to better convergence rates. For best results, b is usually chosen to be a large value such as 0.9 or 0.99
 @article{nesterov1983method,
 	author = {Nesterov, Yurii},
@@ -1550,6 +1579,22 @@
 	url = {https://www.nature.com/articles/323533a0},
 	issn = {0028-0836},
 	keywords = {machine learning, ML, scientific machine learning, SciML, autograd, algorithmic differentiation, backpropagation, neural networks, regression, classification},
+}
+
+% This review article discusses the types of problems that are solved on graphs, with a focus on node and edge level tasks. It then describes how graphs can be represented and trained upon to solve these tasks while preserving symmetries in graphs and their subgraphs using graph neural networks (GNNs)
+@article{sanchezlengeling2021gentle,
+	author = {Sanchez-Lengeling, Benjamin and Reif, Emily and Pearce, Adam and Wiltschko, Alex},
+	title = {A Gentle Introduction to Graph Neural Networks},
+	year = {2021},
+	month = {8},
+	journal = {Distill},
+	volume = {6},
+	number = {8},
+	publisher = {Distill Working Group},
+	doi = {10.23915/distill.00033},
+	url = {https://distill.pub/2021/gnn-intro},
+	issn = {2476-0757},
+	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, CNNs, graph neural networks, GNNs},
 }
 
 % Techniques and optimal sampling criteria for performing adaptive sampling to enable downstream Gaussian process regression modeling
@@ -1911,6 +1956,22 @@
 	url = {https://global-sci.com/article/79736/machine-learning-and-computational-mathematics},
 	issn = {1991-7120},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, regression, approximation theory},
+}
+
+% This paper introduces graph transformers and graph transformer networks (GTNs), which generalize transformers to graphs in the same way GNNs generalize CNNs to graphs. Ths on node classification problems
+@inproceedings{yun2019graph,
+	author = {Yun, Seongjun and Jeong, Minbyul and Kim, Raehyun and Kang, Jaewoo and Kim, Hyunwoo J.},
+	title = {Graph transformer networks},
+	year = {2019},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {32},
+	articleno = {1073},
+	numpages = {11},
+	organization = {Curran Associates, Inc.},
+	location = {Vancouver, B.C., Canada},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/9d63484abb477c97640154d40595a3bb-Paper.pdf},
+	git = {https://github.com/seongjunyun/Graph_Transformer_Networks},
+	keywords = {machine learning, ML, scientific machine learning, SciML, graphs, transformers, neural networks, graph neural networks, GNNs},
 }
 
 % An experiment showing that when training labels are replaced with random values (pure noise), most neural network classifier methods can still be trained to zero training error. (I.e., obviously overfitting). However, regularization techniques don't prevent them from doing so. The authors conclude that regularization isn't doing what we think it's doing and may not actually be related to generalization error

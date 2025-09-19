@@ -281,6 +281,22 @@
 	keywords = {FPGA, EDA, placement, routing},
 }
 
+% The SCOTCH software implements a highly moduler, parallel graph partitioning framework in C, with Fortran and Python interfaces. The parallelism is handled with MPI. SCOTCH is intended as a research tool to explore different parallelization and refinement schemes during recursive bi- or k-way partitioning. However, there is currently no multi-level aspect to SCOTCH.
+@inproceedings{pellegrini2009distillating,
+	author = {Pellegrini, Francois},
+	title = {Distillating knowledge about {SCOTCH}},
+	year = {2009},
+	booktitle = {Dagstuhl Seminar Proceedings},
+	volume = {9061},
+	numpages = {12},
+	organization = {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+	location = {Wadern, Germany},
+	doi = {10.4230/DagSemProc.09061.9},
+	url = {https://drops.dagstuhl.de/storage/16dagstuhl-seminar-proceedings/dsp-vol09061/DagSemProc.09061.9/DagSemProc.09061.9.pdf},
+	git = {https://gitlab.inria.fr/scotch/scotch},
+	keywords = {FPGA, EDA, graph partitioning},
+}
+
 % Classical machine learning techniques (linear least squares and SVMs) are used to predict routability in order to produce a congestion model for analytical placement
 @inproceedings{pui2017clockaware,
 	author = {Pui, Chak-Wa and Chen, Gengjie and Ma, Yuzhe and Young, Evangeline F. Y. and Yu, Bei},
@@ -329,6 +345,20 @@
 	keywords = {FPGA, EDA, placement, routing},
 }
 
+% The authors propose several dynamic programming solutions for placing large neural network compute graphs on CPU, GPU, TPU, and FPGA devices so to maximize throughput. Their solutions are an improvement over AI-based, expert crafted, and graph partitioning-based approaches
+@inproceedings{tarnawski2020efficient,
+	author = {Tarnawski, Jakub and Phanishayee, Amar and Devanur, Nikhil and Mahajan, Divya and Paravecino, Fanny Nina},
+	title = {Efficient algorithms for device placement of {DNN} graph operators},
+	year = {2020},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {33},
+	pages = {15451--15463},
+	organization = {Curran Associates, Inc.},
+	location = {virtual event},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf},
+	keywords = {FPGA, EDA, graph partitioning, neural networks, AI, transformers, placement},
+}
+
 % Simulated annealing and reinforcement learning based FPGA placement. The RL contributions are tenuous at best, but still an example of potential RL impact in industry
 @inproceedings{tian2022improving,
 	author = {Tian, Chunsheng and Chen, Lei and Wang, Yuan and Wang, Shuo and Zhou, Jing and Zhang, Yaowei and Li, Guang},
@@ -355,6 +385,21 @@
 	url = {https://readthedocs.org/projects/vtr/downloads/pdf/latest},
 	note = {Last accessed: Feb 2025},
 	keywords = {FPGA, EDA, placement, routing},
+}
+
+% This is the first graph neural network (GNN) approach to implement AI-based graph partitioning. The authors use a bi-objective balanced min-cut formulation and GNN architecture.
+@article{wei2025endtoend,
+	author = {Wei, Pengcheng and Fang, Yuan and Wen, Zhihao and Xiao, Zheng and Chen, Binbin},
+	title = {An end-to-end bi-objective approach to deep graph partitioning},
+	year = {2025},
+	month = {1},
+	journal = {Neural Networks},
+	volume = {181},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.neunet.2024.106823},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0893608024007470},
+	issn = {0893-6080},
+	keywords = {FPGA, EDA, placement, graph partitioning, neural networks, graph neural networks, GNNs},
 }
 
 % DREAMPlaceFPGA-MP: GPU-accelerated macro-placer for DREAMPlaceFPGA (rajrathnam2022) DREAMPlace is an open source using analytical placement with some deep learning for FPGA placement acceleration -- written in C++ with Python interfaces and available at github.com/rachelselinar/DREAMPlaceFPGA
