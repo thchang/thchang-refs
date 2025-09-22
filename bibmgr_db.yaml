@@ -497,7 +497,7 @@ alhyari2019deep:
   - neural networks
   - convolutional neural networks
   - CNNs
-  title: A Deep Learning Framework to Predict Routability for FPGA Circuit Placement
+  title: A Deep Learning Framework to Predict Routability for {FPGA} Circuit Placement
   type: inproceedings
   url: https://ieeexplore.ieee.org/document/8892143/
   venue: 2019 29th International Conference on Field Programmable Logic and Applications
@@ -15959,7 +15959,7 @@ maarouf2018machinelearning:
   - machine learning
   - ML
   - neural networks
-  title: Machine-Learning Based Congestion Estimation for Modern FPGAs
+  title: Machine-Learning Based Congestion Estimation for Modern {FPGA}s
   type: inproceedings
   url: https://ieeexplore.ieee.org/document/8533535/
   venue: 2018 28th International Conference on Field Programmable Logic and Applications
@@ -16939,7 +16939,7 @@ murray2019adaptive:
   - RL
   - simulate annealing
   - SA
-  title: Adaptive FPGA Placement Optimization via Reinforcement Learning
+  title: Adaptive {FPGA} Placement Optimization via Reinforcement Learning
   type: inproceedings
   url: https://ieeexplore.ieee.org/document/9142079/
   venue: 2019 ACM/IEEE 1st Workshop on Machine Learning for CAD (MLCAD)
@@ -18532,7 +18532,7 @@ pui2017clockaware:
   - routing
   - machine learning
   - ML
-  title: 'Clock-aware ultrascale FPGA placement with machine learning routability
+  title: 'Clock-aware ultrascale {FPGA} placement with machine learning routability
     prediction: (Invited paper)'
   type: inproceedings
   url: http://ieeexplore.ieee.org/document/8203880/
