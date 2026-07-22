@@ -1,3 +1,37 @@
+ababei2009speeding:
+  address: null
+  articleno: '514754'
+  authors:
+  - - Cristinel
+    - Ababei
+  chapter: null
+  descrip: A parallel implementation of timing-driven graph partitioning, where fixed
+    anchor assignments are used to partition cut nets while retaining timing information
+  doi: 10.1155/2009/514754
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 1687-7195
+  month: '1'
+  note: null
+  number: '1'
+  pages:
+  - 9
+  publisher: Wiley
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - graph partitioning
+  title: Speeding Up {FPGA} Placement via Partitioning and Multithreading
+  type: article
+  url: https://onlinelibrary.wiley.com/doi/10.1155/2009/514754
+  venue: International Journal of Reconfigurable Computing
+  volume: '2009'
+  web: null
+  year: 2009
 adams2022dakota:
   address: Albuquerque, NM, USA
   articleno: null
@@ -3977,6 +4011,54 @@ buhmann2000radial:
   volume: '9'
   web: null
   year: 2000
+bustany2024kspecpart:
+  address: null
+  articleno: null
+  authors:
+  - - Ismail
+    - Bustany
+  - - Andrew B.
+    - Kahng
+  - - Ioannis
+    - Koutis
+  - - Bodhisatta
+    - Pramanik
+  - - Zhiang
+    - Wang
+  chapter: null
+  descrip: K-SpecPart is a method for partitioning hypergraphs based on their spectral
+    embeddings, where each embedding is producing based on the graph Laplacian and
+    using other partitioning outputs as supervised data labeling. Ultimately, the
+    embedded problem can be solved as an integer LP
+  doi: 10.1109/tcad.2023.3332268
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 0278-0070
+  month: '4'
+  note: null
+  number: '4'
+  pages: null
+  publisher: Institute of Electrical and Electronics Engineers (IEEE)
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - machine learning
+  - ML
+  - evolutionary algorithm
+  - EA
+  - representation learning
+  title: '{K-SpecPart}: Supervised Embedding Algorithms and Cut Overlay for Improved
+    Hypergraph Partitioning'
+  type: article
+  url: https://ieeexplore.ieee.org/document/10315161/
+  venue: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  volume: '43'
+  web: null
+  year: 2024
 byrd2006knitro:
   address: Boston, MA
   articleno: null
@@ -6930,6 +7012,7 @@ dash2024optimizing:
   - LLMs
   - transformers
   - optimization
+  - MFU
   - high-performance computing
   - HPC
   - parallel computing
@@ -8197,6 +8280,90 @@ dridi2017prime:
   volume: '7'
   web: null
   year: 2017
+duan2024structureaware:
+  address: Vancouver, BC, Canada
+  articleno: null
+  authors:
+  - - Shukai
+    - Duan
+  - - Heng
+    - Ping
+  - - Nikos
+    - Kanakaris
+  - - Xiongye
+    - Xiao
+  - - Panagiotis
+    - Kyriakis
+  - - Nesreen K.
+    - Ahmed
+  - - Peiyu
+    - Zhang
+  - - Guixiang
+    - Ma
+  - - Mihai
+    - Capot\u{a}
+  - - Shahin
+    - Nazarian
+  - - Theodore L.
+    - Willke
+  - - Paul
+    - Bogdan
+  chapter: null
+  descrip: The first attempt I've found to move past previous analytical placement
+    models and into the realm of RL-based approaches for compute graph placement.
+    The resulting framework is more general in that it allows for more complex objective
+    functions and updating state variables. The cost is that it will rely on more
+    expensive blackbox optimization techniques and AI-based modeling approaches in
+    order to solve for the best graph partition at any given time. Compared to other
+    approaches which are static assignments for model training, this appears to be
+    a more dynamic approach aimed at inference-time optimization. The parallels to
+    classical graph partitioning algorithms are still obvious in the underlying framework
+    and model architectures.
+  doi: 10.52202/079017-2597
+  edition: null
+  editors:
+  - - A.
+    - Globerson
+  - - L.
+    - Mackey
+  - - D.
+    - Belgrave
+  - - A.
+    - Fan
+  - - U.
+    - Paquet
+  - - J.
+    - Tomczak
+  - - C.
+    - Zhang
+  git: https://github.com/hping666/HSDAG
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '81748'
+  - '81772'
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - LLMs
+  - graph placement
+  - MFU
+  - blackbox optimization
+  - reinforcement learning
+  - RL
+  title: A Structure-Aware Framework for Learning Device Placements on Computation
+    Graphs
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2024/file/94bd1b8c906494bada774096bd0fdd73-Paper-Conference.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '37'
+  web: null
+  year: 2024
 dubey2021performance:
   address: null
   articleno: null
@@ -10512,6 +10679,53 @@ gorban2017stochastic:
   volume: '94'
   web: null
   year: 2017
+"gottesb\xFCren2024scalable":
+  address: null
+  articleno: '9'
+  authors:
+  - - Lars
+    - "Gottesb\xFCren"
+  - - Tobias
+    - Heuer
+  - - Nikolai
+    - Maas
+  - - Peter
+    - Sanders
+  - - Sebastian
+    - Schlag
+  chapter: null
+  descrip: An open source multi-threaded multi-level partitioning software package
+    that can be used to generate balanced partitions of large hypergraphs, subject
+    to resource constraints and fixed object constraints
+  doi: 10.1145/3626527
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 1549-6325
+  month: '1'
+  note: null
+  number: '1'
+  pages:
+  - 54
+  publisher: Association for Computing Machinery (ACM)
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - graph partitioning
+  - software
+  - open source
+  - OSS
+  - C++
+  title: Scalable High-Quality Hypergraph Partitioning
+  type: article
+  url: https://dl.acm.org/doi/10.1145/3626527
+  venue: ACM Transactions on Algorithms
+  volume: '20'
+  web: null
+  year: 2024
 gould2003galahad:
   address: New York, NY, USA
   articleno: null
@@ -11441,6 +11655,88 @@ he2016deep:
   volume: null
   web: null
   year: 2016
+he2025efficient:
+  address: San Diago, CA, USA
+  articleno: null
+  authors:
+  - - Guoliang
+    - He
+  - - Youhe
+    - Jiang
+  - - Wencong
+    - Xiao
+  - - Jiang
+    - Kaihua
+  - - Shuguang
+    - Wang
+  - - Jun
+    - Wang
+  - - Du
+    - Zixian
+  - - Zhuo
+    - Jiang
+  - - Xinlei
+    - Zhang
+  - - Binhang
+    - Yuan
+  - - Eiko
+    - Yoneki
+  chapter: null
+  descrip: Extends their earlier work from 2024 paper to propose a full network-level
+    scheduler and computation placer that accounts for communication patterns and
+    balances the tradeoffs between data parallelism and pipeline parallelism communication
+    patterns. Verified on a simulation of 9600+ GPUs. After formulating a constrainted
+    multiobjective optimization problem, they solve it with a mixed integer programming
+    solver.
+  doi: null
+  edition: null
+  editors:
+  - - D.
+    - Belgrave
+  - - C.
+    - Zhang
+  - - H.
+    - Lin
+  - - R.
+    - Pascanu
+  - - P.
+    - Koniusz
+  - - M.
+    - Ghassemi
+  - - N.
+    - Chen
+  git: https://github.com/hgl71964/net-topology-aware-scheduler
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '147100'
+  - '147126'
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - co-design
+  - graph placement
+  - MFU
+  - optimization
+  - multiobjective optimization
+  - mixed integer programming
+  title: Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment
+    on More Than 9600 GPUs
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2025/file/d82c24b7a4237aa4283b38e12047dc38-Paper-Conference.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '38'
+  web: null
+  year: 2025
 heek2024flax:
   address: null
   articleno: null
@@ -13196,11 +13492,13 @@ karypis1998fast:
   publisher: Society for Industrial & Applied Mathematics (SIAM)
   series: null
   tags:
+  - graph partitioning
+  - graph placement
+  - optimization
+  - MFU
   - FPGA
   - EDA
   - placement
-  - graph partitioning
-  - optimization
   - partitioning
   title: A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs
   type: article
@@ -16013,6 +16311,57 @@ mackay1992practical:
   volume: '4'
   web: null
   year: 1992
+mai2023openparf:
+  address: Nanjing, China
+  articleno: null
+  authors:
+  - - Jing
+    - Mai
+  - - Jiarui
+    - Wang
+  - - Zhixiong
+    - Di
+  - - Guojie
+    - Luo
+  - - Yun
+    - Liang
+  - - Yibo
+    - Lin
+  chapter: null
+  descrip: An open source GPU-enabled placement and routing software built in PyTorch,
+    intended to be used within an AI/ML training framework
+  doi: 10.1109/asicon58565.2023.10396248
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '10'
+  note: null
+  number: null
+  pages:
+  - 4
+  publisher: IEEE
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - placement
+  - graph partitioning
+  - software
+  - open source
+  - OSS
+  - C++
+  - machine learning
+  - ML
+  title: '{OpenPARF}: An Open-Source Placement and Routing Framework for Large-Scale
+    Heterogeneous {FPGA}s with Deep Learning Toolkit'
+  type: inproceedings
+  url: https://ieeexplore.ieee.org/document/10396248/
+  venue: 2023 IEEE 15th International Conference on ASIC (ASICON)
+  volume: null
+  web: null
+  year: 2023
 maidee2005timingdriven:
   address: null
   articleno: null
@@ -16297,6 +16646,44 @@ mayes2023pysuperfish:
   volume: null
   web: null
   year: 2023
+mcmurchie1995pathfinder:
+  address: Monterey, CA, USA
+  articleno: null
+  authors:
+  - - Larry
+    - McMurchie
+  - - Carl
+    - Ebeling
+  chapter: null
+  descrip: The PathFinder algorithm is the current state-of-the-art in routing FPGAs,
+    based on iteratively routing nets sequentially based on a congestion model, then
+    tearing-up and re-routing congested nets until the model converges
+  doi: 10.1145/201310.201328
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '2'
+  note: null
+  number: null
+  pages:
+  - '111'
+  - '117'
+  publisher: ACM
+  series: null
+  tags:
+  - FPGA
+  - EDA
+  - routing
+  title: '{PathFinder}: a negotiation-based performance-driven router for {FPGAs}'
+  type: inproceedings
+  url: https://dl.acm.org/doi/10.1145/201310.201328
+  venue: Proceedings of the 1995 ACM Third International Symposium on Field-Programmable
+    Gate Arrays
+  volume: null
+  web: null
+  year: 1995
 megiddo1991finding:
   address: null
   articleno: null
@@ -17575,6 +17962,95 @@ openmp2015openmp:
   volume: null
   web: null
   year: 2015
+ouyang2022training:
+  address: null
+  articleno: null
+  authors:
+  - - Long
+    - Ouyang
+  - - Jeffrey
+    - Wu
+  - - Xu
+    - Jiang
+  - - Diogo
+    - Almeida
+  - - Carroll
+    - Wainwright
+  - - Pamela
+    - Mishkin
+  - - Chong
+    - Zhang
+  - - Sandhini
+    - Agarwal
+  - - Katarina
+    - Slama
+  - - Alex
+    - Ray
+  - - John
+    - Schulman
+  - - Jacob
+    - Hilton
+  - - Fraser
+    - Kelton
+  - - Luke
+    - Miller
+  - - Maddie
+    - Simens
+  - - Amanda
+    - Askell
+  - - Peter
+    - Welinder
+  - - Paul F
+    - Christiano
+  - - Jan
+    - Leike
+  - - Ryan
+    - Lowe
+  chapter: null
+  descrip: The original paper proposing supervised-fine tuning (SFT) as a method to
+    fine-tune foundational models for specific tasks via human-in-the-loop RL
+  doi: null
+  edition: null
+  editors:
+  - - S.
+    - Koyejo
+  - - S.
+    - Mohamed
+  - - A.
+    - Agarwal
+  - - D.
+    - Belgrave
+  - - K.
+    - Cho
+  - - A.
+    - Oh
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '27730'
+  - '27744'
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - transformers
+  - LLMs
+  - reinforcement learning
+  - RL
+  title: Training language models to follow instructions with human feedback
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '35'
+  web: null
+  year: 2022
 pakin2018performing:
   address: null
   articleno: null
@@ -21102,6 +21578,11 @@ tarnawski2020efficient:
   - LLMs
   - transformers
   - optimization
+  - integer programming
+  - dynamic programming
+  - hardware co-design
+  - graph placement
+  - MFU
   - FPGA
   - EDA
   - graph partitioning
@@ -22496,6 +22977,57 @@ wang2023design:
   volume: '55'
   web: null
   year: 2023
+wang2024integrated:
+  address: Vienna, Austria
+  articleno: '2114'
+  authors:
+  - - Irene
+    - Wang
+  - - Jakub
+    - Tarnawski
+  - - Amar
+    - Phanishayee
+  - - Divya
+    - Mahajan
+  chapter: null
+  descrip: An extended algorithm from MSR for large neural network (LLM) graph placement
+    coupled with a hardware architecture search algorithm to drive co-design. The
+    improvement to the original algorithm is to couple the original integer programming
+    problem for placing compute graphs on a single device with a dynamic programming
+    formulation to distribute graphs over multiple devices.
+  doi: null
+  edition: null
+  editors: []
+  git: https://github.com/msr-fiddle/phaze
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - 23
+  publisher: JMLR.org
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - optimization
+  - integer programming
+  - dynamic programming
+  - hardware co-design
+  - graph placement
+  - MFU
+  title: Integrated hardware architecture and device placement search
+  type: inproceedings
+  url: https://openreview.net/pdf?id=ucl3B05EsX
+  venue: Proc. 41st International Conference on Machine Learning (ICML '24)
+  volume: null
+  web: null
+  year: 2024
 wang2024mathshepherd:
   address: Bangkok, Thailand
   articleno: null
