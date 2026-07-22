@@ -139,7 +139,7 @@
 	location = {Hamburg, Germany},
 	doi = {10.23919/ISC.2024.10528939},
 	url = {https://ieeexplore.ieee.org/document/10528939/},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, MFU},
 }
 
 % Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
@@ -197,6 +197,23 @@
 	url = {https://github.com/openai/baselines},
 	note = {Last accessed: Apr 2025},
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, open source, neural networks},
+}
+
+% The first attempt I've found to move past previous analytical placement models and into the realm of RL-based approaches for compute graph placement. The resulting framework is more general in that it allows for more complex objective functions and updating state variables. The cost is that it will rely on more expensive blackbox optimization techniques and AI-based modeling approaches in order to solve for the best graph partition at any given time. Compared to other approaches which are static assignments for model training, this appears to be a more dynamic approach aimed at inference-time optimization. The parallels to classical graph partitioning algorithms are still obvious in the underlying framework and model architectures.
+@inproceedings{duan2024structureaware,
+	author = {Duan, Shukai and Ping, Heng and Kanakaris, Nikos and Xiao, Xiongye and Kyriakis, Panagiotis and Ahmed, Nesreen K. and Zhang, Peiyu and Ma, Guixiang and Capot\u{a}, Mihai and Nazarian, Shahin and Willke, Theodore L. and Bogdan, Paul},
+	editor = {Globerson, A. and Mackey, L. and Belgrave, D. and Fan, A. and Paquet, U. and Tomczak, J. and Zhang, C.},
+	title = {A Structure-Aware Framework for Learning Device Placements on Computation Graphs},
+	year = {2024},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {37},
+	pages = {81748--81772},
+	organization = {Curran Associates, Inc.},
+	location = {Vancouver, BC, Canada},
+	doi = {10.52202/079017-2597},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/94bd1b8c906494bada774096bd0fdd73-Paper-Conference.pdf},
+	git = {https://github.com/hping666/HSDAG},
+	keywords = {AI, artificial intelligence, LLMs, graph placement, MFU, blackbox optimization, reinforcement learning, RL},
 }
 
 % Latest AlpacaEval paper introducing length control to the evaluation pipeline, which prevents models from being able to game the evaluation system by producing longer outputs. AlpacaEval is a standard English-language LLM evaluation benchmark, which ranks and evaluates how well a LLM is capable of following instructions and completing basic tasks using the Alpaca model (another LLM) to judge performance instead of a human judge. This particular benchmark has a 98% correlation with the LLM Chatbot Arena without requiring human participants and using minimal OpenAI credits to run. Open source Python interface at: github.com/tatsu-lab/alpaca_eval
@@ -376,6 +393,22 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, classification, neural networks, CNNs, regularization, overfitting, optimization},
 }
 
+% Extends their earlier work from 2024 paper to propose a full network-level scheduler and computation placer that accounts for communication patterns and balances the tradeoffs between data parallelism and pipeline parallelism communication patterns. Verified on a simulation of 9600+ GPUs. After formulating a constrainted multiobjective optimization problem, they solve it with a mixed integer programming solver.
+@inproceedings{he2025efficient,
+	author = {He, Guoliang and Jiang, Youhe and Xiao, Wencong and Kaihua, Jiang and Wang, Shuguang and Wang, Jun and Zixian, Du and Jiang, Zhuo and Zhang, Xinlei and Yuan, Binhang and Yoneki, Eiko},
+	editor = {Belgrave, D. and Zhang, C. and Lin, H. and Pascanu, R. and Koniusz, P. and Ghassemi, M. and Chen, N.},
+	title = {Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs},
+	year = {2025},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {38},
+	pages = {147100--147126},
+	organization = {Curran Associates, Inc.},
+	location = {San Diago, CA, USA},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2025/file/d82c24b7a4237aa4283b38e12047dc38-Paper-Conference.pdf},
+	git = {https://github.com/hgl71964/net-topology-aware-scheduler},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, co-design, graph placement, MFU, optimization, multiobjective optimization, mixed integer programming},
+}
+
 % The recommended citation for the flax software library of neural network primitives in JAX -- since I love jax, this is my preferred neural network framework, though a bit lower level than pytorch or tf.
 @misc{heek2024flax,
 	author = {Heek, Jonathan and Levskaya, Anselm and Oliver, Avital and Ritter, Marvin and Rondepierre, Bertrand and Steiner, Andreas and van Zee, Marc},
@@ -475,6 +508,23 @@
 	address = {San Diego, La Jolla, CA, USA},
 	url = {https://www.osti.gov/biblio/6910294},
 	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, RNNs, neural networks},
+}
+
+% Karypis journal paper on numerical algorithms for multilevel graph partitioning. The idea in multilevel graph partitioning is that when given a very large graph, we first coarsen the graph to a manageable size. Then we compute the cut at the coursest level and refine this cut at the finer levels as we flatten (un-coarsen) the graph in a typical V-cycle. The meat of this paper is actually a detailed comparison of various algorithms for coarsening and their quality tradeoffs, time complexities, and compression factors. Additionally a similar comparison of cut and cut-refinement algorithms
+@article{karypis1998fast,
+	author = {Karypis, George and Kumar, Vipin},
+	title = {A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs},
+	year = {1998},
+	month = {1},
+	journal = {SIAM Journal on Scientific Computing},
+	volume = {20},
+	number = {1},
+	pages = {359--392},
+	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
+	doi = {10.1137/S1064827595287997},
+	url = {http://epubs.siam.org/doi/10.1137/S1064827595287997},
+	issn = {1064-8275},
+	keywords = {graph partitioning, graph placement, optimization, MFU},
 }
 
 % The original paper defining variational autoencoders, a standard practice in performing dimension reduction and training models that encode continuous latent spaces. The idea being to train and optimize an encoder neural network model whose posterior is a continuous latent space to generate samples in the latent space distribution based on inputs from the original dataset without "losing information", then jointly train a decoder model that samples the latent distribution to produce the original observations. The idea being to randomly sample new data points that look like the original data. When trained jointly, these models can also be used as embedder/extractor or compression/decompression pairs.
@@ -927,7 +977,7 @@
 	organization = {Curran Associates, Inc.},
 	location = {virtual event},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, MFU},
 }
 
 % The original Google Gemini tech report. The model is closed, so this is not that useful, but they discuss the architecture. There is an interesting contribution to architecture, where they utilize heterogeneous encoders from text, speech, video, and images into the same latent space, then feed these encoded tokens (in sequence) to a transformer-based decoder-only model, then pass its output to either an image or text decoder to generate the next token. TODO: read this report carefully, especially the architecture details.
@@ -989,6 +1039,21 @@
 	isbn = {1476-4687},
 	issn = {0028-0836},
 	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, neural networks},
+}
+
+% An extended algorithm from MSR for large neural network (LLM) graph placement coupled with a hardware architecture search algorithm to drive co-design. The improvement to the original algorithm is to couple the original integer programming problem for placing compute graphs on a single device with a dynamic programming formulation to distribute graphs over multiple devices.
+@inproceedings{wang2024integrated,
+	author = {Wang, Irene and Tarnawski, Jakub and Phanishayee, Amar and Mahajan, Divya},
+	title = {Integrated hardware architecture and device placement search},
+	year = {2024},
+	booktitle = {Proc. 41st International Conference on Machine Learning (ICML '24)},
+	articleno = {2114},
+	numpages = {23},
+	organization = {JMLR.org},
+	location = {Vienna, Austria},
+	url = {https://openreview.net/pdf?id=ucl3B05EsX},
+	git = {https://github.com/msr-fiddle/phaze},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, MFU},
 }
 
 % Math-Shepherd paper describing how the Math-Shepherd model was trained via RLHF to evaluate each step in a LLM's logical process. The resulting model can be used to validate other LLM's mathematical and reasoning skills. TODO: read this report carefully
