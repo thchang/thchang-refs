@@ -7012,11 +7012,13 @@ dash2024optimizing:
   - LLMs
   - transformers
   - optimization
-  - MFU
+  - AI efficiency
+  - foundational model training
   - high-performance computing
   - HPC
   - parallel computing
   - distributed computing
+  - MFU
   title: Optimizing Distributed Training on Frontier for Large Language Models
   type: inproceedings
   url: https://ieeexplore.ieee.org/document/10528939/
@@ -8351,11 +8353,13 @@ duan2024structureaware:
   - AI
   - artificial intelligence
   - LLMs
+  - inference efficiency
   - graph placement
-  - MFU
+  - AI efficiency
   - blackbox optimization
   - reinforcement learning
   - RL
+  - MFU
   title: A Structure-Aware Framework for Learning Device Placements on Computation
     Graphs
   type: inproceedings
@@ -10173,6 +10177,7 @@ gao2023scaling:
   - machine learning
   - ML
   - LLMs
+  - SFT
   - overfitting
   title: Scaling Laws for Reward Model Overoptimization
   type: inproceedings
@@ -10929,6 +10934,8 @@ grattafiori2024llama:
   - open source
   - LLMs
   - transformers
+  - AI efficiency
+  - foundational model training
   - high-performance computing
   - HPC
   - parallel computing
@@ -11152,6 +11159,7 @@ guo2025deepseekr1:
   - reinforcement learning
   - RL
   - LLMs
+  - SFT
   - open source
   title: '{DeepSeek-R1}: Incentivizing reasoning capability in {LLM}s via reinforcement
     learning'
@@ -11725,10 +11733,12 @@ he2025efficient:
   - transformers
   - co-design
   - graph placement
-  - MFU
+  - AI efficiency
+  - foundational model training
   - optimization
   - multiobjective optimization
   - mixed integer programming
+  - MFU
   title: Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment
     on More Than 9600 GPUs
   type: inproceedings
@@ -13099,11 +13109,11 @@ jordan1986serial:
   - artificial intelligence
   - machine learning
   - ML
-  - LLMs
   - RNNs
   - neural networks
   - scientific machine learning
   - SciML
+  - LLMs
   title: 'Serial order: a parallel distributed processing approach'
   type: techreport
   url: https://www.osti.gov/biblio/6910294
@@ -13495,11 +13505,12 @@ karypis1998fast:
   - graph partitioning
   - graph placement
   - optimization
-  - MFU
+  - AI efficiency
   - FPGA
   - EDA
   - placement
   - partitioning
+  - MFU
   title: A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs
   type: article
   url: http://epubs.siam.org/doi/10.1137/S1064827595287997
@@ -15432,6 +15443,8 @@ liu2024deepseekv3:
   - ML
   - LLMs
   - open source
+  - AI efficiency
+  - foundational model training
   - high-performance computing
   - HPC
   - parallel computing
@@ -18042,6 +18055,7 @@ ouyang2022training:
   - ML
   - transformers
   - LLMs
+  - SFT
   - reinforcement learning
   - RL
   title: Training language models to follow instructions with human feedback
@@ -19059,6 +19073,7 @@ radford2018improving:
   - ML
   - transformers
   - LLMs
+  - SFT
   title: Improving language understanding by generative pre-training
   type: techreport
   url: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
@@ -21582,12 +21597,14 @@ tarnawski2020efficient:
   - dynamic programming
   - hardware co-design
   - graph placement
-  - MFU
+  - AI efficiency
+  - foundational model training
   - FPGA
   - EDA
   - graph partitioning
   - neural networks
   - placement
+  - MFU
   title: Efficient algorithms for device placement of {DNN} graph operators
   type: inproceedings
   url: https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf
@@ -22013,6 +22030,7 @@ touvron2023llama:
   - machine learning
   - ML
   - LLMs
+  - foundational model training
   - transformers
   - open source
   title: '{LLaMA}: Open and efficient foundation language models'
@@ -23020,6 +23038,8 @@ wang2024integrated:
   - dynamic programming
   - hardware co-design
   - graph placement
+  - AI efficiency
+  - foundational model training
   - MFU
   title: Integrated hardware architecture and device placement search
   type: inproceedings
@@ -23077,6 +23097,7 @@ wang2024mathshepherd:
   - reinforcement learning
   - RL
   - LLMs
+  - SFT
   title: 'Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations'
   type: inproceedings
   url: https://aclanthology.org/2024.acl-long.510
@@ -23369,6 +23390,7 @@ wei2022chainofthought:
   - machine learning
   - ML
   - LLMs
+  - SFT
   title: Chain-of-thought prompting elicits reasoning in large language models
   type: inproceedings
   url: https://openreview.net/forum?id=_VjQlMeSB_J
@@ -24723,6 +24745,7 @@ ziegler2019finetuning:
   - reinforcement learning
   - RL
   - LLMs
+  - SFT
   - neural networks
   title: Fine-Tuning Language Models from Human Preferences
   type: techreport
