@@ -139,7 +139,7 @@
 	location = {Hamburg, Germany},
 	doi = {10.23919/ISC.2024.10528939},
 	url = {https://ieeexplore.ieee.org/document/10528939/},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, AI efficiency, foundational model training},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, AI efficiency, pretraining},
 }
 
 % Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
@@ -355,7 +355,7 @@
 	year = {2024},
 	institution = {arXiv preprint arXiv:2407.21783},
 	url = {https://arxiv.org/abs/2407.21783},
-	keywords = {AI, artificial intelligence, machine learning, ML, open source, LLMs, transformers, AI efficiency, foundational model training},
+	keywords = {AI, artificial intelligence, machine learning, ML, open source, LLMs, transformers, AI efficiency, pretraining},
 }
 
 % First published work using Geoff Hinton's unpublished optimization algorithm RMSProp (root mean squared propogation, an adjustment to AdaGrad using an adaptive learning rate in each dimension). The author uses RMSProp to train a recurrent neural network (RNN) with long short-term memory (LSTM) in order to generate handwritten digits
@@ -406,7 +406,7 @@
 	location = {San Diago, CA, USA},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2025/file/d82c24b7a4237aa4283b38e12047dc38-Paper-Conference.pdf},
 	git = {https://github.com/hgl71964/net-topology-aware-scheduler},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, co-design, graph placement, AI efficiency, foundational model training, optimization, multiobjective optimization, mixed integer programming},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, co-design, graph placement, AI efficiency, pretraining, optimization, multiobjective optimization, mixed integer programming},
 }
 
 % The recommended citation for the flax software library of neural network primitives in JAX -- since I love jax, this is my preferred neural network framework, though a bit lower level than pytorch or tf.
@@ -617,6 +617,18 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, CNNs, neural networks},
 }
 
+% Official publication for TorchTitan software. An extension of pytorch for efficient distributed training of LLMs. In particular, utilizing up to 4D parallelism, mixed precision, and checkpointing in a modular and extensible way. Comes with built-in recipes for pretraining of Llama 3.1 family of models
+@inproceedings{liang2025torchtitan,
+	author = {Liang, Wanchao and Liu, Tianyu and Wright, Less and Constable, Will and Gu, Andrew and Huang, Chien-Chin and Zhang, Iris and Feng, Wei and Huang, Howard and Wang, Junjie and Purandare, Sanket and Nadathur, Gokul and Idreos, Stratos},
+	title = {{TorchTitan}: One-stop {PyTorch} native solution for production ready {LLM} pretraining},
+	year = {2025},
+	howpublished = {None},
+	booktitle = {The Thirteenth International Conference on Learning Representations (ICLR 2025)},
+	url = {https://openreview.net/forum?id=SFN6Wm7YBI},
+	git = {https://github.com/pytorch/torchtitan},
+	keywords = {AI, artificial intelligence, machine learning, ML, autograd, algorithmic differentiation, backpropagation, open source, neural networks, distributed computing, HPC, parallel computing, GPU computing, AI efficiency, pretraining},
+}
+
 % DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data. Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
 @techreport{liu2024deepseekv3,
 	author = {Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others, },
@@ -624,7 +636,7 @@
 	year = {2024},
 	institution = {arXiv preprint arXiv:2412.19437},
 	doi = {10.48550/arXiv.2412.19437},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, open source, AI efficiency, foundational model training},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, open source, AI efficiency, pretraining},
 }
 
 % Our paper proposing test functions for convex optimization problems with very specific properties, in order to gauge the effectiveness and robustness of various techniques subject to various forms of degeneracy
@@ -977,7 +989,7 @@
 	organization = {Curran Associates, Inc.},
 	location = {virtual event},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, AI efficiency, foundational model training},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, AI efficiency, pretraining},
 }
 
 % The original Google Gemini tech report. The model is closed, so this is not that useful, but they discuss the architecture. There is an interesting contribution to architecture, where they utilize heterogeneous encoders from text, speech, video, and images into the same latent space, then feed these encoded tokens (in sequence) to a transformer-based decoder-only model, then pass its output to either an image or text decoder to generate the next token. TODO: read this report carefully, especially the architecture details.
@@ -997,7 +1009,7 @@
 	year = {2023},
 	institution = {arXiv preprint arXiv:2302.13971},
 	doi = {10.48550/arXiv.2302.13971},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, foundational model training, transformers, open source},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, pretraining, transformers, open source},
 }
 
 % The LLaMA 2 model publication. In addition to the information from LLaMA 1 tech report, they are now discussing fine-tuning and RLHF and chat safety features. The latest models range from 7B to 70B total parameters. The model architectures and instructions to download the weights (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this report carefully
@@ -1053,7 +1065,7 @@
 	location = {Vienna, Austria},
 	url = {https://openreview.net/pdf?id=ucl3B05EsX},
 	git = {https://github.com/msr-fiddle/phaze},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, AI efficiency, foundational model training},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, AI efficiency, pretraining},
 }
 
 % Math-Shepherd paper describing how the Math-Shepherd model was trained via RLHF to evaluate each step in a LLM's logical process. The resulting model can be used to validate other LLM's mathematical and reasoning skills. TODO: read this report carefully

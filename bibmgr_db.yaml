@@ -7013,11 +7013,12 @@ dash2024optimizing:
   - transformers
   - optimization
   - AI efficiency
-  - foundational model training
+  - pretraining
   - high-performance computing
   - HPC
   - parallel computing
   - distributed computing
+  - foundational model training
   - MFU
   title: Optimizing Distributed Training on Frontier for Large Language Models
   type: inproceedings
@@ -10935,11 +10936,12 @@ grattafiori2024llama:
   - LLMs
   - transformers
   - AI efficiency
-  - foundational model training
+  - pretraining
   - high-performance computing
   - HPC
   - parallel computing
   - distributed computing
+  - foundational model training
   title: The {LLaMA} 3 herd of models
   type: techreport
   url: https://arxiv.org/abs/2407.21783
@@ -11734,10 +11736,11 @@ he2025efficient:
   - co-design
   - graph placement
   - AI efficiency
-  - foundational model training
+  - pretraining
   - optimization
   - multiobjective optimization
   - mixed integer programming
+  - foundational model training
   - MFU
   title: Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment
     on More Than 9600 GPUs
@@ -15128,6 +15131,82 @@ liang2024amfplacer:
   volume: '43'
   web: null
   year: 2024
+liang2025torchtitan:
+  address: null
+  articleno: null
+  authors:
+  - - Wanchao
+    - Liang
+  - - Tianyu
+    - Liu
+  - - Less
+    - Wright
+  - - Will
+    - Constable
+  - - Andrew
+    - Gu
+  - - Chien-Chin
+    - Huang
+  - - Iris
+    - Zhang
+  - - Wei
+    - Feng
+  - - Howard
+    - Huang
+  - - Junjie
+    - Wang
+  - - Sanket
+    - Purandare
+  - - Gokul
+    - Nadathur
+  - - Stratos
+    - Idreos
+  chapter: null
+  descrip: Official publication for TorchTitan software. An extension of pytorch for
+    efficient distributed training of LLMs. In particular, utilizing up to 4D parallelism,
+    mixed precision, and checkpointing in a modular and extensible way. Comes with
+    built-in recipes for pretraining of Llama 3.1 family of models
+  doi: null
+  edition: null
+  editors: []
+  git: https://github.com/pytorch/torchtitan
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - autograd
+  - algorithmic differentiation
+  - backpropagation
+  - open source
+  - neural networks
+  - distributed computing
+  - HPC
+  - parallel computing
+  - GPU computing
+  - AI efficiency
+  - pretraining
+  - high-performance computing
+  - software
+  - OSS
+  - Python
+  title: '{TorchTitan}: One-stop {PyTorch} native solution for production ready {LLM}
+    pretraining'
+  type: None
+  url: https://openreview.net/forum?id=SFN6Wm7YBI
+  venue: The Thirteenth International Conference on Learning Representations (ICLR
+    2025)
+  volume: null
+  web: null
+  year: 2025
 lindauer2022smac3:
   address: null
   articleno: null
@@ -15444,10 +15523,11 @@ liu2024deepseekv3:
   - LLMs
   - open source
   - AI efficiency
-  - foundational model training
+  - pretraining
   - high-performance computing
   - HPC
   - parallel computing
+  - foundational model training
   title: '{DeepSeek-V3} technical report'
   type: techreport
   url: null
@@ -21649,12 +21729,13 @@ tarnawski2020efficient:
   - hardware co-design
   - graph placement
   - AI efficiency
-  - foundational model training
+  - pretraining
   - FPGA
   - EDA
   - graph partitioning
   - neural networks
   - placement
+  - foundational model training
   - MFU
   title: Efficient algorithms for device placement of {DNN} graph operators
   type: inproceedings
@@ -22081,9 +22162,10 @@ touvron2023llama:
   - machine learning
   - ML
   - LLMs
-  - foundational model training
+  - pretraining
   - transformers
   - open source
+  - foundational model training
   title: '{LLaMA}: Open and efficient foundation language models'
   type: techreport
   url: null
@@ -23090,6 +23172,7 @@ wang2024integrated:
   - hardware co-design
   - graph placement
   - AI efficiency
+  - pretraining
   - foundational model training
   - MFU
   title: Integrated hardware architecture and device placement search

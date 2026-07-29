@@ -1018,6 +1018,18 @@
 	keywords = {high-performance computing, HPC, parallel computing},
 }
 
+% Official publication for TorchTitan software. An extension of pytorch for efficient distributed training of LLMs. In particular, utilizing up to 4D parallelism, mixed precision, and checkpointing in a modular and extensible way. Comes with built-in recipes for pretraining of Llama 3.1 family of models
+@inproceedings{liang2025torchtitan,
+	author = {Liang, Wanchao and Liu, Tianyu and Wright, Less and Constable, Will and Gu, Andrew and Huang, Chien-Chin and Zhang, Iris and Feng, Wei and Huang, Howard and Wang, Junjie and Purandare, Sanket and Nadathur, Gokul and Idreos, Stratos},
+	title = {{TorchTitan}: One-stop {PyTorch} native solution for production ready {LLM} pretraining},
+	year = {2025},
+	howpublished = {None},
+	booktitle = {The Thirteenth International Conference on Learning Representations (ICLR 2025)},
+	url = {https://openreview.net/forum?id=SFN6Wm7YBI},
+	git = {https://github.com/pytorch/torchtitan},
+	keywords = {high-performance computing, HPC, parallel computing, distributed computing, GPU computing},
+}
+
 % DeepSeek-V3 technical report: DeepSeek-V3 is the first open source model to obtain performance on par with closed source models. The architecture is transformer based with multi-headed latent attention applied to a mixture of experts model. The first layer is an embedding layer that is shared by all models and trained on the data (as opposed to using word2vec). Next, the architecture passes through alternating multi-headed latent attention and feed-forward (i.e., MLP) layers. The latent attention blocks are shared between all experts. Each expert then has its own multi-layer perceptron consisting of feed-forward layers with sigmoidal activation functions. Each individual expert model is run sequential and used to generate a sequence of multiple output tokens (as opposed to just the next word). All experts are run in parallel. The predictions from each expert are ultimately combined in an output layer and hit with a softmax to generate the logits for the next word prediction(s). During training, the objective is the CrossEntropy loss for each prediction depth. The authors use model sharding and pipeline paralleism during training. They break apart and overlap forward and backward pass computations to create 2 overlapping pipelines, which they use to hide latency. The model is trained in FP8 and mixed precision. The weight checkpoints are publicly available at: https://github.com/deepseek-ai/DeepSeek-V3 TODO: read this report carefully
 @techreport{liu2024deepseekv3,
 	author = {Liu, Aixin and Feng, Bei and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and others, },
