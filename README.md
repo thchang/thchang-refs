@@ -89,6 +89,7 @@ List of topics (may be some overlap between topics):
  * [Silver et al., 2016. Mastering the game of Go with deep neural networks and tree search](https://www.nature.com/articles/nature16961)
  * [Sohl-Dickstein et al., 2015. Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://proceedings.mlr.press/v37/sohl-dickstein15.html)
  * [Srivastava et al., 2014. Dropout: a simple way to prevent neural networks from overfitting](https://jmlr.org/papers/v15/srivastava14a.html)
+ * [Su et al., 2024. RoFormer: Enhanced transformer with Rotary Position Embedding](https://linkinghub.elsevier.com/retrieve/pii/S0925231223011864)
  * [Tarnawski et al., 2020. Efficient algorithms for device placement of DNN graph operators](https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf)
  * [Team et al., 2023. Gemini: a family of highly capable multimodal models](https://doi.com/10.48550/arXiv.2312.11805)
  * [Touvron et al., 2023. LLaMA: Open and efficient foundation language models](https://doi.com/10.48550/arXiv.2302.13971)

@@ -510,23 +510,6 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, RNNs, neural networks},
 }
 
-% Karypis journal paper on numerical algorithms for multilevel graph partitioning. The idea in multilevel graph partitioning is that when given a very large graph, we first coarsen the graph to a manageable size. Then we compute the cut at the coursest level and refine this cut at the finer levels as we flatten (un-coarsen) the graph in a typical V-cycle. The meat of this paper is actually a detailed comparison of various algorithms for coarsening and their quality tradeoffs, time complexities, and compression factors. Additionally a similar comparison of cut and cut-refinement algorithms
-@article{karypis1998fast,
-	author = {Karypis, George and Kumar, Vipin},
-	title = {A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs},
-	year = {1998},
-	month = {1},
-	journal = {SIAM Journal on Scientific Computing},
-	volume = {20},
-	number = {1},
-	pages = {359--392},
-	publisher = {Society for Industrial & Applied Mathematics (SIAM)},
-	doi = {10.1137/S1064827595287997},
-	url = {http://epubs.siam.org/doi/10.1137/S1064827595287997},
-	issn = {1064-8275},
-	keywords = {graph partitioning, graph placement, optimization, AI efficiency},
-}
-
 % The original paper defining variational autoencoders, a standard practice in performing dimension reduction and training models that encode continuous latent spaces. The idea being to train and optimize an encoder neural network model whose posterior is a continuous latent space to generate samples in the latent space distribution based on inputs from the original dataset without "losing information", then jointly train a decoder model that samples the latent distribution to produce the original observations. The idea being to randomly sample new data points that look like the original data. When trained jointly, these models can also be used as embedder/extractor or compression/decompression pairs.
 @inproceedings{kingma2014autoencoding,
 	author = {Kingma, Diederik P and Welling, Max},
@@ -964,6 +947,23 @@
 	publisher = {JMLR. org},
 	url = {https://jmlr.org/papers/v15/srivastava14a.html},
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
+}
+
+% Introducing the rotary positional embedding (RoPE) for extending the effective LLM context window beyond the purely token-based limit. The idea is to use sinusoidal projections of tokens with periods of varying lengths to reach short, medium, and long-term context windows with precision that decreases with the length of the RoPE embedding
+@article{su2024roformer,
+	author = {Su, Jianlin and Ahmed, Murtadha and Lu, Yu and Pan, Shengfeng and Bo, Wen and Liu, Yunfeng},
+	title = {{RoFormer}: Enhanced transformer with Rotary Position Embedding},
+	year = {2024},
+	month = {2},
+	journal = {Neurocomputing},
+	volume = {568},
+	number = {C},
+	numpages = {12},
+	publisher = {Elsevier BV},
+	doi = {10.1016/j.neucom.2023.127063},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0925231223011864},
+	issn = {0925-2312},
+	keywords = {, AI, artificial intelligence, machine learning, ML, representation learning, neural networks, LLMs},
 }
 
 % The authors propose several dynamic programming solutions for placing large neural network compute graphs on CPU, GPU, TPU, and FPGA devices so to maximize throughput. Their solutions are an improvement over AI-based, expert crafted, and graph partitioning-based approaches

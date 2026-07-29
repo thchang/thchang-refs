@@ -13502,14 +13502,14 @@ karypis1998fast:
   publisher: Society for Industrial & Applied Mathematics (SIAM)
   series: null
   tags:
-  - graph partitioning
-  - graph placement
-  - optimization
-  - AI efficiency
   - FPGA
   - EDA
   - placement
+  - graph partitioning
+  - optimization
   - partitioning
+  - graph placement
+  - AI efficiency
   - MFU
   title: A Fast and High Quality Multilevel Scheme for Partitioning Irregular Graphs
   type: article
@@ -21479,6 +21479,57 @@ su1997comparison:
   volume: '7'
   web: null
   year: 1997
+su2024roformer:
+  address: null
+  articleno: null
+  authors:
+  - - Jianlin
+    - Su
+  - - Murtadha
+    - Ahmed
+  - - Yu
+    - Lu
+  - - Shengfeng
+    - Pan
+  - - Wen
+    - Bo
+  - - Yunfeng
+    - Liu
+  chapter: null
+  descrip: Introducing the rotary positional embedding (RoPE) for extending the effective
+    LLM context window beyond the purely token-based limit. The idea is to use sinusoidal
+    projections of tokens with periods of varying lengths to reach short, medium,
+    and long-term context windows with precision that decreases with the length of
+    the RoPE embedding
+  doi: 10.1016/j.neucom.2023.127063
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 0925-2312
+  month: '2'
+  note: null
+  number: C
+  pages:
+  - 12
+  publisher: Elsevier BV
+  series: null
+  tags:
+  - ''
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - representation learning
+  - neural networks
+  - LLMs
+  title: '{RoFormer}: Enhanced transformer with Rotary Position Embedding'
+  type: article
+  url: https://linkinghub.elsevier.com/retrieve/pii/S0925231223011864
+  venue: Neurocomputing
+  volume: '568'
+  web: null
+  year: 2024
 sv2005evolutionary:
   address: London, UK
   articleno: null
