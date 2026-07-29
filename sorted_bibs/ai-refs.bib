@@ -139,7 +139,7 @@
 	location = {Hamburg, Germany},
 	doi = {10.23919/ISC.2024.10528939},
 	url = {https://ieeexplore.ieee.org/document/10528939/},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, MFU},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, AI efficiency, foundational model training},
 }
 
 % Interesting paper on why it is generally OK to use local optimizers when solving non convex optimization problems in high-dimensional spaces. In general, in high-dimensional spaces, almost every critical point will be a saddle point with high probability. Therefore, first-order methods tend to perform very well on these problems as they converge quickly but are not attracted to saddle points and therefore tend to find the global optimum in the limit. The analysis of the probability that a critical point will be a saddle point is based on a spectral analysis of the hessian at each critical point other than the global minimum/maximum -- all of the eigenvalues must be positive or negative for the critical point to be a local minima / maxima, and the probability of this occurring decays as the number of eigenvalues grows with the dimension of the Hessian. The authors also experimentally validate these claims by extracting critical points from the loss landscapes of single layer MLPs trained on down-sampled versions of MNIST and CIFAR-10.
@@ -213,7 +213,7 @@
 	doi = {10.52202/079017-2597},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/94bd1b8c906494bada774096bd0fdd73-Paper-Conference.pdf},
 	git = {https://github.com/hping666/HSDAG},
-	keywords = {AI, artificial intelligence, LLMs, graph placement, MFU, blackbox optimization, reinforcement learning, RL},
+	keywords = {AI, artificial intelligence, LLMs, inference efficiency, graph placement, AI efficiency, blackbox optimization, reinforcement learning, RL},
 }
 
 % Latest AlpacaEval paper introducing length control to the evaluation pipeline, which prevents models from being able to game the evaluation system by producing longer outputs. AlpacaEval is a standard English-language LLM evaluation benchmark, which ranks and evaluates how well a LLM is capable of following instructions and completing basic tasks using the Alpaca model (another LLM) to judge performance instead of a human judge. This particular benchmark has a 98% correlation with the LLM Chatbot Arena without requiring human participants and using minimal OpenAI credits to run. Open source Python interface at: github.com/tatsu-lab/alpaca_eval
@@ -295,7 +295,7 @@
 	pages = {10835--10866},
 	organization = {PMLR},
 	url = {https://proceedings.mlr.press/v202/gao23h.html},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, overfitting},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, SFT, overfitting},
 }
 
 % The original paper on the bias-variance tradeoff curve. Now widely debunked (in my opinion) the theory that machine learning and neural networks had to tradeoff between training accuracy and overfitting (which would lead to the idea of so-called "generalization error") and had to be combatted by limiting model size or regularization rules ruled AI theory for many, many years. One key insight in this paper that was perhaps ahead of its time, is that the important part of machine learning is the representation learning, in which sense training neural networks with backpropagation for regression problems is somewhat not special
@@ -355,7 +355,7 @@
 	year = {2024},
 	institution = {arXiv preprint arXiv:2407.21783},
 	url = {https://arxiv.org/abs/2407.21783},
-	keywords = {AI, artificial intelligence, machine learning, ML, open source, LLMs, transformers},
+	keywords = {AI, artificial intelligence, machine learning, ML, open source, LLMs, transformers, AI efficiency, foundational model training},
 }
 
 % First published work using Geoff Hinton's unpublished optimization algorithm RMSProp (root mean squared propogation, an adjustment to AdaGrad using an adaptive learning rate in each dimension). The author uses RMSProp to train a recurrent neural network (RNN) with long short-term memory (LSTM) in order to generate handwritten digits
@@ -375,7 +375,7 @@
 	year = {2025},
 	institution = {arXiv preprint arXiv:2501.12948},
 	doi = {10.48550/arXiv.2501.12948},
-	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, open source},
+	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, SFT, open source},
 }
 
 % The original ResNet paper, which proposes the usage of residual layers to help solve the vanishing gradient problem when training deep neural networks. This technique is still used today in training LLMs. The original paper is applied to image segmentation and classification problems (on CIFAR-10 and ImageNet) and the resulting models ResNet-50, -101, and -152 were considered state-of-the-art. While the author's original model and weights are available open source, they recommend using FAIR's repo which also contains open source training in pytorch: github.com/facebookarchive/fb.resnet.torch
@@ -406,7 +406,7 @@
 	location = {San Diago, CA, USA},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2025/file/d82c24b7a4237aa4283b38e12047dc38-Paper-Conference.pdf},
 	git = {https://github.com/hgl71964/net-topology-aware-scheduler},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, co-design, graph placement, MFU, optimization, multiobjective optimization, mixed integer programming},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, co-design, graph placement, AI efficiency, foundational model training, optimization, multiobjective optimization, mixed integer programming},
 }
 
 % The recommended citation for the flax software library of neural network primitives in JAX -- since I love jax, this is my preferred neural network framework, though a bit lower level than pytorch or tf.
@@ -507,7 +507,7 @@
 	institution = {Institute for Cognitive Science, University of California},
 	address = {San Diego, La Jolla, CA, USA},
 	url = {https://www.osti.gov/biblio/6910294},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, RNNs, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, RNNs, neural networks},
 }
 
 % Karypis journal paper on numerical algorithms for multilevel graph partitioning. The idea in multilevel graph partitioning is that when given a very large graph, we first coarsen the graph to a manageable size. Then we compute the cut at the coursest level and refine this cut at the finer levels as we flatten (un-coarsen) the graph in a typical V-cycle. The meat of this paper is actually a detailed comparison of various algorithms for coarsening and their quality tradeoffs, time complexities, and compression factors. Additionally a similar comparison of cut and cut-refinement algorithms
@@ -524,7 +524,7 @@
 	doi = {10.1137/S1064827595287997},
 	url = {http://epubs.siam.org/doi/10.1137/S1064827595287997},
 	issn = {1064-8275},
-	keywords = {graph partitioning, graph placement, optimization, MFU},
+	keywords = {graph partitioning, graph placement, optimization, AI efficiency},
 }
 
 % The original paper defining variational autoencoders, a standard practice in performing dimension reduction and training models that encode continuous latent spaces. The idea being to train and optimize an encoder neural network model whose posterior is a continuous latent space to generate samples in the latent space distribution based on inputs from the original dataset without "losing information", then jointly train a decoder model that samples the latent distribution to produce the original observations. The idea being to randomly sample new data points that look like the original data. When trained jointly, these models can also be used as embedder/extractor or compression/decompression pairs.
@@ -641,7 +641,7 @@
 	year = {2024},
 	institution = {arXiv preprint arXiv:2412.19437},
 	doi = {10.48550/arXiv.2412.19437},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, open source},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, open source, AI efficiency, foundational model training},
 }
 
 % Our paper proposing test functions for convex optimization problems with very specific properties, in order to gauge the effectiveness and robustness of various techniques subject to various forms of degeneracy
@@ -736,7 +736,7 @@
 	pages = {27730--27744},
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf},
-	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs, reinforcement learning, RL},
+	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs, SFT, reinforcement learning, RL},
 }
 
 % Original definition of RBF networks, an early form of neural networks that focused on the usage of combining RBF basis functions. These networks are not used much anymore, although occasionally still come up in the context of scientific machine learning theory and proofs
@@ -790,7 +790,7 @@
 	institution = {OpenAI},
 	address = {San Francisco, CA, USA},
 	url = {https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf},
-	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs},
+	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs, SFT},
 }
 
 % The credited "GPT-2" paper, describing OpenAI's experience in creating the foundational GPT2 language model based on web text. They describe how they have built on top of GPT-1, including the usage of BPE embedding (tokenizer) scheme. Their claim is that by simply memorizing web text and language, GPT-2 is able to complete a reasonably wide variety of tasks and produce sound answers to many questions. This is observation represents the true birth of LLM assistants.
@@ -977,7 +977,7 @@
 	organization = {Curran Associates, Inc.},
 	location = {virtual event},
 	url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/b14680dec683e744ada1f2fe08614086-Paper.pdf},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, MFU},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, AI efficiency, foundational model training},
 }
 
 % The original Google Gemini tech report. The model is closed, so this is not that useful, but they discuss the architecture. There is an interesting contribution to architecture, where they utilize heterogeneous encoders from text, speech, video, and images into the same latent space, then feed these encoded tokens (in sequence) to a transformer-based decoder-only model, then pass its output to either an image or text decoder to generate the next token. TODO: read this report carefully, especially the architecture details.
@@ -997,7 +997,7 @@
 	year = {2023},
 	institution = {arXiv preprint arXiv:2302.13971},
 	doi = {10.48550/arXiv.2302.13971},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, open source},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, foundational model training, transformers, open source},
 }
 
 % The LLaMA 2 model publication. In addition to the information from LLaMA 1 tech report, they are now discussing fine-tuning and RLHF and chat safety features. The latest models range from 7B to 70B total parameters. The model architectures and instructions to download the weights (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this report carefully
@@ -1053,7 +1053,7 @@
 	location = {Vienna, Austria},
 	url = {https://openreview.net/pdf?id=ucl3B05EsX},
 	git = {https://github.com/msr-fiddle/phaze},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, MFU},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, optimization, integer programming, dynamic programming, hardware co-design, graph placement, AI efficiency, foundational model training},
 }
 
 % Math-Shepherd paper describing how the Math-Shepherd model was trained via RLHF to evaluate each step in a LLM's logical process. The resulting model can be used to validate other LLM's mathematical and reasoning skills. TODO: read this report carefully
@@ -1068,7 +1068,7 @@
 	location = {Bangkok, Thailand},
 	doi = {10.18653/v1/2024.acl-long.510},
 	url = {https://aclanthology.org/2024.acl-long.510},
-	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs},
+	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, SFT},
 }
 
 % The MMLU-Pro benchmark. The current go to benchmark for multitask understanding and reasoning in large language models (LLMs). Focuses on logical reasoning capabilities. The benchmark interface is available in Python from github.com/TIGER-AI-Lab/MMLU-Pro
@@ -1099,7 +1099,7 @@
 	location = {New Orleans, LA, USA},
 	url = {https://openreview.net/forum?id=_VjQlMeSB_J},
 	isbn = {9781713871088},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, SFT},
 }
 
 % A summary paper for an influential line of work in the field of scientific machine learning. Some standard techniques for computing error bounds for neural networks using traditional techniques from numerical analysis and approximation theory, and introducing a universal approximation theorem for neural networks. I.e., showing the existence of a two-layer multilayer perceptron or similar neural network that can approximate any Sobolev function to arbitrary required accuracy. Equivalently, we could say that such neural networks are dense in this Sobolev space
@@ -1156,6 +1156,6 @@
 	year = {2019},
 	institution = {arXiv preprint arXiv:1909.08593},
 	url = {https://arxiv.org/abs/1909.08593},
-	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, neural networks},
+	keywords = {AI, artificial intelligence, machine learning, ML, reinforcement learning, RL, LLMs, SFT, neural networks},
 }
 
