@@ -1,7 +1,7 @@
 #!/bin/bash
 
 python3 -m bibmgr clear --force
-for file in old_bibs/*.bib; do
+for file in sorted_bibs/*.bib; do
     python3 -m bibmgr load -f $file -m --force
 done
 python3 -m bibmgr load -f bibmgr_db.yaml -m --force
