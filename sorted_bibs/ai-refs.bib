@@ -348,14 +348,14 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, neural networks},
 }
 
-% The LLaMA 3 model publication. In addition to the information from LLaMA 1 tech report, they add information on training and pipeline parallelism. The latest max model size is a 405B parameter (dense) model, which competes with GPT-4 from OpenAI. The model architectures and instructions to download the weights (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this report carefully, especially the training details, I have only skimmed
+% The LLaMA 3 model publication. In addition to the information from LLaMA 1 tech report, they add information on the data collection and curation pipeline, pre and post training, parallelism and optimization, MFU, and failures and downtime. The latest max model size is a 405B parameter (dense) model, which competes with GPT-4 from OpenAI. The model architectures and instructions to download the weights (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this report carefully, especially the training details, I have only skimmed
 @techreport{grattafiori2024llama,
 	author = {Grattafiori, Aaron and Dubey, Abhimanyu and Jauhri, Abhinav and Pandey, Abhinav and Kadian, Abhishek and Al-Dahle, Ahmad and Letman, Aiesha and Mathur, Akhil and Schelten, Alan and Vaughan, Alex and others, },
 	title = {The {LLaMA} 3 herd of models},
 	year = {2024},
 	institution = {arXiv preprint arXiv:2407.21783},
 	url = {https://arxiv.org/abs/2407.21783},
-	keywords = {AI, artificial intelligence, machine learning, ML, open source, LLMs, transformers, AI efficiency, pretraining},
+	keywords = {AI, artificial intelligence, machine learning, ML, open source, LLMs, transformers, AI efficiency, pretraining, post-training},
 }
 
 % First published work using Geoff Hinton's unpublished optimization algorithm RMSProp (root mean squared propogation, an adjustment to AdaGrad using an adaptive learning rate in each dimension). The author uses RMSProp to train a recurrent neural network (RNN) with long short-term memory (LSTM) in order to generate handwritten digits
@@ -462,6 +462,22 @@
 	keywords = {AI, artificial intelligence, machine learning, ML},
 }
 
+% Given the predictable scaling laws that adding compute -> better training loss in a predictable (logarithmic) way, this papers asks how to optimally allocate compute between more training data and larger model parameters? The authors find a remarkable result that the optimal allocation is linear (e.g., double the params => double the training data). The exact ratio appears to be about 15 training tokens per model parameter is optimal from a training perspective. They then train an optimally allocated model (Chinchilla) to test their results and their predictions appear to match.
+@inproceedings{hoffmann2022training,
+	author = {Hoffmann, Jordan and Borgeaud, Sebastian and Mensch, Arthur and Buchatskaya, Elena and Cai, Trevor and Rutherford, Eliza and Casas, Diego De Las and Hendricks, Lisa Anne and Welbl, Johannes and Clark, Aidan and Hennigan, Thomas and Noland, Eric and Millican, Katherine and Driessche, George Van Den and Damoc, Bogdan and Guy, Aurelia and Osindero, Simon and Simonyan, Karén and Elsen, Erich and Vinyals, Oriol and Rae, Jack and Sifre, Laurent},
+	editor = {Koyejo, S. and Mohamed, S. and Agarwal, A. and Belgrave, D. and Cho, K. and Oh, A.},
+	title = {Training Compute-Optimal Large Language Models},
+	year = {2022},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {35},
+	pages = {30016--30030},
+	organization = {Curran Associates, Inc.},
+	location = {New Orleans, Louisiana, USA},
+	doi = {10.52202/068431-2176},
+	url = {http://www.proceedings.com/068431-2176.html},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, transformers, LLMs, scaling laws, optimization, AI efficiency, pretraining},
+}
+
 % An analysis of how adversarial examples for neural network and other AI models are typically indicative of the model using highly predictive but brittle features to make predictions -- i.e., features that are highly predictive but nevertheless not robust enough to use for actually making predictions
 @inproceedings{ilyas2019adversarial,
 	author = {Ilyas, Andrew and Santurkar, Shibani and Tsipras, Dimitris and Engstrom, Logan and Tran, Brandon and Madry, Aleksander},
@@ -508,6 +524,16 @@
 	address = {San Diego, La Jolla, CA, USA},
 	url = {https://www.osti.gov/biblio/6910294},
 	keywords = {AI, artificial intelligence, machine learning, ML, RNNs, neural networks},
+}
+
+% The original paper on scaling laws for LLMs from OpenAI, which motivated research into GPT2 and 3. Still used to forecast LLM development and compute needs today. A strong logarithmic correlation (power law) between any of compute, model size, and training data size and test performance, with no risk of overfitting.
+@techreport{kaplan2020scaling,
+	author = {Kaplan, Jared and McCandlish, Sam and Henighan, Tom and Brown, Tom B. and Chess, Benjamin and Child, Rewon and Gray, Scott and Radford, Alec and Wu, Jeffrey and Amodei, Dario},
+	title = {Scaling Laws for Neural Language Models},
+	year = {2020},
+	institution = {arXiv preprint arXiv:2001.08361},
+	doi = {10.48550/arXiv.2001.08361},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, transformers, LLMs, scaling laws},
 }
 
 % The original paper defining variational autoencoders, a standard practice in performing dimension reduction and training models that encode continuous latent spaces. The idea being to train and optimize an encoder neural network model whose posterior is a continuous latent space to generate samples in the latent space distribution based on inputs from the original dataset without "losing information", then jointly train a decoder model that samples the latent distribution to produce the original observations. The idea being to randomly sample new data points that look like the original data. When trained jointly, these models can also be used as embedder/extractor or compression/decompression pairs.
@@ -618,7 +644,7 @@
 }
 
 % Official publication for TorchTitan software. An extension of pytorch for efficient distributed training of LLMs. In particular, utilizing up to 4D parallelism, mixed precision, and checkpointing in a modular and extensible way. Comes with built-in recipes for pretraining of Llama 3.1 family of models
-@inproceedings{liang2025torchtitan,
+@misc{liang2025torchtitan,
 	author = {Liang, Wanchao and Liu, Tianyu and Wright, Less and Constable, Will and Gu, Andrew and Huang, Chien-Chin and Zhang, Iris and Feng, Wei and Huang, Howard and Wang, Junjie and Purandare, Sanket and Nadathur, Gokul and Idreos, Stratos},
 	title = {{TorchTitan}: One-stop {PyTorch} native solution for production ready {LLM} pretraining},
 	year = {2025},
@@ -978,6 +1004,18 @@
 	keywords = {, AI, artificial intelligence, machine learning, ML, representation learning, neural networks, LLMs},
 }
 
+% The bitter lesson is a blog post by Richard Sutton from 2019 explaining the bitter lesson that computing and AI researchers like to focus on algorithmic research, but the truth is that due to Moore's law, scaling is really all that matters. These two focuses need not be antagonistic, but scalable methods are always more impactful than improved algorithms in the long-run. "The two methods that seem to scale arbitrarily in this way are search and learning."
+@inproceedings{sutton2019bitter,
+	author = {Sutton, Richard},
+	title = {The bitter lesson},
+	year = {2019},
+	month = {March},
+	booktitle = {Incomplete Ideas (blog)},
+	url = {http://www.incompleteideas.net/IncIdeas/BitterLesson.html},
+	note = {Retrieved [Aug 4, 2026]},
+	keywords = {AI, artificial intelligence, machine learning, ML, neural networks, LLMs, scaling laws},
+}
+
 % The authors propose several dynamic programming solutions for placing large neural network compute graphs on CPU, GPU, TPU, and FPGA devices so to maximize throughput. Their solutions are an improvement over AI-based, expert crafted, and graph partitioning-based approaches
 @inproceedings{tarnawski2020efficient,
 	author = {Tarnawski, Jakub and Phanishayee, Amar and Devanur, Nikhil and Mahajan, Divya and Paravecino, Fanny Nina},
@@ -1009,7 +1047,7 @@
 	year = {2023},
 	institution = {arXiv preprint arXiv:2302.13971},
 	doi = {10.48550/arXiv.2302.13971},
-	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, pretraining, transformers, open source},
+	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, pretraining, post-training, transformers, open source},
 }
 
 % The LLaMA 2 model publication. In addition to the information from LLaMA 1 tech report, they are now discussing fine-tuning and RLHF and chat safety features. The latest models range from 7B to 70B total parameters. The model architectures and instructions to download the weights (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this report carefully
