@@ -10912,9 +10912,10 @@ grattafiori2024llama:
     - others
   chapter: null
   descrip: 'The LLaMA 3 model publication. In addition to the information from LLaMA
-    1 tech report, they add information on training and pipeline parallelism. The
-    latest max model size is a 405B parameter (dense) model, which competes with GPT-4
-    from OpenAI. The model architectures and instructions to download the weights
+    1 tech report, they add information on the data collection and curation pipeline,
+    pre and post training, parallelism and optimization, MFU, and failures and downtime.
+    The latest max model size is a 405B parameter (dense) model, which competes with
+    GPT-4 from OpenAI. The model architectures and instructions to download the weights
     (form HuggingFace) are obtained from github.com/meta-llama/llama TODO: read this
     report carefully, especially the training details, I have only skimmed'
   doi: null
@@ -10939,6 +10940,7 @@ grattafiori2024llama:
   - transformers
   - AI efficiency
   - pretraining
+  - post-training
   - high-performance computing
   - HPC
   - parallel computing
@@ -12172,6 +12174,108 @@ hoffman2022optimizing:
   volume: '4'
   web: null
   year: 2022
+hoffmann2022training:
+  address: New Orleans, Louisiana, USA
+  articleno: null
+  authors:
+  - - Jordan
+    - Hoffmann
+  - - Sebastian
+    - Borgeaud
+  - - Arthur
+    - Mensch
+  - - Elena
+    - Buchatskaya
+  - - Trevor
+    - Cai
+  - - Eliza
+    - Rutherford
+  - - Diego De Las
+    - Casas
+  - - Lisa Anne
+    - Hendricks
+  - - Johannes
+    - Welbl
+  - - Aidan
+    - Clark
+  - - Thomas
+    - Hennigan
+  - - Eric
+    - Noland
+  - - Katherine
+    - Millican
+  - - George Van Den
+    - Driessche
+  - - Bogdan
+    - Damoc
+  - - Aurelia
+    - Guy
+  - - Simon
+    - Osindero
+  - - "Kar\xE9n"
+    - Simonyan
+  - - Erich
+    - Elsen
+  - - Oriol
+    - Vinyals
+  - - Jack
+    - Rae
+  - - Laurent
+    - Sifre
+  chapter: null
+  descrip: Given the predictable scaling laws that adding compute -> better training
+    loss in a predictable (logarithmic) way, this papers asks how to optimally allocate
+    compute between more training data and larger model parameters? The authors find
+    a remarkable result that the optimal allocation is linear (e.g., double the params
+    => double the training data). The exact ratio appears to be about 15 training
+    tokens per model parameter is optimal from a training perspective. They then train
+    an optimally allocated model (Chinchilla) to test their results and their predictions
+    appear to match.
+  doi: 10.52202/068431-2176
+  edition: null
+  editors:
+  - - S.
+    - Koyejo
+  - - S.
+    - Mohamed
+  - - A.
+    - Agarwal
+  - - D.
+    - Belgrave
+  - - K.
+    - Cho
+  - - A.
+    - Oh
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages:
+  - '30016'
+  - '30030'
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - neural networks
+  - transformers
+  - LLMs
+  - scaling laws
+  - optimization
+  - AI efficiency
+  - pretraining
+  title: Training Compute-Optimal Large Language Models
+  type: inproceedings
+  url: http://www.proceedings.com/068431-2176.html
+  venue: Advances in Neural Information Processing Systems
+  volume: '35'
+  web: null
+  year: 2022
 holzmann2006power:
   address: null
   articleno: null
@@ -13320,6 +13424,63 @@ kandasamy2020tuning:
   url: http://jmlr.org/papers/v21/18-223.html
   venue: Journal of Machine Learning Research
   volume: '21'
+  web: null
+  year: 2020
+kaplan2020scaling:
+  address: null
+  articleno: null
+  authors:
+  - - Jared
+    - Kaplan
+  - - Sam
+    - McCandlish
+  - - Tom
+    - Henighan
+  - - Tom B.
+    - Brown
+  - - Benjamin
+    - Chess
+  - - Rewon
+    - Child
+  - - Scott
+    - Gray
+  - - Alec
+    - Radford
+  - - Jeffrey
+    - Wu
+  - - Dario
+    - Amodei
+  chapter: null
+  descrip: The original paper on scaling laws for LLMs from OpenAI, which motivated
+    research into GPT2 and 3. Still used to forecast LLM development and compute needs
+    today. A strong logarithmic correlation (power law) between any of compute, model
+    size, and training data size and test performance, with no risk of overfitting.
+  doi: 10.48550/arXiv.2001.08361
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: arXiv preprint arXiv:2001.08361
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - neural networks
+  - transformers
+  - LLMs
+  - scaling laws
+  title: Scaling Laws for Neural Language Models
+  type: techreport
+  url: null
+  venue: null
+  volume: null
   web: null
   year: 2020
 karimi2019practical:
@@ -21618,6 +21779,46 @@ su2024roformer:
   volume: '568'
   web: null
   year: 2024
+sutton2019bitter:
+  address: null
+  articleno: null
+  authors:
+  - - Richard
+    - Sutton
+  chapter: null
+  descrip: The bitter lesson is a blog post by Richard Sutton from 2019 explaining
+    the bitter lesson that computing and AI researchers like to focus on algorithmic
+    research, but the truth is that due to Moore's law, scaling is really all that
+    matters. These two focuses need not be antagonistic, but scalable methods are
+    always more impactful than improved algorithms in the long-run. "The two methods
+    that seem to scale arbitrarily in this way are search and learning."
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: March
+  note: Retrieved [Aug 4, 2026]
+  number: null
+  pages: null
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - neural networks
+  - LLMs
+  - scaling laws
+  title: The bitter lesson
+  type: inproceedings
+  url: http://www.incompleteideas.net/IncIdeas/BitterLesson.html
+  venue: Incomplete Ideas (blog)
+  volume: null
+  web: null
+  year: 2019
 sv2005evolutionary:
   address: London, UK
   articleno: null
@@ -22171,6 +22372,7 @@ touvron2023llama:
   - ML
   - LLMs
   - pretraining
+  - post-training
   - transformers
   - open source
   - foundational model training
