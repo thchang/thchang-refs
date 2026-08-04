@@ -10142,8 +10142,8 @@ gao2023scaling:
   - - Jacob
     - Hilton
   chapter: null
-  descrip: Paper showing that using the process reward model (PRM) during fine-tuning
-    can easily lead models to over-optimize for quick rewards, leading to worse overall
+  descrip: Paper showing that using the process reward model (PRM) during RLHF can
+    easily lead models to over-optimize for quick rewards, leading to worse overall
     ability to reach the correct solution. This doesn't mean that process can't work,
     we just need a mechanism to encourage better long-term planning
   doi: null
@@ -10178,8 +10178,10 @@ gao2023scaling:
   - machine learning
   - ML
   - LLMs
-  - SFT
+  - RLHF
+  - post-training
   - overfitting
+  - SFT
   title: Scaling Laws for Reward Model Overoptimization
   type: inproceedings
   url: https://proceedings.mlr.press/v202/gao23h.html
@@ -11160,8 +11162,10 @@ guo2025deepseekr1:
   - ML
   - reinforcement learning
   - RL
+  - RLHF
   - LLMs
   - SFT
+  - post-training
   - open source
   title: '{DeepSeek-R1}: Incentivizing reasoning capability in {LLM}s via reinforcement
     learning'
@@ -18100,8 +18104,9 @@ ouyang2022training:
   - - Ryan
     - Lowe
   chapter: null
-  descrip: The original paper proposing supervised-fine tuning (SFT) as a method to
-    fine-tune foundational models for specific tasks via human-in-the-loop RL
+  descrip: The original paper proposing reinforcement learning with human feedback
+    (RLHF) as a method to fine-tune foundational models for specific tasks via human-in-the-loop
+    RL
   doi: null
   edition: null
   editors:
@@ -18135,9 +18140,11 @@ ouyang2022training:
   - ML
   - transformers
   - LLMs
-  - SFT
+  - RLHF
+  - post-training
   - reinforcement learning
   - RL
+  - SFT
   title: Training language models to follow instructions with human feedback
   type: inproceedings
   url: https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf
@@ -19154,6 +19161,7 @@ radford2018improving:
   - transformers
   - LLMs
   - SFT
+  - post-training
   title: Improving language understanding by generative pre-training
   type: techreport
   url: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
@@ -22226,6 +22234,8 @@ touvron2023llama2:
   - RL
   - LLMs
   - open source
+  - pretraining
+  - post-training
   title: '{LLaMA}~2: Open foundation and fine-tuned chat models'
   type: techreport
   url: https://arxiv.org/abs/2307.09288
@@ -23231,6 +23241,8 @@ wang2024mathshepherd:
   - reinforcement learning
   - RL
   - LLMs
+  - RLHF
+  - post-training
   - SFT
   title: 'Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations'
   type: inproceedings
@@ -23497,14 +23509,15 @@ wei2022chainofthought:
   - - Denny
     - Zhou
   chapter: null
-  descrip: Original publication on "chain of thought" (CoT) reasoning in LLMs The
-    authors take a 137B parameter foundational LLM and fine tune if for about 60 types
-    of instruction-based tasks (they refer to this as "instruction tuning"). Then
-    they evaluate the model on task types not in the training list, and it performs
-    adequately. They claim this shows that LLMs are zero-shot learners. I think this
-    may be a stretch as the tasks likely have a lot of overlapping similarities. However,
-    the idea that LLMs can complete semi-related but new tasks (not in the training
-    data) is obviously true to anyone who has used one.
+  descrip: Original publication on "chain of thought" (CoT) reasoning in LLMs. The
+    authors take a 137B parameter foundational LLM and illicit CoT reasoning for about
+    60 types of instruction-based tasks via prompt engineering (they refer to this
+    as "instruction tuning"). Then they evaluate the model on task types not in the
+    training list, and it performs adequately. They claim this shows that LLMs are
+    zero-shot learners. I think this may be a stretch as the tasks likely have a lot
+    of overlapping similarities. However, the idea that LLMs can complete semi-related
+    but new tasks (not in the training data) is obviously true to anyone who has used
+    one.
   doi: null
   edition: null
   editors: []
@@ -24879,8 +24892,10 @@ ziegler2019finetuning:
   - reinforcement learning
   - RL
   - LLMs
-  - SFT
+  - RLHF
+  - post-training
   - neural networks
+  - SFT
   title: Fine-Tuning Language Models from Human Preferences
   type: techreport
   url: https://arxiv.org/abs/1909.08593
