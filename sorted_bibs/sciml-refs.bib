@@ -146,6 +146,23 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, overfitting, Delaunay triangulation, high dimension, interpolation, regression, classification, approximation theory},
 }
 
+% This paper attempts to reconcile the double-descent curve and evidence against the bias-variance tradeoff through the introduction of the "interpolation threshold", as the point where overfitting is at its worst, and after which test-set performance improves again sometimes to even better than before overfitting. This is discussed theoretically, and shown empirically for a wide variety of ML models. In particular, past the interpolation threshold, SGD initialized with low parameter values favors minimum norm solutions, which provides an inductive bias for overparameterized neural network training.
+@article{belkin2019reconciling,
+	author = {Belkin, Mikhail and Hsu, Daniel and Ma, Siyuan and Mandal, Soumik},
+	title = {Reconciling modern machine-learning practice and the classical bias-variance trade-off},
+	year = {2019},
+	month = {7},
+	journal = {Proceedings of the National Academy of Sciences},
+	volume = {116},
+	number = {32},
+	pages = {15849--15854},
+	publisher = {National Academy of Sciences},
+	doi = {10.1073/pnas.1903070116},
+	url = {https://www.pnas.org/doi/10.1073/pnas.1903070116},
+	issn = {1091-6490},
+	keywords = {AI, artificial intelligence, machine learning, ML, scientific machine learning, SciML, neural networks, overfitting, regularization, double descent},
+}
+
 % A massive review article on the magic of just interpolating noisy machine learning and deep learning data in high dimensions, and some theorems on why this is acceptable and even desirable as the dimension increases. Delaunay interpolation is spotlighted as one of the interpolation methods to use
 @article{belkin2021fit,
 	author = {Belkin, Mikhail},
@@ -537,6 +554,17 @@
 	doi = {10.1109/icpr56361.2022.9956231},
 	url = {https://ieeexplore.ieee.org/document/9956231/},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Gaussian process, regression, uncertainty quantification, UQ},
+}
+
+% An anthropic whitepaper introducing one of the best empirically-justified mechanistic interpretations of transformers. To simplify the authors study only a simple 0, 1, and 2-layer transformer-only network. They show theoretically that the optimal 0-layer network is a bigram table. They show empirically that a 1-layer network appears to attend just a few layers back and form trigram skip patterns, such as "ocean ... contains -> salt", but with an extra weight on skip-then-copy patterns -- such as "ocean ... is -> ocean" or in cases where a token had to be broken apart, something like "Tyler ... T -> yler". The 2-layer network is shown to be decomposable into 1-layer components + "inductive" heads that mix the Q, K, and V matrices across layers. Of these, only the inductive keys seem to be significant and they typically focus on longer-range copy patterns. E.g., "tter ... [long break] ... Po -> tter". This is in contrast to the short-term copy patterns emphasized by the non-inductive (single layer) heads.
+@article{elhage2021mathematical,
+	author = {Elhage, Nelson and Nanda, Neel and Olsson, Catherine and Henighan, Tom and Joseph, Nicholas and Mann, Ben and Askell, Amanda and Bai, Yuntao and Chen, Anna and Conerly, Tom and DasSarma, Nova and Drain, Dawn and Ganguli, Deep and Hatfield-Dodds, Zac and Hernandez, Danny and Jones, Andy and Kernion, Jackson and Lovitt, Liane and Ndousse, Kamal and Amodei, Dario and Brown, Tom and Clark, Jack and Kaplan, Jared and McCandlish, Sam and Olah, Chris},
+	title = {A Mathematical Framework for Transformer Circuits},
+	year = {2021},
+	month = {12},
+	journal = {Transformer Circuits Thread},
+	url = {https://transformer-circuits.pub/2021/framework/index.html},
+	keywords = {AI, artificial intelligence, machine learning, ML, scientific machine learning, SciML, LLMs, transformers, neural networks, interpretability},
 }
 
 % Publication and whitepaper on Pathmind, an RL-based solver for simulation optimization problems. They also offer multiobjective support but only by using a priori scalarization provided by the user (so not real multiobjective support). This tool is not open source, it is a service provided by a YC startup of the same name. Therefore, it could be considered industry software
@@ -1284,6 +1312,16 @@
 	url = {https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf},
 	isbn = {9781605589077},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, Boltzmann machine, regression, classification},
+}
+
+% This paper introduces the "double descent" phenomenon, showing empirically that many machine learning models (especially large overparameterized ones) go through a region of "overfitting", where test performance gets worse, as complexity and/or training increases. However, after crossing this "overfitting hump", descent resumes eventually reaching a better minima in the long run.
+@inproceedings{nakkiran2020deep,
+	author = {Nakkiran, Preetum and Kaplun, Gal and Bansal, Yamini and Yang, Tristan and Barak, Boaz and Sutskever, Ilya},
+	title = {Deep Double Descent: Where Bigger Models and More Data Hurt},
+	year = {2020},
+	booktitle = {8th International Conference on Learning Representations (ICLR 2020)},
+	url = {https://openreview.net/forum?id=B1g5sA4twr},
+	keywords = {AI, artificial intelligence, machine learning, ML, scientific machine learning, SciML, neural networks, overfitting, regularization, double descent},
 }
 
 % graph2vec is the graph equivalent of word2vec, and the former SoA in graph representation learning, for embedding graph problems as vectors that can be fed to neural networks (pre graph transformers era)

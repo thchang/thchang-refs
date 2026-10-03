@@ -2391,6 +2391,60 @@ belkin2018overfitting:
   volume: null
   web: null
   year: 2018
+belkin2019reconciling:
+  address: null
+  articleno: null
+  authors:
+  - - Mikhail
+    - Belkin
+  - - Daniel
+    - Hsu
+  - - Siyuan
+    - Ma
+  - - Soumik
+    - Mandal
+  chapter: null
+  descrip: This paper attempts to reconcile the double-descent curve and evidence
+    against the bias-variance tradeoff through the introduction of the "interpolation
+    threshold", as the point where overfitting is at its worst, and after which test-set
+    performance improves again sometimes to even better than before overfitting. This
+    is discussed theoretically, and shown empirically for a wide variety of ML models.
+    In particular, past the interpolation threshold, SGD initialized with low parameter
+    values favors minimum norm solutions, which provides an inductive bias for overparameterized
+    neural network training.
+  doi: 10.1073/pnas.1903070116
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 1091-6490
+  month: '7'
+  note: null
+  number: '32'
+  pages:
+  - '15849'
+  - '15854'
+  publisher: National Academy of Sciences
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - overfitting
+  - regularization
+  - double descent
+  title: Reconciling modern machine-learning practice and the classical bias-variance
+    trade-off
+  type: article
+  url: https://www.pnas.org/doi/10.1073/pnas.1903070116
+  venue: Proceedings of the National Academy of Sciences
+  volume: '116'
+  web: null
+  year: 2019
 belkin2021fit:
   address: null
   articleno: null
@@ -6886,6 +6940,67 @@ dantzig1998linear:
   volume: null
   web: null
   year: 1998
+dar2023analyzing:
+  address: Toronto, Canada
+  articleno: null
+  authors:
+  - - Guy
+    - Dar
+  - - Mor
+    - Geva
+  - - Ankit
+    - Gupta
+  - - Jonathan
+    - Berant
+  chapter: null
+  descrip: The authors use the view that the residual stream is a latent embedding
+    and apply GPT-2's tied embedding to embed/extract inputs before/after applying
+    to each individual operator in each individual layer. They find that certain hand-picked
+    layers do serve very particular mechanistic functions, but the results don't seem
+    conclusive for all layers. Among other experiments, they also show that models
+    trained on the same vocabularies with the same tokenizers produce the same embedding
+    streams, to the extent that similar layer indices seem to perform similar tasks
+    in an ensemble of different BERT models with identical architectures/training
+    regimens. They argue that such models can be cut-and-stitched with no retraining,
+    but the results are not as strong.
+  doi: 10.18653/v1/2023.acl-long.893
+  edition: null
+  editors:
+  - - Anna
+    - Rogers
+  - - Jordan
+    - Boyd-Graber
+  - - Naoaki
+    - Okazaki
+  git: null
+  isbn: null
+  issn: null
+  month: '7'
+  note: null
+  number: null
+  pages:
+  - '16124'
+  - '16170'
+  publisher: Association for Computational Linguistics
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - neural networks
+  - interpretability
+  - representation learning
+  title: Analyzing Transformers in Embedding Space
+  type: inproceedings
+  url: https://aclanthology.org/2023.acl-long.893/
+  venue: 'Proceedings of the 61st Annual Meeting of the Association for Computational
+    Linguistics (Volume 1: Long Papers)'
+  volume: null
+  web: null
+  year: 2023
 das1998normalboundary:
   address: null
   articleno: null
@@ -9097,6 +9212,104 @@ elgart2012note:
   volume: '53'
   web: null
   year: 2012
+elhage2021mathematical:
+  address: null
+  articleno: null
+  authors:
+  - - Nelson
+    - Elhage
+  - - Neel
+    - Nanda
+  - - Catherine
+    - Olsson
+  - - Tom
+    - Henighan
+  - - Nicholas
+    - Joseph
+  - - Ben
+    - Mann
+  - - Amanda
+    - Askell
+  - - Yuntao
+    - Bai
+  - - Anna
+    - Chen
+  - - Tom
+    - Conerly
+  - - Nova
+    - DasSarma
+  - - Dawn
+    - Drain
+  - - Deep
+    - Ganguli
+  - - Zac
+    - Hatfield-Dodds
+  - - Danny
+    - Hernandez
+  - - Andy
+    - Jones
+  - - Jackson
+    - Kernion
+  - - Liane
+    - Lovitt
+  - - Kamal
+    - Ndousse
+  - - Dario
+    - Amodei
+  - - Tom
+    - Brown
+  - - Jack
+    - Clark
+  - - Jared
+    - Kaplan
+  - - Sam
+    - McCandlish
+  - - Chris
+    - Olah
+  chapter: null
+  descrip: An anthropic whitepaper introducing one of the best empirically-justified
+    mechanistic interpretations of transformers. To simplify the authors study only
+    a simple 0, 1, and 2-layer transformer-only network. They show theoretically that
+    the optimal 0-layer network is a bigram table. They show empirically that a 1-layer
+    network appears to attend just a few layers back and form trigram skip patterns,
+    such as "ocean ... contains -> salt", but with an extra weight on skip-then-copy
+    patterns -- such as "ocean ... is -> ocean" or in cases where a token had to be
+    broken apart, something like "Tyler ... T -> yler". The 2-layer network is shown
+    to be decomposable into 1-layer components + "inductive" heads that mix the Q,
+    K, and V matrices across layers. Of these, only the inductive keys seem to be
+    significant and they typically focus on longer-range copy patterns. E.g., "tter
+    ... [long break] ... Po -> tter". This is in contrast to the short-term copy patterns
+    emphasized by the non-inductive (single layer) heads.
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '12'
+  note: null
+  number: null
+  pages: null
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - LLMs
+  - transformers
+  - neural networks
+  - interpretability
+  title: A Mathematical Framework for Transformer Circuits
+  type: article
+  url: https://transformer-circuits.pub/2021/framework/index.html
+  venue: Transformer Circuits Thread
+  volume: null
+  web: null
+  year: 2021
 elias2020manufacturing:
   address: New Orleans, LA, USA
   articleno: null
@@ -10406,6 +10619,127 @@ germann2021codesign:
   volume: '35'
   web: null
   year: 2021
+geva2021transformer:
+  address: Online and Punta Cana, Dominican Republic
+  articleno: null
+  authors:
+  - - Mor
+    - Geva
+  - - Roei
+    - Schuster
+  - - Jonathan
+    - Berant
+  - - Omer
+    - Levy
+  chapter: null
+  descrip: This paper argues that the feed-forward layers (or individual experts)
+    act as KV-memory similar to transformers. The authors show empirically that in
+    existing pre-trained LLMs, sentences that activate similar rows of the first matrix
+    in a ReLU feed-forward layer contain similar properties. They also show empirically
+    that the corresponding value rows are well-aligned with the rows of the unembedding
+    (output matrix) that produce the desired logit. They argue this mechanism resembles
+    a KV-lookup. Finally, they show that these values accumulate in the residual stream
+    over time to slowly build up confidence in the output token. The empirical study
+    is extremely valuable work that informs how LLMs accumulate knowledge. However,
+    the conclusion about KV lookups I am not convinced of. Specifically, since similar
+    inputs should embed to similar vectors in any good embedding model, this implies
+    that any similar sentence would select the same max row from any randomly initialized
+    matrix. This is evidenced in the fact that their top-k metric doesn't start working
+    until the last layers.
+  doi: 10.18653/v1/2021.emnlp-main.446
+  edition: null
+  editors:
+  - - Marie-Francine
+    - Moens
+  - - Xuanjing
+    - Huang
+  - - Lucia
+    - Specia
+  - - Scott Wen-tau
+    - Yih
+  git: null
+  isbn: null
+  issn: null
+  month: '11'
+  note: null
+  number: null
+  pages:
+  - '5484'
+  - '5495'
+  publisher: Association for Computational Linguistics
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - neural networks
+  - interpretability
+  title: Transformer Feed-Forward Layers Are Key-Value Memories
+  type: inproceedings
+  url: https://aclanthology.org/2021.emnlp-main.446/
+  venue: Proceedings of the 2021 Conference on Empirical Methods in Natural Language
+    Processing
+  volume: null
+  web: null
+  year: 2021
+geva2022transformer:
+  address: Abu Dhabi, United Arab Emirates
+  articleno: null
+  authors:
+  - - Mor
+    - Geva
+  - - Avi
+    - Caciularu
+  - - Kevin
+    - Wang
+  - - Yoav
+    - Goldberg
+  chapter: null
+  descrip: This paper builds on the thesis of the 2021 work, that layers accumulate
+    probability mass on their next-word predictions in the residual stream over small
+    updates from each layer. They leverage this to attempt to down-weight the accumulations
+    on "toxic" or "bad" next-token values mid-inference with some success.
+  doi: 10.18653/v1/2022.emnlp-main.3
+  edition: null
+  editors:
+  - - Yoav
+    - Goldberg
+  - - Zornitsa
+    - Kozareva
+  - - Yue
+    - Zhang
+  git: null
+  isbn: null
+  issn: null
+  month: '12'
+  note: null
+  number: null
+  pages:
+  - '30'
+  - '45'
+  publisher: Association for Computational Linguistics
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - neural networks
+  - interpretability
+  title: Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in
+    the Vocabulary Space
+  type: inproceedings
+  url: https://aclanthology.org/2022.emnlp-main.3/
+  venue: Proceedings of the 2022 Conference on Empirical Methods in Natural Language
+    Processing
+  volume: null
+  web: null
+  year: 2022
 gillette2022datadriven:
   address: null
   articleno: null
@@ -17756,6 +18090,58 @@ nair2010rectified:
   volume: null
   web: null
   year: 2010
+nakkiran2020deep:
+  address: null
+  articleno: null
+  authors:
+  - - Preetum
+    - Nakkiran
+  - - Gal
+    - Kaplun
+  - - Yamini
+    - Bansal
+  - - Tristan
+    - Yang
+  - - Boaz
+    - Barak
+  - - Ilya
+    - Sutskever
+  chapter: null
+  descrip: This paper introduces the "double descent" phenomenon, showing empirically
+    that many machine learning models (especially large overparameterized ones) go
+    through a region of "overfitting", where test performance gets worse, as complexity
+    and/or training increases. However, after crossing this "overfitting hump", descent
+    resumes eventually reaching a better minima in the long run.
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - overfitting
+  - regularization
+  - double descent
+  title: 'Deep Double Descent: Where Bigger Models and More Data Hurt'
+  type: inproceedings
+  url: https://openreview.net/forum?id=B1g5sA4twr
+  venue: 8th International Conference on Learning Representations (ICLR 2020)
+  volume: null
+  web: null
+  year: 2020
 narayanan2017graph2vec:
   address: Halifax, Nova Scotia, Canada
   articleno: null
@@ -18023,6 +18409,47 @@ nocedal2006numerical:
   volume: null
   web: null
   year: 2006
+nostalgebraist2020interpreting:
+  address: null
+  articleno: null
+  authors:
+  - - ''
+    - nostalgebraist
+  chapter: null
+  descrip: This blog post introduces logit lens loss, where we view the LLM loss from
+    directly applying the LM-head (output head) to various intermediate layers, in
+    order to measure the value of that layer. This makes sense due to the residual-stream
+    interpretation of LLMs, and various empirical observations that each layer slowly
+    aggregates information in the residual stream that boosts relevant output logits
+    (as opposed to a compositional function mapping view).
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: '8'
+  note: 'Last accessed: Oct 2026'
+  number: null
+  pages: null
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - neural networks
+  - interpretability
+  title: 'interpreting {GPT}: the logit lens'
+  type: LessWrong
+  url: https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens
+  venue: null
+  volume: null
+  web: null
+  year: 2020
 nvidiacorporation2025cublas:
   address: null
   articleno: null
@@ -21218,6 +21645,52 @@ silver2016mastering:
   volume: '529'
   web: null
   year: 2016
+singh2023analyzing:
+  address: null
+  articleno: null
+  authors:
+  - - Sumeet S.
+    - Singh
+  chapter: null
+  descrip: This tech report proposes a mechanistic view of LLMs where the residual
+    stream is seen as an embedding space produced by the encoding layers. Each layer
+    gradually modifies this stream by mixing and accumulating information, nudging
+    toward the next token, until the output head extracts this information. The vectors
+    in this stream are seen as word2vec-type embeddings, whose similarity is measured
+    by the angle between them. This angular distance as opposed to euclidean distance
+    is a consequence of layer normalization. The author makes some additional conclusions
+    that are not well defended and have since been proved untrue. The accumulation
+    of knowledge in the latent residual stream seems quite plausible though, especially
+    from the perspective of a JL-lemma-type information compression argument.
+  doi: 10.48550/arXiv.2308.10874
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: arXiv preprint arXiv:2308.10874
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - LLMs
+  - transformers
+  - neural networks
+  - interpretability
+  - representation learning
+  title: Analyzing Transformer Dynamics as Movement through Embedding Space
+  type: techreport
+  url: https://arxiv.org/abs/2308.10874
+  venue: null
+  volume: null
+  web: null
+  year: 2023
 slepicka2020poisson:
   address: null
   articleno: null
