@@ -18611,6 +18611,48 @@ omohundro1990geometric:
   volume: '42'
   web: null
   year: 1990
+openai2023gpt4:
+  address: null
+  articleno: null
+  authors:
+  - - ''
+    - '{OpenAI}'
+  chapter: null
+  descrip: The official OpenAI GPT-4 technical report. 100 pages, but hardly any technical
+    details. Main contribution is benchmarking scores and methodology and discussion
+    of benchmark leakage. They also show how well the scaling law predictions match
+    the true model accuracy using a power law + an irreducible term representing the
+    intrinsic entropy of natural language. Without knowing the model size, training
+    data, or fit coefficient details, this is all difficult to interpret.
+  doi: 10.48550/arXiv.2303.08774
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: arXiv preprint arXiv:2303.08774
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - transformers
+  - LLMs
+  - scaling laws
+  - pretraining
+  - post-training
+  title: '{GPT}-4 Technical Report'
+  type: techreport
+  url: https://arxiv.org/abs/2303.08774
+  venue: null
+  volume: null
+  web: null
+  year: 2023
 openmp2015openmp:
   address: null
   articleno: null
@@ -21250,6 +21292,64 @@ shapley1953value:
   volume: '2'
   web: null
   year: 1953
+sharma2022scaling:
+  address: null
+  articleno: null
+  authors:
+  - - Utkarsh
+    - Sharma
+  - - Jared
+    - Kaplan
+  chapter: null
+  descrip: The authors propose that neural scaling laws (in terms of model parameters)
+    can be explained using either piecewise constant or piecewise linear (in the case
+    of ReLU) interpolation error bounds, applied to the KL-divergence error in the
+    case of cross-entropy loss. In particular, they show that scaling laws of the
+    form L(N) ~ N^{-a} where a <= 2/d for piecewise constant, and a <= 4/d for piecewise
+    linear functions -- here N = number of model parameters, assuming the model is
+    underparameterized or the amount of trainnig data is infinite. This theory is
+    experimentally validated on toy problems. Next, by studying the power laws for
+    training ReLU CNNs to classify MNIST and other benchmarks, the authors find an
+    intrinsic dimension of about 17 for images. For GPT-2 and language, they get a
+    noisier prediction of d ~ 53. They also posit that better models will be able
+    to find lower latent dimensions than what they could find, which will further
+    improve the scaling laws.
+  doi: null
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: '9'
+  pages:
+  - '1'
+  - '34'
+  publisher: null
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - representation learning
+  - neural networks
+  - scaling laws
+  - high dimension
+  - dimension reduction
+  - interpolation
+  - regression
+  - approximation theory
+  title: Scaling Laws from the Data Manifold Dimension
+  type: article
+  url: http://jmlr.org/papers/v23/20-1111.html
+  venue: Journal of Machine Learning Research
+  volume: '23'
+  web: null
+  year: 2022
 shashaani2016astrodf:
   address: Washington, DC, USA
   articleno: null

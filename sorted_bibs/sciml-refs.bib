@@ -1709,6 +1709,19 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, high dimension, dimension reduction, regression, classification},
 }
 
+% The authors propose that neural scaling laws (in terms of model parameters) can be explained using either piecewise constant or piecewise linear (in the case of ReLU) interpolation error bounds, applied to the KL-divergence error in the case of cross-entropy loss. In particular, they show that scaling laws of the form L(N) ~ N^{-a} where a <= 2/d for piecewise constant, and a <= 4/d for piecewise linear functions -- here N = number of model parameters, assuming the model is underparameterized or the amount of trainnig data is infinite. This theory is experimentally validated on toy problems. Next, by studying the power laws for training ReLU CNNs to classify MNIST and other benchmarks, the authors find an intrinsic dimension of about 17 for images. For GPT-2 and language, they get a noisier prediction of d ~ 53. They also posit that better models will be able to find lower latent dimensions than what they could find, which will further improve the scaling laws.
+@article{sharma2022scaling,
+	author = {Sharma, Utkarsh and Kaplan, Jared},
+	title = {Scaling Laws from the Data Manifold Dimension},
+	year = {2022},
+	journal = {Journal of Machine Learning Research},
+	volume = {23},
+	number = {9},
+	pages = {1--34},
+	url = {http://jmlr.org/papers/v23/20-1111.html},
+	keywords = {AI, artificial intelligence, machine learning, ML, scientific machine learning, SciML, representation learning, neural networks, scaling laws, high dimension, dimension reduction, interpolation, regression, approximation theory},
+}
+
 % Extremely thorough analysis of using linear models inside a simplex (e.g., tetrahedral meshes) for interpolation: covering basic algorithm, conditioning, approximation error, quality metrics, etc.
 @inproceedings{shewchuk2002what,
 	author = {Shewchuk, Jonathan},

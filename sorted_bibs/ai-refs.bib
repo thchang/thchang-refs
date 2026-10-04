@@ -844,6 +844,17 @@
 	keywords = {AI, artificial intelligence, machine learning, ML, LLMs, transformers, neural networks, interpretability},
 }
 
+% The official OpenAI GPT-4 technical report. 100 pages, but hardly any technical details. Main contribution is benchmarking scores and methodology and discussion of benchmark leakage. They also show how well the scaling law predictions match the true model accuracy using a power law + an irreducible term representing the intrinsic entropy of natural language. Without knowing the model size, training data, or fit coefficient details, this is all difficult to interpret.
+@techreport{openai2023gpt4,
+	author = {{OpenAI}, },
+	title = {{GPT}-4 Technical Report},
+	year = {2023},
+	institution = {arXiv preprint arXiv:2303.08774},
+	doi = {10.48550/arXiv.2303.08774},
+	url = {https://arxiv.org/abs/2303.08774},
+	keywords = {AI, artificial intelligence, machine learning, ML, transformers, LLMs, scaling laws, pretraining, post-training},
+}
+
 % The original paper proposing reinforcement learning with human feedback (RLHF) as a method to fine-tune foundational models for specific tasks via human-in-the-loop RL
 @inproceedings{ouyang2022training,
 	author = {Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and Schulman, John and Hilton, Jacob and Kelton, Fraser and Miller, Luke and Simens, Maddie and Askell, Amanda and Welinder, Peter and Christiano, Paul F and Leike, Jan and Lowe, Ryan},
@@ -1020,6 +1031,19 @@
 	institution = {arXiv preprint arXiv:2402.03300},
 	doi = {10.48550/arXiv.2402.03300},
 	keywords = {AI, artificial intelligence, machine learning, ML, open source},
+}
+
+% The authors propose that neural scaling laws (in terms of model parameters) can be explained using either piecewise constant or piecewise linear (in the case of ReLU) interpolation error bounds, applied to the KL-divergence error in the case of cross-entropy loss. In particular, they show that scaling laws of the form L(N) ~ N^{-a} where a <= 2/d for piecewise constant, and a <= 4/d for piecewise linear functions -- here N = number of model parameters, assuming the model is underparameterized or the amount of trainnig data is infinite. This theory is experimentally validated on toy problems. Next, by studying the power laws for training ReLU CNNs to classify MNIST and other benchmarks, the authors find an intrinsic dimension of about 17 for images. For GPT-2 and language, they get a noisier prediction of d ~ 53. They also posit that better models will be able to find lower latent dimensions than what they could find, which will further improve the scaling laws.
+@article{sharma2022scaling,
+	author = {Sharma, Utkarsh and Kaplan, Jared},
+	title = {Scaling Laws from the Data Manifold Dimension},
+	year = {2022},
+	journal = {Journal of Machine Learning Research},
+	volume = {23},
+	number = {9},
+	pages = {1--34},
+	url = {http://jmlr.org/papers/v23/20-1111.html},
+	keywords = {AI, artificial intelligence, machine learning, ML, scientific machine learning, SciML, representation learning, neural networks, scaling laws, high dimension, dimension reduction, interpolation, regression, approximation theory},
 }
 
 % A survey on how deep learning models (such as transformer models and neural networks/multilayer perceptrons) still do not perform well (are not the state of the art) when it comes to tabular data, which remains the most important application for most businesses. Gradient boosted trees remain the most reliable predictors for these applications
