@@ -73,6 +73,23 @@
 	keywords = {machine learning, ML, scientific machine learning, SciML, optimization, convex optimization, high dimension},
 }
 
+% Theory of neural scaling laws, visiting both parameter scaling and dataset scaling in the limit in both variance-limited (not enough parameters) and the resolution-limited (not enough data) regimes. They show a dualit where-by adding either ends up applying scaling to different sides of the same matrix, thereby deriving the empirical neural scaling laws -- that is, both more data and more parameters scale intelligence.
+@article{bahri2024explaining,
+	author = {Bahri, Yasaman and Dyer, Ethan and Kaplan, Jared and Lee, Jaehoon and Sharma, Utkarsh},
+	title = {Explaining neural scaling laws},
+	year = {2024},
+	month = {6},
+	journal = {Proceedings of the National Academy of Sciences},
+	volume = {121},
+	number = {27},
+	articleno = {e2311878121},
+	publisher = {National Academy of Sciences},
+	doi = {10.1073/pnas.2311878121},
+	url = {https://www.pnas.org/doi/10.1073/pnas.2311878121},
+	issn = {1091-6490},
+	keywords = {AI, artificial intelligence, machine learning, ML, scientific machine learning, SciML, neural networks, scaling laws, representation learning, high dimension, interpolation, approximation theory},
+}
+
 % BoTorch: Modular bayesian optimization framework and numerical software package. Uses Ax for deploying A/B testing applications. Uses pytorch for autograd, and uses monte carlo sampling and kernel reparameterization tricks in order to efficiently evaluate composite objective and acquisition functions and non gaussian kernels. Great example of high-impact open source numerical software and optimization software
 @inproceedings{balandat2020botorch,
 	author = {Balandat, Maximilian and Karrer, Brian and Jiang, Daniel and Daulton, Samuel and Letham, Ben and Wilson, Andrew G and Bakshy, Eytan},
@@ -886,6 +903,19 @@
 	organization = {Curran Associates, Inc.},
 	url = {https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf},
 	keywords = {machine learning, ML, scientific machine learning, SciML, neural networks, regression, classification},
+}
+
+% Introduces the Neural Tangent Kernel (NTK), where we model a trained neural network as the sum of the original untrained network + a sum of kernel functions determined by the training data and initialization weights. In the infinite-width limit, the kernel functions don't change significantly over time and can be considered as constant throughout training. In the finite width, they may move a bit in the beginning (think of the choice of kernel as feature discovery) then toward the end as the updates shrink in size, the final steps of training can be viewed as NTK updates where the initialization weights choose better aligned features.
+@inproceedings{jacot2018neural,
+	author = {Jacot, Arthur and Gabriel, Franck and Hongler, Clement},
+	editor = {Bengio, S. and Wallach, H. and Larochelle, H. and Grauman, K. and Cesa-Bianchi, N. and Garnett, R.},
+	title = {Neural Tangent Kernel: Convergence and Generalization in Neural Networks},
+	year = {2018},
+	booktitle = {Advances in Neural Information Processing Systems},
+	volume = {31},
+	organization = {Curran Associates, Inc.},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2018/file/5a4be1fa34e62bb8a6ec6b91d2462f5a-Paper.pdf},
+	keywords = {AI, artificial intelligence, machine learning, ML, scientific machine learning, SciML, neural networks, kernel methods, overfitting, representation learning, high dimension, interpolation, approximation theory},
 }
 
 % Original tech report where recurent neural networks were originally applied at scale to a language processing (next word prediction) application

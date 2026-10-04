@@ -1671,6 +1671,59 @@ ba2016layer:
   volume: null
   web: null
   year: 2016
+bahri2024explaining:
+  address: null
+  articleno: e2311878121
+  authors:
+  - - Yasaman
+    - Bahri
+  - - Ethan
+    - Dyer
+  - - Jared
+    - Kaplan
+  - - Jaehoon
+    - Lee
+  - - Utkarsh
+    - Sharma
+  chapter: null
+  descrip: Theory of neural scaling laws, visiting both parameter scaling and dataset
+    scaling in the limit in both variance-limited (not enough parameters) and the
+    resolution-limited (not enough data) regimes. They show a dualit where-by adding
+    either ends up applying scaling to different sides of the same matrix, thereby
+    deriving the empirical neural scaling laws -- that is, both more data and more
+    parameters scale intelligence.
+  doi: 10.1073/pnas.2311878121
+  edition: null
+  editors: []
+  git: null
+  isbn: null
+  issn: 1091-6490
+  month: '6'
+  note: null
+  number: '27'
+  pages: null
+  publisher: National Academy of Sciences
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - scaling laws
+  - representation learning
+  - high dimension
+  - interpolation
+  - approximation theory
+  title: Explaining neural scaling laws
+  type: article
+  url: https://www.pnas.org/doi/10.1073/pnas.2311878121
+  venue: Proceedings of the National Academy of Sciences
+  volume: '121'
+  web: null
+  year: 2024
 balandat2020botorch:
   address: null
   articleno: null
@@ -13132,6 +13185,70 @@ ishibuchi2015modified:
   volume: null
   web: null
   year: 2015
+jacot2018neural:
+  address: null
+  articleno: null
+  authors:
+  - - Arthur
+    - Jacot
+  - - Franck
+    - Gabriel
+  - - Clement
+    - Hongler
+  chapter: null
+  descrip: Introduces the Neural Tangent Kernel (NTK), where we model a trained neural
+    network as the sum of the original untrained network + a sum of kernel functions
+    determined by the training data and initialization weights. In the infinite-width
+    limit, the kernel functions don't change significantly over time and can be considered
+    as constant throughout training. In the finite width, they may move a bit in the
+    beginning (think of the choice of kernel as feature discovery) then toward the
+    end as the updates shrink in size, the final steps of training can be viewed as
+    NTK updates where the initialization weights choose better aligned features.
+  doi: null
+  edition: null
+  editors:
+  - - S.
+    - Bengio
+  - - H.
+    - Wallach
+  - - H.
+    - Larochelle
+  - - K.
+    - Grauman
+  - - N.
+    - Cesa-Bianchi
+  - - R.
+    - Garnett
+  git: null
+  isbn: null
+  issn: null
+  month: null
+  note: null
+  number: null
+  pages: null
+  publisher: Curran Associates, Inc.
+  series: null
+  tags:
+  - AI
+  - artificial intelligence
+  - machine learning
+  - ML
+  - scientific machine learning
+  - SciML
+  - neural networks
+  - kernel methods
+  - overfitting
+  - representation learning
+  - high dimension
+  - interpolation
+  - approximation theory
+  title: 'Neural Tangent Kernel: Convergence and Generalization in Neural Networks'
+  type: inproceedings
+  url: https://proceedings.neurips.cc/paper_files/paper/2018/file/5a4be1fa34e62bb8a6ec6b91d2462f5a-Paper.pdf
+  venue: Advances in Neural Information Processing Systems
+  volume: '31'
+  web: null
+  year: 2018
 jain2013evolutionary:
   address: null
   articleno: null
