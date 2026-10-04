@@ -33,7 +33,7 @@ for topic in sys.argv[1:]:
         if entry.get_url() is not None:
             print(f"]({entry.get_url()})")
         elif entry.get_doi() is not None:
-            print(f"](https://doi.com/{entry.get_doi()})")
+            print(f"](https://doi.org/{entry.get_doi()})")
         elif entry.get_git() is not None:
             print(f"]({entry.get_git()})")
         else:
